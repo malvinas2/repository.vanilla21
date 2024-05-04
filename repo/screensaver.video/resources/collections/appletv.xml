@@ -1,0 +1,388 @@
+<videoscreensaver>
+	<collection>Apple TV</collection>
+	<video>
+		<name>China (Day) 1</name>
+		<filename>appletv-b2-1.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-China-D1.JPG</image>
+		<duration>239</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b2-1.mov</primary>
+	</video>
+	<video>
+		<name>China (Day) 2</name>
+		<filename>appletv-b5-1.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-China-D2.JPG</image>
+		<duration>144</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b5-1.mov</primary>
+	</video>
+	<video>
+		<name>China (Day) 3</name>
+		<filename>appletv-b6-1.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-China-D3.JPG</image>
+		<duration>240</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b6-1.mov</primary>
+	</video>
+	<video>
+		<name>China (Day) 4</name>
+		<filename>appletv-C002_C005_0818SC_001_v01_6M_HB.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-China-D4.JPG</image>
+		<duration>206</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_C002_C005_0818SC_001_v01_6M_HB_tag0.mov</primary>
+	</video>
+	<video>
+		<name>China (Day) 5</name>
+		<filename>appletv-C007_C011_08244D_001_v01_6M_HB.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-China-D5.JPG</image>
+		<duration>480</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_C007_C011_08244D_001_v01_6M_HB_tag0.mov</primary>
+	</video>
+	<video>
+		<name>China (Day) 6</name>
+		<filename>appletv-C007_C004_0824AJ_001_v01_6M_HB.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-China-D6.JPG</image>
+		<duration>420</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_C007_C004_0824AJ_001_v01_6M_HB_tag0.mov</primary>
+	</video>
+	<video>
+		<name>Dubai - Liwa (Day) 1</name>
+		<filename>appletv-LW_L001_C006_t9_6M.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Dubai-D1.JPG</image>
+		<duration>420</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_LW_L001_C006_t9_6M_tag0.mov</primary>
+	</video>
+	<video>
+		<name>Dubai - (Day) 2</name>
+		<filename>appletv-DB_D001_C001_v03_6Mbps.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Dubai-D2.JPG</image>
+		<duration>480</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_DB_D001_C001_v03_6Mbps.mov</primary>
+	</video>
+	<video>
+		<name>Dubai - (Day) 3</name>
+		<filename>appletv-DB_D002_C003_t9_6M_HB.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Dubai-D3.JPG</image>
+		<duration>360</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_DB_D002_C003_t9_6M_HB_tag0.mov</primary>
+	</video>
+	<video>
+		<name>Dubai - (Day) 4</name>
+		<filename>appletv-DB_D001_C005_t9_6M_HB.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Dubai-D4.JPG</image>
+		<duration>450</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_DB_D001_C005_t9_6M_HB_tag0.mov</primary>
+	</video>
+	<video>
+		<name>Dubai - (Day) 5</name>
+		<filename>appletv-DB_D008_C010_v04_6Mbps.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Dubai-D5.JPG</image>
+		<duration>600</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_DB_D008_C010_v04_6Mbps.mov</primary>
+	</video>
+	<video>
+		<name>Dubai - (Night) 1</name>
+		<filename>appletv-DB_D011_D009_SIGNCMP_v15_6Mbps.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Dubai-N1.JPG</image>
+		<duration>240</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_DB_D011_D009_SIGNCMP_v15_6Mbps.mov</primary>
+	</video>
+	<video>
+		<name>Dubai - (Night) 2</name>
+		<filename>appletv-DB_D011_C010_v10_6Mbps.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Dubai-N2.JPG</image>
+		<duration>360</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_DB_D011_C010_v10_6Mbps.mov</primary>
+	</video>
+	<video>
+		<name>Greenland - (Day) 1</name>
+		<filename>appletv-GL_G004_C010_v03_6Mbps.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Greenland-D1.JPG</image>
+		<duration>287</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_GL_G004_C010_v03_6Mbps.mov</primary>
+	</video>
+	<video>
+		<name>Greenland - (Day) 2</name>
+		<filename>appletv-G002_C002_BG_t9_6M_HB.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Greenland-D2.JPG</image>
+		<duration>600</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/plate_G002_C002_BG_t9_6M_HB_tag0.mov</primary>
+	</video>
+	<video>
+		<name>Greenland - (Night) 1</name>
+		<filename>appletv-GL_G010_C006_v08_6Mbps.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Greenland-N1.JPG</image>
+		<duration>600</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_GL_G010_C006_v08_6Mbps.mov</primary>
+	</video>
+	<video>
+		<name>Hawaii (Day) 1</name>
+		<filename>appletv-b1-1.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Hawaii-D1.JPG</image>
+		<duration>191</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b1-1.mov</primary>
+	</video>
+	<video>
+		<name>Hawaii (Day) 2</name>
+		<filename>appletv-b2-2.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Hawaii-D2.JPG</image>
+		<duration>432</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b2-2.mov</primary>
+	</video>
+	<video>
+		<name>Hawaii (Day) 3</name>
+		<filename>appletv-b4-1.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Hawaii-D3.JPG</image>
+		<duration>144</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b4-1.mov</primary>
+	</video>
+	<video>
+		<name>Hawaii (Day) 4</name>
+		<filename>appletv-b7-1.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Hawaii-D4.JPG</image>
+		<duration>335</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b7-1.mov</primary>
+	</video>
+	<video>
+		<name>Hawaii (Day) 5</name>
+		<filename>appletv-b9-1.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Hawaii-D5.JPG</image>
+		<duration>432</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b9-1.mov</primary>
+	</video>
+	<video>
+		<name>Hawaii (Day) 6</name>
+		<filename>appletv-b10-1.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Hawaii-D6.JPG</image>
+		<duration>191</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b10-1.mov</primary>
+	</video>
+	<video>
+		<name>Hawaii (Night) 1</name>
+		<filename>appletv-b6-2.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Hawaii-N1.JPG</image>
+		<duration>192</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b6-2.mov</primary>
+	</video>
+	<video>
+		<name>Hawaii (Night) 2</name>
+		<filename>appletv-b8-1.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-Hawaii-N2.JPG</image>
+		<duration>143</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b8-1.mov</primary>
+	</video>
+	<video>
+		<name>Hong Kong - (Day) 1</name>
+		<filename>appletv-HK_H004_C008_v10_6Mbps.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-HongKong-D1.JPG</image>
+		<duration>660</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_HK_H004_C008_v10_6Mbps.mov</primary>
+	</video>
+	<video>
+		<name>Hong Kong - (Day) 2</name>
+		<filename>appletv-HK_H004_C010_4k_v01_6Mbps.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-HongKong-D2.JPG</image>
+		<duration>420</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_HK_H004_C010_4k_v01_6Mbps.mov</primary>
+	</video>
+	<video>
+		<name>Hong Kong - (Day) 3</name>
+		<filename>appletv-HK_H004_C013_t9_6M_HB.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-HongKong-D3.JPG</image>
+		<duration>660</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_HK_H004_C013_t9_6M_HB_tag0.mov</primary>
+	</video>
+	<video>
+		<name>Hong Kong - (Night) 1</name>
+		<filename>appletv-HK_B005_C011_t9_6M.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-HongKong-N1.JPG</image>
+		<duration>322</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_HK_B005_C011_t9_6M_tag0.mov</primary>
+	</video>
+	<video>
+		<name>London (Day) 1</name>
+		<filename>appletv-b5-2.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-London-D1.JPG</image>
+		<duration>335</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b5-2.mov</primary>
+	</video>
+	<video>
+		<name>London (Day) 2</name>
+		<filename>appletv-b6-3.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-London-D2.JPG</image>
+		<duration>240</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b6-3.mov</primary>
+	</video>
+	<video>
+		<name>London (Night) 1</name>
+		<filename>appletv-b1-2.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-London-N1.JPG</image>
+		<duration>239</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b1-2.mov</primary>
+	</video>
+	<video>
+		<name>London (Night) 2</name>
+		<filename>appletv-b3-1.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-London-N2.JPG</image>
+		<duration>335</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b3-1.mov</primary>
+	</video>
+	<video>
+		<name>London (Night) 3</name>
+		<filename>appletv-b9-2.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-London-N3.JPG</image>
+		<duration>335</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b9-2.mov</primary>
+	</video>
+	<video>
+		<name>Los Angeles - (Day) 1</name>
+		<filename>appletv-LA_A009_C009_t9_6M.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-LosAngeles-D1.JPG</image>
+		<duration>221</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_LA_A009_C009_t9_6M_tag0.mov</primary>
+	</video>
+	<video>
+		<name>Los Angeles - (Day) 2</name>
+		<filename>appletv-LA_A005_C009_v05_t9_6M.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-LosAngeles-D2.JPG</image>
+		<duration>210</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_LA_A005_C009_v05_t9_6M.mov</primary>
+	</video>
+	<video>
+		<name>Los Angeles - (Day) 3</name>
+		<filename>appletv-LA_A006_C008_t9_6M_HB.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-LosAngeles-D3.JPG</image>
+		<duration>360</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_LA_A006_C008_t9_6M_HB_tag0.mov</primary>
+	</video>
+	<video>
+		<name>Los Angeles - (Day) 4</name>
+		<filename>appletv-LA_A008_C004_ALT_v33_6Mbps.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-LosAngeles-D4.JPG</image>
+		<duration>806</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_LA_A008_C004_ALT_v33_6Mbps.mov</primary>
+	</video>
+	<video>
+		<name>New York City (Day) 1</name>
+		<filename>appletv-b1-3.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-NewYork-D1.JPG</image>
+		<duration>191</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b1-3.mov</primary>
+	</video>
+	<video>
+		<name>New York City (Day) 2</name>
+		<filename>appletv-b3-2.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-NewYork-D2.JPG</image>
+		<duration>239</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b3-2.mov</primary>
+	</video>
+	<video>
+		<name>New York City (Day) 3</name>
+		<filename>appletv-b7-2.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-NewYork-D3.JPG</image>
+		<duration>288</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b7-2.mov</primary>
+	</video>
+	<video>
+		<name>New York City (Night) 1</name>
+		<filename>appletv-b2-3.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-NewYork-N1.JPG</image>
+		<duration>192</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b2-3.mov</primary>
+	</video>
+	<video>
+		<name>New York City (Night) 2</name>
+		<filename>appletv-b4-2.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-NewYork-N2.JPG</image>
+		<duration>239</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b4-2.mov</primary>
+	</video>
+	<video>
+		<name>New York City (Night) 3</name>
+		<filename>appletv-b10-2.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-NewYork-N3.JPG</image>
+		<duration>192</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b10-2.mov</primary>
+	</video>
+	<video>
+		<name>San Francisco (Day) 1</name>
+		<filename>appletv-b3-3.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-SanFrancisco-D1.JPG</image>
+		<duration>336</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b3-3.mov</primary>
+	</video>
+	<video>
+		<name>San Francisco (Day) 2</name>
+		<filename>appletv-b4-3.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-SanFrancisco-D2.JPG</image>
+		<duration>527</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b4-3.mov</primary>
+	</video>
+	<video>
+		<name>San Francisco (Day) 3</name>
+		<filename>appletv-b8-2.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-SanFrancisco-D3.JPG</image>
+		<duration>432</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b8-2.mov</primary>
+	</video>
+	<video>
+		<name>San Francisco (Day) 4</name>
+		<filename>appletv-b8-3.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-SanFrancisco-D4.JPG</image>
+		<duration>287</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b8-3.mov</primary>
+	</video>
+	<video>
+		<name>San Francisco (Day) 5</name>
+		<filename>appletv-b9-3.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-SanFrancisco-D5.JPG</image>
+		<duration>144</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b9-3.mov</primary>
+	</video>
+	<video>
+		<name>San Francisco (Day) 6</name>
+		<filename>appletv-b10-3.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-SanFrancisco-D6.JPG</image>
+		<duration>335</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b10-3.mov</primary>
+	</video>
+	<video>
+		<name>San Francisco (Night) 1</name>
+		<filename>appletv-b1-4.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-SanFrancisco-N1.JPG</image>
+		<duration>143</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b1-4.mov</primary>
+	</video>
+	<video>
+		<name>San Francisco (Night) 2</name>
+		<filename>appletv-b2-4.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-SanFrancisco-N2.JPG</image>
+		<duration>96</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b2-4.mov</primary>
+	</video>
+	<video>
+		<name>San Francisco (Night) 3</name>
+		<filename>appletv-b5-3.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-SanFrancisco-N3.JPG</image>
+		<duration>383</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b5-3.mov</primary>
+	</video>
+	<video>
+		<name>San Francisco (Night) 4</name>
+		<filename>appletv-b6-4.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-SanFrancisco-N4.JPG</image>
+		<duration>192</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b6-4.mov</primary>
+	</video>
+	<video>
+		<name>San Francisco (Night) 5</name>
+		<filename>appletv-b7-3.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-SanFrancisco-N5.JPG</image>
+		<duration>191</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b7-3.mov</primary>
+	</video>
+	<video>
+		<name>San Francisco (Night) 6</name>
+		<filename>appletv-b10-4.mov</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoSecreensaver-appletv-SanFrancisco-N6.JPG</image>
+		<duration>96</duration>
+		<primary>http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/b10-4.mov</primary>
+	</video>
+</videoscreensaver>

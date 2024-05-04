@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window type="window" id="3018">
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <onload>SetFocus(9000)</onload>
+	<onload>ClearProperty(ShowViewSubMenu,home)</onload>
+    <onload>SetProperty(netflixview,active,home)</onload>
+	<onunload>ClearProperty(ShowViewSubMenu,home)</onunload>
+    <onunload condition="!String.Contains(Skin.String(HomeLayout),netflix)">ClearProperty(netflixview,home)</onunload>
+    <onunload>ClearProperty(SkinHelper.WidgetContainer,home)</onunload>
+    <controls>
+         <include>GlobalBackground</include>
+        <include>HomeNetflix2</include>
+	</controls>
+</window>

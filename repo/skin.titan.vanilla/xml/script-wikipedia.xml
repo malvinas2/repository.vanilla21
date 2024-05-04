@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog">
+    <defaultcontrol always="true">9902</defaultcontrol>
+    
+	<controls>
+        <!--Dialog Overlay-->
+        <include>DialogOverlayExtra</include>
+	
+        <control type="group">
+            <centertop>50%</centertop>
+            <centerleft>50%</centerleft>
+            <height>1000</height>
+            <width>1840</width>
+			
+			<control type="image">
+                <!--Panel-->
+				<left>0</left>
+				<top>0</top>
+                <width>1840</width>
+                <height>1000</height>
+                <texture border="15">diffuse/bgpanel.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+            </control>
+			<control type="image">
+                <!--Panel-->
+				<left>0</left>
+				<top>0</top>
+                <width>1840</width>
+                <height>1000</height>
+				<bordersize>10</bordersize>
+                <texture border="15">diffuse/bgpanel.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+            </control>
+
+            <!--Header-->
+            <control type="label" id="9901">
+                <description>Heading</description>
+				<centerleft>50%</centerleft>
+				<top>20</top>
+                <width>1800</width>
+                <label></label>
+                <include>DialogHeader</include>
+                <align>center</align>
+            </control>
+
+            <control type="group">
+                <bottom>100</bottom>
+
+                <!-- Table of Contents -->
+                <control type="image">
+                    <left>20</left>
+                    <top>80</top>
+                    <width>480</width>
+                    <bottom>2</bottom>
+					<texture border="5">dialogs/default/inner.png</texture>
+                </control>
+                <control type="list" id="9902">
+                    <left>20</left>
+                    <top>100</top>
+                    <width>480</width>
+                    <bottom>20</bottom>
+                    <onup>9902</onup>
+                    <ondown>9902</ondown>
+                    <onleft>9001</onleft>
+                    <onright>62</onright>
+                    <scrolltime>200</scrolltime>
+					<orientation>vertical</orientation>
+					<pagecontrol>62</pagecontrol>
+					<autoscroll>false</autoscroll>
+					<itemlayout height="70" width="480">
+						<control type="group">
+							<control type="image">
+								<!-- <posx>0</posx>
+								<posy>1</posy> -->
+								<width>480</width>
+								<height>70</height>
+								<texture>dialogs/default/separator.png</texture>
+							</control>
+							<control type="label">
+								<!-- <top>20</top> -->
+								<left>20</left>
+								<label>$INFO[ListItem.Label]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<include>DialogListNF</include>
+								<scroll>false</scroll>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="70" width="480">
+						<control type="group">
+							<animation effect="fade" start="100" end="30" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(9902)">Conditional</animation>
+							<control type="image">
+								<width>480</width>
+								<height>70</height>
+								<texture border="5">diffuse/panel.png</texture>
+								<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
+							</control>
+							<control type="label">
+								<!-- <top>20</top>  -->
+								<left>20</left>
+								<!-- <width>1020</width>
+								<height>60</height>  -->
+								<label>$INFO[ListItem.Label]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<scroll>true</scroll>
+								<include>DialogListFO</include>
+							</control>
+						</control>
+					</focusedlayout>
+                </control>
+
+                <control type="scrollbar" id="62">
+                    <left>520</left>
+                    <top>100</top>
+                    <width>20</width>
+                    <bottom>20</bottom>
+                    <onleft>9902</onleft>
+                    <onright>9903</onright>
+					<onup>62</onup>
+					<ondown>62</ondown>
+                    <orientation>vertical</orientation>
+					<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(62) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(62) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+                </control>
+
+                <!-- Article Textbox and Scrollbar -->
+                <control type="image">
+                    <left>550</left>
+                    <top>80</top>
+                    <right>395</right>
+                    <bottom>2</bottom>
+					<texture border="5">dialogs/default/inner.png</texture>
+                </control>
+                <control type="textbox" id="9903">
+                    <left>550</left>
+                    <top>110</top>
+                    <right>395</right>
+                    <bottom>32</bottom>
+					<onup>9903</onup>
+					<ondown>9903</ondown>
+					<onleft>62</onleft>
+                    <onright>63</onright>
+                    <shadowcolor>black</shadowcolor>
+                    <font>font14</font>
+                    <monofont>Mono26</monofont>
+                    <pagecontrol>63</pagecontrol>
+					<autoscroll>false</autoscroll>
+                </control>
+                <control type="scrollbar" id="63">
+                    <right>340</right>
+                    <top>100</top>
+                    <width>20</width>
+                    <bottom>20</bottom>
+                    <onleft>9903</onleft>
+                    <onright>9001</onright>
+					<onup>63</onup>
+					<ondown>63</ondown>
+                    <orientation>vertical</orientation>
+					<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(63) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(63) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+                </control>
+
+                <!-- Close Button -->
+                <control type="grouplist" id="9000">
+                    <right>20</right>
+                    <top>80</top>
+                    <width>300</width>
+                    <onleft>63</onleft>
+                    <itemgap>15</itemgap>
+                    <onright>9902</onright>
+					<control type="button" id="9001">
+						<!--Close-->
+						<width>270</width>
+						<include>DialogButtonOther</include>
+						<label>$LOCALIZE[222]</label>
+						<onclick>Close</onclick>
+					</control>					
+				
+					<!-- Article Image and Description Text -->
+					<control type="group">
+						<right>20</right>
+						<top>280</top>
+						<width>285</width>
+						<height>500</height>
+						<visible>!String.IsEmpty(Window.Property(Image))</visible>
+						<control type="image">
+							<aspectratio align="center" aligny="top">scale</aspectratio>
+							<width>260</width>
+							<texture background="true">$INFO[Window.Property(Image)]</texture>
+						</control>
+						<control type="textbox">
+							<aligny>center</aligny>
+							<align>center</align>
+							<height>110</height>
+							<top>500</top>
+							<font>font12</font>
+							<align>bottom</align>
+							<textcolor>grey</textcolor>
+							<label>$INFO[Window.Property(ImageText)]</label>
+							<visible>!String.IsEmpty((Window.Property(ImageText)))</visible>
+						</control>
+					</control> 
+				</control>
+			</control>
+		
+			<!-- Creative Commons Attribution Image -->
+			<control type="image" id="9905">
+				<right>20</right>
+				<bottom>20</bottom>
+				<width>175</width>
+				<height>175</height>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+			</control>		
+			
+			<!-- Creative Commons Attribution Text -->
+			<control type="textbox" id="9904">
+				<bottom>20</bottom>
+				<height>80</height>
+				<font>font12</font>
+				<align>center</align>
+				<textcolor>grey</textcolor>
+			</control>
+		</control>
+    </controls>
+</window>

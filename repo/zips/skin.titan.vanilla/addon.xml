@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.titan.vanilla" version="21.24.05.04" name="Titan Vanilla" provider-name="malvinas2, marcelveldt, AchillesPunks, cartman.dos, fuchs2468, mardukL, mgonzales">
+	<requires>
+		<import version="5.17.0" addon="xbmc.gui"/>	
+		<import addon="script.skinshortcuts" version="2.0.3"/>
+		<import addon="script.skin.helper.service" version="1.20.1"/>
+        <import addon="script.skin.helper.widgets" version="1.20.1"/>
+        <import addon="script.skin.helper.backgrounds" version="1.0.36"/>
+		<import addon="resource.images.studios.coloured" version="0.0.23"/>
+		<import addon="resource.images.studios.white" version="0.0.15"/>
+		<import addon="resource.images.languageflags.colour" version="0.0.4"/>
+        <import addon="resource.uisounds.titan.modern" version="1.0.0"/>
+        <import addon="resource.images.skinbackgrounds.titanium" version="1.0.0"/>
+        <import addon="resource.images.skinicons.wide" version="1.0.3"/>
+        <import addon="resource.images.backgroundoverlays.basic" version="1.0.0"/>
+    </requires>
+	<extension point="xbmc.gui.skin" debugging="false">		
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="bg_BG">Titan Vanilla за Kodi Omega, базиран на Titan от Marcel van der Veldt. </summary>
+		<summary lang="de_DE">Titan Vanilla für Kodi Omega, basierend auf Titan von Marcel van der Veldt. </summary>
+		<summary lang="en_GB">Titan Vanilla for Kodi Omega, based on Titan by Marcel van der Veldt. </summary>
+		<summary lang="en_US">Titan Vanilla for Kodi Omega, based on Titan by Marcel van der Veldt. </summary>
+		<summary lang="en_AU">Titan Vanilla for Kodi Omega, based on Titan by Marcel van der Veldt. </summary>
+		<summary lang="en_NZ">Titan Vanilla for Kodi Omega, based on Titan by Marcel van der Veldt. </summary>
+		<summary lang="nl_NL">Titan Vanilla voor Kodi Omega, gebaseerd op Titan van Marcel van der Veldt. </summary>
+		<summary lang="es_ES">Titan Vanilla para Kodi Omega, basado en Titan de Marcel van der Veldt. </summary>
+		<summary lang="fi_FI">Titan Vanilla Kodi Omegalle, perustuu Marcel van der Veldtin Titaniin. </summary>
+		<summary lang="fr_FR">Titan Vanilla pour Kodi Omega, basé sur Titan de Marcel van der Veldt. </summary>
+		<summary lang="he_IL">Titan Vanilla עבור Kodi Omega, מבוסס על Titan מאת מרסל ואן דר ולט. </summary>
+		<summary lang="hr_HR">Titan Vanilla za Kodi Omega, temeljen na Titanu Marcela van der Veldta. </summary>
+		<summary lang="it_IT">Titan Vanilla per Kodi Omega, basato su Titan di Marcel van der Veldt. </summary>
+		<summary lang="lt_LT">Titan Vanilla, skirta Kodi Omega, sukurta pagal Marcelio van der Veldto Titaną. </summary>
+		<summary lang="pl_PL">Titan Vanilla dla Kodi Omega, oparty na Titanie autorstwa Marcela van der Veldta. </summary>
+		<summary lang="pt_BR">Titan Vanilla para Kodi Omega, baseado em Titan de Marcel van der Veldt. </summary>
+		<summary lang="ru_RU">Titan Vanilla для Kodi Omega, основанный на Titan от Марселя ван дер Вельдта. </summary>
+		<summary lang="sr_RS">Титан Ванилла за Коди Омега, заснован на Титану Марсела ван дер Велта. </summary>
+		<summary lang="sr_RS@latin">Titan Vanilla za Kodi Omega, zasnovan na Titanu Marsela van der Velta. </summary>
+		<summary lang="tr_TR">Kodi Omega için Titan Vanilya, Marcel van der Veldt'in Titan'ına dayanmaktadır. </summary>
+		
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=344342</forum>
+		<website>https://forum.kodi.tv/showthread.php?tid=344342</website>
+		<email>malvinas2@gmx.de</email>
+		<source>https://github.com/malvinas2/repository.vanilla21</source>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshot000.jpg</screenshot>
+			<screenshot>resources/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshot003.jpg</screenshot>
+			<screenshot>resources/screenshot004.jpg</screenshot>
+			<screenshot>resources/screenshot005.jpg</screenshot>
+			<screenshot>resources/screenshot006.jpg</screenshot>
+			<screenshot>resources/screenshot007.jpg</screenshot>
+			<screenshot>resources/screenshot008.jpg</screenshot>
+			<screenshot>resources/screenshot009.jpg</screenshot>
+		</assets>
+		<news>
+            Follow the forum thread about the latest news for the skin.
+        </news>
+	</extension>
+</addon>

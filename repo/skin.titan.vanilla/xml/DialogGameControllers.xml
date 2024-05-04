@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<description>
+		Window for game functionality. This dialog was originally for controllers,
+		but adding new XML windows breaks old skins, so it has been repurposed
+		for any game-related windows.
+	</description>
+	<defaultcontrol>3</defaultcontrol>
+			<!--Dialog Overlay-->
+			<!-- <control type="group"> -->
+				<!-- <visible>!Window.IsActive(1121)</visible> -->
+				<!-- <include>DialogOverlayExtra</include> -->
+				<!-- <animation effect="fade" time="250" start="0" end="100" reversible="false">WindowOpen</animation> -->
+			<!-- </control> -->
+	
+		<controls>
+		<include>animation_window_open_close</include>
+		<!-- Window.IsDialogTopMost anstatt Window.IsActive nutzen ??? -->
+		<include condition="Window.IsDialogTopMost(gamecontrollers)">GameDialogControllers</include>
+		<include condition="Window.IsDialogTopMost(gameports)">GameDialogPorts</include>
+		<include condition="Window.IsDialogTopMost(gameagents)">GameDialogAgents</include>
+	</controls>
+	<controls>
+	</controls>
+</window>

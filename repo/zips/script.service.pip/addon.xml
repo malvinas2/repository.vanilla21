@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.service.pip" name="Picture-in-Picture Service" version="1.1.1" provider-name="mltobi">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+	</requires>
+	<extension point="xbmc.service" library="pipservice.py">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Picture-in-Picture service</summary>
+		<description lang="en_GB">Automatically run Picture-in-Picture service code when Kodi starts. Use ramdisk for temporary folder!</description>
+		<summary lang="de_DE">Picture-in-Picture Dienst</summary>
+		<description lang="de_DE">Picture-in-Picture Dienst starte automatisch wenn Kodi startet. Verwende Ramdisk für den temporären Ordner!</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+		<source>https://github.com/mltobi/kodi-pip-addon</source>	
+		<news>
+V1.1.1 (2023-07-31) - Released
+- Disabled "Starting..." notification because waiting image can take this task
+
+V1.1.0 (2021-08-30) - Released
+- Added "wait"-image that is displayed while ffmpeg starts to capture the stream
+- Used ramdisk /dev/shm as temporary folder by default #3
+  - If /dev/shm is no accessible or a non-Linux platform is detected user has to create and configure a folder on a ramdisk manually!
+- Added channel number and channel name to a displayed pip image #4
+- Made key shortcuts configurable (toggle, back to channel, channel up and channel down) #5
+
+V1.0.1 (2021-08-22) - Released
+- Added important hint on ramdisk usage for temp folder
+- Fixed usage of height settings and added settings updates using monitor class
+- Fixed several spelling errors in en and de language
+- Added test if ffmpeg executable is available
+- Added try/catch to avoid exception if thumb.png does not exist, belongs to #2
+
+V1.0.0 (2021-08-21) - Released
+- First release of PIP addon
+- Fixed installation of keymap file
+- Fixes to prepare installation using a repository
+- Renumbered already used version numbers to numbers lower than V1.0.0 in order to have V1.0.0 free for the 1st release
+
+V0.5.1 (2021-08-16)
+- Fixed ffmpeg capture settings for raspberry pi 4 and libreelec in order to avoid capturing broken images
+
+V0.5.0 (2021-08-09)
+- Improved image handling by using unique filename in order to force a reload by setImage() function
+- Increased framerate up to 25 fps (but with high CPU load!)
+
+V0.4.0 (2021-08-03)
+- Replaced "curl" by a native python implementation using urllib
+- Added error handling for tvheadend connection
+- Added error handling for m3u file format
+
+V0.3.0 (2021-07-25)
+- Put picture-in-picture handling in separate class
+- Added setting "frames per seconds"
+
+V0.2.0 (2021-07-23)
+- Complete refactor "autostart.h", "pipffmepg.py" and "script.picture.pip" not longer required
+- Only one service addons necessary
+- Keymap uses now notifiyAll instead of a runScript call
+- Prepared to run not only on librelec ... test on ubuntu installation passed
+
+V0.1.0 (2021-07-17)
+- Inital version</news>
+		<assets>
+		    	<icon>resources/icon.png</icon>
+			<screenshot>resources/screenshot-01.png</screenshot>
+			<screenshot>resources/screenshot-02.png</screenshot>
+    		</assets>
+	</extension>
+</addon>
+

@@ -1,0 +1,26 @@
+<videoscreensaver>
+	<collection>Waterfall</collection>
+	<encoded>true</encoded>
+	<builtin>true</builtin>
+	<video>
+		<name>Waterfall 1 - [1.3GB] - 720p</name>
+		<filename>Waterfall001-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Waterfall001.JPG</image>
+		<duration>3603</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy9pbGZybGl6cWJ1bDh3ZmwvV2F0ZXJmYWxsMDAxLTcyMHAubXA0P2RsPTE=</primary>
+	</video>
+	<video>
+		<name>Waterfall 2 - [1.3GB] - 720p</name>
+		<filename>Waterfall002-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Waterfall002.JPG</image>
+		<duration>3608</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy83YnpmcHRlMWlnZHB0bTUvV2F0ZXJmYWxsMDAyLTcyMHAubXA0P2RsPTE=</primary>
+	</video>
+	<video>
+		<name>Waterfall 3 - [2.4GB] - 720p</name>
+		<filename>Waterfall003-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Waterfall003.JPG</image>
+		<duration>7255</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy9iNjN6enhsbHQwMzc0YXgvV2F0ZXJmYWxsMDAzLTcyMHAubXA0P2RsPTE=</primary>
+	</video>
+</videoscreensaver>

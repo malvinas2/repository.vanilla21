@@ -1,0 +1,33 @@
+<videoscreensaver>
+	<collection>Snow</collection>
+	<encoded>true</encoded>
+	<builtin>true</builtin>
+	<video>
+		<name>Snow 1 - [1.3GB] - 720p</name>
+		<filename>Snow001-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Snow001.JPG</image>
+		<duration>3600</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy81am13eXBqN3M4dGVxMW0vU25vdzAwMS03MjBwLm1wND9kbD0x</primary>
+	</video>
+	<video>
+		<name>Snow 2 - [677MB] - 1080p</name>
+		<filename>Snow002-1080p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Snow002.JPG</image>
+		<duration>1370</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy8wNTAybW9jZjhzNnRncDUvU25vdzAwMi0xMDgwcC5tcDQ/ZGw9MQ==</primary>
+	</video>
+	<video>
+		<name>Snow 3 - [1.2GB] - 720p</name>
+		<filename>Snow003-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Snow003.JPG</image>
+		<duration>3600</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy80NGJwNm53dW9mdWVrdGQvU25vdzAwMy03MjBwLm1wND9kbD0x</primary>
+	</video>
+	<video>
+		<name>Snow 4 - [1.5GB] - 720p</name>
+		<filename>Snow004-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Snow004.JPG</image>
+		<duration>7710</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy9uajdpaGdkajQzcnp5bHIvU25vdzAwNC03MjBwLm1wND9kbD0x</primary>
+	</video>
+</videoscreensaver>

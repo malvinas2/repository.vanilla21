@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1122">
+<!--Titan-->
+	
+    <defaultcontrol always="true">109</defaultcontrol>
+    <controls>
+        <!--Dialog Overlay-->
+
+		<control type="button" id="109">
+			<description>background close area</description>
+			<!-- <bottom>300</bottom> -->
+			<width>100%</width>
+			<height>650</height>
+			<texturefocus />
+			<texturenofocus />
+			<onclick>Action(close)</onclick>
+			<onleft>Action(close)</onleft>
+			<onright>Action(close)</onright>
+			<onup>Action(close)</onup>
+			<ondown>Action(close)</ondown>
+		</control>
+
+        <control type="group">
+			<animation effect="fade" end="0" time="0" reversible="false" condition="Window.IsVisible(yesnodialog) | Window.IsVisible(addonsettings)">Conditional</animation>
+            <visible>!Window.IsActive(sliderdialog) + !Window.IsActive(subtitlesearch) + !Window.IsActive(script.pseudotv.TVOverlay.xml)</visible>
+			<visible>!Window.IsActive(DialogSettings.xml) + !Window.IsActive(DialogSlider.xml) + !Window.IsActive(PlayerProcessInfo) + !Window.IsActive(GameVideoFilter) + !Window.IsActive(GameStretchMode) + !Window.IsActive(GameControllers) + !Window.IsActive(GamePorts) + !Window.IsActive(GameVideoRotation)</visible>
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,-1000" end="0,0" time="600" tween="cubic" easing="inout" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="0,-1000" time="600" tween="cubic" easing="inout" />
+			</animation>
+             
+			 
+			<!--OSD Info Panel-->
+			<!--Info Stuff-->
+			<control type="group">
+				 <width>100%</width>
+				 <height>650</height>
+				 <!-- background -->
+				 <control type="image">
+					 <texture border="5">diffuse/panel.png</texture>
+					 <colordiffuse>$INFO[Skin.String(OSDPanelColor)]</colordiffuse>
+				 </control>
+				 <!-- Plot -->
+				 <control type="group">
+					 <!--logo-->
+					 <control type="image">
+						 <posx>1520</posx>
+						 <posy>20</posy>
+						 <width>356</width>
+						 <height>200</height>
+						 <fadetime>200</fadetime>
+						 <texture background="true">$VAR[OSDInfoImage]</texture>
+						 <aspectratio align="left" aligny="top">keep</aspectratio>
+						 <!-- <visible>!Window.IsVisible(1121)</visible> -->
+						 <visible>[!String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(clearart)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearart)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearArt)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearLogo)) | !String.IsEmpty(VideoPlayer.Cover) | !String.IsEmpty(Player.Art(thumb))]</visible>
+					 </control>
+					 <!-- plot when clearlogo visible -->
+					 <control type="textbox">
+						 <posx>38</posx>
+						 <posy>30</posy>
+						 <width>1450</width>
+						 <height>560</height>
+						 <visible>[!String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(clearart)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearart)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearArt)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearLogo)) | !String.IsEmpty(VideoPlayer.Cover) | !String.IsEmpty(Player.Art(thumb))]</visible>
+						 <label fallback="19055">[B]$VAR[premiered_or_year,,  • ]$VAR[TotalDuration_Info,, min. • ]$INFO[VideoPlayer.MPAA, • ]$INFO[VideoPlayer.RatingAndVotes, • ]$INFO[VideoPlayer.EpisodeName,, • ][/B][CR]$INFO[VideoPlayer.Plot]</label>
+						 <textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+						 <shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+						 <align>justify</align>
+						 <font>Light28</font>
+					 </control>
+					 <!-- plot when clearlogo NOT visible -->
+					 <control type="textbox">
+						 <posx>38</posx>
+						 <posy>30</posy>
+						 <width>1810</width>
+						 <height>560</height>
+						 <visible>![!String.IsEmpty(Player.Art(clearart)) | !String.IsEmpty(Player.Art(tvshow.clearart)) | !String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearArt)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearLogo)) | !String.IsEmpty(VideoPlayer.Cover) | !String.IsEmpty(Player.Art(thumb))]</visible>
+						 <label fallback="19055">[B]$VAR[premiered_or_year,,  • ]$VAR[TotalDuration_Info,, min. • ]$INFO[VideoPlayer.MPAA, • ]$INFO[VideoPlayer.RatingAndVotes, • ]$INFO[VideoPlayer.EpisodeName,, • ][/B][CR]$INFO[VideoPlayer.Plot]</label>
+						 <textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+						 <shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+						 <align>justify</align>
+						 <font>Light28</font>
+					 </control>
+					<!-- media flags -->
+					<control type="group">
+						 <posx>38</posx>
+						 <posy>600</posy>
+						<include>mediaflags_text</include>
+						<visible>Skin.HasSetting(EnableOSDInfoMediaFlags)</visible>
+					</control>
+				 </control>
+			 </control>			 
+			 
+
+			
+			
+			
+			
+		</control>
+    </controls>
+</window>

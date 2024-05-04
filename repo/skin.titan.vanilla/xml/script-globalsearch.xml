@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1198">
+	<views>50,51</views>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<controls>
+        <!--Global Background-->
+        <include>GlobalBackground</include>
+         <!-- Now playing -->
+		<include>NowPlayingModern</include>
+				
+        <!--Header-->
+        <include>Header</include>
+		
+		<include>animation_view_change</include>
+	<!-- <include>IncludesFooter</include> -->
+
+		<control type="group">
+			<top>150</top>
+			<!-- <bottom>125</bottom> -->
+			<!-- <visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)]</visible> -->
+			<control type="image">
+				<left>-5</left>
+				<top>-5</top>
+				<width>472</width>
+				<height>820</height>
+				<texture border="15">diffuse/bgpanel.png</texture>
+				<colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
+				<bordersize>15</bordersize>
+			</control>
+			
+			<control type="image">
+				<posx>480</posx>
+				<top>-5</top>
+				<width>1400</width>
+				<height>820</height>
+				<texture border="15">diffuse/bgpanel.png</texture>
+				<colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
+                <visible>Integer.IsGreater(Container.NumItems,0)</visible>
+				<bordersize>15</bordersize>
+			</control>
+			
+			<control type="group">
+				<top>65</top>
+				<control type="label">
+					<top>40</top>
+					<left>20</left>
+					<label>$LOCALIZE[70012]: </label>
+					<width>180</width>
+					<height>40</height>
+					<font>Reg28</font>
+                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+                    <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+				</control>
+				<control type="label">
+					<top>40</top>
+					<left>180</left>
+					<label>$INFO[Window.Property(GlobalSearch.SearchString)]</label>
+					<width>225</width>
+					<height>40</height>
+					<font>Reg28</font>
+                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+                    <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+				</control>
+				<control type="image">
+					<left>333</left>
+					<top>1</top>
+					<width>118</width>
+					<height>118</height>
+					<texture colordiffuse="$INFO[Skin.String(GeneralHighlightTextColor)]">special://home/addons/script.globalsearch/resources/skins/default/media/globalsearch-roundbutton_white.png</texture>
+					<visible>Control.HasFocus(990)</visible>
+				</control>
+				<control type="image">
+					<left>372</left>
+					<top>40</top>
+					<width>40</width>
+					<height>40</height>
+					<texture colordiffuse="FFA0A0A0">special://home/addons/script.globalsearch/resources/skins/default/media/globalsearch-search.png</texture>
+					<visible>Control.IsVisible(990) + !Control.HasFocus(990)</visible>
+				</control>
+				<control type="image">
+					<left>372</left>
+					<top>40</top>
+					<width>40</width>
+					<height>40</height>
+					<texture colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">special://home/addons/script.globalsearch/resources/skins/default/media/globalsearch-search.png</texture>
+					<visible>Control.HasFocus(990)</visible>
+				</control>
+				<control type="grouplist">
+					<left>20</left>
+					<top>30</top>
+					<width>442</width>
+					<align>center</align>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<width>auto</width>
+						<height>55</height>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<label>$LOCALIZE[32297]</label>
+						<visible>Control.IsVisible(991)</visible>
+					</control>
+					<control type="label" id="991">
+						<width>380</width>
+						<height>55</height>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<label></label>
+					</control>
+				</control>
+				<control type="button" id="990">
+					<left>77</left>
+					<top>0</top>
+					<width>500</width>
+					<height>120</height>
+					<label>$LOCALIZE[32299]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font14</font>
+					<texturefocus></texturefocus>
+					<texturenofocus></texturenofocus>
+					<onup>SetFocus(9000,99,absolute)</onup>
+					<ondown>2</ondown>
+					<onleft>500</onleft>
+					<onright>500</onright>
+				</control>
+			</control>
+			<control type="group">
+				<top>80</top>
+				<control type="label">
+					<left>0</left>
+					<top>80</top>
+					<width>462</width>
+					<height>50</height>
+					<textoffsetx>20</textoffsetx>
+					<!-- <textoffsety>15</textoffsety> -->
+					<radioposx>300</radioposx>
+					<font>font24_title</font>
+					<aligny>top</aligny>
+                    <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+                    <shadowcolor>$INFO[Skin.String(ViewDetailsHighlightTextShadowColor)]</shadowcolor>
+					<label>$LOCALIZE[14018]</label>
+				</control>
+				<control type="button" id="2">
+					<width>428</width>
+					<include>SideBladeMenuButton</include>
+					<left>20</left>
+					<top>130</top>
+					<height>70</height>
+					<aligny>center</aligny>
+					<textoffsetx>20</textoffsetx>
+					<onup>990</onup>
+					<ondown>SetFocus(9000,0,absolute)</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onclick>Container.NextViewMode</onclick>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>200</top>
+					<width>462</width>
+					<height>50</height>
+					<textoffsetx>20</textoffsetx>
+					<!-- <textoffsety>15</textoffsety> -->
+					<radioposx>300</radioposx>
+					<font>font24_title</font>
+					<aligny>top</aligny>
+                    <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+                    <shadowcolor>$INFO[Skin.String(ViewDetailsHighlightTextShadowColor)]</shadowcolor>
+					<label>$LOCALIZE[14211]</label>
+				</control>
+				<control type="fixedlist" id="9000">
+					<left>0</left>
+					<top>250</top>
+					<width>462</width>
+					<height>440</height>
+					<movement>6</movement>
+					<onup>2</onup>
+					<ondown>990</ondown>
+					<onleft>70</onleft>
+					<onright>50</onright>
+					<pagecontrol>70</pagecontrol>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<itemlayout height="60" width="462">
+						<control type="image">
+							<left>-3</left>
+							<top>1</top>
+							<width>95</width>
+							<height>60</height>
+							<texture colordiffuse="$INFO[Skin.String(SideBladeTextColor)]">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>104</left>
+							<top>0</top>
+							<height>60</height>
+							<width>350</width>
+							<aligny>center</aligny>
+							<font>Reg26</font>
+							<textcolor>$INFO[Skin.String(SideBladeTextColor)]</textcolor>
+							<label>$INFO[ListItem.Label]</label>							
+						</control>
+						<control type="label">
+							<left>104</left>
+							<top>0</top>
+							<height>60</height>
+							<width>340</width>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>Reg26</font>
+							<textcolor>$INFO[Skin.String(SideBladeTextColor)]</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="60" width="462">
+						<control type="image">
+							<left>60</left>
+							<top>0</top>
+							<width>390</width>
+							<height>60</height>
+							<texture colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="5">diffuse/panel.png</texture>
+							<!-- <animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000)">Conditional</animation> -->
+						</control>
+						<control type="image">
+							<left>60</left>
+							<top>0</top>
+							<width>390</width>
+							<height>60</height>
+							<texture colordiffuse="51FFFFFF">special://home/addons/script.globalsearch/resources/skins/default/media/globalsearch-black.png</texture>
+							<animation effect="fade" start="100" end="0" time="0" condition="Control.HasFocus(9000)">Conditional</animation>
+						</control>
+						<control type="image">
+							<left>-3</left>
+							<top>1</top>
+							<width>95</width>
+							<height>60</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>104</left>
+							<top>0</top>
+							<height>60</height>
+							<width>350</width>
+							<aligny>center</aligny>
+							<font>Reg26</font>
+							<textcolor>$INFO[Skin.String(ButtonFocusTextColor)]</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>104</left>
+							<top>0</top>
+							<height>60</height>
+							<width>340</width>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>Reg26</font>
+							<textcolor>$INFO[Skin.String(ButtonFocusTextColor)]</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			
+			<control type="panel" id="50">
+				<left>512</left>
+				<top>50</top>
+				<width>1490</width>
+				<height>700</height>
+				<onleft>9000</onleft>
+				<onright condition="Skin.HasSetting(EnableQuickJump)">6000</onright>
+				<onright condition="!Skin.HasSetting(EnableQuickJump)">60</onright>
+				<viewtype label="536">icon</viewtype>
+				<preloaditems>20</preloaditems>
+				<pagecontrol>60</pagecontrol>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<itemlayout height="360" width="270" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>220</width>
+						<height>330</height>
+						<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+						<include>thumbsborder_focused_alt</include>
+						<fadetime>500</fadetime>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>250</top>
+						<width>220</width>
+						<height>80</height>
+						<texture colordiffuse="$INFO[Skin.String(TagOverlaysPanelColor)]">diffuse/poster_tag.png</texture>
+						<include>thumbsborder_focused_alt</include>
+					</control>
+					<control type="textbox">
+						<left>15</left>
+						<width>190</width>
+						<height>55</height>
+						<top>260</top>
+						<font>font10</font>
+						<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="360" width="270" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">
+					<control type="group">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>220</width>
+							<height>330</height>
+							<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+							<bordertexture colordiffuse="$VAR[ViewDetailsFocusColor]">home/home_matte2.png</bordertexture>
+							<include>thumbsborder_focused_alt</include>
+							<fadetime>500</fadetime>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>250</top>
+							<width>220</width>
+							<height>80</height>
+							<texture colordiffuse="$INFO[Skin.String(TagOverlaysPanelColor)]">diffuse/poster_tag.png</texture>
+							<include>thumbsborder_focused_alt</include>
+						</control>
+						<control type="textbox">
+							<left>15</left>
+							<top>260</top>
+							<width>190</width>
+							<height>55</height>
+							<font>font10</font>
+							<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+				</focusedlayout>
+				<itemlayout height="360" width="460" condition="Container.Content(episodes) | Container.Content(musicvideos)">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>420</width>
+						<height>310</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>scale</aspectratio>
+						<include>thumbsborder_focused_alt</include>
+						<fadetime>500</fadetime>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>235</top>
+						<width>420</width>
+						<height>75</height>
+						<texture colordiffuse="$INFO[Skin.String(TagOverlaysPanelColor)]">diffuse/poster_tag.png</texture>
+						<include>thumbsborder_focused_alt</include>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>245</top>
+						<width>390</width>
+						<height>30</height>
+						<font>font10</font>
+						<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+						<label>[B]$INFO[ListItem.TvShowTitle][/B]</label>
+						<visible>Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>245</top>
+						<width>390</width>
+						<height>30</height>
+						<font>font10</font>
+						<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+						<label>[B]$INFO[ListItem.Artist][/B]</label>
+						<visible>Container.Content(musicvideos)</visible>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>270</top>
+						<width>390</width>
+						<height>30</height>
+						<font>font10</font>
+						<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="360" width="460" condition="Container.Content(episodes) | Container.Content(musicvideos)">
+					<control type="group">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>420</width>
+							<height>310</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+							<bordertexture colordiffuse="$VAR[ViewDetailsFocusColor]">home/home_matte2.png</bordertexture>
+							<include>thumbsborder_focused_alt</include>
+							<fadetime>500</fadetime>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>235</top>
+							<width>420</width>
+							<height>75</height>
+							<texture colordiffuse="$INFO[Skin.String(TagOverlaysPanelColor)]">diffuse/poster_tag.png</texture>
+							<include>thumbsborder_focused_alt</include>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>245</top>
+							<width>390</width>
+							<height>30</height>
+							<font>font10</font>
+							<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+							<label>[B]$INFO[ListItem.TvShowTitle][/B]</label>
+							<visible>Container.Content(episodes)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>245</top>
+							<width>390</width>
+							<height>30</height>
+							<font>font10</font>
+							<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+							<label>[B]$INFO[ListItem.Artist][/B]</label>
+							<visible>Container.Content(musicvideos)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>270</top>
+							<width>390</width>
+							<height>30</height>
+							<font>font10</font>
+							<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+				</focusedlayout>
+				<itemlayout height="360" width="340" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(directors) | Container.Content(livetv)">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>300</width>
+						<height>300</height>
+						<texture border="2" background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>scale</aspectratio>
+						<include>thumbsborder_focused_alt</include>
+						<fadetime>500</fadetime>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>225</top>
+						<width>300</width>
+						<height>75</height>
+						<texture colordiffuse="$INFO[Skin.String(TagOverlaysPanelColor)]">special://home/addons/script.globalsearch/resources/skins/default/media/globalsearch-black.png</texture>
+						<include>thumbsborder_focused_alt</include>
+					</control>
+					<control type="textbox">
+						<left>15</left>
+						<top>235</top>
+						<width>270</width>
+						<height>60</height>
+						<font>font10</font>
+						<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<autoscroll delay="2000" time="2000" repeat="500">true</autoscroll>
+						<visible>Container.Content(artists)</visible>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>235</top>
+						<width>270</width>
+						<height>30</height>
+						<font>font10</font>
+						<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+						<label>[B]$INFO[ListItem.Artist][/B]</label>
+						<autoscroll delay="2000" time="2000" repeat="500">true</autoscroll>
+						<visible>Container.Content(albums) | Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>235</top>
+						<width>270</width>
+						<height>30</height>
+						<font>font10</font>
+						<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+						<label>$INFO[ListItem.Property(Starttime)]</label>
+						<autoscroll delay="2000" time="2000" repeat="500">true</autoscroll>
+						<visible>Container.Content(livetv)</visible>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>260</top>
+						<width>270</width>
+						<height>30</height>
+						<font>font10</font>
+						<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<autoscroll delay="2000" time="2000" repeat="500">true</autoscroll>
+						<visible>!Container.Content(artists)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="360" width="340" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(directors) | Container.Content(livetv)">
+					<control type="group">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>300</width>
+							<height>300</height>
+							<texture border="2" background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+							<bordertexture colordiffuse="$VAR[ViewDetailsFocusColor]">home/home_matte2.png</bordertexture>
+							<include>thumbsborder_focused_alt</include>
+							<fadetime>500</fadetime>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>225</top>
+							<width>300</width>
+							<height>75</height>
+							<texture colordiffuse="$INFO[Skin.String(TagOverlaysPanelColor)]">special://home/addons/script.globalsearch/resources/skins/default/media/globalsearch-black.png</texture>
+							<include>thumbsborder_focused_alt</include>
+						</control>
+						<control type="textbox">
+							<left>15</left>
+							<top>235</top>
+							<width>270</width>
+							<height>60</height>
+							<font>font10</font>
+							<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<autoscroll delay="2000" time="2000" repeat="500">true</autoscroll>
+							<visible>Container.Content(artists)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>235</top>
+							<width>270</width>
+							<height>30</height>
+							<font>font10</font>
+							<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+							<label>[B]$INFO[ListItem.Artist][/B]</label>
+							<autoscroll delay="2000" time="2000" repeat="500">true</autoscroll>
+							<visible>Container.Content(albums) | Container.Content(songs)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>235</top>
+							<width>270</width>
+							<height>30</height>
+							<font>font10</font>
+							<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+							<label>[B]$INFO[ListItem.Property(Starttime)][/B]</label>
+							<autoscroll delay="2000" time="2000" repeat="500">true</autoscroll>
+							<visible>Container.Content(livetv)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>260</top>
+							<width>270</width>
+							<height>30</height>
+							<font>font10</font>
+							<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<autoscroll delay="2000" time="2000" repeat="500">true</autoscroll>
+							<visible>!Container.Content(artists)</visible>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+
+			<control type="list" id="51">
+				<left>502</left>
+				<top>50</top>
+				<width>800</width>
+				<height>700</height>
+				<onleft>9000</onleft>
+				<onright condition="Skin.HasSetting(EnableQuickJump)">6000</onright>
+				<onright condition="!Skin.HasSetting(EnableQuickJump)">60</onright>
+				<pagecontrol>60</pagecontrol>
+				<viewtype label="535">biglist</viewtype>
+				<preloaditems>2</preloaditems>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<itemlayout height="100" width="1458">
+					<control type="image">
+						<left>5</left>
+						<top>5</top>
+						<width>90</width>
+						<height>90</height>
+						<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</control>
+					<control type="image">
+						<left>5</left>
+						<top>5</top>
+						<width>90</width>
+						<height>90</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>5</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>font14</font>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Genre]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(artists)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.TVShowTitle]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Property(artist_genre)]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<visible>Container.Content(artists)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Artist]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<visible>Container.Content(musicvideos) | Container.Content(albums) | Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Property(Starttime)]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<visible>Container.Content(livetv)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<visible>Container.Content(actors) | Container.Content(directors)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="100" width="1458">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>1038</width>
+						<height>100</height>
+						<texture colordiffuse="$INFO[Skin.String(ViewDetailsFocusColor)]" border="5">diffuse/panel.png</texture>
+						<visible>Control.HasFocus(51)</visible>
+					</control>
+					<control type="image">
+						<left>5</left>
+						<top>5</top>
+						<width>90</width>
+						<height>90</height>
+						<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</control>
+					<control type="image">
+						<left>5</left>
+						<top>5</top>
+						<width>90</width>
+						<height>90</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>5</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>font14</font>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextFocusColor)]</textcolor>
+						<visible>Control.HasFocus(51)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Genre]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextFocusColor)]</textcolor>
+						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+						<visible>Control.HasFocus(51)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>5</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>font14</font>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<visible>!Control.HasFocus(51)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Genre]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+						<visible>!Control.HasFocus(51)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.TVShowTitle]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextFocusColor)]</textcolor>
+						<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
+						<visible>Control.HasFocus(51)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.TVShowTitle]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
+						<visible>!Control.HasFocus(51)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Property(artist_genre)]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextFocusColor)]</textcolor>
+						<visible>Container.Content(artists)</visible>
+						<visible>Control.HasFocus(51)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Property(artist_genre)]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<visible>Container.Content(artists)</visible>
+						<visible>!Control.HasFocus(51)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Artist]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextFocusColor)]</textcolor>
+						<visible>Container.Content(musicvideos) | Container.Content(albums) | Container.Content(songs)</visible>
+						<visible>Control.HasFocus(51)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Artist]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<visible>Container.Content(musicvideos) | Container.Content(albums) | Container.Content(songs)</visible>
+						<visible>!Control.HasFocus(51)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Property(Starttime)]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextFocusColor)]</textcolor>
+						<visible>Container.Content(livetv)</visible>
+						<visible>Control.HasFocus(51)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Property(Starttime)]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<visible>Container.Content(livetv)</visible>
+						<visible>!Control.HasFocus(51)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Property(Starttime)]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<visible>Container.Content(livetv)</visible>
+						<visible>Container.Content(musicvideos) | Container.Content(albums) | Container.Content(songs)</visible>
+						<visible>!Control.HasFocus(51)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextFocusColor)]</textcolor>
+						<visible>Container.Content(actors) | Container.Content(directors)</visible>
+						<visible>Control.HasFocus(51)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<visible>Container.Content(actors) | Container.Content(directors)</visible>
+						<visible>!Control.HasFocus(51)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group">
+				<left>1500</left>
+				<top>0</top>
+				<!-- <visible>Control.IsVisible(51)</visible> -->
+				<visible>false</visible>
+				<control type="image">
+					<right>5</right>
+					<top>-5</top>
+					<width>472</width>
+					<height>820</height>
+					<texture border="15">diffuse/bgpanel.png</texture>
+					<colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
+					<!-- <texture>special://home/addons/script.globalsearch/resources/skins/default/media/globalsearch-panel.png</texture> -->
+					<!-- <bordertexture border="6">special://home/addons/script.globalsearch/resources/skins/default/media/globalsearch-panel-shadow.png</bordertexture> -->
+					<bordersize>5</bordersize>
+				</control>
+				<control type="image">
+					<left>10</left>
+					<top>20</top>
+					<width>380</width>
+					<height>380</height>
+					<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+				</control>
+				<control type="image">
+					<left>10</left>
+					<top>20</top>
+					<width>380</width>
+					<height>380</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+				</control>
+				<control type="textbox">
+					<left>-20</left>
+					<top>420</top>
+					<height>340</height>
+					<width>400</width>
+					<aligny>justify</aligny>
+					<!-- <font>font25_narrow</font> -->
+					<font>Reg26</font>
+                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+                    <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+					<label>$INFO[ListItem.Plot]</label>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+				</control>
+				<control type="textbox">
+					<left>-20</left>
+					<top>420</top>
+					<height>340</height>
+					<width>400</width>
+					<aligny>justify</aligny>
+					<!-- <font>font25_narrow</font> -->
+					<font>Reg26</font>
+                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+                    <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+					<label>$INFO[ListItem.Property(Plot)]</label>
+					<visible>Container.Content(livetv)</visible>
+				</control>
+				<control type="textbox">
+					<left>-20</left>
+					<top>420</top>
+					<height>340</height>
+					<width>400</width>
+					<aligny>justify</aligny>
+					<!-- <font>font25_narrow</font> -->
+					<font>Reg26</font>
+                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+                    <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+					<label>$INFO[ListItem.Property(Artist_Description)]</label>
+					<visible>Container.Content(artists)</visible>
+				</control>
+				<control type="textbox">
+					<left>-20</left>
+					<top>420</top>
+					<height>340</height>
+					<width>400</width>
+					<aligny>justify</aligny>
+					<!-- <font>font25_narrow</font> -->
+					<font>Reg26</font>
+                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+                    <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+					<label>$INFO[ListItem.Property(Album_Description)]</label>
+					<visible>Container.Content(albums)</visible>
+				</control>
+				<control type="textbox">
+					<left>-20</left>
+					<top>420</top>
+					<height>340</height>
+					<width>400</width>
+					<aligny>justify</aligny>
+					<!-- <font>font25_narrow</font> -->
+					<font>Reg26</font>
+                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+                    <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+					<label>$INFO[ListItem.Comment]</label>
+					<visible>Container.Content(songs)</visible>
+				</control>
+			</control>
+
+			<control type="label" id="999">
+				<left>436</left>
+				<top>0</top>
+				<width>1484</width>
+				<height>1080</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font_MainMenu</font>
+				<label>$LOCALIZE[284]</label>
+			</control>
+		</control>
+	
+		<control type="group">
+			<top>180</top>
+			<left>90</left>
+			<control type="image">
+				<aspectratio>keep</aspectratio>
+				<width>56</width>
+				<height>56</height>
+				<texture colordiffuse="$INFO[Skin.String(GeneralHighlightTextColor)]">special://home/addons/script.globalsearch/resources/skins/default/media/globalsearch-logo.png</texture>
+			</control>
+			<control type="image">
+				<left>40</left>
+				<top>10</top>
+				<aspectratio>keep</aspectratio>
+				<width>192</width>
+				<height>36</height>
+				<texture>special://home/addons/script.globalsearch/resources/skins/default/media/globalsearch-logo-text.png</texture>
+			</control>
+		</control>
+		
+		<!--vertical Scollbar right-->
+		<control type="scrollbar" id="60">
+			<visible>[Control.IsVisible(50) + Integer.IsGreater(Container(50).NumItems,0)] | [Control.IsVisible(51) + Integer.IsGreater(Container(51).NumItems,0)]</visible>
+			<right>15</right>
+			<bottom>13%</bottom>
+			<height>765</height>
+			<onup>60</onup>
+			<ondown>6000</ondown>
+			<onleft>50</onleft>
+			<animation effect="fade" start="0" end="100" time="400" condition="[Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)] + !Control.IsVisible(6002)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)] | Control.IsVisible(6002)">Conditional</animation>
+		</control>
+		
+	<!--vertical Scollbar left-->
+		<control type="scrollbar" id="70">
+			<visible>Control.IsVisible(9000) + Integer.IsGreater(Container(9000).NumItems,7)</visible>
+			<left>10</left>
+			<width>20</width>
+			<height>460</height>
+			<top>480</top>
+			<onright>9000</onright>
+			<animation effect="fade" start="0" end="100" time="400" condition="[Control.HasFocus(70) | Skin.HasSetting(EnableTouchSupport) | Skin.HasSetting(alwaysShowScrollbars)] + !Control.IsVisible(6002)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(70) | Skin.HasSetting(EnableTouchSupport) | Skin.HasSetting(alwaysShowScrollbars)] | Control.IsVisible(6002)">Conditional</animation>
+		</control>
+		
+		<!--NowPlaying-->
+        <include condition="Skin.HasSetting(DebugGrid) | Skin.HasSetting(DebugInfo)">DebugInfo</include>
+	
+		<!-- <include>DialogOverlayExtra</include> -->
+	
+		<!--Footer-->
+		<include condition="!Skin.HasSetting(nofooterbar)">Footer</include>
+		
+		<!--Clearlogo-->
+		<control type="group">
+            <!-- <visible>![Control.IsVisible(519) | Control.IsVisible(520) | Control.IsVisible(523)]</visible> -->
+            <include condition="Skin.String(ClearLogoLocation) + ![Skin.HasSetting(nofooterbar) + Skin.String(ClearLogoLocation,footer)]">ClearLogo</include>
+        </control>
+	
+	</controls>
+</window>

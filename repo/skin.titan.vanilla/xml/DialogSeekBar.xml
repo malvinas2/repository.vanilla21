@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- malvinas2 -->
+	<visible>[[Window.IsActive(videoosd) | [Player.Paused + !Player.Caching] | Player.ShowInfo | Player.Seeking | Player.HasPerformedSeek(3) | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(fullscreeninfo) | Window.IsActive(playerprocessinfo)] + Window.IsActive(fullscreenvideo)] | !String.IsEmpty(Player.SeekNumeric) | [[Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + !Window.IsActive(pvrosdchannels) + !String.IsEmpty(PVR.ChannelNumberInput)]</visible>
+    
+	<!-- | Window.IsActive(visualisation)   fuhrt zu Problemen bei Musik-OSD, wird doppelt dargestellt -->
+	
+	
+	
+	<!-- original Titan v17 -->
+	<!-- <visible>[Window.IsActive(videoosd) | Player.ShowInfo | Player.Seeking | Player.HasPerformedSeek(3) | Player.Paused | Player.Forwarding | Player.Rewinding] + Window.IsActive(fullscreenvideo)</visible> -->
+	
+	<!-- original Estuary  BEFORE direct channel input, github 11434 -->
+	<!-- <visible>[[Player.Seeking | Player.HasPerformedSeek(3) | [Player.Paused + !Player.Caching] | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd) | Window.IsActive(playerprocessinfo)] + Window.IsActive(fullscreenvideo)] | Window.IsActive(visualisation) | !String.IsEmpty(Player.SeekNumeric)</visible> -->
+	
+	<!-- original Estuary AFTER direct channel input, github 11434 -->
+	<!-- <visible>[[Player.Seeking | Player.HasPerformedSeek(3) | [Player.Paused + !Player.Caching] | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd) | Window.IsActive(playerprocessinfo)] + Window.IsActive(fullscreenvideo)] | Window.IsActive(visualisation) | !String.IsEmpty(Player.SeekNumeric) | [[Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + !Window.IsActive(pvrosdchannels) + !String.IsEmpty(PVR.ChannelNumberInput)]</visible> -->
+	
+	
+	<!-- /malvinas2 -->
+	
+	<controls>
+		<include>PVRChannelNumberInput</include>
+        <control type="group">
+            <!--Info Panel-->
+            <include>OSDInfoPanel</include>
+			<!-- malvinas2 -->
+			<visible>!Player.HasGame</visible>
+			<!-- /malvinas2 -->		
+            <!--clearart clearlogo-->
+            <control type="image">
+                <posx>1520</posx>
+                <posy>20</posy>
+                <width>356</width>
+                <height>200</height>
+                <aspectratio align="left" aligny="top">keep</aspectratio>
+                <texture background="true">$VAR[VideoPlayerClearart]</texture>
+                <visible>[Skin.HasSetting(OSDShowInfoOnPause) | VideoPlayer.Content(livetv) | Window.IsActive(videoosd) | Player.ShowInfo] + !Control.IsVisible(552233) + !Control.IsVisible(662244) + !Window.IsActive(playerprocessinfo) + !Window.IsActive(1121) + !Window.IsActive(1110) + !Window.IsActive(1125) + !Window.IsActive(osdaudiosettings) + !Window.IsActive(osdsubtitlesettings) + !Window.IsActive(osdvideosettings) + !Window.IsActive(osdcmssettings) + !Window.IsActive(videobookmarks) + Skin.HasSetting(OSDShowClearArt)</visible>
+				<visible>!Window.IsActive(sliderdialog) + !Window.IsActive(pvrosdchannels) + !Window.IsActive(DialogSettings.xml)</visible>
+				<!-- Control.IsVisible(552233) = include"OSDInfoPanel" -->
+				<!-- Control.IsVisible(662244) = Small_OSD_Seek_Panel -->
+            </control>
+            <!--OSD Panel-->
+            <control type="group">
+                <visible>Skin.HasSetting(OSDShowInfoOnPause) | VideoPlayer.Content(livetv) | Window.IsActive(videoosd) | Player.ShowInfo</visible>
+                <visible>!Window.IsActive(sliderdialog) + !Window.IsActive(pvrosdchannels) + !Window.IsActive(DialogSettings.xml)</visible>
+                <animation effect="slide" start="0,400" end="0,0" time="200">WindowOpen</animation>
+                <animation effect="slide" start="0,0" end="0,400" time="200">WindowClose</animation>
+                <animation effect="slide" start="0,0" end="0,400" tween="cubic" easing="out" delay="300" time="250" reversible="false">Hidden</animation>
+                <include condition="!Skin.HasSetting(UseSlimOSDPanel)">OSDPanelModern</include>
+                <include condition="Skin.HasSetting(UseSlimOSDPanel)">OSDPanelModernSlim</include>
+                <!-- weather on OSD -->
+                <include condition="!Skin.HasSetting(UseSlimOSDPanel) + Skin.HasSetting(ShowWeatherVideoInfoOSD)  + !Window.IsActive(playerprocessinfo)">WeatherInfoOSD</include>
+                <include condition="Skin.HasSetting(UseSlimOSDPanel) + Skin.HasSetting(ShowWeatherVideoInfoOSD) + !Window.IsActive(playerprocessinfo)">WeatherInfoOSDSlim</include>
+            </control>
+            <!-- large forward and rewind labels -->
+            <control type="label">
+                <posx>0</posx>
+                <posy>0</posy>
+                <height>100%</height>
+                <width>100%</width>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>Bold120</font>
+                <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                <label>$VAR[PlayerActionLabelLarge]</label>
+                <visible>Skin.HasSetting(OSDLargeSeekingLabel) + ![VideoPlayer.Content(livetv) + Player.Caching]</visible>
+                <visible>![Player.Paused + Skin.HasSetting(EnableOSDInfo) + Skin.HasSetting(EnableOSDInfoLarge)]</visible>
+                <include>HideOsdConditions</include>
+            </control>
+            <!-- small panel if OSD disabled on seek -->
+            <control type="group" id="662244">
+                <visible>!VideoPlayer.Content(livetv) + !Control.IsVisible(552233)</visible>
+				<!-- https://forum.kodi.tv/showthread.php?tid=318757 -->
+                <visible>!Skin.HasSetting(OSDShowInfoOnPause) + !Window.IsActive(videoosd) + [Player.Seeking | [Player.HasPerformedSeek(3) + !String.IsEmpty(Player.SeekOffset)] | Player.Forwarding | Player.Rewinding | [Player.Paused + Skin.HasSetting(SeekPanelOnPause)]]</visible>
+                <include condition="!Skin.HasSetting(OSDShowInfoOnPause)">Small_OSD_Seek_Panel</include>
+                <include>HideOsdConditions</include>
+            </control>
+        </control>
+        <include condition="Skin.HasSetting(DebugGrid) | Skin.HasSetting(DebugInfo)">DebugInfo</include>
+	</controls>
+</window>

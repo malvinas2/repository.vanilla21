@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID>20077</defaultID>
+		<label>10004</label>
+		<label2>Settings</label2>
+		<icon>resource://resource.images.skinicons.wide/settings.png</icon>
+		<thumb />
+		<action>ActivateWindow(Settings)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>13015</defaultID>
+		<label>Power-Menü</label>
+		<label2>Benutzerdefinierte Einträge</label2>
+		<icon>common/shutdown1.png</icon>
+		<thumb />
+		<action>ActivateWindow(shutdownmenu)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>programs</defaultID>
+		<label>10001</label>
+		<label2>Programme</label2>
+		<icon>resource://resource.images.skinicons.wide/programs.png</icon>
+		<thumb />
+		<action>ActivateWindow(Programs,addons://sources/executable/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>1037</defaultID>
+		<label>1037</label>
+		<label2>Videos</label2>
+		<icon>DefaultAddonVideo.png</icon>
+		<thumb />
+		<action>ActivateWindow(10025,addons://sources/video/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>1038</defaultID>
+		<label>1038</label>
+		<label2>Musik</label2>
+		<icon>DefaultAddonMusic.png</icon>
+		<thumb />
+		<action>ActivateWindow(10502,addons://sources/audio/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>1039</defaultID>
+		<label>1039</label>
+		<label2>Bilder</label2>
+		<icon>DefaultAddonPicture.png</icon>
+		<thumb />
+		<action>ActivateWindow(Pictures,Addons,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>videos</defaultID>
+		<label>10006</label>
+		<label2 />
+		<icon>resource://resource.images.skinicons.wide/videos.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>14111</defaultID>
+		<label>14111</label>
+		<label2>Common Shortcut</label2>
+		<icon>resource://resource.images.skinicons.wide/settings.png</icon>
+		<thumb />
+		<action>ActivateWindow(eventlog)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>7</defaultID>
+		<label>7</label>
+		<label2>Common Shortcut</label2>
+		<icon>resource://resource.images.skinicons.wide/filemanager.png</icon>
+		<thumb />
+		<action>ActivateWindow(FileManager)</action>
+	</shortcut>
+</shortcuts>

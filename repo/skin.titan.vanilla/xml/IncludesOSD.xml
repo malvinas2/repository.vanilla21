@@ -1,0 +1,2481 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Tag: voraus_ende -->
+<!-- Tag: total_duration -->
+<!-- Tag: stars -->
+<!-- tag: media_flags -->
+<!-- tag: remaining_time -->
+<!-- tag: played_time -->
+<!-- tag: clock -->
+
+<includes>
+
+    
+	<include name="OSDPanelModern">
+		<control type="group">
+			<bottom>0</bottom>
+			<height>290</height>
+			<!-- malvinas2 -->
+			<visible>![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDsubtitlesettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(osdvideosettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(playerprocessinfo) | Window.IsVisible(osdcmssettings) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(pvrchannelguide) | Window.IsVisible(numericinput)]</visible>
+			<!-- malvinas2 -->
+					
+			<!--Panel-->			<!-- blauer Kasten, bezieht sich auf OSD-Panel mit Seekbar -->
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100%</width>
+				<height>290</height>
+				<texture border="5">$VAR[osdpanelimage]</texture>
+				<colordiffuse>$INFO[Skin.String(OSDPanelColor)]</colordiffuse>
+			</control>
+
+			<!-- music cover with cd art -->
+            <control type="group">
+                <visible>Player.HasAudio + !Skin.HasSetting(HideOSDDisc)</visible>
+                <!-- disc art -->		<!-- drehende CD, bezieht sich komischerweise auf OSD mit Seekbar und auf die OSD mti Buttons -->
+                <control type="image">
+                    <posx>150</posx>
+                    <posy>10</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+                    <fadetime>300</fadetime>
+                    <animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+                    <texture background="true" fallback="defaultcovers/cd_medium.png" diffuse="diffuse/cdmask_new.png">$VAR[PlayerDiscArtImage]</texture>
+                </control>
+                <!-- cover background + cover image-->
+                <control type="group">
+                    <posx>20</posx>
+                    <posy>10</posy>
+                    <width>280</width>
+                    <height>280</height>
+					<!-- malvinas: why was the following entry repeated 3 times ??? -->
+                    <control type="image">	
+                        <aspectratio scalediffuse="true" align="center" aligny="center">stretch</aspectratio>
+                        <texture border="5">diffuse/music_cover_cd.png</texture>
+                        <colordiffuse>$INFO[Skin.String(OSDPanelColor)]</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <fadetime>200</fadetime>
+                        <bordersize>0</bordersize> 
+                        <texture background="true" border="5" fallback="defaultmusicsongs.png" diffuse="diffuse/music_cover_cd.png">$VAR[AudioPlayerCoverImage]</texture>
+                        <aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
+                    </control>
+                </control>
+            </control>
+            
+            <!-- music cover without cd art -->
+            <control type="group">
+                <visible>Player.HasAudio + Skin.HasSetting(HideOSDDisc)</visible>
+                <!-- cover background + cover image-->
+                <control type="group">
+                    <posx>20</posx>
+                    <posy>10</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <control type="image">
+                        <aspectratio scalediffuse="true" align="center" aligny="center">stretch</aspectratio>
+                        <texture border="5">diffuse/panel.png</texture>
+                        <colordiffuse>$INFO[Skin.String(OSDPanelColor)]</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <fadetime>200</fadetime>
+                        <bordersize>5</bordersize>
+                        <texture background="true" border="5" fallback="defaultmusicsongs.png" diffuse="diffuse/panel.png">$VAR[AudioPlayerCoverImage]</texture>
+                        <aspectratio align="left" aligny="center" scalediffuse="false">keep</aspectratio>
+                    </control>
+                </control>
+            </control>
+			
+            <!-- video cover and discart -->
+			<control type="group">
+                <visible>Player.HasVideo</visible>
+                <!-- discart -->
+                <control type="image">
+                    <posx>100</posx>
+                    <posy>20</posy>
+                    <width>250</width>
+                    <height>250</height>
+                    <aligny>center</aligny>
+                    <fadetime>300</fadetime>
+                    <bordersize>20</bordersize>
+                    <animation effect="rotate" end="-360" center="auto" time="12000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+                    <animation effect="fade" start="0" end="100" delay="800" time="1200" reversible="false"></animation>
+                    <texture background="true" diffuse="diffuse/cdmask_medium_new.png" fallback="defaultcovers/cd_medium.png" border="5">$VAR[PlayerDiscArtImage]</texture>
+                    <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+                    <visible>Player.HasVideo + [!String.IsEmpty(Player.Art(poster)) | !String.IsEmpty(Player.Art(tvshow.poster)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Poster))]</visible>
+                    <visible>!Skin.HasSetting(HideOSDDisc) + ![VideoPlayer.Content(livetv) + Skin.HasSetting(NoPvrArtOSD)]</visible>
+                </control>
+                
+                <!--Video Cover-->
+                <control type="image">
+                    <posx>60</posx>
+                    <posy>20</posy>
+                    <width>250</width>
+                    <height>250</height>
+                    <fadetime>200</fadetime>
+                    <texture background="true">$VAR[OSDImage]</texture>
+                    <aspectratio align="left" aligny="center">keep</aspectratio>
+                </control>
+            </control>
+			
+			<control type="group">
+				<animation effect="slide" end="50" time="0" condition="Player.HasAudio + !Skin.HasSetting(HideOSDDisc)">Conditional</animation>
+				<!-- OSDLabel1 -->
+				<control type="label">		
+					<!-- shows Name of interpret -->
+					<!-- bezieht sich auf OSD mit Seekbar und auf die OSD mit Buttons   -->
+					<posy>20</posy>
+					<posx>400</posx>
+					<width>1000</width>
+					<align>left</align>
+					<font>Light40</font>
+					<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+					<label>$VAR[OSDLabel1]</label>
+					<scroll>false</scroll>
+				</control>
+                <!-- OSDLabel2 -->
+				<control type="label">		
+					<!-- shows title of song -->
+					<!-- bezieht sich auf OSD mit Seekbar und auf die OSD mit Buttons   -->
+					<posx>400</posx>		
+					<posy>80</posy>
+					<width>980</width>
+					<align>left</align>
+					<font>Light42</font>
+					<textcolor>$INFO[Skin.String(OSDSecondaryTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(OSDSecondaryTextShadowColor)]</shadowcolor>
+					<label>[B]$VAR[OSDLabel2][/B]</label>
+					<scroll>false</scroll>
+				</control>
+			</control>
+
+			<control type="group">			
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+				<control type="group">
+					<visible>Player.SeekEnabled + VideoPlayer.HasEPG</visible>
+					<include content="PVRProgress">
+						<param name="ts_bar_posy" value="160"/>
+						<param name="epg_bar_posy" value="170"/>
+						<param name="ts_bar_height" value="10"/>
+						<param name="epg_bar_height" value="10"/>
+					</include>
+				</control>
+				<control type="group">
+					<visible>Player.SeekEnabled + !VideoPlayer.HasEPG</visible>
+					<include content="PVRProgress">
+						<param name="ts_bar_posy" value="160"/>
+						<param name="ts_bar_height" value="20"/>
+					</include>
+				</control>
+				<control type="group">
+					<visible>!Player.SeekEnabled + VideoPlayer.HasEPG</visible>
+					<include content="PVRProgress">
+						<param name="epg_bar_posy" value="160"/>
+						<param name="epg_bar_height" value="20"/>
+					</include>
+				</control>
+				<control type="group">
+					<visible>!Player.SeekEnabled + !VideoPlayer.HasEPG</visible>
+					<include content="PVRProgress"/>
+				</control>    
+	
+				<control type="slider" id="403">
+				   <description>Seek Slider</description>
+					<posx>540</posx>
+					<posy>150</posy>
+					<height>20</height>
+					<width>700</width> 
+					<texturesliderbar>colors/color_transparent.png</texturesliderbar>
+					<!-- color of nib / slider itself -->
+					<textureslidernib border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/seekslider2.png</textureslidernib>
+					<!-- color of nib / slider itself when it has focus -->
+					<textureslidernibfocus colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">colors/color_white.png</textureslidernibfocus>
+					<!-- <info>Player.Progress</info> -->
+					<!-- <info>$VAR[seeksliderposition]</info> -->
+					<!-- <info>PVR.EpgEventProgress</info> -->
+					<visible>Player.SeekEnabled + !Player.ChannelPreviewActive</visible>
+					<!-- <visible>Player.SeekEnabled + !Player.ChannelPreviewActive + !Window.IsActive(videoosd) + !Window.IsActive(musicosd)</visible> -->
+				</control>
+			</control>
+			
+			<!-- Balkenanzeige wenn nicht Live-TV -->
+			<control type="group">			
+				<visible>!String.IsEmpty(Player.Duration) + !VideoPlayer.Content(livetv)</visible>
+				<control type="progress">
+					<description>ProgressbarCache</description>	
+					<!-- cache bar, normalerweisse weisser Balken unter hellblauem Balken -->
+					<!-- bezieht sich auf OSD mit Seekbar und auf die OSD mit Buttons   -->
+					<posx>540</posx>							
+					<posy>160</posy>
+					<height>20</height>
+					<width>700</width>
+					<info>Player.ProgressCache</info>
+					<texturebg border="5" colordiffuse="00ffffff">diffuse/panel.png</texturebg>
+					<lefttexture></lefttexture>
+					<midtexture border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarCacheColor)]">diffuse/panel.png</midtexture>
+					<righttexture></righttexture>
+					<overlaytexture></overlaytexture>
+					<visible>!Skin.String(OSDProgressBarCacheColor,None)</visible>
+				</control>
+				<control type="progress" id="23">
+					<description>Progress Bar</description>
+					<!-- Fortschrittsbalken, normalerweisse hellblau -->
+					<!-- bezieht sich auf OSD mit Seekbar und auf die OSD mit Buttons   -->
+					<posx>540</posx>						
+					<posy>160</posy>
+					<height>20</height>
+					<width>700</width>
+					<!-- <info>$VAR[ProgressZeit]</info> -->
+					<info>Player.Progress</info>
+					<visible>!String.IsEmpty(Player.Duration) | !String.IsEmpty(PVR.EpgEventDuration)</visible>
+					<texturebg border="5" colordiffuse="$VAR[OSDProgressBarBackgroundColor]">diffuse/panel_trans.png</texturebg>
+					<lefttexture></lefttexture>
+					<midtexture border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/panel.png</midtexture>
+					<righttexture></righttexture>
+					<overlaytexture></overlaytexture>
+				</control>
+				<control type="slider" id="401">
+				   <description>Seek Slider</description>
+					<posx>540</posx>
+					<posy>150</posy>
+					<height>20</height>
+					<width>700</width>
+					<texturesliderbar>colors/color_transparent.png</texturesliderbar>
+					<textureslidernib border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/seekslider2.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">colors/color_white.png</textureslidernibfocus>
+
+					<!--   -->
+					<info condition="!String.IsEmpty(MusicPlayer.Content(LiveTV)) | !String.IsEmpty(MusicPlayer.Content(files))">Player.SeekBar</info>
+					<!-- <info condition="!String.IsEmpty(Player.SeekTime)">Player.SeekTime</info> -->
+					<!-- <info condition="!String.IsEmpty(PVR.EpgEventProgress)">PVR.EpgEventProgress</info> -->
+					<!-- <info>$VAR[seeksliderposition]</info> -->
+					<!-- <info>Player.Progress</info> -->
+					
+					<!-- <visible>Player.SeekEnabled + !Window.IsActive(videoosd) + !Window.IsActive(musicosd)</visible> -->
+					<visible>Player.SeekEnabled</visible>
+				</control>
+			</control>
+		
+			<control type="ranges">
+				<posx>540</posx>
+				<posy>160</posy>
+				<width>700</width>
+				<height>8</height>
+				<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+				<lefttexture>colors/white.png</lefttexture>
+				<midtexture colordiffuse="$INFO[Skin.String(EDLMarkerColor)]">colors/white.png</midtexture>
+				<righttexture>colors/white.png</righttexture>
+				<!-- 
+				<texturebg colordiffuse="00FFFFFF">colors/color_trans_50.png</texturebg>
+				<midtexture colordiffuse="FFFF0000">colors/color_white.png</midtexture> -->
+				<visible>Skin.HasSetting(ShowEDLMarker)</visible>
+				<info>Player.Editlist</info>
+			</control>
+			<control type="ranges">
+				<posx>540</posx>
+				<posy>172</posy>
+				<width>700</width>
+				<height>6</height>
+				<texturebg border="3" colordiffuse="00FFFFFF">colors/white50_triangle.png</texturebg>
+				<righttexture colordiffuse="$INFO[Skin.String(CutMarkerColor)]">colors/white_triangle.png</righttexture>
+				<visible>Skin.HasSetting(ShowCutMarker)</visible>
+				<info>Player.Cuts</info>
+			</control>
+			<control type="ranges">
+				<posx>540</posx>
+				<posy>172</posy>
+				<width>700</width>
+				<height>6</height>
+				<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+				<righttexture colordiffuse="$INFO[Skin.String(SceneMarkerColor)]">colors/white.png</righttexture>
+				<visible>Skin.HasSetting(ShowSceneMarker)</visible>
+				<info>Player.SceneMarkers</info>
+			</control>
+			<control type="ranges">
+				<posx>540</posx>
+				<posy>172</posy>
+				<width>700</width>
+				<height>6</height>
+				<texturebg colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+				<righttexture colordiffuse="$INFO[Skin.String(ChapterMarkerColor)]">colors/white.png</righttexture>
+				<visible>Skin.HasSetting(ShowChapterMarker)</visible>
+				<info>Player.Chapters</info>
+			</control>	
+		
+			<control type="image">
+				<description>Progress Bar Border</description>	
+				<!-- weisser Rahmen um Fortschrittsbalken -->
+				<posx>540</posx>				
+				<posy>160</posy>
+				<height>20</height>
+				<width>700</width>
+				<texture border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarBorderColor)]">diffuse/thinborder.png</texture>
+			</control>
+			
+			<!--Process/Seekbar-->
+			<control type="label">
+				<animation effect="slide" end="50" time="0" condition="Player.HasAudio + !Skin.HasSetting(HideOSDDisc)">Conditional</animation>
+				<!-- tag: played_time -->
+				<!--Play Time-->		
+				<!-- gespielte Zeit, links von der Fortschrittsanzeige -->
+				<posx>400</posx>
+				<posy>140</posy>
+				<width>160</width>
+				<align>left</align>
+				<font>Light28</font>
+				<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+				<label>$VAR[SeekTimeLabelVar]</label>
+			</control>
+			<control type="label">					
+				<!-- tag: remaining_time -->
+				<!--Remaining Play Time-->			
+				<!-- gespielte Zeit, rechts von der Fortschrittsanzeige -->
+				<!-- bezieht sich auf OSD mit Seekbar und auf die OSD mit Buttons   -->
+				<posx>1280</posx>			
+				<posy>140</posy>
+				<width>160</width>
+				<align>left</align>
+				<font>Light28</font>
+				<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+				<!-- <label>$INFO[Player.TimeRemaining,- ]</label> -->
+				<label>$VAR[RemainingTime,- ]</label>
+				<visible>!String.IsEmpty(Player.Duration) | !String.IsEmpty(PVR.EpgEventDuration)</visible>
+			</control>
+			
+			<!-- media flags -->		<!-- tag: media_flags -->
+			<control type="group">			
+				<!-- Mediainformation, z.B. kbps etc. -->
+				<posx>400</posx>
+				<posy>215</posy>
+				<include>mediaflags</include>
+				<visible>![Window.IsActive(videoosd) + ![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(osdsubtitlesettings)]]</visible>
+				<visible>Player.HasVideo</visible>
+				<animation effect="fade" time="400" delay="500" reversible="false">Visible</animation>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="50" time="0" condition="Player.HasAudio + !Skin.HasSetting(HideOSDDisc)">Conditional</animation>
+				<posx>400</posx>
+				<posy>215</posy>
+				<include>mediaflagsAudio</include>
+				<visible>![Window.IsActive(musicosd) + ![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(osdsubtitlesettings)]]</visible>
+				<visible>!Player.HasVideo</visible>
+				<animation effect="fade" time="400" delay="500" reversible="false">Visible</animation>
+			</control>
+		
+			<control type="image">							
+				<!-- Tag: stars -->
+				<!--Stars music-->							<!-- Sterne-Bewertung fur Leute mit zuviel Zeit all ihre Lieder zu bewerten... -->
+				<!-- bezieht sich auf OSD mit Seekbar und auf die OSD mit Buttons   -->
+				<visible>Window.IsActive(visualisation) + !Window.IsActive(musicosd)</visible>	
+				<right>55</right>
+				<posy>240</posy>
+				<width>200</width>
+				<height>50</height>
+				<aspectratio aligny="top" align="right">keep</aspectratio>
+				<colordiffuse>$INFO[Skin.String(OSDPrimaryTextColor)]</colordiffuse>
+				<texture fallback="leftrating/rating0.png">$VAR[musicrating_stars_player]</texture>
+			</control>
+		
+			<!--OSD: right side below clock-->
+			<control type="label">				
+				<!-- Tag: voraus_ende -->
+				<!--PlayerActionLabel-->		
+				<!-- Endet um: xxx Uhr, rechts im Bild, bezieht sich auf OSD mit Seekbar und auf die OSD mit Buttons   -->
+				<animation type="Conditional" condition="Player.Paused | Player.Forwarding | Player.Rewinding">
+					<effect type="slide" start="0,0" end="-160,0" time="200" tween="cubic" easing="inout" delay="0" />
+				</animation>
+				<right>60</right>
+				<posy>90</posy>
+				<width>890</width>
+				<align>right</align>
+				<font>Reg30</font>
+				<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+				<label>$VAR[PlayerActionLabel]</label>
+			</control>
+	
+			<control type="label">
+				<!--Total duration-->      <!-- Tag: total_duration -->
+				<animation type="Conditional" condition="Player.Paused | Player.Forwarding | Player.Rewinding">
+				<effect type="slide" start="0,0" end="-160,0" time="200" tween="cubic" easing="inout" delay="0" />
+				</animation>
+				<right>60</right>
+				<posy>140</posy>
+				<width>940</width>
+				<align>right</align>
+				<font>Reg30</font>
+				<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+				<!-- <label>$INFO[Player.Duration,[B]$LOCALIZE[180]: [/B]]</label> -->  
+				<label>$VAR[TotalDuration,$LOCALIZE[180]: ]</label>
+				<!-- <visible>!String.IsEmpty(Player.Duration)</visible>  --> 
+				<visible>!String.IsEmpty(Player.Duration) | !String.IsEmpty(PVR.EpgEventDuration)</visible>
+			</control>
+		
+			<!-- OSD label 3 -->
+			<control type="label">
+				<right>60</right>
+				<posy>190</posy>
+				<font>flags</font>
+				<width>450</width>
+				<!-- <height>30</height> -->
+				<align>right</align>
+				<scroll>true</scroll>
+				<font>Reg30</font>
+				<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+				<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
+				<label>$VAR[OSDLabel3]</label>
+			</control>
+		
+			<control type="image">
+				<visible>Player.Paused</visible>
+				<animation delay="150" time="300" effect="fade">Visible</animation>
+				<animation delay="0" time="200" effect="fade">Hidden</animation>
+				<right>50</right>
+				<bottom>110</bottom>
+				<width>160</width>
+				<height>160</height>
+				<texture>osd/osd_pause.png</texture>
+				<colordiffuse>$INFO[Skin.String(OSDButtonsColor)]</colordiffuse>
+			</control>
+			<control type="image">
+				<visible>Player.Forwarding</visible>
+				<animation delay="150" time="300" effect="fade">Visible</animation>
+				<animation delay="0" time="200" effect="fade">Hidden</animation>
+				<right>60</right>
+				<bottom>130</bottom>
+				<width>120</width>
+				<height>120</height>
+				<texture>osd/osd_ff.png</texture>
+				<colordiffuse>$INFO[Skin.String(OSDButtonsColor)]</colordiffuse>
+			</control>
+			<control type="image">
+				<visible>Player.Rewinding</visible>
+				<animation delay="150" time="300" effect="fade">Visible</animation>
+				<animation delay="0" time="200" effect="fade">Hidden</animation>
+				<right>70</right>
+				<bottom>130</bottom>
+				<width>120</width>
+				<height>120</height>
+				<texture flipx="true">osd/osd_ff.png</texture>
+				<colordiffuse>$INFO[Skin.String(OSDPrimaryTextColor)]</colordiffuse>
+			</control>
+
+			<!--Clock-->			<!-- tag: clock -->
+			<control type="label">
+				<right>55</right>
+				<posy>10</posy>
+				<width>400</width>
+				<height>100</height>
+				<align>right</align>
+				<label>$INFO[System.Time]</label>
+				<!-- <info>System.Time</info> -->
+				<font>Light60</font>
+				<aligny>center</aligny>
+				<textcolor>$INFO[Skin.String(OSDSecondaryTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(OSDSecondaryTextShadowColor)]</shadowcolor>
+				<visible>!Skin.HasSetting(EnableTouchSupport)</visible>
+				<animation type="Conditional" condition="Player.Paused | Player.Forwarding | Player.Rewinding">
+					<effect type="slide" start="0,0" end="-160,0" time="200" tween="cubic" easing="inout" delay="0" />
+				</animation>
+			</control>
+		</control>
+    </include>
+	
+	<include name="OSDPanelModernSlim">
+		<control type="group">
+			<bottom>0</bottom>
+			<height>200</height>
+			<!--Panel-->
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100%</width>
+				<height>200</height>
+				<texture border="5">$VAR[osdpanelimage]</texture>
+				<colordiffuse>$INFO[Skin.String(OSDPanelColor)]</colordiffuse>
+			</control>
+			
+			<!--Cover movies - poster-->
+			<control type="image" id="1">
+				<posx>40</posx>
+				<posy>-80</posy>
+				<width>190</width>
+				<height>265</height>
+				<fadetime>200</fadetime>
+				<texture background="true">$VAR[OSDImage]</texture>
+				<aspectratio align="left" aligny="bottom">stretch</aspectratio>
+				<visible>[!String.IsEmpty(Player.Art(poster)) | !String.IsEmpty(Player.Art(tvshow.poster)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Poster))]</visible>
+			</control>
+			
+			<!--Cover no poster-->
+			<control type="image">
+				<posx>40</posx>
+				<bottom>20</bottom>
+				<width>165</width>
+				<height>165</height>
+				<fadetime>200</fadetime>
+				<texture background="true">$INFO[VideoPlayer.Cover]</texture>
+				<aspectratio align="left" aligny="bottom">keep</aspectratio>
+				<visible>String.IsEmpty(Player.Art(poster)) + String.IsEmpty(Player.Art(tvshow.poster)) + String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Poster))</visible>
+			</control>
+			
+			<!--clearlogo-->
+			<!-- <control type="image" id="1"> -->
+				<!-- <posx>250</posx> -->
+				<!-- <posy>-80</posy> -->
+				<!-- <width>600</width> -->
+				<!-- <height>70</height> -->
+				<!-- <fadetime>200</fadetime> -->
+				<!-- <texture background="true">$VAR[VideoPlayerClearLogo]</texture> -->
+				<!-- <aspectratio align="left" aligny="bottom">keep</aspectratio> -->
+				<!-- <visible>!VideoPlayer.Content(livetv) + [!String.IsEmpty(Player.Art(poster)) | !String.IsEmpty(Player.Art(tvshow.poster))]</visible> -->
+			<!-- </control> -->
+			
+			<control type="group">
+				<!-- OSDLabel1 -->
+                <control type="label">
+					<posx>250</posx>
+					<posy>5</posy>
+					<width>1100</width>
+					<align>left</align>
+					<font>Light40</font>
+					<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+					<label>[B]$VAR[OSDLabel1,, • ][/B]$VAR[OSDLabel2]</label>
+					<scroll>false</scroll>
+                    <animation time="300" effect="fade" delay="300">Visible</animation>
+                    <animation time="100" effect="fade" delay="0">Hidden</animation>
+					<visible>![[Window.IsActive(musicosd) | Window.IsActive(videoosd)] + ![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(OSDSubtitleSettings)]]</visible>
+				</control>
+                <!-- media flags -->
+                <control type="group">
+                    <posx>250</posx>
+					<posy>85</posy>
+                    <include>mediaflags</include>
+                    <animation time="300" effect="fade" delay="300">Visible</animation>
+                    <animation time="100" effect="fade" delay="0">Hidden</animation>
+                    <visible>![[Window.IsActive(musicosd) | Window.IsActive(videoosd)] + ![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(OSDSubtitleSettings)]]</visible>
+                </control>
+			</control>
+				
+			<control type="group">			
+			<!-- Balkenanzeige bei Live-TV -->
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+				<control type="group">
+					<visible>Player.SeekEnabled + VideoPlayer.HasEPG</visible>
+					<include content="PVRProgress_slim">
+						<param name="ts_bar_posy" value="150"/>
+						<param name="epg_bar_posy" value="166"/>
+						<param name="ts_bar_height" value="17"/>
+						<param name="epg_bar_height" value="16"/>
+					</include>
+				</control>
+				<control type="group">
+					<visible>Player.SeekEnabled + !VideoPlayer.HasEPG</visible>
+					<include content="PVRProgress_slim">
+						<param name="ts_bar_posy" value="150"/>
+						<param name="ts_bar_height" value="33"/>
+					</include>
+				</control>
+				<control type="group">
+					<visible>!Player.SeekEnabled + VideoPlayer.HasEPG</visible>
+					<include content="PVRProgress_slim">
+						<param name="epg_bar_posy" value="150"/>
+						<param name="epg_bar_height" value="33"/>
+					</include>
+				</control>
+				<control type="group">
+					<visible>!Player.SeekEnabled + !VideoPlayer.HasEPG</visible>
+					<include content="PVRProgress_slim"/>
+				</control> 
+				
+				<control type="slider" id="403">
+				   <description>Seek Slider</description>
+					<left>250</left>
+					<right>40</right>
+					<width>1630</width>
+					<posy>140</posy>
+					<height>25</height>
+					<texturesliderbar>colors/color_transparent.png</texturesliderbar>
+					<textureslidernib border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/seekslider2.png</textureslidernib>
+					<textureslidernibfocus>colors/color_white.png</textureslidernibfocus>
+					<!-- <visible>Player.Seeking</visible> -->
+					<visible>Player.SeekEnabled + !Player.ChannelPreviewActive</visible>
+				</control>
+			</control>
+			
+			<control type="group">			
+			<!-- Balkenanzeige wenn nicht Live-TV -->
+				<visible>!String.IsEmpty(Player.Duration) + !VideoPlayer.Content(livetv)</visible>
+				<control type="progress" id="1">
+					<description>ProgressbarCache</description>
+					<left>250</left>
+					<right>40</right>
+					<width>1630</width>
+					<posy>150</posy>
+					<height>33</height>
+					<info>Player.ProgressCache</info>
+					<texturebg border="5" colordiffuse="00ffffff">diffuse/panel.png</texturebg>
+					<lefttexture></lefttexture>
+					<midtexture border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarCacheColor)]">diffuse/panel.png</midtexture>
+					<righttexture></righttexture>
+					<overlaytexture></overlaytexture>
+					<visible>!String.IsEmpty(Player.Duration)</visible>
+					<visible>!Skin.String(OSDProgressBarCacheColor,None)</visible>
+				</control>
+				<control type="progress" id="23">
+					<description>Progress Bar</description>
+					<left>250</left>
+					<right>40</right>
+					<width>1630</width>
+					<posy>150</posy>
+					<height>33</height>
+					<info>Player.Progress</info>
+					<texturebg border="5" colordiffuse="$VAR[OSDProgressBarBackgroundColor]">diffuse/panel_trans.png</texturebg>
+					<lefttexture></lefttexture>
+					<midtexture border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/panel.png</midtexture>
+					<righttexture></righttexture>
+					<overlaytexture></overlaytexture>
+					<visible>!String.IsEmpty(Player.Duration) | !String.IsEmpty(PVR.EpgEventDuration)</visible>
+				</control>
+				<control type="slider" id="401">
+					<description>Seek Slider</description>
+					<left>250</left>
+					<right>40</right>
+					<width>1630</width>
+					<posy>140</posy>
+					<height>25</height>
+					<texturesliderbar>colors/color_transparent.png</texturesliderbar>
+					<textureslidernib border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/seekslider2.png</textureslidernib>
+					<textureslidernibfocus>colors/color_white.png</textureslidernibfocus>
+					<info>$VAR[seeksliderposition]</info>
+					<!-- <info>Player.Progress</info> -->
+					<!-- <visible>Player.Seeking</visible> -->
+					<!-- <visible>Player.SeekEnabled + !Window.IsActive(videoosd) + !Window.IsActive(musicosd)</visible> -->
+					<visible>Player.SeekEnabled</visible>
+				</control>
+			</control>
+
+			<control type="ranges">
+				<posx>250</posx>
+				<posy>150</posy>
+				<width>1630</width>
+				<height>14</height>
+				<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+				<lefttexture>colors/white.png</lefttexture>
+				<midtexture colordiffuse="$INFO[Skin.String(EDLMarkerColor)]">colors/white.png</midtexture>
+				<righttexture>colors/white.png</righttexture>
+				<visible>Skin.HasSetting(ShowEDLMarker)</visible>
+				<info>Player.Editlist</info>
+			</control>
+			<control type="ranges">
+				<posx>250</posx>
+				<posy>169</posy>
+				<width>1630</width>
+				<height>14</height>
+				<texturebg border="3" colordiffuse="00FFFFFF">colors/white50_triangle.png</texturebg>
+				<righttexture colordiffuse="$INFO[Skin.String(CutMarkerColor)]">colors/white_triangle.png</righttexture>
+				<visible>Skin.HasSetting(ShowCutMarker)</visible>
+				<info>Player.Cuts</info>
+			</control>
+			<control type="ranges">
+				<posx>250</posx>
+				<posy>169</posy>
+				<width>1630</width>
+				<height>14</height>
+				<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+				<righttexture colordiffuse="$INFO[Skin.String(SceneMarkerColor)]">colors/white.png</righttexture>
+				<visible>Skin.HasSetting(ShowSceneMarker)</visible>
+				<info>Player.SceneMarkers</info>
+			</control>
+			<control type="ranges">
+				<posx>250</posx>
+				<posy>169</posy>
+				<width>1630</width>
+				<height>14</height>
+				<texturebg colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+				<righttexture colordiffuse="$INFO[Skin.String(ChapterMarkerColor)]">colors/white.png</righttexture>
+				<visible>Skin.HasSetting(ShowChapterMarker)</visible>
+				<info>Player.Chapters</info>
+			</control>
+
+			<!--Process/Seekbar-->
+			<control type="label">
+				<!--Play Time-->
+				<posx>254</posx>
+				<posy>136</posy>
+				<width>400</width>
+				<align>left</align>
+				<font>Light28</font>
+				<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+				<label>$VAR[SeekTimeLabelVar]</label>
+			</control>
+			<control type="label">
+				<!--Play Time-->
+				<right>42</right>
+				<posy>136</posy>
+				<width>400</width>
+				<align>right</align>
+				<font>Light28</font>
+				<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+				<label>$VAR[RemainingTime,- ]</label>
+				<visible>!String.IsEmpty(Player.Duration) | !String.IsEmpty(PVR.EpgEventDuration)</visible>
+			</control>
+
+			<!--Clock-->
+			<control type="label">
+				<right>40</right>
+				<posy>0</posy>
+				<width>400</width>
+				<height>100</height>
+				<align>right</align>
+				<info>System.Time</info>
+				<font>Light60</font>
+				<aligny>top</aligny>
+				<textcolor>$INFO[Skin.String(OSDSecondaryTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(OSDSecondaryTextShadowColor)]</shadowcolor>
+			</control>
+
+			<control type="label">
+				<right>40</right>
+				<posy>60</posy>
+				<width>890</width>
+				<align>right</align>
+				<font>Reg26</font>
+				<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+				<label>$VAR[PlayerActionLabel]</label>
+			</control>
+			<control type="label">
+				<right>40</right>
+				<posy>95</posy>
+				<width>890</width>
+				<align>right</align>
+				<font>Reg26</font>
+				<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+				<label>$VAR[OSDLabel3]</label>
+			</control>
+		</control>
+    </include>
+	
+    <include name="OSDPanelModernSlimMusic">
+		<control type="group">
+			<bottom>0</bottom>
+			<height>200</height>
+			<!--Panel-->
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100%</width>
+				<height>200</height>
+				<texture border="5">$VAR[osdpanelimage]</texture>
+				<colordiffuse>$INFO[Skin.String(OSDPanelColor)]</colordiffuse>
+			</control>
+            
+            <!-- music cover with cd art -->
+            <control type="group">
+                <visible>!Skin.HasSetting(HideOSDDisc)</visible>
+                <!-- disc art -->
+                <control type="image">
+                    <posx>150</posx>
+                    <bottom>10</bottom>
+                    <width>280</width>
+                    <height>280</height>
+                    <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+                    <fadetime>300</fadetime>
+                    <animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+                    <texture background="true" fallback="defaultcovers/cd_medium.png" diffuse="diffuse/cdmask_new.png">$VAR[PlayerDiscArtImage]</texture>
+                </control>
+                <!-- cover background + cover image-->
+                <control type="group">
+                    <posx>20</posx>
+                    <bottom>10</bottom>
+                    <width>280</width>
+                    <height>280</height>
+                    <control type="image">
+                        <aspectratio scalediffuse="true" align="center" aligny="center">stretch</aspectratio>
+                        <texture border="5">diffuse/music_cover_cd.png</texture>
+                        <colordiffuse>$INFO[Skin.String(OSDPanelColor)]</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <fadetime>200</fadetime>
+                        <bordersize>0</bordersize>
+                        <texture background="true" border="5" fallback="defaultmusicsongs.png" diffuse="diffuse/music_cover_cd.png">$VAR[AudioPlayerCoverImage]</texture>
+                        <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+						<!-- <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio> -->
+                    </control>
+                </control>
+            </control>
+            
+            <!-- music cover without cd art -->
+            <control type="group">
+                <visible>Skin.HasSetting(HideOSDDisc)</visible>
+                <!-- cover background + cover image-->
+                <control type="group">
+                    <posx>20</posx>
+                    <bottom>10</bottom>
+                    <width>280</width>
+                    <height>280</height>
+                    <control type="image">
+                        <aspectratio scalediffuse="true" align="center" aligny="center">stretch</aspectratio>
+                        <texture border="5">diffuse/panel.png</texture>
+                        <colordiffuse>$INFO[Skin.String(OSDPanelColor)]</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <fadetime>200</fadetime>
+                        <bordersize>0</bordersize>
+                        <texture background="true" border="5" fallback="defaultmusicsongs.png" diffuse="diffuse/panel.png">$VAR[AudioPlayerCoverImage]</texture>
+                        <!-- <aspectratio align="left" aligny="center" scalediffuse="false">keep</aspectratio> -->
+						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                    </control>
+                </control>
+            </control>
+
+			<control type="group">
+				<!-- OSDLabel1 -->
+                <control type="label">
+					<posx>430</posx>
+					<posy>5</posy>
+					<width>1130</width>
+					<align>left</align>
+					<font>Light40</font>
+					<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+					<label>[B]$VAR[OSDLabel1,, • ][/B]$VAR[OSDLabel2]</label>
+					<scroll>false</scroll>
+                    <animation time="300" effect="fade" delay="300">Visible</animation>
+                    <animation time="100" effect="fade" delay="0">Hidden</animation>
+					<visible>!Window.IsActive(musicosd) + !Window.IsVisible(osdaudiosettings)</visible>
+				</control>
+                <!-- media flags -->
+                <control type="group">
+                    <posx>430</posx>
+					<posy>87</posy>
+                    <include>mediaflagsAudio</include>
+                    <animation time="300" effect="fade" delay="300">Visible</animation>
+                    <animation time="100" effect="fade" delay="0">Hidden</animation>
+                    <visible>!Window.IsActive(musicosd) + !Window.IsVisible(osdaudiosettings)</visible>
+                </control>
+
+				<control type="progress" id="1">
+					<description>ProgressbarCache</description>
+					<left>430</left>
+					<right>40</right>
+					<width>1450</width>
+					<posy>150</posy>
+					<height>33</height>
+					<info>Player.ProgressCache</info>
+					<texturebg border="5" colordiffuse="00ffffff">diffuse/panel.png</texturebg>
+					<lefttexture></lefttexture>
+					<midtexture border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarCacheColor)]">diffuse/panel.png</midtexture>
+					<righttexture></righttexture>
+					<overlaytexture></overlaytexture>
+					<visible>!String.IsEmpty(Player.Duration)</visible>
+                    <visible>!Skin.String(OSDProgressBarCacheColor,None)</visible>
+				</control>
+				<control type="progress" id="23">
+					<description>Progress Bar</description>
+					<left>430</left>
+					<right>40</right>
+					<width>1450</width>
+					<posy>150</posy>
+					<height>33</height>
+					<info>Player.Progress</info>
+					<texturebg border="5" colordiffuse="$VAR[OSDProgressBarBackgroundColor]">diffuse/panel_trans.png</texturebg>
+					<lefttexture></lefttexture>
+					<midtexture border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/panel.png</midtexture>
+					<righttexture></righttexture>
+					<overlaytexture></overlaytexture>
+					<visible>!String.IsEmpty(Player.Duration)</visible>
+				</control>
+                <control type="slider" id="401">
+                    <description>Seek Slider</description>
+                    <left>430</left>
+					<right>40</right>
+					<width>1450</width>
+					<posy>140</posy>
+					<height>25</height>
+                    <texturesliderbar>colors/color_transparent.png</texturesliderbar>
+                    <textureslidernib border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/seekslider2.png</textureslidernib>
+                    <textureslidernibfocus>colors/color_white.png</textureslidernibfocus>
+					<!-- <info>$VAR[seeksliderposition]</info> -->
+					<!-- <info>Player.Progress</info> -->
+					<visible>Player.SeekEnabled</visible>
+                    <!-- <visible>Player.Seeking</visible> -->
+                </control>
+
+				<!--Process/Seekbar-->
+				<control type="label">
+					<!--Play Time-->
+					<posx>434</posx>
+					<posy>136</posy>
+					<width>400</width>
+					<align>left</align>
+					<font>Light28</font>
+					<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+					<label>$INFO[Player.Time]</label>
+				</control>
+				<control type="label">
+					<!--Play Time-->
+					<right>42</right>
+					<posy>136</posy>
+					<width>400</width>
+					<align>right</align>
+					<font>Light28</font>
+					<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+					<label>$INFO[Player.TimeRemaining, - ]</label>
+					<visible>!String.IsEmpty(Player.Duration)</visible>
+				</control>
+			</control>
+            
+            <!--Clock-->
+            <control type="label">
+                <right>40</right>
+				<posy>0</posy>
+				<width>400</width>
+				<height>100</height>
+				<align>right</align>
+                <info>System.Time</info>
+                <font>Light60</font>
+                <aligny>top</aligny>
+                <textcolor>$INFO[Skin.String(OSDSecondaryTextColor)]</textcolor>
+                <shadowcolor>$INFO[Skin.String(OSDSecondaryTextShadowColor)]</shadowcolor>
+            </control>
+            
+            <!--Stars music-->
+            <control type="image">
+                <visible>Window.IsActive(visualisation)</visible>
+                <visible>![Window.IsActive(musicosd) + !Window.IsVisible(osdaudiosettings)]</visible>
+                <include>animation_fade_visible_hidden</include>
+                <right>35</right>
+				<posy>20</posy>
+                <width>200</width>
+                <height>50</height>
+                <aspectratio aligny="top" align="left">keep</aspectratio>
+                <colordiffuse>$INFO[Skin.String(OSDPrimaryTextColor)]</colordiffuse>
+                <texture fallback="leftrating/rating0.png">$VAR[musicrating_stars_player]</texture>
+            </control>
+
+            <control type="label">
+				<right>40</right>
+				<posy>70</posy>
+				<width>890</width>
+				<align>right</align>
+				<font>Reg26</font>
+				<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+				<label>$VAR[OSDLabel3]</label>
+                <visible>!Window.IsActive(musicosd) + !Window.IsVisible(osdaudiosettings)</visible>
+                <include>animation_fade_visible_hidden</include>
+			</control>
+            
+		</control>
+    </include>
+		
+	
+	<include name="OSDButtonsModern">
+        <!-- close dialog -->
+        <control type="group">
+            <include>animation_fade_visible_hidden</include>
+            <right>65</right>
+            <bottom>210</bottom>
+            <width>60</width>
+            <height>60</height>
+            <include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
+            <visible>Skin.HasSetting(EnableTouchSupport)</visible>
+            <visible>!Window.IsActive(subtitlesearch)</visible>
+            <visible>!Window.IsActive(sliderdialog)</visible>
+            <animation type="Conditional" condition="Player.Paused | Player.Forwarding | Player.Rewinding">
+                <effect type="slide" start="0,0" end="-160,0" time="200" tween="cubic" easing="inout" delay="0" />
+            </animation>
+            <animation effect="slide" end="22" time="0" condition="Skin.HasSetting(UseSlimOSDPanel)">Conditional</animation>
+        </control>
+        
+        <!-- OSD buttons -->            
+        <include content="OSDButtons_Layout" condition="Skin.String(osd_buttonstyle,rounded)">
+            <param name="size" value="75" />
+            <param name="gap" value="7" />
+            <param name="iconspath" value="osd/rounded/" />
+            <param name="posleft" value="390" />
+            <param name="posbottom" value="10" />
+        </include>
+        <include content="OSDButtons_Layout" condition="Skin.String(osd_buttonstyle,rounded_large)">
+            <param name="size" value="100" />
+            <param name="gap" value="7" />
+            <param name="iconspath" value="osd/rounded/" />
+            <param name="posleft" value="380" />
+            <param name="posbottom" value="0" />
+        </include>
+        <include content="OSDButtons_Layout" condition="Skin.String(osd_buttonstyle,slim)">
+            <param name="size" value="90" />
+            <param name="gap" value="7" />
+            <param name="iconspath" value="osd/slim/" />
+            <param name="posleft" value="380" />
+            <param name="posbottom" value="10" />
+        </include>
+        <include content="OSDButtons_Layout" condition="Skin.String(osd_buttonstyle,slim_large)">
+            <param name="size" value="140" />
+            <param name="gap" value="-30" />
+            <param name="iconspath" value="osd/slim/" />
+            <param name="posleft" value="370" />
+            <param name="posbottom" value="-20" />
+        </include>
+        
+        <!--SeekBar -->
+        <!-- <include condition="Skin.HasSetting(UseSlimOSDPanel) + Player.HasVideo">SeekBar_Slim</include> -->
+        <!-- <include condition="!Skin.HasSetting(UseSlimOSDPanel) + [Player.HasVideo | Player.HasAudio]">SeekBar_Normal2</include> -->
+		<include condition="!Skin.HasSetting(UseSlimOSDPanel) + Player.HasVideo">SeekBar_Normal_Video</include>
+		<include content="SeekBar_Normal_Audio" condition="!Skin.HasSetting(UseSlimOSDPanel) + Player.HasAudio + Skin.HasSetting(HideOSDDisc)">
+			<param name="positionx" value="540"/>
+		</include>
+		<include content="SeekBar_Normal_Audio" condition="!Skin.HasSetting(UseSlimOSDPanel) + Player.HasAudio + !Skin.HasSetting(HideOSDDisc)">
+			<param name="positionx" value="590"/>
+		</include>	
+	</include>
+	
+    <include name="OSDButtons_Layout">
+		<!-- malvinas2 -->
+		<control type="label">
+		<!-- Hilfstext unten recht, zeigt an was der fokus-button macht -->
+			<!-- <animation effect="slide" end="0,-20" time="150" condition="VideoPlayer.Content(LiveTV)">conditional</animation> -->
+			<right>60</right>
+			<bottom>20</bottom>
+			<align>right</align>
+			<aligny>center</aligny>
+			<width>1000</width>
+			<height>10</height>
+			<font>Bold30</font>
+			 <!-- colors should be hardcoded because display on video -->
+			<textcolor>$INFO[Skin.String(OSDSecondaryTextColor)]</textcolor>
+			<shadowcolor>$INFO[Skin.String(OSDSecondaryTextShadowColor)]</shadowcolor>
+			<label>$VAR[VideoOSDHelpTextVar]</label>
+			<visible>Player.HasVideo</visible>
+			<visible>![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDSubtitleSettings)]</visible>
+			<visible>!Skin.HasSetting(UseSlimOSDPanel)</visible>
+			<!-- <visible>!Player.ShowInfo</visible> -->
+		</control>
+		
+		<control type="label">
+			<!-- <animation effect="slide" end="0,-20" time="150" condition="MusicPlayer.Content(LiveTV)">conditional</animation> -->
+			<right>60</right>
+			<bottom>20</bottom>
+			<aligny>center</aligny>
+			<align>right</align>
+			<width>1000</width>
+			<height>10</height>
+			<font>Bold30</font>
+			<textcolor>$INFO[Skin.String(OSDSecondaryTextColor)]</textcolor>
+			<shadowcolor>$INFO[Skin.String(OSDSecondaryTextShadowColor)]</shadowcolor>
+			<label>$VAR[MusicOSDHelpTextVar]</label>
+			<visible>Player.HasAudio</visible>
+			<visible>![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDSubtitleSettings)]</visible>
+			<visible>!Skin.HasSetting(UseSlimOSDPanel)</visible>
+			<!-- <visible>!Player.ShowInfo</visible> -->
+		</control>
+	
+		<control type="grouplist" id="200">
+			<posx>$PARAM[posleft]</posx>
+			<bottom>$PARAM[posbottom]</bottom>
+			<width>1540</width>
+			<height>$PARAM[size]</height>
+			<itemgap>$PARAM[gap]</itemgap>
+			<onup>87</onup>
+			<ondown></ondown>
+			<onleft>200</onleft>
+			<onright>200</onright>
+			<orientation>horizontal</orientation>
+			<animation effect="slide" end="-150,-70" time="0" condition="Player.HasVideo + Skin.HasSetting(UseSlimOSDPanel)">Conditional</animation>
+            <animation effect="slide" end="30,-70" time="0" condition="Player.HasAudio + Skin.HasSetting(UseSlimOSDPanel)">Conditional</animation>
+			<animation effect="slide" end="50" time="0" condition="Player.HasAudio + !Skin.HasSetting(UseSlimOSDPanel) + ![!Skin.HasSetting(UseSlimOSDPanel) + Skin.HasSetting(HideOSDDisc)]">Conditional</animation>
+			<visible>![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(osdcmssettings) | Window.IsVisible(addonsettings)]</visible>
+			<control type="togglebutton" id="201">
+				<description>Skip Back or previous channel</description>
+				<!-- skip back -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[210]</label>
+                <altlabel>$LOCALIZE[210]</altlabel>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]prevtrack.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]prevtrack.png</texturenofocus>
+				<usealttexture>VideoPlayer.Content(livetv) | MusikPlayer.Content(livetv)</usealttexture>
+				<alttexturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]channeldown.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]channeldown.png</alttexturenofocus>
+				<onclick condition="!Player.HasAudio + [VideoPlayer.Content(livetv) | MusicPlayer.Content(livetv)]">ChannelDown</onclick>
+				<onclick condition="Player.HasAudio">PlayerControl(Previous)</onclick>
+				<onclick condition="!Player.HasAudio + VideoPlayer.Content(musicvideos)">PlayerControl(Previous)</onclick>
+				<onclick condition="!Player.HasAudio + ![VideoPlayer.Content(livetv) | VideoPlayer.Content(musicvideos) | MusicPlayer.Content(livetv)]">ChapterOrBigStepBack</onclick>
+                <visible>!Skin.HasSetting(OSDDisablePlaybackControls)</visible>
+				<visible>Player.HasSceneMarkers | Player.ChapterCount | Player.HasVideo | Integer.IsGreater(Playlist.Length(video),1) | VideoPlayer.Content(LiveTV) | MusicPlayer.HasPrevious | MusicPlayer.Content(LiveTV)</visible>
+			</control>
+			<control type="button" id="202">
+				<label></label>
+				<description>RR</description>
+				<!-- rewind -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<font/>
+                <label>$LOCALIZE[209]</label>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]rewind.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]rewind.png</texturenofocus>
+				<onclick>PlayerControl(Rewind)</onclick>
+                <visible>!Skin.HasSetting(OSDDisablePlaybackControls)</visible>
+				<visible>!VideoPlayer.Content(LiveTV) | [VideoPlayer.Content(LiveTV) + Player.SeekEnabled]</visible>
+			</control>
+			<control type="togglebutton" id="203">
+				<altlabel>$LOCALIZE[208]</altlabel>
+				<description>Play Pause</description>
+				<!-- play / pause -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<font/>
+                <label>$LOCALIZE[208]</label>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]pause.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]pause.png</texturenofocus>
+				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+				<alttexturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]play.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]play.png</alttexturenofocus>
+				<onclick>PlayerControl(Tempo(1.0))</onclick>
+				<onclick>PlayerControl(Play)</onclick>
+                <visible>!Skin.HasSetting(OSDDisablePlaybackControls)</visible>
+			</control>
+			<control type="button" id="204">
+				<description>Stop</description>
+				<!-- stop -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<font/>
+                <label>$LOCALIZE[36036]</label>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]stop.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]stop.png</texturenofocus>
+				<onclick>PlayerControl(Stop)</onclick>
+                <visible>!Skin.HasSetting(OSDDisablePlaybackControls)</visible>
+			</control>
+			<control type="button" id="205">
+				<description>FF</description>
+				<!--  forward -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<font/>
+                <label>$LOCALIZE[210]</label>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]forward.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]forward.png</texturenofocus>
+				<onclick>PlayerControl(Forward)</onclick>
+                <visible>!Skin.HasSetting(OSDDisablePlaybackControls)</visible>
+				<visible>!VideoPlayer.Content(LiveTV) | [VideoPlayer.Content(LiveTV) + Player.SeekEnabled]</visible>
+			</control>
+			<control type="togglebutton" id="206">
+				<description>Next</description>
+				<!-- skip forward -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[209]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]nexttrack.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]nexttrack.png</texturenofocus>
+				<usealttexture>VideoPlayer.Content(livetv) | MusikPlayer.Content(livetv)</usealttexture>
+				<alttexturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]channelup.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]channelup.png</alttexturenofocus>
+				<onclick condition="!Player.HasAudio + [VideoPlayer.Content(livetv) | MusicPlayer.Content(livetv)]">ChannelUp</onclick>
+				<onclick condition="Player.HasAudio">PlayerControl(Next)</onclick>
+				<onclick condition="!Player.HasAudio + VideoPlayer.Content(musicvideos)">PlayerControl(Next)</onclick>
+				<onclick condition="!Player.HasAudio + ![VideoPlayer.Content(livetv) | VideoPlayer.Content(musicvideos) | MusicPlayer.Content(livetv)]">ChapterOrBigStepForward</onclick>
+                <visible>!Skin.HasSetting(OSDDisablePlaybackControls)</visible>
+				<visible>Player.HasSceneMarkers | Player.ChapterCount | Player.HasVideo | Integer.IsGreater(Playlist.Length(video),1) | VideoPlayer.Content(LiveTV) | MusicPlayer.HasNext | MusicPlayer.Content(LiveTV)</visible>
+			</control>
+			<control type="button" id="207">
+				<description>repeat</description>
+				<!-- repeat -->
+				<width>$PARAM[size]</width>		
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]repeat.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]repeat.png</texturenofocus>
+				<onclick>PlayerControl(Repeat)</onclick>
+				<onclick>SetFocus(210)</onclick>
+				<visible>!Playlist.IsRepeatOne + !Playlist.IsRepeat</visible>
+				<visible>[!VideoPlayer.Content(movies) + !VideoPlayer.Content(episodes) + !VideoPlayer.Content(livetv) + !MusicPlayer.Content(livetv) + !MusicPartyMode.Enabled]</visible>
+			</control>
+			<control type="button" id="208">
+				<description>repeat one</description>
+				<!-- repeat one -->
+				<width>$PARAM[size]</width>		
+				<height>$PARAM[size]</height>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]repeatone.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]repeatone.png</texturenofocus>
+				<visible>Playlist.IsRepeatOne</visible>
+				<!-- <visible>!VideoPlayer.Content(livetv) + ![MusicPlayer.Content(LiveTV) | MusicPartyMode.Enabled]</visible> -->
+				<visible>[!VideoPlayer.Content(movies) + !VideoPlayer.Content(episodes) + !VideoPlayer.Content(livetv) + !MusicPlayer.Content(livetv) + !MusicPartyMode.Enabled]</visible>
+				<onclick>PlayerControl(Repeat)</onclick>
+			</control>
+			<control type="button" id="210">
+				<description>repeat playlist</description>
+				<!-- repeat playlist -->
+				<width>$PARAM[size]</width>		
+				<height>$PARAM[size]</height>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]repeatall.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]repeatall.png</texturenofocus>
+				<visible>Playlist.IsRepeat</visible>
+				<visible>[!VideoPlayer.Content(movies) + !VideoPlayer.Content(episodes) + !VideoPlayer.Content(livetv) + !MusicPlayer.Content(livetv) + !MusicPartyMode.Enabled]</visible>
+				<onclick>PlayerControl(Repeat)</onclick>
+			</control>
+			<control type="togglebutton" id="212">
+				<description>random</description>
+				<!-- random -->
+				<width>$PARAM[size]</width> 	
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
+				<altlabel>$LOCALIZE[590] : $LOCALIZE[16041]</altlabel>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]randomoff.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]randomoff.png</texturenofocus>
+				<usealttexture>Playlist.IsRandom</usealttexture>
+				<alttexturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]randomon.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]randomon.png</alttexturenofocus>
+				<!-- <onclick>PlayerControl(Random)</onclick> -->
+				<onclick>PlayerControl(Random)</onclick>
+				<visible>[!VideoPlayer.Content(movies) + !VideoPlayer.Content(episodes) + !VideoPlayer.Content(livetv) + !MusicPlayer.Content(livetv) + !MusicPartyMode.Enabled]</visible>
+				<!-- <visible>Player.HasAudio + ![MusicPlayer.Content(LiveTV) | MusicPartyMode.Enabled]</visible> -->
+			</control>
+			<control type="togglebutton" id="109">
+				<description>record</description>
+				<!-- record -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[209]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]recordoff.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]recordoff.png</texturenofocus>
+				<alttexturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]recordon.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]recordon.png</alttexturenofocus>
+				<usealttexture>PVR.IsRecordingPlayingChannel</usealttexture>
+				<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+				<visible>PVR.CanRecordPlayingChannel</visible>
+				<visible>VideoPlayer.Content(livetv) | MusicPlayer.Content(livetv)</visible>
+                <visible>!Skin.HasSetting(OSDDisablePlaybackControls)</visible>
+			</control>
+			<control type="button" id="214">
+				<description>bookmarks</description>				
+				<!-- bookmarks -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[209]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]bookmarks.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]bookmarks.png</texturenofocus>
+				<onclick>ActivateWindow(VideoBookmarks)</onclick>
+				<visible>Player.HasVideo</visible>
+				<visible>!VideoPlayer.Content(livetv)</visible>
+			</control>
+			<control type="button" id="215">
+				<description>disc menu</description>					
+				<!-- disc menu -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[209]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]dvd.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]dvd.png</texturenofocus>
+				<onclick>PlayerControl(ShowVideoMenu)</onclick>
+				<visible>VideoPlayer.HasMenu</visible>
+			</control>
+			<control type="button" id="705">
+				<description>stereoscopic</description>						
+				<!-- stereoscopic -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[209]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]stereoscopic.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]stereoscopic.png</texturenofocus>
+				<!-- <onclick>StereoMode</onclick> -->
+				<onclick>SetProperty(settingslist_content,3d,home)</onclick>
+				<onclick>SetProperty(settingslist_header,$LOCALIZE[36501],home)</onclick>
+				<onclick>ActivateWindow(1120)</onclick>
+				<visible>VideoPlayer.IsStereoscopic</visible>
+			</control>
+			<control type="button" id="101">
+				<description>Audio Settings</description>				
+				<!-- audio settings -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[13396]</label>
+				<font/>
+				<visible>false</visible>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]audio.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]audio.png</texturenofocus>
+				<onclick>ActivateWindow(osdaudiosettings)</onclick>
+			</control>
+			<control type="button" id="102">
+				<description>Video Settings</description>
+				<!-- video settings -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[13395]</label>
+				<align>left</align>
+				<font/>
+				<visible>false</visible>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]video.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]video.png</texturenofocus>
+				<onclick>ActivateWindow(osdvideosettings)</onclick>
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="button" id="104">
+				<description>Subtitles</description>
+				<!-- subtitles -->
+			    <width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[287]</label>
+				<font/>
+				<visible>false</visible>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]subtitles.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]subtitles.png</texturenofocus>
+				<onclick>ActivateWindow(osdsubtitlesettings)</onclick>
+				<!-- malvinas2 <visible>!VideoPlayer.Content(livetv)</visible> -->
+				<visible>Player.HasVideo</visible>
+				<visible>!VideoPlayer.Content(LiveTV) | VideoPlayer.HasSubtitles</visible>
+			</control>
+			<control type="button" id="105">
+				<description>teletext</description>
+				<!-- teletext -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[287]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]teletext.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]teletext.png</texturenofocus>
+				<onclick>Dialog.Close(VideoOSD)</onclick>
+				<onclick>ActivateWindow(Teletext)</onclick>
+				<!-- malvinas2 <visible>VideoPlayer.Content(livetv)</visible> -->
+				<visible>VideoPlayer.HasTeletext</visible>
+				<!-- malvinas2 <visible>Player.HasVideo</visible> -->
+			</control>
+			<control type="button" id="701">
+				<description> lyrics </description>
+				<!-- lyrics -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[31128]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]lyrics.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]lyrics.png</texturenofocus>
+				<!-- <alttexturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]lyrics.png</alttexturefocus> -->
+				<!-- <alttexturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]lyrics.png</alttexturenofocus> -->
+				<onclick>Close</onclick>
+				<onclick condition="!String.IsEmpty(Skin.String(LyricScript_Path))">RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
+				<onclick condition="String.IsEmpty(Skin.String(LyricScript_Path))">Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
+				<onclick condition="String.IsEmpty(Skin.String(LyricScript_Path))">Close</onclick>
+				<onclick condition="String.IsEmpty(Skin.String(LyricScript_Path))">RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>			
+				<visible>Player.HasAudio</visible>
+				<visible>System.HasAddon(script.cu.lrclyrics)</visible>
+			</control>
+			<control type="button" id="500">
+				<description> vizualisation addon </description>
+				<!-- visualisation -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[12006]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]viz.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]viz.png</texturenofocus>
+				<visible>Player.HasAudio</visible>
+			</control>
+            <control type="button" id="21417">
+				<description> vizualisation settings </description>
+				<!-- visualisation settings -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[250] $LOCALIZE[21417]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]settings.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]settings.png</texturenofocus>
+				<visible>Player.HasAudio + Visualisation.Enabled </visible>
+                <onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+			</control>
+            <control type="button" id="703">
+				<description> vizualisation presets </description>
+				<!-- visualisation presets -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[250] $LOCALIZE[21417]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]epg.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]epg.png</texturenofocus>
+				<visible>Player.HasAudio + Visualisation.Enabled + [String.IsEqual(Visualisation.Name,milkdrop) | String.IsEqual(Visualisation.Name,vortex) | Visualisation.HasPresets ]</visible>
+                <onclick>ActivateWindow(122)</onclick>
+			</control>
+			<control type="button" id="806">
+				<description> pvr </description>
+				<!-- PVROSDchannels -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[12006]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]channellist.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]channellist.png</texturenofocus>
+				<onclick>Dialog.Close(VideoOSD)</onclick>
+				<onclick>Dialog.Close(MusicOSD)</onclick>
+				<onclick>ActivateWindow(PVROSDChannels)</onclick>
+				<visible>VideoPlayer.Content(livetv) | MusicPlayer.Content(LiveTV)</visible>
+			</control>
+			<control type="button" id="807">
+				<description> pvr </description>
+				<!-- PVR Channelguide -->
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[12006]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]epg.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]epg.png</texturenofocus>
+				<visible>!skin.string(GuideRows, 5)</visible>
+				<visible>[VideoPlayer.Content(livetv) + VideoPlayer.HasEPG] | [MusicPlayer.Content(LiveTV) + VideoPlayer.HasEPG]</visible>
+				<onclick>Dialog.Close(VideoOSD)</onclick>
+				<onclick>Dialog.Close(MusicOSD)</onclick>
+                <onclick>ActivateWindow(PVRChannelGuide)</onclick>
+			</control>
+			
+            <control type="button" id="62043">
+				<description> RDS </description>
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[12006]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]rds.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]rds.png</texturenofocus>
+				<visible>MusicPlayer.Content(LiveTV) + RDS.HasRadiotext</visible>
+                <onclick>Dialog.Close(MusicOSD)</onclick>
+                <onclick>ActivateWindow(PVRRadioRDSInfo)</onclick>
+			</control>			
+            <control type="button" id="811">
+				<description> playlist </description>
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[70022]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]teletext.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]teletext.png</texturenofocus>
+				<visible>!String.IsEqual(Playlist.Length(music),0) + Player.HasAudio</visible>
+                <onclick>SetProperty(playlistdialog,show,home)</onclick>
+                <onclick>Dialog.Close(MusicOSD)</onclick>
+                <onclick>ActivateWindow(musicplaylist)</onclick>
+			</control>
+			<control type="togglebutton" id="808">
+				<description> infopanel </description>
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[31133]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]info.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]info.png</texturenofocus>
+				<alttexturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]infoon.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]infoon.png</alttexturenofocus>
+				<usealttexture>Skin.HasSetting(EnableOSDInfo)</usealttexture>
+				<visible>Player.HasVideo | MusicPlayer.Content(LiveTV)</visible>
+				<onclick>Skin.ToggleSetting(EnableOSDInfo)</onclick>
+			</control>
+			<control type="button" id="70044">
+				<description> detailed infopanel </description>
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[31133]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]infolong.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]infolong.png</texturenofocus>
+				<alttexturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]infolongon.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]infolongon.png</alttexturenofocus>
+				<usealttexture>Window.IsActive(1122)</usealttexture>
+				<visible>Player.HasVideo | MusicPlayer.Content(LiveTV)</visible>
+				<!-- <onclick>Skin.SetBool(EnableOSDInfo)</onclick> -->
+				<onclick>Action(close)</onclick>
+				<onclick>ActivateWindow(1122)</onclick>
+			</control>			
+			<control type="button" id="70043">
+				<description>settings</description>
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<width>60</width>
+				<height>60</height>
+				<label>$LOCALIZE[70009]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]settings.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]settings.png</texturenofocus>
+				<visible>Player.HasVideo</visible>
+				<onclick>SetProperty(settingslist_content,osd,home)</onclick>
+				<onclick>SetProperty(settingslist_header,$LOCALIZE[5],home)</onclick>
+				<onclick>ActivateWindow(1121)</onclick>
+			</control>
+			<control type="button" id="5001">
+				<description>settings</description>
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<width>60</width>
+				<height>60</height>
+				<label>$LOCALIZE[70009]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]settings.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]settings.png</texturenofocus>
+				<visible>Player.HasAudio</visible>	
+				<onclick>ActivateWindow(1125)</onclick>
+			</control>
+			<control type="button" id="810">
+				<description> touch - volume down </description>
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>voldown</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]volumedown.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]volumedown.png</texturenofocus>
+				<visible>Skin.HasSetting(EnableTouchSupport)</visible>
+				<onclick>VolumeDown</onclick>
+			</control>
+            <control type="button" id="809">
+				<description> touch - volume up </description>
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>volup</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]volumeup.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]volumeup.png</texturenofocus>
+				<visible>Skin.HasSetting(EnableTouchSupport)</visible>
+				<onclick>VolumeUp</onclick>
+			</control>
+		</control>
+
+	</include>
+	
+	<include name="SeekBar_Slim">
+		<control type="slider" id="87">
+			<description>Seekbar</description>
+			<left>250</left>
+			<right>40</right>
+			<width>1630</width>
+			<bottom>34</bottom>
+			<height>17</height>
+			<visible>Window.IsActive(videoosd)</visible>
+			<visible>!String.IsEmpty(Player.Duration)</visible>
+			<action>seek</action>
+			<texturesliderbar>colors/color_transparent.png</texturesliderbar>
+			<textureslidernib>colors/color_transparent.png</textureslidernib>
+			<textureslidernibfocus border="5" colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">diffuse/panel.png</textureslidernibfocus>
+			<visible>!VideoPlayer.Content(LiveTV)</visible>
+		</control>
+		<!--Process/Seekbar-->
+		<control type="label">
+			<!--Play Time-->
+			<posx>254</posx>
+			<bottom>9</bottom>
+			<height>50</height>
+			<width>400</width>
+			<align>left</align>
+			<font>Light28</font>
+			<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+			<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+			<label>$VAR[SeekTimeLabelVar]</label>
+		</control>
+		<control type="label">
+			<!--Play Time-->
+			<right>42</right>
+			<bottom>9</bottom>
+			<height>50</height>
+			<width>400</width>
+			<align>right</align>
+			<font>Light28</font>
+			<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+			<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+			<label>$VAR[RemainingTime,- ]</label>
+			<visible>!String.IsEmpty(Player.Duration) | !String.IsEmpty(PVR.EpgEventDuration)</visible>
+		</control>
+	</include>
+	
+
+	
+	<include name="SeekBar_Normal_Video">
+		<control type="group" id="6000">
+			<visible>Player.SeekEnabled</visible>
+			<control type="button" id="87">
+				<include>HiddenButton</include>
+				<onup>200</onup>
+				<onunfocus condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onunfocus>
+				<ondown>200</ondown>
+				<onright>StepForward</onright>
+				<onleft>StepBack</onleft>
+				<onclick condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onclick>
+			</control>
+		
+			<control type="slider">
+				<description>Seekbar</description>
+				<posx>540</posx>
+				<bottom>120</bottom>
+				<height>20</height>
+				<width>700</width>
+				<texturesliderbar>colors/color_transparent.png</texturesliderbar>
+				<textureslidernib colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/seekslider2.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/seekslider2.png</textureslidernibfocus>
+				<info>Player.Progress</info>
+				<action>seek</action>
+				<!-- <visible>!Control.HasFocus(87) + [!VideoPlayer.Content(LiveTV) | !MusicPlayer.Content(LiveTV)]</visible> -->
+				<visible>!Control.HasFocus(87) + !VideoPlayer.Content(LiveTV)</visible>
+				<visible>![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(osdcmssettings) | Window.IsVisible(addonsettings)]</visible>     		
+			</control>
+			
+			<control type="slider">
+				<description>Seekbar</description>
+				<posx>540</posx>
+				<bottom>120</bottom>
+				<height>20</height>
+				<width>700</width>
+				<texturesliderbar>colors/color_transparent.png</texturesliderbar>
+				<textureslidernib colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">diffuse/seekslider2.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">diffuse/seekslider2.png</textureslidernibfocus>
+				<info>Player.Progress</info>
+				<action>seek</action>
+				<!-- <visible>Control.HasFocus(87) + [!VideoPlayer.Content(LiveTV) | !MusicPlayer.Content(LiveTV)]</visible> -->
+				<visible>Control.HasFocus(87) + !VideoPlayer.Content(LiveTV)</visible>
+				<visible>![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(osdcmssettings) | Window.IsVisible(addonsettings)]</visible>     		
+			</control>
+			
+			<control type="slider">
+				<description>Seekbar</description>
+				<posx>540</posx>
+				<bottom>120</bottom>
+				<height>20</height>
+				<width>700</width>
+				<texturesliderbar>colors/color_transparent.png</texturesliderbar>
+				<textureslidernib colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/seekslider2.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/seekslider2.png</textureslidernibfocus>
+				<info>PVR.TimeshiftProgressPlayPos</info>
+				<action>pvr.seek</action>
+				<!-- <visible>!Control.HasFocus(87) + [VideoPlayer.Content(LiveTV) | MusicPlayer.Content(LiveTV)]</visible> -->
+				<visible>!Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
+				<visible>![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(osdcmssettings) | Window.IsVisible(addonsettings)]</visible>     		
+			</control>
+			
+			<control type="slider">
+				<description>Seekbar</description>
+				<posx>540</posx>
+				<bottom>120</bottom>
+				<height>20</height>
+				<width>700</width>
+				<texturesliderbar>colors/color_transparent.png</texturesliderbar>
+				<textureslidernib colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">diffuse/seekslider2.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">diffuse/seekslider2.png</textureslidernibfocus>
+				<info>PVR.TimeshiftProgressPlayPos</info>
+				<action>pvr.seek</action>
+				<!-- <visible>Control.HasFocus(87) + [VideoPlayer.Content(LiveTV) | MusicPlayer.Content(LiveTV)]</visible> -->
+				<visible>Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
+				<visible>![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(osdcmssettings) | Window.IsVisible(addonsettings)]</visible>     		
+			</control>
+		</control> 
+	</include>
+
+
+	<include name="SeekBar_Normal_Audio">
+	<!-- wird paramx hier gebraucht, eigentlich musste posx immer 540 sein ??? -->
+		<param name="positionx"/>
+		<definition>
+		<control type="group">
+			<control type="button" id="87">
+				<include>HiddenButton</include>
+				<onup condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onup>
+				<onup>200</onup>
+				<ondown condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</ondown>
+				<ondown>200</ondown>
+				<onright condition="!Player.Forwarding32x">PlayerControl(Forward)</onright>
+				<onleft condition="!Player.Rewinding32x">PlayerControl(Rewind)</onleft>
+				<visible>Player.SeekEnabled</visible>
+				<onclick condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onclick>
+			</control>
+		
+			<control type="slider">
+				<description>Seekbar</description>
+				<posx>540</posx>
+				<bottom>120</bottom>
+				<height>20</height>
+				<width>700</width>
+				<texturesliderbar>colors/color_transparent.png</texturesliderbar>
+				<textureslidernib colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/seekslider2.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/seekslider2.png</textureslidernibfocus>
+				<info>Player.Progress</info>
+				<visible>Player.SeekEnabled + !Control.HasFocus(87) + !MusicPlayer.Content(LiveTV)</visible>
+				<visible>![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(osdcmssettings) | Window.IsVisible(addonsettings)]</visible>
+				<action>seek</action>				
+			</control>
+			
+			<control type="slider">
+				<description>Seekbar</description>
+				<posx>540</posx>
+				<bottom>120</bottom>
+				<height>20</height>
+				<width>700</width>
+				<texturesliderbar>colors/color_transparent.png</texturesliderbar>
+				<textureslidernib colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">diffuse/seekslider2.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">diffuse/seekslider2.png</textureslidernibfocus>
+				<info>Player.Progress</info>
+				<visible>Player.SeekEnabled + Control.HasFocus(87) + !MusicPlayer.Content(LiveTV)</visible>
+				<visible>![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(osdcmssettings) | Window.IsVisible(addonsettings)]</visible>     		
+				<action>seek</action>
+			</control>
+			
+			<control type="slider">
+				<description>Seekbar</description>
+				<posx>540</posx>
+				<bottom>120</bottom>
+				<height>20</height>
+				<width>700</width>
+				<texturesliderbar>colors/color_transparent.png</texturesliderbar>
+				<textureslidernib colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/seekslider2.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/seekslider2.png</textureslidernibfocus>
+				<visible>Player.SeekEnabled + !Control.HasFocus(87) + MusicPlayer.Content(LiveTV)</visible>
+				<info>PVR.TimeshiftProgressPlayPos</info>
+				<visible>![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(osdcmssettings) | Window.IsVisible(addonsettings)]</visible>     		
+				<action>pvr.seek</action>
+			</control>
+			
+			<control type="slider">
+				<description>Seekbar</description>
+				<posx>540</posx>
+				<bottom>120</bottom>
+				<height>20</height>
+				<width>700</width>
+				<texturesliderbar>colors/color_transparent.png</texturesliderbar>
+				<textureslidernib colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">diffuse/seekslider2.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">diffuse/seekslider2.png</textureslidernibfocus>
+				<info>PVR.TimeshiftProgressPlayPos</info>
+				<action>pvr.seek</action>
+				<visible>Player.SeekEnabled + Control.HasFocus(87) + MusicPlayer.Content(LiveTV)</visible>
+				<visible>![Window.IsVisible(1121) | Window.IsVisible(1110) | Window.IsVisible(1125) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(osdcmssettings) | Window.IsVisible(addonsettings)]</visible>     		
+			</control>
+		</control> 
+		</definition>
+	</include>	
+ 
+    <include name="Small_OSD_Seek_Panel">
+        <control type="group">
+            <!-- small panel if OSD disabled on seek -->
+			<left>705</left>
+			<top>20</top>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>490</width>
+				<height>150</height>
+				<texture border="5">diffuse/panel.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+			</control>
+			<control type="image">
+				<left>10</left>
+				<top>10</top>
+				<width>470</width>
+				<height>130</height>
+				<texture border="5">diffuse/panel.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>20</posx>
+				<posy>0</posy>
+				<width>350</width>
+				<align>left</align>
+				<font>Reg24</font>
+				<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(ViewDetailsHighlightTextShadowColor)]</shadowcolor>
+				<label>$VAR[PlayerActionLabelSmall]</label>
+			</control>
+			<!-- total runtime -->
+			<control type="label">
+				<posx>20</posx>
+				<posy>40</posy>
+				<width>800</width>
+				<align>left</align>
+				<font>Reg20</font>
+				<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+				<label>$VAR[TotalDuration,[B]$LOCALIZE[180]: [/B]]</label>
+				<visible>!String.IsEmpty(Player.Duration) | !String.IsEmpty(PVR.EpgEventDuration)</visible>
+			</control>
+			<control type="image">
+				<visible>Player.Paused</visible>
+				<left>390</left>
+				<top>10</top>
+				<width>80</width>
+				<height>80</height>
+				<texture>osd/osd_pause.png</texture>
+			</control>
+			<control type="image">
+				<visible>Player.Forwarding</visible>
+				<left>400</left>
+				<top>25</top>
+				<width>60</width>
+				<height>60</height>
+				<texture>osd/osd_ff.png</texture>
+			</control>
+			<control type="image">
+				<visible>Player.Rewinding</visible>
+				<left>395</left>
+				<top>25</top>
+				<width>60</width>
+				<height>60</height>
+				<texture flipx="true">osd/osd_ff.png</texture>
+			</control>
+			<control type="image">
+				<visible>!Player.Rewinding + !Player.Forwarding + !Player.Paused</visible>
+				<left>380</left>
+				<top>10</top>
+				<width>80</width>
+				<height>80</height>
+				<texture>defaultaddoninfolibrary.png</texture>
+			</control>
+			<control type="label">
+				<!--elapsed Time-->
+				<left>20</left>
+				<top>80</top>
+				<width>150</width>
+				<align>left</align>
+				<font>Reg20</font>
+				<textcolor>white</textcolor>
+				<!-- <label>$INFO[Player.Time]</label> -->
+				<label>$VAR[SeekTimeLabelVar]</label>
+				<visible>!String.IsEmpty(Player.Duration) | !String.IsEmpty(PVR.EpgEventDuration)</visible>
+			</control>
+			<control type="label">
+				<!--remaining Time-->
+				<left>260</left>
+				<top>80</top>
+				<width>200</width>
+				<align>right</align>
+				<font>Reg20</font>
+				<textcolor>white</textcolor>
+				<!-- <label>$INFO[Player.TimeRemaining,- ]</label> -->
+				<label>$INFO[Player.TimeRemaining,- ]</label>
+				<visible>!String.IsEmpty(Player.Duration) | !String.IsEmpty(PVR.EpgEventDuration)</visible>
+			</control>
+			<control type="progress">
+				<description>ProgressbarCache</description>
+				<left>120</left>
+				<top>104</top>
+				<width>230</width>
+				<height>15</height>
+				<info>Player.ProgressCache</info>
+			</control>
+			<control type="progress" id="23">
+				<description>Progressbar</description>
+				<left>120</left>
+				<top>104</top>
+				<width>230</width>
+				<height>15</height>
+				<info>Player.Progress</info>
+				<visible>!VideoPlayer.HasEpg</visible>
+			</control>
+			<control type="progress" id="23">
+				<description>Progress Bar</description>
+				<left>120</left>
+				<top>104</top>
+				<width>230</width>
+				<height>15</height>
+				<info>PVR.EpgEventProgress</info>
+				<visible>VideoPlayer.HasEpg</visible>
+			</control>
+                 <control type="slider" id="401">
+				<description>Seek Slider</description>
+				<left>120</left>
+				<top>95</top>
+				<width>230</width>
+				<height>18</height>
+				<texturesliderbar>colors/color_transparent.png</texturesliderbar>
+                <textureslidernib border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/seekslider2.png</textureslidernib>
+                <textureslidernibfocus>colors/color_white.png</textureslidernibfocus>
+				<!-- <info>$VAR[seeksliderposition]</info> -->
+				<!-- <info>Player.Progress</info> -->
+				<!-- <visible>Player.Seeking</visible> -->
+				<visible>Player.SeekEnabled</visible>
+			</control>
+			
+<!-- 			<control type="ranges">
+				<posx>120</posx>
+				<posy>160</posy>
+				<width>230</width>
+				<height>18</height>
+				<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+				<lefttexture>colors/white.png</lefttexture>
+				<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
+				<righttexture>colors/white.png</righttexture>
+				<visible>Skin.HasSetting(ShowEDLMarker)</visible>
+				<info>Player.Editlist</info>
+			</control>
+			<control type="ranges">
+				<posx>120</posx>
+				<posy>114</posy>
+				<width>230</width>
+				<height>6</height>
+				<texturebg colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+				<righttexture colordiffuse="$INFO[Skin.String(OSDProgressBarBorderColor)]">colors/white.png</righttexture>
+				<visible>Skin.HasSetting(ShowChapterMarker)</visible>
+				<info>Player.Chapters</info>
+			</control>	 -->
+			
+			
+		</control>
+    </include>
+	
+    <include name="WeatherInfoOSD">
+        <!-- weather info displayed in video OSD and video info -->
+        <control type="group">
+            <posx>50</posx>
+            <bottom>292</bottom>
+            <width>128</width>
+            <height>128</height>
+            <visible>!String.IsEmpty(Window(Weather).Property(Current.FanartCode)) + Skin.String(WeatherIconPack.path) + !Window.IsActive(playerprocessinfo)</visible>
+            <include>HideOsdConditions</include>
+			
+            <!--Current Weather-->
+            <control type="multiimage">
+                <!--Current Weather Icon-->
+                <imagepath>$INFO[Skin.String(WeatherIconPack.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$INFO[Skin.String(WeatherIconPack.ext)]</imagepath>
+                <width>128</width>
+                <height>128</height>
+                <aspectratio align="left" aligny="bottom">keep</aspectratio>
+            </control>
+			<!-- active weather alert icon overlay -->
+            <control type="image">
+                <texture>special://skin/extras/media/weather-alert.png</texture>
+				<width>128</width>
+                <height>128</height>
+                <aspectratio align="left" aligny="bottom">keep</aspectratio>
+				<visible>!String.IsEmpty(Window(Weather).Property(Alerts)) + !String.IsEmpty(Window(Weather).Property(Alerts.IsFetched)) + Skin.HasSetting(EnableWeatherAlertOverlay)</visible>
+            </control>
+            <control type="label">
+                <!--Current Temp-->
+                <width>300</width>
+                <height>128</height>
+                <posx>132</posx>
+                <posy>0</posy>
+                <font>Bold30</font>
+                 <!-- colors should be hardcoded because display on video -->
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <align>left</align>
+                <label>$INFO[Window(Weather).Property(Current.Temperature)] $INFO[System.TemperatureUnits]</label>
+            </control>
+			<!--Current Conditions-->
+			<control type="label">
+                <width>300</width>
+                <height>128</height>
+                <posx>132</posx>
+                <posy>32</posy>
+                <font>Reg24</font>
+                <!-- colors should be hardcoded because display on video -->
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <align>left</align>
+                <label>$INFO[Window(Weather).Property(Current.Condition)]</label>
+                <visible>Weather.IsFetched</visible>
+            </control>
+        </control>
+    </include>
+
+	<include name="WeatherInfoOSDSlim">
+        <!-- weather info displayed in video OSD and video info changes made for Slim OSD option -->
+        <control type="group">
+            <right>20</right>
+            <bottom>200</bottom>
+            <width>550</width>
+            <height>128</height>
+            <visible>!String.IsEmpty(Window(Weather).Property(Current.FanartCode)) + Skin.String(WeatherIconPack.path) + !Window.IsActive(playerprocessinfo)</visible>
+            <include>HideOsdConditions</include>
+
+            <!--Current Weather-->
+            <control type="multiimage">
+                <!--Current Weather Icon-->
+                <imagepath>$INFO[Skin.String(WeatherIconPack.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$INFO[Skin.String(WeatherIconPack.ext)]</imagepath>
+				<right>0</right>
+                <width>128</width>
+                <height>128</height>
+                <top>10</top>
+                <bottom>0</bottom>
+                <aspectratio align="right" aligny="bottom">keep</aspectratio>
+            </control>
+			<!-- active weather alert icon overlay -->
+            <control type="image">
+                <texture>special://skin/extras/media/weather-alert.png</texture>
+				<right>0</right>
+                <width>128</width>
+                <height>128</height>
+                <top>10</top>
+                <bottom>0</bottom>
+                <aspectratio align="right" aligny="bottom">keep</aspectratio>
+				<visible>!String.IsEmpty(Window(Weather).Property(Alerts)) + !String.IsEmpty(Window(Weather).Property(Alerts.IsFetched)) + Skin.HasSetting(EnableWeatherAlertOverlay)</visible>
+            </control>
+            <control type="label">
+                <!--Current Temp-->
+                <width>400</width>
+                <height>30</height>
+                <right>140</right>
+                <bottom>50</bottom>
+                <font>Bold30</font>
+                 <!-- colors should be hardcoded because display on video -->
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <align>right</align>
+                <label>$INFO[Window(Weather).Property(Current.Temperature)] $INFO[System.TemperatureUnits]</label>
+                <visible>Weather.IsFetched</visible>
+            </control>
+			<!--Current Conditions-->
+			<control type="label">
+                <width>400</width>
+                <height>30</height>
+                <right>140</right>
+                <bottom>15</bottom>
+                <font>Reg24</font>
+                 <!-- colors should be hardcoded because display on video -->
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <align>right</align>
+                <label>$INFO[Window(Weather).Property(Current.Condition)]</label>
+                <visible>Weather.IsFetched</visible>
+            </control>
+        </control>
+    </include>
+    
+    <include name="OSDInfoPanel">
+        <control type="group" id="552233">
+            <visible>![Window.IsVisible(1121)| Window.IsVisible(1110) | Window.IsVisible(1122) | Window.IsVisible(1125) | Window.IsVisible(SliderDialog) | Window.IsVisible(osdsubtitlesettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(osdvideosettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(playerprocessinfo) | Window.IsVisible(osdcmssettings) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(pvrchannelguide)]</visible>
+			<visible>Skin.HasSetting(EnableOSDInfo)</visible>
+            <visible>[Player.Paused + Skin.HasSetting(OSDShowInfoOnPause)] | Player.ShowInfo | Window.IsActive(videoosd)</visible>
+            <visible>!Window.IsActive(notification) + !Window.IsActive(extendedprogressdialog) + !Window.IsActive(DialogPlayerProcessInfo.xml)</visible>
+            <include>HideOsdConditions</include>
+            <include condition="!Skin.HasSetting(EnableOSDInfoLarge)">OSDInfoPanelSmall</include>
+            <include condition="Skin.HasSetting(EnableOSDInfoLarge)">OSDInfoPanelLarge</include>
+        </control>
+    </include>
+    
+    <include name="OSDInfoPanelSmall">
+        <!--OSD Info Panel-->
+        <!--Info Stuff-->
+        <control type="group">
+             <width>100%</width>
+             <height>275</height>
+             <!-- background -->
+             <control type="image">
+                 <texture border="5">diffuse/panel.png</texture>
+                 <colordiffuse>$INFO[Skin.String(OSDPanelColor)]</colordiffuse>
+             </control>
+             <!-- Plot -->
+             <control type="group">
+                 <!--logo-->
+                 <control type="image">
+                     <posx>1520</posx>
+                     <posy>20</posy>
+                     <width>356</width>
+                     <height>200</height>
+                     <fadetime>200</fadetime>
+                     <texture background="true">$VAR[OSDInfoImage]</texture>
+                     <aspectratio align="left" aligny="top">keep</aspectratio>
+					 <!-- <visible>!Window.IsVisible(1121)</visible> -->
+                     <visible>[!String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(clearart)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearart)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearArt)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearLogo)) | !String.IsEmpty(VideoPlayer.Cover) | !String.IsEmpty(Player.Art(thumb))]</visible>
+                 </control>
+                 <!-- plot when clearlogo visible -->
+                 <control type="textbox">
+                     <posx>38</posx>
+                     <posy>30</posy>
+                     <width>1450</width>
+                     <height>200</height>
+                     <visible>[!String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(clearart)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearart)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearArt)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearLogo)) | !String.IsEmpty(VideoPlayer.Cover) | !String.IsEmpty(Player.Art(thumb))]</visible>
+                     <label fallback="19055">[B]$VAR[premiered_or_year,,  • ]$VAR[TotalDuration_Info,, min. • ]$INFO[VideoPlayer.MPAA, • ]$INFO[VideoPlayer.RatingAndVotes, • ]$INFO[VideoPlayer.EpisodeName,, • ][/B][CR]$INFO[VideoPlayer.Plot]</label>
+                     <textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+                     <shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+                     <align>justify</align>
+                     <font>Light28</font>
+                 </control>
+                 <!-- plot when clearlogo NOT visible -->
+                 <control type="textbox">
+                     <posx>38</posx>
+                     <posy>30</posy>
+                     <width>1810</width>
+                     <height>190</height>
+                     <visible>![!String.IsEmpty(Player.Art(clearart)) | !String.IsEmpty(Player.Art(tvshow.clearart)) | !String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearArt)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearLogo)) | !String.IsEmpty(VideoPlayer.Cover) | !String.IsEmpty(Player.Art(thumb))]</visible>
+                     <label fallback="19055">[B]$VAR[premiered_or_year,,  • ]$VAR[TotalDuration_Info,, min. • ]$INFO[VideoPlayer.MPAA, • ]$INFO[VideoPlayer.RatingAndVotes, • ]$INFO[VideoPlayer.EpisodeName,, • ][/B][CR]$INFO[VideoPlayer.Plot]</label>
+                     <textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+                     <shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+                     <align>justify</align>
+                     <font>Light28</font>
+                 </control>
+                <!-- media flags -->
+                <control type="group">
+                     <posx>38</posx>
+                     <posy>240</posy>
+                    <include>mediaflags_text</include>
+                    <visible>Skin.HasSetting(EnableOSDInfoMediaFlags)</visible>
+                </control>
+             </control>
+         </control>
+     </include> 
+
+    
+    <include name="OSDInfoPanelLarge">
+         <!--OSD Info Panel-->
+         <!--Info Stuff-->
+         <control type="group">
+            <animation effect="slide" start="0" end="0,-120" time="0" condition="Skin.HasSetting(ShowWeatherVideoInfoOSD)">Conditional</animation>
+             <!-- background -->
+             <control type="image">
+                 <posx>200</posx>
+                 <posy>170</posy>
+                 <width>1520</width>
+                 <height>610</height>
+                 <texture border="15">diffuse/bgpanel.png</texture>
+                 <colordiffuse>$INFO[Skin.String(OSDPanelColor)]</colordiffuse>
+             </control>
+             <!-- Plot -->
+             <control type="group">
+                 <posx>200</posx>
+                 <posy>190</posy>
+                 <width>1380</width>
+                 <height>610</height>
+                 <!--logo-->
+                 <control type="image">
+                     <posx>40</posx>
+                     <posy>0</posy>
+                     <width>260</width>
+                     <height>560</height>
+                     <fadetime>200</fadetime>
+                     <texture background="true">$VAR[OSDInfoImage]</texture>
+                     <aspectratio align="left" aligny="top">keep</aspectratio>
+                     <visible>[!String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(clearart)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearart)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearArt)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearLogo)) | !String.IsEmpty(VideoPlayer.Cover) | !String.IsEmpty(Player.Art(thumb))]</visible>
+                 </control>
+                 <!-- plot when clearlogo visible -->
+                 <control type="textbox">
+                     <posx>350</posx>
+                     <posy>0</posy>
+                     <width>1130</width>
+                     <height>560</height>
+                     <visible>[!String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(clearart)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearart)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearArt)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearLogo)) | !String.IsEmpty(VideoPlayer.Cover) | !String.IsEmpty(Player.Art(thumb))]</visible>
+                     <label fallback="19055">[B]$INFO[VideoPlayer.Premiered,,  • ]$VAR[TotalDuration_Info,, min. • ]$INFO[VideoPlayer.MPAA, • ]$INFO[VideoPlayer.RatingAndVotes, • ]$INFO[VideoPlayer.EpisodeName,, • ][/B][CR]$INFO[VideoPlayer.Plot]</label>
+                     <textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+                     <shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+                     <align>justify</align>
+                     <font>Light36</font>
+                 </control>
+                 <!-- plot when clearlogo NOT visible -->
+                 <control type="textbox">
+                     <posx>40</posx>
+                     <posy>0</posy>
+                     <width>1440</width>
+                     <height>560</height>
+                     <visible>![!String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(clearart)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearart)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearArt)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearLogo)) | !String.IsEmpty(VideoPlayer.Cover) | !String.IsEmpty(Player.Art(thumb))]</visible>
+                     <label fallback="19055">[B]$INFO[VideoPlayer.Premiered,,  • ]$VAR[TotalDuration_Info,, min. • ]$INFO[VideoPlayer.MPAA, • ]$INFO[VideoPlayer.RatingAndVotes, • ]$INFO[VideoPlayer.EpisodeName,, • ][/B][CR]$INFO[VideoPlayer.Plot]</label>
+                     <textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+                     <shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+                     <align>justify</align>
+                     <font>Light36</font>
+                 </control>
+             </control>
+         </control>
+     </include>
+    
+	<!-- compare OSDImage with cartman.dos -->
+    <variable name="OSDImage">
+        <value condition="![VideoPlayer.Content(livetv) + Skin.HasSetting(NoPvrArtOSD)] + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.AnimatedPoster))">$INFO[Window(Home).Property(SkinHelper.Player.AnimatedPoster)]</value>
+		<value condition="![VideoPlayer.Content(livetv) + Skin.HasSetting(NoPvrArtOSD)] + !String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
+        <value condition="![VideoPlayer.Content(livetv) + Skin.HasSetting(NoPvrArtOSD)] + !String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
+        <value condition="![VideoPlayer.Content(livetv) + Skin.HasSetting(NoPvrArtOSD)] + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Poster))">$INFO[Window(Home).Property(SkinHelper.Player.Art.Poster)]</value>
+		<value condition="!String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.Cover)">$INFO[VideoPlayer.Cover]</value>
+		<value>DefaultVideo.png</value>
+	 </variable>
+
+	<variable name="OSDLabel1">
+        <value condition="Player.HasVideo + VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelNumberLabel,, - ]$INFO[VideoPlayer.ChannelName]</value>
+		<value condition="Player.HasVideo + Player.IsInternetStream + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.AddonName)) + String.IsEmpty(VideoPlayer.TvShowTitle)">$INFO[Window(Home).Property(SkinHelper.Player.AddonName)]</value>
+        <value condition="Player.HasVideo + VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.TvShowTitle)">$INFO[VideoPlayer.TVShowTitle] • $LOCALIZE[20373] $INFO[VideoPlayer.Season]</value>
+        <value condition="Player.HasAudio + !String.IsEmpty(MusicPlayer.Artist)">$INFO[MusicPlayer.Artist]</value>
+        <value condition="Player.HasAudio + String.IsEmpty(MusicPlayer.Artist) + !String.IsEmpty(MusicPlayer.ChannelName)">$INFO[MusicPlayer.ChannelName]</value>
+        <value condition="Player.HasAudio + String.IsEmpty(MusicPlayer.Artist) + String.IsEmpty(MusicPlayer.ChannelName) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.AddonName))">$INFO[Window(Home).Property(SkinHelper.Player.AddonName)]</value>
+        <value>$LOCALIZE[31040]</value>
+	 </variable>
+     
+	 <variable name="OSDLabel2">
+        <value condition="Player.HasVideo + VideoPlayer.Content(Episodes)">$INFO[VideoPlayer.Episode]. $INFO[VideoPlayer.Title]</value>
+        <value condition="Player.HasVideo + VideoPlayer.Content(livetv) + [!String.IsEmpty(VideoPlayer.Episode) + !String.IsEmpty(VideoPlayer.EpisodeName)]">$INFO[VideoPlayer.Title] - $INFO[VideoPlayer.EpisodeName]</value>
+        <value condition="Player.HasVideo">$INFO[VideoPlayer.Title]</value>
+        <value condition="Player.HasAudio">$INFO[MusicPlayer.Title]</value>
+	 </variable>
+     
+	 <variable name="OSDLabel3">
+        <value condition="Player.HasVideo + VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.NextTitle) + !Window.IsActive(VideoOSD)">$LOCALIZE[19031]: $INFO[VideoPlayer.NextTitle]</value>
+        <value condition="Player.HasVideo + !VideoPlayer.Content(livetv) + String.IsEmpty(VideoPlayer.NextTitle) + !Window.IsActive(VideoOSD) + !String.IsEmpty(player.chaptercount) + !String.IsEqual(player.chaptercount,00)">$INFO[player.chapter,[B]$LOCALIZE[21396]:[/B] ,]$INFO[player.chaptercount,/,]$INFO[player.chaptername, - ,]</value>
+        <value condition="Player.HasAudio + !String.IsEmpty(MusicPlayer.Offset(1).Artist) + !Window.IsActive(MusicOSD)">[COLOR=$INFO[Skin.String(OSDSecondaryTextColor)]]$LOCALIZE[554]:[/COLOR] $INFO[MusicPlayer.PlaylistPosition]/$INFO[MusicPlayer.PlaylistLength] - [COLOR=$INFO[Skin.String(OSDSecondaryTextColor)]]$LOCALIZE[19031]:[/COLOR] $INFO[MusicPlayer.Offset(1).Artist] - $INFO[MusicPlayer.Offset(1).Title]</value>
+        <value condition="!String.IsEmpty(VideoPlayer.Genre) + !Window.IsActive(VideoOSD) + !String.Contains(VideoPlayer.Genre,unknown)">$LOCALIZE[515]: $INFO[VideoPlayer.Genre]</value>
+	 </variable>
+     
+     <variable name="PlayerActionLabel">
+		<value condition="[Player.Paused + Player.Caching] + !Player.Seeking">[B]$LOCALIZE[15107]:[/B] $INFO[Player.CacheLevel]%</value>
+		<value condition="!String.IsEmpty(Player.SeekStepSize) + ![Player.Forwarding | Player.Rewinding] + Player.seeking">[B]$LOCALIZE[31255][/B] $INFO[Player.SeekStepSize]</value>
+		<value condition="Player.HasPerformedSeek(3)  + ![Player.Forwarding | Player.Rewinding] + !String.IsEmpty(Player.SeekOffset)">[B]$LOCALIZE[31255][/B] $INFO[Player.SeekOffset]</value>
+		<value condition="Player.seeking">[B]$LOCALIZE[31255][/B] $INFO[Player.SeekTime] - $INFO[Player.Duration]</value>
+		<value condition="Player.Forwarding2x">[B]$LOCALIZE[31253][/B] x2</value>
+		<value condition="Player.Forwarding4x">[B]$LOCALIZE[31253][/B] x4</value>
+		<value condition="Player.Forwarding8x">[B]$LOCALIZE[31253][/B] x8</value>
+		<value condition="Player.Forwarding16x">[B]$LOCALIZE[31253][/B] x16</value>
+		<value condition="Player.Forwarding32x">[B]$LOCALIZE[31253][/B] x32</value>
+		<value condition="Player.Rewinding2x">[B]$LOCALIZE[31254][/B] x2</value>
+		<value condition="Player.Rewinding4x">[B]$LOCALIZE[31254][/B] x4</value>
+		<value condition="Player.Rewinding8x">[B]$LOCALIZE[31254][/B] x8</value>
+		<value condition="Player.Rewinding16x">[B]$LOCALIZE[31254][/B] x16</value>
+		<value condition="Player.Rewinding32x">[B]$LOCALIZE[31254][/B] x32</value>
+		<!-- malvinas2 -->
+		<value condition="!String.IsEmpty(Player.Duration) + Player.HasVideo + ![Player.HasGame | VideoPlayer.HasEpg]">$INFO[Player.FinishTime,$LOCALIZE[31112]: ]</value>
+		<value condition="VideoPlayer.HasEpg">$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31112]: ]</value>
+		<!-- Ende malvinas2 -->
+		<value condition="!String.IsEmpty(player.FinishTime)">$LOCALIZE[31112]: $INFO[Player.FinishTime]</value>
+	 </variable>
+	 
+	 <variable name="PlayerActionLabelSmall">
+		<value condition="[Player.Paused + Player.Caching] + !Player.Seeking">[B]$LOCALIZE[15107]:[/B] $INFO[Player.CacheLevel]%</value>
+		<value condition="!String.IsEmpty(Player.SeekStepSize) + ![Player.Forwarding | Player.Rewinding] + Player.Seeking">[B]$LOCALIZE[31255][/B] $INFO[Player.SeekStepSize]</value>
+		<value condition="Player.HasPerformedSeek(3)  + ![Player.Forwarding | Player.Rewinding] + !String.IsEmpty(player.chaptercount) + !String.IsEqual(player.chaptercount,00)">$INFO[player.chapter,[B]$LOCALIZE[21396]:[/B] ,]$INFO[player.chaptercount,/,]</value>
+		<value condition="Player.HasPerformedSeek(3)  + ![Player.Forwarding | Player.Rewinding] + !String.IsEmpty(Player.SeekOffset)">[B]$LOCALIZE[31255][/B] $INFO[Player.SeekOffset]</value>
+		<value condition="Player.Seeking + !String.IsEmpty(player.chaptercount) + !String.IsEqual(player.chaptercount,00)">$INFO[player.chapter,[B]$LOCALIZE[21396]:[/B] ,]$INFO[player.chaptercount,/,]</value>
+		<value condition="Player.Seeking">[B]$LOCALIZE[31255][/B] $INFO[Player.SeekTime] - $INFO[Player.Duration]</value>
+		<value condition="Player.Forwarding2x">[B]$LOCALIZE[31253][/B] x2</value>
+		<value condition="Player.Forwarding4x">[B]$LOCALIZE[31253][/B] x4</value>
+		<value condition="Player.Forwarding8x">[B]$LOCALIZE[31253][/B] x8</value>
+		<value condition="Player.Forwarding16x">[B]$LOCALIZE[31253][/B] x16</value>
+		<value condition="Player.Forwarding32x">[B]$LOCALIZE[31253][/B] x32</value>
+		<value condition="Player.Rewinding2x">[B]$LOCALIZE[31254][/B] x2</value>
+		<value condition="Player.Rewinding4x">[B]$LOCALIZE[31254][/B] x4</value>
+		<value condition="Player.Rewinding8x">[B]$LOCALIZE[31254][/B] x8</value>
+		<value condition="Player.Rewinding16x">[B]$LOCALIZE[31254][/B] x16</value>
+		<value condition="Player.Rewinding32x">[B]$LOCALIZE[31254][/B] x32</value>
+		<!-- malvinas2 -->
+		<value condition="Player.HasVideo + ![Player.HasGame | VideoPlayer.HasEpg]">$INFO[Player.FinishTime,$LOCALIZE[31112]: ]</value>
+		<value condition="VideoPlayer.HasEpg">$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31112]: ]</value>
+		<!-- Ende malvinas2 -->
+		<value condition="!String.IsEmpty(Player.FinishTime)">$LOCALIZE[31112]: $INFO[Player.FinishTime]</value>
+	 </variable>
+	 
+	 <variable name="PlayerActionLabelLarge">
+		<value condition="[Player.Paused + Player.Caching] + !Player.Seeking">[B]$LOCALIZE[15107]:[/B] $INFO[Player.CacheLevel]%</value>
+		<value condition="!String.IsEmpty(Player.SeekStepSize) + ![Player.Forwarding | Player.Rewinding] + Player.Seeking">[B]$LOCALIZE[31255][/B] $INFO[Player.SeekStepSize]</value>
+		<value condition="Player.HasPerformedSeek(3)  + ![Player.Forwarding | Player.Rewinding] + !String.IsEmpty(Player.SeekOffset)">[B]$LOCALIZE[31255][/B] $INFO[Player.SeekOffset]</value>
+		<value condition="Player.Seeking">[B]$LOCALIZE[31255][/B] $INFO[Player.SeekTime] - $INFO[Player.Duration]</value>
+		<value condition="Player.Forwarding2x">[B]$LOCALIZE[31253][/B] x2</value>
+		<value condition="Player.Forwarding4x">[B]$LOCALIZE[31253][/B] x4</value>
+		<value condition="Player.Forwarding8x">[B]$LOCALIZE[31253][/B] x8</value>
+		<value condition="Player.Forwarding16x">[B]$LOCALIZE[31253][/B] x16</value>
+		<value condition="Player.Forwarding32x">[B]$LOCALIZE[31253][/B] x32</value>
+		<value condition="Player.Rewinding2x">[B]$LOCALIZE[31254][/B] x2</value>
+		<value condition="Player.Rewinding4x">[B]$LOCALIZE[31254][/B] x4</value>
+		<value condition="Player.Rewinding8x">[B]$LOCALIZE[31254][/B] x8</value>
+		<value condition="Player.Rewinding16x">[B]$LOCALIZE[31254][/B] x16</value>
+		<value condition="Player.Rewinding32x">[B]$LOCALIZE[31254][/B] x32</value>
+		<value condition="Player.Paused">[B]$LOCALIZE[31251][/B]</value>
+	 </variable>
+	 
+	 <variable name="SubtitleButton">
+		<value condition="!VideoPlayer.SubtitlesEnabled">$LOCALIZE[24022]</value>
+		<value>$LOCALIZE[209]</value>
+	 </variable>
+     
+	<variable name="SeekTimeLabelVar">			
+	<!-- bereits gespielte Zeit  -->
+		<value condition="!String.IsEmpty(Player.SeekNumeric)">[B]$INFO[Player.SeekNumeric(hh:mm:ss)][/B]</value>
+		<value condition="Player.Seeking + VideoPlayer.HasEPG">$INFO[PVR.EpgEventSeekTime]</value>
+		<value condition="Player.Seeking">$INFO[Player.SeekTime]</value> 
+ 		<value condition="VideoPlayer.HasEpg">$INFO[PVR.EpgEventElapsedTime]</value>
+		<value>$INFO[Player.Time]</value>
+	</variable> 
+	 
+	<variable name="TotalDuration">					
+	<!-- Gesamtzeit -->
+		<value condition="!String.IsEmpty(Player.SeekNumeric)">[B]$INFO[Player.SeekNumeric(hh:mm:ss)][/B]</value>
+		<value condition="Player.Seeking + VideoPlayer.HasEPG">$INFO[PVR.EpgEventDuration]</value>
+		<value condition="Player.Seeking">$INFO[Player.Duration]</value> 
+ 		<value condition="VideoPlayer.HasEpg">$INFO[PVR.EpgEventDuration]</value>
+		<value>$INFO[Player.Duration]</value>
+	</variable>
+	 
+	<variable name="TotalDuration_Info" >
+		<value condition="Pvr.IsPlayingTv">$INFO[PVR.EpgEventDuration(mins)]</value>
+		<value condition="!Pvr.IsPlayingTv">$INFO[VideoPlayer.Duration(mins)]</value>
+	</variable>
+	 
+	<variable name="RemainingTime">
+		<!-- Gesamtzeit -->
+		<value condition="VideoPlayer.HasEpg">$INFO[PVR.EpgEventRemainingTime]</value>
+		<value>$INFO[Player.TimeRemaining]</value>
+	</variable>	 
+	 
+	<variable name="ProgressZeit">					
+	<!-- grafische Anzeige des Fortschritts -->
+		<value condition="VideoPlayer.HasEpg">PVR.EpgEventProgress</value>
+		<value>Player.Progress</value>
+	</variable>
+	
+	<variable name="premiered_or_year">
+		<value condition="!Pvr.IsPlayingTv | !String.Contains(VideoPlayer.Premiered,1970)">$INFO[VideoPlayer.Premiered]</value>
+		<value></value>
+	</variable>
+     
+    <include name="HideOsdConditions">
+		<visible>
+            !Window.IsActive(pvrchannelguide) + !Window.IsActive(PVROSDTeletext) + !Window.IsActive(PVROSDChannels) + !Window.IsActive(videobookmarks) + 
+            !Window.IsActive(sliderdialog) + !Window.IsActive(subtitlesearch) + !Window.IsActive(script.pseudotv.TVOverlay.xml) + 
+            !Window.IsActive(script.pseudotv.live.TVOverlay.xml) + !Window.IsActive(selectdialog) + !Window.IsActive(musicplaylist) + !Window.IsVisible(osdcmssettings) + !Window.IsVisible(addonsettings) + 
+			!Window.IsActive(1121) + !Window.IsActive(1110)
+        </visible>
+    </include>
+	 
+	<include name="PVRProgress">
+		<control type="group">
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<visible>!Player.ChannelPreviewActive</visible>
+			<control type="group">
+				<visible>Player.SeekEnabled | VideoPlayer.HasEPG</visible>
+				<control type="label">			
+					<top>2</top>
+					<left>20</left>
+					<right>20</right>
+					<height>50</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<label>[B]$LOCALIZE[71026][/B] $INFO[PVR.TimeshiftCur] (-$INFO[PVR.TimeshiftOffset])</label>
+					<visible>PVR.IsTimeShift</visible>
+				</control>
+			</control>
+			<control type="group">
+				<visible>VideoPlayer.HasEPG</visible>
+				<control type="progress">				
+					<posx>540</posx>						
+					<width>700</width>
+					<posy>$PARAM[epg_bar_posy]</posy>
+					<height>$PARAM[epg_bar_height]</height>
+					<info2>PVR.TimeshiftProgressEpgStart</info2>
+					<info>PVR.TimeshiftProgressPlayPos</info>
+					<texturebg border="5" colordiffuse="$VAR[OSDProgressBarBackgroundColor]">diffuse/panel_trans.png</texturebg>
+					<midtexture border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/panel.png</midtexture>
+				</control>
+				<control type="progress">			
+					<posx>540</posx>	
+					<width>700</width>
+					<posy>$PARAM[epg_bar_posy]</posy>
+					<height>$PARAM[epg_bar_height]</height>					
+					<info2>PVR.TimeshiftProgressPlayPos</info2>
+					<info>PVR.TimeshiftProgressEpgEnd</info>
+					<texturebg border="5" colordiffuse="$VAR[OSDProgressBarBackgroundColor]">diffuse/panel_trans.png</texturebg>
+					<midtexture border="5" colordiffuse="$VAR[OSDProgressBarBackgroundColor]">diffuse/panel.png</midtexture>
+				</control>
+			</control>
+			<control type="progress">				
+				<posx>540</posx>	
+				<width>700</width>				
+				<posy>$PARAM[ts_bar_posy]</posy>
+				<height>$PARAM[ts_bar_height]</height>
+				<info2>PVR.TimeshiftProgressBufferStart</info2>
+				<info>PVR.TimeshiftProgressBufferEnd</info>
+				<texturebg border="5" colordiffuse="$VAR[OSDProgressBarBackgroundColor]">diffuse/panel_trans.png</texturebg>
+				<midtexture border="5" colordiffuse="grey">diffuse/panel.png</midtexture>
+				<visible>Player.SeekEnabled</visible>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<visible>Player.ChannelPreviewActive</visible>
+			<control type="progress" id="23">
+				<description>Progress Bar</description>	
+				<posx>540</posx>					
+				<posy>160</posy>
+				<height>20</height>
+				<width>700</width>
+				<info>PVR.EpgEventProgress</info>
+				<texturebg border="5" colordiffuse="$VAR[OSDProgressBarBackgroundColor]">diffuse/panel_trans.png</texturebg>
+				<midtexture border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/panel.png</midtexture>
+			</control>
+		</control>
+	</include> 
+	 
+	 
+	<include name="PVRProgress_slim">
+		<control type="group">
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<visible>!Player.ChannelPreviewActive</visible>
+			<control type="group">
+				<visible>Player.SeekEnabled | VideoPlayer.HasEPG</visible>
+				<control type="label">			
+					<top>-52</top>
+					<left>100</left>
+					<right>20</right>
+					<height>50</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<label>[B]$LOCALIZE[71026][/B] $INFO[PVR.TimeshiftCur] (-$INFO[PVR.TimeshiftOffset])</label>
+					<visible>PVR.IsTimeShift</visible>
+				</control>
+			</control>
+			<control type="group">
+				<visible>VideoPlayer.HasEPG</visible>
+				<control type="progress">				
+					<posy>$PARAM[epg_bar_posy]</posy>
+					<height>$PARAM[epg_bar_height]</height>		
+					<left>250</left>
+					<right>40</right>
+					<width>1630</width>
+					<info2>PVR.TimeshiftProgressEpgStart</info2>
+					<info>PVR.TimeshiftProgressPlayPos</info>
+					<texturebg border="5" colordiffuse="$VAR[OSDProgressBarBackgroundColor]">diffuse/panel_trans.png</texturebg>
+					<midtexture border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/panel.png</midtexture>
+				</control>
+				<control type="progress">			
+					<left>250</left>
+					<right>40</right>
+					<width>1630</width>
+					<posy>$PARAM[epg_bar_posy]</posy>
+					<height>$PARAM[epg_bar_height]</height>		
+					<info2>PVR.TimeshiftProgressPlayPos</info2>
+					<info>PVR.TimeshiftProgressEpgEnd</info>
+					<texturebg border="5" colordiffuse="$VAR[OSDProgressBarBackgroundColor]">diffuse/panel_trans.png</texturebg>
+					<midtexture border="5" colordiffuse="$VAR[OSDProgressBarBackgroundColor]">diffuse/panel.png</midtexture>
+				</control>
+			</control>
+			<control type="progress">				
+					<left>250</left>
+					<right>40</right>
+					<width>1630</width>
+					<posy>$PARAM[ts_bar_posy]</posy>
+					<height>$PARAM[ts_bar_height]</height>	
+				<info2>PVR.TimeshiftProgressBufferStart</info2>
+				<info>PVR.TimeshiftProgressBufferEnd</info>
+				<texturebg border="5" colordiffuse="$VAR[OSDProgressBarBackgroundColor]">diffuse/panel_trans.png</texturebg>
+				<midtexture border="5" colordiffuse="grey">diffuse/panel.png</midtexture>
+				<visible>Player.SeekEnabled</visible>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<visible>Player.ChannelPreviewActive</visible>
+			<control type="progress" id="23">
+				<description>Progress Bar</description>	
+				<left>250</left>
+				<right>40</right>
+				<width>1630</width>
+				<posy>150</posy>
+				<height>33</height>
+				<info>PVR.EpgEventProgress</info>
+				<texturebg border="5" colordiffuse="$VAR[OSDProgressBarBackgroundColor]">diffuse/panel_trans.png</texturebg>
+				<midtexture border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/panel.png</midtexture>
+			</control>
+		</control>
+	</include> 
+    
+</includes>

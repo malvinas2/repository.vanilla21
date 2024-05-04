@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">36</defaultcontrol>
+	<!-- <onload>SetFocus(21)</onload> -->
+	<!-- <onload>SendClick(100)</onload> -->
+    <controls>
+        <!--Dialog Overlay-->
+        <include>DialogOverlayExtra</include>
+        <!--Dialog Main -->
+        <control type="group">
+			<include>animation_window_open_close</include>
+
+			<centertop>50%</centertop>
+			<centerleft>50%</centerleft>
+			<width>1640</width>
+			<height>780</height>
+			
+			<control type="button" id="36">
+				<onfocus>SetFocus(21)</onfocus>
+				<texturefocus></texturefocus>
+				<texturenofocus></texturenofocus>
+				<include>HiddenButton</include>
+			</control>			
+			
+			<!-- background panel -->
+			<control type="image">
+				<texture border="15">diffuse/bgpanel.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+			</control>
+			<control type="image">
+				<texture border="15">diffuse/bgpanel.png</texture>
+				<bordersize>10</bordersize>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+			</control>
+
+			<!--Header-->
+			<control type="label" id="2">
+				<description>Heading</description>
+				<left>40</left>
+				<top>0</top>
+				<right>100</right>
+				<height>70</height>
+				<label></label>
+				<include>DialogHeader_Alt</include>
+				<align>center</align>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+
+			<control type="image">
+				<left>20</left>
+				<width>400</width>
+				<height>625</height>
+				<top>100</top>
+				<texture border="5">dialogs/default/inner-dark.png</texture>
+			</control>					
+			<control type="image">
+				<left>20</left>
+				<width>400</width>
+				<height>625</height>
+				<top>105</top>
+				<texture>$VAR[VideoListPosterVar]</texture>
+				<aspectratio aligny="top">keep</aspectratio>
+			</control>
+			<control type="label">
+				<description>Path label</description>
+				<left>20</left>
+				<bottom>10</bottom>
+				<width>1280</width>
+				<height>30</height>
+				<font>Reg22</font>
+				<align>right</align>
+				<aligny>bottom</aligny>
+				<textcolor>$INFO[Skin.String(ButtonTextColor)]</textcolor>
+				<label>$INFO[Container(50).ListItem.FileNameAndPath]</label>
+			</control>
+
+			<!-- Anzahl der Eintrage, rechts unten -->
+			<control type="label">
+				<right>40</right>
+				<bottom>15</bottom>
+				<width>275</width>
+				<height>30</height>
+				<align>right</align>
+				<include>DialogLabel</include>
+				<label>[COLOR=$INFO[Skin.String(GeneralHighlightTextColor)]]$INFO[Container(50).NumItems][/COLOR] $LOCALIZE[91830] - [COLOR=$INFO[Skin.String(GeneralHighlightTextColor)]]$INFO[Container(50).CurrentPage]/$INFO[Container(50).NumPages][/COLOR]</label>
+			</control>			
+
+			<control type="group" id="100">
+				<top>80</top>
+				<left>420</left>
+				<control type="image">
+					<left>20</left>
+					<top>20</top>
+					<width>860</width>
+					<height>625</height>
+					<texture border="5">dialogs/default/inner.png</texture>
+				</control>
+				<control type="list" id="50">
+					<description>version list</description>
+					<top>20</top>
+					<left>20</left>
+					<height>625</height>
+					<onup>50</onup>
+					<ondown>50</ondown>
+					<onleft>9001</onleft>
+					<onright>60</onright>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<itemlayout height="125" width="860">
+						<!-- Trennlinie zwischen Eintragen -->
+						<control type="image">
+							<posx>0</posx>
+							<posy>1</posy>
+							<width>860</width>
+							<height>125</height>
+							<texture>dialogs/default/separator.png</texture>
+						</control>
+						<control type="image">
+							<left>12</left>
+							<top>7</top>
+							<width>110</width>
+							<height>110</height>
+							<texture>$VAR[VideoListThumbVar]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>135</left>
+							<top>0</top>
+							<right>20</right>
+							<height>60</height>
+							<font>Reg28</font>
+							<aligny>center</aligny>
+							<include>DialogListNF</include>
+							<label>$VAR[MediaInfoListLabelVar]</label>
+						</control>
+						<control type="label">
+							<left>135</left>
+							<top>50</top>
+							<right>20</right>
+							<height>65</height>
+							<font>Reg22</font>
+							<aligny>center</aligny>
+							<include>DialogListNF</include>
+							<label>$VAR[MediaInfoListLabel2Var]</label>
+						</control>
+						<control type="image">
+							<right>5</right>
+							<posy>10</posy>
+							<width>40</width>
+							<height>40</height>
+							<texture>common/checkbox.png</texture>
+							<colordiffuse>$INFO[Skin.String(ButtonTextColor)]</colordiffuse>
+							<visible>ListItem.IsSelected</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="125" width="860">
+						<control type="group">
+							<animation effect="fade" start="100" end="30" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>860</width>
+								<height>125</height>
+								<texture border="5">diffuse/panel.png</texture>
+								<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
+							</control>
+							<control type="image">
+								<left>12</left>
+								<top>7</top>
+								<width>110</width>
+								<height>110</height>
+								<texture>$VAR[VideoListThumbVar]</texture>
+								<aspectratio>keep</aspectratio>
+							</control>
+							<control type="label">
+								<left>135</left>
+								<top>0</top>
+								<right>20</right>
+								<height>60</height>
+								<aligny>center</aligny>
+								<scroll>true</scroll>
+								<font>Reg28</font>
+								<include>DialogListFO</include>
+								<label>$VAR[MediaInfoListLabelVar]</label>
+							</control>
+							<control type="label">
+								<left>135</left>
+								<top>50</top>
+								<right>20</right>
+								<height>65</height>
+								<font>Reg22</font>
+								<aligny>center</aligny>
+								<include>DialogListFO</include>
+								<label>$VAR[MediaInfoListLabel2Var]</label>
+							</control>
+							<control type="image">
+								<right>5</right>
+								<posy>10</posy>
+								<width>40</width>
+								<height>40</height>
+								<texture>common/checkbox.png</texture>
+								<colordiffuse>$INFO[Skin.String(ButtonFocusTextColor)]</colordiffuse>
+								<visible>ListItem.IsSelected</visible>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="60">
+					<left>890</left>
+					<top>20</top>
+					<width>20</width>
+					<height>625</height>
+					<onleft>50</onleft>
+					<onright>101</onright>
+					<orientation>vertical</orientation>
+					<showonepage>false</showonepage>
+					<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container(50).Scrolling | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container(50).Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+				</control>
+			</control>
+			<control type="grouplist" id="101">
+				<left>1340</left>
+				<top>90</top>
+				<width>300</width>
+				<height>630</height>
+				<!-- <onleft>50</onleft> -->
+				<onleft condition="Integer.IsGreater(Container(50).NumItems,0)">100</onleft>
+				<itemgap>10</itemgap>
+				<align>top</align>
+				<orientation>vertical</orientation>
+				<control type="button" id="21">
+					<description>Play</description>
+					<label>$LOCALIZE[208]</label>
+					<width>270</width>
+					<include>DialogButtonOther</include>
+					<textwidth>250</textwidth>
+					<height>80</height>
+					<!-- <visible>true</visible> -->
+				</control>
+				<control type="button" id="22">
+					<description>Add Version</description>
+					<label>$LOCALIZE[40014]</label>
+					<width>270</width>
+					<include>DialogButtonOther</include>
+					<textwidth>250</textwidth>
+					<height>80</height>
+					<!-- <visible>true</visible> -->
+					<visible>Window.IsVisible(managevideoversions)</visible>
+				</control>				
+				<control type="button" id="23">
+					<description>Add Extra</description>
+					<label>$LOCALIZE[40015]</label>
+					<width>270</width>
+					<include>DialogButtonOther</include>
+					<textwidth>250</textwidth>
+					<height>80</height>
+					<!-- <visible>true</visible> -->
+					<visible>Window.IsVisible(managevideoextras)</visible>
+				</control>					
+				<control type="button" id="27">
+					<description>Choose artwork</description>
+					<label>$LOCALIZE[13511]</label>
+					<width>270</width>
+					<include>DialogButtonOther</include>
+					<textwidth>250</textwidth>
+					<height>80</height>
+					<!-- <visible>true</visible> -->
+				</control>
+				<control type="button" id="24">
+					<description>choose typ</description>
+					<label>$LOCALIZE[40004]</label>
+					<width>270</width>
+					<include>DialogButtonOther</include>
+					<textwidth>250</textwidth>
+					<height>80</height>
+					<!-- <visible>true</visible> -->
+					<visible>Window.IsVisible(managevideoversions)</visible>
+				</control>
+				<control type="button" id="28">
+					<description>rename</description>
+					<label>$LOCALIZE[118]</label>
+					<width>270</width>
+					<include>DialogButtonOther</include>
+					<textwidth>250</textwidth>
+					<height>80</height>
+					<!-- <visible>true</visible> -->
+					<visible>Window.IsVisible(managevideoextras)</visible>
+				</control>
+				<control type="button" id="26">
+					<description>remove</description>
+					<label>$LOCALIZE[15015]</label>
+					<width>270</width>
+					<include>DialogButtonOther</include>
+					<textwidth>250</textwidth>
+					<height>80</height>
+					<!-- <visible>true</visible> -->
+				</control>
+				<control type="button" id="25">
+					<description>set as default</description>
+					<label>$LOCALIZE[40023]</label>
+					<width>270</width>
+					<textwidth>250</textwidth>
+					<include>DialogButtonOther</include>
+					<height>80</height>
+					<!-- <visible>true</visible> -->
+					<visible>Window.IsVisible(managevideoversions)</visible>
+				</control>
+				<control type="button" id="125">
+					<description>close</description>
+					<label>$LOCALIZE[31308]</label>
+					<width>270</width>
+					<textwidth>250</textwidth>
+					<include>DialogButtonOther</include>
+					<height>80</height>
+					<visible>true</visible>
+					<onclick>Close</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

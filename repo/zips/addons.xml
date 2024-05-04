@@ -1,0 +1,975 @@
+<?xml version='1.0' encoding='utf-8'?>
+<addons><addon id="plugin.audio.spotify" version="1.3.9" name="Spotify" provider-name="glk1001">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="xbmc.addon" version="18.9.701" />
+        <import addon="script.module.certifi" version="2023.5.7" />
+        <import addon="script.module.chardet" version="5.1.0" />
+        <import addon="script.module.idna" version="3.4.0" />
+        <import addon="script.module.requests" version="2.31.0" />
+        <import addon="script.module.six" version="1.15.0" />
+        <import addon="script.module.urllib3" version="1.26.16" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="plugin.py">
+        <provides>audio</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Unofficial Spotify music plugin for Kodi</summary>
+        <description lang="en_GB">Allows you to use your Spotify premium account to connect and play Spotify through Kodi. After installing, use 'Configure' to enter your Spotify username and password.</description>
+        <disclaimer lang="en_GB">This product uses the SPOTIFY WEB API but is not endorsed, certified or otherwise approved in any way by Spotify. Spotify is the registered trademark of Spotify AB.</disclaimer>
+        <source>https://github.com/glk1001/plugin.audio.spotify</source>
+        <website>https://github.com/glk1001/glk1001.github.io</website>
+        <news>v1.3.9 (2023-12-19)
+Added Spanish translations. (Thanks trihy.)
+1.3.8: Added setting to turn off Spotify normalization. Should make tracks play louder.
+        </news>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon><addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.1.3" provider-name="phil65, sualfred, xulek, finkleandeinhorn, Ivar Brandt">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.autocompletion" version="2.0.5" />
+    </requires>
+    <extension point="xbmc.python.script" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.python.pluginsource" library="plugin.py" />
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">AutoCompletion for the virtual keyboard (needs skin support)</summary>
+        <description lang="en_GB">AutoCompletion for the virtual keyboard (needs skin support)</description>
+        <summary lang="es_ES">Autocompletar para el teclado virtual (necesita soporte de skin)</summary>
+        <description lang="es_ES">Autocompletar para el teclado virtual (necesita soporte de skin)</description>
+        <platform>all</platform>
+        <license>GPL-2.0-or-later</license>
+        <source>https://github.com/ivarbrandt/plugin.program.autocompletion</source>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <screenshot>resources/screenshot-01.jpg</screenshot>
+            <screenshot>resources/screenshot-02.jpg</screenshot>
+            <screenshot>resources/screenshot-03.jpg</screenshot>
+        </assets>
+    </extension>
+</addon><addon id="plugin.video.themoviedb.helper" version="5.2.22~nexus" name="TheMovieDb Helper" provider-name="jurialmunkey">
+<requires>
+  <import addon="xbmc.python" version="3.0.1" />
+  <import addon="script.module.requests" version="2.9.1" />
+  <import addon="script.module.pil" version="1.1.7" />
+  <import addon="script.module.addon.signals" version="0.0.6" />
+  <import addon="script.module.jurialmunkey" version="0.1.14" />
+  <import addon="script.module.infotagger" version="0.0.5" />
+  <import addon="script.module.beautifulsoup4" version="4.9.3" />
+</requires>
+<extension point="xbmc.python.pluginsource" library="resources/plugin.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.python.script" library="resources/script.py" />
+<extension point="xbmc.service" library="resources/service.py" />
+<extension point="xbmc.python.module" library="resources/modules" />
+<extension point="xbmc.addon.metadata">
+  <reuselanguageinvoker>false</reuselanguageinvoker>
+  <summary lang="en_GB">TheMovieDb Helper</summary>
+  <description lang="en_GB">TheMovieDb Helper provides details about movies, tvshows and actors from TMDb. Users can access a variety of lists from TMDb TVDb MDbList and Trakt.</description>
+  <disclaimer lang="en_GB">Data provided by TheMovieDb TVDb MDbList OMDb FanartTV and Trakt. Some of the information is provided by TheTVDB.com. Please consider supporting them. https://thetvdb.com/subscribe</disclaimer>
+  <license>GPL-3.0-or-later</license>
+  <website>https://github.com/jurialmunkey/plugin.video.themoviedb.helper</website>
+  <forum>https://forum.kodi.tv/showthread.php?tid=345847</forum>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+    <screenshot>resources/screenshot-01.jpg</screenshot>
+    <screenshot>resources/screenshot-02.jpg</screenshot>
+  </assets>
+</extension>
+</addon><addon id="repository.vanilla21" name="Titan Vanilla Repository" version="1.0.0" provider-name="malvinas2">
+    <extension point="xbmc.addon.repository" name="Example Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/malvinas2/repository.vanilla21/master/repo/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/malvinas2/repository.vanilla21/master/repo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/malvinas2/repository.vanilla21/master/repo/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Titan Vanilla Repository</summary>
+        <description>Home of Titan Vanilla - Skin for Kodi 21 Omega</description>
+        <disclaimer />
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon><addon id="resource.images.backgroundoverlays.basic" name="Background Overlays Pack - Basic" version="1.0.0" provider-name="marcelveldt, mgonzales">
+	<extension point="kodi.resource.images" compile="false" type="backgroundoverlays" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pack of images that can be used as background overlay</summary>
+		<description lang="en">Pack of images that can be used as background overlay</description>
+		<platform>all</platform>
+	</extension>
+</addon><addon id="resource.images.busyspinners.basic" name="Animated Busy Spinners Pack" version="1.0.1" provider-name="marcelveldt">
+	<extension point="kodi.resource.images" compile="false" type="busyspinners" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Animated Busy Spinners Pack - Titan</summary>
+		<description lang="en">Animated Busy Spinners Pack - Titan</description>
+		<platform>all</platform>
+	</extension>
+</addon><addon id="resource.images.skinbackgrounds.titanium" name="Skin Backgrounds - Titanium" version="1.0.1" provider-name="marcelveldt">
+	<extension point="kodi.resource.images" compile="false" type="skinbackgrounds" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Skin Backgrounds Pack - Titanium</summary>
+		<description lang="en">Skin Backgrounds Pack - Titanium</description>
+		<platform>all</platform>
+	</extension>
+</addon><addon id="resource.images.skinicons.wide" name="Skin Icons - Wide" version="1.0.4" provider-name="marcelveldt">
+	<extension point="kodi.resource.images" compile="false" type="skinicons" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Skin Icons Pack - Wide</summary>
+		<description lang="en">Skin Icons Pack - Wide</description>
+		<platform>all</platform>
+	</extension>
+</addon><addon id="resource.skinthemes.titan" version="1.0.3" name="Titan skin Themes" provider-name="marcelveldt">
+  <requires>
+    <import addon="kodi.resource" version="1.0.0" />
+  </requires>
+  <extension point="kodi.resource.images" compile="false" type="skinthemes" />
+  <extension point="kodi.addon.metadata">
+    <summary lang="en">Additional skin themes for the Titan skin</summary>
+    <description lang="en">A pack of additional skin themes for the Titan skin, provided by both the author of the skin and community contributions</description>
+    <platform>all</platform>
+  </extension>
+</addon><addon id="resource.uisounds.titan.classic" version="1.0.0" name="Titan UI Sounds (Classic)" provider-name="marcelveldt,mgonzales">
+  <requires>
+    <import addon="kodi.resource" version="1.0.0" />
+  </requires>
+  <extension point="kodi.resource.uisounds" />
+  <extension point="kodi.addon.metadata">
+    <summary lang="en">Titan UI Sounds (Classic)</summary>
+    <description lang="en">Titan UI Sounds (Classic)</description>
+    <platform>all</platform>
+  </extension>
+</addon><addon id="resource.uisounds.titan.modern" version="1.0.0" name="Titan UI Sounds (Modern)" provider-name="marcelveldt,mgonzales">
+  <requires>
+    <import addon="kodi.resource" version="1.0.0" />
+  </requires>
+  <extension point="kodi.resource.uisounds" />
+  <extension point="kodi.addon.metadata">
+    <summary lang="en">Titan UI Sounds (Modern)</summary>
+    <description lang="en">Titan UI Sounds (Modern)</description>
+    <platform>all</platform>
+  </extension>
+</addon><addon id="screensaver.video" name="VideoScreensaver" version="120.11.22" provider-name="malvinas2">
+	<requires>
+		<import addon="xbmc.python" version="3.00.0" />
+		<import addon="script.module.simplejson" version="3.3.0" />
+	</requires>
+	<extension point="xbmc.ui.screensaver" library="default.py" />
+  	<extension point="xbmc.python.script" library="screensaver.py" />
+	<extension point="xbmc.service" library="service.py" start="login" />
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="bg">Скрийнсейвър, който възпроизвежда видео файлове</summary>
+		<summary lang="de">Bildschirmschoner, der eine Videodatei abspielt</summary>
+		<summary lang="el">Προφύλαξη οθόνης αναπαράγει βίντεο</summary>
+		<summary lang="en">Screensaver that plays a video file</summary>
+		<summary lang="es">Salva pantalla que reproduce un archivo de video</summary>
+		<summary lang="fr">Économiseur d'écran jouant un fichier vidéo</summary>
+		<summary lang="fr_CA">Économiseur d'écran lisant un fichier vidéo</summary>
+		<summary lang="gl">Protector de pantalla que reproduce un vídeo</summary>
+		<summary lang="he">שומר מסך המנגן קובץ וידאו</summary>
+		<summary lang="hr">Čuvar zaslona koji reproducira video datoteke</summary>
+		<summary lang="it">Salvaschermo che esegue un file video</summary>
+		<summary lang="ko">비디오 파일 재생 화면 보호기</summary>
+		<summary lang="lt">Ekrano užsklanda, kuri atkuria vaizdo failą</summary>
+		<summary lang="nl">Schermbeveiliging die een videobestand afspeelt</summary>
+		<summary lang="pl">Wygaszacz ekranu odtwarzający plik wideo</summary>
+		<summary lang="pt">Protetor de ecrã que reproduz um ficheiro de vídeo</summary>
+		<summary lang="pt_BR">Protetor de Tela que reproduz arquivos de vídeos.</summary>
+		<summary lang="ro">Protector ecran care redă un fișier video</summary>
+		<summary lang="sv">Skärmsläckare som spelar upp en film</summary>
+		<summary lang="tr">Video dosyası oynatan ekran koruyucu</summary>
+		<summary lang="zh">播放视频文件的屏幕保护</summary>
+		<description lang="bg">Възпроизвежда видео файлове при стартиране на скрийнсейвър. Можете да изберете даден видео файл или да ползвате някой от вградените.</description>
+		<description lang="de">Spielt beim Start des Bildschirmschoners ein Video ab. Dies kann ein benutzerdefiniertes oder eines der eingebauten Videos sein</description>
+		<description lang="el">Αναπαράγει ένα βίντεο όταν ξεκινάει η προφύλαξη οθόνης. Αυτό μπορεί να είναι ένα δικό σας βίντεο, ή ένα από τα ενσωματωμένα.</description>
+		<description lang="en">Plays a video when the screensaver starts, this can be a custom video or one of the built in videos</description>
+		<description lang="es">Reproduce un vídeo cuando el salva pantallas inicia, este vídeo puede ser un vídeo personalizado o uno de los vídeos pre cargados.</description>
+		<description lang="fr">Cette extension joue une vidéo quand l'économiseur d'écran démarre. Cela peut-être une vidéo personnelle ou une des vidéos déjà pré-inclues.</description>
+		<description lang="fr_CA">Lit un fichier vidéo au démarrage de l'économiseur d'écran, pouvant être une vidéo personnalisée ou une des vidéos intégrées</description>
+		<description lang="gl">Reproduce un vídeo ao activar o protector de pantalla, pode ser un vídeo personalizado ou un dos predefinidos</description>
+		<description lang="he">משחק וידאו כאשר שומר המסך מתחיל, זה יכול להיות וידאו מותאם אישית או אחד שנבנה בקטעי וידאו</description>
+		<description lang="hr">Reproducira video snimke kada se čuvar zaslona pokrene, to može biti prilagođena video snimmka ili neka od ugrađenih video snimaka.</description>
+		<description lang="it">Esegui un video quando il salvaschermo inizia, può essere un video personalizzato o uno video integrato</description>
+		<description lang="ko">화면 보호기가 시작될 때 사용자 비디오 또는 내장 비디오를 재생합니다</description>
+		<description lang="lt">Atkuria vaizdo įrašą, kai įjungiama ekrano užsklanda. Tai gali būti savas  ar vienas iš integruotų vaizdo įrašų</description>
+		<description lang="nl">Speelt een video wanneer de schermbeveiliger start, dit kan een vooraf ingestelde video zijn of één van de ingebouwde video's</description>
+		<description lang="pl">Wygaszacz ekranu, który po uruchomieniu odtwarza wbudowany bądź niestandardowy plik wideo.</description>
+		<description lang="pt">Reproduz um vídeo quando o protetor de ecrã inicia, este pode ser um vídeo personalizado ou um dos vídeos embutidos</description>
+		<description lang="pt_BR">Reproduza um vídeo quando iniciar a proteção de tela, podes setar uma vídeo customizado ou um dos vídeos pré-existentes que podem ser transferidos via ajustes do addon.</description>
+		<description lang="sv">Spelar en film när skärmsläckaren startar, det kan vara en egen film eller någon av de inbyggda filmerna</description>
+		<description lang="tr">Ekran koruyucu başladığında bir video oynatır, bu özel bir video veya yerleşik videolardan biri olabilir</description>
+		<description lang="zh">屏幕保护时播放视频，可以是自定义视频或内建视频</description>
+		<language />
+		<platform>all</platform>
+		<license>See LICENSE.txt</license>
+		<forum>https://github.com/malvinas2/screensaver.video</forum>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<banner>resources/banner.jpg</banner>
+			<logo>resources/logo.png</logo>
+		</assets>
+	</extension>
+</addon><addon id="script.extendedinfo" name="ExtendedInfo Script" version="6.0.7" provider-name="scott967">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="resource.images.studios.white" version="0.0.25" />
+		<import addon="script.module.routing" version="0.2.3+matrix.1" />
+        <import addon="script.module.pil" version="5.1.0" />
+		<import addon="plugin.program.autocompletion" version="2.1.2" />
+        <import addon="script.module.autocompletion" version="2.0.3" />
+        <import addon="script.module.requests" version="2.25.1+matrix.1" />
+	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<language />
+		<summary lang="en_GB">ExtendedInfo Script</summary>
+		<description lang="en_GB">This script offers various possibilities to display online content inside skins as well as a complete MovieDB browser including info dialogs for various media types. Used services are themoviedb.org, theaudiodb.org, Trakt.TV, omdbapi.com and a lot more. Needs skin implementation for lot of functions.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=160558</forum>
+		<source>https://github.com/scott967/script.extendedinfo</source>
+		<email>scott967@kodi.tv</email>
+		<news>Python 3 fixes and Omega/Nexus/Matrix updates by scott967.  Original addon for Leia and prior by phil65 (Philipp Temminghoff).</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+		</assets>
+	</extension>
+</addon><addon id="script.globalsearch" name="Global Search+" provider-name="SlyGuy" version="99.0.12">
+	<requires>
+		<import addon="script.module.slyguy" />
+		<import addon="repository.slyguy.globalsearch" />
+	</requires>
+	<extension point="xbmc.python.script" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<description lang="en">This addon can find any item in your video and music library.
+
+A fork of ronie's Global Search with search history and smarter result ordering
+
+Drop-in replacement as uses the same addon id and much higher version number to stop overwrite by original
+</description>
+		<platform>all</platform>
+		<license />
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news />
+	</extension>
+</addon><addon id="script.module.autocompletion" name="AutoCompletion library" version="2.1.2" provider-name="Philipp Temminghoff (phil65), bbaronSVK, finkleandeinhorn, berkhornet">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" version="2.9.1" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Module providing some AutoCompletion functions</summary>
+        <description lang="en_GB">Module providing some AutoCompletion functions</description>
+        <platform>all</platform>
+        <license>GPL-2.0-or-later</license>
+        <source>https://github.com/finkleandeinhorn/script.module.autocompletion</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon><addon id="script.module.kodi65" name="Kodi65 Library" version="1.2.1+matrix.1" provider-name="Philipp Temminghoff (phil65)">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.youtube.dl" version="14.519.1" />
+		<import addon="script.module.pil" version="1.1.7" />
+		<import addon="script.module.autocompletion" version="2.0.0" />
+		<import addon="script.module.requests" version="2.22.0.1" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Helper module</summary>
+		<description lang="en">Helper module for all kind of stuff</description>
+		<platform>all</platform>
+		<license>GPL-2.1</license>
+		<source>https://github.com/phil65/script.module.kodi65</source>
+		<news>Python3 ver Adjust to latest core changes, bugfixes, API extensions by scott967</news>
+	</extension>
+	<assets>
+		<icon>resources/icon.png</icon>
+	</assets>
+</addon><addon id="script.module.kutils" name="Utilities for Kodi" version="1.3.0" provider-name="Philipp Temminghoff (phil65), Frank Feuerbacher (fbacher)">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.youtube.dl" version="21.303.0+matrix.1" />
+        <import addon="script.module.pil" version="5.1.0" />
+        <import addon="script.module.autocompletion" version="2.0.3" />
+        <import addon="script.module.requests" version="2.25.1+matrix.1" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Helper module for Kodi add-ons</summary>
+        <description lang="en_GB">Helper module for commonly needed tasks</description>
+        <platform>all</platform>
+        <license>LGPL-2.1-only</license>
+        <source>https://github.com/fbacher/script.module.kutils</source>
+        <forum>https://forum.kodi.tv/showthread.php?tid=364435</forum>
+        <news>
+            08/18/2021 Forked from phil65 master prior to python3/future
+            changes. Renamed addon, updated dependencies, adjust to
+            latest kodi API changes. Updated version to 1.3.0 due to the
+            significant changes (particularly name changes).
+
+            Changed youtube.py to require YouTube api_key to be passed as
+            argument. Hard-coded key no longer used.
+
+            Resolved Kodi crash issue caused by a known limitation of numpy,
+            which was indirectly loaded by another library, PIL.
+            Forced numpy to NEVER be loaded. The use of numpy provided a
+            small performance improvement.
+        </news>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
+    </extension>
+</addon><addon id="script.module.metadatautils" name="Metadata and Artwork module" version="1.20.1" provider-name="marcelveldt and others">
+    <requires>
+		<import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" version="2.9.1" />
+        <import addon="script.module.beautifulsoup4" version="4.9.3" />
+        <import addon="script.module.thetvdb" version="1.0.34" />
+        <import addon="script.module.musicbrainz" version="0.7.0" />
+        <import addon="script.module.simplecache" version="2.0.2" />
+        <import addon="script.module.arrow" version="0.15.5" />
+        <import addon="script.module.infotagger" version="0.0.4" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Metadata and artwork from common sources like TMDB, IMDB, TADB, OMDB and fanart.tv </summary>
+		<summary lang="es">Metadatos e ilustraciones de fuentes comunes como TMDB, IMDB, TADB, OMDB y fanart.tv </summary>
+        <description lang="en">The metadata and artwork module for Kodi provides rich metadata, including artwork for various metatypes by scraping (and caching) this information from sites like TMDB, musicbrainz and fanart.tv. This product uses the TMDb API but is not endorsed or certified by TMDb.</description>
+		<description lang="es">El módulo de metadatos e ilustraciones para Kodi proporciona metadatos enriquecidos, que incluyen ilustraciones paravarios metatipos al raspar (y almacenar en caché) esta información se extrae de sitios como TMDB, musicbrainz and fanart.tv.[CR][CR]Este producto utiliza la API de TMDb pero no está avalado ni certificado por TMDb</description>
+        <news>
+v1.20.0
+- Nexus version
+
+        </news>
+        <license>Apache 2.0</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=350315</forum>
+        <source>https://github.com/kodi-community-addons/script.module.metadatautils</source>
+        <platform>all</platform>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+		</assets>
+    </extension>
+</addon><addon id="script.module.musicbrainz" name="Musicbrainz NGS webservice python bindings" version="0.7.0" provider-name="marcelveldt and others">
+  <requires>
+	<import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Python bindings for Musicbrainz' NGS webservice</summary>
+    <description>Kodi module library for the Python bindings for Musicbrainz' NGS webservice developed by alastair.</description>
+    <license>GNU GENERAL PUBLIC LICENSE V3</license>
+    <source>https://github.com/kodi-community-addons/script.module.musicbrainz</source>
+    <platform>all</platform>
+  </extension>
+</addon><addon id="script.module.simplecache" name="Simple Cache Module" version="2.0.0" provider-name="sualfred,marcelveldt">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Provides a simple file- and memory based cache for Kodi addons</summary>
+        <description lang="en_GB">Provides a simple file- and memory based cache for Kodi addons</description>
+	    <news>v2.0.0 Py3 only version for Matrix. Py2 compatibility dropped.</news>
+        <platform>all</platform>
+        <license>Apache 2.0</license>
+        <forum />
+        <source>https://github.com/kodi-community-addons/script.module.simplecache</source>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
+    </extension>
+</addon><addon id="script.module.thetvdb" name="The TVDB API v2" version="1.0.35" provider-name="marcelveldt and others">
+    <requires>
+		<import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" version="2.9.1" />
+        <import addon="script.module.simplejson" version="3.17.0" />
+        <import addon="script.module.simplecache" version="2.0.2" />
+        <import addon="script.module.arrow" version="0.15.5" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary>TheTVDB API v2 python module for Kodi</summary>
+        <description>TheTVDB API v3 python module for Kodi</description>
+        <license>Apache 2.0</license>
+        <source>https://github.com/kodi-community-addons/script.module.thetvdb</source>
+        <platform>all</platform>
+    </extension>
+</addon><addon id="script.pinsentry" name="PinSentry" version="100.6.0" provider-name="robwebset">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.simplejson" version="3.3.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login" />
+	<extension point="xbmc.python.script" library="default.py" />
+	<extension point="xbmc.ui.screensaver" library="screensaver.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="bg">Защитава съдържанието на Kodi с PIN код</summary>
+		<summary lang="de">Kodi-Inhalt mit einem PIN-Code sichern</summary>
+		<summary lang="el">Προστασία περιεχομένου Kodi με κωδικό PIN</summary>
+		<summary lang="en">Protect Kodi Content With A Pin Code</summary>
+		<summary lang="fr">Protéger le contenu de Kodi avec un code PIN</summary>
+		<summary lang="fr_CA">Protéger le contenu de Kodi avec un NIP</summary>
+		<summary lang="he">להגן על תוכן Kodi באמצעות קוד PIN</summary>
+		<summary lang="it">Protegge i contenuti di Koki con un Codice Pin</summary>
+		<summary lang="lt">Apsaugoti Kodi turinį PIN kodu</summary>
+		<summary lang="nl">Bescherm Kodi inhoud met een PINcode</summary>
+		<summary lang="pl">Umożliwia zabezpieczenie zawartości Kodi przy pomocy kodu PIN.</summary>
+		<summary lang="pt_BR">Proteger o Conteúdo do Kodi com um Código Pin</summary>
+		<description lang="bg">Принуждава потребителите да въвеждат определен PIN код за да им бъде предоставен достъп до посочено съдържание.</description>
+		<description lang="de">Von Anwendern die Eingabe der korrekten PIN für den angegebenen Inhalt erzwingen.</description>
+		<description lang="en">Force users to enter the correct pin code for given content.</description>
+		<description lang="fr">Force les utilisateurs à saisir le bon code PIN pour un contenu donné.</description>
+		<description lang="fr_CA">Forcer les utilisateurs à saisir le bon NIP pour un contenu donné.</description>
+		<description lang="it">Costringe gli utenti a inserire il codice Pin corretto per accedere ai contenuti</description>
+		<description lang="lt">Reikalauti vartotojų įvesti teisingą PIN kodą pasirinktam turiniui.</description>
+		<description lang="nl">Forceer gebruikers een geldige PIN in te voeren voor gegeven content.</description>
+		<description lang="pl">Wymusza na użytkownikach wprowadzenie poprawnego kodu PIN, przez uzyskaniem dostępu do danej zawartości.</description>
+		<description lang="pt_BR">Força o usuário a entrar o código Pin correto para lhe dar acesso aos conteúdos.</description>
+		<language />
+		<platform>all</platform>
+		<license>See LICENSE.txt</license>
+		<forum>currently none</forum>
+		<news>currently none</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<banner>resources/banner.jpg</banner>
+			<logo>resources/logo.png</logo>
+		</assets>
+	</extension>
+</addon><addon id="script.service.pip" name="Picture-in-Picture Service" version="1.1.1" provider-name="mltobi">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+	</requires>
+	<extension point="xbmc.service" library="pipservice.py">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Picture-in-Picture service</summary>
+		<description lang="en_GB">Automatically run Picture-in-Picture service code when Kodi starts. Use ramdisk for temporary folder!</description>
+		<summary lang="de_DE">Picture-in-Picture Dienst</summary>
+		<description lang="de_DE">Picture-in-Picture Dienst starte automatisch wenn Kodi startet. Verwende Ramdisk für den temporären Ordner!</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+		<source>https://github.com/mltobi/kodi-pip-addon</source>	
+		<news>
+V1.1.1 (2023-07-31) - Released
+- Disabled "Starting..." notification because waiting image can take this task
+
+V1.1.0 (2021-08-30) - Released
+- Added "wait"-image that is displayed while ffmpeg starts to capture the stream
+- Used ramdisk /dev/shm as temporary folder by default #3
+  - If /dev/shm is no accessible or a non-Linux platform is detected user has to create and configure a folder on a ramdisk manually!
+- Added channel number and channel name to a displayed pip image #4
+- Made key shortcuts configurable (toggle, back to channel, channel up and channel down) #5
+
+V1.0.1 (2021-08-22) - Released
+- Added important hint on ramdisk usage for temp folder
+- Fixed usage of height settings and added settings updates using monitor class
+- Fixed several spelling errors in en and de language
+- Added test if ffmpeg executable is available
+- Added try/catch to avoid exception if thumb.png does not exist, belongs to #2
+
+V1.0.0 (2021-08-21) - Released
+- First release of PIP addon
+- Fixed installation of keymap file
+- Fixes to prepare installation using a repository
+- Renumbered already used version numbers to numbers lower than V1.0.0 in order to have V1.0.0 free for the 1st release
+
+V0.5.1 (2021-08-16)
+- Fixed ffmpeg capture settings for raspberry pi 4 and libreelec in order to avoid capturing broken images
+
+V0.5.0 (2021-08-09)
+- Improved image handling by using unique filename in order to force a reload by setImage() function
+- Increased framerate up to 25 fps (but with high CPU load!)
+
+V0.4.0 (2021-08-03)
+- Replaced "curl" by a native python implementation using urllib
+- Added error handling for tvheadend connection
+- Added error handling for m3u file format
+
+V0.3.0 (2021-07-25)
+- Put picture-in-picture handling in separate class
+- Added setting "frames per seconds"
+
+V0.2.0 (2021-07-23)
+- Complete refactor "autostart.h", "pipffmepg.py" and "script.picture.pip" not longer required
+- Only one service addons necessary
+- Keymap uses now notifiyAll instead of a runScript call
+- Prepared to run not only on librelec ... test on ubuntu installation passed
+
+V0.1.0 (2021-07-17)
+- Inital version</news>
+		<assets>
+		    	<icon>resources/icon.png</icon>
+			<screenshot>resources/screenshot-01.png</screenshot>
+			<screenshot>resources/screenshot-02.png</screenshot>
+    		</assets>
+	</extension>
+</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" version="1.0.36" provider-name="marcelveldt and others">
+	<requires>
+        <import addon="script.module.simplecache" version="1.0.0" />
+        <import addon="script.module.metadatautils" version="1.0.31" />
+	</requires>
+
+    <extension point="xbmc.python.library" library="default.py" />
+    <extension point="xbmc.service" library="service.py" start="login" />
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Helper service for Kodi skins providing rotating backgrounds</summary>
+        <description>Helper service for Kodi skins providing rotating backgrounds</description>
+		<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+		<language />
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website />
+		<source>https://github.com/kodi-community-addons/script.skin.helper.backgrounds</source>
+	</extension>
+</addon><addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" version="2.0.3" provider-name="marcelveldt,sualfred and others">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.pil" version="1.1.7" />
+	</requires>
+	<extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Colorpicker for Kodi Skins. Part of Skin Helper Suite</summary>
+		<description lang="en_GB">Colorpicker for Kodi Skins. Part of Skin Helper Suite</description>
+		<platform>all</platform>
+		<license>GPL-2.0</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<source>https://github.com/kodi-community-addons/script.skin.helper.colorpicker</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon><addon id="script.skin.helper.service" name="Skin Helper Service" version="1.20.2" provider-name="marcelveldt and others">
+    <requires>
+		<import addon="xbmc.python" version="3.0.0" />
+        <import addon="xbmc.addon" version="12.0.0" />
+        <import addon="script.module.simplejson" version="3.3.0" />
+        <import addon="script.module.simplecache" version="2.0.2" />
+        <import addon="script.module.metadatautils" version="1.20.1" />
+    </requires>
+
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources\lib\context_animatedart.py">
+              <label>32024</label>
+              <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.EnableAnimatedPosters)) + Container.Content(movies)</visible>
+            </item>
+            <item library="resources\lib\context_pvr.py">
+                <label>32023</label>
+                <description>PVR artwork Configuration</description>
+                <visible>
+                    !String.IsEmpty(Window(Home).Property(SkinHelper.EnablePvrThumbs)) + 
+                    [Window.IsActive(MyPVRChannels.xml) | String.Contains(ListItem.FileNameAndPath,action=playchannel) | 
+                    Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRRecordings.xml) | 
+                    Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml)]
+                </visible>
+            </item>
+            <item library="resources\lib\context_music.py">
+                <label>32023</label>
+                <description>Music artwork Configuration</description>
+                <visible>
+                    !String.IsEmpty(Window(Home).Property(SkinHelper.EnableMusicArt)) + 
+                    [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]
+                </visible>
+            </item>
+        </menu>
+    </extension>
+
+    <extension point="xbmc.python.library" library="default.py" />
+    <extension point="xbmc.python.pluginsource" library="plugin.py" />
+    <extension library="service.py" point="xbmc.service" start="login" />
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Helper service for Kodi skins</summary>
+        <description>Helper service for Kodi skins</description>
+        <news>
+v1.20.0
+- Nexus version
+        </news>
+		<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <language />
+        <platform>all</platform>
+        <license>GPL v2.0</license>
+        <forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+        <website />
+        <source>https://github.com/kodi-community-addons/script.skin.helper.service</source>
+    </extension>
+</addon><addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" version="1.0.28+matrix.1" provider-name="marcelveldt, wuff">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="xbmc.addon" version="12.0.0" />
+    </requires>
+    <extension point="xbmc.python.script" library="default.py" />
+    <extension library="service.py" point="xbmc.service" start="login" />
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Helper service for Kodi skins</summary>
+        <description>Helper service for Kodi skins</description>
+        <news>
+v1.0.28 (2020-10-10)
+- Change is not to != in colorthemes (Wanilton)
+
+v1.0.27 (2020-10-10)
+- Limit Android zipfile patch to Kodi 18 only
+
+v1.0.26 (2020-10-05)
+- Add Android zipfile patch (https://github.com/robweber/xbmcbackup/issues/158)
+
+v1.0.25 (2020-10-04)
+- remove duplicate slash in zip path preventing zip to be copied in backup
+- sort backups in descending order and only show backupdate
+
+v1.0.24 (2020-09-15)
+- replace ListItem iconImage with setArt
+
+v1.0.23 (2020-09-12)
+- Fix icon
+
+v1.0.22 (2020-09-07)
+- Replace xbmc.translatePath wiht xbmcvfs.translatePath for Kodi 19 compat
+
+v1.0.21 (2020-05-16)
+- Remove python requirement for Kodi 18/19 compat
+
+v1.0.20 (2020-01-02)
+- Kodi 19/Python 3 compatibility
+- default to configured backup folder in restore dialog
+- skip restore if no zip file selected
+
+v1.0.19 (2018-03-30)
+- last version from marcelveldt
+        </news>
+        <language />
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <platform>all</platform>
+        <license>GPL v2.0</license>
+        <forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+        <website />
+        <source>https://github.com/AnonTester/script.skin.helper.skinbackup</source>
+    </extension>
+</addon><addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" version="1.20.1" provider-name="marcelveldt and others">
+    <requires>
+		<import addon="xbmc.python" version="3.0.0" />
+        <import addon="xbmc.addon" version="12.0.0" />
+        <import addon="script.module.metadatautils" version="1.20.1" />
+        <import addon="script.module.simplecache" version="2.0.2" />
+    </requires>
+
+    <extension point="xbmc.python.pluginsource" library="plugin.py">
+        <provides>video audio</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" start="login" />
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Ready to use widgets for all kind of media types</summary>
+        <description />
+	<news>
+	</news>
+		<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <language />
+        <platform>all</platform>
+        <license>GPL v2.0</license>
+        <forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+        <website />
+        <source>https://github.com/kodi-community-addons/script.skin.helper.widgets</source>
+    </extension>
+</addon><addon id="script.skin.info.service" name="Skin Info Service" version="1.2.0" provider-name="phil65, SiLVO">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+	</requires>
+	<extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Script used by skins to show extended media info.</summary>
+		<description lang="en_GB">This script fetches extended information for several media types (artists, albums, movie sets etc.). Needs skin support.</description>
+		<platform>all</platform>
+		<license>GPL-2.0-only</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=210069</forum>
+		<source>https://github.com/mikesilvo164/script.skin.info.service</source>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+		<news>Kodi Matrix/Nexus changes</news>
+	</extension>
+</addon><addon id="script.skinshortcuts" name="Skin Shortcuts" version="2.0.4" provider-name="BigNoid, marcelveldt, SiLVO, anxdpanic">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.unidecode" version="1.1.1+matrix.2" />
+        <import addon="script.module.simpleeval" version="0.9.10" />
+    </requires>
+    <extension point="xbmc.python.library" library="resources/lib/entry_point.py" />
+    <extension point="xbmc.addon.metadata">
+        <news>
+[fix] translations in PVR |contrib: Dis90|
+[fix] titles missing in some dialogs
+[fix] handle missing profiles.xml gracefully (fixes Apple TV)
+[lang] update translations from Weblate
+        </news>
+        <platform>all</platform>
+        <license>GPL-2.0-only</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=178294</forum>
+        <source>https://github.com/mikesilvo164/script.skinshortcuts</source>
+        <assets>
+            <icon>resources/media/icon.png</icon>
+            <fanart>resources/media/fanart.jpg</fanart>
+        </assets>
+        <description lang="ar_SA">إضافة مخصصه للمظهر لتوفير إدارة بسيطة للودجيت "الأقسام" و الاختصارات على الشاشة (تتطلب دعم المظهر لها)</description>
+        <description lang="cs_CZ">Doplněk pro vzhledy poskytující jednoduchý management a seznamy uživatelských zkratek (vyžaduje podporu vzhledu)</description>
+        <description lang="da_DK">Add-on til skins der giver enkel styring og lister over brugergenveje (kræver skin-understøttelse)</description>
+        <description lang="de_DE">Addon für Skins zum einfachen Bearbeiten und Auflisten von benutzerdefinierten Verknüpfungen (erfordert Skinunterstützung)</description>
+        <description lang="el_GR">Πρόσθετο για κελύφη, το οποίο παρέχει έναν απλό τρόπο διαχείρισης και κατηγοριοποίησης των συντομεύσεων του χρήστη (πρέπει να υποστηρίζεται από το κέλυφος)</description>
+        <description lang="en_GB">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+        <description lang="en_NZ">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+        <description lang="en_US">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+        <description lang="es_ES">Complemento para las pieles para proporcionar una gestión sencilla y lista de atajos de usuario (requiere que la piel lo soporte)</description>
+        <description lang="fi_FI">Lisäosa, joka mahdollistaa ulkoasujen valikkokohteiden ja omien pikavalintojen lisäyksen ja niiden muokkauksen (vaatii tuen ulkoasulta)</description>
+        <description lang="fr_CA">Addiciel pour habillages qui fournit une gestion simple et un listage des raccourcis utilisateurs (exige la prise en charge de l'habillage)</description>
+        <description lang="fr_FR">Module complémentaire pour les skins pour fournir une gestion et une liste simples de raccourcis utilisateur (nécessite la prise en charge des skins)</description>
+        <description lang="gl_ES">Complemento que fornece aos temas dunha xestión sinxela dos atallos dos usuarios (require soporte do tema)</description>
+        <description lang="hr_HR">Dodatak za presvlake koji omogućuje jednostavno upravljanje i prikaz prečaca korisnika (zahtijeva podršku presvlake)</description>
+        <description lang="hu_HU">Felszín kiegészítő amely könnyen kezelhetővé és listázhatóvá teszi a felhasználói parancsikonokat (Felszín támogatás szükséges)</description>
+        <description lang="is_IS">Viðbót fyrir viðmót til að halda utan um flýtivísa og fá yfirlit yfir þá (þarfnast stuðnings frá viðmóti)</description>
+        <description lang="it_IT">Add-on per gli skin per consentire un facile gestione ed elenco delle scorciatoie utente (richiede che lo skin lo supporti)</description>
+        <description lang="ko_KR">사용자 단축키의 간단한 관리 및 목록을 제공하는 스킨용 애드온(스킨 지원 필요)</description>
+        <description lang="lt_LT">Priedas teminėms išvaizdoms, kad jos turėtų galimybę paprastai tvarkyti ir atvaizduoti vartotojo sukurtas nuorodas (reikalingas teminės išvaizdos palaikymas)</description>
+        <description lang="nb_NO">Tillegg for enkel administrering og opplisting av bruker-snarveier i tema (krever støtte i tema)</description>
+        <description lang="nl_NL">Add-on voor skins om te voorzien in het eenvoudig beheren en sorteren van gebruikers snelkoppelingen (vereist skin ondersteuning)</description>
+        <description lang="pl_PL">Wtyczka dla skór, która zapewnia proste zarządzanie i tworzenie list skrótów użytkownika (wymaga wsparcia skóry)</description>
+        <description lang="pt_BR">Add-on para que as skins possam prover gerenciamento de lista de atalhos para o menu principal (requer suporte da skin)</description>
+        <description lang="pt_PT">Um add-on que permite que os temas tenham recursos simples para gerir e listar atalhos de utilizadores (é necessário suporte do tema)</description>
+        <description lang="ru_RU">Дополнение для обложек, предоставляющее простой способ управления пользовательскими ярлыками (требуется поддержка обложкой)</description>
+        <description lang="sk_SK">Doplnok poskytujúci jednoduchý manažment zoznamu užívateľských odkazov (vyžaduje podporu v doplnku pre vzhľad)</description>
+        <description lang="sv_SE">Skinntillägg som tillhandahåller enkel hantering och översikt av användargenvägar (om skinnet stöder det)</description>
+        <description lang="zh_CN">皮肤加载项，提供简单的用户快捷方式管理和列表（需要皮肤支持）</description>
+        <description lang="zh_TW">插件为皮肤提供了简单的管理和用户连接方式列表 (需要皮肤支持)</description>
+    </extension>
+</addon><addon id="script.wikipedia" version="0.0.6" name="Wikipedia" provider-name="jurialmunkey">
+<requires>
+  <import addon="xbmc.python" version="3.0.0" />
+  <import addon="script.module.beautifulsoup4" version="4.9.3" />
+  <import addon="script.module.jurialmunkey" version="0.1.1" />
+</requires>
+<extension point="xbmc.python.script" library="resources/script.py" />
+<extension point="xbmc.addon.metadata">
+  <summary lang="en_GB">Access Wikipedia via Kodi</summary>
+  <description lang="en_GB">Access Wikipedia via Kodi</description>
+  <license>GPL-3.0-or-later</license>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+</extension>
+</addon><addon id="service.tvtunes" name="TVTunes" version="2.0.6" provider-name="latts">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.simplejson" version="3.17.0+matrix.2" />
+		<import addon="script.module.beautifulsoup4" version="4.8.2+matrix.1" />
+		<import addon="script.module.requests" version="2.22.0+matrix.1" />
+	</requires>
+	<extension point="xbmc.service" library="service.py" start="login" />
+	<extension point="xbmc.python.module" library="resources/lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="bg">Сваля и възпроизвежда мелодиите от вашите филми и сериали</summary>
+		<summary lang="ca">Obté i reproduieix els temes de les seves pel·lícules i sèries de televisió</summary>
+		<summary lang="da">Hent og afspil dine Film og TV-show Temaer.</summary>
+		<summary lang="de">Hole und spiele die Titelmelodie beim Browsen der TV-Shows</summary>
+		<summary lang="el">Λήψη και αναπαραγωγή μουσικών θεμάτων (TvTunes) των τηλεοπτικών σας σειρών</summary>
+		<summary lang="en">Play your soundtrack or video themes whilst browsing your library</summary>
+		<summary lang="es">Descarga y reproduce las bandas sonoras de las series de tu biblioteca</summary>
+		<summary lang="fr">Récupérez et écoutez les génériques des séries TV</summary>
+		<summary lang="fr_CA">Récupérer et lire vos thèmes de bandes sonores tout en parcourant votre vidéothèque</summary>
+		<summary lang="gl">Obter e reproducir a música das súas Series de TV</summary>
+		<summary lang="he">הורדה וניגון נעימות של סרטים וסדרות בעת עיון בספריה</summary>
+		<summary lang="hr">Nabavite i reproducirajte temu vašeg omiljenog filma i TV serije prilikom pregledavanja svoje videoteke</summary>
+		<summary lang="it">Ottieni ed esegui i temi musicali delle tue Serie tV</summary>
+		<summary lang="ko">영화와 TV 쇼의 테마 음악을 가져와서 재생합니다</summary>
+		<summary lang="lt">gauti ir atkurti jūsų filmų ir tv laidų temas</summary>
+		<summary lang="nl">Verkrijg en speel je nummer of video thema`s tijdens zoeken in jouw bibliotheek</summary>
+		<summary lang="no">Hent og spill av kjenningsmelodier mens du blar gjennom biblioteket</summary>
+		<summary lang="pl">Pobieraj i odtwarzaj ścieżki dźwiękowe lub motywy wideo podczas przeglądania biblioteki</summary>
+		<summary lang="pt">Obtenha e reproduza as músicas dos seus filmes e séries de TV.</summary>
+		<summary lang="pt_BR">Obtenha e reproduza o tema musical das suas séries de TV</summary>
+		<summary lang="sv">Hämtar och spelar dina TV-serier-teman</summary>
+		<description lang="bg">Скриптът ще Ви помогне да се сдобиете с мелодии от филми и сериали. Когато преглеждате инф. за даден филм или епизодите от даден сериал, съответната мелодия ще се възпроизвежда автоматично. За целта е необходимо да ползвате съвместим облик.</description>
+		<description lang="ca">Aquest script t'ajudarà a cercar la banda sonora de les teves pel·lícules i sèries de televisió en www.televisiontunes.com Les guardarà en un fitxer theme[0-9].mp3 a la carpeta dels vídeos i seran reproduïdes mentre navegues per la teva col·lecció de vídeos, quant entris a la carpeta d'una sèrie o a la pantalla d'informació de vídeo. (Necessites una pell compatible per a aquesta funcionalitat)</description>
+		<description lang="da">Scriptet vil hjælpe dig med at hente temaer til dit film og serie bibliotek fra www.televisiontunes.com. Den gemmer dem som theme[0-9].mp3 i hver af dine videomapper, så de vil blive spillet mens du gennemser dit videobibliotek når du går ind i seriemappen eller Video Information (Dit skin skal være kompatibel med denne feature)</description>
+		<description lang="de">Dieses Skript unterstützt das Laden, Organisieren und Abspielen von Titelmelodien deiner Filme und TV-Serien. Diese werden dann abgespielt, wenn du in deiner Datenbank oder den Video-Ordnern stöberst (benötigt einen kompatiblen Skin)</description>
+		<description lang="el">Αυτό το script θα σας βοηθήσει να κατεβάσετε μουσικά θέματα των τηλεοπτικών σας σειρών από το www.televisiontunes.com, θα τα αποθηκεύει σε αρχεία μορφής theme.mp3 στο φάκελο της εκάστοτε σειράς, και θα τα αναπαράγει κατά την περιήγησή σας στη συλλογή τηλ. σειρών σας (απαιτείται να υποστηρίζεται από το κέλυφός σας)</description>
+		<description lang="en">TvTunes will play themes whilst browsing your Kodi library.</description>
+		<description lang="es">Este script te ayudará a buscar las bandas sonoras de tus películas y series de www.televisiontunes.com y guardará un fichero theme.mp3 en el directorio de tu serie y será reproducido mientras navegas dentro de la carpeta de la serie. (Necesitas una skin compatible para esta funcionalidad)</description>
+		<description lang="fr">Ce script aidera à télécharger les génériques de série depuis www.televisiontunes.com. Il les enregistrera dans un fichier theme.mp3 dans les dossiers des séries, et ils seront ensuite joués à l'entrée dans la série correspondante (cette fonctionnalité requiert un thème compatible)</description>
+		<description lang="fr_CA">TVTunes est équipé de fonctions puissantes qui permettent la récupération, l'organisation et la lecture de thèmes tout en parcourant votre vidéothèque Kodi.</description>
+		<description lang="gl">Este script axudaralle a obter dende www.televisiontunes.com o tema da súa biblioteca de series, gardándoo no ficheiro theme.mp3 por cada cartafol da biblioteca entón reproduciranse ao entrar nos diferentes cartafoles ao navegar pola biblioteca (precisa de que o seu tema sexa compatíbel con esta carácteristica)</description>
+		<description lang="he">סקריפט זה יעזור לך להשיג שירי נושא לספריות הסרטים והסדרות שלך מ-www.televisiontunes.com, ישמור אותם בקובץ בשם theme[0-9].mp3 בכל אחת מתיקיות הוידאו שלך והם ינוגנו בעת עיון בספריית הוידאו כאשר תיכנס לספריית סדרה או במסך מידע וידאו (נדרשת תאימות המעטפת עבור יכולת זו)</description>
+		<description lang="hr">TvTunes je opremljen s moćnim značajkama koje omogućavaju nabavljanje, organizaciju i reproduciranje glazbenih tema dok vi pregledavate vašu Kodi videoteku, kada se koristi zajedno s kompatibilnom presvlakom.</description>
+		<description lang="it">Questo script ti aiuterà ad ottenere il tema delle serie tv presenti nella tua libreria da www.televisiontunes.com, li salverà nel file theme.mp3 in ogni cartella delle tue serie così quando sfoglierai la serie tv il tema sarà eseguito (il tuo skin deve essere compatibile)</description>
+		<description lang="ko">라이브러리의 영화와 TV 쇼 테마 음악을 www.televisiontunes.com 에서 가져와서 theme[0-9].mp3 형식으로 비디오 폴더에 저장합니다. TV 쇼 폴더나 비디오 정보 화면으로 들어가면 비디오 라이브러리를 탐색하는 동안 주제음악이 재생됩니다. (이 기능 사용하려면 스킨에서 지원하여야 합니다.)</description>
+		<description lang="lt">Šis skriptas jums padės temas jūsų filmų ir tv laidų temas iš www.televisiontunes.com. Jos bus išsaugotos theme[0-9].mp3 faile, kiekviename jūsų vaizdo aplanke ir bus atkurtos, naršant vaizdo bibliotekoje, pasirinkus TV laidos aplanką arba vaizdo informacijos langą (teminė išvaizda turi būti suderinama su šia funkcija)</description>
+		<description lang="nl">Dit script zoekt thema`s van TV series in jouw TV seriebibliotheek op www.televisiontunes.com en slaat ze op in thema[0-9].mp3 bestand in elke TV serie map. Ze worden afgespeeld wanneer je de  TV serie in bibliotheek modus bekijkt of Video-informatiescherm (Het gebruikte ontwerp moet wel compatibel zijn met dit script)</description>
+		<description lang="no">TvTunes er velutrustet med kraftige funksjoner som gjør det mulig hente, organisere og spille av kjenningsmelodier mens du blar igjennom Kodi biblioteket.</description>
+		<description lang="pl">Dodatek TvTunes wyposażono w potężny zestaw funkcji umożliwiający pobieranie, organizowanie i odtwarzanie motywów muzycznych podczas przeglądania biblioteki Kodi.</description>
+		<description lang="pt">Com este addon, poderá obter as músicas dos filmes e séries TV na sua biblioteca a partir de televisiontunes.com. Serão guardadas em ficheiros theme[0-9].mp3 dentro das pastas de vídeo e serão reproduzidas durante a navegação na biblioteca de vídeo, quando entrar dentro da pasta de Séries TV ou no ecrã de Informação de Vídeo (é necessário um tema compatível).</description>
+		<description lang="pt_BR">Este script ajudará você a obter o tema da sua coleção de séries de TV de www.televisiontunes.com, que serão salvos em um arquivo theme.mp3 em cada uma das pastas de suas séries e serão reproduzidos sempre que você acessar uma série na sua coleção (a skin precisa ser compatível com este recurso)</description>
+		<description lang="sv">Detta skript hjälper dig att hitta teman till ditt tv-seriebibliotek från www.televisiontunes.com som sparas i theme.mp3 filer i varje tv-seriemapp som sedan spelas när du öppnar tv-seriemappen (ditt skal måste vara kompatibelt för detta)</description>
+		<language />
+		<platform>all</platform>
+		<news>[B][COLOR=FF2CD13B]v2.0.6[/COLOR][/B] - Release date February 24, 2023[CR]
+[B][COLOR=FFFFA500]MAINTENANCE[/COLOR][/B]
+• I added the ability to play themes while viewing Sets. There is a new setting named "PLAY THEMES WHEN BROWSING SETS LIST" that must be enabled. Thanks to AB30AB for the request!
+		</news>
+		<license>See LICENSE.txt</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=347428</forum>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<banner>resources/banner.jpg</banner>
+			<logo>resources/logo.png</logo>
+		</assets>
+	</extension>
+</addon><addon id="skin.titan.vanilla" version="21.24.05.04" name="Titan Vanilla" provider-name="malvinas2, marcelveldt, AchillesPunks, cartman.dos, fuchs2468, mardukL, mgonzales">
+	<requires>
+		<import version="5.17.0" addon="xbmc.gui" />	
+		<import addon="script.skinshortcuts" version="2.0.3" />
+		<import addon="script.skin.helper.service" version="1.20.1" />
+        <import addon="script.skin.helper.widgets" version="1.20.1" />
+        <import addon="script.skin.helper.backgrounds" version="1.0.36" />
+		<import addon="resource.images.studios.coloured" version="0.0.23" />
+		<import addon="resource.images.studios.white" version="0.0.15" />
+		<import addon="resource.images.languageflags.colour" version="0.0.4" />
+        <import addon="resource.uisounds.titan.modern" version="1.0.0" />
+        <import addon="resource.images.skinbackgrounds.titanium" version="1.0.0" />
+        <import addon="resource.images.skinicons.wide" version="1.0.3" />
+        <import addon="resource.images.backgroundoverlays.basic" version="1.0.0" />
+    </requires>
+	<extension point="xbmc.gui.skin" debugging="false">		
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="bg_BG">Titan Vanilla за Kodi Omega, базиран на Titan от Marcel van der Veldt. </summary>
+		<summary lang="de_DE">Titan Vanilla für Kodi Omega, basierend auf Titan von Marcel van der Veldt. </summary>
+		<summary lang="en_GB">Titan Vanilla for Kodi Omega, based on Titan by Marcel van der Veldt. </summary>
+		<summary lang="en_US">Titan Vanilla for Kodi Omega, based on Titan by Marcel van der Veldt. </summary>
+		<summary lang="en_AU">Titan Vanilla for Kodi Omega, based on Titan by Marcel van der Veldt. </summary>
+		<summary lang="en_NZ">Titan Vanilla for Kodi Omega, based on Titan by Marcel van der Veldt. </summary>
+		<summary lang="nl_NL">Titan Vanilla voor Kodi Omega, gebaseerd op Titan van Marcel van der Veldt. </summary>
+		<summary lang="es_ES">Titan Vanilla para Kodi Omega, basado en Titan de Marcel van der Veldt. </summary>
+		<summary lang="fi_FI">Titan Vanilla Kodi Omegalle, perustuu Marcel van der Veldtin Titaniin. </summary>
+		<summary lang="fr_FR">Titan Vanilla pour Kodi Omega, basé sur Titan de Marcel van der Veldt. </summary>
+		<summary lang="he_IL">Titan Vanilla עבור Kodi Omega, מבוסס על Titan מאת מרסל ואן דר ולט. </summary>
+		<summary lang="hr_HR">Titan Vanilla za Kodi Omega, temeljen na Titanu Marcela van der Veldta. </summary>
+		<summary lang="it_IT">Titan Vanilla per Kodi Omega, basato su Titan di Marcel van der Veldt. </summary>
+		<summary lang="lt_LT">Titan Vanilla, skirta Kodi Omega, sukurta pagal Marcelio van der Veldto Titaną. </summary>
+		<summary lang="pl_PL">Titan Vanilla dla Kodi Omega, oparty na Titanie autorstwa Marcela van der Veldta. </summary>
+		<summary lang="pt_BR">Titan Vanilla para Kodi Omega, baseado em Titan de Marcel van der Veldt. </summary>
+		<summary lang="ru_RU">Titan Vanilla для Kodi Omega, основанный на Titan от Марселя ван дер Вельдта. </summary>
+		<summary lang="sr_RS">Титан Ванилла за Коди Омега, заснован на Титану Марсела ван дер Велта. </summary>
+		<summary lang="sr_RS@latin">Titan Vanilla za Kodi Omega, zasnovan na Titanu Marsela van der Velta. </summary>
+		<summary lang="tr_TR">Kodi Omega için Titan Vanilya, Marcel van der Veldt'in Titan'ına dayanmaktadır. </summary>
+		
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=344342</forum>
+		<website>https://forum.kodi.tv/showthread.php?tid=344342</website>
+		<email>malvinas2@gmx.de</email>
+		<source>https://github.com/malvinas2/repository.vanilla21</source>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshot000.jpg</screenshot>
+			<screenshot>resources/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshot003.jpg</screenshot>
+			<screenshot>resources/screenshot004.jpg</screenshot>
+			<screenshot>resources/screenshot005.jpg</screenshot>
+			<screenshot>resources/screenshot006.jpg</screenshot>
+			<screenshot>resources/screenshot007.jpg</screenshot>
+			<screenshot>resources/screenshot008.jpg</screenshot>
+			<screenshot>resources/screenshot009.jpg</screenshot>
+		</assets>
+		<news>
+            Follow the forum thread about the latest news for the skin.
+        </news>
+	</extension>
+</addon></addons>

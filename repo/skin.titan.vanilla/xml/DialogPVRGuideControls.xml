@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window>
+    <defaultcontrol always="true">602</defaultcontrol>
+    <controls>
+        <control type="group">
+
+     		<animation type="WindowOpen" reversible="false">
+				<effect type="slide" start="0,-400" end="0,0" tween="cubic" easing="out" time="500" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="slide" start="0,0" end="0,-400" tween="cubic" easing="out" time="500" />
+			</animation>
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100%</width>
+				<height>130</height>
+				<texture border="5">diffuse/panel.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+			</control>
+
+			<control type="group">
+				<left>50</left>
+				<width>350</width>
+				<control type="label">
+					<top>12</top>
+					<height>20</height>
+					<left>50</left>
+					<!-- <width>300</width> -->
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Light28</font>
+					<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+					<label>[B]$LOCALIZE[19141][/B]</label>
+				</control>
+					<!-- OSD buttons -->            
+				<include content="PVRGuideControl_Channelgroup" condition="Skin.String(osd_buttonstyle,rounded)">
+					<param name="size" value="75" />
+					<param name="gap" value="-5" />
+					<param name="iconspath" value="osd/rounded/" />
+					<param name="posleft" value="20" />
+					<param name="postop" value="40" />
+					<!-- postop 50 -->
+				</include>
+				<include content="PVRGuideControl_Channelgroup" condition="Skin.String(osd_buttonstyle,rounded_large)">
+					<param name="size" value="100" />
+					<param name="gap" value="-10" />
+					<param name="iconspath" value="osd/rounded/" />
+					<param name="posleft" value="0" />
+					<param name="postop" value="30" />
+				</include>
+				<include content="PVRGuideControl_Channelgroup" condition="Skin.String(osd_buttonstyle,slim)">
+					<param name="size" value="90" />
+					<param name="gap" value="-15" />
+					<param name="iconspath" value="osd/slim/" />
+					<param name="posleft" value="0" />
+					<param name="postop" value="40" />
+				</include>
+				<include content="PVRGuideControl_Channelgroup" condition="Skin.String(osd_buttonstyle,slim_large)">
+					<param name="size" value="134" />
+					<param name="gap" value="-35" />
+					<param name="iconspath" value="osd/slim/" />
+					<param name="posleft" value="0" />
+					<param name="postop" value="15" />
+				</include>				
+			</control>
+			
+			<control type="textbox">
+				<right>290</right>
+				<top>35</top>
+				<align>right</align>
+				<aligny>center</aligny>
+				<width>350</width>
+				<height>76</height>
+				<font>Bold30</font>
+				<textcolor>$INFO[Skin.String(OSDSecondaryTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(OSDSecondaryTextShadowColor)]</shadowcolor>
+				<label>$VAR[PVRGuideControlsHelpTextVar]</label>
+			</control>
+
+			<control type="group">
+				<!-- <right>370</right> -->
+				<left>400</left>
+				<width>350</width>
+				<control type="label">
+					<top>12</top>
+					<height>20</height>
+					<left>50</left>
+					<!-- <width>300</width> -->
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Light28</font>
+					<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+					<label>[B]$LOCALIZE[19148][/B]</label>
+				</control>	
+				<!-- OSD buttons -->            
+				<include content="PVRGuideControl_Channels" condition="Skin.String(osd_buttonstyle,rounded)">
+					<param name="size" value="75" />
+					<param name="gap" value="-5" />
+					<param name="iconspath" value="osd/rounded/" />
+					<param name="posleft" value="30" />
+					<param name="postop" value="40" />
+				</include>
+				<include content="PVRGuideControl_Channels" condition="Skin.String(osd_buttonstyle,rounded_large)">
+					<param name="size" value="100" />
+					<param name="gap" value="-10" />
+					<param name="iconspath" value="osd/rounded/" />
+					<param name="posleft" value="0" />
+					<param name="postop" value="30" />
+				</include>
+				<include content="PVRGuideControl_Channels" condition="Skin.String(osd_buttonstyle,slim)">
+					<param name="size" value="90" />
+					<param name="gap" value="-15" />
+					<param name="iconspath" value="osd/slim/" />
+					<param name="posleft" value="0" />
+					<param name="postop" value="40" />
+				</include>
+				<include content="PVRGuideControl_Channels" condition="Skin.String(osd_buttonstyle,slim_large)">
+					<param name="size" value="134" />
+					<param name="gap" value="-35" />
+					<param name="iconspath" value="osd/slim/" />
+					<param name="posleft" value="0" />
+					<param name="postop" value="15" />
+				</include>
+			</control>	
+
+			<control type="group">
+				<!-- <right>20</right> -->
+				<left>750</left>
+				<width>660</width>			
+				<control type="label">
+					<top>12</top>
+					<height>20</height>
+					<left>50</left>
+					<!-- <width>600</width> -->
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Light28</font>
+					<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(OSDPrimaryTextShadowColor)]</shadowcolor>
+					<label>[B]$LOCALIZE[19325][/B]</label>
+				</control>
+											<!-- OSD buttons -->            
+				<include content="PVRGuideControl_Program" condition="Skin.String(osd_buttonstyle,rounded)">
+					<param name="size" value="75" />
+					<param name="gap" value="-5" />
+					<param name="iconspath" value="osd/rounded/" />
+					<param name="posleft" value="0" />
+					<param name="postop" value="40" />
+				</include>
+				<include content="PVRGuideControl_Program" condition="Skin.String(osd_buttonstyle,rounded_large)">
+					<param name="size" value="100" />
+					<param name="gap" value="-10" />
+					<param name="iconspath" value="osd/rounded/" />
+					<param name="posleft" value="0" />
+					<param name="postop" value="30" />
+				</include>
+				<include content="PVRGuideControl_Program" condition="Skin.String(osd_buttonstyle,slim)">
+					<param name="size" value="90" />
+					<param name="gap" value="-15" />
+					<param name="iconspath" value="osd/slim/" />
+					<param name="posleft" value="0" />
+					<param name="postop" value="40" />
+				</include>
+				<include content="PVRGuideControl_Program" condition="Skin.String(osd_buttonstyle,slim_large)">
+					<param name="size" value="134" />
+					<param name="gap" value="-35" />
+					<param name="iconspath" value="osd/slim/" />
+					<param name="posleft" value="0" />
+					<param name="postop" value="15" />
+				</include>	
+			</control>
+
+			<control type="button" id="111">
+				<!--Close-->
+				<right>40</right>
+				<top>30</top>
+				<width>240</width>
+				<height>80</height>
+				<align>center</align>
+				<onleft>605</onleft>
+				<onright>70045</onright>
+				<label>$LOCALIZE[31308]</label>
+				<include>DialogButtonOther</include>
+				<onclick>Close</onclick>
+			</control>
+        </control>
+	</controls>
+</window>

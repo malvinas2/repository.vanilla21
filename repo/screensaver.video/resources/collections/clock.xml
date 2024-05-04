@@ -1,0 +1,19 @@
+<videoscreensaver>
+	<collection>Clock</collection>
+	<encoded>true</encoded>
+	<builtin>true</builtin>
+	<video>
+		<name>Clock 1 - [1.5GB] - 720p</name>
+		<filename>Clock001-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Clock001.JPG</image>
+		<duration>43200</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy9kNWUxZTJwY3IyY25wMDIvQ2xvY2swMDEtNzIwcC5tcDQ/ZGw9MQ==</primary>
+	</video>
+	<video>
+		<name>Clock 2 - [1.3GB] - 360p</name>
+		<filename>Clock002-360p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Clock002.JPG</image>
+		<duration>86399</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy9vdXRjaTc3NDVpdjl5amovQ2xvY2swMDItMzYwcC5tcDQ/ZGw9MQ==</primary>
+	</video>
+</videoscreensaver>

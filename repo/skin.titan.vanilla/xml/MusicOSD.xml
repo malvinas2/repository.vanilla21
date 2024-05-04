@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window>
+    <defaultcontrol always="true">200</defaultcontrol>
+    <onload>SetFocus($INFO[Skin.String(defaultosdbutton_music)])</onload>
+    <controls>
+					
+		<control type="button">
+			<description>background close area</description>
+			<left>0</left>
+			<top>300</top>
+			<!-- <bottom>300</bottom> -->
+			<width>100%</width>
+			<height>600</height>
+			<texturefocus />
+			<texturenofocus />
+			<!-- <bottom>280</bottom> -->
+			<!-- only for 'debugging-purposes' --> 
+			<!-- <texture border="5">$VAR[osdpanelimage]</texture> -->
+			<!-- <colordiffuse>red</colordiffuse> -->
+			<!-- end of only for 'debugging-purposes' --> 
+			<onclick>Action(close)</onclick>
+		</control>
+		
+	
+	
+	
+		<!-- hidden button to exit dialog in touchscreen mode -->
+ 		<!-- <control type="button"> -->
+			<!-- <posx>0</posx> -->
+			<!-- <posy>0</posky> -->
+			<!-- <width>100%</width> -->
+			<!-- <height>100%</height> -->
+			<!-- <align>center</align> -->
+			<!-- <aligny>center</aligny> -->
+			<!-- <font>Light28</font> -->
+			<!-- <label></label> -->
+			<!-- <textcolor></textcolor> -->
+			<!-- <focusedcolor></focusedcolor> -->
+			<!-- <disabledcolor></disabledcolor> -->
+			<!-- <texturefocus>colors/color_transparent.png</texturefocus> -->
+			<!-- <texturenofocus></texturenofocus> -->
+			<!-- <onclick>back</onclick> -->
+			<!-- <visible>Skin.HasSetting(EnableTouchSupport)</visible> -->
+		<!-- </control> -->
+        <control type="group">
+			<include>OSDButtonsModern</include>
+            <animation effect="slide" end="0,-50" time="0" condition="Skin.HasSetting(enableArtistBio)">Conditional</animation>
+            <animation effect="slide" start="0,400" end="0,0" tween="cubic" easing="out" delay="300" time="250" reversible="false" condition="!Player.ShowInfo">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,400" tween="cubic" easing="out" delay="300" time="250" reversible="false" condition="!Player.ShowInfo">WindowClose</animation>
+            <animation effect="fade" start="0" end="100" delay="0" time="300" reversible="false">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="0" time="300" reversible="false">WindowClose</animation>
+		</control>
+	</controls>
+</window>

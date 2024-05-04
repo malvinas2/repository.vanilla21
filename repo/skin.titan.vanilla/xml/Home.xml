@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window>
+    <defaultcontrol always="true">1000</defaultcontrol>
+    <include>DefaultSkinSettings</include>
+    <include condition="Skin.HasSetting(KeepWidgetFocus)">WidgetPlaybackFocus</include>
+    <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=300&amp;group=mainmenu|powermenu)</onload>
+	<include condition="Skin.String(widgets_rotate) + !Skin.String(widgets_rotate,disabled)">WidgetsAutoRotateUnload</include>
+    <onunload condition="!Skin.HasSetting(SectionBackgroundHomeOnly)">SetProperty(SectionBackground,$INFO[Control.GetLabel(99004)])</onunload>
+    <!-- auto close homemenu and focus mainmenu when home is unloaded -->
+    <onunload>ClearProperty(submenu,home)</onunload>
+    <onunload>ClearProperty(ShowWidget,home)</onunload>
+    <onunload>ClearProperty(ShowViewSubMenu,home)</onunload>
+    <onunload>ClearProperty(SkinHelper.WidgetContainer,home)</onunload>
+    <onload condition="Skin.String(HomeLayout,netflix2)">SetProperty(netflixview,active,home)</onload>
+    <onunload>ClearProperty(netflixview,home)</onunload>
+    <menucontrol>300</menucontrol>
+	<controls>
+	
+        <!--Global Background-->
+        <include>GlobalBackground</include>
+    
+        <control type="button" id="1000">
+			<description>hidden button for onload actions as placing them in onload causes strange behaviour</description>
+            <onfocus condition="[String.Contains(Skin.String(HomeLayout),netflix) | Skin.String(HomeLayout,win10)] + !Skin.HasSetting(AutoFocusHome) + String.IsEmpty(Window(Home).Property(LastFocusWidget))">SetFocus(77777)</onfocus>
+            <onfocus condition="[[!String.Contains(Skin.String(HomeLayout),netflix) + !Skin.String(HomeLayout,win10)] | Skin.HasSetting(AutoFocusHome)] + !Skin.String(home.defaultfocus) + String.IsEmpty(Window(Home).Property(LastFocusWidget))">SetFocus(300)</onfocus>
+            <onfocus condition="[[!String.Contains(Skin.String(HomeLayout),netflix) + !Skin.String(HomeLayout,win10)] | Skin.HasSetting(AutoFocusHome)] + Skin.String(home.defaultfocus) + String.IsEmpty(Window(Home).Property(LastFocusWidget))">SetFocus(300,$INFO[Skin.String(home.defaultfocus)])</onfocus>
+            <include content="WidgetsAutoRotate" condition="[String.Contains(Skin.String(HomeLayout),netflix) | Skin.String(HomeLayout,win10)] + Skin.String(widgets_rotate_delay) + !Skin.String(widgets_rotate,disabled)">
+                <param name="interval" value="$INFO[Skin.String(widgets_rotate_delay)]" />
+            </include>            
+            <onfocus condition="String.IsEmpty(Window(Home).Property(widgetstyle))">SetProperty(widgetstyle, $INFO[Skin.String(widgetstyle)])</onfocus>
+            <onfocus>SetProperty(HomeFirstLoadDone,done)</onfocus>
+			<texturenofocus></texturenofocus>
+			<texturefocus></texturefocus>
+            <onleft>300</onleft>
+            <onright>300</onright>
+            <onup>300</onup>
+            <ondown>300</ondown>
+            <onback>300</onback>
+            <label></label>
+            <visible allowhiddenfocus="true">false</visible>
+		</control>
+		
+		<!--NowPlaying-->
+		<include>NowPlayingBackground</include>
+		
+        <!-- Hidden control to preload weather conditions -->
+		<control type="label">
+			<font></font>
+			<label>$INFO[Weather.Conditions]</label>
+		</control>
+		
+        <!-- hidden submenu for count calculations -->
+        <include condition="!Skin.String(HomeLayout,enhanced) + !Skin.HasSetting(DisableAllSubmenus)">hiddenSubmenu</include>
+        
+        <!--NowPlaying-->
+		<include>NowPlayingInfoBar</include>
+        
+        <!-- PVR recording icon -->
+        <include condition="Skin.HasSetting(Home_RecordingIndicator)">NowRecordingIcon</include>
+	
+		<!-- Home Screen -->
+        <include condition="Skin.String(HomeLayout,1) | Skin.String(HomeLayout,2) | Skin.String(HomeLayout,3) | Skin.String(HomeLayout,1small) | Skin.String(HomeLayout,2small) | Skin.String(HomeLayout,3small)">HomeTitanTiles</include>
+        <include condition="Skin.String(HomeLayout,simplehor) | String.Contains(Skin.String(HomeLayout), lowhorizontal)">HorizontalHome</include>
+        <include condition="String.Contains(Skin.String(HomeLayout), ver)">VerticalHome</include>
+        <include condition="Skin.String(HomeLayout,enhanced)">EnhancedHome</include>
+        <include condition="Skin.String(HomeLayout,netflix)">HomeNetflix</include>
+        <include condition="Skin.String(HomeLayout,netflix2)">HomeNetflix2</include>
+        <include condition="Skin.String(HomeLayout,win10)">HomeWin10</include>
+		
+        <include condition="Skin.HasSetting(DebugGrid) | Skin.HasSetting(DebugInfo)">DebugInfo</include>
+        
+	</controls>
+</window>

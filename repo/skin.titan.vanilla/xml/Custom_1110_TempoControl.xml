@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window id="1110" type="dialog">
+	<onload condition="String.IsEqual(Player.PlaySpeed,0.80)">SetFocus(141)</onload>
+	<onload condition="String.IsEqual(Player.PlaySpeed,0.90)">SetFocus(142)</onload>
+	<onload condition="String.IsEqual(Player.PlaySpeed,1.00)">SetFocus(143)</onload>
+	<onload condition="String.IsEqual(Player.PlaySpeed,0.00)">SetFocus(143)</onload>
+	<onload condition="String.IsEqual(Player.PlaySpeed,1.10)">SetFocus(144)</onload>
+	<onload condition="String.IsEqual(Player.PlaySpeed,1.20)">SetFocus(145)</onload>
+	<onload condition="String.IsEqual(Player.PlaySpeed,1.30)">SetFocus(146)</onload>
+	<onload condition="String.IsEqual(Player.PlaySpeed,1.40)">SetFocus(147)</onload>
+	<onload condition="String.IsEqual(Player.PlaySpeed,1.50)">SetFocus(148)</onload>
+	<onload condition="String.IsEmpty(Player.PlaySpeed)">SetFocus(143)</onload>
+	
+    <controls>
+        <control type="group">
+            <include>animation_window_open_close</include>
+            <control type="group">
+                <posx>0</posx>
+                <posy>-70</posy>
+
+				<control type="image">
+                    <posx>-100</posx>
+                    <posy>0</posy>
+                    <width>2200</width>
+                    <height>148</height>
+                    <texture border="5">diffuse/panel.png</texture>
+					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+                 <!-- close dialog -->
+                <control type="group">
+                    <include>animation_fade_visible_hidden</include>
+                    <right>40</right>
+                    <width>60</width>
+					<posy>80</posy>
+                    <include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
+                </control>
+                <control type="label">
+                    <description>Option Name</description>
+                    <posx>100</posx>
+                    <posy>80</posy>
+                    <width>380</width>
+                    <height>40</height>
+                    <label>$LOCALIZE[70053]</label>
+                    <align>left</align>
+                    <font>Reg30</font>
+                    <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                    <scroll>false</scroll>
+                </control>
+                <control type="label">
+                    <description>Slider Value</description>
+                    <posx>1520</posx>
+                    <posy>80</posy>
+                    <label>$INFO[Player.PlaySpeed]</label>
+                    <width>330</width>
+                    <height>40</height>
+                    <align>left</align>
+                    <font>Reg30</font>
+                    <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                    <scroll>false</scroll>
+                </control>
+				<!-- pseudo slider, could be much better, see jurialmunkey https://forum.kodi.tv/showthread.php?tid=372010 -->
+				<control type="group" id="120">
+                    <posx>500</posx>
+                    <posy>86</posy>
+                    <width>1000</width>
+                    <height>35</height>
+					<control type="image">
+						<texture border="5">common/modern/slider/slider.png</texture>
+						<colordiffuse>$INFO[Skin.String(ButtonColor)]</colordiffuse>
+					</control>
+                </control>
+
+				<control type="button" id="141">
+                    <posx>500</posx>
+                    <posy>86</posy>
+                    <height>35</height>
+					<width>35</width>
+					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
+					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
+					<visible allowhiddenfocus="true">Control.HasFocus(141)</visible>
+					<onfocus>PlayerControl(Tempo(0.8))</onfocus>
+					<onclick>Action(close)</onclick>
+					<onleft></onleft>
+					<onright>142</onright>
+                </control>
+				
+				<control type="button" id="142">
+                    <posx>636</posx>
+                    <posy>86</posy>
+                    <height>35</height>
+					<width>35</width>
+					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
+					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
+					<visible allowhiddenfocus="true">Control.HasFocus(142)</visible>
+					<onfocus>PlayerControl(Tempo(0.9))</onfocus>
+					<onclick>Action(close)</onclick>
+					<onleft>141</onleft>
+					<onright>143</onright>
+                </control>
+				
+				<control type="button" id="143">
+                    <posx>771</posx>
+                    <posy>86</posy>
+                    <height>35</height>
+					<width>35</width>
+					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
+					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
+					<visible allowhiddenfocus="true">Control.HasFocus(143)</visible>
+					<onfocus>PlayerControl(Tempo(1.0))</onfocus>
+					<onclick>Action(close)</onclick>
+					<onleft>142</onleft>
+					<onright>144</onright>
+                </control>
+				
+				<control type="button" id="144">
+                    <posx>907</posx>
+                    <posy>86</posy>
+                    <height>35</height>
+					<width>35</width>
+					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
+					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
+					<visible allowhiddenfocus="true">Control.HasFocus(144)</visible>
+					<onfocus>PlayerControl(Tempo(1.1))</onfocus>
+					<onclick>Action(close)</onclick>
+					<onleft>143</onleft>
+					<onright>145</onright>
+                </control>
+				
+				<control type="button" id="145">
+                    <posx>1043</posx>
+                    <posy>86</posy>
+                    <height>35</height>
+					<width>35</width>
+					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
+					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
+					<visible allowhiddenfocus="true">Control.HasFocus(145)</visible>
+					<onfocus>PlayerControl(Tempo(1.2))</onfocus>
+					<onclick>Action(close)</onclick>
+					<onleft>144</onleft>
+					<onright>146</onright>
+                </control>
+				
+				<control type="button" id="146">
+                    <posx>1179</posx>
+                    <posy>86</posy>
+                    <height>35</height>
+					<width>35</width>
+					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
+					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
+					<visible allowhiddenfocus="true">Control.HasFocus(146)</visible>
+					<onfocus>PlayerControl(Tempo(1.3))</onfocus>
+					<onclick>Action(close)</onclick>
+					<onleft>145</onleft>
+					<onright>147</onright>
+                </control>
+
+				<control type="button" id="147">
+                    <posx>1314</posx>
+                    <posy>86</posy>
+                    <height>35</height>
+					<width>35</width>
+					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
+					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
+					<visible allowhiddenfocus="true">Control.HasFocus(147)</visible>
+					<onfocus>PlayerControl(Tempo(1.4))</onfocus>
+					<onclick>Action(close)</onclick>
+					<onleft>146</onleft>
+					<onright>148</onright>
+                </control>
+				
+				<control type="button" id="148">
+                    <posx>1465</posx>
+                    <posy>86</posy>
+                    <height>35</height>
+					<width>35</width>
+					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
+					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
+					<visible allowhiddenfocus="true">Control.HasFocus(148)</visible>
+					<onfocus>PlayerControl(Tempo(1.5))</onfocus>
+					<onclick>Action(close)</onclick>
+					<onleft>147</onleft>
+					<onright></onright>
+                </control>				
+            </control>
+        </control>
+    </controls>
+</window>

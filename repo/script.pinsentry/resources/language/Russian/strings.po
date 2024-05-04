@@ -1,0 +1,423 @@
+# Kodi Media Center language file
+# Addon Name: PinSentry
+# Addon id: script.pinsentry
+# Addon Provider: robwebset
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Russian (BytEvil@github)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgctxt "Addon Summary"
+msgid "Protect Kodi Content With A Pin Code"
+msgstr "Защита контента KODI с помощью ПИН-кода"
+
+msgctxt "Addon Description"
+msgid "Force users to enter the correct pin code for given content."
+msgstr "Позволяет пользователю с помощью верного ПИН-кода получить доступ к контенту."
+
+msgctxt "#32001"
+msgid "Pin Sentry"
+msgstr "Ограничение доступа"
+
+msgctxt "#32002"
+msgid "Setup"
+msgstr "Настройка"
+
+msgctxt "#32003"
+msgid "Debugging"
+msgstr "Отладка"
+
+msgctxt "#32004"
+msgid "Enable debug logging"
+msgstr "Включить журнал отладки"
+
+msgctxt "#32005"
+msgid "Operations"
+msgstr "Операции"
+
+msgctxt "#32006"
+msgid "Pin Length"
+msgstr "Длина ПИН-кода"
+
+msgctxt "#32007"
+msgid "Set Pin Value"
+msgstr "Смена ПИН-кода"
+
+msgctxt "#32008"
+msgid "*** WARNING: PIN NOT SET ***"
+msgstr "*** ВНИМАНИЕ: ПИН-КОД НЕ УСТАНОВЛЕН ***"
+
+msgctxt "#32009"
+msgid "Invalid Pin Notification"
+msgstr "Уведомление о неверном ПИН-коде"
+
+msgctxt "#32010"
+msgid "Popup Notification"
+msgstr "Всплывающее уведомление"
+
+msgctxt "#32011"
+msgid "Dialog Box"
+msgstr "Диалоговое окно"
+
+msgctxt "#32012"
+msgid "None"
+msgstr "Нет"
+
+msgctxt "#32013"
+msgid "Off"
+msgstr "Выкл."
+
+msgctxt "#32014"
+msgid "On"
+msgstr "Вкл."
+
+msgctxt "#32015"
+msgid "For Time Period"
+msgstr "Временно"
+
+msgctxt "#32016"
+msgid "Remember Pin For (Minutes)"
+msgstr "Запоминать ПИН-код на время (в минутах)"
+
+msgctxt "#32017"
+msgid "Block Movies Without A Classification"
+msgstr "Ограничивать доступ к неклассифицированным фильмам"
+
+msgctxt "#32018"
+msgid "Block TV Shows Without A Classification"
+msgstr "Ограничивать доступ к неклассифицированным сериалам"
+
+msgctxt "#32019"
+msgid "Highlight Videos Not Protected By Classifications"
+msgstr "Подсвечивать неклассифицированный контент"
+
+msgctxt "#32020"
+msgid "Number Of Security Levels"
+msgstr "Кол-во уровней безопасности"
+
+msgctxt "#32021"
+msgid "Set Pin For Security Level"
+msgstr "Установить ПИН-код для уровней безопасности"
+
+msgctxt "#32022"
+msgid "Show Security Level On Permissions Screen"
+msgstr "Показывать уровень безопасности на экране разрешений"
+
+msgctxt "#32023"
+msgid "Allow Direction Keys In Pin Code"
+msgstr "Использовать кнопки навигации при установке ПИН-кода"
+
+msgctxt "#32024"
+msgid "*** NOT SET ***"
+msgstr "*** НЕ УСТАНОВЛЕНО ***"
+
+msgctxt "#32025"
+msgid "Time Limits"
+msgstr "Ограничения по времени"
+
+msgctxt "#32026"
+msgid "Number Of Limited Users"
+msgstr "Пользователи с ограниченными правами"
+
+msgctxt "#32027"
+msgid "Unrestricted User Access Settings"
+msgstr "Настройки доступа для пользователя без ограничений"
+
+msgctxt "#32028"
+msgid "User 1 Access Settings"
+msgstr "Настройки доступа для пользователя №1"
+
+msgctxt "#32029"
+msgid "User 2 Access Settings"
+msgstr "Настройки доступа для пользователя №2"
+
+msgctxt "#32030"
+msgid "User 3 Access Settings"
+msgstr "Настройки доступа для пользователя №3"
+
+msgctxt "#32031"
+msgid "User 4 Access Settings"
+msgstr "Настройки доступа для пользователя №4"
+
+msgctxt "#32032"
+msgid "User 5 Access Settings"
+msgstr "Настройки доступа для пользователя №5"
+
+msgctxt "#32033"
+msgid "Daily Viewing Allowance (Minutes)"
+msgstr "Кол-во времени ежедневного просмотра (в минутах)"
+
+msgctxt "#32034"
+msgid "Warn User When Remaining Time Is (Minutes)"
+msgstr "Предупреждать пользователя о заканчивающемся времени просмотра (в минутах)"
+
+msgctxt "#32035"
+msgid "Users Name"
+msgstr "Имена пользователей"
+
+msgctxt "#32036"
+msgid "User"
+msgstr "Пользователь"
+
+msgctxt "#32037"
+msgid "Prompt For Pin On Startup"
+msgstr "Запрашивать ПИН-код при запуске KODI"
+
+#empty strings from id 32038 to 32102
+
+msgctxt "#32103"
+msgid "Enter Pin"
+msgstr "Введите ПИН-код"
+
+msgctxt "#32104"
+msgid "Invalid Pin"
+msgstr "Неверный ПИН-код"
+
+msgctxt "#32105"
+msgid "Enter Existing Pin"
+msgstr "Введите старый ПИН-код"
+
+msgctxt "#32106"
+msgid "Enter New Pin"
+msgstr "Введите новый ПИН-код"
+
+msgctxt "#32107"
+msgid "Reenter New Pin"
+msgstr "Введите новый ПИН-код еще раз"
+
+msgctxt "#32108"
+msgid "Newly entered pins do not match, pin remains unchanged."
+msgstr "Новые ПИН-коды не совпадают, старый ПИН-код не изменен."
+
+msgctxt "#32109"
+msgid "Incorrect number of digits entered for the pin."
+msgstr "Введено неверное кол-во цифр ПИН-кода."
+
+msgctxt "#32110"
+msgid "Settings change permitted"
+msgstr "Изменение настроек разрешено"
+
+msgctxt "#32111"
+msgid "Only Restrict File Sources During Navigation"
+msgstr "Ограничивать доступ к файлам только во время навигации"
+
+msgctxt "#32112"
+msgid "Entered pin clashes with an existing pin."
+msgstr "Введенный ПИН-код совпадает с существующим."
+
+msgctxt "#32113"
+msgid "Clean Database"
+msgstr "Очистить базу данных"
+
+msgctxt "#32114"
+msgid "Set Permissions"
+msgstr "Установка разрешений"
+
+msgctxt "#32115"
+msgid "Advanced"
+msgstr "Дополнительно"
+
+msgctxt "#32116"
+msgid "Only Enforce Pin Between Set Times"
+msgstr "Период запроса ПИН-кода"
+
+msgctxt "#32117"
+msgid "Start Time"
+msgstr "время начала"
+
+msgctxt "#32118"
+msgid "End Time"
+msgstr "время окончания"
+
+msgctxt "#32119"
+msgid "Remember Pin"
+msgstr "Запоминать ПИН-код"
+
+msgctxt "#32120"
+msgid "Background"
+msgstr "Фон"
+
+msgctxt "#32121"
+msgid "Black"
+msgstr "Черный экран"
+
+msgctxt "#32122"
+msgid "PinSentry"
+msgstr "Ввод ПИН-кода"
+
+msgctxt "#32123"
+msgid "Custom"
+msgstr "Пользовательский"
+
+msgctxt "#32124"
+msgid "Custom Background Image"
+msgstr "Пользовательское фоновое изображение"
+
+msgctxt "#32125"
+msgid "Activity"
+msgstr "Активность"
+
+msgctxt "#32126"
+msgid "Video Playing"
+msgstr "Воспроизведение видео"
+
+msgctxt "#32127"
+msgid "Navigation"
+msgstr "Навигация"
+
+msgctxt "#32128"
+msgid "Plugins"
+msgstr "Дополнения"
+
+msgctxt "#32129"
+msgid "Retry?"
+msgstr "Повторить?"
+
+msgctxt "#32130"
+msgid "Current time outside users viewing times"
+msgstr ""
+
+msgctxt "#32131"
+msgid "Allowance Remaining (Minutes)"
+msgstr "Оставшееся разрешенное время (в минутах)"
+
+msgctxt "#32132"
+msgid "Access Allowed Between"
+msgstr "Период разрешенного доступа"
+
+msgctxt "#32133"
+msgid "Viewing allowance has been exceeded"
+msgstr "Время просмотра истекло"
+
+msgctxt "#32134"
+msgid "minutes remaining"
+msgstr "осталось минут"
+
+msgctxt "#32135"
+msgid "System Settings"
+msgstr "Настройки системы"
+
+#empty strings from id 32136 to 32200
+
+msgctxt "#32201"
+msgid "Movies"
+msgstr "Фильмы"
+
+msgctxt "#32202"
+msgid "TV Shows"
+msgstr "Сериалы"
+
+msgctxt "#32203"
+msgid "Movie Sets"
+msgstr "Киноциклы"
+
+msgctxt "#32204"
+msgid "File Source"
+msgstr "Файловые источники"
+
+msgctxt "#32205"
+msgid "Music Videos"
+msgstr "Видеоклипы"
+
+msgctxt "#32206"
+msgid "Classifications"
+msgstr "Классификации"
+
+msgctxt "#32207"
+msgid "Movie Classifications"
+msgstr "Классификация фильмов"
+
+msgctxt "#32208"
+msgid "TV Classifications"
+msgstr "Классификация ТВ"
+
+msgctxt "#32209"
+msgid "Clear All Security"
+msgstr "Очистить все политики безопасности"
+
+msgctxt "#32210"
+msgid "Apply Security To All"
+msgstr "Применить политики безопасности ко всем"
+
+msgctxt "#32211"
+msgid "Security Level"
+msgstr "Уровень безопасности"
+
+msgctxt "#32212"
+msgid "Remove Classification Restriction"
+msgstr "Снять все ограничения классификации"
+
+msgctxt "#32213"
+msgid "Force Pin Entry"
+msgstr "Ввод ПИН-кода для временного снятия ограничений"
+
+#empty strings from id 32214 to 32300
+
+msgctxt "#32301"
+msgid "UK"
+msgstr "Великобритания"
+
+msgctxt "#32302"
+msgid "USA"
+msgstr "Америка"
+
+msgctxt "#32303"
+msgid "Germany"
+msgstr "Германия"
+
+msgctxt "#32304"
+msgid "Ireland"
+msgstr "Ирландия"
+
+msgctxt "#32305"
+msgid "Netherlands"
+msgstr "Нидерланды"
+
+msgctxt "#32306"
+msgid "Australia"
+msgstr "Австралия"
+
+msgctxt "#32307"
+msgid "Brazil"
+msgstr "Бразилия"
+
+msgctxt "#32308"
+msgid "Hungary"
+msgstr "Венгрия"
+
+msgctxt "#32309"
+msgid "Denmark"
+msgstr "Дания"
+
+msgctxt "#32310"
+msgid "Norway"
+msgstr "Норвегия"
+
+msgctxt "#32311"
+msgid "Sweden"
+msgstr "Швеция"
+
+msgctxt "#32312"
+msgid "Finland"
+msgstr "Финляндия"
+
+msgctxt "#32313"
+msgid "Canada"
+msgstr "Канада"
+
+msgctxt "#32314"
+msgid "Quebec"
+msgstr "Квебек"
+
+msgctxt "#32315"
+msgid "France"
+msgstr "Франция"

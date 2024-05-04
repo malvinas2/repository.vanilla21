@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window>
+    <defaultcontrol always="true">50</defaultcontrol>
+    
+	<onunload>ClearProperty(ShowViewSubMenu,home)</onunload>
+    <controls>
+        <!--Global Background-->
+        <include>GlobalBackground</include>
+		<!--Header-->
+        <include>Header</include>
+		<!--NowPlaying-->
+		<include>NowPlayingModern</include>
+		 
+ 		<!-- weather View -->
+		<include condition="!Skin.HasSetting(useExtendedWeatherScreen)">SimpleWeather</include>
+		<include condition="Skin.HasSetting(useExtendedWeatherScreen)">ExtendedWeather</include>
+		
+        <!--Sub Menu Tab Left-->
+        <include condition="!Skin.HasSetting(DisableSideBladeIndicator)">SideBladeMenuTabLeft</include>
+        <!--Sub Menu-->
+        <control type="group">
+            <include condition="Skin.HasSetting(smallContextMenu)">SideBladeClassic</include>
+			<include condition="![Skin.HasSetting(smallContextMenu)]">SideBladeModern</include>
+	
+			<control type="label">
+                <!--Location Label UnFocus-->
+                <visible>!ControlGroup(9000).HasFocus(3)</visible>
+                <description>Location Label</description>
+                <posx>21</posx>
+                <posy>315</posy>
+                <width>400</width>
+				<include>SideBladeMenuButton</include>
+                <label>$INFO[Control.GetLabel(3)]</label>
+                <textoffsetx>40</textoffsetx>
+            </control>
+
+			<control type="image">
+                <visible>ControlGroup(9000).HasFocus(3)</visible>
+                <description>Location Label</description>
+                <posx>21</posx>
+                <posy>315</posy>
+                <width>458</width>
+			    <height>60</height>
+				<texture colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="5">diffuse/panel.png</texture>
+            </control>	
+
+            <control type="label">
+                <!--Location Label Focus-->
+                <visible>ControlGroup(9000).HasFocus(3)</visible>
+                <description>Location Label</description>
+                <posx>21</posx>
+                <posy>315</posy>
+                <width>400</width>
+                <textcolor>$INFO[Skin.String(ButtonFocusTextColor)]</textcolor>
+				<font>Reg26</font>
+                <label>$INFO[Control.GetLabel(3)]</label>
+                <textoffsetx>40</textoffsetx>
+            </control>
+			
+            <!--Grouplist 9000-->
+            <control type="grouplist" id="9000">
+                <posx>21</posx>
+                <posy>190</posy>
+                <width>458</width>
+                <height>750</height>
+                <itemgap>3</itemgap>
+                <onleft>50</onleft>
+                <onright>50</onright>
+				<visible>!Skin.HasSetting(KioskMode.Enabled)</visible>
+				<onright>ClearProperty(ShowViewSubMenu,home)</onright>
+				<onleft>ClearProperty(ShowViewSubMenu,home)</onleft>
+				<onback>ClearProperty(ShowViewSubMenu,home)</onback>
+				<onback>50</onback>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+                <orientation>vertical</orientation>
+				
+                <!--Buttons-->
+                <control type="button" id="2">
+                    <!--Refresh-->
+                    <description>Refresh</description>
+                    <label>$LOCALIZE[184]</label>
+                    <include>SideBladeMenuButton</include>
+                </control>
+                <control type="button" id="4">
+                    <!--Settings-->
+                    <description>Settings</description>
+                    <label>$LOCALIZE[5]</label>
+                    <onclick>ActivateWindow(servicesettings,weather)</onclick>
+                    <include>SideBladeMenuButton</include>
+                </control>
+                <control type="spincontrolex" id="3">
+                    <!--Location Select-->
+                    <description>Location Select</description>
+                    <font></font>
+                    <width>485</width>
+                    <align>left</align>
+                    <textcolor></textcolor>
+                    <focusedcolor></focusedcolor>
+                    <disabledcolor></disabledcolor>
+                    <pulseonselect>false</pulseonselect>
+                    <texturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">colors/color_white.png</texturefocus>
+                    <texturenofocus></texturenofocus>
+					<textoffsety>50</textoffsety>
+                </control>
+				<control type="button" id="1224">
+                    <description>Weather Icons</description>
+                    <label>$LOCALIZE[31623]</label>
+                    <onclick>RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=WeatherIconPack,addontype=resource.images.weathericons)</onclick>
+                    <include>SideBladeMenuButton</include>
+                </control>
+                <control type="button" id="1225">
+                    <!--Icons-->
+                    <description>Weather FanArt</description>
+                    <label>$LOCALIZE[31624]</label>
+                    <onclick>RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=WeatherFanArtPack,addontype=resource.images.weatherfanart)</onclick>
+                    <include>SideBladeMenuButton</include>
+                </control>
+				<control type="radiobutton" id="5163">
+                    <description>use extended weather screen</description>
+                    <label>$LOCALIZE[31452]</label>
+                    <include>SideBladeMenuButton</include>
+                    <onclick>Skin.ToggleSetting(useExtendedWeatherScreen)</onclick>
+                    <selected>Skin.HasSetting(useExtendedWeatherScreen)</selected>
+					<onclick>ReloadSkin()</onclick>
+                </control>
+                <control type="radiobutton" id="3052">
+                    <!--Hide panel -->
+                    <include>SideBladeMenuButton</include>
+                    <label>$LOCALIZE[31155]</label>
+                    <onclick>Skin.ToggleSetting(MyWeatherHidepanel)</onclick>
+                    <selected>Skin.HasSetting(MyWeatherHidepanel)</selected>
+                </control>
+                <control type="button" id="84403">
+                    <!--Open Skin settings-->
+                    <include>SideBladeMenuButton</include>
+                    <label>$LOCALIZE[20077]</label>
+                    <onclick>ClearProperty(ShowViewSubMenu,home)</onclick>
+                    <onclick>SetFocus(5000)</onclick>
+                    <onclick>SetProperty(SkinSettingSection,6,home)</onclick>
+                    <onclick>ActivateWindow(3016)</onclick>
+                </control>
+            </control>
+        </control>
+        <include condition="Skin.HasSetting(DebugGrid) | Skin.HasSetting(DebugInfo)">DebugInfo</include>
+    </controls>
+</window>

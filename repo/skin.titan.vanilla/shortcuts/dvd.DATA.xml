@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID>dvd</defaultID>
+		<label>32032</label>
+		<label2>playdvd</label2>
+		<icon>resource://resource.images.skinicons.wide/videos.png</icon>
+		<thumb />
+		<action>XBMC.PlayDVD()</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>14206</defaultID>
+		<label>Tray öffnen</label>
+		<label2>Benutzerdefinierte Einträge</label2>
+		<icon>InterfaceSettings.png</icon>
+		<thumb />
+		<action>EjectTray()</action>
+	</shortcut>
+</shortcuts>

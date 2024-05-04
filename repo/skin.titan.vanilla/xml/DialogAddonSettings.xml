@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window>
+    <defaultcontrol always="true">3</defaultcontrol>
+    <controls>
+		<!--Dialog Overlay-->
+		<control type="group">
+			<visible>!Window.IsActive(1121)</visible>
+			<include>DialogOverlayExtra</include>
+			<animation effect="fade" time="250" start="0" end="100" reversible="false">WindowOpen</animation>
+        </control>
+		<include condition="Skin.HasSetting(EnableTouchSupport)">Footer</include>
+        <!--Dialog Addon Settings-->
+        <control type="group">
+            <include>animation_window_open_close</include>
+			<animation effect="fade" end="0" time="0" condition="Window.IsVisible">Conditional</animation>
+            <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(filebrowser) + !Window.IsVisible(selectdialog) + !Window.IsVisible(selectdialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(textviewer)</visible>
+            <!--Panel-->
+            <control type="image">
+                <!--Panel-->
+                <posx>284</posx>
+                <posy>169</posy>
+                <width>1352</width>
+                <height>830</height>
+                <texture border="15">diffuse/bgpanel.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+            </control>
+			<control type="image">
+                <!--Panel-->
+                <posx>284</posx>
+                <posy>169</posy>
+                <width>1352</width>
+                <height>830</height>
+				<bordersize>10</bordersize>
+                <texture border="15">diffuse/bgpanel.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+            </control>
+            <!--Header-->
+            <control type="label" id="2">
+                <description>Heading</description>
+                <posx>560</posx>
+                <posy>205</posy>
+                <width>800</width>
+                <label></label>
+                <align>center</align>
+                <include>DialogHeader</include>
+            </control>
+            <control type="group" id="8003">
+                <!-- left group -->
+                <control type="group">
+                    <posx>318</posx>
+                    <posy>303</posy>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>310</width>
+                        <height>473</height>
+                        <texture border="5">dialogs/default/inner.png</texture>
+                    </control>
+                    <control type="grouplist" id="3">
+                        <description>button area</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>310</width>
+                        <height>473</height>
+                        <itemgap>-1</itemgap>
+                        <onleft>8002</onleft>
+                        <onright>5</onright>
+                        <onup>3</onup>
+                        <ondown>3</ondown>
+                        <scrolltime>0</scrolltime>
+                    </control>
+                    <control type="button" id="10">
+                        <width>310</width>
+                        <height>60</height>
+                        <align>right</align>
+                        <textoffsetx>20</textoffsetx>
+                        <texturenofocus>dialogs/default/separator.png</texturenofocus>
+                    </control>
+                </control>
+                <!-- right group -->
+                <control type="group">
+                    <posx>642</posx>
+                    <posy>303</posy>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>920</width>
+                        <height>473</height>
+                        <texture border="5">dialogs/default/inner.png</texture>
+                    </control>
+                    <control type="grouplist" id="5">
+                        <description>control area</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>930</width>
+                        <height>473</height>
+                        <itemgap>3</itemgap>
+                        <pagecontrol>60</pagecontrol>
+                        <onleft>3</onleft>
+                        <onright>60</onright>
+                        <onup>5</onup>
+                        <ondown>5</ondown>
+                        <scrolltime tween="cubic" easing="out">500</scrolltime>
+                    </control>
+                </control>
+            </control>
+            <control type="button" id="7">
+                <description>default</description>
+                <height>60</height>
+                <align>left</align>
+                <textoffsetx>20</textoffsetx>
+            </control>
+            <control type="edit" id="12">
+                <description>default</description>
+                <height>60</height>
+                <align>left</align>
+                <textoffsetx>20</textoffsetx>
+            </control>
+            <control type="radiobutton" id="8">
+                <description>radioButton</description>
+                <height>60</height>
+                <align>left</align>
+				<textwidth>700</textwidth>
+                <textoffsetx>20</textoffsetx>
+            </control>
+            <control type="spincontrolex" id="9">
+                <description>Directory Content</description>
+                <height>60</height>
+                <align>left</align>
+                <spinposx>5</spinposx>
+                <textoffsetx>20</textoffsetx>
+            </control>
+            <control type="label" id="14">
+                <description>Default Label</description>
+                <height>60</height>
+                <align>left</align>
+                <aligny>top</aligny>
+                <textoffsetx>20</textoffsetx>
+                <textoffsety>14</textoffsety>
+            </control>
+            <control type="sliderex" id="13">
+                <description>Default Slider</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <height>60</height>
+                <align>left</align>
+                <textoffsetx>20</textoffsetx>
+                <pulseonselect>false</pulseonselect>
+                <textwidth>540</textwidth>
+            </control>
+            <control type="image" id="11">
+                <width>300</width>
+                <height>1</height>
+                <visible>false</visible>
+            </control>
+			<control type="scrollbar" id="60">
+				<posx>1589</posx>
+                <posy>305</posy>
+                <height>467</height>
+				<onright>8002</onright>
+				<onleft>5</onleft>
+				<showonepage>false</showonepage>
+				<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling  | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling  | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+			</control>
+			<control type="textbox" id="6">
+				<description>description area</description>
+				<posx>318</posx>
+				<posy>800</posy>
+				<height>70</height>
+				<width>1250</width>
+				<font>font12</font>
+				<align>justify</align>
+				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
+			</control>
+			<control type="grouplist" id="8002">
+                <posx>318</posx>
+                <posy>900</posy>
+				<onup>3</onup>
+				<itemgap>5</itemgap>
+				<ondown>3</ondown>
+				<orientation>horizontal</orientation>
+                <control type="button" id="28">
+                    <description>OK</description>
+                    <!-- <label>$LOCALIZE[186]</label> -->
+                    <align>center</align>
+                    <width>320</width>
+                    <include>DialogButtonOther</include>
+                    <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(10)">Conditional</animation>
+                </control>
+                <control type="button" id="29">
+                    <align>center</align>
+                    <width>320</width>
+                    <include>DialogButtonOther</include>
+                    <description>Cancel</description>
+                    <!-- <label>$LOCALIZE[222]</label>  -->
+					<onright>30</onright>
+                    <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(11)">Conditional</animation>
+                </control>
+                <control type="button" id="30">
+                    <align>center</align>
+                    <width>320</width>
+                    <include>DialogButtonOther</include>
+                    <description>Defaults</description>
+                    <label>$LOCALIZE[409]</label>
+					<onright>111</onright>
+                </control>
+				<control type="group" id="111">
+					<top>20</top>
+					<left>290</left>
+					<right>20</right>
+					<control type="button" id="20">
+						<align>center</align>
+						<width>320</width>
+						<textoffsetx>55</textoffsetx>
+						<include>DialogButtonOther</include>
+						<description>Setting level button</description>
+						<!-- <label>$LOCALIZE[10037]</label> -->
+						<label></label>
+						<onleft>30</onleft>
+						<onright>28</onright>
+						<onclick>SettingsLevelChange</onclick>
+						<animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(12)">Conditional</animation>
+					</control>	
+					<control type="image">
+						<top>25</top>
+						<left>5</left>
+						<width>40</width>
+						<height>40</height>
+						<aspect>keep</aspect>
+						<texture colordiffuse="$VAR[NextUpFontColor]">common/settings1.png</texture>
+						<animation effect="slide" end="13,-5" time="0" condition="true">Conditional</animation>
+					</control>
+				</control>
+            </control>
+        </control>
+    </controls>
+</window>

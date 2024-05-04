@@ -1,0 +1,33 @@
+<videoscreensaver>
+	<collection>Beach</collection>
+	<encoded>true</encoded>
+	<builtin>true</builtin>
+	<video>
+		<name>Beach 1 - [2.5GB] - 720p </name>
+		<filename>Beach001-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Beach001.JPG</image>
+		<duration>10801</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy8yMnZ4YWMyOGxmeXhwZzIvQmVhY2gwMDEtNzIwcC5tcDQ/ZGw9MQ==</primary>
+	</video>
+	<video>
+		<name>Beach 2 - [838MB] - 720p</name>
+		<filename>Beach002-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Beach002.JPG</image>
+		<duration>3604</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy81Z3VuNXh6eHI2bWhrZDcvQmVhY2gwMDItNzIwcC5tcDQ/ZGw9MQ==</primary>
+	</video>
+	<video>
+		<name>Beach 3 - [3.4GB] - 720p</name>
+		<filename>Beach003-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Beach003.JPG</image>
+		<duration>10910</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy82aDFvanpvMDVnbjRzcWUvQmVhY2gwMDMtNzIwcC5tcDQ/ZGw9MQ==</primary>
+	</video>
+	<video>
+		<name>Beach 4 - [768MB] - 720p</name>
+		<filename>Beach004-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Beach004.JPG</image>
+		<duration>3602</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy82c2lnanFtdzlwcWhkMnYvQmVhY2gwMDQtNzIwcC5tcDQ/ZGw9MQ==</primary>
+	</video>
+</videoscreensaver>

@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="GameDialogControllers">
+
+		<!-- <include>animation_window_open_close</include> -->
+		<control type="group">
+			
+			<!-- <include>DialogOverlayExtra</include> -->
+			<control type="group">
+				<centertop>50%</centertop>
+				<centerleft>50%</centerleft>
+				<width>1820</width>
+				<height>870</height>
+			
+				<!-- background panel -->
+				<control type="image">
+					<width>1820</width>
+					<height>870</height>
+					<texture border="15">diffuse/bgpanel.png</texture>
+					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+				</control>
+				<control type="image">
+					<width>1820</width>
+					<height>870</height>
+					<texture border="15">diffuse/bgpanel.png</texture>
+					<bordersize>10</bordersize>
+					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+				</control>
+			
+				<!--Header-->
+				<control type="label" id="2">
+					<!-- <posx>473</posx> -->
+					<posy>20</posy>
+					<width>1820</width>
+					<include>DialogHeader</include>
+					<label>$LOCALIZE[35058]</label>
+					<align>center</align>
+				</control>
+
+				<control type="group">
+					<description>Controller list</description>
+					<top>90</top>
+					<left>30</left>
+					<width>410</width>
+					<height>580</height>
+					<control type="label">
+						<description>Controller profiles grouplist heading</description>
+						<height>25</height>
+						<right>20</right>
+						<label>[B]$LOCALIZE[35050][/B]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<include>DialogButton</include>
+					</control>
+					
+					<control type="image">
+						<description>Controller profiles grouplist background</description>
+						<top>30</top>
+						<!-- <bottom>200</bottom> -->
+						<left>0</left>
+						<width>400</width>
+						<height>580</height>
+						<visible>true</visible>
+						<colordiffuse>$INFO[Skin.String(ButtonColor)]</colordiffuse>
+						<texture border="15">diffuse/bgpanel.png</texture>
+					</control> 
+					<control type="grouplist" id="3">
+						<description>Controller profiles grouplist</description>
+						<top>40</top>
+						<!-- <right>20</right> -->
+						<onleft>9001</onleft>
+						<onright>62</onright>
+						<onup>3</onup>
+						<ondown>3</ondown>
+						<pagecontrol>62</pagecontrol>
+					</control>
+					<control type="scrollbar" id="62">
+						<top>40</top>
+						<right>-15</right>
+						<width>20</width>
+						<onleft>3</onleft>
+						<onright>5</onright>
+						<orientation>vertical</orientation>
+						<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(62) | Skin.HasSetting(EnableTouchSupport) | Container(3).Scrolling | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(62) | Skin.HasSetting(EnableTouchSupport) | Container(3).Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+					</control>
+					<control type="button" id="10">
+						<description>Default controller button</description>
+						<left>0</left>
+						<width>400</width>
+						<height>60</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<texturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="5">diffuse/panel.png</texturefocus>
+						<texturenofocus />
+					</control>
+				</control>
+				<control type="gamecontroller" id="31">
+					<top>130</top>
+					<left>470</left>
+					<width>540</width>
+					<height>540</height>
+				</control>
+
+				<control type="group">
+					<description>Feature list</description>
+					<top>90</top>
+					<left>1040</left>
+					<width>410</width>
+					<height>580</height>
+					<control type="label">
+						<description>Feature list heading</description>
+						<height>25</height>
+						<label>[B]$LOCALIZE[35059][/B]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<include>DialogButton</include>
+					</control>
+				
+					<control type="image">
+						<description>Feature list background</description>
+						<top>30</top>
+						<left>0</left>
+						<width>400</width>
+						<height>580</height>
+						<visible>true</visible>
+						<colordiffuse>$INFO[Skin.String(ButtonColor)]</colordiffuse>
+						<texture border="15">diffuse/bgpanel.png</texture>
+					</control> 
+					
+					<control type="grouplist" id="5">
+						<description>Features grouplist</description>
+						<top>40</top>
+						<onleft>62</onleft>
+						<onright>60</onright>
+						<onup>5</onup>
+						<ondown>5</ondown>
+						<pagecontrol>60</pagecontrol>
+					</control>
+					
+					<control type="scrollbar" id="60">
+						<right>-15</right>
+						<top>40</top>
+						<width>20</width>
+						<onleft>5</onleft>
+						<onright>9001</onright>
+						<ondown>60</ondown>
+						<onup>60</onup>						
+						<orientation>vertical</orientation>
+						<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container(5).Scrolling | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container(5).Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+					</control>
+					
+					<control type="button" id="7">
+						<description>Default feature button</description>
+						<width>400</width>
+						<height>60</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Reg28</font>
+						<texturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="5">diffuse/panel.png</texturefocus>
+						<texturenofocus />
+					</control>
+					<control type="label" id="8">
+						<description>Feature group title</description>
+						<width>400</width>
+						<height>40</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font20_title</font>
+						<textcolor>grey</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="image" id="9">
+						<description>Feature separator image</description>
+						<height>3</height>
+						<width>400</width>
+						<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+					</control>
+				</control>
+				<control type="grouplist" id="9001">
+					<top>110</top>
+					<right>0</right>
+					<width>340</width>
+					<onleft>60</onleft>
+					<onright>3</onright>
+					<itemgap>15</itemgap>
+					<control type="button" id="18">
+						<description>OK</description>
+						<width>320</width>
+						<label>$LOCALIZE[186]</label>
+						<include>DialogButtonOther</include>
+					</control>
+					<control type="button" id="19">
+						<description>Reset</description>
+						<width>320</width>
+						<label>$LOCALIZE[13007]</label>
+						<include>DialogButtonOther</include>
+					</control>
+					<control type="button" id="20">
+						<description>Add Group</description>
+						<width>320</width>
+						<label>$LOCALIZE[21452]</label>
+						<include>DialogButtonOther</include>
+					</control>
+					<control type="button" id="22">
+						<description>Add Group</description>
+						<width>320</width>
+						<label>$LOCALIZE[35021]</label>
+						<include>DialogButtonOther</include>
+					</control>
+					<control type="button" id="17">
+						<description>Help</description>
+						<width>320</width>
+						<label>$LOCALIZE[10043]</label>
+						<include>DialogButtonOther</include>
+					</control>
+					<control type="button" id="21">
+						<description>Ignore</description>
+						<width>320</width>
+						<label>$LOCALIZE[35019]</label>
+						<include>DialogButtonOther</include>
+					</control>				
+				</control>
+				<control type="group">
+					<description>Bottom controller description</description>
+					<bottom>30</bottom>
+					<left>30</left>
+					<right>30</right>
+					<height>120</height>
+					<control type="image">
+						<description>Controller description background image</description>
+						<left>0</left>
+						<right>0</right>
+						<colordiffuse>$INFO[Skin.String(ButtonColor)]</colordiffuse>
+						<texture border="15">diffuse/bgpanel.png</texture>
+					</control>
+					<control type="textbox" id="32">
+						<top>5</top>
+						<bottom>5</bottom>
+						<left>10</left>
+						<right>10</right>
+						<description>Controller description</description>
+						<textcolor>grey</textcolor>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+	
+	
+	<include name="GameDialogPorts">
+		
+		<control type="group">
+
+			<!--Dialog Select-->
+			<centertop>50%</centertop>
+			<centerleft>50%</centerleft>
+			<width>1200</width>
+			<height>730</height>	
+			<!-- background panel -->
+			<control type="image">
+				<width>1200</width>
+				<height>730</height>
+				<texture border="15">diffuse/bgpanel.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+			</control>
+			<control type="image">
+				<width>1200</width>
+				<height>730</height>
+				<texture border="15">diffuse/bgpanel.png</texture>
+				<bordersize>10</bordersize>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+			</control>
+			<!--Header-->
+			<control type="label" id="2">
+				<description>Heading</description>
+				<top>20</top>
+				<width>1100</width>
+				<height>40</height>
+				<label></label>
+				<include>DialogHeader_Alt</include>
+				<align>center</align>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<control type="group">
+				<description>Content area</description>
+				<top>100</top>
+				<bottom>30</bottom>
+				<left>30</left>
+				<right>30</right>
+				<control type="group">
+					<description>Port list</description>
+					<control type="image">
+						<width>1100</width>
+						<height>500</height>
+						<texture border="5">dialogs/default/inner.png</texture>
+					</control>
+					<!--List-->
+					<control type="list" id="3">
+						<description>Port item list</description>
+						<onright>62</onright>
+						<onleft>9001</onleft>
+						<onup>3</onup>
+						<ondown>3</ondown>
+						<pagecontrol>62</pagecontrol>
+						<orientation>vertical</orientation>
+						<scrolltime tween="cubic" easing="out">500</scrolltime>
+						<itemlayout height="100" width="1080">
+							<control type="group">
+								<control type="image">
+									<width>1080</width>
+									<height>100</height>
+									<texture>dialogs/default/separator.png</texture>
+								</control>
+								<control type="label">
+									<top>20</top>
+									<left>20</left>
+									<label>$INFO[ListItem.Label]</label>
+									<align>left</align>
+									<aligny>center</aligny>
+									<include>DialogListNF</include>
+									<scroll>false</scroll>
+								</control>
+								<control type="label">
+									<top>20</top>
+									<right>132</right>
+									<label>$INFO[ListItem.Label2]</label>
+									<align>right</align>
+									<aligny>center</aligny>
+									<include>DialogListNF</include>
+									<scroll>false</scroll>
+								</control>
+								<control type="image">
+									<right>12</right>
+									<width>100</width>
+									<texture>$INFO[ListItem.Icon]</texture>
+									<colordiffuse>$INFO[Skin.String(ButtonTextColor)]</colordiffuse>
+									<!-- <visible>ListItem.IsSelected</visible> -->
+								</control>
+							</control>
+						</itemlayout>
+						<focusedlayout height="100" width="1080">
+							<control type="group">
+								<animation effect="fade" start="100" end="30" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(3)">Conditional</animation>
+								<control type="image">
+									<width>1080</width>
+									<height>100</height>
+									<texture border="5">diffuse/panel.png</texture>
+									<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
+								</control>
+								<control type="label">
+									<top>20</top>
+									<left>20</left>
+									<label>$INFO[ListItem.Label]</label>
+									<align>left</align>
+									<aligny>center</aligny>
+									<scroll>true</scroll>
+									<include>DialogListFO</include>
+								</control>
+								<control type="label">
+									<top>20</top>
+									<right>132</right>
+									<label>$INFO[ListItem.Label2]</label>
+									<align>right</align>
+									<aligny>center</aligny>
+									<scroll>true</scroll>
+									<include>DialogListFO</include>
+								</control>
+								<control type="image">
+									<right>12</right>
+									<width>100</width>
+									<texture>$INFO[ListItem.Icon]</texture>
+									<colordiffuse>$INFO[Skin.String(ButtonTextColor)]</colordiffuse>
+								</control>
+							</control>
+						</focusedlayout>
+					</control>				
+				</control>
+				<control type="scrollbar" id="62">
+					<left>1100</left>
+					<width>20</width>
+					<top>15</top>
+					<orientation>vertical</orientation>
+					<height>465</height>
+					<showonepage>false</showonepage>
+					<onup>62</onup>
+					<onright>9001</onright>
+					<ondown>62</ondown>
+					<onleft>3</onleft>
+					<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(62) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(62) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+				</control>
+
+				<!--Buttons-->
+				<control type="grouplist" id="9001">
+					<top>530</top>
+					<left>0</left>
+					<width>800</width>
+					<onup>3</onup>
+					<ondown>3</ondown>
+					<itemgap>15</itemgap>
+					<orientation>horizontal</orientation>
+					<control type="button" id="18">
+						<description>OK</description>
+						<left>0</left>
+						<label>$LOCALIZE[186]</label>
+						<width>330</width>
+						<include>DialogButtonOther</include>
+						<height>80</height>
+						<onclick>Action(Close,GamePorts)</onclick>
+						<onclick condition="!String.IsEmpty(Window(Home).Property(agentsdialog))">ActivateWindow(GameAgents)</onclick>						
+						<!-- <onclick>ClearProperty(agentsdialog,home)</onclick> -->
+						<!-- <onright>7</onright> -->
+					</control>
+					<control type="button" id="19">
+						<description>Close</description>
+						<width>330</width>
+						<include>DialogButtonOther</include>
+						<label>$LOCALIZE[31308]</label>
+						<onclick>Action(close)</onclick>
+						<!-- <onclick>ClearProperty(agentsdialog,home)</onclick> -->
+						<height>80</height>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+
+
+	<include name="GameDialogAgents">
+
+			<!-- <include>animation_window_open_close</include> -->
+		<control type="group">
+		
+			<!-- <visible>!Window.IsVisible(gameports)<visible> -->
+			<!-- <visible>!Window.IsActive(gameports)<visible> -->
+			<!-- <visible>!Window.Is(gameports)<visible> -->
+			<!-- <include>DialogOverlayExtra</include> -->
+			<control type="group">
+				<centertop>50%</centertop>
+				<centerleft>50%</centerleft>
+				<width>1820</width>
+				<height>962</height>
+			
+				<!-- background panel -->
+				<control type="image">
+					<width>1820</width>
+					<height>962</height>
+					<texture border="15">diffuse/bgpanel.png</texture>
+					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+				</control>
+				<control type="image">
+					<width>1820</width>
+					<height>962</height>
+					<texture border="15">diffuse/bgpanel.png</texture>
+					<bordersize>10</bordersize>
+					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+				</control>
+			
+				<!--Header-->
+				<control type="label" id="2">
+					<top>20</top>
+					<width>1820</width>
+					<height>70</height>
+					<include>DialogHeader</include>
+					<label>$LOCALIZE[35172]</label>
+					<align>center</align>
+				</control>
+	
+				<control type="group">
+					<description>Content area</description>
+					<top>110</top>
+					<bottom>40</bottom>
+					<left>40</left>
+					<right>40</right>
+					<control type="group">
+						<description>Area of the dialog for ports</description>
+						<height>96</height>
+						<control type="button" id="3">
+							<description>Ports button</description>
+							<top>-10</top>
+							<bottom>-10</bottom>
+							<left>-20</left>
+							<ondown>7</ondown>
+							<onup>10</onup>
+							<label>$LOCALIZE[35110]</label>
+							<font>Reg37</font>
+							<textoffsetx>36</textoffsetx>
+							<align>left</align>
+							<aligny>center</aligny>
+							<width>1780</width>
+							<height>110</height>
+							<selectedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</selectedcolor>
+							<textcolor>$INFO[Skin.String(ButtonTextColor)]</textcolor>
+							<focusedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</focusedcolor>
+							<disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+							<pulseonselect>false</pulseonselect>
+							<texturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="20">dialogs/keyboard/key-nf.png</texturefocus>
+							<texturenofocus colordiffuse="$INFO[Skin.String(ButtonColor)]" border="20">dialogs/keyboard/key-nf.png</texturenofocus>
+							<onclick>SetProperty(agentsdialog,true,home)</onclick>
+							<onclick>Action(Close,GameAgents)</onclick>
+							<onclick>ActivateWindow(GamePorts)</onclick>
+						</control>
+						
+						<control type="gamecontrollerlist" id="4">
+							<description>Active port list. Length should fit 13 listitems (12 controllers and one "controller disconnected" indicator).</description>
+							<right>0</right>
+							<width>1248</width>
+							<orientation>horizontal</orientation>
+							<align>right</align>
+							<enable>false</enable>
+							<itemlayout width="96" height="96">
+								<control type="gamecontroller">
+									<texture>$INFO[ListItem.Icon]</texture>
+									<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
+									<controlleraddress>$INFO[ListItem.FilenameAndPath]</controlleraddress>
+									<controllerdiffuse>$INFO[Skin.String(ButtonFocusColor)]</controllerdiffuse>
+								</control>
+							</itemlayout>
+							<focusedlayout width="96" height="96">
+								<control type="gamecontroller">
+									<texture>$INFO[ListItem.Icon]</texture>
+									<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
+									<controlleraddress>$INFO[ListItem.FilenameAndPath]</controlleraddress>
+									<controllerdiffuse>$INFO[Skin.String(ButtonFocusColor)]</controllerdiffuse>
+								</control>
+							</focusedlayout>
+							
+								<!-- Note to skinners: this control can be populated
+								with static content for testing. -->
+							<!--
+							<content>
+								<item>
+									<icon>DefaultAddonNone.png</icon>
+								</item>
+								<item>
+									<property name="game.controllerid">game.controller.snes</property>
+								</item>
+								<item>
+									<property name="game.controllerid">game.controller.snes</property>
+								</item>
+								<item>
+									<property name="game.controllerid">game.controller.snes</property>
+								</item>
+								<item>
+									<property name="game.controllerid">game.controller.snes</property>
+								</item>
+								<item>
+									<property name="game.controllerid">game.controller.snes</property>
+								</item>
+								<item>
+									<property name="game.controllerid">game.controller.snes</property>
+								</item>
+								<item>
+									<property name="game.controllerid">game.controller.snes</property>
+								</item>
+								<item>
+									<property name="game.controllerid">game.controller.snes</property>
+								</item>
+								<item>
+									<property name="game.controllerid">game.controller.snes</property>
+								</item>
+								<item>
+									<property name="game.controllerid">game.controller.snes</property>
+								</item>
+								<item>
+									<property name="game.controllerid">game.controller.snes</property>
+								</item>
+								<item>
+									<property name="game.controllerid">game.controller.snes</property>
+								</item>
+							</content>
+							-->
+						</control>
+					</control>
+					<control type="group">
+						<description>Area of the dialog for player controllers</description>
+						<top>136</top>
+						<height>576</height>
+						<control type="image">
+							<description>Controller list background</description>
+							<top>-20</top>
+							<bottom>-20</bottom>
+							<left>0</left>
+							<right>0</right>
+							<texture border="5">dialogs/default/inner.png</texture>
+						</control>
+						<control type="list" id="7">
+							<description>Controller list</description>
+							<onup>3</onup>
+							<ondown>10</ondown>
+							<onright>61</onright>
+							<pagecontrol>61</pagecontrol>
+							<scrolltime tween="cubic" easing="out">500</scrolltime>
+							<orientation>vertical</orientation>
+							<itemlayout width="1740" height="96">
+								<control type="image">
+									<width>1740</width>
+									<height>96</height>
+									<texture>dialogs/default/separator.png</texture>
+								</control>
+								<control type="label">
+									<description>Controller name as reported by the driver</description>
+									<top>20</top>
+									<left>20</left>
+									<label>$INFO[ListItem.Label]</label>
+									<align>left</align>
+									<include>DialogListNF</include>
+								</control>
+								<include>AgentControllerList</include>
+							</itemlayout>
+							<focusedlayout width="1740" height="96">
+								<control type="group">
+									<!-- <animation effect="fade" start="100" end="30" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(7)">Conditional</animation> -->
+									<control type="image">
+										<width>1740</width>
+										<height>96</height>
+										<texture border="5">diffuse/panel.png</texture>
+										<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
+										<visible>Control.HasFocus(7)</visible>
+									</control>
+									<control type="image">
+										<width>1740</width>
+										<height>96</height>
+										<texture>dialogs/default/separator.png</texture>
+										<visible>!Control.HasFocus(7)</visible>
+									</control>									
+									<control type="label">
+										<description>Controller name as reported by the driver</description>
+										<top>20</top>
+										<left>20</left>
+										<label>$INFO[ListItem.Label]</label>
+										<align>left</align>
+										<include>DialogListFO</include>
+										<visible>Control.HasFocus(7)</visible>
+									</control>
+									<control type="label">
+										<description>Controller name as reported by the driver</description>
+										<top>20</top>
+										<left>20</left>
+										<label>$INFO[ListItem.Label]</label>
+										<align>left</align>
+										<include>DialogListNF</include>
+										<visible>!Control.HasFocus(7)</visible>
+									</control>
+									<include>AgentControllerList</include>
+								</control>
+							</focusedlayout>
+							
+							<!--	Note to skinners: this control can be populated
+								with static content for testing.  -->
+							<!--
+							<content>
+								<item>
+									<label>Player 1</label>
+								</item>
+								<item>
+									<label>Player 2</label>
+								</item>
+								<item>
+									<label>Player 3</label>
+								</item>
+								<item>
+									<label>Player 4</label>
+								</item>
+								<item>
+									<label>Player 5</label>
+								</item>
+								<item>
+									<label>Player 6</label>
+								</item>
+								<item>
+									<label>Player 7</label>
+								</item>
+								<item>
+									<label>Player 8</label>
+								</item>
+								<item>
+									<label>Player 9</label>
+								</item>
+								<item>
+									<label>Player 10</label>
+								</item>
+								<item>
+									<label>Player 11</label>
+								</item>
+								<item>
+									<label>Player 12</label>
+								</item>
+							</content>
+							-->
+						</control>
+					</control>
+					
+					<control type="scrollbar" id="61">
+						<description>Controller list scroll bar</description>
+						<top>136</top>
+						<height>576</height>
+						<right>-20</right>
+						<width>20</width>
+						<orientation>vertical</orientation>
+						<onleft>7</onleft>
+						<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(61) | Skin.HasSetting(EnableTouchSupport) | Container(7).Scrolling | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(61) | Skin.HasSetting(EnableTouchSupport) | Container(7).Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+					</control>
+					
+					<!--Buttons-->
+					<control type="grouplist" id="10">
+						<left>-20</left>
+						<right>-20</right>
+						<bottom>-30</bottom>
+						<height>100</height>
+						<onup>7</onup>
+						<ondown>3</ondown>
+						<itemgap>15</itemgap>
+						<orientation>horizontal</orientation>
+						<control type="button" id="18">
+							<description>OK</description>
+							<left>0</left>
+							<label>$LOCALIZE[186]</label>
+							<width>330</width>
+							<include>DialogButtonOther</include>
+							<height>80</height>
+							<!-- <onright>7</onright> -->
+						</control>
+						<control type="button" id="19">
+							<description>Close</description>
+							<width>330</width>
+							<include>DialogButtonOther</include>
+							<label>$LOCALIZE[31308]</label>
+							<onclick>Action(close)</onclick>
+							<height>80</height>
+						</control>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<include name="AgentControllerList">
+		<control type="gamecontrollerlist">
+			<description>Controller list which indicates the port a player's controller is connected to. Length should fit 13 listitems (12 controller items and one "input disabled" item).</description>
+			<right>0</right>
+			<width>1248</width>
+			<orientation>horizontal</orientation>
+			<align>right</align>
+			<enable>false</enable>
+			<itemlayout width="96" height="96">
+				<control type="gamecontroller">
+					<texture>$INFO[ListItem.Icon]</texture>
+					<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
+					<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
+					<controllerdiffuse>$INFO[Skin.String(ButtonFocusColor)]</controllerdiffuse>
+				</control>
+			</itemlayout>
+			<focusedlayout width="96" height="96">
+				<control type="gamecontroller">
+					<texture>$INFO[ListItem.Icon]</texture>
+					<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
+					<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
+					<controllerdiffuse>$INFO[Skin.String(ButtonFocusColor)]</controllerdiffuse>
+				</control>
+			</focusedlayout>
+			
+			<!--	Note to skinners: this control can be populated
+				with static content for testing.  -->
+			<!--
+			<content>
+				<item>
+					<icon>DefaultAddonNone.png</icon>
+				</item>
+				<item>
+					<property name="game.controllerid">game.controller.default</property>
+				</item>
+				<item>
+					<property name="game.controllerid">game.controller.default</property>
+				</item>
+				<item>
+					<property name="game.controllerid">game.controller.default</property>
+				</item>
+				<item>
+					<property name="game.controllerid">game.controller.default</property>
+				</item>
+				<item>
+					<property name="game.controllerid">game.controller.default</property>
+				</item>
+				<item>
+					<property name="game.controllerid">game.controller.default</property>
+				</item>
+				<item>
+					<property name="game.controllerid">game.controller.default</property>
+				</item>
+				<item>
+					<property name="game.controllerid">game.controller.default</property>
+				</item>
+				<item>
+					<property name="game.controllerid">game.controller.default</property>
+				</item>
+				<item>
+					<property name="game.controllerid">game.controller.default</property>
+				</item>
+				<item>
+					<property name="game.controllerid">game.controller.default</property>
+				</item>
+				<item>
+					<property name="game.controllerid">game.controller.default</property>
+				</item>
+			</content>
+			-->
+		</control>
+	</include>
+
+</includes>

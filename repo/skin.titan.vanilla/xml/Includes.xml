@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+	<!-- <include file="Custom_1198_GlobalSearch.xml" /> -->
+	<include file="IncludesCustom_1108_Favourites.xml" />
+    <include file="Defaults.xml" />
+	<!-- <include file="Custom_1120_MenuRight.xml" /> -->
+	<include file="Includes_Games.xml" />
+    <include file="IncludesVariables.xml" />
+    <include file="IncludesHomeTitanTiles.xml" />
+    <include file="IncludesHomeWidgets.xml" />
+	<include file="IncludesHomeTitanTilesSubMenu.xml" />
+    <include file="IncludesNowPlaying.xml" />
+	<include file="IncludesPVR.xml" />
+    <include file="View_109_SimplePVR.xml" />
+    <include file="View_50_List.xml" />
+	<include file="View_51_BigList.xml" />
+    <include file="View_55_BannerList.xml" />
+    <include file="View_524_Showcase.xml" />
+	<include file="View_52_HorizontalPanel.xml" />
+    <include file="View_53_PanelDetails.xml" />
+	<include file="View_54_Panel.xml" />
+	<include file="View_56_BannerPlex.xml" />
+	<include file="View_57_BigPanel.xml" />
+	<include file="View_58_LargePoster.xml" />
+	<include file="View_59_BigPanelDetails.xml" />
+	<include file="View_501_Landscape.xml" />
+	<include file="View_502_LandscapeSingle.xml" />
+	<include file="View_503_Logos.xml" />
+    <include file="View_504_BigList2.xml" />
+    <include file="View_505_LandscapeDetails.xml" />
+	<include file="View_506_ExtendedList.xml" />
+	<include file="View_507_FanArt.xml" />
+	<include file="View_508_SinglePoster.xml" />
+	<include file="View_509_PanelSquare.xml" />
+	<include file="View_510_PanelSquareDetails.xml"/>
+	<include file="View_511_Thumbs.xml"/>
+	<include file="View_512_ThumbsDetails.xml" />
+	<include file="View_513_PosterRow.xml" />
+	<include file="View_514_PosterShift.xml" />
+	<include file="View_515_LowList.xml" />
+	<include file="View_516_SlimList.xml" />
+    <include file="View_517_Cards.xml" />
+    <include file="View_518_Wide.xml" />
+    <include file="View_519_BigPanel_Wall.xml" />
+    <include file="View_520_Panel_Wall.xml" />
+    <include file="View_521_Panel_Low.xml" />
+    <include file="View_522_RightList.xml" />
+    <include file="View_523_Netflix.xml" />
+    <include file="IncludesViews.xml" />
+    <include file="IncludesMediaFlags.xml" />
+    <include file="IncludesViewsLayoutPoster.xml" />
+    <include file="IncludesViewsLayoutLandscape.xml" />
+    <include file="IncludesViewsLayoutSquare.xml" />
+    <include file="IncludesViewsLayoutBanner.xml" />
+    <include file="IncludesOSD.xml" />
+    <include file="IncludesSkinSettings.xml" />
+    <include file="IncludesContextMenu.xml" />
+	<include file="IncludesHomeEnhanced.xml" />
+	<include file="IncludesHomeHorizontal.xml" />
+	<include file="IncludesHomeVertical.xml" />
+	<include file="IncludesHomeNetflix.xml" />
+    <include file="IncludesHomeWin10.xml" />
+	<include file="IncludesTouchSupport.xml" />
+	<include file="IncludesDefaultSkinSettings.xml" />
+	<include file="IncludesBackgroundBuilding.xml" />
+	<include file="IncludesAnimations.xml" />
+	<include file="IncludesWeather.xml" />
+    <include file="IncludesHeader.xml" />
+    <include file="IncludesFooter.xml" />
+    <include file="IncludesOSDDialogs.xml" />
+	<include file="script-skinshortcuts-includes.xml"/>
+    <include file="script-skin_helper_service-includes.xml"/>
+    <include file="IncludesDebugInfo.xml" condition="Skin.HasSetting(DebugGrid) | Skin.HasSetting(DebugInfo)" />
+	<include file="Includes_DialogSelect.xml" />
+	<include file="IncludesDialogPVRGuideControls.xml" />
+	
+	<!--Titan Version-->
+    <include name="TitanVersion">
+        <control type="label">
+            <right>60</right>
+            <bottom>35</bottom>
+            <width>1000</width>
+            <align>right</align>
+            <font>Light34</font>
+            <textcolor>$INFO[Skin.String(FooterTextColor)]</textcolor>
+            <label>$INFO[Window(Home).Property(SkinHelper.skinTitle)]</label>
+        </control>
+    </include>
+
+    <!--Common-->
+    <include name="HiddenButton">
+        <posx>-1000</posx>
+        <posy>-1000</posy>
+        <width>1</width>
+        <height>1</height>
+        <label></label>
+		<font></font>
+        <texturenofocus></texturenofocus>
+        <texturefocus></texturefocus>
+    </include>
+	
+    <include name="DimensionsFullscreen">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>100%</width>
+        <height>100%</height>
+    </include>
+    
+    <!--Dialog Color/Font-->
+    <include name="DialogHeader">
+        <!--Dialog Header-->
+        <font>Bold38</font>
+        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+    </include>
+	<include name="DialogHeader_Alt">
+        <!--Dialog Header-->
+        <font>Bold32</font>
+        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+    </include>
+    <include name="DialogHeader2">
+        <!--Dialog Header2 (Yes/No)-->
+        <font>Reg36</font>
+        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+    </include>
+    <include name="DialogButton">
+        <!--Dialog Button-->
+        <font>Reg28</font>
+        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+        <focusedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</focusedcolor>
+        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+		<texturenofocus>dialogs/default/separator.png</texturenofocus>
+		<texturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="5">diffuse/panel.png</texturefocus>
+    </include>
+
+    <include name="DialogButtonBig">
+        <!--Dialog Button Big-->
+        <font>Reg30</font>
+        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+        <focusedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</focusedcolor>
+        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+    </include>
+    <include name="DialogButtonSmall">
+        <!--Dialog Button Small-->
+        <font>Reg26</font>
+        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+        <focusedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</focusedcolor>
+        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+    </include>
+    <include name="DialogListNF">
+        <!--Dialog List NF-->
+        <font>Reg28</font>
+        <textcolor fallback="white">$INFO[Skin.String(GeneralTextColor)]</textcolor>
+        <focusedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</focusedcolor>
+        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+    </include>
+	
+    <include name="DialogListFO">
+        <!--Dialog List FO-->
+        <font>Reg28</font>
+        <textcolor>$INFO[Skin.String(ButtonFocusTextColor)]</textcolor>
+        <selectedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</selectedcolor>
+    </include>
+
+    <include name="DialogLabel">
+        <!--Dialog Label-->
+        <font>Reg28</font>
+        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+    </include>
+
+	<include name="DialogButtonOther">
+        <!--Dialog Button OK Cancel-->
+        <height>80</height>
+        <width>350</width>
+        <include>Key</include>
+    </include>
+
+    <!--Keyboard-->
+    <include name="EditTextKeyboard">
+        <font>Light45</font>
+        <align>center</align>
+        <textoffsetx>0</textoffsetx>
+        <texturenofocus></texturenofocus>
+        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+        <focusedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</focusedcolor>
+        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+        <pulseonselect>false</pulseonselect>
+        <texturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="5">diffuse/panel.png</texturefocus>
+    </include>
+    <include name="KeyBoardKey">
+        <height>70</height>
+        <width>130</width>
+        <align>center</align>
+        <font>Reg30</font>
+        <textoffsetx>0</textoffsetx>
+        <selectedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</selectedcolor>
+        <textcolor>$INFO[Skin.String(ButtonTextColor)]</textcolor>
+        <focusedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</focusedcolor>
+        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+        <pulseonselect>false</pulseonselect>
+        <texturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="15">dialogs/keyboard/key.png</texturefocus>
+        <texturenofocus colordiffuse="$INFO[Skin.String(ButtonColor)]" border="15">dialogs/keyboard/key.png</texturenofocus>
+     </include>
+    <include name="KeyBoardKeyRadio">
+        <align>left</align>
+        <textoffsetx>20</textoffsetx>
+        <radioposx></radioposx>
+        <radioposy>15</radioposy>
+        <radiowidth>28</radiowidth>
+        <radioheight>28</radioheight>
+        <textureradiofocus>dialogs/keyboard/radio-on.png</textureradiofocus>
+        <textureradionofocus>dialogs/keyboard/radio-off.png</textureradionofocus>
+        <font>Reg26</font>
+        <include>KeyBoardKey</include>
+    </include>
+    
+    <include name="Key">
+        <height>110</height>
+        <align>center</align>
+        <font>Reg28</font>
+        <textoffsetx>0</textoffsetx>
+        <selectedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</selectedcolor>
+        <textcolor>$INFO[Skin.String(ButtonTextColor)]</textcolor>
+        <focusedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</focusedcolor>
+        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+        <pulseonselect>false</pulseonselect>
+        <texturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="20">dialogs/keyboard/key-nf.png</texturefocus>
+        <texturenofocus colordiffuse="$INFO[Skin.String(ButtonColor)]" border="20">dialogs/keyboard/key-nf.png</texturenofocus>
+        <alttexturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="20">dialogs/keyboard/key-nf.png</alttexturefocus>
+        <alttexturenofocus colordiffuse="$INFO[Skin.String(ButtonColor)]" border="20">dialogs/keyboard/key-nf.png</alttexturenofocus>
+    </include>
+    <include name="SmallKey">
+        <width>130</width>
+        <font>Reg34</font>
+        <include>Key</include>
+    </include>
+	<include name="ExtraSmallKey">
+        <width>90</width>
+		<height>90</height>
+        <include>Key</include>
+    </include>
+    <include name="BigKey">
+        <width>250</width>
+        <font>Reg28</font>
+        <include>Key</include>
+    </include>
+    <include name="SpaceBar">
+        <width>735</width>
+        <include>Key</include>
+    </include>
+    <include name="BackSpace">
+        <width>490</width>
+        <include>Key</include>
+    </include>
+    <include name="DialogButtonBrowseAdd">
+        <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">dialogs/keyboard/plus.png</textureradiofocus>
+        <textureradionofocus colordiffuse="$INFO[Skin.String(GeneralTextColor)]">dialogs/keyboard/plus.png</textureradionofocus>
+        <radiowidth>30</radiowidth>
+        <radioheight>30</radioheight>
+        <radioposx>10</radioposx>
+        <textoffsetx>60</textoffsetx>
+        <width>260</width>
+        <height>55</height>
+        <include>DialogButton</include>
+    </include>
+    <include name="DialogButtonBrowseRemove">
+        <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">dialogs/keyboard/remove.png</textureradiofocus>
+        <textureradionofocus colordiffuse="$INFO[Skin.String(GeneralTextColor)]">dialogs/keyboard/remove.png</textureradionofocus>
+        <radiowidth>30</radiowidth>
+        <radioheight>30</radioheight>
+        <radioposx>10</radioposx>
+        <textoffsetx>60</textoffsetx>
+        <width>260</width>
+        <height>55</height>
+        <include>DialogButton</include>
+    </include>
+    <include name="DialogButtonBrowseEdit">
+        <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">dialogs/keyboard/edit.png</textureradiofocus>
+        <textureradionofocus colordiffuse="$INFO[Skin.String(GeneralTextColor)]">dialogs/keyboard/edit.png</textureradionofocus>
+        <radiowidth>30</radiowidth>
+        <radioheight>30</radioheight>
+        <radioposx>10</radioposx>
+        <textoffsetx>60</textoffsetx>
+        <width>260</width>
+        <height>55</height>
+        <include>DialogButton</include>
+    </include>
+    <include name="DialogButtonBrowse">
+        <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">dialogs/mediasource/browse-nf.png</textureradiofocus>
+        <textureradionofocus colordiffuse="$INFO[Skin.String(GeneralTextColor)]">dialogs/mediasource/browse-nf.png</textureradionofocus>
+        <radiowidth>230</radiowidth>
+        <radioheight>230</radioheight>
+        <radioposx>-5</radioposx>
+        <textoffsetx>60</textoffsetx>
+        <width>260</width>
+        <height>55</height>
+        <include>DialogButton</include>
+    </include>
+    <include name="KeyLeft">
+        <width>130</width>
+        <include>Key</include>
+        <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">dialogs/keyboard/left.png</textureradiofocus>
+        <textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">dialogs/keyboard/left.png</textureradionofocus>
+        <radiowidth>70</radiowidth>
+        <radioheight>70</radioheight>
+        <radioposx>30</radioposx>
+    </include>
+    <include name="KeyRight">
+        <width>130</width>
+        <include>Key</include>
+        <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">dialogs/keyboard/right.png</textureradiofocus>
+        <textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">dialogs/keyboard/right.png</textureradionofocus>
+        <radiowidth>70</radiowidth>
+        <radioheight>70</radioheight>
+        <radioposx>30</radioposx>
+    </include>
+    <include name="KeyBack">
+        <width>130</width>
+        <include>Key</include>
+        <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">dialogs/keyboard/back.png</textureradiofocus>
+        <textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">dialogs/keyboard/back.png</textureradionofocus>
+        <radiowidth>70</radiowidth>
+        <radioheight>70</radioheight>
+        <radioposx>30</radioposx>
+    </include>
+    <include name="KeyDone">
+        <width>130</width>
+        <include>Key</include>
+        <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">dialogs/keyboard/done.png</textureradiofocus>
+        <textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">dialogs/keyboard/done.png</textureradionofocus>
+        <radiowidth>70</radiowidth>
+        <radioheight>70</radioheight>
+        <radioposx>30</radioposx>
+    </include>
+    <include name="DoubleKeyDone">
+        <width>250</width>
+        <height>90</height>
+        <include>Key</include>
+    </include>
+    <include name="DoubleKeyCancel">
+        <width>250</width>
+        <height>90</height>
+        <include>Key</include>
+    </include>
+    <include name="ListDetailsBtn">
+        <width>580</width>
+        <height>40</height>
+        <align>left</align>
+        <disabledcolor fallback="white">$INFO[Skin.String(ViewDetailsTextColor)]</disabledcolor>
+        <texturefocus></texturefocus>
+        <texturenofocus>dialogs/default/separator.png</texturenofocus>
+        <textoffsetx>0</textoffsetx>
+        <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+        <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+        <enable>false</enable>
+    </include>
+
+    <include name="navigation_horizontal">
+        <orientation>horizontal</orientation>
+    </include>
+    
+    <include name="align_right">
+        <align>right</align>
+    </include>
+    <include name="align_left">
+        <align>left</align>
+    </include>
+    
+    <include name="height">
+        <height>$PARAM[height]</height>
+    </include>
+    
+    <include name="width">
+        <width>$PARAM[width]</width>
+    </include>
+    
+    <include name="top">
+        <top>$PARAM[top]</top>
+    </include>
+	
+	<include name="bottom">
+        <bottom>$PARAM[bottom]</bottom>
+    </include>
+    
+    <include name="ImageAlignCenter">
+        <aspectratio align="center">keep</aspectratio>
+    </include>
+    <include name="ImageAlignLeft">
+        <aspectratio align="left">keep</aspectratio>
+    </include>
+    
+    <include name="skinshortcuts-widgetselect">
+        <control type="label" id="900$PARAM[widgetpos]0">
+            <width>500</width>
+            <align>left</align>
+            <height>40</height>
+            <font>Reg26</font>
+            <label>[B]$LOCALIZE[31499] $PARAM[widgetpos][/B]</label>
+        </control>
+        <control type="button" id="900$PARAM[widgetpos]1">
+            <description>select widget</description>
+            <width>500</width>
+            <height>45</height>
+            <align>left</align>
+            <onclick>SetProperty(widgetID, $PARAM[widgetid])</onclick>
+            <onclick>SendClick(312)</onclick>
+            <textoffsetx>10</textoffsetx>
+            <font>Reg22</font>
+            <label>$ADDON[script.skinshortcuts 32044] >></label>
+        </control>
+        <control type="button" id="900$PARAM[widgetpos]2">
+            <description>widget style</description>
+            <width>500</width>
+            <height>45</height>
+            <align>left</align>
+            <label>$LOCALIZE[31507]:</label>
+            <font>Reg22</font>
+            <label2>$VAR[widgetstylelabel$PARAM[widgetpos]]</label2>
+            <textoffsetx>10</textoffsetx>
+            <onclick>RunScript(script.skin.helper.service,action=setskinshortcutsproperty,setting=widgetstyle,header=$LOCALIZE[31507],property=widgetstyle$PARAM[widgetprop])</onclick>
+            <visible>!String.IsEmpty(Container(211).ListItem.Property(widget$PARAM[widgetprop]))</visible>
+            <visible>!Skin.String(HomeLayout, enhanced)</visible>
+        </control>
+        <control type="button" id="900$PARAM[widgetpos]3">
+            <description>widget label</description>
+            <width>500</width>
+            <height>45</height>
+            <align>left</align>
+            <font>Reg22</font>
+            <label>$ADDON[script.skinshortcuts 32025]:</label>
+            <label2>$INFO[Container(211).ListItem.Property(widgetName$PARAM[widgetprop])]</label2>
+            <textoffsetx>10</textoffsetx>
+            <onclick>RunScript(script.skin.helper.service,action=setskinshortcutsproperty,header=$ADDON[script.skinshortcuts 32025],property=widgetName$PARAM[widgetprop])</onclick>
+            <visible>!String.IsEmpty(Container(211).ListItem.Property(widget$PARAM[widgetprop]))</visible>
+        </control>
+        <control type="button" id="900$PARAM[widgetpos]4">
+            <description>show infopanel (win10)</description>
+            <width>500</width>
+            <height>45</height>
+            <align>left</align>
+            <font>Reg22</font>
+            <textoffsetx>10</textoffsetx>
+            <label>$LOCALIZE[31185]:</label>
+            <label2>$VAR[widgetinfopanellabel$PARAM[widgetpos]]</label2>
+            <onclick>RunScript(script.skin.helper.service,action=setskinshortcutsproperty,setting=widgetInfoPanel,header=$LOCALIZE[31185],property=widgetInfoPanel$PARAM[widgetprop])</onclick>
+            <visible>Skin.String(HomeLayout, win10)</visible>
+            <visible>!String.IsEmpty(Container(211).ListItem.Property(widget$PARAM[widgetprop]))</visible>
+        </control>
+        <control type="button" id="900$PARAM[widgetpos]5">
+            <description>widget tags</description>
+            <width>500</width>
+            <height>45</height>
+            <align>left</align>
+            <font>Reg22</font>
+            <label>$LOCALIZE[31675]:</label>
+            <label2>$INFO[Container(211).ListItem.Property(widgetTags$PARAM[widgetprop])]</label2>
+            <textoffsetx>10</textoffsetx>
+            <onclick>RunScript(script.skin.helper.service,action=setskinshortcutsproperty,header=$LOCALIZE[31675],property=widgetTags$PARAM[widgetprop],setting=Widgets_DisplayTags)</onclick>
+            <visible>!String.IsEmpty(Container(211).ListItem.Property(widget$PARAM[widgetprop]))</visible>
+            <visible>Skin.String(Widgets_DisplayTags,override)</visible>
+            <visible>!String.Contains(Container(211).ListItem.Property(widgetstyle$PARAM[widgetprop]),box) + ![String.IsEmpty(Container(211).ListItem.Property(widgetstyle$PARAM[widgetprop])) + String.Contains(Skin.String(widgetstyle),box)]</visible>
+        </control>
+        <control type="radiobutton" id="900$PARAM[widgetpos]6"> 
+            <description>widget force refresh</description>
+            <width>500</width>
+            <label>$LOCALIZE[31717]</label>
+            <font>Reg22</font>
+            <align>left</align>
+            <textoffsetx>10</textoffsetx>
+            <radiowidth>100</radiowidth>
+            <radioheight>65</radioheight>
+            <radioposx>415</radioposx>
+            <onclick condition="!String.IsEqual(Container(211).ListItem.Property(widgetForceRefresh$PARAM[widgetprop]), refresh)">SetProperty(customProperty, widgetForceRefresh$PARAM[widgetprop])</onclick>
+            <onclick condition="!String.IsEqual(Container(211).ListItem.Property(widgetForceRefresh$PARAM[widgetprop]), refresh)">SetProperty(customValue, refresh)</onclick>
+            <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetForceRefresh$PARAM[widgetprop]), refresh)">SetProperty(customProperty, widgetForceRefresh$PARAM[widgetprop])</onclick>
+            <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetForceRefresh$PARAM[widgetprop]), refresh)">SetProperty(customValue, "")</onclick>
+            <onclick>SendClick(404)</onclick>
+            <selected>String.IsEqual(Container(211).ListItem.Property(widgetForceRefresh$PARAM[widgetprop]), refresh)</selected>
+            <visible>!String.IsEmpty(Container(211).ListItem.Property(widget$PARAM[widgetprop]))</visible>
+            <visible>String.IsEqual(Container(211).ListItem.Property(widget$PARAM[widgetprop]), Addon) | String.Contains(Container(211).ListItem.Property(widgetPath$PARAM[widgetprop]), favourite) | String.Contains(Container(211).ListItem.Property(widgetPath$PARAM[widgetprop]), xsp)</visible>
+        </control>
+        <control type="radiobutton" id="900$PARAM[widgetpos]7">
+            <description>widget auto rotate</description>
+            <width>500</width>
+            <label>$LOCALIZE[31723]</label>
+            <font>Reg22</font>
+            <align>left</align>
+            <textoffsetx>10</textoffsetx>
+            <radiowidth>100</radiowidth>
+            <radioheight>65</radioheight>
+            <radioposx>415</radioposx>
+            <onclick condition="!String.IsEqual(Container(211).ListItem.Property(widgetAutoRotate$PARAM[widgetprop]), enabled)">SetProperty(customProperty, widgetAutoRotate$PARAM[widgetprop])</onclick>
+            <onclick condition="!String.IsEqual(Container(211).ListItem.Property(widgetAutoRotate$PARAM[widgetprop]), enabled)">SetProperty(customValue, enabled)</onclick>
+            <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetAutoRotate$PARAM[widgetprop]), enabled)">SetProperty(customProperty, widgetAutoRotate$PARAM[widgetprop])</onclick>
+            <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetAutoRotate$PARAM[widgetprop]), enabled)">SetProperty(customValue, "")</onclick>
+            <onclick>SendClick(404)</onclick>
+            <selected>String.IsEqual(Container(211).ListItem.Property(widgetAutoRotate$PARAM[widgetprop]), enabled)</selected>
+            <visible>Skin.String(widgets_rotate,override)</visible>
+            <visible>!String.IsEmpty(Container(211).ListItem.Property(widget$PARAM[widgetprop]))</visible>
+        </control>
+        <control type="radiobutton" id="900$PARAM[widgetpos]8">
+            <description>widget static focus</description>
+            <width>500</width>
+            <label>$LOCALIZE[31823]</label>
+            <font>Reg22</font>
+            <align>left</align>
+            <textoffsetx>10</textoffsetx>
+            <radiowidth>100</radiowidth>
+            <radioheight>65</radioheight>
+            <radioposx>415</radioposx>
+            <onclick condition="!String.IsEqual(Container(211).ListItem.Property(widgetFixedFocus$PARAM[widgetprop]), enabled)">SetProperty(customProperty, widgetFixedFocus$PARAM[widgetprop])</onclick>
+            <onclick condition="!String.IsEqual(Container(211).ListItem.Property(widgetFixedFocus$PARAM[widgetprop]), enabled)">SetProperty(customValue, enabled)</onclick>
+            <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetFixedFocus$PARAM[widgetprop]), enabled)">SetProperty(customProperty, widgetFixedFocus$PARAM[widgetprop])</onclick>
+            <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetFixedFocus$PARAM[widgetprop]), enabled)">SetProperty(customValue, "")</onclick>
+            <onclick>SendClick(404)</onclick>
+            <selected>String.IsEqual(Container(211).ListItem.Property(widgetFixedFocus$PARAM[widgetprop]), enabled) | String.Contains(Container(211).ListItem.Property(widgetstyle$PARAM[widgetprop]),details)</selected>
+            <visible>!String.IsEmpty(Container(211).ListItem.Property(widget$PARAM[widgetprop]))</visible>
+        </control>
+    </include>
+
+	<include name="PVRChannelNumberInput">
+		<control type="label">
+			<left>0</left>
+			<top>0</top>
+			<width>100%</width>
+			<height>100%</height>
+			<label>$INFO[PVR.ChannelNumberInput]</label>
+			<shadowcolor>black</shadowcolor>
+			<align>center</align>
+			<font>WeatherTemp</font>
+			<aligny>center</aligny>
+			<visible>!String.IsEmpty(PVR.ChannelNumberInput)</visible>
+		</control>
+	</include>
+	
+	<include name="RDSInfoLine">
+		<control type="grouplist">
+			<visible>!String.IsEmpty($PARAM[value])</visible>
+		<!-- <visible>true</visible>	 -->
+			<height>35</height>
+			<orientation>horizontal</orientation>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<width>auto</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<label>[B]$PARAM[label]:[/B]</label>
+				<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+			</control>
+			<control type="label">
+				<width>auto</width>
+				<height>30</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[$PARAM[value]]</label>
+				<scroll>true</scroll>
+				<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+			</control>
+		</control>
+	</include>
+	
+	<include name="InfoDialogTopBarInfo">
+		<param name="id">33333</param>
+		<param name="posy">20</param>
+		<definition>
+			<control type="grouplist">
+				<left>100</left>
+				<right>100</right>
+				<top>$PARAM[posy]</top>
+				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<height>150</height>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<control type="label">
+					<width>100%</width>
+					<label>$PARAM[main_label]</label>
+					<font>font30_title</font>
+					<textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+					<height>65</height>
+					<align>center</align>
+					<scroll>true</scroll>
+					<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(Control.GetLabel($PARAM[id]))">Conditional</animation>
+				</control>
+				<control type="label" id="$PARAM[id]">
+					<label>$PARAM[sub_label]</label>
+					<left>85</left>
+					<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+					<!-- <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor> -->
+					<align>center</align>
+					<height>100</height>
+					<width>100%</width>
+				</control>
+			</control>
+		</definition>
+	</include>
+	
+	<include name="height20_posy160">
+		<height>20</height>
+		<posy>160</posy>
+	</include>
+
+	<include name="height10_posy160">
+		<height>10</height>
+		<posy>160</posy>
+	</include>
+
+	<include name="height10_posy170">
+		<height>10</height>
+		<posy>170</posy>
+	</include>
+
+	<include name="height33_posy150">
+		<height>33</height>
+		<posy>150</posy>
+	</include>
+
+	<include name="height16_posy150">
+		<height>16</height>
+		<posy>150</posy>
+	</include>
+
+	<include name="height17_posy160">
+		<height>17</height>
+		<posy>160</posy>
+	</include>
+
+	<include name="height0_posy0">
+		<height>0</height>
+		<posy>0</posy>
+	</include>
+
+	<include name="music_info_label">
+		<control type="grouplist">
+			<width>$PARAM[width]</width>
+			<left>$PARAM[left]</left>
+			<top>-20</top>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<control type="label">
+				<width>auto</width>
+				<font>Reg26</font>
+				<align>left</align>
+				<label>$PARAM[label1]</label>
+				<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+				<scroll>false</scroll>
+				<visible>!String.IsEmpty(Control.GetLabel(300$PARAM[id]))</visible>
+			</control>
+			<control type="label" id="300$PARAM[id]">
+				<width>auto</width>
+				<font>Reg26</font>
+				<align>left</align>
+				<label>$PARAM[label2]</label>
+				<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+				<scroll>true</scroll>
+				<scrollsuffix> / </scrollsuffix>
+			</control>
+		</control>
+	</include>
+
+	<expression name="IsMovieDBTypeNoFallback">String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.Property(DBTYPE),movie)</expression>
+	<expression name="IsTvShowDBType">String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.Property(DBTYPE),tvshow) | String.IsEqual(Window(Home).Property(ListItem.DBTYPE,tvshow)) | String.IsEqual(Window(Home).Property(ListItem.Property(DBTYPE)),tvshow)</expression>
+	<expression name="IsTvShowDBTypeNoFallback">String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.Property(DBTYPE),tvshow)</expression>
+	<expression name="IsMovieDBType">String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.Property(DBTYPE),movie) | String.IsEqual(Window(Home).Property(ListItem.DBTYPE,movie)) | String.IsEqual(Window(Home).Property(ListItem.Property(DBTYPE)),movie)</expression>
+	<expression name="IsMovieDBTypeNoFallback">String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.Property(DBTYPE),movie)</expression>
+	<expression name="IsEpisodeDBType">String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.Property(DBTYPE),episode) | String.IsEqual(Window(Home).Property(ListItem.DBTYPE,episode)) | String.IsEqual(Window(Home).Property(ListItem.Property(DBTYPE)),episode)</expression>
+	<expression name="IsEpisodeDBTypeNoFallback">String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.Property(DBTYPE),episode)</expression>
+
+</includes>

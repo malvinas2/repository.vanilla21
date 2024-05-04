@@ -1,0 +1,223 @@
+[[https://github.com/robwebset/script.pinsentry/raw/master/icon.png]]
+
+== Introduction ==
+You can install this addon from: [https://www.urepo.org URepo Repository]
+<br />
+<br />
+PinSentry is an addon that will allow you to set a pin code that you can then force to be input when you play a particular video file or navigate into a given TV Show or Plugin. There is also an option to force the user to enter a pin when the system starts, and then restrict the amount of time the user is allowed each day.
+
+After install you need to:
+* Go to settings and select your pin
+* Enable which videos you want the pin to be displayed for (Either via Settings, Programs->PinSenty or Videos->Addons->PinSentry)
+<br />
+<br />
+== Pin Control ==
+Whenever a user selects an item that has been protected by PinSentry they will be prompted with a dialog like the following:
+<br />
+[[https://github.com/robwebset/repository.robwebset/raw/master/script.pinsentry/images/PinSentry-PinDialog1.JPG|200px]]
+<br />
+The correct pincode should be entered via the onscreen buttons or a remote control numeric pad in order to gain access. It you have "Allow Direction Keys In Pin Code" enabled in the settings then you can also use a pin code made up of Up, Down, Left and Right, this is useful if you have a remote control without numbers.
+<br />
+== Configuring Access ==
+In order to configure which files or operations require the entry of the pin number you can access the menu be either via:
+* Videos -> Addons -> PinSentry
+* Programs -> PinSenty
+* Settings
+That will present the main settings menu:
+<br />
+[[https://github.com/robwebset/repository.robwebset/raw/master/script.pinsentry/images/PinSentry-PermissionsScreen1.JPG|600px]]
+<br />
+That will allow you to set values as follows:
+:'''Movies'''
+::Specify individual Movies to restrict
+:'''TV Shows'''
+::Specify individual TV Shows to restrict
+:'''Movie Sets'''
+::Specify individual Movie Sets to restrict, this will also flag the movies in the movie set as restricted
+:'''Music Videos'''
+::Specify individual Music Videos to restrict
+:'''Plugins'''
+::Specify individual Plugins to restrict
+:'''File Source'''
+::Specify individual file sources to restrict
+:'''Classifications'''
+::Specify Movie or TV Show classification to restrict
+:'''Repositories'''
+::Specify repository to restrict
+:'''[Force Pin Entry]'''
+::Brings up the Pin Entry Dialog, forcing the pin to be entered before continuing
+<br />
+== Classifications ==
+Each country has their own set of classifications, each meaning different things. Pin Sentry currently supports the following countries classifications
+* Australia
+* Brazil
+* Canada
+* Denmark
+* Finland
+* France
+* Germany
+* Hungary
+* India
+* Ireland
+* Italy
+* Netherlands
+* Norway
+* Portugal
+* South Korea
+* Spain
+* Sweden
+* UK
+* USA
+If you would like another countries classifications supported then please post a request. The classifications have been taken from the following documents:
+* http://en.wikipedia.org/wiki/Motion_picture_rating_system
+* http://en.wikipedia.org/wiki/Television_content_rating_systems
+Note: Not all countries have TV Show classifications
+<br />
+<br />
+The classifications used on your Kodi library will depend on the settings (and scraper) that you used when you loaded them into the library initially. It is always worth noting that some videos can end up with incorrect classifications being set in your library.
+<br />
+<br />
+There are two options in the PinSentry settings to help you identify videos that do not require a pin when using the current classification settings. Items that do not require a pin will be highlighted with the "Play Triangle" to illustrate that it can be played without a pin.
+<br />
+<br />
+Videos that are protected via a classification rule can be excluded by manually selecting a given video and then choosing the "Remove Classification Restriction" option. Again, when this option is set it will be highlighted by the "Play Triangle".
+<br />
+== Multiple Security Levels ==
+If you wish to have multiple pins to restrict different types of content then you can enable this support via the options screen. You are allowed upto 5 different security levels, each needing a pin number to be set for them. (To access the settings screens the pin for the highest security level will be required).
+<br />
+<br />
+The security levels are "stacked" on top of each other. You can set the security level of each video, you will then be prompted for a pin when you try and access the video, at which point you can enter a pin number. If you are trying to play a video with security level 3, then you can enter the pin number set for either 3, 4 or 5 in order to get it playing. Entering the pin for level 1 or 2 will continue to prevent you viewing the video.
+<br />
+<br />
+If you enable the option "Show Security Level On Permissions Screen" then the security level will be shown on the permissions screens. This is shown in the format 01:00 (Level 1), 02:00 (Level 2), 03:00 (Level 3), 04:00 (Level 4) and 05:00 (Level 5). This is not ideal, but allows the use of the generic Kodi plugin screens without the need to introduce custom screens that would require support to be added for each skin.
+<br />
+== Time Limits ==
+If you wish to restrict the amount of time that a user is able to use Kodi each day (Children for example) then the Time Limits feature will allow you to do that. After being configured in the settings each time that Kodi starts it will prompt for a pin code to be entered.
+
+If you enter the master (unrestricted) pin then no limits will be applied.
+
+If you enter a users pin number then the current time limit settings (and remaining time) for that user will be displayed. The user will then be restricted to using Kodi within certain times of day and limited with regards to the total time that they can use Kodi each day.
+
+If a user wishes to see how much time they have remaining, they can run PinSentry from the Programs menu and the summary dialog will be displayed again.
+<br />
+== Force Pin Prompt ==
+It is possible to have the Pin Prompt be displayed and not exit until the correct pin is entered. This can be started in one of the following ways:
+* Videos -> Addons -> PinSentry -> [Force Pin Entry]
+* As a screensaver - just select PinSentry as your screensaver, and the prompt will appear when your screensaver time expires
+* On Kodi startup (Enable in settings)
+It is also possible to manually update your Kodi configuration to "map" a remote control (or keyboard button) to force the prompt to be displayed.  To do this you must create a [http://kodi.wiki/view/HOW-TO:Modify_keymaps keymap] file and map your chosen key to run the following command:
+<source lang="xml">
+SetProperty(PinSentryPrompt, true, 10000)
+</source>
+<br />
+
+== Settings ==
+This section details all the settings options for PinSentry
+=== Setup ===
+{| border="0"
+|- valign=top
+|
+:'''Pin Length'''
+::The number of digits required when entering a pin
+:'''Allow Direction Keys In Pin Code'''
+::Allows the direction keys (Up, Down, Left, Right) to be used in the pin code, this is useful if you have a remote control without numbers on.
+:'''Invalid Pin Notification'''
+::How to inform the user that an invalid pin has been entered.  Options include "None", "Notification" and "Dialog"
+:'''Number Of Security Levels'''
+::Allows multiple security levels to be used, so different pins are required for different videos
+:'''- Show Security Level On Permissions Screen'''
+::When using more than one security level, will show the current level on the permissions screen
+:<u>'''''Operations'''''</u>
+::
+:'''Set Pin Value'''
+::Sets the current pin
+:'''Set Permissions'''
+::Allows the setting of which items require the user to enter a pin before access.
+:'''Clean Database'''
+::Clears the database that contains all the rules for which items require a pin
+|}
+
+=== Activity ===
+{| border="0"
+|- valign=top
+|
+:'''Video Playing'''
+::Check if a pin is required each time a video is played
+:'''Navigation'''
+::Check if a pin is required to access certain menu items (Such as looking inside Movie Sets or TV Shows)
+:'''Plugins'''
+::Check if a pin is required to use a given plugin
+:'''System Settings'''
+::Prompt for a pin if someone enters the Kodi system settings
+:'''Repository Access'''
+::Check if a pin is required to use a given repository
+:'''File Source'''
+::Check if a pin is required when accessing soming using a give file source
+:'''- Only Restrict File Sources During Navigation'''
+::Only prompts for file source restrictions when navigating into one (Not when playing a video)
+:'''Block Movies Without A Classification'''
+::Requires a pin if an attempt to access a movie that has no valid classification set
+:'''Block TV Shows Without A Classification'''
+::Requires a pin if an attempt to access a TV Show that has no valid classification set
+|}
+
+=== Advanced ===
+{| border="0"
+|- valign=top
+|
+:'''Remember Pin'''
+::In the pin should be remembered after it has been entered. Options are Off, On (will be remembered until the screensaver starts or the system is restarted) and "For Time Period"
+:'''- Remember Pin For (Minutes)'''
+::If configured to remember the pin for a given time period, this sets that period (Between 1 and 120 minutes)
+:'''Background'''
+::What to display behind the pin dialog. Options are None (the default background will be visible), Black (the screen behind the dialog will be blacked out), PinSentry (the PinSentry fanart will be displayed) and Custom (a user defined image is used)
+:'''- Custom Background Image'''
+::Allows the user to select their own background image
+:'''Only Enforce Pin Between Set Times'''
+::Will only prompt for a pin at certain times of the day
+:'''- Start Time'''
+::The time that the pin starts to be required
+:'''- End Time'''
+::The time that the pin is no longer required
+:'''Highlight Videos Not Protected By Classifications'''
+::If enabled, any you are using classification restrictions, will highlight the videos (with a play triangle) that are not currently protected with a pin in the "Set Permissions" menu
+:'''Prompt For Pin On Startup'''
+::When Kodi starts the Pin Entry Dialog will be displayed, forcing a pin to be entered before continuing
+:<u>'''''Debugging'''''</u>
+::
+:'''Enable Debug logging'''
+::Enables PinSentry debug logging into the Kodi log file
+|}
+
+=== Time Limits ===
+{| border="0"
+|- valign=top
+|
+:'''Warn User When Remaining Time Is (Minutes)'''
+::Set the time when a popup notification will be displayed detailing the time remaining on the allowance
+:'''Number Of Limited Users'''
+::Set the number of limited users that you want on the system
+:<u>'''''Unrestricted User Access Settings'''''</u>
+::
+:'''- Set Pin Value'''
+::Sets the value of the pin to be used for the user that has no time limit (This must be set if the number of users is greater than zero)
+:<u>'''''User X Access Settings'''''</u>
+::
+:'''- Set Pin Value'''
+::Sets the pin for the given user
+:'''- User Name'''
+::The name of the user, this is just so that you can easily recognise each users settings for future updates
+:'''- Start Time'''
+::The time of day that the user is allowed to access Kodi
+:'''- End Time'''
+::The time of day that the user is no longer allowed to access Kodi
+:'''- Daily Viewing Allowance (Minutes)'''
+::The total time in one day that the user is allowed to use Kodi
+|}
+<br />
+== Debugging ==
+If reporting a problem, please also provide a debug log. To do this you need to enable BOTH:
+* Kodi logging from the main setting menu
+* PinSentry debug from the PinSentry addon settings menu
+Please do not paste the log into the forum thread, just link to it.
+<br />

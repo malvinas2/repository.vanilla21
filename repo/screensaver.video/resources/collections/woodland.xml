@@ -1,0 +1,26 @@
+<videoscreensaver>
+	<collection>Woodland</collection>
+	<encoded>true</encoded>
+	<builtin>true</builtin>
+	<video>
+		<name>Woodland 1 - [1.3GB] - 720p</name>
+		<filename>Woodland001-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Woodland001.JPG</image>
+		<duration>3600</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy93Njl5dnkzMDFmeHBwbnkvV29vZGxhbmQwMDEtNzIwcC5tcDQ/ZGw9MQ==</primary>
+	</video>
+	<video>
+		<name>Woodland 2 - [664MB] - 720p</name>
+		<filename>Woodland002-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Woodland002.JPG</image>
+		<duration>3609</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy94MXY3cTk0OTRzMmFmd2kvV29vZGxhbmQwMDItNzIwcC5tcDQ/ZGw9MQ==</primary>
+	</video>
+	<video>
+		<name>Woodland 3 - [1.0GB] - 720p</name>
+		<filename>Woodland003-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Woodland003.JPG</image>
+		<duration>3631</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy94YjFhc3Z4MzNmOWNsYTcvV29vZGxhbmQwMDMtNzIwcC5tcDQ/ZGw9MQ==</primary>
+	</video>
+</videoscreensaver>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window>
+    <zorder>2</zorder>
+	<onload condition="!VideoPlayer.Content(livetv)">SetFocus($INFO[Skin.String(defaultosdbutton_video)])</onload>
+    <onload condition="VideoPlayer.Content(livetv) + Skin.String(defaultosdbutton_livetv,807) + VideoPlayer.HasEpg">SetFocus($INFO[Skin.String(defaultosdbutton_livetv)])</onload>
+	<onload condition="VideoPlayer.Content(livetv) + Skin.String(defaultosdbutton_livetv,807) + !VideoPlayer.HasEpg">SetFocus(203)</onload>
+
+    <controls>
+						
+		<control type="button">
+			<description>background close area</description>
+			<left>0</left>
+			<top>300</top>
+			<!-- <bottom>300</bottom> -->
+			<width>100%</width>
+			<height>600</height>
+			<texturefocus />
+			<texturenofocus />
+			<!-- <bottom>280</bottom> -->
+			<!-- only for 'debugging-purposes' --> 
+			<!-- <texture border="5">$VAR[osdpanelimage]</texture> -->
+			<!-- <colordiffuse>red</colordiffuse> -->
+			<!-- end of only for 'debugging-purposes' --> 
+			<onclick>Action(close)</onclick>
+		</control>
+		
+        <!--OSD Panel-->
+        <control type="group">
+            <!-- OSD buttons -->
+            <include>OSDButtonsModern</include>
+            <animation effect="slide" start="0,400" end="0,0" tween="cubic" easing="out" delay="0" time="250" reversible="false" condition="!Player.ShowInfo">WindowOpen</animation>
+            <animation effect="fade" start="0" end="100" delay="0" time="300" reversible="false" condition="Player.ShowInfo">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="0" time="300" reversible="false" condition="Player.ShowInfo">WindowClose</animation>
+            <include>HideOsdConditions</include>
+		</control>
+    </controls>
+</window>

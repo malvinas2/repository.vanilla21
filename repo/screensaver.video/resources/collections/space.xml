@@ -1,0 +1,33 @@
+<videoscreensaver>
+	<collection>Space</collection>
+	<encoded>true</encoded>
+	<builtin>true</builtin>
+	<video>
+		<name>Space 1 - [970MB] - 720p</name>
+		<filename>Space001-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Space001.PNG</image>
+		<duration>5692</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy80Mm02aW0wd3p3OGpwdXkvU3BhY2UwMDEtNzIwcC5tcDQ/ZGw9MQ==</primary>
+	</video>
+	<video>
+		<name>Space 2 - [563MB] - 1080p</name>
+		<filename>Space002-1080p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Space002.JPG</image>
+		<duration>1845</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy9oYzZraTBxaG0wbjg0NWEvU3BhY2UwMDItMTA4MHAubXA0P2RsPTE=</primary>
+	</video>
+	<video>
+		<name>Space 3 - [2.2GB] - 720p</name>
+		<filename>Space003-720p.mkv</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Space003.png</image>
+		<duration>3765</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy9uYm13c2ZjMmZzY2s5cXcvU3BhY2UwMDMtNzIwcC5ta3Y/ZGw9MQ==</primary>
+	</video>
+	<video>
+		<name>Space 4 - [1.2GB] - 720p</name>
+		<filename>Space004-720p.mp4</filename>
+		<image>https://raw.githubusercontent.com/robwebset/repository.robwebset/master/screensaver.video/images/VideoScreensaver-Space004.PNG</image>
+		<duration>7234</duration>
+		<primary>aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy9mNHo5ZGhmNmJkcWxmeXcvU3BhY2UwMDQtNzIwcC5tcDQ/ZGw9MQ==</primary>
+	</video>
+</videoscreensaver>

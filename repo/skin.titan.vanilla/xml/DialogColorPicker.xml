@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window>
+    <defaultcontrol always="true">6</defaultcontrol>
+    <controls>
+        <!--Dialog Overlay-->
+        <include>DialogOverlayExtra</include>
+        <!--Dialog Main -->
+        <control type="group">
+			<include>animation_window_open_close</include>
+			<centertop>50%</centertop>
+			<centerleft>50%</centerleft>
+            <width>980</width>
+            <height>920</height>
+            <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput)</visible>
+			<control type="image">
+                <!--Panel-->
+				<left>0</left>
+				<top>0</top>
+                <width>980</width>
+                <height>920</height>
+                <texture border="15">diffuse/bgpanel.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+            </control>
+			<control type="image">
+                <!--Panel-->
+				<left>0</left>
+				<top>0</top>
+                <width>980</width>
+                <height>920</height>
+				<bordersize>10</bordersize>
+                <texture border="15">diffuse/bgpanel.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+            </control>
+            <!--Header-->
+            <control type="label" id="1">
+                <description>Heading</description>
+				<centerleft>50%</centerleft>
+				<top>20</top>
+                <width>1180</width>
+                <label></label>
+                <include>DialogHeader</include>
+                <align>center</align>
+            </control>
+            <!--Default Group-->
+            <control type="group">
+				<control type="image">
+					<left>30</left>
+					<top>135</top>
+					<width>920</width>
+					<bottom>120</bottom>
+					<texture border="5">dialogs/default/inner.png</texture>
+				</control>
+            </control>
+			<!-- Color picker panel -->
+			<control type="panel" id="6">
+				<left>40</left>
+				<top>150</top>
+				<width>880</width>
+				<bottom>130</bottom>
+				<onup>6</onup>
+				<ondown>6</ondown>
+				<onleft>9001</onleft>
+				<onright>61</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>61</pagecontrol>
+				<viewtype label="100">icon</viewtype>
+				<itemlayout height="80" width="146">
+					<control type="group">
+						<control type="image">
+							<top>3</top>
+							<left>8</left>
+							<width>138</width>
+							<height>74</height>
+							<texture>diffuse/background.png</texture>
+						</control>
+						<control type="image">
+							<top>3</top>
+							<left>8</left>
+							<width>138</width>
+							<height>74</height>
+							<texture border="0">colors/white.png</texture>
+							<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
+							<aspectratio>stretch</aspectratio>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout height="80" width="146">
+					<control type="group">
+						<animation effect="zoom" time="200" tween="sine" easing="inout" start="100" end="124" center="auto">Focus</animation>
+						<control type="image">
+							<top>3</top>
+							<left>8</left>
+							<width>138</width>
+							<height>74</height>
+							<texture>diffuse/background.png</texture>
+						</control>
+						<control type="image">
+							<top>3</top>
+							<left>8</left>
+							<width>138</width>
+							<height>74</height>
+							<texture border="0">colors/white.png</texture>
+							<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
+							<aspectratio>stretch</aspectratio>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="61">
+				<left>930</left>
+				<top>145</top>
+				<width>20</width>
+				<bottom>140</bottom>
+				<onleft>6</onleft>
+				<onright>9001</onright>
+				<orientation>vertical</orientation>
+				<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(61) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(61) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+			</control>			
+			<!-- Informationen uber Farbe, links unten -->
+			<control type="label">
+				<left>28</left>
+				<top>95</top>
+				<width>880</width>
+				<height>35</height>
+				<align>left</align>
+				<include>DialogLabel</include>
+				<label>[COLOR=$INFO[Skin.String(GeneralHighlightTextColor)]]$LOCALIZE[91831]: [/COLOR]$INFO[Container(6).ListItem.Label,, - ]$INFO[Container(6).ListItem.Label2,#,]</label>
+			</control>
+			<!-- Anzahl der Eintrage, rechts unten -->
+			<control type="label">
+				<right>20</right>
+				<top>860</top>
+				<width>400</width>
+				<height>35</height>
+				<align>right</align>
+				<include>DialogLabel</include>
+				<label>[COLOR=$INFO[Skin.String(GeneralHighlightTextColor)]]$INFO[Container(6).NumItems][/COLOR] $LOCALIZE[91830] - [COLOR=$INFO[Skin.String(GeneralHighlightTextColor)]]$INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages][/COLOR]</label>
+			</control>
+			<!-- Abbrechen-Button, links unten -->
+			<control type="grouplist" id="9001">
+				<left>20</left>
+				<top>820</top> 
+				<onup>6</onup>
+				<itemgap>45</itemgap>
+				<ondown>6</ondown>
+				<control type="button" id="7">
+                    <!--Close-->
+					<width>270</width>
+                    <include>DialogButtonOther</include>
+                    <label>$LOCALIZE[222]</label>
+                </control>
+			</control>
+        </control>
+    </controls>
+</window>
