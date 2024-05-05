@@ -4,8 +4,8 @@
 			<property name="id">$NUMBER[1]</property>
 			<label>$ADDON[script.skinshortcuts 32022]</label>
 			<label2>$ADDON[script.skinshortcuts 32022]</label2>
-			<icon>resource://resource.images.skinicons.wide/tvrecordings.png</icon>
-			<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/appearance.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/tvrecordings.png</icon>
+			<thumb />
 			<property name="labelID">livetv</property>
 			<property name="defaultID">livetv</property>
 			<property name="widget">tvrecordings</property>
@@ -29,8 +29,8 @@
 			<property name="id">$NUMBER[2]</property>
 			<label>Mediathek</label>
 			<label2>$LOCALIZE[70044]</label2>
-			<icon>resource://resource.images.skinicons.wide/videoaddons.png</icon>
-			<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_OnlineVideos.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/videoaddons.png</icon>
+			<thumb />
 			<property name="labelID">mediathek</property>
 			<property name="defaultID">mediathek</property>
 			<property name="background">resource://resource.images.skinbackgrounds.titanium/hover_OnlineVideos.jpg</property>
@@ -48,8 +48,8 @@
 			<property name="id">$NUMBER[3]</property>
 			<label>$LOCALIZE[342]</label>
 			<label2>$ADDON[script.skinshortcuts 32015]</label2>
-			<icon>resource://resource.images.skinicons.wide/movies.png</icon>
-			<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/curtains.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/movies.png</icon>
+			<thumb />
 			<property name="labelID">movies</property>
 			<property name="defaultID">movies</property>
 			<property name="widget">recommendedmovies</property>
@@ -83,8 +83,8 @@
 			<property name="id">$NUMBER[4]</property>
 			<label>$LOCALIZE[20343]</label>
 			<label2>$ADDON[script.skinshortcuts 32016]</label2>
-			<icon>resource://resource.images.skinicons.wide/tvseries.png</icon>
-			<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_my tv series.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/tvseries.png</icon>
+			<thumb />
 			<property name="labelID">tvshows</property>
 			<property name="defaultID">tvshows</property>
 			<property name="widget">nextepisodes</property>
@@ -118,8 +118,8 @@
 			<property name="id">$NUMBER[5]</property>
 			<label>$LOCALIZE[10005]</label>
 			<label2>$ADDON[script.skinshortcuts 32019]</label2>
-			<icon>resource://resource.images.skinicons.wide/music.png</icon>
-			<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/music.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/music.png</icon>
+			<thumb />
 			<property name="labelID">10005</property>
 			<property name="defaultID">music</property>
 			<property name="widget">recentalbums</property>
@@ -148,8 +148,8 @@
 			<property name="id">$NUMBER[6]</property>
 			<label>$LOCALIZE[20389]</label>
 			<label2>$ADDON[script.skinshortcuts 32018]</label2>
-			<icon>resource://resource.images.skinbackgrounds.titanium/hover_my music.jpg</icon>
-			<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_my radio.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_my music.jpg</icon>
+			<thumb />
 			<property name="labelID">musicvideos</property>
 			<property name="defaultID">musicvideos</property>
 			<property name="widget">recentmusicvideos</property>
@@ -173,8 +173,8 @@
 			<property name="id">$NUMBER[7]</property>
 			<label>$ADDON[script.skinshortcuts 32087]</label>
 			<label2>$ADDON[script.skinshortcuts 32087]</label2>
-			<icon>resource://resource.images.skinicons.wide/radio.png</icon>
-			<thumb>special://home/addons/addons/skin.titan.vanilla/media/radio-wallpapger.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/radio.png</icon>
+			<thumb />
 			<property name="labelID">radio</property>
 			<property name="defaultID">radio</property>
 			<property name="background">resource://resource.images.skinbackgrounds.titanium/hover_radiotime.jpg</property>
@@ -193,8 +193,8 @@
 			<property name="id">$NUMBER[8]</property>
 			<label>Search</label>
 			<label2>$LOCALIZE[70045]</label2>
-			<icon>resource://resource.images.skinicons.wide/programs.png</icon>
-			<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_mynumberplace.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/programs.png</icon>
+			<thumb />
 			<property name="labelID">search</property>
 			<property name="defaultID">search</property>
 			<property name="background">resource://resource.images.skinbackgrounds.titanium/hover_mynumberplace.jpg</property>
@@ -212,8 +212,8 @@
 			<property name="id">$NUMBER[9]</property>
 			<label>$LOCALIZE[12600]</label>
 			<label2>$LOCALIZE[70046]</label2>
-			<icon>resource://resource.images.skinicons.wide/weather.png</icon>
-			<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_my weather.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/weather.png</icon>
+			<thumb />
 			<property name="labelID">weather</property>
 			<property name="defaultID">weather</property>
 			<property name="widget">weather</property>
@@ -236,8 +236,8 @@
 			<property name="id">$NUMBER[10]</property>
 			<label>$LOCALIZE[10002]</label>
 			<label2>$ADDON[script.skinshortcuts 32020]</label2>
-			<icon>resource://resource.images.skinicons.wide/pictures.png</icon>
-			<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_my pictures.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/pictures.png</icon>
+			<thumb />
 			<property name="labelID">pictures</property>
 			<property name="defaultID">pictures</property>
 			<property name="background">resource://resource.images.skinbackgrounds.titanium/hover_my pictures.jpg</property>
@@ -256,8 +256,8 @@
 			<property name="id">$NUMBER[11]</property>
 			<label>$LOCALIZE[10006]</label>
 			<label2>$ADDON[script.skinshortcuts 32014]</label2>
-			<icon>resource://resource.images.skinicons.wide/livetv.png</icon>
-			<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_moving pictures.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/livetv.png</icon>
+			<thumb />
 			<property name="labelID">10006</property>
 			<property name="defaultID">videos</property>
 			<property name="background">resource://resource.images.skinbackgrounds.titanium/hover_my videos.jpg</property>
@@ -275,8 +275,8 @@
 			<property name="id">$NUMBER[12]</property>
 			<label>$LOCALIZE[15016]</label>
 			<label2>$ADDON[script.skinshortcuts 32123]</label2>
-			<icon>resource://resource.images.skinicons.wide/games.png</icon>
-			<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_tetris.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_tetris.jpg</icon>
+			<thumb />
 			<property name="labelID">15016</property>
 			<property name="defaultID">games</property>
 			<property name="background">resource://resource.images.skinbackgrounds.titanium/hover_tetris.jpg</property>
@@ -294,8 +294,8 @@
 			<property name="id">$NUMBER[13]</property>
 			<label>$LOCALIZE[10001]</label>
 			<label2>$ADDON[script.skinshortcuts 32007]</label2>
-			<icon>resource://resource.images.skinicons.wide/addons.png</icon>
-			<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/addons.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/addons.png</icon>
+			<thumb />
 			<property name="labelID">programs</property>
 			<property name="defaultID">addons</property>
 			<property name="background">resource://resource.images.skinbackgrounds.titanium/programs.jpg</property>
@@ -313,8 +313,8 @@
 			<property name="id">$NUMBER[14]</property>
 			<label>$LOCALIZE[10134]</label>
 			<label2>$LOCALIZE[70047]</label2>
-			<icon>resource://resource.images.skinicons.wide/favourites.png</icon>
-			<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/display.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/favourites.png</icon>
+			<thumb />
 			<property name="labelID">10134</property>
 			<property name="defaultID">favorites</property>
 			<property name="background">resource://resource.images.skinbackgrounds.titanium/videos.jpg</property>
@@ -332,8 +332,8 @@
 			<property name="id">$NUMBER[15]</property>
 			<label>Netflix</label>
 			<label2 />
-			<icon>special://home/addons/addons/skin.titan.vanilla/media/netflix_thumb.jpg</icon>
-			<thumb>special://home/addons/addons/skin.titan.vanilla/media/hover_netflix.jpg</thumb>
+			<icon>special://home/addons/skin.titan.vanilla/media/images/netflix_thumb.jpg</icon>
+			<thumb />
 			<property name="labelID">netflix</property>
 			<property name="defaultID">netflix</property>
 			<visible>System.hasAddon(plugin.video.netflix)</visible>
@@ -350,8 +350,8 @@
 			<property name="id">$NUMBER[16]</property>
 			<label>YouTube</label>
 			<label2 />
-			<icon>special://home/addons/addons/skin.titan.vanilla/media/youtube_thumb.jpg</icon>
-			<thumb>special://home/addons/addons/skin.titan.vanilla/media/hover_youtube.jpg</thumb>
+			<icon>special://home/addons/skin.titan.vanilla/media/images/youtube_thumb.jpg</icon>
+			<thumb />
 			<property name="labelID">youtube</property>
 			<property name="defaultID">youtube</property>
 			<visible>System.hasAddon(plugin.video.youtube)</visible>
@@ -368,8 +368,8 @@
 			<property name="id">$NUMBER[17]</property>
 			<label>Spotify</label>
 			<label2 />
-			<icon>special://home/addons/addons/skin.titan.vanilla/media/hspotify_thumb.jpg</icon>
-			<thumb>special://home/addons/addons/skin.titan.vanilla/media/hover_spotify.jpg</thumb>
+			<icon>special://home/addons/skin.titan.vanilla/media/images/spotify_thumb.jpg</icon>
+			<thumb />
 			<property name="labelID">spotify</property>
 			<property name="defaultID">spotify</property>
 			<visible>System.hasAddon(plugin.audio.spotify)</visible>
@@ -386,8 +386,8 @@
 			<property name="id">$NUMBER[18]</property>
 			<label>$ADDON[script.skinshortcuts 32032]</label>
 			<label2>$ADDON[script.skinshortcuts 32032]</label2>
-			<icon>resource://resource.images.skinicons.wide/videos.png</icon>
-			<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_play disc.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/videos.png</icon>
+			<thumb />
 			<property name="labelID">dvd</property>
 			<property name="defaultID">dvd</property>
 			<property name="background">resource://resource.images.skinbackgrounds.titanium/hover_play disc.jpg</property>
@@ -406,8 +406,8 @@
 			<property name="id">$NUMBER[19]</property>
 			<label>$LOCALIZE[10004]</label>
 			<label2>$LOCALIZE[70009]</label2>
-			<icon>resource://resource.images.skinicons.wide/settings.png</icon>
-			<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/settings.jpg</thumb>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/settings.png</icon>
+			<thumb />
 			<property name="labelID">settings</property>
 			<property name="defaultID">settings</property>
 			<property name="widget">systeminfo</property>

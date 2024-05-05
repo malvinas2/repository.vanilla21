@@ -52,7 +52,7 @@
 		<label>32087</label>
 		<label2>$ADDON[script.skinshortcuts 32087]</label2>
 		<icon>resource://resource.images.skinicons.wide/radio.png</icon>
-		<thumb>special://home/addons/addons/skin.titan.vanilla/media/radio-wallpapger.jpg</thumb>
+		<thumb>special://home/addons/skin.titan.vanilla/media/images/radio-wallpaper.jpg</thumb>
 		<action>ActivateWindow(radiochannels,return)</action>
 	</shortcut>
 	<shortcut>
@@ -116,8 +116,8 @@
 		<defaultID>netflix</defaultID>
 		<label>Netflix</label>
 		<label2></label2>
-		<icon>special://home/addons/addons/skin.titan.vanilla/media/netflix_thumb.jpg</icon>
-		<thumb>special://home/addons/addons/skin.titan.vanilla/media/hover_netflix.jpg</thumb>
+		<icon>special://home/addons/skin.titan.vanilla/media/images/netflix_thumb.jpg</icon>
+		<thumb>special://home/addons/skin.titan.vanilla/media/images/hover_netflix.jpg</thumb>
 		<action>RunAddon(plugin.video.netflix)</action>
 		<visible>System.hasAddon(plugin.video.netflix)</visible>
 	</shortcut>
@@ -125,8 +125,8 @@
 		<defaultID>youtube</defaultID>
 		<label>YouTube</label>
 		<label2></label2>
-		<icon>special://home/addons/addons/skin.titan.vanilla/media/youtube_thumb.jpg</icon>
-		<thumb>special://home/addons/addons/skin.titan.vanilla/media/hover_youtube.jpg</thumb>
+		<icon>special://home/addons/skin.titan.vanilla/media/images/youtube_thumb.jpg</icon>
+		<thumb>special://home/addons/skin.titan.vanilla/media/images/hover_youtube.jpg</thumb>
 		<action>RunAddon(plugin.video.youtube)</action>
 		<visible>System.hasAddon(plugin.video.youtube)</visible>
 	</shortcut>
@@ -134,8 +134,8 @@
 		<defaultID>spotify</defaultID>
 		<label>Spotify</label>
 		<label2></label2>
-		<icon>special://home/addons/addons/skin.titan.vanilla/media/hspotify_thumb.jpg</icon>
-		<thumb>special://home/addons/addons/skin.titan.vanilla/media/hover_spotify.jpg</thumb>
+		<icon>special://home/addons/skin.titan.vanilla/media/images/spotify_thumb.jpg</icon>
+		<thumb>special://home/addons/skin.titan.vanilla/media/images/hover_spotify.jpg</thumb>
 		<action>RunAddon(plugin.audio.spotify)</action>
 		<visible>System.hasAddon(plugin.audio.spotify)</visible>
 	</shortcut>	

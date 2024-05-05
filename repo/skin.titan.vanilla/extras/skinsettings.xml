@@ -374,7 +374,7 @@
     <!-- display tags in Views -->
     <setting id="Views_DisplayTags" value="" label="$LOCALIZE[16316]" condition="" icon="" description="Let skin decide based on content/artwork"/>
     <setting id="Views_DisplayTags" value="disable" label="$LOCALIZE[1223]" condition="" icon="" description="Never show tags"/>
-    <setting id="Views_DisplayTags" value="enable" label="$LOCALIZE[305]" condition="" icon="" description="Always show tags"/>
+    <setting id="Views_DisplayTags" value="enable" label="$LOCALIZE[305]" condition="" icon="" description="Always show tags" default="true"/>
     
     <!-- display info in Poster Row View -->
     <setting id="View_DisplayInfo" value="disable" label="$LOCALIZE[1223]" condition="" icon="" description="Let skin decide based on content/artwork"/>
@@ -414,8 +414,8 @@
     <setting id="infoline" value="total" label="$LOCALIZE[31034]" condition="!Window.IsActive(script-skinshortcuts.xml)" icon="" description=""/>
     
     <!-- cast select action in videoinfo -->
-    <setting id="videoinfo_castaction" value="library" label="$LOCALIZE[31690]" condition="" icon="" description=""/>
-    <setting id="videoinfo_castaction" value="extendedinfo" label="$LOCALIZE[31691]" condition="" icon="" description="" default="true"/>
+    <setting id="videoinfo_castaction" value="library" label="$LOCALIZE[31690]" condition="" icon="" description="" default="true"/>
+    <setting id="videoinfo_castaction" value="extendedinfo" label="$LOCALIZE[31691]" condition="" icon="" description=""/>
     
     <!-- trailer action in videoinfo -->
     <setting id="videoinfo_traileraction" value="fullscreen" label="$LOCALIZE[244]" condition="" icon="" description=""/>
@@ -518,6 +518,6 @@
     <!-- skinshortcuts background -->
     <setting id="skinshortcuts-$INFO[Container(211).ListItem.Property(submenuVisibility)]" label="$LOCALIZE[31804]" value="widgetfanart" condition="!String.IsEmpty(Container(211).ListItem.Property(widget))"/>
     
-    <setting id="MusicBackground" value="resource://resource.images.skinbackgrounds.titanium/hover_my radio.jpg" label="Default" condition="" default="true" />
+    <!-- <setting id="MusicBackground" value="resource://resource.images.skinbackgrounds.titanium/hover_my radio.jpg" label="Default" condition="" default="true" />  -->
     
 </settings>

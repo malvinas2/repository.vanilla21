@@ -1,0 +1,159 @@
+<shortcuts>
+	<shortcut>
+		<defaultID>livetv</defaultID>
+		<label>32022</label>
+		<label2>$ADDON[script.skinshortcuts 32022]</label2>
+		
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/appearance.jpg</icon>
+		<action>ActivateWindow(TVGuide)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>mediathek</defaultID>
+		<label>Mediathek</label>
+		<label2>$LOCALIZE[70044]</label2>
+
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_OnlineVideos.jpg</icon>
+		<action>ActivateWindow(1108)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>movies</defaultID>
+		<label>342</label>
+		<label2>$ADDON[script.skinshortcuts 32015]</label2>
+
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/curtains.jpg</icon>
+		<action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>tvshows</defaultID>
+		<label>20343</label>
+		<label2>$ADDON[script.skinshortcuts 32016]</label2>
+
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_my tv series.jpg</icon>
+		<action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>music</defaultID>
+		<label>10005</label>
+		<label2>$ADDON[script.skinshortcuts 32019]</label2>
+
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/music.jpg</icon>
+		<action>ActivateWindow(Music,musicdb://,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>musicvideos</defaultID>
+		<label>20389</label>
+		<label2>$ADDON[script.skinshortcuts 32018]</label2>
+
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_my radio.jpg</icon>
+		<action>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>radio</defaultID>
+		<label>32087</label>
+		<label2>$ADDON[script.skinshortcuts 32087]</label2>
+
+		<icon>special://home/addons/skin.titan.vanilla/media/images/radio-wallpaper.jpg</icon>
+		<action>ActivateWindow(radiochannels,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>search</defaultID>
+		<label>Search</label>
+		<label2>$LOCALIZE[70045]</label2>
+	
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_mynumberplace.jpg</icon>
+		<action>ActivateWindow(1107)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>weather</defaultID>
+		<label>12600</label>
+		<label2>$LOCALIZE[70046]</label2>
+
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_my weather.jpg</icon>
+		<action>ActivateWindow(Weather)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>pictures</defaultID>
+		<label>10002</label>
+		<label2>$ADDON[script.skinshortcuts 32020]</label2>
+	
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_my pictures.jpg</icon>
+		<action>ActivateWindow(Pictures,return)</action>
+		<visible>!Skin.HasSetting(HomeMenuUsePlexforPictures)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>videos</defaultID>
+		<label>10006</label>
+		<label2>$ADDON[script.skinshortcuts 32014]</label2>
+
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_moving pictures.jpg</icon>
+		<action>ActivateWindow(Videos,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>games</defaultID>
+		<label>15016</label>
+		<label2>$ADDON[script.skinshortcuts 32123]</label2>
+
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_tetris.jpg</icon>
+		<action>ActivateWindow(Games,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>addons</defaultID>
+		<label>10001</label>
+		<label2>$ADDON[script.skinshortcuts 32007]</label2>
+
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/addons.jpg</icon>
+		<action>ActivateWindow(Programs,Addons,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>favorites</defaultID>
+		<label>10134</label>
+		<label2>$LOCALIZE[70047]</label2>
+
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/display.jpg</icon>
+		<action>ActivateWindow(FavouritesBrowser)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>netflix</defaultID>
+		<label>Netflix</label>
+		<label2></label2>
+
+		<icon>special://home/addons/skin.titan.vanilla/media/images/hover_netflix.jpg</icon>
+		<action>RunAddon(plugin.video.netflix)</action>
+		<visible>System.hasAddon(plugin.video.netflix)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>youtube</defaultID>
+		<label>YouTube</label>
+		<label2></label2>
+	
+		<icon>special://home/addons/skin.titan.vanilla/media/images/hover_youtube.jpg</icon>
+		<action>RunAddon(plugin.video.youtube)</action>
+		<visible>System.hasAddon(plugin.video.youtube)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>spotify</defaultID>
+		<label>Spotify</label>
+		<label2></label2>
+
+		<icon>special://home/addons/skin.titan.vanilla/media/images/hover_spotify.jpg</icon>
+		<action>RunAddon(plugin.audio.spotify)</action>
+		<visible>System.hasAddon(plugin.audio.spotify)</visible>
+	</shortcut>	
+	<shortcut>
+		<defaultID>dvd</defaultID>
+		<label>32032</label>
+		<label2>$ADDON[script.skinshortcuts 32032]</label2>
+
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_play disc.jpg</icon>
+		<action>PlayDisc</action>
+		<visible>System.HasMediaDVD | System.HasMediaAudioCD</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>settings</defaultID>
+		<label>10004</label>
+		<label2>$LOCALIZE[70009]</label2>
+
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/settings.jpg</icon>
+		<action>ActivateWindow(Settings)</action>
+	</shortcut>
+</shortcuts>

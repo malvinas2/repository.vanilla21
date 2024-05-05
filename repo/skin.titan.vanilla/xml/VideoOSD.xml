@@ -5,6 +5,7 @@
 	<onload condition="!VideoPlayer.Content(livetv)">SetFocus($INFO[Skin.String(defaultosdbutton_video)])</onload>
     <onload condition="VideoPlayer.Content(livetv) + Skin.String(defaultosdbutton_livetv,807) + VideoPlayer.HasEpg">SetFocus($INFO[Skin.String(defaultosdbutton_livetv)])</onload>
 	<onload condition="VideoPlayer.Content(livetv) + Skin.String(defaultosdbutton_livetv,807) + !VideoPlayer.HasEpg">SetFocus(203)</onload>
+	<onload condition="VideoPlayer.Content(livetv) + !Skin.String(defaultosdbutton_livetv,807)">SetFocus($INFO[Skin.String(defaultosdbutton_livetv)])</onload>
 
     <controls>
 						

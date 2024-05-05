@@ -28,11 +28,18 @@
 		
 		<!-- Hintergrundeinstellungen -->
 		<onload condition="!Skin.HasSetting(HomeMenuDefaults46)">Skin.SetBool(UseSectionBackground)</onload>
+
+		<!-- <onload condition="!Skin.String(BackgroundOverlayTexture.label)">Skin.SetString(BackgroundOverlayTexture.label,None)</onload> -->
+        <!-- <onload condition="!Skin.String(BackgroundOverlayTexture)">Skin.SetString(BackgroundOverlayTexture,None)</onload> -->
+
 		<onload condition="!Skin.String(BackgroundOverlayTexture.label)">Skin.SetString(BackgroundOverlayTexture.label,Default)</onload>
-        <onload condition="!Skin.String(BackgroundOverlayTexture.label)">Skin.SetString(BackgroundOverlayTexture,diffuse/background.png)</onload>
-		<onload condition="!Skin.String(BackgroundOverlayColor)">Skin.SetString(BackgroundOverlayColor,d84d86a6)</onload>
-        <onload condition="!Skin.String(BackgroundOverlayColor.name)">Skin.SetString(BackgroundOverlayColor.name,Custom)</onload>
-        <onload condition="!Skin.String(BackgroundOverlayColor.base)">Skin.SetString(BackgroundOverlayColor.base,ff4d86a6)</onload>
+        <onload condition="!Skin.String(BackgroundOverlayTexture.label)">Skin.SetString(BackgroundOverlayTexture,diffuse/transparent.png)</onload>
+		
+
+			<!-- Hintergrund-Muster Farbe -->
+		<onload condition="!Skin.String(BackgroundOverlayColor)">Skin.SetString(BackgroundOverlayColor,None)</onload>
+        <onload condition="!Skin.String(BackgroundOverlayColor.name)">Skin.SetString(BackgroundOverlayColor.name,None)</onload>
+			<!-- Hintergrund Farbuberlagerung -->
         <onload condition="!Skin.String(BackgroundDiffuseColor)">Skin.SetString(BackgroundDiffuseColor,None)</onload>
         <onload condition="!Skin.String(BackgroundDiffuseColor.name)">Skin.SetString(BackgroundDiffuseColor.name,None)</onload>
 
@@ -106,7 +113,12 @@
 		<onload condition="!Skin.HasSetting(HomeMenuDefaults46)">Skin.SetBool(PanelViewShowInfo)</onload>
 		<onload condition="!Skin.HasSetting(HomeMenuDefaults46)">Skin.SetBool(AnimateDiscArt)</onload>		
 		<onload condition="!Skin.HasSetting(HomeMenuDefaults46)">Skin.SetBool(GuideShowInfo)</onload>
-		<onload condition="!Skin.HasSetting(HomeMenuDefaults46)">Skin.SetBool(View523_DetailsShowFanart)</onload>
+
+		<!-- Netflix Ansicht -->
+		<onload condition="!Skin.HasSetting(HomeMenuDefaults46)">Skin.SetBool(View523_DetailsShowFanart,false)</onload>
+		<onload>Skin.SetBool(View523_UseFixedLayout)</onload>
+		<onload>Skin.SetBool(View523_DisableExtraFanArt)</onload>
+		<onload>Skin.SetString(View523.Tags,enable)</onload>
 		
 		<!-- wahrscheinlich uberflussig -->
 		<onload condition="!Skin.HasSetting(HomeMenuDefaults46)">Skin.SetBool(ShowlabelsLandscape)</onload>

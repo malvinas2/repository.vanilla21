@@ -3,80 +3,80 @@
 		<defaultID>livetv</defaultID>
 		<label>32022</label>
 		<label2>$ADDON[script.skinshortcuts 32022]</label2>
-		<icon>resource://resource.images.skinicons.wide/tvrecordings.png</icon>
-		<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/appearance.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/tvrecordings.png</icon>
+		<thumb></thumb>
 		<action>ActivateWindow(TVGuide)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>mediathek</defaultID>
 		<label>Mediathek</label>
 		<label2>$LOCALIZE[70044]</label2>
-		<icon>resource://resource.images.skinicons.wide/videoaddons.png</icon>
-		<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_OnlineVideos.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/videoaddons.png</icon>
+		<thumb></thumb>
 		<action>ActivateWindow(1108)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>movies</defaultID>
 		<label>342</label>
 		<label2>$ADDON[script.skinshortcuts 32015]</label2>
-		<icon>resource://resource.images.skinicons.wide/movies.png</icon>
-		<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/curtains.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/movies.png</icon>
+		<thumb></thumb>
 		<action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>tvshows</defaultID>
 		<label>20343</label>
 		<label2>$ADDON[script.skinshortcuts 32016]</label2>
-		<icon>resource://resource.images.skinicons.wide/tvseries.png</icon>
-		<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_my tv series.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/tvseries.png</icon>
+		<thumb></thumb>
 		<action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>music</defaultID>
 		<label>10005</label>
 		<label2>$ADDON[script.skinshortcuts 32019]</label2>
-		<icon>resource://resource.images.skinicons.wide/music.png</icon>
-		<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/music.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/music.png</icon>
+		<thumb></thumb>
 		<action>ActivateWindow(Music,musicdb://,return)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>musicvideos</defaultID>
 		<label>20389</label>
 		<label2>$ADDON[script.skinshortcuts 32018]</label2>
-		<icon>resource://resource.images.skinbackgrounds.titanium/hover_my music.jpg</icon>
-		<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_my radio.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_my music.jpg</icon>
+		<thumb></thumb>
 		<action>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>radio</defaultID>
 		<label>32087</label>
 		<label2>$ADDON[script.skinshortcuts 32087]</label2>
-		<icon>resource://resource.images.skinicons.wide/radio.png</icon>
-		<thumb>special://home/addons/addons/skin.titan.vanilla/media/radio-wallpapger.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/radio.png</icon>
+		<thumb></thumb>
 		<action>ActivateWindow(radiochannels,return)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>search</defaultID>
 		<label>Search</label>
 		<label2>$LOCALIZE[70045]</label2>
-		<icon>resource://resource.images.skinicons.wide/programs.png</icon>
-		<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_mynumberplace.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/programs.png</icon>
+		<thumb></thumb>
 		<action>ActivateWindow(1107)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>weather</defaultID>
 		<label>12600</label>
 		<label2>$LOCALIZE[70046]</label2>
-		<icon>resource://resource.images.skinicons.wide/weather.png</icon>
-		<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_my weather.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/weather.png</icon>
+		<thumb></thumb>
 		<action>ActivateWindow(Weather)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>pictures</defaultID>
 		<label>10002</label>
 		<label2>$ADDON[script.skinshortcuts 32020]</label2>
-		<icon>resource://resource.images.skinicons.wide/pictures.png</icon>
-		<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_my pictures.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/pictures.png</icon>
+		<thumb></thumb>
 		<action>ActivateWindow(Pictures,return)</action>
 		<visible>!Skin.HasSetting(HomeMenuUsePlexforPictures)</visible>
 	</shortcut>
@@ -84,40 +84,40 @@
 		<defaultID>videos</defaultID>
 		<label>10006</label>
 		<label2>$ADDON[script.skinshortcuts 32014]</label2>
-		<icon>resource://resource.images.skinicons.wide/livetv.png</icon>
-		<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_moving pictures.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/livetv.png</icon>
+		<thumb></thumb>
 		<action>ActivateWindow(Videos,return)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>games</defaultID>
 		<label>15016</label>
 		<label2>$ADDON[script.skinshortcuts 32123]</label2>
-		<icon>resource://resource.images.skinicons.wide/games.png</icon>
-		<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_tetris.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_tetris.jpg</icon>
+		<thumb></thumb>
 		<action>ActivateWindow(Games,return)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>addons</defaultID>
 		<label>10001</label>
 		<label2>$ADDON[script.skinshortcuts 32007]</label2>
-		<icon>resource://resource.images.skinicons.wide/addons.png</icon>
-		<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/addons.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/addons.png</icon>
+		<thumb></thumb>
 		<action>ActivateWindow(Programs,Addons,return)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>favorites</defaultID>
 		<label>10134</label>
 		<label2>$LOCALIZE[70047]</label2>
-		<icon>resource://resource.images.skinicons.wide/favourites.png</icon>
-		<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/display.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/favourites.png</icon>
+		<thumb></thumb>
 		<action>ActivateWindow(FavouritesBrowser)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>netflix</defaultID>
 		<label>Netflix</label>
 		<label2></label2>
-		<icon>special://home/addons/addons/skin.titan.vanilla/media/netflix_thumb.jpg</icon>
-		<thumb>special://home/addons/addons/skin.titan.vanilla/media/hover_netflix.jpg</thumb>
+		<icon>special://home/addons/skin.titan.vanilla/media/images/netflix_thumb.jpg</icon>
+		<thumb></thumb>
 		<action>RunAddon(plugin.video.netflix)</action>
 		<visible>System.hasAddon(plugin.video.netflix)</visible>
 	</shortcut>
@@ -125,8 +125,8 @@
 		<defaultID>youtube</defaultID>
 		<label>YouTube</label>
 		<label2></label2>
-		<icon>special://home/addons/addons/skin.titan.vanilla/media/youtube_thumb.jpg</icon>
-		<thumb>special://home/addons/addons/skin.titan.vanilla/media/hover_youtube.jpg</thumb>
+		<icon>special://home/addons/skin.titan.vanilla/media/images/youtube_thumb.jpg</icon>
+		<thumb></thumb>
 		<action>RunAddon(plugin.video.youtube)</action>
 		<visible>System.hasAddon(plugin.video.youtube)</visible>
 	</shortcut>
@@ -134,8 +134,8 @@
 		<defaultID>spotify</defaultID>
 		<label>Spotify</label>
 		<label2></label2>
-		<icon>special://home/addons/addons/skin.titan.vanilla/media/hspotify_thumb.jpg</icon>
-		<thumb>special://home/addons/addons/skin.titan.vanilla/media/hover_spotify.jpg</thumb>
+		<icon>special://home/addons/skin.titan.vanilla/media/images/spotify_thumb.jpg</icon>
+		<thumb></thumb>
 		<action>RunAddon(plugin.audio.spotify)</action>
 		<visible>System.hasAddon(plugin.audio.spotify)</visible>
 	</shortcut>	
@@ -143,8 +143,8 @@
 		<defaultID>dvd</defaultID>
 		<label>32032</label>
 		<label2>$ADDON[script.skinshortcuts 32032]</label2>
-		<icon>resource://resource.images.skinicons.wide/videos.png</icon>
-		<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/hover_play disc.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/videos.png</icon>
+		<thumb></thumb>
 		<action>PlayDisc</action>
 		<visible>System.HasMediaDVD | System.HasMediaAudioCD</visible>
 	</shortcut>
@@ -152,8 +152,8 @@
 		<defaultID>settings</defaultID>
 		<label>10004</label>
 		<label2>$LOCALIZE[70009]</label2>
-		<icon>resource://resource.images.skinicons.wide/settings.png</icon>
-		<thumb>special://home/addons/resource.images.skinbackgrounds.titanium/resources/settings.jpg</thumb>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/settings.png</icon>
+		<thumb></thumb>
 		<action>ActivateWindow(Settings)</action>
 	</shortcut>
 </shortcuts>
