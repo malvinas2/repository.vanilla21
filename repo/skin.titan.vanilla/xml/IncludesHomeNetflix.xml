@@ -21,7 +21,7 @@
                 <onback>300</onback>
                 <itemgap>0</itemgap>
                 <pagecontrol>317</pagecontrol>
-                <include name="WidgetsAutoRotate" content="WidgetsAutoRotate" condition="Skin.String(widgets_rotate_delay) + !Skin.String(widgets_rotate,disabled)">
+                <include content="WidgetsAutoRotate" condition="Skin.String(widgets_rotate_delay) + !Skin.String(widgets_rotate,disabled)">
                     <param name="interval" value="$INFO[Skin.String(widgets_rotate_delay)]" />
                 </include>
                 <include>skinshortcuts-template-Widgets</include>
@@ -433,7 +433,7 @@
                     <onleft>300</onleft>
                     <ondown>77777</ondown>
                     <onup>77777</onup>
-                    <include name="WidgetsAutoRotate" content="WidgetsAutoRotate" condition="Skin.String(widgets_rotate_delay) + !Skin.String(widgets_rotate,disabled)">
+                    <include content="WidgetsAutoRotate" condition="Skin.String(widgets_rotate_delay) + !Skin.String(widgets_rotate,disabled)">
                         <param name="interval" value="$INFO[Skin.String(widgets_rotate_delay)]" />
                     </include>
                     <onfocus>Setproperty(SkinHelper.WidgetContainer,1508)</onfocus>
@@ -448,7 +448,7 @@
                     <onright>53</onright>
                     <ondown>77777</ondown>
                     <onup>77777</onup>
-                    <include name="WidgetsAutoRotate" content="WidgetsAutoRotate" condition="Skin.String(widgets_rotate_delay) + !Skin.String(widgets_rotate,disabled)">
+                    <include content="WidgetsAutoRotate" condition="Skin.String(widgets_rotate_delay) + !Skin.String(widgets_rotate,disabled)">
                         <param name="interval" value="$INFO[Skin.String(widgets_rotate_delay)]" />
                     </include>
                     <onclick>RunScript(script.skin.helper.service,action=showinfo)</onclick>
@@ -502,7 +502,7 @@
                 <itemlayout width="960" height="555">
                 </itemlayout>
                 <focusedlayout width="960" height="555">
-                    <include name="HiddenWidgetButton" content="HiddenWidgetButton">
+                    <include content="HiddenWidgetButton">
                         <param name="widgetstyle" value="spotlight" />
                         <param name="widgetId" value="1508" />
                     </include>
@@ -614,7 +614,7 @@
                 <effect delay="280" easing="in" end="100" start="0" time="180" tween="sine" type="fade"/>
             </animation>
             <animation time="100" effect="fade" start="0" end="100" reversible="false" easing="inout" condition="!Skin.HasSetting(Widgets_Animation)">Visible</animation>
-            <include name="$PARAM[widgetStyle]" content="$PARAM[widgetStyle]">
+            <include content="$PARAM[widgetStyle]">
                 <param name="widgetid" value="$PARAM[widgetid]" />
                 <param name="widgetTags" value="WidgetTagOverlayAuto" />
                 <param name="multiRows" value="false" />
@@ -625,27 +625,27 @@
     </include>
 	
     <include name="netflix_items_movies">
-        <include condition="true" content="netflix_customhub_item" name="netflix_customhub_item">
+        <include condition="true" content="netflix_customhub_item">
 			<param name="widgetid" value="510" />
             <param name="widgetStyle" value="widget_layout_default" />
 			<param name="skinsetting" value="netflixhub-movies-510" />
 		</include>
-        <include condition="true" content="netflix_customhub_item" name="netflix_customhub_item">
+        <include condition="true" content="netflix_customhub_item">
 			<param name="widgetid" value="520" />
             <param name="widgetStyle" value="widget_layout_default" />
 			<param name="skinsetting" value="netflixhub-movies-520" />
 		</include>
-        <include condition="true" content="netflix_customhub_item" name="netflix_customhub_item">
+        <include condition="true" content="netflix_customhub_item">
 			<param name="widgetid" value="530" />
             <param name="widgetStyle" value="widget_layout_default" />
 			<param name="skinsetting" value="netflixhub-movies-530" />
 		</include>
-        <include condition="true" content="netflix_customhub_item" name="netflix_customhub_item">
+        <include condition="true" content="netflix_customhub_item">
 			<param name="widgetid" value="540" />
             <param name="widgetStyle" value="widget_layout_default" />
 			<param name="skinsetting" value="netflixhub-movies-540" />
 		</include>
-        <include condition="true" content="netflix_customhub_item" name="netflix_customhub_item">
+        <include condition="true" content="netflix_customhub_item">
 			<param name="widgetid" value="550" />
             <param name="widgetStyle" value="widget_layout_default" />
 			<param name="skinsetting" value="netflixhub-movies-550" />
@@ -653,27 +653,27 @@
     </include>
 	
     <include name="netflix_items_tvshows">
-        <include condition="true" content="netflix_customhub_item" name="netflix_customhub_item">
+        <include condition="true" content="netflix_customhub_item">
 			<param name="widgetid" value="510" />
             <param name="widgetStyle" value="widget_layout_default" />
 			<param name="skinsetting" value="netflixhub-tvshows-510" />
 		</include>
-        <include condition="true" content="netflix_customhub_item" name="netflix_customhub_item">
+        <include condition="true" content="netflix_customhub_item">
 			<param name="widgetid" value="520" />
             <param name="widgetStyle" value="widget_layout_default" />
 			<param name="skinsetting" value="netflixhub-tvshows-520" />
 		</include>
-        <include condition="true" content="netflix_customhub_item" name="netflix_customhub_item">
+        <include condition="true" content="netflix_customhub_item">
 			<param name="widgetid" value="530" />
             <param name="widgetStyle" value="widget_layout_default" />
 			<param name="skinsetting" value="netflixhub-tvshows-530" />
 		</include>
-        <include condition="true" content="netflix_customhub_item" name="netflix_customhub_item">
+        <include condition="true" content="netflix_customhub_item">
 			<param name="widgetid" value="540" />
             <param name="widgetStyle" value="widget_layout_default" />
 			<param name="skinsetting" value="netflixhub-tvshows-540" />
 		</include>
-        <include condition="true" content="netflix_customhub_item" name="netflix_customhub_item">
+        <include condition="true" content="netflix_customhub_item">
 			<param name="widgetid" value="550" />
             <param name="widgetStyle" value="widget_layout_default" />
 			<param name="skinsetting" value="netflixhub-tvshows-550" />

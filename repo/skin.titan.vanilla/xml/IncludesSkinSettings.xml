@@ -1111,7 +1111,7 @@
                 <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
             </control>
             <!-- enable/disable views -->
-            <include name="SkinSettings_ActionButton" content="SkinSettings_ActionButton">
+            <include content="SkinSettings_ActionButton">
                 <param name="id" value="6026" />
                 <param name="label" value="31487" />
                 <param name="action" value="RunScript(script.skin.helper.service,action=ENABLEVIEWS,richlayout=true)" />
@@ -1806,7 +1806,7 @@
                 <onclick>Skin.ToggleSetting(SkinHelper.EnablePVRThumbs)</onclick>
                 <selected>Skin.HasSetting(SkinHelper.EnablePVRThumbs)</selected>
             </control>
-            <include name="SkinSettings_ActionButton" content="SkinSettings_ActionButton">
+            <include content="SkinSettings_ActionButton">
                 <param name="id" value="31709" />
                 <param name="label" value="31709" />
                 <param name="action" value="Addon.OpenSettings(script.module.metadatautils)" />
@@ -2468,7 +2468,7 @@
                 <selected>Skin.HasSetting(EnableWeatherAlertOverlay)</selected>
             </control>	
             <!-- skin helper settings -->
-            <include name="SkinSettings_ActionButton" content="SkinSettings_ActionButton">
+            <include content="SkinSettings_ActionButton">
                 <param name="id" value="8019" />
                 <param name="label" value="31630" />
                 <param name="action" value="Addon.OpenSettings(script.module.metadatautils)" />

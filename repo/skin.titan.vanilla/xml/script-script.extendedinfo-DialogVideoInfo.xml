@@ -171,7 +171,28 @@
                         <onclick>SetProperty(TrailerPlaying,Playing,home)</onclick>
 						<visible>Integer.IsGreater(Container(1150).NumItems,0)</visible>
 					</control>
-                    
+					<control type="button" id="102">
+						<!--Get video versions-->
+						<description>Versions</description>
+						<width>285</width>
+						<height>60</height>
+						<align>center</align>
+						<textoffsetx>0</textoffsetx>
+						<label>$LOCALIZE[40000]</label>
+						<visible>String.IsEqual(ListItem.DBType,movie)</visible>
+						<onclick>ActivateWindow(managevideoversions)</onclick>
+					</control>
+					<control type="button" id="100">
+						<!--Get video extras-->
+						<description>Extras</description>
+						<width>285</width>
+						<height>60</height>
+						<align>center</align>
+						<textoffsetx>0</textoffsetx>
+						<label>$LOCALIZE[40211]</label>
+						<visible>String.IsEqual(ListItem.DBType,movie)</visible>
+						<onclick>ActivateWindow(managevideoextras)</onclick>
+					</control>
                     <control type="button" id="101">
                         <!--Get Thumb Artwork Beef -->
                         <label>$LOCALIZE[13511]</label>

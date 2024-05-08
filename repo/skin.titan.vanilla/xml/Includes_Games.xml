@@ -304,6 +304,8 @@
 						<onleft>9001</onleft>
 						<onup>3</onup>
 						<ondown>3</ondown>
+						<onback condition="!String.IsEmpty(Window(Home).Property(agentsdialog))">18</onback>
+						<onback condition="String.IsEmpty(Window(Home).Property(agentsdialog))"></onback>
 						<pagecontrol>62</pagecontrol>
 						<orientation>vertical</orientation>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -391,6 +393,13 @@
 					<onleft>3</onleft>
 					<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(62) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
 					<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(62) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+				</control>
+
+				<control type="button" id="199">
+					<include>HiddenButton</include>
+					<!-- <onfocus>Action(Close,GamePorts)</onfocus> -->
+					<!-- <onfocus condition="!String.IsEmpty(Window(Home).Property(agentsdialog))">ActivateWindow(GameAgents)</onfocus> -->
+					<onfocus>SendClick(gameports,18)</onfocus>
 				</control>
 
 				<!--Buttons-->
