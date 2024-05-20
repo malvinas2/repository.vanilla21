@@ -284,6 +284,7 @@
 				<align>center</align>
 				<wrapmultiline>true</wrapmultiline>
 			</control>
+			
 			<control type="group">
 				<description>Content area</description>
 				<top>100</top>

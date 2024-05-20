@@ -471,7 +471,7 @@
     <include name="FooterContentGeneral">
         <control type="group">
             <!--Title-->
-            <visible>!Window.IsActive(DialogVideoInfo.xml) + !Window.IsVisible(favourites)</visible>
+            <visible>!Window.IsActive(DialogVideoInfo.xml) + !Window.IsVisible(favouritesbrowser)</visible>
             <animation effect="slide" end="0,16" time="0" condition="!Skin.HasTheme(classic)">Conditional</animation>
             <height>80</height>
             <bottom>20</bottom>

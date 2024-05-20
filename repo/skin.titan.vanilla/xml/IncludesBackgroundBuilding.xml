@@ -376,7 +376,7 @@
     <variable name="fanartBackground">
 
         <!-- extendedinfo -->
-        <value condition="[Window.IsActive(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsActive(script-ExtendedInfo Script-DialogInfo.xml)]">$VAR[fanartBackground_extendedinfo]</value>
+        <value condition="[Window.IsActive(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsActive(script-script.extendedinfo-DialogInfo.xml)]">$VAR[fanartBackground_extendedinfo]</value>
         <!--nextaired script backgrounds -->
         <value condition="[Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)]">$VAR[fanartBackground_nextaired]</value>
         <!-- custom search -->

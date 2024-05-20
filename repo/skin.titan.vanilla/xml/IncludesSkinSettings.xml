@@ -1361,6 +1361,12 @@
                 <label2>$INFO[Skin.String(defaultosdbutton_livetv.label)]</label2>
                 <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=defaultosdbutton_livetv,header=$LOCALIZE[31663])</onclick>
             </control>
+			<control type="radiobutton" id="13072">
+                <include>SkinSettings_Button</include>
+                <label>$LOCALIZE[70056]</label>
+                <onclick>Skin.ToggleSetting(DetailedPlotOrExtendedInfo)</onclick>
+                <selected>Skin.HasSetting(DetailedPlotOrExtendedInfo)</selected>
+            </control>			
 			<control type="radiobutton" id="13068">
                 <include>SkinSettings_Button</include>
                 <label>$LOCALIZE[70034]</label>

@@ -8,8 +8,8 @@
 		<value condition="Window.IsActive(pvrgroupmanager) + !String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19048] - $LOCALIZE[19174]</value>
 		<value condition="Window.IsActive(pvrgroupmanager) + String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19048] - $LOCALIZE[19173]</value>
         <value condition="[Window.IsActive(skinsettings) | Window.IsActive(3016)]">[UPPERCASE]$LOCALIZE[20077][/UPPERCASE]</value>
-		<value condition="window.isactive(favourites) | window.isactive(favouritesbrowser)">$LOCALIZE[1036]</value>
-		<value condition="Window.IsActive(script-ExtendedInfo Script-DialogInfo.xml) + !String.IsEmpty(Window(Home).Property(actor.title))">$INFO[Window(Home).Property(actor.title)]</value>
+		<value condition="Window.IsActive(favouritesbrowser)">$LOCALIZE[1036]</value>
+		<value condition="Window.IsActive(script-script.extendedinfo-DialogInfo.xml) + !String.IsEmpty(Window(Home).Property(actor.title))">$INFO[Window(Home).Property(actor.title)]</value>
 		<value condition="Window.IsActive(loginscreen)">$INFO[System.CurrentWindow]</value>
 		<value condition="Window.IsActive(DialogVideoInfo.xml) + !String.IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.TvShowTitle]</value>
 		<value condition="Window.IsActive(DialogVideoInfo.xml) + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
@@ -91,7 +91,7 @@
         <value condition="String.IsEqual(Container.FolderPath,videodb://tvshows/titles/)">$LOCALIZE[20343]: $INFO[Window(Home).Property(TVShows.Count)] • $LOCALIZE[20360]: $INFO[Window(Home).Property(Episodes.Count)] • $LOCALIZE[16101]: $INFO[Window(Home).Property(Episodes.UnWatched)] • $INFO[Control.GetLabel(3)]</value>
         
         <value condition="[Window.IsActive(skinsettings) | Window.IsActive(3016)]">$VAR[value_header_skinsettings]</value>
-		<value condition="Window.IsActive(script-ExtendedInfo Script-DialogInfo.xml)">[CR]</value>
+		<value condition="Window.IsActive(script-script.extendedinfo-DialogInfo.xml)">[CR]</value>
 		<value condition="Window.IsActive(weather)">$INFO[Control.GetLabel(3)]</value>
         <value condition="Window.IsActive(Home)">$INFO[Container(300).ListItem.Label]</value>
 		<value condition="[Window.IsActive(tvrecordings) | Window.IsActive(tvtimers) | Window.IsActive(tvchannels) | Window.IsActive(tvguide) | Window.IsActive(mypvr.xml)] + !String.IsEmpty(Pvr.NowRecordingTitle)">$INFO[Pvr.NowRecordingTitle,$LOCALIZE[19158]: ] ($INFO[Pvr.NowRecordingChannel])</value>
@@ -1364,6 +1364,7 @@
 		<value condition="Control.HasFocus(101)">$LOCALIZE[13396]</value>	<!-- ooo Audio-Einstellungen -->
 		<value condition="Control.HasFocus(808)">$LOCALIZE[19033]</value>	<!-- ooo Informationen -->
 		<value condition="Control.HasFocus(70044)">$LOCALIZE[70049]</value>	<!-- ooo detaillierte Informationen -->		
+		<value condition="Control.HasFocus(70045)">$LOCALIZE[70049]</value>	<!-- ooo detaillierte Informationen -->	
 		<value condition="Control.HasFocus(806)">$LOCALIZE[19019]</value>	<!-- ooo Kanale Seitenguide -->
 		<value condition="Control.HasFocus(807)">$LOCALIZE[19069]</value>	<!-- ooo Programm-Guide -->
 		<value condition="Control.HasFocus(70043)">$LOCALIZE[5]</value>		<!-- ooo Einstellungen -->

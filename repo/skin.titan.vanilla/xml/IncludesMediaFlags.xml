@@ -88,7 +88,7 @@
 			<control type="image">
 				<include>mediaflags_large_layout</include>
 				<texture background="true">flags/flags_large/extras.png</texture>
-				<visible>ListItem.HasVideoVersions | ListItem.HasVideoExtras | VideoPlayer.HasVideoVersions</visible>
+				<visible>ListItem.HasVideoVersions | ListItem.HasVideoExtras | VideoPlayer.HasVideoVersions | String.Contains(Player.Folderpath, Extras) | String.Contains(Player.Folderpath, extras)</visible>
 			</control>
 			
             <include>mediaflags_sets</include>
@@ -192,7 +192,7 @@
             <control type="image">
                 <include>mediaflags_large_layout</include>
 				<texture background="true">flags/flags_large/extras.png</texture>
-				<visible>ListItem.HasVideoVersions | ListItem.HasVideoExtras | VideoPlayer.HasVideoVersions</visible>
+				<visible>ListItem.HasVideoVersions | ListItem.HasVideoExtras | VideoPlayer.HasVideoVersions | String.Contains(Player.Folderpath, Extras) | String.Contains(Player.Folderpath, extras)</visible>
             </control>
         </control>
     </include>
@@ -247,7 +247,7 @@
 			<control type="image">
 				<include>mediaflags_large_layout</include>
 				<texture background="true">flags/flags_large/extras.png</texture>
-				<visible>ListItem.HasVideoVersions | ListItem.HasVideoExtras | VideoPlayer.HasVideoVersions</visible>
+				<visible>ListItem.HasVideoVersions | ListItem.HasVideoExtras | VideoPlayer.HasVideoVersions | String.Contains(Player.Folderpath, Extras) | String.Contains(Player.Folderpath, extras)</visible>
 			</control>
         </control>
     </include>
@@ -536,7 +536,7 @@
 			<control type="group">
 				<width>100</width>
 				<height>29</height>
-				<visible>ListItem.HasVideoVersions | ListItem.HasVideoExtras | VideoPlayer.HasVideoVersions</visible>
+				<visible>ListItem.HasVideoVersions | ListItem.HasVideoExtras | VideoPlayer.HasVideoVersions | String.Contains(Player.Folderpath, Extras) | String.Contains(Player.Folderpath, extras)</visible>
 				<control type="group">
 					<control type="image">
 						<colordiffuse>$VAR[mediaFlagsFontColor]</colordiffuse>
@@ -828,7 +828,7 @@
 		<control type="group">
 			<width>80</width>
 			<height>36</height>
-			<visible>ListItem.HasVideoVersions | ListItem.HasVideoExtras | VideoPlayer.HasVideoVersions</visible>
+			<visible>ListItem.HasVideoVersions | ListItem.HasVideoExtras | VideoPlayer.HasVideoVersions | String.Contains(Player.Folderpath, Extras) | String.Contains(Player.Folderpath, extras)</visible>
 			<control type="image">
 				<posx>-6</posx>
 				<colordiffuse>$VAR[mediaFlagsFontColor]</colordiffuse>
@@ -1048,7 +1048,7 @@
                 <colordiffuse>$VAR[mediaFlagsFontColor]</colordiffuse>
                 <texture>flags/extras.png</texture>
                 <bordersize>3</bordersize>
-				<visible>ListItem.HasVideoVersions | ListItem.HasVideoExtras | VideoPlayer.HasVideoVersions</visible>
+				<visible>ListItem.HasVideoVersions | ListItem.HasVideoExtras | VideoPlayer.HasVideoVersions | String.Contains(Player.Folderpath, Extras) | String.Contains(Player.Folderpath, extras)</visible>
             </control>
 			<control type="label" id="44225">
                 <font>flags</font>
@@ -1056,7 +1056,7 @@
                 <width>auto</width>
                 <textcolor>$VAR[mediaFlagsFontColor]</textcolor>
                 <label>Extras</label>
-				<visible>ListItem.HasVideoVersions | ListItem.HasVideoExtras | VideoPlayer.HasVideoVersions</visible>
+				<visible>ListItem.HasVideoVersions | ListItem.HasVideoExtras | VideoPlayer.HasVideoVersions | String.Contains(Player.Folderpath, Extras) | String.Contains(Player.Folderpath, extras)</visible>
             </control>
 			<control type="label">
                 <!-- whitespace -->

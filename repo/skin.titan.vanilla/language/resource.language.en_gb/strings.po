@@ -3264,6 +3264,10 @@ msgctxt "#70055"
 msgid "6 hours forward"
 msgstr ""
 
+msgctxt "#70056"
+msgid "Show detailed plot or extended information on OSD"
+msgstr ""
+
 msgctxt "#91830"
 msgid "items"
 msgstr ""

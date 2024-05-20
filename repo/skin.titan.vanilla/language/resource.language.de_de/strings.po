@@ -3238,6 +3238,10 @@ msgctxt "#70055"
 msgid "6 hours forward"
 msgstr "6 Stunden vor"
 
+msgctxt "#70056"
+msgid "Show detailed plot or extended information on OSD"
+msgstr "Zeige ausführlichen Plot oder ausführliche Information im OSD"
+
 msgctxt "#71026"
 msgid "Timeshift"
 msgstr "Timeshift"

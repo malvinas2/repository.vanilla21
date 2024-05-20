@@ -480,7 +480,7 @@
                     </control>
 					<control type="group">
 						<visible>String.IsEmpty(Window.Property(AdditionalInfo))</visible>
-						<visible>!Window.IsActive(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsActive(script-ExtendedInfo Script-DialogInfo.xml)</visible>
+						<visible>!Window.IsActive(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsActive(script-script.extendedinfo-DialogInfo.xml)</visible>
 						<include>animation_window_open_close</include>
 						<!--Info-->
 						<control type="grouplist">

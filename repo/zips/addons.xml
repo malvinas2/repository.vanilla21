@@ -886,7 +886,7 @@ v1.0.19 (2018-03-30)
 			<logo>resources/logo.png</logo>
 		</assets>
 	</extension>
-</addon><addon id="skin.titan.vanilla" version="21.24.05.08" name="Titan Vanilla" provider-name="malvinas2, marcelveldt, AchillesPunks, cartman.dos, fuchs2468, mardukL, mgonzales">
+</addon><addon id="skin.titan.vanilla" version="21.24.05.20" name="Titan Vanilla" provider-name="malvinas2, marcelveldt, AchillesPunks, cartman.dos, fuchs2468, mardukL, mgonzales">
 	<requires>
 		<import version="5.17.0" addon="xbmc.gui" />	
 		<import addon="script.skinshortcuts" version="2.0.3" />

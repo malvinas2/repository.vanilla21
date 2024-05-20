@@ -1440,7 +1440,8 @@
 				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]epg.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]epg.png</texturenofocus>
 				<visible>!skin.string(GuideRows, 5)</visible>
-				<visible>[VideoPlayer.Content(livetv) + VideoPlayer.HasEPG] | [MusicPlayer.Content(LiveTV) + VideoPlayer.HasEPG]</visible>
+				<!-- <visible>[VideoPlayer.Content(livetv) + VideoPlayer.HasEPG] | [MusicPlayer.Content(LiveTV) + VideoPlayer.HasEPG]</visible> -->
+				<visible>VideoPlayer.Content(livetv) | MusicPlayer.Content(LiveTV)</visible>
 				<onclick>Dialog.Close(VideoOSD)</onclick>
 				<onclick>Dialog.Close(MusicOSD)</onclick>
                 <onclick>ActivateWindow(PVRChannelGuide)</onclick>
@@ -1486,7 +1487,7 @@
 				<onclick>Skin.ToggleSetting(EnableOSDInfo)</onclick>
 			</control>
 			<control type="button" id="70044">
-				<description> detailed infopanel </description>
+				<description>detailed infopanel</description>
 				<width>$PARAM[size]</width>
 				<height>$PARAM[size]</height>
 				<label>$LOCALIZE[31133]</label>
@@ -1497,9 +1498,29 @@
 				<alttexturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]infolongon.png</alttexturenofocus>
 				<usealttexture>Window.IsActive(1122)</usealttexture>
 				<visible>Player.HasVideo | MusicPlayer.Content(LiveTV)</visible>
+				<visible>!Skin.HasSetting(DetailedPlotOrExtendedInfo)</visible>
 				<!-- <onclick>Skin.SetBool(EnableOSDInfo)</onclick> -->
 				<onclick>Action(close)</onclick>
 				<onclick>ActivateWindow(1122)</onclick>
+			</control>			
+			<control type="button" id="70045">
+				<description>extended infopanel</description>
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<label>$LOCALIZE[31133]</label>
+				<font/>
+				<texturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]infolong.png</texturefocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]infolong.png</texturenofocus>
+				<alttexturefocus colordiffuse="$INFO[Skin.String(OSDButtonsFocusColor)]">$PARAM[iconspath]infolongon.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">$PARAM[iconspath]infolongon.png</alttexturenofocus>
+				<usealttexture>Window.IsActive(script-script.extendedinfo-DialogVideoInfo.xml)</usealttexture>
+				<onclick>Action(close)</onclick>
+				<onclick condition="VideoPlayer.Content(movies) + !String.IsEmpty(VideoPlayer.DBID)">RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[VideoPlayer.DBID])</onclick>
+				<onclick condition="VideoPlayer.Content(movies) + String.IsEmpty(VideoPlayer.DBID)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[VideoPlayer.Title],year=$INFO[VideoPlayer.Year])</onclick>
+				<onclick condition="VideoPlayer.Content(episodes) + !StringIsEmpty(VideoPlayer.TvShowDBID)">RunScript(script.extendedinfo,info=extendedtvinfo,dbid=$INFO[VideoPlayer.TvShowDBID])</onclick>
+				<onclick condition="VideoPlayer.Content(episodes) + String.IsEmpty(VideoPlayer.TvShowDBID)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[VideoPlayer.TvShowTitle],year=$INFO[VideoPlayer.Year])</onclick>
+				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + System.AddonIsEnabled(script.extendedinfo)</visible>
+				<visible>Skin.HasSetting(DetailedPlotOrExtendedInfo)</visible>
 			</control>			
 			<control type="button" id="70043">
 				<description>settings</description>
