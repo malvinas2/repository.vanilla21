@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- 417 -->
+<!-- 419 -->
 
 <includes>
     <include name="custom_content">
@@ -1039,6 +1039,15 @@
 			<onclick condition="System.hasAddon(plugin.video.l0re.fcstpauli)">RunAddon(plugin.video.l0re.fcstpauli)</onclick>
 			<visible>System.hasAddon(plugin.video.l0re.fcstpauli)</visible>
 		</item>
+		<item id="419">
+			<description>FIFA+</description>
+			<label>FIFA+</label>
+			<label2></label2>
+			<icon>$INFO[System.AddonIcon(plugin.video.fifaplusbeta)]</icon>
+			<onclick>Dialog.Close(all)</onclick>
+			<onclick condition="System.hasAddon(plugin.video.fifaplusbeta)">RunAddon(plugin.video.fifaplusbeta)</onclick>
+			<visible>System.hasAddon(plugin.video.fifaplusbeta)</visible>
+		</item>			
 		<item id="333">
 			<description>Filmarkivet</description>
 			<label>Filmarkivet</label>
@@ -3469,6 +3478,15 @@
 			<onclick condition="System.hasAddon(plugin.video.wdrmaus)">RunAddon(plugin.video.wdrmaus)</onclick>
 			<visible>System.hasAddon(plugin.video.wdrmaus)</visible>
 		</item>
+		<item id="418">
+			<description>wedotv</description>
+			<label>wedotv</label>
+			<label2></label2>
+			<icon>$INFO[System.AddonIcon(plugin.video.wedotv)]</icon>
+			<onclick>Dialog.Close(all)</onclick>
+			<onclick condition="System.hasAddon(plugin.video.wedotv)">RunAddon(plugin.video.wedotv)</onclick>
+			<visible>System.hasAddon(plugin.video.wedotv)</visible>
+		</item>			
 		<item id="24">
 			<description>Welt der Wunder</description>
 			<label>Welt der Wunder</label>

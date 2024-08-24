@@ -62,6 +62,7 @@ class HTTPSpottyAudioStreamer:
             #        before starting the next track and visualizer. So one visualizer
             #        instance is stopping at the same time as another is starting.
             # Give some time for visualizations to finish.
+            log_msg(f"Delay {self.__gap_between_tracks}s before starting track.")
             time.sleep(self.__gap_between_tracks)
 
         self.__spotty_streamer.set_track(track_id, float(duration))
@@ -82,7 +83,7 @@ class HTTPSpottyAudioStreamer:
         request_range = bottle.request.headers.get("Range", "")
         log_msg(f"Request header range: '{request_range}'.", LOGDEBUG)
 
-        if not request_range or request_range == "bytes=0-":
+        if not request_range or (request_range == "bytes=0-"):
             status = 200
             content_range = ""
             log_msg(f"Full request, content length = {range_end- range_begin}.", LOGDEBUG)

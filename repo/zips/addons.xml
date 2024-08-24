@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="plugin.audio.spotify" version="1.3.9" name="Spotify" provider-name="glk1001">
+<addons><addon id="plugin.audio.spotify" version="1.3.11" name="Spotify" provider-name="glk1001">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="xbmc.addon" version="18.9.701" />
@@ -7,7 +7,6 @@
         <import addon="script.module.chardet" version="5.1.0" />
         <import addon="script.module.idna" version="3.4.0" />
         <import addon="script.module.requests" version="2.31.0" />
-        <import addon="script.module.six" version="1.15.0" />
         <import addon="script.module.urllib3" version="1.26.16" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="plugin.py">
@@ -17,13 +16,13 @@
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <summary lang="en_GB">Unofficial Spotify music plugin for Kodi</summary>
-        <description lang="en_GB">Allows you to use your Spotify premium account to connect and play Spotify through Kodi. After installing, use 'Configure' to enter your Spotify username and password.</description>
+        <description lang="en_GB">Allows you to use your Spotify premium account to connect and play Spotify through Kodi.</description>
         <disclaimer lang="en_GB">This product uses the SPOTIFY WEB API but is not endorsed, certified or otherwise approved in any way by Spotify. Spotify is the registered trademark of Spotify AB.</disclaimer>
         <source>https://github.com/glk1001/plugin.audio.spotify</source>
         <website>https://github.com/glk1001/glk1001.github.io</website>
-        <news>v1.3.9 (2023-12-19)
-Added Spanish translations. (Thanks trihy.)
-1.3.8: Added setting to turn off Spotify normalization. Should make tracks play louder.
+        <news>v1.3.11 (2024-08-20)
+Fixed 'all albums' for artist menu. Added extra artist track options. Cleaned menus.
+1.3.10: Replaced 'user/password' authentication with zeroconf authentication.
         </news>
         <assets>
             <icon>resources/icon.png</icon>
@@ -886,7 +885,7 @@ v1.0.19 (2018-03-30)
 			<logo>resources/logo.png</logo>
 		</assets>
 	</extension>
-</addon><addon id="skin.titan.vanilla" version="21.24.05.20" name="Titan Vanilla" provider-name="malvinas2, marcelveldt, AchillesPunks, cartman.dos, fuchs2468, mardukL, mgonzales">
+</addon><addon id="skin.titan.vanilla" version="21.24.08.24" name="Titan Vanilla" provider-name="malvinas2, marcelveldt, AchillesPunks, cartman.dos, fuchs2468, mardukL, mgonzales">
 	<requires>
 		<import version="5.17.0" addon="xbmc.gui" />	
 		<import addon="script.skinshortcuts" version="2.0.3" />

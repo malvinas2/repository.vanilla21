@@ -307,7 +307,7 @@
                         <posx>110</posx>
                         <posy>45</posy>
 						<scroll>true</scroll>
-                        <width>535</width>
+                        <width>440</width>
                         <height>20</height>
                         <font>Reg25</font>
                         <textcolor>$INFO[Skin.String(ButtonFocusTextColor)]</textcolor>

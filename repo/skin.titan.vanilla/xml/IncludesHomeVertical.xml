@@ -270,7 +270,9 @@
                 <focusedlayout height="210" width="370" condition="String.IsEqual(Window(Home).Property(submenu),show) + String.IsEqual(Container(4445).NumItems,1) + Skin.HasSetting(VerticalHomeInlineSubmenu) + Skin.String(HomeLayout, simplever_tiles) + !String.IsEqual(Container(300).ListItem.Property(squaresubmenu),enable)">
                     <include>HomeSimpleVertical_FocusedMainMenuItem_tile</include>
                 </focusedlayout>
-                <content><include>skinshortcuts-mainmenu</include></content>
+                <content>
+					<include>skinshortcuts-mainmenu</include>
+				</content>
             </control>
             
             <!--submenu inline-->
