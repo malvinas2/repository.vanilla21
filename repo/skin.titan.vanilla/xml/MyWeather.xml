@@ -65,11 +65,11 @@
                 <width>458</width>
                 <height>750</height>
                 <itemgap>3</itemgap>
-                <onleft>50</onleft>
-                <onright>50</onright>
+                <!-- <onleft>50</onleft> -->
+                <!-- <onright>50</onright> -->
 				<visible>!Skin.HasSetting(KioskMode.Enabled)</visible>
-				<onright>ClearProperty(ShowViewSubMenu,home)</onright>
-				<onleft>ClearProperty(ShowViewSubMenu,home)</onleft>
+				<!-- <onright>ClearProperty(ShowViewSubMenu,home)</onright> -->
+				<!-- <onleft>ClearProperty(ShowViewSubMenu,home)</onleft> -->
 				<onback>ClearProperty(ShowViewSubMenu,home)</onback>
 				<onback>50</onback>
                 <onup>9000</onup>

@@ -132,7 +132,7 @@ class WindowManager:
         dialog = DialogSeasonInfo(INFO_XML,
                                   addon.PATH,
                                   id=tvshow_id,
-                                  season=max(0, season),
+                                  season=max('0', season),
                                   dbid=int(dbid) if dbid and int(dbid) > 0 else None)
         busy.hide_busy()
         self.open_infodialog(dialog)
@@ -150,7 +150,7 @@ class WindowManager:
         dialog = DialogEpisodeInfo(INFO_XML,
                                    addon.PATH,
                                    tvshow_id=tvshow_id,
-                                   season=max(0, season),
+                                   season=max('0', season),
                                    episode=episode,
                                    dbid=int(dbid) if dbid and int(dbid) > 0 else None)
         self.open_infodialog(dialog)

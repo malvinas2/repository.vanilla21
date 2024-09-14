@@ -68,7 +68,8 @@
                 <width>545</width>
                 <posx>20</posx>
                 <posy>345</posy>
-				<onright>Dialog.Close(all,true)</onright>
+				<onback>Dialog.Close(all,true)</onback>
+				<onright>1</onright>
 				<onleft>1</onleft>
                 <height>455</height>
                 <onup>11</onup>
@@ -148,9 +149,10 @@
                 <itemgap>5</itemgap>
                 <orientation>vertical</orientation>
 				<onleft>11</onleft>
-                <onup>1</onup>
+                <onright>11</onright>
+				<onup>1</onup>
 				<ondown>1</ondown>
-                <onright>Dialog.Close(all,true)</onright>
+                <onback>Dialog.Close(all,true)</onback>
                 <control type="button" id="2">
                     <description>Add</description>
 					<width>545</width>

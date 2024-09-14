@@ -29,7 +29,7 @@ Fixed 'all albums' for artist menu. Added extra artist track options. Cleaned me
             <fanart>resources/fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.1.3" provider-name="phil65, sualfred, xulek, finkleandeinhorn, Ivar Brandt">
+</addon><addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard + Patch" version="2.1.3" provider-name="Philipp Temminghoff (phil65), sualfred, xulek, finkleandeinhorn">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.autocompletion" version="2.0.5" />
@@ -46,7 +46,7 @@ Fixed 'all albums' for artist menu. Added extra artist track options. Cleaned me
         <description lang="es_ES">Autocompletar para el teclado virtual (necesita soporte de skin)</description>
         <platform>all</platform>
         <license>GPL-2.0-or-later</license>
-        <source>https://github.com/ivarbrandt/plugin.program.autocompletion</source>
+        <source>https://github.com/finkleandeinhorn/script.module.autocompletion</source>
         <assets>
             <icon>resources/icon.png</icon>
             <screenshot>resources/screenshot-01.jpg</screenshot>
@@ -123,7 +123,7 @@ Fixed 'all albums' for artist menu. Added extra artist track options. Cleaned me
 		<description lang="en">Animated Busy Spinners Pack - Titan</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="resource.images.skinbackgrounds.titanium" name="Skin Backgrounds - Titanium" version="1.0.1" provider-name="marcelveldt">
+</addon><addon id="resource.images.skinbackgrounds.titanium" name="Skin Backgrounds - Titanium" version="1.0.2" provider-name="marcelveldt, malvinas2">
 	<extension point="kodi.resource.images" compile="false" type="skinbackgrounds" />
 	<requires>
 		<import addon="kodi.resource" version="1.0.0" />
@@ -133,7 +133,7 @@ Fixed 'all albums' for artist menu. Added extra artist track options. Cleaned me
 		<description lang="en">Skin Backgrounds Pack - Titanium</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="resource.images.skinicons.wide" name="Skin Icons - Wide" version="1.0.4" provider-name="marcelveldt">
+</addon><addon id="resource.images.skinicons.wide" name="Skin Icons - Wide" version="1.0.4" provider-name="marcelveldt, malvinas2">
 	<extension point="kodi.resource.images" compile="false" type="skinicons" />
 	<requires>
 		<import addon="kodi.resource" version="1.0.0" />
@@ -240,7 +240,7 @@ Fixed 'all albums' for artist menu. Added extra artist track options. Cleaned me
 			<logo>resources/logo.png</logo>
 		</assets>
 	</extension>
-</addon><addon id="script.extendedinfo" name="ExtendedInfo Script" version="6.0.7" provider-name="scott967">
+</addon><addon id="script.extendedinfo" name="ExtendedInfo Script" version="6.0.7.1" provider-name="scott967">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="resource.images.studios.white" version="0.0.25" />
@@ -276,7 +276,7 @@ Fixed 'all albums' for artist menu. Added extra artist track options. Cleaned me
 			<screenshot>resources/screenshot-05.jpg</screenshot>
 		</assets>
 	</extension>
-</addon><addon id="script.module.autocompletion" name="AutoCompletion library" version="2.1.2" provider-name="Philipp Temminghoff (phil65), bbaronSVK, finkleandeinhorn, berkhornet">
+</addon><addon id="script.module.autocompletion" name="AutoCompletion library + Patch" version="2.1.2.1" provider-name="Philipp Temminghoff (phil65), bbaronSVK, finkleandeinhorn, berkhornet">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" version="2.9.1" />
@@ -476,7 +476,7 @@ v1.20.0
 			<logo>resources/logo.png</logo>
 		</assets>
 	</extension>
-</addon><addon id="script.service.pip" name="Picture-in-Picture Service" version="1.1.1" provider-name="mltobi">
+</addon><addon id="script.service.pip" name="Picture-in-Picture Service" version="1.1.2" provider-name="mltobi">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 	</requires>
@@ -491,6 +491,11 @@ v1.20.0
 		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
 		<source>https://github.com/mltobi/kodi-pip-addon</source>	
 		<news>
+V1.1.2 (2024-09-08)
+- Added delay at startup to make sure, that pip starts after pvr-services
+- intercepted 'key error' in case choosen channel is not available
+- added a few german translations
+
 V1.1.1 (2023-07-31) - Released
 - Disabled "Starting..." notification because waiting image can take this task
 
@@ -885,7 +890,7 @@ v1.0.19 (2018-03-30)
 			<logo>resources/logo.png</logo>
 		</assets>
 	</extension>
-</addon><addon id="skin.titan.vanilla" version="21.24.08.24" name="Titan Vanilla" provider-name="malvinas2, marcelveldt, AchillesPunks, cartman.dos, fuchs2468, mardukL, mgonzales">
+</addon><addon id="skin.titan.vanilla" version="21.24.09.14" name="Titan Vanilla" provider-name="malvinas2, marcelveldt, AchillesPunks, cartman.dos, fuchs2468, mardukL, mgonzales">
 	<requires>
 		<import version="5.17.0" addon="xbmc.gui" />	
 		<import addon="script.skinshortcuts" version="2.0.3" />

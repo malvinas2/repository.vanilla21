@@ -119,3 +119,31 @@ msgstr ""
 msgctxt "#32025"
 msgid "Channel down"
 msgstr ""
+
+msgctxt "#32030"
+msgid "Other preferences"
+msgstr ""
+
+msgctxt "#32031"
+msgid "Startup delay before action [seconds]"
+msgstr ""
+
+msgctxt "#32040"
+msgid "This channel does not support the PiP-function. "
+msgstr ""
+
+msgctxt "#32041"
+msgid "No ffmpeg executable found. "
+msgstr ""
+
+msgctxt "#32042"
+msgid "Create a ramdisk and use it as temporary folder in the addon configuration. "
+msgstr ""
+
+msgctxt "#32043"
+msgid "Using a temporary folder on a ramdisk is highly recommended "
+msgstr ""
+
+msgctxt "#32044"
+msgid "to avoid too many write accesses to the harddisc!"
+msgstr ""

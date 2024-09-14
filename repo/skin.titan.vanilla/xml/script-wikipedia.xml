@@ -142,8 +142,9 @@
 					<ondown>9903</ondown>
 					<onleft>62</onleft>
                     <onright>63</onright>
-                    <shadowcolor>black</shadowcolor>
-                    <font>font14</font>
+                    <include>DialogLabel</include>
+					<!-- <shadowcolor>black</shadowcolor> -->
+                    <!-- <font>font14</font> -->
                     <monofont>Mono26</monofont>
                     <pagecontrol>63</pagecontrol>
 					<autoscroll>false</autoscroll>

@@ -49,7 +49,7 @@
                 <posy>140</posy>
                 <height>630</height>
                 <itemgap>3</itemgap>
-				<onright>Dialog.Close(contextmenu)</onright>
+				<onback>Dialog.Close(contextmenu)</onback>
                 <!--Buttons-->
                <control type="button" id="1000">
                     <description>Buttons</description>
@@ -124,7 +124,7 @@
                 <width>458</width>
                 <posx>21</posx>
                 <posy>180</posy>
-				<onright>Dialog.Close(contextmenu)</onright>
+				<onback>Dialog.Close(contextmenu)</onback>
                 <height>850</height>
                 <itemgap>3</itemgap>
                 <!--Buttons-->
@@ -878,10 +878,10 @@
                 <width>458</width>
                 <height>770</height>
                 <itemgap>3</itemgap>
-                <onleft>5000</onleft>
-                <onright>5000</onright>
-				<onright>ClearProperty(ShowViewSubMenu,home)</onright>
-				<onleft>ClearProperty(ShowViewSubMenu,home)</onleft>
+                <!-- <onleft>5000</onleft> -->
+                <!-- <onright>5000</onright> -->
+				<!-- <onright>ClearProperty(ShowViewSubMenu,home)</onright> -->
+				<!-- <onleft>ClearProperty(ShowViewSubMenu,home)</onleft> -->
 				<onback>ClearProperty(ShowViewSubMenu,home)</onback>
 				<onback condition="![Skin.HasSetting(PVRGuideBackSideblade) + Window.IsActive(tvguide)]">5000</onback>
                 <onup>9000</onup>

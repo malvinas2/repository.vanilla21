@@ -132,6 +132,14 @@ if __name__ == '__main__':
     # get settings
     settings = pip.get_settings(__addon__)
 
+    # start a xbmc monitor
+    monitor = XbmcMonitor()
+
+    # wait the delay time after startup
+    delaytime = settings['delay']
+    xbmc.log("[pip-service] Delay time before execution: %s seconds." % str(delaytime), xbmc.LOGDEBUG)
+    monitor.waitForAbort(1 + delaytime)  # wait at least one second
+
     # init keymap
     keymap = Keymap(xbmcvfs.translatePath("special://home/userdata/keymaps/"))
     keymap.update(settings['keytoggle'], settings['keyback'], settings['keyup'], settings['keydown'])
@@ -150,9 +158,6 @@ if __name__ == '__main__':
 
     # get all available channel ids
     m3u.get_channel_ids()
-
-    # start a xbmc monitor
-    monitor = XbmcMonitor()
 
     # init ffmpeg
     ffmpeg = Ffmpeg(imagefilename,
@@ -206,6 +211,9 @@ if __name__ == '__main__':
 
             if monitor.get_toggle_status():
                 if ffmpeg.started():
+                    # switch back to pip channel
+                    channelname = m3u.get_channel_name()
+                    m3u.switch_channel(channelname)
                     # stop picture in picture capturing
                     ffmpeg.stop()
                     xbmc.log("[pip-service] stopped ffmpeg process.", xbmc.LOGDEBUG)
@@ -213,13 +221,12 @@ if __name__ == '__main__':
                 else:
                     # start picture in picture capturing using ffmpeg
                     url, channelname = m3u.get_url()
-                    channelnumber = m3u.channel2number[channelname]
-                    pip.set_channel(channelname, channelnumber)
 
                     if url == "":
-                        xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__, "No URL found ...", 2000, __icon__))
-                        xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__, "Not started ...", 2000, __icon__))
+                        xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__, __addon__.getLocalizedString(32040), 4000, __icon__))
                     else:
+                        channelnumber = m3u.channel2number[channelname]
+                        pip.set_channel(channelname, channelnumber)
                         pip.init_image()
                         ffmpeg.start(url, False)
                         #xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__, "Starting ...", 5000, __icon__))
@@ -227,10 +234,6 @@ if __name__ == '__main__':
 
 
             if monitor.get_channel_back_status():
-                # switch back to pip channel
-                channelname = m3u.get_channel_name()
-                m3u.switch_channel(channelname)
-
                 # stop picture in picture capturing
                 ffmpeg.stop()
                 xbmc.log("[pip-service] stopped ffmpeg process.", xbmc.LOGDEBUG)
@@ -312,13 +315,13 @@ if __name__ == '__main__':
 
     # report some error infos to user
     if not ffmpeg.test():
-        xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__, "No ffmpeg executable found ...", 2000, __icon__))
+        xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__, __addon.getLocalizedString(32041), 2000, __icon__))
         xbmc.log("[pip-service] no ffmpeg executable available!", xbmc.LOGERROR)
 
     if not pip.get_settings_status():
-        xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__, "Create a ramdisk and use it as temporary folder in the addon configuration.", 2000, __icon__))
-        xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__, "Using a temporary folder on a ramdisk is highly recommended ", 2000, __icon__))
-        xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__, "to avoid too many write accesses to the harddisc!", 2000, __icon__))
+        xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__, __addon.getLocalizedString(32042), 2000, __icon__))
+        xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__, __addon.getLocalizedString(32043), 2000, __icon__))
+        xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__, __addon.getLocalizedString(32044), 2000, __icon__))
 
 
     # clean up before exit

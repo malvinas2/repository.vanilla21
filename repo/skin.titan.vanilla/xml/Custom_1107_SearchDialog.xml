@@ -114,7 +114,8 @@
 						<label>$LOCALIZE[70001]</label>
 						<icon>icons/kodi.png</icon>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.hasAddon(script.globalsearch)">RunScript(script.globalsearch)</onclick>
+						<onclick condition="System.AddonIsEnabled(script.globalsearch)">RunScript(script.globalsearch)</onclick>
+						<onclick condition="System.HasAddon(script.globalsearch) + !System.AddonIsEnabled(script.globalsearch)">EnableAddon(script.globalsearch)</onclick>
 						<onclick condition="!System.hasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
 					</item>
 					<item id="992">
@@ -127,22 +128,25 @@
 						<label>$LOCALIZE[70003]</label>
 						<icon>icons/youtube.png</icon>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.hasAddon(plugin.video.youtube)">ActivateWindow(videos,"plugin://plugin.video.youtube/kodion/search/list/",return)</onclick>
-						<onclick condition="!System.hasAddon(plugin.video.youtube)">InstallAddon(plugin.video.youtube)</onclick>
+						<onclick condition="System.AddonIsEnabled(plugin.video.youtube)">ActivateWindow(videos,"plugin://plugin.video.youtube/kodion/search/list/",return)</onclick>
+						<onclick condition="System.HasAddon(plugin.video.youtube) + !System.AddonIsEnabled(plugin.video.youtube)">EnableAddon(plugin.video.youtube)</onclick>
+						<onclick condition="!System.HasAddon(plugin.video.youtube)">InstallAddon(plugin.video.youtube)</onclick>
 					</item>
 					<item id="994">
 						<label>$LOCALIZE[70004]</label>
 						<icon>icons/themoviedb.png</icon>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.hasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=moviedbbrowser,search=True)</onclick>
-						<onclick condition="!System.hasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
+						<onclick condition="System.AddonIsEnabled(script.extendedinfo)">RunScript(script.extendedinfo,info=moviedbbrowser,search=True)</onclick>
+						<onclick condition="System.HasAddon(script.extendedinfo) + !System.AddonIsEnabled(script.extendedinfo)">EnableAddon(script.extendedinfo)</onclick>
+						<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>						
 					</item>
 					<item id="995">
 						<label>$LOCALIZE[70032]</label>
 						<icon>icons/wikipedia.png</icon>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.hasAddon(script.wikipedia)">RunScript(script.wikipedia,language=$VAR[language_iso639-1])</onclick>
-						<onclick condition="!System.hasAddon(script.wikipedia)">InstallAddon(script.wikipedia)</onclick>
+						<onclick condition="System.AddonIsEnabled(script.wikipedia)">RunScript(script.wikipedia,language=$VAR[language_iso639-1])</onclick>
+						<onclick condition="System.HasAddon(script.wikipedia) + !System.AddonIsEnabled(script.wikipedia)">EnableAddon(script.wikipedia)</onclick>
+						<onclick condition="!System.HasAddon(script.wikipedia)">InstallAddon(script.wikipedia)</onclick>
 					</item>
 				</content>	
 			</control>

@@ -19,18 +19,18 @@
             <control type="image">
                 <!--Panel-->
                 <posx>284</posx>
-                <posy>169</posy>
+                <posy>129</posy>
                 <width>1352</width>
-                <height>830</height>
+                <height>870</height>
                 <texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
             </control>
 			<control type="image">
                 <!--Panel-->
                 <posx>284</posx>
-                <posy>169</posy>
+                <posy>129</posy>
                 <width>1352</width>
-                <height>830</height>
+                <height>870</height>
 				<bordersize>10</bordersize>
                 <texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
@@ -39,7 +39,7 @@
             <control type="label" id="2">
                 <description>Heading</description>
                 <posx>560</posx>
-                <posy>205</posy>
+                <posy>165</posy>
                 <width>800</width>
                 <label></label>
                 <align>center</align>
@@ -49,7 +49,7 @@
                 <!-- left group -->
                 <control type="group">
                     <posx>318</posx>
-                    <posy>303</posy>
+                    <posy>263</posy>
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
@@ -81,7 +81,7 @@
                 <!-- right group -->
                 <control type="group">
                     <posx>642</posx>
-                    <posy>303</posy>
+                    <posy>263</posy>
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
@@ -156,7 +156,7 @@
             </control>
 			<control type="scrollbar" id="60">
 				<posx>1589</posx>
-                <posy>305</posy>
+                <posy>265</posy>
                 <height>467</height>
 				<onright>8002</onright>
 				<onleft>5</onleft>
@@ -167,8 +167,8 @@
 			<control type="textbox" id="6">
 				<description>description area</description>
 				<posx>318</posx>
-				<posy>800</posy>
-				<height>70</height>
+				<posy>770</posy>
+				<height>110</height>
 				<width>1250</width>
 				<font>font12</font>
 				<align>justify</align>
@@ -176,7 +176,7 @@
 			</control>
 			<control type="grouplist" id="8002">
                 <posx>318</posx>
-                <posy>900</posy>
+                <posy>880</posy>
 				<onup>3</onup>
 				<itemgap>5</itemgap>
 				<ondown>3</ondown>

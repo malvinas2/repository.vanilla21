@@ -200,7 +200,7 @@
                 <onup>8000</onup>
                 <onright>300</onright>
                 <ondown>1000</ondown>
-                <align>center</align>
+                <align>left</align>
                 <aligny>center</aligny>
                 <scroll>true</scroll>
                 <label>$INFO[Control.GetLabel(311)]</label>

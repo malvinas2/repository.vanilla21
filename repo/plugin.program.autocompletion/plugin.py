@@ -1,85 +1,76 @@
 # -*- coding: utf8 -*-
 
-import sys
+# Copyright (C) 2015 - Philipp Temminghoff <phil65@kodi.tv>
+# This program is Free Software see LICENSE file for details
+
 import xbmc
+import xbmcaddon
 import xbmcgui
 import xbmcplugin
-import xbmcaddon
+
 import json
-import AutoCompletion
+import sys
 from urllib.parse import parse_qsl
+
+import AutoCompletion
 
 ADDON = xbmcaddon.Addon()
 ADDON_VERSION = ADDON.getAddonInfo('version')
-KODI_VERSION_THRESHOLD = 17
-BUSY_DIALOG = 'Dialog.Close(busydialog)'
-BUSY_DIALOG_NOCANCEL = 'Dialog.Close(busydialognocancel)'
-WINDOW_ID = 10103
+
 
 def get_kodi_json(method, params):
-    json_query = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "%s", "params": %s, "id": 1}' % (method, json.dumps(params)))
+    query_params = {"jsonrpc": "2.0", "id": 1, "method": method, "params": params}
+    json_query = xbmc.executeJSONRPC(json.dumps(query_params))
+
     return json.loads(json_query)
-
-
-def close_dialog():
-    if int(xbmc.getInfoLabel('System.BuildVersion')[:2]) > KODI_VERSION_THRESHOLD:
-        xbmc.sleep(50)
-        xbmc.executebuiltin(BUSY_DIALOG_NOCANCEL)
-    else:
-        xbmc.sleep(50)
-        xbmc.executebuiltin(BUSY_DIALOG)
-
-
-def handle_autocomplete(params):
-    return AutoCompletion.get_autocomplete_items(params["id"], params.get("limit", 10))
-
-
-def handle_selectautocomplete(params):
-    if params.get("handle"):
-        xbmcplugin.setResolvedUrl(handle=int(params.get("handle")), succeeded=False, listitem=xbmcgui.ListItem())
-    try:
-        window = xbmcgui.Window(WINDOW_ID)
-    except Exception:
-        return None
-    close_dialog()
-    window.setFocusId(312)
-    kodi_params = {
-        "jsonrpc": "2.0",
-        "method": "Input.SendText",
-        "params": {"text": params.get("id"), "done": False},
-        "id": 1
-    }
-    xbmc.executeJSONRPC(json.dumps(kodi_params))
-    window.setFocusId(300)
 
 
 def start_info_actions(infos, params):
     listitems = []
     for info in infos:
         if info == 'autocomplete':
-            listitems = handle_autocomplete(params)
+            listitems = AutoCompletion.get_autocomplete_items(params["id"], params.get("limit", 10))
         elif info == 'selectautocomplete':
-            handle_selectautocomplete(params)
-        pass_list_to_skin(data=listitems, handle=params.get("handle", ""), limit=params.get("limit", 20))
+            if params.get("handle"):  # github.com/finkleandeinhorn/plugin.program.autocompletion/pull/7
+                xbmcplugin.setResolvedUrl(handle=int(params.get("handle")),
+                                          succeeded=False,
+                                          listitem=xbmcgui.ListItem())
+            try:
+                window = xbmcgui.Window(10103)  # virtualkeyboard
+            except Exception:
+                return None
+            xbmc.sleep(150)  # how fast proposed text is visible in input field
+            get_kodi_json(
+                method="Input.SendText",
+                params={"text": params.get("id"), "done": False},
+            )
+            xbmc.executebuiltin('ActivateWindowAndFocus(virtualkeyboard,300,0)')
+
+        pass_list_to_skin(
+            data=listitems,
+            handle=params.get("handle", ""),
+            limit=params.get("limit", 20)
+        )
 
 
-def pass_list_to_skin(data=None, handle=None, limit=None):
-    if data is None:
-        data = []
-    limit = int(limit) if limit else None
-    if limit and len(data) > limit:
-        data = data[:limit]
+def pass_list_to_skin(data=[], handle=None, limit=False):
+    if data and limit and int(limit) < len(data):
+        data = data[: int(limit)]
+
     if handle and data:
         items = create_listitems(data)
         xbmcplugin.addDirectoryItems(
             handle=handle,
             items=[(i.getProperty("path"), i, False) for i in items],
-            totalItems=len(items)
+            totalItems=len(items),
         )
+        xbmc.executebuiltin('Dialog.Close(busydialog)')
     xbmcplugin.endOfDirectory(handle)
 
 
-def create_listitems(data):
+def create_listitems(data=None):
+    if not data:
+        return []
     itemlist = []
     for count, result in enumerate(data):
         listitem = xbmcgui.ListItem(str(count))
@@ -87,7 +78,7 @@ def create_listitems(data):
             if not value:
                 continue
             if key.lower() in ["label"]:
-                listitem.setLabel(str(value))
+                listitem.setLabel(value)
             elif key.lower() in ["search_string"]:
                 path = f"plugin://plugin.program.autocompletion/?info=selectautocomplete&&id={value}"
                 listitem.setPath(path=path)
@@ -105,8 +96,11 @@ if __name__ == "__main__":
     infos = []
     params = {"handle": handle}
     params.update(dict(parse_qsl(args, keep_blank_values=True)))
+
     if "info" in params:
         infos.append(params['info'])
+
     if infos:
         start_info_actions(infos, params)
+
 xbmc.log('finished')

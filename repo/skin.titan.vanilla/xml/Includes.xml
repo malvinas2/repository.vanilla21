@@ -206,8 +206,8 @@
         <textoffsetx>20</textoffsetx>
         <radioposx></radioposx>
         <radioposy>15</radioposy>
-        <radiowidth>28</radiowidth>
-        <radioheight>28</radioheight>
+        <radiowidth>40</radiowidth>
+        <radioheight>40</radioheight>
         <textureradiofocus>dialogs/keyboard/radio-on.png</textureradiofocus>
         <textureradionofocus>dialogs/keyboard/radio-off.png</textureradionofocus>
         <font>Reg26</font>

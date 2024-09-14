@@ -3,6 +3,7 @@
 <window>
     <defaultcontrol always="true">1000</defaultcontrol>
     <onload condition="Window.IsActive(loginscreen) + Skin.HasSetting(LoginScreen_DisableContextMenu)">Close</onload>
+	<onload condition="Window.IsActive(tvguide) + Control.IsVisible(1003)">SetFocus(1003)</onload>
     <controls>
 		<!-- touchscreen support -->
 		<!-- hidden button to exit dialog in touchscreen mode -->

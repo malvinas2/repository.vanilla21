@@ -117,7 +117,8 @@
 				<width>610</width>
 				<height>910</height>
 				<onleft></onleft>
-				<onright>dialog.close(all,true)</onright>
+				<onright></onright>
+				<!-- <onright>dialog.close(all,true)</onright> -->
 				<onup>11</onup>
 				<ondown>11</ondown>
 				<viewtype label="535">list</viewtype>

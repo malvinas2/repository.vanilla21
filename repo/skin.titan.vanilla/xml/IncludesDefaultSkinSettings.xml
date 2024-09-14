@@ -311,8 +311,8 @@
 
         <onload condition="!Skin.String(volumestyle.label)">Skin.SetString(volumestyle.label,modern)</onload>
         <onload condition="!Skin.String(volumestyle)">Skin.SetString(volumestyle,modern)</onload>
-        <onload condition="!Skin.String(volumestyle.label,basic)">Skin.SetString(volumestyle.label,basic)</onload>
-        <onload condition="!Skin.String(volumestyle,basic)">Skin.SetString(volumestyle,basic)</onload>
+        <!-- <onload condition="!Skin.String(volumestyle.label,basic)">Skin.SetString(volumestyle.label,basic)</onload> -->
+        <!-- <onload condition="!Skin.String(volumestyle,basic)">Skin.SetString(volumestyle,basic)</onload> -->
         <onload>Skin.SetString(CompareTxtDisable, disable)</onload>
         <onload>Skin.SetString(CompareTxtTop, top)</onload>
         <onload>Skin.SetString(CompareTxtBottom, bottom)</onload>
