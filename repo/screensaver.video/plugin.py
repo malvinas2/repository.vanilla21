@@ -302,7 +302,7 @@ class MenuNavigator():
         xbmc.executebuiltin("Container.Refresh")
 
     # Construct the context menu
-    def _getContextMenu(self, videoItem, builtin='false'):
+    def _getContextMenu(self, videoItem):
         ctxtMenu = []
 
         # Check if the file has already been downloaded
@@ -310,10 +310,8 @@ class MenuNavigator():
             # If not already exists, add a download option
             cmd = self._build_url({'mode': 'download', 'name': videoItem['name'], 'filename': videoItem['filename'], 'primary': videoItem['primary']})
             ctxtMenu.append((ADDON.getLocalizedString(32013), 'RunPlugin(%s)' % cmd))
-            # Only add the play option if it is not a built in video
-            if builtin != 'true':
-                cmd = self._build_url({'mode': 'play', 'name': videoItem['name'], 'filename': videoItem['primary']})
-                ctxtMenu.append((ADDON.getLocalizedString(32019), 'RunPlugin(%s)' % cmd))
+            cmd = self._build_url({'mode': 'play', 'name': videoItem['name'], 'filename': videoItem['primary']})
+            ctxtMenu.append((ADDON.getLocalizedString(32019), 'RunPlugin(%s)' % cmd))
         else:
             # If already exists then add a play option
             cmd = self._build_url({'mode': 'play', 'name': videoItem['name'], 'filename': videoItem['filename']})
@@ -395,38 +393,22 @@ if __name__ == '__main__':
         primary = None
         secondary = None
 
-        # Check if the user has already downloaded a builtin video today
-        # We need to restrict to one builtin video a day otherwise we will
-        # go over the daily limit
-        isBuiltInVideo = False
-        builtinItem = args.get('builtin', None)
-        if (builtinItem is not None) and (len(builtinItem) > 0) and (builtinItem[0] == 'true'):
-            # The following is the old message about the videos not being available
-            # xbmcgui.Dialog().ok(ADDON.getLocalizedString(32005), "Unfortunately there is no longer any online storage available to store the default video sets (Approx 50GB). If you have storage you are willing to make available please contact robwebset via http://github.com/robwebset")
-            isBuiltInVideo = True
+        nameItem = args.get('name', None)
+        if (nameItem is not None) and (len(nameItem) > 0):
+            name = nameItem[0]
 
-        if isBuiltInVideo and (not Settings.isBuiltInDownloadOK()):
-            xbmcgui.Dialog().ok(ADDON.getLocalizedString(32005), ADDON.getLocalizedString(32307), ADDON.getLocalizedString(32308))
-        else:
-            nameItem = args.get('name', None)
-            if (nameItem is not None) and (len(nameItem) > 0):
-                name = nameItem[0]
+        filenameItem = args.get('filename', None)
+        if (filenameItem is not None) and (len(filenameItem) > 0):
+            filename = filenameItem[0]
 
-            filenameItem = args.get('filename', None)
-            if (filenameItem is not None) and (len(filenameItem) > 0):
-                filename = filenameItem[0]
+        primaryItem = args.get('primary', None)
+        if (primaryItem is not None) and (len(primaryItem) > 0):
+            primary = primaryItem[0]
 
-            primaryItem = args.get('primary', None)
-            if (primaryItem is not None) and (len(primaryItem) > 0):
-                primary = primaryItem[0]
+        menuNav = MenuNavigator(base_url, addon_handle)
+        menuNav.download(name, filename, primary)
+        del menuNav
 
-            menuNav = MenuNavigator(base_url, addon_handle)
-            menuNav.download(name, filename, primary)
-            del menuNav
-
-            # Record when the last download was performed
-            if isBuiltInVideo:
-                Settings.setLastBuiltInDownload()
 
     elif mode[0] == 'delete':
         log("VideoScreensaverPlugin: Mode is delete")

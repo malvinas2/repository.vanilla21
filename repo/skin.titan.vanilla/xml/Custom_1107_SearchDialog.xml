@@ -128,7 +128,7 @@
 						<label>$LOCALIZE[70003]</label>
 						<icon>icons/youtube.png</icon>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.AddonIsEnabled(plugin.video.youtube)">ActivateWindow(videos,"plugin://plugin.video.youtube/kodion/search/list/",return)</onclick>
+						<onclick condition="System.AddonIsEnabled(plugin.video.youtube)">ActivateWindow(videos,"plugin://plugin.video.youtube/kodion/search/input_prompt",return)</onclick>
 						<onclick condition="System.HasAddon(plugin.video.youtube) + !System.AddonIsEnabled(plugin.video.youtube)">EnableAddon(plugin.video.youtube)</onclick>
 						<onclick condition="!System.HasAddon(plugin.video.youtube)">InstallAddon(plugin.video.youtube)</onclick>
 					</item>

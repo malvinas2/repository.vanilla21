@@ -26,22 +26,7 @@ class CollectSets():
     def getCollections(self):
         collectionMap = {}
         # Add the default set of collections
-        collectionsDir = ADDON.getAddonInfo('path')
-        collectionsDir = xbmcvfs.translatePath(os_path_join(collectionsDir, 'resources'))
-
-        collectionsDir = os_path_join(collectionsDir, 'collections')
-        collectionMap['Aquarium'] = {'name': 'Aquarium', 'filename': os_path_join(collectionsDir, 'aquarium.xml'), 'image': ICON, 'default': True}
-        collectionMap['Beach'] = {'name': 'Beach', 'filename': os_path_join(collectionsDir, 'beach.xml'), 'image': ICON, 'default': True}
-        collectionMap['Clock'] = {'name': 'Clock', 'filename': os_path_join(collectionsDir, 'clock.xml'), 'image': ICON, 'default': True}
-        collectionMap['Fireplace'] = {'name': 'Fireplace', 'filename': os_path_join(collectionsDir, 'fireplace.xml'), 'image': ICON, 'default': True}
-        collectionMap['Miscellaneous'] = {'name': 'Miscellaneous', 'filename': os_path_join(collectionsDir, 'miscellaneous.xml'), 'image': ICON, 'default': True}
-        collectionMap['Snow'] = {'name': 'Snow', 'filename': os_path_join(collectionsDir, 'snow.xml'), 'image': ICON, 'default': True}
-        collectionMap['Space'] = {'name': 'Space', 'filename': os_path_join(collectionsDir, 'space.xml'), 'image': ICON, 'default': True}
-        collectionMap['Waterfall'] = {'name': 'Waterfall', 'filename': os_path_join(collectionsDir, 'waterfall.xml'), 'image': ICON, 'default': True}
-        collectionMap['Woodland'] = {'name': 'Woodland', 'filename': os_path_join(collectionsDir, 'woodland.xml'), 'image': ICON, 'default': True}
-
-        # http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/entries.json
-        collectionMap['Apple TV'] = {'name': 'Apple TV', 'filename': os_path_join(collectionsDir, 'appletv.xml'), 'image': ICON, 'default': True}
+        ## deleted default collections as they are now longer online available
 
         # Now add any custom collections
         customCollections = self.getCustomCollectionSets()

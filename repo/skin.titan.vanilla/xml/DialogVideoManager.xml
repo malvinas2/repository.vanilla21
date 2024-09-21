@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">36</defaultcontrol>
+	<!-- <defaultcontrol always="true">36</defaultcontrol> -->
 	<!-- <onload>SetFocus(21)</onload> -->
 	<!-- <onload>SendClick(100)</onload> -->
     <controls>

@@ -426,8 +426,8 @@
 		<value condition="Container.Content(MusicVideos) + [!String.IsEmpty(ListItem.Duration) | !String.IsEmpty(ListItem.Year)]">$INFO[ListItem.Year,, • ]$VAR[ListItemDuration]</value>
 		<value condition="String.Contains(ListItem.Path,videodb://movies/sets/)">$INFO[Window(Home).Property(SkinHelper.ListItem.Year),, • ]$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</value>
 		<value condition="Container.Content(Movies) + [!String.IsEmpty(ListItem.Duration) | !String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Genre)]">$INFO[ListItem.Year,, • ]$VAR[ListItemDuration]$INFO[ListItem.Genre, • ]</value>
-		<value condition="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + [Container.Content(Seasons) | Container.Content(TVShows)] + [!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.MPAA) | !String.IsEmpty(ListItem.Property(TotalEpisodes))]">$INFO[ListItem.Year,, • ]$INFO[ListItem.MPAA,, • ]$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[20360] • ] $INFO[ListItem.Property(UnWatchedEpisodes), (,) ]</value>
-		<value condition="!Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + [Container.Content(Seasons) | Container.Content(TVShows)] + [!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.MPAA) | !String.IsEmpty(ListItem.Property(TotalEpisodes))]">$INFO[ListItem.Year,, • ]$INFO[ListItem.MPAA,, • ]$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[20360] • ]</value>
+		<value condition="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + [Container.Content(Seasons) | Container.Content(TVShows)] + [!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Mpaa) | !String.IsEmpty(ListItem.Property(TotalEpisodes))]">$INFO[ListItem.Year,, • ]$INFO[ListItem.Mpaa,, • ]$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[20360] • ] $INFO[ListItem.Property(UnWatchedEpisodes), (,) ]</value>
+		<value condition="!Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + [Container.Content(Seasons) | Container.Content(TVShows)] + [!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Mpaa) | !String.IsEmpty(ListItem.Property(TotalEpisodes))]">$INFO[ListItem.Year,, • ]$INFO[ListItem.Mpaa,, • ]$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[20360] • ]</value>
         <value condition="String.StartsWith(Window.Property(xmlfile),MyPVR)">[B]$INFO[ListItem.ChannelName,, • ][/B]$VAR[ListDateInfoPVR]</value>
  		<value condition="!String.IsEmpty(ListItem.Duration)">$VAR[ListItemDuration]</value>
 		<value condition="!String.IsEmpty(ListItem.Label2)">$INFO[ListItem.Label2]</value>
@@ -542,8 +542,8 @@
 		<value condition="Container.Content(MusicVideos) + [!String.IsEmpty(ListItem.Duration) | !String.IsEmpty(ListItem.Year)]">$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration]</value>
 		<value condition="String.Contains(ListItem.Path,videodb://movies/sets/)">$INFO[Window(Home).Property(SkinHelper.ListItem.Year),, • ]$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</value>
 		<value condition="Container.Content(Movies) + [!String.IsEmpty(ListItem.Duration) | !String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Genre)]">$INFO[ListItem.Year,, • ]$VAR[ListItemDuration]$INFO[ListItem.Genre, • ]</value>
-		<value condition="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + [Container.Content(Seasons) | Container.Content(TVShows)] + [!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.MPAA) | !String.IsEmpty(ListItem.Property(TotalEpisodes))]">$INFO[ListItem.Year,, • ]$INFO[ListItem.MPAA,, • ]$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[20360]: ] $INFO[ListItem.Property(UnWatchedEpisodes), (,) ]</value>
-		<value condition="!Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + [Container.Content(Seasons) | Container.Content(TVShows)] + [!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.MPAA) | !String.IsEmpty(ListItem.Property(TotalEpisodes))]">$INFO[ListItem.Year,, • ]$INFO[ListItem.MPAA,, • ]$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[20360]: ]</value>
+		<value condition="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + [Container.Content(Seasons) | Container.Content(TVShows)] + [!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Mpaa) | !String.IsEmpty(ListItem.Property(TotalEpisodes))]">$INFO[ListItem.Year,, • ]$INFO[ListItem.Mpaa,, • ]$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[20360]: ] $INFO[ListItem.Property(UnWatchedEpisodes), (,) ]</value>
+		<value condition="!Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + [Container.Content(Seasons) | Container.Content(TVShows)] + [!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Mpaa) | !String.IsEmpty(ListItem.Property(TotalEpisodes))]">$INFO[ListItem.Year,, • ]$INFO[ListItem.Mpaa,, • ]$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[20360]: ]</value>
 
         <!-- PVR -->
         <value condition="[Window.IsActive(radiochannels) | Window.IsActive(tvchannels)]">$INFO[ListItem.Title,, • ]$VAR[ListDatePVR]</value>
@@ -616,7 +616,6 @@
 	</variable>
    
 	<variable name="ViewDetailsPanelColor">
-        <value condition="Window.IsActive(script-skin_helper_service-CustomInfo.xml)">$INFO[Skin.String(ViewDetailsPanelColor)]</value>
         <value condition="Window.IsActive(Home) + Skin.String(HomeWidgetsBorderColor)">$INFO[Skin.String(HomeWidgetsBorderColor)]</value>
         <value condition="Window.IsActive(Home)">$INFO[Skin.String(GeneralPanelsColor)]</value>
         <value>$INFO[Skin.String(ViewDetailsPanelColor)]</value>

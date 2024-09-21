@@ -6,7 +6,7 @@
 	        <!--Dialog Select-->
         <control type="group" id="1000">
             <!-- <include>animation_window_open_close</include> -->
-            <visible>!Window.IsVisible(yesnodialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + ![Window.IsVisible(script-LibraryEditor-genre.xml) + String.IsEmpty(Window.Property(ShowDialog))] + !Window.IsVisible(script-LibraryEditor-dialogs.xml)</visible>
+            <visible>!Window.IsVisible(yesnodialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput)</visible>
      			<!-- background panel -->
 			<control type="image">
 				<posx>367</posx>
@@ -857,7 +857,7 @@
 	        <!--Dialog Select-->
 			<control type="group" id="1000">
 				<include>animation_window_open_close</include>
-				<visible>!Window.IsVisible(yesnodialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + ![Window.IsVisible(script-LibraryEditor-genre.xml) + String.IsEmpty(Window.Property(ShowDialog))] + !Window.IsVisible(script-LibraryEditor-dialogs.xml)</visible>
+				<visible>!Window.IsVisible(yesnodialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput)</visible>
      			<!-- background panel -->
 				<control type="image">
 					<width>1639</width>
@@ -1106,7 +1106,7 @@
 	        <!--Dialog Select-->
 			<control type="group" id="1200">
 				<!-- <include>animation_window_open_close</include> -->
-				<visible>!Window.IsVisible(yesnodialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + ![Window.IsVisible(script-LibraryEditor-genre.xml) + String.IsEmpty(Window.Property(ShowDialog))] + !Window.IsVisible(script-LibraryEditor-dialogs.xml)</visible>
+				<visible>!Window.IsVisible(yesnodialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput)</visible>
 					<!-- background panel -->
 				<control type="image">
 					<texture border="15">diffuse/bgpanel.png</texture>

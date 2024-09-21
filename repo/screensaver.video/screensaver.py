@@ -95,7 +95,7 @@ class ScreensaverWindow(xbmcgui.WindowXMLDialog):
     # Static method to create the Window class
     @staticmethod
     def createScreensaverWindow():
-        return ScreensaverWindow("screensaver-video-main.xml", CWD)
+        return ScreensaverWindow('screensaver-video-main.xml', CWD, 'Default', '1080i')
 
     # Called when setting up the window
     def onInit(self):

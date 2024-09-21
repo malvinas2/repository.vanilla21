@@ -18,6 +18,9 @@ ID_BUTTON_TOGGLETYPE = 5007
 
 
 class DialogBaseList:
+    """
+    BaseList for MediaBrowsers (handles filtering, sorting)
+    """
     viewid = {
         'WALL 3D' : '67',
         'BANNER' : '52',
@@ -49,12 +52,6 @@ class DialogBaseList:
         'Banner' : '501',
         'Fanart' : '502'
     }
-
-
-
-    """
-    BaseList for MediaBrowsers (handles filtering, sorting)
-    """
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -350,12 +347,13 @@ class DialogBaseList:
         self.sort_label = listitems[index]
         return True
 
-    def choose_filter(self, filter_code, header, options):
+    def choose_filter(self, filter_code:str, header:int, options:list[tuple]):
         """
         open dialog and let user choose filter from *options
         filter gets removed in case value is empty
-        filter_code: filter code from API
-        options: list of tuples with 2 items each: first is value, second is label
+        filter_code(str): filter code from API
+        header(int): strings.po localized index
+        options(list[tuple]): list of tuples with 2 items each: first is value, second is label
         """
         values = [i[0] for i in options]
         labels = [i[1] for i in options]

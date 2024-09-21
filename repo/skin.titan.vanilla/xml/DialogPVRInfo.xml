@@ -11,7 +11,7 @@
         </control>
         <!--Dialog PVR Guid Info-->
         <control type="group">
-            <visible>!Window.IsVisible(yesnodialog)</visible>
+            <visible>!Window.IsVisible(yesnodialog) + !Window.IsVisible(pvrtimersetting)</visible>
 			<animation type="WindowOpen">
 				<effect type="slide" start="1200" end="0" time="250" tween="cubic" easing="inout" />
 			</animation>
@@ -326,6 +326,7 @@
 					<textwidth>260</textwidth>
 					<include>DialogButtonOther</include>
 					<visible>Skin.HasSetting(videoinfo_button_wikipedia)</visible>
+					<onclick>Dialog.Close(10600)</onclick>
 					<onclick>RunScript(script.wikipedia,wikipedia=$INFO[ListItem.Title],language=$VAR[language_iso639-1])</onclick>
 					<visible>System.AddonIsEnabled(script.wikipedia)</visible>
 				</control>		

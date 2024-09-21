@@ -52,7 +52,7 @@ def get_window(window_type):
 
         Args:
             DialogBaseList: Super class for dialog windows
-            window_type (kutils.windows class): Super class for Kodi xbmc.WindowXML
+            window_type (kutil131.windows class): Super class for Kodi xbmc.WindowXML
 
         """
 
@@ -103,7 +103,7 @@ def get_window(window_type):
         def __init__(self, *args, **kwargs):
             self.type = kwargs.get('type', "movie")
             self.list_id = kwargs.get("list_id", False)
-            self.logged_in = tmdb.Login.check_login()
+            self.logged_in = tmdb.tmdb_login.check_login()
             super().__init__(*args, **kwargs)
 
         def onClick(self, control_id):
@@ -262,7 +262,7 @@ def get_window(window_type):
 
         @ch.click(ID_BUTTON_GENREFILTER)
         def set_genre_filter(self, control_id):
-            params = {"language": addon.setting("LanguageID")}
+            params = {"language": addon.setting("LanguageIDv2")}
             response = tmdb.get_data(url="genre/%s/list" % (self.type),
                                      params=params,
                                      cache_days=100)
@@ -475,7 +475,7 @@ def get_window(window_type):
             else:  #self.mode == "filter"
                 self.set_filter_label()
                 params = {"sort_by": sort_by,
-                          "language": addon.setting("LanguageID"),
+                          "language": addon.setting("LanguageIDv2"),
                           "page": self.page,
                           "include_adult": include_adult}
                 filters = {item["type"]: item["id"] for item in self.filters}

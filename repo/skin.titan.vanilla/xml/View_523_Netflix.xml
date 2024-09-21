@@ -107,17 +107,37 @@
                     <control type="videowindow">
                     </control>
                 </control>  
-  
-                <!-- clearlogo -->
-                <control type="image" id="29475">
+
+                <control type="grouplist">
+                    <width>800</width>
+                    <left>55</left>
+                    <top>20</top>
                     <height>180</height>
-                    <width>450</width>
-                    <left>50</left>
-                    <top>30</top>
-                    <aspectratio align="left" aligny="center">keep</aspectratio>
-                    <texture background="true" fallback="colors/color_transparent.png">$VAR[ListItemClearLogo]</texture>
-                    <visible>!Skin.HasSetting(NoClearLogoNetflix)</visible>
-                </control>
+					<visible>!Skin.HasSetting(View523_DetailsShowFanart)</visible>
+                <!-- clearlogo -->
+					<control type="image" id="29475">
+						<height>180</height>
+						<align>center</align>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture background="true" fallback="colors/color_transparent.png">$VAR[ListItemClearLogo]</texture>
+						<visible>!Skin.HasSetting(NoClearLogoNetflix)</visible>
+					</control>
+				</control>
+                <control type="grouplist">
+                    <width>1000</width>
+                    <left>55</left>
+                    <top>20</top>
+                    <height>180</height>
+					<visible>Skin.HasSetting(View523_DetailsShowFanart)</visible>
+                <!-- clearlogo -->
+					<control type="image" id="29476">
+						<height>180</height>
+						<align>center</align>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture background="true" fallback="colors/color_transparent.png">$VAR[ListItemClearLogo]</texture>
+						<visible>!Skin.HasSetting(NoClearLogoNetflix)</visible>
+					</control>
+				</control>
                 
                 <!-- title fallback -->
                 <control type="textbox">
@@ -126,23 +146,23 @@
                     <left>50</left>
                     <top>30</top>
                     <font>Reg46</font>
-                    <align>left</align>
+                    <align>center</align>
                     <aligny>top</aligny>
                     <label>$VAR[View523_FallbackTitle]</label>
                     <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
-                    <visible>[String.Contains(Control.GetLabel(29475),color_transparent) | Skin.HasSetting(NoClearLogoNetflix)] + !Skin.HasSetting(View523_DetailsShowFanart)</visible>
+                    <visible>[String.Contains(Control.GetLabel(29475),color_transparent) | String.Contains(Control.GetLabel(29476),color_transparent) | Skin.HasSetting(NoClearLogoNetflix)] + !Skin.HasSetting(View523_DetailsShowFanart)</visible>
                 </control>
                 <control type="textbox">
                     <height>120</height>
-                    <width>1800</width>
+                    <width>1000</width>
                     <left>50</left>
                     <top>30</top>
                     <font>Reg46</font>
-                    <align>left</align>
+                    <align>center</align>
                     <aligny>top</aligny>
                     <label>$VAR[View523_FallbackTitle]</label>
                     <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
-                    <visible>[String.Contains(Control.GetLabel(29475),color_transparent) | Skin.HasSetting(NoClearLogoNetflix)] + Skin.HasSetting(View523_DetailsShowFanart)</visible>
+                    <visible>[String.Contains(Control.GetLabel(29475),color_transparent) | String.Contains(Control.GetLabel(29476),color_transparent) | Skin.HasSetting(NoClearLogoNetflix)] + Skin.HasSetting(View523_DetailsShowFanart)</visible>
                 </control>
                 
                 <control type="grouplist">

@@ -689,7 +689,7 @@
         <onfocus>SetProperty(ListItem.SubtitleLanguage, $INFO[Container($PARAM[widgetid]).ListItem.SubtitleLanguage])</onfocus>
         <onfocus>SetProperty(ListItem.FileExtension, $INFO[Container($PARAM[widgetid]).ListItem.FileExtension])</onfocus>
         <onfocus>SetProperty(ListItem.AudioLanguage, $INFO[Container($PARAM[widgetid]).ListItem.AudioLanguage])</onfocus>
-        <onfocus>SetProperty(ListItem.MPAA, $INFO[Container($PARAM[widgetid]).ListItem.MPAA])</onfocus>
+        <onfocus>SetProperty(ListItem.Mpaa, $INFO[Container($PARAM[widgetid]).ListItem.Mpaa])</onfocus>
         <onfocus>SetProperty(ListItem.IsStereoScopic, $INFO[Container($PARAM[widgetid]).ListItem.IsStereoScopic])</onfocus>
         <onfocus>SetProperty(ListItem.Video3DFormat, $INFO[Container($PARAM[widgetid]).ListItem.Property(Video3DFormat)])</onfocus>
         <onfocus>SetProperty(ListItem.TagLine, $INFO[Container($PARAM[widgetid]).ListItem.TagLine])</onfocus>

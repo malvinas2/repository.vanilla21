@@ -727,7 +727,7 @@
 								<!--MPAA RATING and SUBTITLES-->
 								<width>1150</width>
 								<height>40</height>
-								<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Subtitles)) | !String.IsEmpty(ListItem.mpaa) | !String.IsEmpty(ListItem.Rating)</visible>
+								<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Subtitles)) | !String.IsEmpty(ListItem.Mpaa) | !String.IsEmpty(ListItem.Rating)</visible>
 								<control type="image">
 									<posx>8</posx>
 									<posy>15</posy>
@@ -755,7 +755,7 @@
 									<height>30</height>
                                     <colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
 									<texture>flags/mpaa.png</texture>
-                                    <visible>!String.IsEmpty(ListItem.mpaa) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Subtitles))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Mpaa) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Subtitles))</visible>
 								</control>
 								<control type="label">
 									<posx>610</posx>
@@ -763,11 +763,11 @@
 									<width>530</width>
 									<font>Reg26</font>
 									<align>left</align>
-									<label fallback="?">$INFO[ListItem.MPAA]</label>
+									<label fallback="?">$INFO[ListItem.Mpaa]</label>
 									<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
 									<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
 									<scroll delay="4000">true</scroll>
-                                    <visible>!String.IsEmpty(ListItem.mpaa) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Subtitles))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Mpaa) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Subtitles))</visible>
 								</control>
                                 <!-- mpaa at left side for tvshows -->
                                 <control type="image">
@@ -777,18 +777,18 @@
 									<height>30</height>
                                     <colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
 									<texture>flags/mpaa.png</texture>
-                                    <visible>!String.IsEmpty(ListItem.mpaa) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Subtitles))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Mpaa) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Subtitles))</visible>
 								</control><control type="label">
 									<posx>60</posx>
 									<posy>0</posy>
 									<width>1230</width>
 									<font>Reg26</font>
 									<align>left</align>
-									<label fallback="?">$INFO[ListItem.MPAA]</label>
+									<label fallback="?">$INFO[ListItem.Mpaa]</label>
 									<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
 									<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
 									<scroll delay="4000">true</scroll>
-                                    <visible>!String.IsEmpty(ListItem.mpaa) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Subtitles))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Mpaa) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Subtitles))</visible>
 								</control>
 							</control>
                             <control type="group">

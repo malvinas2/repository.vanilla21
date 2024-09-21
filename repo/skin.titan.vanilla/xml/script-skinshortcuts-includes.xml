@@ -881,6 +881,44 @@
 			<property name="group">powermenu</property>
 			<property name="isSubmenu">True</property>
 			</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">20</property>
+			<label>$LOCALIZE[20150]</label>
+			<label2 />
+			<icon>common/shutdown-timer.png</icon>
+			<thumb />
+			<property name="labelID">20150</property>
+			<property name="defaultID">20150</property>
+			<property name="translatedPath">AlarmClock(shutdowntimer,Shutdown())</property>
+			<visible>[!System.HasAlarm(shutdowntimer) + [System.CanPowerDown | System.CanSuspend | System.CanHibernate]] + String.IsEqual(Container(300).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
+			<property name="path">AlarmClock(shutdowntimer,Shutdown())</property>
+			<property name="list">AlarmClock(shutdowntimer,Shutdown())</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<property name="mainmenuid">20</property>
+			<label>$LOCALIZE[20151]</label>
+			<label2 />
+			<icon>common/cancel-timer.png</icon>
+			<thumb />
+			<property name="labelID">20151</property>
+			<property name="defaultID">20151</property>
+			<property name="translatedPath">CancelAlarm(shutdowntimer)</property>
+			<visible>[System.HasAlarm(shutdowntimer)] + String.IsEqual(Container(300).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>CancelAlarm(shutdowntimer)</onclick>
+			<property name="path">CancelAlarm(shutdowntimer)</property>
+			<property name="list">CancelAlarm(shutdowntimer)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+			</item>
 		</include>
 	<include name="skinshortcuts-group-livetv">
 		<item id="1">
@@ -1785,6 +1823,44 @@
 			<property name="group">powermenu</property>
 			<property name="isSubmenu">True</property>
 			</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">20</property>
+			<label>$LOCALIZE[20150]</label>
+			<label2 />
+			<icon>common/shutdown-timer.png</icon>
+			<thumb />
+			<property name="labelID">20150</property>
+			<property name="defaultID">20150</property>
+			<property name="translatedPath">AlarmClock(shutdowntimer,Shutdown())</property>
+			<visible>!System.HasAlarm(shutdowntimer) + [System.CanPowerDown | System.CanSuspend | System.CanHibernate]</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
+			<property name="path">AlarmClock(shutdowntimer,Shutdown())</property>
+			<property name="list">AlarmClock(shutdowntimer,Shutdown())</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<property name="mainmenuid">20</property>
+			<label>$LOCALIZE[20151]</label>
+			<label2 />
+			<icon>common/cancel-timer.png</icon>
+			<thumb />
+			<property name="labelID">20151</property>
+			<property name="defaultID">20151</property>
+			<property name="translatedPath">CancelAlarm(shutdowntimer)</property>
+			<visible>System.HasAlarm(shutdowntimer)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>CancelAlarm(shutdowntimer)</onclick>
+			<property name="path">CancelAlarm(shutdowntimer)</property>
+			<property name="list">CancelAlarm(shutdowntimer)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+			</item>
 		</include>
 	<include name="skinshortcuts-group-alt-powermenu">
 		<item id="1">
@@ -1891,6 +1967,44 @@
 			<onclick>Reset</onclick>
 			<property name="path">Reset</property>
 			<property name="list">Reset</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">20</property>
+			<label>$LOCALIZE[20150]</label>
+			<label2 />
+			<icon>common/shutdown-timer.png</icon>
+			<thumb />
+			<property name="labelID">20150</property>
+			<property name="defaultID">20150</property>
+			<property name="translatedPath">AlarmClock(shutdowntimer,Shutdown())</property>
+			<visible>[!System.HasAlarm(shutdowntimer) + [System.CanPowerDown | System.CanSuspend | System.CanHibernate]] + String.IsEqual(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
+			<property name="path">AlarmClock(shutdowntimer,Shutdown())</property>
+			<property name="list">AlarmClock(shutdowntimer,Shutdown())</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<property name="mainmenuid">20</property>
+			<label>$LOCALIZE[20151]</label>
+			<label2 />
+			<icon>common/cancel-timer.png</icon>
+			<thumb />
+			<property name="labelID">20151</property>
+			<property name="defaultID">20151</property>
+			<property name="translatedPath">CancelAlarm(shutdowntimer)</property>
+			<visible>[System.HasAlarm(shutdowntimer)] + String.IsEqual(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>CancelAlarm(shutdowntimer)</onclick>
+			<property name="path">CancelAlarm(shutdowntimer)</property>
+			<property name="list">CancelAlarm(shutdowntimer)</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">powermenu</property>
 			<property name="isSubmenu">True</property>

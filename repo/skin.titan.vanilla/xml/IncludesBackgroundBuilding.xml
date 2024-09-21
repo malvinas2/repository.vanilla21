@@ -447,13 +447,15 @@
     </variable>
     
     <variable name="backgroundVar">
-
         <value condition="[Window.IsActive(LoginScreen.xml) | Window.IsActive(StartUp.xml)] + Skin.String(LoginBackground)">$INFO[Skin.String(LoginBackground)]</value>
+        <!-- background for youtube search -->
+        <value condition="String.Contains(Container.FolderPath,plugin://plugin.video.youtube/kodion/search/input_prompt)">resource://resource.images.skinbackgrounds.titanium/hover_youtube.jpg</value>
+        <value condition="String.Contains(Container.FolderPath,plugin://plugin.video.youtube)">special://home/addons/plugin.video.youtube/resources/media/fanart.jpg</value>
         <!-- animated fanart background -->
         <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanArt)) + Skin.HasSetting(AnimatedFanart)">$INFO[Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanArt)]</value>
         <!-- built-in extrafanart background -->
-		<value condition="Control.IsVisible(99007)">$INFO[Control.GetLabel(99007)]</value>
-		<!-- extrafanart background -->
+        <value condition="Control.IsVisible(99007)">$INFO[Control.GetLabel(99007)]</value>
+        <!-- extrafanart background -->
         <value condition="Control.IsVisible(99005) + !String.IsEmpty(Control.GetLabel(99005))">$INFO[Control.GetLabel(99005)]</value>
         <!-- normal fanart background -->
         <value condition="Control.IsVisible(99006) + !String.IsEmpty(Control.GetLabel(99006))">$INFO[Control.GetLabel(99006)]</value>
