@@ -40,6 +40,7 @@
                     <visible>Skin.HasSetting(LargeWidgetDetailsPanel)</visible>
                 </control>
                 <control type="label">
+					<left></left>
                     <right>76</right>
                     <top>5</top>
                     <width>1270</width>
@@ -51,6 +52,7 @@
                     <font>Reg28</font>
                 </control>
                 <control type="textbox">
+					<left></left>
                     <right>76</right>
                     <top>40</top>
                     <width>1270</width>
@@ -69,6 +71,7 @@
             
             <!-- fake button for submenu at focus -->
             <control type="button" id="4444">
+				<left></left>
                 <right>-1</right>
                 <width>1</width>
                 <height>1</height>
@@ -103,6 +106,8 @@
         </control>
         <control type="label">	
             <description>InfoLine</description>
+			<left></left>
+			<top></top>
             <right>60</right>
             <bottom>0</bottom>
             <width>1400</width>
@@ -124,8 +129,8 @@
 
             <!--Panel-->
             <control type="image">
-                <posy>0</posy>
-                <posx>0</posx>
+                <top>0</top>
+                <left>0</left>
                 <width>400</width>
                 <height>100%</height>
                 <texture>colors/color_white.png</texture>
@@ -146,7 +151,7 @@
                 <animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
                 <animation effect="slide" start="0" end="-325" time="0" delay="0" condition="Skin.HasSetting(SimpleVerHomeLeftAlign)">Conditional</animation>
                 <left>355</left>
-                <posy>110</posy>
+                <top>110</top>
                 <width>25</width>
                 <height>60</height>
                 <aspectratio>keep</aspectratio>
@@ -159,7 +164,7 @@
                 <animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
                 <animation effect="slide" start="0" end="-325" time="0" delay="0" condition="Skin.HasSetting(SimpleVerHomeLeftAlign)">Conditional</animation>
                 <left>355</left>
-                <posy>1000</posy>
+                <top>1000</top>
                 <width>25</width>
                 <height>60</height>
                 <aspectratio>keep</aspectratio>
@@ -170,8 +175,8 @@
             <control type="list" id="300">
                 <animation effect="fade" time="200" start="100" end="70" reversible="true" condition="!Control.HasFocus(300)">Conditional</animation>
                 <animation effect="fade" time="200" start="100" end="20" reversible="true" condition="Control.HasFocus(4444) + Skin.HasSetting(VerticalHomeInlineSubmenu)">Conditional</animation>
-                <posx>10</posx>
-                <posy>160</posy>
+                <left>10</left>
+                <top>160</top>
                 <width>375</width>
                 <include condition="Skin.String(HomeLayout, simplever_tiles)">HomeSimpleVertical_AltHeight</include>
                 <height>800</height>
@@ -187,8 +192,9 @@
                 <preloaditems>4</preloaditems>
                 <itemlayout height="80" width="370" condition="!Skin.String(HomeLayout, simplever_tiles)">
                     <control type="label">
+						<left></left>
                         <right>0</right>
-                        <posy>0</posy>
+                        <top>0</top>
                         <width>350</width>
                         <height>80</height>
                         <include condition="Skin.HasSetting(SimpleVerHomeLeftAlign)">align_left</include>
@@ -279,7 +285,7 @@
             <include condition="!Skin.HasSetting(DisableAllSubmenus) + Skin.HasSetting(VerticalHomeInlineSubmenu)">HomeSimpleVerticalSubMenuInline</include>
             <!-- Power button -->
             <control type="group">
-                <posx>20</posx>
+                <left>20</left>
                 <bottom>5</bottom>
                 <width>60</width>
                 <height>60</height>
@@ -295,6 +301,7 @@
 	<include name="HomeSimpleVertical_FocusedMainMenuItem">
 		<!-- menu label -->
 		<control type="label">
+			<left></left>
 			<right>0</right>
 			<width>350</width>
 			<height>80</height>
@@ -348,8 +355,8 @@
     <include name="HomeSimpleVerticalSubMenuNormal">
 		<!-- submenu -->
 		<control type="group">
-			<posx>420</posx>
-			<posy>170</posy>
+			<left>420</left>
+			<top>170</top>
 			<animation type="Conditional" condition="Control.IsVisible(4444)">
 				<effect type="fade" start="0" end="100" time="250" delay="0" />
 			</animation>
@@ -390,8 +397,8 @@
 			<!--Panel-->
             <control type="group">
                 <visible>Skin.String(MainMenuPanelColor) + !Skin.String(MainMenuPanelColor,None)</visible>
-                <posy>-10</posy>
-                <posx>-20</posx>
+                <top>-10</top>
+                <left>-20</left>
                 <width>360</width>
                 <control type="image">
                     <height>410</height>
@@ -454,7 +461,7 @@
 				<movement>3</movement>
 				<itemlayout width="320" height="65">
                     <control type="label">
-                        <posx>10</posx>
+                        <left>10</left>
                         <width>290</width>
                         <align>left</align>
                         <font>Reg26</font>
@@ -465,7 +472,7 @@
 				</itemlayout>
 				<focusedlayout width="320" height="65">
                     <control type="label">
-                        <posx>10</posx>
+                        <left>10</left>
                         <width>290</width>
                         <align>left</align>
                         <font>Reg28</font>
@@ -489,8 +496,8 @@
 	
 	<include name="HomeSimpleVerticalSubMenuInline">
 		<control type="group">
-			<posx>25</posx>
-			<posy>150</posy>
+			<left>25</left>
+			<top>150</top>
 			<animation type="Conditional" condition="Integer.IsGreater(Container(300).Position,0) + !Skin.String(HomeLayout, simplever_tiles)">
 				<effect type="slide" end="0,80" time="0" delay="0" />
 			</animation>
@@ -537,8 +544,8 @@
 				<animation effect="slide" end="-580" time="0" condition="!String.Contains(Window(Home).Property(submenu),show)">Conditional</animation>
 				<animation effect="slide" start="0" end="0,80" time="0" reversible="false" condition="Skin.HasSetting(VerticalHomeInlineSubmenu)">Conditional</animation>
 				<width>350</width>
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<height>440</height>
 				<itemgap>3</itemgap>
 				<onleft>300</onleft>
@@ -556,7 +563,7 @@
 				<movement>3</movement>
 				<itemlayout width="400" height="65">
                     <control type="label">
-                        <posx>0</posx>
+                        <left>0</left>
                         <width>350</width>
                         <align>right</align>
                         <font>Reg28</font>
@@ -568,7 +575,7 @@
                 </itemlayout>
 				<focusedlayout width="320" height="65">
                     <control type="label">
-                        <posx>0</posx>
+                        <left>0</left>
                         <width>350</width>
                         <align>right</align>
                         <font>Reg28</font>
@@ -579,7 +586,7 @@
                         <animation effect="fade" time="200" start="100" end="60" reversible="true" condition="!Control.HasFocus(4444)">Conditional</animation>
                     </control>
                     <control type="label">
-                        <posx>0</posx>
+                        <left>0</left>
                         <width>350</width>
                         <align>right</align>
                         <font>Reg28</font>
@@ -910,6 +917,7 @@
 
         </control>
         <control type="scrollbar" id="317"> 
+			<left></left>
             <right>0</right>
             <top>180</top>
             <bottom>50</bottom>
@@ -982,8 +990,9 @@
             <height>1</height>
             <visible>Control.HasFocus(4446)</visible>
             <control type="label">
+				<left></left>
                 <right>0</right>
-                <posy>0</posy>
+                <top>0</top>
                 <width>100%</width>
                 <height>100</height>
                 <include condition="Skin.HasSetting(WidgetAlignRight)">align_left</include>

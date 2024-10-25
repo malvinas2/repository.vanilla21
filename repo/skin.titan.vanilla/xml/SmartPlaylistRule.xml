@@ -10,8 +10,8 @@
 
 				<control type="image">
 					<!--Panel-->
-					<posx>445</posx>
-                    <posy>360</posy>
+					<left>445</left>
+                    <top>360</top>
                     <width>1030</width>
                     <height>360</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
@@ -19,8 +19,8 @@
 				</control>
 				<control type="image">
 					<!--Panel-->
-					<posx>445</posx>
-                    <posy>360</posy>
+					<left>445</left>
+                    <top>360</top>
                     <width>1030</width>
                     <height>360</height>
 					<bordersize>10</bordersize>
@@ -31,27 +31,27 @@
 				
                 <control type="label">
                     <description>Heading</description>
-                    <posx>473</posx>
-                    <posy>370</posy>
+                    <left>473</left>
+                    <top>370</top>
                     <width>974</width>
                     <align>center</align>
                     <include>DialogHeader</include>
                     <label>$LOCALIZE[21421]</label>
                 </control>
                 <control type="group" id="8001">
-                    <posx>479</posx>
-                    <posy>473</posy>
+                    <left>479</left>
+                    <top>473</top>
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <left>0</left>
+                        <top>0</top>
                         <width>474</width>
                         <height>61</height>
                         <texture border="5">dialogs/default/inner.png</texture>
                     </control>
                     <control type="button" id="15">
                         <description>Set Playlist type</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <left>0</left>
+                        <top>0</top>
                         <width>474</width>
                         <label></label>
                         <include>DialogButton</include>
@@ -64,16 +64,16 @@
                         <onright>16</onright>
                     </control>
                     <control type="image">
-                        <posx>488</posx>
-                        <posy>0</posy>
+                        <left>488</left>
+                        <top>0</top>
                         <width>474</width>
                         <height>61</height>
                         <texture border="5">dialogs/default/inner.png</texture>
                     </control>
                     <control type="button" id="16">
                         <description>Set Playlist type</description>
-                        <posx>488</posx>
-                        <posy>0</posy>
+                        <left>488</left>
+                        <top>0</top>
                         <width>474</width>
                         <label></label>
                         <include>DialogButton</include>
@@ -87,19 +87,19 @@
                     </control>
                 </control>
                 <control type="group" id="8002">
-                    <posx>479</posx>
-                    <posy>547</posy>
+                    <left>479</left>
+                    <top>547</top>
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <left>0</left>
+                        <top>0</top>
                         <width>690</width>
                         <height>61</height>
                         <texture border="5">dialogs/default/inner.png</texture>
                     </control>
                     <control type="edit" id="17">
                         <description>Name Button</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <left>0</left>
+                        <top>0</top>
                         <width>690</width>
                         <height>60</height>
                         <align>left</align>
@@ -113,15 +113,15 @@
                         <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(17)" reversible="false">Conditional</animation>
                     </control>
                     <control type="image">
-                        <posx>704</posx>
-                        <posy>0</posy>
+                        <left>704</left>
+                        <top>0</top>
                         <width>258</width>
                         <height>61</height>
                         <texture border="5">dialogs/default/inner.png</texture>
                     </control>
                     <control type="image">
-                        <posx>617</posx>
-                        <posy>0</posy>
+                        <left>617</left>
+                        <top>0</top>
                         <width>74</width>
                         <height>60</height>
                         <texture>dialogs/mediasource/keyboard-nf.png</texture>
@@ -129,8 +129,8 @@
                         <visible>!Control.HasFocus(17)</visible>
                     </control>
                     <control type="image">
-                        <posx>617</posx>
-                        <posy>0</posy>
+                        <left>617</left>
+                        <top>0</top>
                         <width>74</width>
                         <height>60</height>
                         <texture>dialogs/mediasource/keyboard-nf.png</texture>
@@ -138,8 +138,8 @@
                         <visible>Control.HasFocus(17)</visible>
                     </control>
                     <control type="radiobutton" id="20">
-                        <posx>704</posx>
-                        <posy>0</posy>
+                        <left>704</left>
+                        <top>0</top>
                         <width>258</width>
                         <height>60</height>
                         <include>DialogButtonBrowse</include>
@@ -155,9 +155,9 @@
                     </control>
                 </control>
                 <control type="group" id="8000">
-                    <posx>470</posx>
+                    <left>470</left>
 					<width>980</width>
-                    <posy>620</posy>
+                    <top>620</top>
                     <control type="button" id="18">
                         <description>OK</description>
                         <label>$LOCALIZE[12321]</label>
@@ -169,7 +169,8 @@
                         <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(18)">Conditional</animation>
                     </control>
                     <control type="button" id="19">
-                        <posx>200</posx>
+                        <!-- <left>200</left> -->
+						<left></left>
 						<right>0</right>
                         <description>Cancel</description>
                         <label>$LOCALIZE[222]</label>

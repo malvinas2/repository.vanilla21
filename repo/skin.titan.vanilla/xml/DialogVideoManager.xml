@@ -64,6 +64,7 @@
 			<control type="label">
 				<description>Path label</description>
 				<left>20</left>
+                <top></top>
 				<bottom>10</bottom>
 				<width>1280</width>
 				<height>30</height>
@@ -76,6 +77,8 @@
 
 			<!-- Anzahl der Eintrage, rechts unten -->
 			<control type="label">
+				<left></left>
+                <top></top>
 				<right>40</right>
 				<bottom>15</bottom>
 				<width>275</width>
@@ -109,8 +112,8 @@
 					<itemlayout height="125" width="860">
 						<!-- Trennlinie zwischen Eintragen -->
 						<control type="image">
-							<posx>0</posx>
-							<posy>1</posy>
+							<left>0</left>
+							<top>1</top>
 							<width>860</width>
 							<height>125</height>
 							<texture>dialogs/default/separator.png</texture>
@@ -144,8 +147,9 @@
 							<label>$VAR[MediaInfoListLabel2Var]</label>
 						</control>
 						<control type="image">
+			                <left></left>
 							<right>5</right>
-							<posy>10</posy>
+							<top>10</top>
 							<width>40</width>
 							<height>40</height>
 							<texture>common/checkbox.png</texture>
@@ -194,8 +198,9 @@
 								<label>$VAR[MediaInfoListLabel2Var]</label>
 							</control>
 							<control type="image">
+								<left></left>
 								<right>5</right>
-								<posy>10</posy>
+								<top>10</top>
 								<width>40</width>
 								<height>40</height>
 								<texture>common/checkbox.png</texture>

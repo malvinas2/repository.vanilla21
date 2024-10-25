@@ -51,6 +51,7 @@
                 <control type="image">
                     <fadetime>350</fadetime>
                     <width>1152</width>
+					<left></left>
                     <right>0</right>
                     <height>550</height>
                     <top>0</top>
@@ -167,8 +168,8 @@
                 
                 <control type="grouplist">
                     <width>1500</width>
-                    <posx>55</posx>
-                    <posy>205</posy>
+                    <left>55</left>
+                    <top>205</top>
                     <height>400</height>
 					<itemgap>2</itemgap>
                     <orientation>vertical</orientation>
@@ -243,7 +244,7 @@
                 
                 <!-- media flags -->
                 <control type="group">
-                    <posx>60</posx>
+                    <left>60</left>
                     <height>50</height>
                     <top>590</top>
                     <include>mediaflags</include>
@@ -263,6 +264,7 @@
                     <width>400</width>
                     <height>400</height>
                     <top>40</top>
+					<left></left>
                     <right>-200</right>
 					<texture background="true" diffuse="diffuse/cdmask_new.png">$VAR[DiscArtImage]</texture>
 					<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
@@ -278,7 +280,8 @@
             <control type="radiobutton" id="5001">
                 <width>60</width>
                 <height>60</height>
-                <right>20</right>
+   				<left></left>
+				<right>20</right>
                 <top>20</top>
                 <font></font>
                 <selected>Control.HasFocus(5001)</selected>
@@ -302,6 +305,7 @@
 				<control type="scrollbar" id="60">
 					<visible>Control.IsVisible(523) + Integer.IsGreater(Container.Numitems,0)</visible>
 					<left>60</left>
+					<top></top>
 					<bottom>5</bottom>
 					<width>1800</width>
 					<height>20</height>

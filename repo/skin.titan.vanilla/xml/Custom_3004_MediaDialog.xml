@@ -12,8 +12,8 @@
             <!--Panel-->
             <control type="image">
                 <!--Panel-->
-                <posx>604</posx>
-                <posy>206</posy>
+                <left>604</left>
+                <top>206</top>
                 <width>712</width>
                 <height>670</height>
                 <texture border="15">diffuse/bgpanel.png</texture>
@@ -21,8 +21,8 @@
             </control>
 			<control type="image">
                 <!--Panel-->
-                <posx>604</posx>
-                <posy>206</posy>
+                <left>604</left>
+                <top>206</top>
                 <width>712</width>
                 <height>670</height>
 				<bordersize>5</bordersize>
@@ -31,8 +31,8 @@
             </control>
             <control type="image">
                 <!--Inner-->
-                <posx>638</posx>
-                <posy>300</posy>
+                <left>638</left>
+                <top>300</top>
                 <width>644</width>
                 <height>481</height>
                 <texture border="5">dialogs/default/inner.png</texture>
@@ -40,8 +40,8 @@
 			<!--Header-->
             <control type="label">
                 <description>Heading</description>
-                <posx>473</posx>
-                <posy>230</posy>
+                <left>473</left>
+                <top>230</top>
                 <width>974</width>
                 <label>$LOCALIZE[13511]</label>
                 <include>DialogHeader</include>
@@ -50,8 +50,8 @@
             <!--Get Thumb-->
             <control type="button" id="2">
                 <description>Get thumb</description>
-                <posx>638</posx>
-                <posy>300</posy>
+                <left>638</left>
+                <top>300</top>
                 <width>644</width>
                 <height>60</height>
                 <label>$LOCALIZE[31827]</label>
@@ -70,8 +70,8 @@
             </control>
             <!--Label External Artwork-->
             <control type="button">
-                <posx>638</posx>
-                <posy>368</posy>
+                <left>638</left>
+                <top>368</top>
                 <width>644</width>
                 <height>53</height>
                 <label>[B]$LOCALIZE[31828][/B]</label>
@@ -82,8 +82,8 @@
             </control>
             <!--List ID=3 Poster, Fanart, Clearart,..-->
             <control type="list" id="3">
-                <posx>638</posx>
-                <posy>420</posy>
+                <left>638</left>
+                <top>420</top>
                 <width>644</width>
                 <height>360</height>
                 <onleft>7</onleft>
@@ -94,15 +94,15 @@
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <itemlayout height="60">
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>1</posy>
+                        <left>0</left>
+                        <top>1</top>
                         <width>644</width>
                         <height>60</height>
                         <texture>dialogs/default/separator.png</texture>
                     </control>
                     <control type="label">
-                        <posx>20</posx>
-                        <posy>0</posy>
+                        <left>20</left>
+                        <top>0</top>
                         <width>604</width>
                         <height>60</height>
                         <info>ListItem.Label</info>
@@ -116,15 +116,15 @@
                     <control type="group">
                         <visible>!Control.HasFocus(3)</visible>
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>1</posy>
+                            <left>0</left>
+                            <top>1</top>
                             <width>644</width>
                             <height>60</height>
                             <texture>dialogs/default/separator.png</texture>
                         </control>
                         <control type="label">
-                            <posx>20</posx>
-                            <posy>0</posy>
+                            <left>20</left>
+                            <top>0</top>
                             <width>604</width>
                             <height>60</height>
                             <info>ListItem.Label</info>
@@ -142,8 +142,8 @@
                             <texture border="5">diffuse/panel.png</texture><colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
                         </control>
                         <control type="label">
-                            <posx>20</posx>
-                            <posy>0</posy>
+                            <left>20</left>
+                            <top>0</top>
                             <width>604</width>
                             <height>60</height>
                             <info>ListItem.Label</info>
@@ -169,14 +169,13 @@
             </control>
             <!--Buttons-->
             <control type="group" id="8000">
-                <posx>638</posx>
-                <posy>792</posy>
+                <left>628</left>
+                <top>792</top>
                 <control type="button" id="7">
                     <description>Close</description>
                     <label>$LOCALIZE[222]</label>
-					<textoffsetx>20</textoffsetx>
-                    <align>left</align>
-                    <width>644</width>
+                    <include>DialogButtonOther</include>
+					<width>180</width>
                     <onclick>Container.Refresh</onclick>
                     <onclick>Action(close)</onclick>
                     <onleft>7</onleft>
@@ -184,6 +183,7 @@
                     <onup>3</onup>
                     <ondown>3</ondown>
                     <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(7)">Conditional</animation>
+				
                 </control>
             </control>
         </control>

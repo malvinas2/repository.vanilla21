@@ -3,12 +3,12 @@
 	<include>DialogOverlayExtra</include>
 	<defaultcontrol always="true">111</defaultcontrol>
 	<control type="group">
-        <posx>705</posx>
-        <posy>378</posy>
+        <left>705</left>
+        <top>378</top>
 		<control type="group">
 			<control type="image">
-				<posx>-10</posx>
-				<posy>-10</posy>
+				<left>-10</left>
+				<top>-10</top>
 				<width>510</width>
 				<height>330</height>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
@@ -16,16 +16,16 @@
 			</control>
 			<control type="image" id="2">
 				<description>background image</description>
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 	            <width>490</width>
                 <height>310</height>
 				<include>Fade80</include>
 				<texture border="10">dialogs/trakt/trakt-context-bg.png</texture>
 			</control>
 			<control type="list" id="111">
-				<posx>20</posx>
-				<posy>20</posy>
+				<left>20</left>
+				<top>20</top>
                 <width>450</width>
                 <height>483</height>
 				<onup>111</onup>
@@ -35,15 +35,15 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="70" width="450">
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>450</width>
 						<height>60</height>
 						<texture border="8" colordiffuse="$INFO[Skin.String(ButtonColor)]">diffuse/panel.png</texture>
 					</control>
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>450</width>
 						<height>60</height>
 						<font>font13</font>
@@ -57,8 +57,8 @@
 				</itemlayout>
 				<focusedlayout height="70" width="450">
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>450</width>
 						<height>60</height>
 						<texture border="8" colordiffuse="$INFO[Skin.String(ButtonColor)]">diffuse/panel.png</texture>
@@ -67,8 +67,8 @@
 						<animation effect="fade" time="300">Hidden</animation>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>450</width>
 						<height>60</height>
 						<texture border="8" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
@@ -77,8 +77,8 @@
 						<animation effect="fade" time="300">Hidden</animation>
 					</control>
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>450</width>
 						<height>60</height>
 						<font>font13</font>
@@ -93,8 +93,8 @@
 						<animation effect="fade" time="300">Hidden</animation>
 					</control>
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>450</width>
 						<height>60</height>
 						<font>font13</font>

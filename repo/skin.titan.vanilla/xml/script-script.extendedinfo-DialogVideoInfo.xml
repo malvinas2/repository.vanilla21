@@ -13,8 +13,8 @@
 			
 			<control type="label">
 				<include>animation_fade_visible_hidden</include>
-				<posx>61</posx>
-				<posy>10</posy>
+				<left>61</left>
+				<top>10</top>
 				<width min="80" max="1400">auto</width>
 				<height>100</height>
 				<font>Bold45</font>
@@ -25,8 +25,8 @@
 				<visible>!Window.IsActive(notification) + !Window.IsActive(extendedprogressdialog) + !Control.IsVisible(88888)</visible>
 			</control>
 			<control type="label">
-				<posy>85</posy>
-				<posx>61</posx>
+				<top>85</top>
+				<left>61</left>
 				<width min="0" max="1100">auto</width>
 				<height>50</height>
 				<label>$INFO[Window.Property(TagLine)]</label>
@@ -41,8 +41,8 @@
 			
 			<!-- panel background -->
 			<control type="image">
-				<posy>150</posy>
-				<posx>0</posx>
+				<top>150</top>
+				<left>0</left>
 				<width>100%</width>
 				<height>930</height>
 				<texture border="5">diffuse/panel.png</texture>
@@ -53,7 +53,8 @@
 			
 			<!-- footer with controls -->
 				<control type="image">
-					<posx>0</posx>
+					<left>0</left>
+					<top></top>
 					<bottom>0</bottom>
 					<width>100%</width>
 					<height>110</height>
@@ -63,7 +64,7 @@
 
 				<!--Butons 9000-->			
 				<control type="grouplist" id="9000">
-					<posx>60</posx>
+					<left>60</left>
 					<bottom>15</bottom>
 					<width>1800</width>
 					<height>60</height>
@@ -220,8 +221,8 @@
                 <control type="grouplist" id="4000">
                     <orientation>vertical</orientation>
                     <scrolltime tween="sine">400</scrolltime>
-                    <posx>60</posx>
-                    <posy>180</posy>
+                    <left>60</left>
+                    <top>180</top>
                     <itemgap>0</itemgap>
                     <ondown condition="!Skin.HasSetting(EnableTouchSupport)">9000</ondown>
                     <onup condition="!Skin.HasSetting(EnableTouchSupport)">4000</onup>
@@ -235,45 +236,45 @@
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<!--First Row-->
 						<control type="group">
-							<posy>0</posy>
-							<posx>18</posx>
+							<top>0</top>
+							<left>18</left>
 							<control type="image">
-								<posx>-13</posx>
-								<posy>0</posy>
+								<left>-13</left>
+								<top>0</top>
 								<width>1560</width>
 								<height>1</height>
 								<colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
 								<texture>info/infopanel_line.png</texture>
 							</control>
 							<control type="image">
-								<posx>-13</posx>
-								<posy>82</posy>
+								<left>-13</left>
+								<top>82</top>
 								<width>1560</width>
 								<height>1</height>
 								<colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
 								<texture>info/infopanel_line.png</texture>
 							</control>
 							<control type="grouplist">
-								<posx>-18</posx>
-								<posy>0</posy>
+								<left>-18</left>
+								<top>0</top>
 								<width>1800</width>
 								<itemgap>0</itemgap>
 								<orientation>horizontal</orientation>
 								<usecontrolcoords>true</usecontrolcoords>
 								<control type="group">
-									<posx>0</posx>
+									<left>0</left>
 									<width>155</width>
 									<visible>!String.IsEqual(Window.Property(Rating),0.0) + !String.IsEmpty(Window.Property(Rating))</visible>
 									<control type="image">
-										<posx>0</posx>
+										<left>0</left>
 										<height>79</height>
 										<width>2</width>
 										<colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
 										<texture>info/upright.png</texture>
 									</control>
 									<control type="label">
-										<posx>0</posx>
-										<posy>12</posy>
+										<left>0</left>
+										<top>12</top>
 										<width>155</width>
 										<height>38</height>
 										<align>center</align>
@@ -283,8 +284,8 @@
 										<font>Bold30</font>
 									</control>
 									<control type="label">
-										<posx>0</posx>
-										<posy>37</posy>
+										<left>0</left>
+										<top>37</top>
 										<width>155</width>
 										<height>38</height>
 										<align>center</align>
@@ -296,8 +297,8 @@
 									</control>
 								</control>
 								<control type="image">
-									<posx>0</posx>
-									<posy>1</posy>
+									<left>0</left>
+									<top>1</top>
 									<height>79</height>
 									<width>2</width>
 									<texture>info/upright.png</texture>
@@ -307,8 +308,8 @@
 									<width>220</width>
 									<visible>!String.IsEmpty(Window.Property(ReleaseDate))</visible>
 									<control type="label">
-										<posx>0</posx>
-										<posy>12</posy>
+										<left>0</left>
+										<top>12</top>
 										<width>220</width>
 										<height>38</height>
 										<align>center</align>
@@ -318,8 +319,8 @@
 										<font>Bold32</font>
 									</control>
 									<control type="label">
-										<posx>0</posx>
-										<posy>37</posy>
+										<left>0</left>
+										<top>37</top>
 										<width>220</width>
 										<height>38</height>
 										<align>center</align>
@@ -331,20 +332,20 @@
 									</control>
 								</control>
 								<control type="group">
-									<posx>0</posx>
+									<left>0</left>
 									<width>220</width>
 									<visible>!String.IsEmpty(Window.Property(Budget))</visible>
 									<control type="image">
-										<posx>0</posx>
-										<posy>1</posy>
+										<left>0</left>
+										<top>1</top>
 										<height>79</height>
 										<width>2</width>
 										<texture>info/upright.png</texture>
 										<colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
 									</control>
 									<control type="label">
-										<posx>0</posx>
-										<posy>12</posy>
+										<left>0</left>
+										<top>12</top>
 										<width>220</width>
 										<height>38</height>
 										<align>center</align>
@@ -354,8 +355,8 @@
 										<font>Bold32</font>
 									</control>
 									<control type="label">
-										<posx>0</posx>
-										<posy>37</posy>
+										<left>0</left>
+										<top>37</top>
 										<width>220</width>
 										<height>38</height>
 										<align>center</align>
@@ -367,20 +368,20 @@
 									</control>
 								</control>
 								<control type="group" id="3300">
-									<posx>0</posx>
+									<left>0</left>
 									<width>220</width>
 									<visible>!String.IsEmpty(Window.Property(Revenue))</visible>
 									<control type="image">
-										<posx>0</posx>
-										<posy>1</posy>
+										<left>0</left>
+										<top>1</top>
 										<height>79</height>
 										<width>2</width>
 										<texture>info/upright.png</texture>
 										<colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
 									</control>
 									<control type="label">
-										<posx>0</posx>
-										<posy>12</posy>
+										<left>0</left>
+										<top>12</top>
 										<width>220</width>
 										<height>38</height>
 										<align>center</align>
@@ -390,8 +391,8 @@
 										<font>Bold32</font>
 									</control>
 									<control type="label">
-										<posx>0</posx>
-										<posy>37</posy>
+										<left>0</left>
+										<top>37</top>
 										<width>220</width>
 										<height>38</height>
 										<align>center</align>
@@ -403,8 +404,8 @@
 									</control>
 								</control>
 								<control type="image">
-									<posx>0</posx>
-									<posy>1</posy>
+									<left>0</left>
+									<top>1</top>
 									<height>79</height>
 									<width>2</width>
 									<texture>info/upright.png</texture>
@@ -414,7 +415,7 @@
 									<width>20</width>
 								</control>
 								<control type="label" id="800">
-									<posy>5</posy>
+									<top>5</top>
 									<width>720</width>
 									<height>65</height>
 									<align>left</align>
@@ -438,8 +439,8 @@
 						<visible>false</visible>
                         </control>
                         <control type="label">
-							<posx>0</posx>
-							<posy>-35</posy>
+							<left>0</left>
+							<top>-35</top>
 							<width>1370</width>
 							<height>25</height>
 							<label>$INFO[Window.Property(movie.File),[B]$LOCALIZE[21800]: [/B]]</label>
@@ -450,8 +451,8 @@
 							<font>Reg20</font>
 						</control>
 						<control type="textbox" id="800">
-							<posx>0</posx>
-							<posy>10</posy>
+							<left>0</left>
+							<top>10</top>
 							<width>1370</width>
 							<height>230</height>
 							<label>$INFO[Window.Property(Plot)]</label>
@@ -462,8 +463,9 @@
 						</control>
                         <control type="image">
 							<!--cdart image-->
+							<left></left>
 							<right>430</right>
-							<posy>-70</posy>
+							<top>-70</top>
 							<width>300</width>
 							<height>300</height>
 							<texture background="true" diffuse="diffuse/cdmask_big.png" fallback="defaultcovers/cd_big.png">$INFO[Window.Property(DiscArt)]</texture>
@@ -474,8 +476,9 @@
 						</control>
 						<control type="image">
 							<!--poster-->
+							<left></left>
 							<right>300</right>
-							<posy>-144</posy>
+							<top>-144</top>
 							<width>300</width>
 							<height>470</height>
 							<aspectratio align="right" aligny="top" scalediffuse="true">keep</aspectratio>
@@ -488,8 +491,8 @@
                         <visible>Integer.IsGreater(Container(1000).NumItems,0)</visible>
                         <height>350</height>
                         <control type="label">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>1540</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -499,16 +502,16 @@
                             <label>$LOCALIZE[206]$INFO[Container(1000).NumItems, (,)]</label>
                         </control>
 						<control type="image">
-                            <posx>1810</posx>
-                            <posy>95</posy>
+                            <left>1810</left>
+                            <top>95</top>
                             <width>35</width>
                             <height>150</height>
                             <texture>info/arrowright.png</texture>
                             <visible>Container(1000).HasNext</visible>
                         </control>
                         <control type="panel" id="1000">
-                            <posx>0</posx>
-                            <posy>40</posy>
+                            <left>0</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>280</height>
                             <onleft>9000</onleft>
@@ -539,8 +542,8 @@
 						<height>80</height>
 						<visible>[Control.HasFocus(1000) | !ControlGroup(4000).HasFocus]</visible>
 						<control type="image">
-							<posx>25</posx>
-							<posy>-35</posy>
+							<left>25</left>
+							<top>-35</top>
 							<width>150</width>
 							<height>35</height>
 							<texture>info/arrowdown.png</texture>
@@ -553,8 +556,8 @@
                         <visible>Integer.IsGreater(Container(750).NumItems,0)</visible>
                         <height>350</height>
                         <control type="label">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>1540</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -564,16 +567,16 @@
                             <label>$ADDON[script.extendedinfo 32115]$INFO[Container(750).NumItems, (,)]</label>
                         </control>
 						<control type="image">
-                            <posx>1810</posx>
-                            <posy>95</posy>
+                            <left>1810</left>
+                            <top>95</top>
                             <width>35</width>
                             <height>150</height>
                             <texture>info/arrowright.png</texture>
                             <visible>Container(750).HasNext</visible>
                         </control>
                         <control type="panel" id="750">
-                            <posx>0</posx>
-                            <posy>40</posy>
+                            <left>0</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>280</height>
                             <onleft>9000</onleft>
@@ -604,8 +607,8 @@
                         <visible>Integer.IsGreater(Container(150).NumItems,0)</visible>
                         <height>350</height>
                         <control type="label">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>1540</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -616,16 +619,16 @@
                             <label>$ADDON[script.extendedinfo 32116]$INFO[Container(150).NumItems, (,)]</label>
                         </control>
                         <control type="image">
-                            <posx>1810</posx>
-                            <posy>95</posy>
+                            <left>1810</left>
+                            <top>95</top>
                             <width>35</width>
                             <height>150</height>
                             <texture>info/arrowright.png</texture>
                             <visible>Container(150).HasNext</visible>
                         </control>
                         <control type="panel" id="150">
-                            <posx>0</posx>
-                            <posy>40</posy>
+                            <left>0</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>280</height>
                             <onleft>9000</onleft>
@@ -656,8 +659,8 @@
                         <height>350</height>
                         <visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
                         <control type="label">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>1540</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -669,8 +672,8 @@
 							<visible>!Integer.IsGreater(Container(250).NumItems,0)</visible>
                         </control>
 						 <control type="label">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>1540</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -682,16 +685,16 @@
 							<visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
                         </control>
                         <control type="image">
-                            <posx>1810</posx>
-                            <posy>95</posy>
+                            <left>1810</left>
+                            <top>95</top>
                             <width>35</width>
                             <height>150</height>
                             <texture>info/arrowright.png</texture>
                             <visible>Container(250).HasNext</visible>
                         </control>
                         <control type="panel" id="250">
-                            <posx>0</posx>
-                            <posy>40</posy>
+                            <left>0</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>280</height>
                             <onleft>9000</onleft>
@@ -721,8 +724,8 @@
                         <visible>Integer.IsGreater(Container(1150).NumItems,0)</visible>
                         <height>270</height>
                         <control type="label">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>1540</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -733,16 +736,16 @@
                             <label>$ADDON[script.extendedinfo 32117]</label>
                         </control>
                          <control type="image">
-                            <posx>1810</posx>
-                            <posy>60</posy>
+                            <left>1810</left>
+                            <top>60</top>
                             <width>35</width>
                             <height>150</height>
                             <texture>info/arrowright.png</texture>
                             <visible>Container(1150).HasNext</visible>
                         </control>
                         <control type="panel" id="1150">
-                            <posx>0</posx>
-                            <posy>40</posy>
+                            <left>0</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>210</height>
                             <onleft>9000</onleft>
@@ -775,8 +778,8 @@
                         <visible>Integer.IsGreater(Container(350).NumItems,0)</visible>
                         <height>270</height>
                         <control type="label">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>1540</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -788,16 +791,16 @@
                             <label>$ADDON[script.extendedinfo 32118]</label>
                         </control>
                         <control type="image">
-                            <posx>1810</posx>
-                            <posy>60</posy>
+                            <left>1810</left>
+                            <top>60</top>
                             <width>35</width>
                             <height>150</height>
                             <texture>info/arrowright.png</texture>
                             <visible>Container(350).HasNext</visible>
                         </control>
                         <control type="panel" id="350">
-                            <posx>0</posx>
-                            <posy>40</posy>
+                            <left>0</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>210</height>
 							<onleft>9000</onleft>
@@ -830,8 +833,8 @@
                         <visible>Integer.IsGreater(Container(550).NumItems,0)</visible>
                         <height>290</height>
                         <control type="label">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>1540</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -842,16 +845,16 @@
                             <label>$LOCALIZE[20388]</label>
                         </control>
                        <control type="image">
-                            <posx>1810</posx>
-                            <posy>60</posy>
+                            <left>1810</left>
+                            <top>60</top>
                             <width>35</width>
                             <height>150</height>
                             <texture>info/arrowright.png</texture>
                             <visible>Container(550).HasNext</visible>
                         </control>
                         <control type="panel" id="550">
-                            <posx>0</posx>
-                            <posy>40</posy>
+                            <left>0</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>210</height>
                             <onleft>9000</onleft>
@@ -865,29 +868,30 @@
                             <preloaditems>2</preloaditems>
                             <itemlayout height="200" width="360">
                                 <control type="group">
-                                    <posx>5</posx>
+                                    <left>5</left>
                                     <control type="image">
-                                        <posy>0</posy>
+                                        <top>0</top>
                                         <width>340</width>
                                         <height>200</height>
                                         <texture border="5" colordiffuse="black">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>5</posy>
-										<posx>5</posx>
+                                        <top>5</top>
+										<left>5</left>
                                         <width>330</width>
                                         <height>190</height>
                                         <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>28</posy>
-                                        <posx>0</posx>
+                                        <top>28</top>
+                                        <left>0</left>
                                         <width>352</width>
                                         <height>100</height>
                                         <texture fallback="special://skin/extras/flags/studios/default-studio.png">$INFO[ListItem.Label,special://skin/extras/flags/studios/,.png]</texture>
                                         <aspectratio aligny="center" align="center">keep</aspectratio>
                                     </control>
                                    <control type="textbox">
+										<top></top>
 										<bottom>2</bottom>
 										<left>10</left>
 										<width>322</width>
@@ -900,29 +904,30 @@
                             </itemlayout>
                             <focusedlayout height="200" width="360">
                                 <control type="group">
-                                    <posx>5</posx>
+                                    <left>5</left>
                                     <control type="image">
-                                        <posy>0</posy>
+                                        <top>0</top>
                                         <width>340</width>
                                         <height>200</height>
                                         <texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>5</posy>
-										<posx>5</posx>
+                                        <top>5</top>
+										<left>5</left>
                                         <width>330</width>
                                         <height>190</height>
                                         <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>28</posy>
-                                        <posx>0</posx>
+                                        <top>28</top>
+                                        <left>0</left>
                                         <width>352</width>
                                         <height>100</height>
                                         <texture fallback="special://skin/extras/flags/studios/default-studio.png">$INFO[ListItem.Label,special://skin/extras/flags/studios/,.png]</texture>
                                         <aspectratio aligny="center" align="center">keep</aspectratio>
                                     </control>
                                    <control type="textbox">
+										<top></top>
 										<bottom>2</bottom>
 										<left>10</left>
 										<width>322</width>
@@ -940,8 +945,8 @@
                         <visible>Integer.IsGreater(Container(1450).NumItems,0)</visible>
                         <height>290</height>
                         <control type="label">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>1540</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -952,16 +957,16 @@
                             <label>$ADDON[script.extendedinfo 32152]</label>
                         </control>
                         <control type="image">
-                            <posx>1810</posx>
-                            <posy>60</posy>
+                            <left>1810</left>
+                            <top>60</top>
                             <width>35</width>
                             <height>150</height>
                             <texture>info/arrowright.png</texture>
                             <visible>Container(1450).HasNext</visible>
                         </control>
                         <control type="panel" id="1450">
-                            <posx>0</posx>
-                            <posy>40</posy>
+                            <left>0</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>210</height>
                             <onleft>9000</onleft>
@@ -975,29 +980,30 @@
                             <preloaditems>2</preloaditems>
                              <itemlayout height="200" width="360">
                                 <control type="group">
-                                    <posx>5</posx>
+                                    <left>5</left>
                                     <control type="image">
-                                        <posy>0</posy>
+                                        <top>0</top>
                                         <width>340</width>
                                         <height>200</height>
                                         <texture border="5" colordiffuse="black">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>5</posy>
-										<posx>5</posx>
+                                        <top>5</top>
+										<left>5</left>
                                         <width>330</width>
                                         <height>190</height>
                                         <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>28</posy>
-                                        <posx>0</posx>
+                                        <top>28</top>
+                                        <left>0</left>
                                         <width>352</width>
                                         <height>100</height>
                                         <texture fallback="special://skin/extras/flags/studios/default-studio.png">$INFO[ListItem.Label,special://skin/extras/flags/studios/,.png]</texture>
                                         <aspectratio aligny="center" align="center">keep</aspectratio>
                                     </control>
                                    <control type="textbox">
+										<top></top>
 										<bottom>2</bottom>
 										<left>10</left>
 										<width>322</width>
@@ -1010,29 +1016,30 @@
                             </itemlayout>
                             <focusedlayout height="200" width="360">
                                 <control type="group">
-                                    <posx>5</posx>
+                                    <left>5</left>
                                     <control type="image">
-                                        <posy>0</posy>
+                                        <top>0</top>
                                         <width>340</width>
                                         <height>200</height>
                                         <texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>5</posy>
-										<posx>5</posx>
+                                        <top>5</top>
+										<left>5</left>
                                         <width>330</width>
                                         <height>190</height>
                                         <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>28</posy>
-                                        <posx>0</posx>
+                                        <top>28</top>
+                                        <left>0</left>
                                         <width>352</width>
                                         <height>100</height>
                                         <texture fallback="special://skin/extras/flags/studios/default-studio.png">$INFO[ListItem.Label,special://skin/extras/flags/studios/,.png]</texture>
                                         <aspectratio aligny="center" align="center">keep</aspectratio>
                                     </control>
                                    <control type="textbox">
+										<top></top>
 										<bottom>2</bottom>
 										<left>10</left>
 										<width>322</width>
@@ -1050,8 +1057,8 @@
                         <visible>Integer.IsGreater(Container(650).NumItems,0)</visible>
                         <height>400</height>
 						<control type="label">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>1540</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -1062,16 +1069,16 @@
                             <label>$ADDON[script.extendedinfo 32168]</label>
                         </control>
                         <control type="image">
-                            <posx>1810</posx>
-                            <posy>60</posy>
+                            <left>1810</left>
+                            <top>60</top>
                             <width>35</width>
                             <height>150</height>
                             <texture>info/arrowright.png</texture>
                             <visible>Container(650).HasNext</visible>
                         </control>
                         <control type="textbox">
-                            <posx>5</posx>
-                            <posy>250</posy>
+                            <left>5</left>
+                            <top>250</top>
                             <width>1795</width>
                             <height>120</height>
                             <font>Reg20</font>
@@ -1079,8 +1086,8 @@
                             <label>$INFO[Container(650).ListItem.Property(meaning)]</label>
                         </control>
                         <control type="panel" id="650">
-                            <posx>0</posx>
-                            <posy>40</posy>
+                            <left>0</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>210</height>
                             <onleft>9000</onleft>
@@ -1094,29 +1101,30 @@
                             <preloaditems>2</preloaditems>
 							<itemlayout height="200" width="360">
                                 <control type="group">
-                                    <posx>5</posx>
+                                    <left>5</left>
                                     <control type="image">
-                                        <posy>0</posy>
+                                        <top>0</top>
                                         <width>340</width>
                                         <height>200</height>
                                         <texture border="5" colordiffuse="black">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>5</posy>
-										<posx>5</posx>
+                                        <top>5</top>
+										<left>5</left>
                                         <width>330</width>
                                         <height>190</height>
                                         <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>28</posy>
-                                        <posx>0</posx>
+                                        <top>28</top>
+                                        <left>0</left>
                                         <width>352</width>
                                         <height>100</height>
                                         <texture background="true">$INFO[ListItem.Property(iso_3166_1),$VAR[LanguageFlagIconPath],.png]</texture>
                                         <aspectratio aligny="center" align="center">keep</aspectratio>
                                     </control>
                                    <control type="textbox">
+										<top></top>
 										<bottom>2</bottom>
 										<left>10</left>
 										<width>322</width>
@@ -1129,29 +1137,30 @@
                             </itemlayout>
                             <focusedlayout height="200" width="360">
                                 <control type="group">
-                                    <posx>5</posx>
+                                    <left>5</left>
                                     <control type="image">
-                                        <posy>0</posy>
+                                        <top>0</top>
                                         <width>340</width>
                                         <height>200</height>
                                         <texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>5</posy>
-										<posx>5</posx>
+                                        <top>5</top>
+										<left>5</left>
                                         <width>330</width>
                                         <height>190</height>
                                         <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>28</posy>
-                                        <posx>0</posx>
+                                        <top>28</top>
+                                        <left>0</left>
                                         <width>352</width>
                                         <height>100</height>
                                         <texture background="true">$INFO[ListItem.Property(iso_3166_1),$VAR[LanguageFlagIconPath],.png]</texture>
                                         <aspectratio aligny="center" align="center">keep</aspectratio>
                                     </control>
                                    <control type="textbox">
+										<top></top>
 										<bottom>2</bottom>
 										<left>10</left>
 										<width>322</width>
@@ -1170,8 +1179,8 @@
                         <visible>Integer.IsGreater(Container(850).NumItems,0)</visible>
                         <height>180</height>
                         <control type="label">
-                           <posx>5</posx>
-                            <posy>0</posy>
+                           <left>5</left>
+                            <top>0</top>
                             <width>1540</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -1182,8 +1191,8 @@
                             <label>Genres</label>
                         </control>
                         <control type="panel" id="850">
-                            <posx>0</posx>
-                            <posy>40</posy>
+                            <left>0</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>100</height>
                             <onleft>9000</onleft>
@@ -1196,16 +1205,16 @@
                             <orientation>horizontal</orientation>
                             <itemlayout height="100" width="360">
                                 <control type="group">
-                                    <posx>5</posx>
+                                    <left>5</left>
                                     <control type="image">
-                                        <posy>0</posy>
+                                        <top>0</top>
                                         <width>340</width>
                                         <height>100</height>
                                         <texture border="5" colordiffuse="black">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>5</posy>
-										<posx>5</posx>
+                                        <top>5</top>
+										<left>5</left>
                                         <width>330</width>
                                         <height>90</height>
                                         <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
@@ -1224,16 +1233,16 @@
                             </itemlayout>
                             <focusedlayout height="100" width="360">
                                 <control type="group">
-                                    <posx>5</posx>
+                                    <left>5</left>
                                     <control type="image">
-                                        <posy>0</posy>
+                                        <top>0</top>
                                         <width>340</width>
                                         <height>100</height>
                                         <texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>5</posy>
-										<posx>5</posx>
+                                        <top>5</top>
+										<left>5</left>
                                         <width>330</width>
                                         <height>90</height>
                                         <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
@@ -1257,8 +1266,8 @@
                         <visible>Integer.IsGreater(Container(1050).NumItems,0)</visible>
                         <height>365</height>
                         <control type="label">
-                            <posx>5</posx>
-                            <posy>130</posy>
+                            <left>5</left>
+                            <top>130</top>
                             <width>500</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -1267,16 +1276,16 @@
                             <label>$ADDON[script.extendedinfo 32167]</label>
                         </control>
 						<control type="image">
-                            <posx>1810</posx>
-                            <posy>130</posy>
+                            <left>1810</left>
+                            <top>130</top>
                             <width>35</width>
                             <height>100</height>
                             <texture>info/arrowright.png</texture>
                             <visible>Container(1050).HasNext</visible>
                         </control>
                         <control type="panel" id="1050">
-                            <posx>5</posx>
-                            <posy>40</posy>
+                            <left>5</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>300</height>
                             <onleft>9000</onleft>
@@ -1343,8 +1352,8 @@
                         <visible>Integer.IsGreater(Container(950).NumItems,0)</visible>
                         <height>310</height>
                         <control type="label">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>1540</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -1353,16 +1362,16 @@
                             <label>Keywords</label>
                         </control>
 						<control type="image">
-                            <posx>1810</posx>
-                            <posy>60</posy>
+                            <left>1810</left>
+                            <top>60</top>
                             <width>35</width>
                             <height>150</height>
                             <texture>info/arrowright.png</texture>
                             <visible>Container(950).HasNext</visible>
                         </control>
                         <control type="panel" id="950">
-                            <posx>0</posx>
-                            <posy>40</posy>
+                            <left>0</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>220</height>
                             <onleft>9000</onleft>
@@ -1376,16 +1385,16 @@
                             <preloaditems>2</preloaditems>
                             <itemlayout height="110" width="360">
                                 <control type="group">
-                                    <posx>5</posx>
+                                    <left>5</left>
                                     <control type="image">
-                                        <posy>0</posy>
+                                        <top>0</top>
                                         <width>340</width>
                                         <height>100</height>
                                         <texture border="5" colordiffuse="black">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>5</posy>
-										<posx>5</posx>
+                                        <top>5</top>
+										<left>5</left>
                                         <width>330</width>
                                         <height>90</height>
                                         <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
@@ -1404,16 +1413,16 @@
                             </itemlayout>
                             <focusedlayout height="110" width="360">
                                 <control type="group">
-                                    <posx>5</posx>
+                                    <left>5</left>
                                     <control type="image">
-                                        <posy>0</posy>
+                                        <top>0</top>
                                         <width>340</width>
                                         <height>100</height>
                                         <texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
                                     </control>
                                     <control type="image">
-                                        <posy>5</posy>
-										<posx>5</posx>
+                                        <top>5</top>
+										<left>5</left>
                                         <width>330</width>
                                         <height>90</height>
                                         <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
@@ -1437,7 +1446,7 @@
                         <height>350</height>
                         <visible>Integer.IsGreater(Container(1250).NumItems,0)</visible>
                         <control type="label">
-                            <posx>5</posx>
+                            <left>5</left>
                             <width>500</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -1448,16 +1457,16 @@
                             <label>$ADDON[script.extendedinfo 32119]</label>
                         </control>
 						<control type="image">
-                            <posx>1810</posx>
-                            <posy>95</posy>
+                            <left>1810</left>
+                            <top>95</top>
                             <width>35</width>
                             <height>150</height>
                             <texture>info/arrowright.png</texture>
                             <visible>Container(1250).HasNext</visible>
                         </control>
                         <control type="panel" id="1250">
-                            <posx>0</posx>
-                            <posy>40</posy>
+                            <left>0</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>280</height>
                             <onleft>9000</onleft>
@@ -1470,8 +1479,8 @@
                                 <control type="group">
 									<width>176</width>
 									<height>252</height>
-									<posy>10</posy>
-									<posx>10</posx>
+									<top>10</top>
+									<left>10</left>
                                     <control type="image">
 										<width>176</width>
 										<height>252</height>
@@ -1489,8 +1498,8 @@
                                <control type="group">
 									<width>176</width>
 									<height>252</height>
-									<posy>10</posy>
-									<posx>10</posx>
+									<top>10</top>
+									<left>10</left>
                                     <control type="image">
 										<width>176</width>
 										<height>252</height>
@@ -1511,7 +1520,7 @@
                         <height>270</height>
                         <visible>Integer.IsGreater(Container(1350).NumItems,0)</visible>
                         <control type="label">
-                            <posx>5</posx>
+                            <left>5</left>
                             <width>500</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -1522,16 +1531,16 @@
                             <label>$LOCALIZE[20445]</label>
                         </control>
 						<control type="image">
-                            <posx>1810</posx>
-                            <posy>60</posy>
+                            <left>1810</left>
+                            <top>60</top>
                             <width>35</width>
                             <height>150</height>
                             <texture>info/arrowright.png</texture>
                             <visible>Container(1350).HasNext</visible>
                         </control>
                         <control type="panel" id="1350">
-                            <posx>0</posx>
-                            <posy>40</posy>
+                            <left>0</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>280</height>
                             <onleft>9000</onleft>
@@ -1579,8 +1588,8 @@
                         <height>350</height>
                         <visible>Integer.IsGreater(Container(450).NumItems,0)</visible>
                         <control type="label">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>500</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -1591,16 +1600,16 @@
                             <label>Related TMDB Lists$INFO[Container(450).NumItems, (,)]</label>
                         </control>
                         <control type="image">
-                            <posx>1810</posx>
-                            <posy>95</posy>
+                            <left>1810</left>
+                            <top>95</top>
                             <width>35</width>
                             <height>150</height>
                             <texture>info/arrowright.png</texture>
                             <visible>Container(450).HasNext</visible>
                         </control>
                         <control type="panel" id="450">
-                            <posx>0</posx>
-                            <posy>40</posy>
+                            <left>0</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>280</height>
                             <onleft>9000</onleft>
@@ -1615,8 +1624,8 @@
 									<width>176</width>
 									<height>252</height>
 									
-									<posy>10</posy>
-									<posx>10</posx>
+									<top>10</top>
+									<left>10</left>
                                     <control type="image">
 										<width>176</width>
 										<height>252</height>
@@ -1629,6 +1638,7 @@
 										<aspectratio scalediffuse="false" aligny="center" align="center">stretch</aspectratio><bordersize>8</bordersize>
 									</control>
 									<control type="image">
+										<top></top>
 										<bottom>8</bottom>
 										<left>8</left>
 										<width>160</width>
@@ -1636,6 +1646,7 @@
 										<include>PosterThumbBG</include>
 									</control>
 									<control type="textbox">
+										<top></top>
 										<bottom>0</bottom>
 										<left>10</left>
 										<width>156</width>
@@ -1650,8 +1661,8 @@
                                <control type="group">
 									<width>176</width>
 									<height>252</height>
-									<posy>10</posy>
-									<posx>10</posx>
+									<top>10</top>
+									<left>10</left>
                                     <control type="image">
 										<width>176</width>
 										<height>252</height>
@@ -1664,6 +1675,7 @@
 										<aspectratio scalediffuse="false" aligny="center" align="center">stretch</aspectratio><bordersize>8</bordersize>
 									</control>
 									<control type="image">
+										<top></top>
 										<bottom>8</bottom>
 										<left>8</left>
 										<width>160</width>
@@ -1671,6 +1683,7 @@
 										<include>PosterThumbBG</include>
 									</control>
 									<control type="textbox">
+										<top></top>
 										<bottom>0</bottom>
 										<left>10</left>
 										<width>156</width>
@@ -1688,8 +1701,8 @@
                         <visible>Integer.IsGreater(Container(2000).NumItems,0)</visible>
                         <height>270</height>
                         <control type="label">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>500</width>
                             <height>25</height>
                             <aligny>center</aligny>
@@ -1701,16 +1714,16 @@
                             <label>Episode Index</label>
                         </control>
 						<control type="image">
-                            <posx>1810</posx>
-                            <posy>60</posy>
+                            <left>1810</left>
+                            <top>60</top>
                             <width>35</width>
                             <height>150</height>
                             <texture>info/arrowright.png</texture>
                             <visible>Container(2000).HasNext</visible>
                         </control>
                         <control type="panel" id="2000">
-                            <posx>0</posx>
-                            <posy>40</posy>
+                            <left>0</left>
+                            <top>40</top>
                             <width>1800</width>
                             <height>210</height>
                             <onleft>9000</onleft>
@@ -1724,7 +1737,7 @@
                             <preloaditems>2</preloaditems>
 							<itemlayout width="362" height="200">
 								<control type="group">
-									<posx>5</posx>
+									<left>5</left>
 									<control type="image">
 										<width>340</width>
 										<height>200</height>
@@ -1732,14 +1745,15 @@
 									</control>
 									<control type="image">
 										<!--Panel Normal-->
-										<posx>4</posx>
-										<posy>8</posy>
+										<left>4</left>
+										<top>8</top>
 										<width>332</width>
 										<height>190</height>
 										<texture background="true" diffuse="home/home_matte2.png" fallback="resource://resource.images.skinicons.wide/video.png">$INFO[ListItem.Art(thumb)]</texture>
 										<aspectratio scalediffuse="true" align="center" aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
+										<top></top>
 										<bottom>8</bottom>
 										<left>10</left>
 										<width>320</width>
@@ -1747,6 +1761,7 @@
 										<include>PosterThumbBG</include>
 									</control>
 									<control type="textbox">
+										<top></top>
 										<bottom>2</bottom>
 										<left>15</left>
 										<width>305</width>
@@ -1759,7 +1774,7 @@
 							</itemlayout>
 							<focusedlayout width="362" height="200">
 								<control type="group">
-									<posx>5</posx>
+									<left>5</left>
 									<control type="image">
 										<width>340</width>
 										<height>200</height>
@@ -1767,14 +1782,15 @@
 									</control>
 									<control type="image">
 										<!--Panel Normal-->
-										<posx>4</posx>
-										<posy>8</posy>
+										<left>4</left>
+										<top>8</top>
 										<width>332</width>
 										<height>190</height>
 										<texture background="true" diffuse="home/home_matte2.png" fallback="resource://resource.images.skinicons.wide/video.png">$INFO[ListItem.Art(thumb)]</texture>
 										<aspectratio scalediffuse="true" align="center" aligny="center">scale</aspectratio>
 									</control>
 									<control type="image">
+										<top></top>
 										<bottom>8</bottom>
 										<left>10</left>
 										<width>320</width>
@@ -1782,6 +1798,7 @@
 										<include>PosterThumbBG</include>
 									</control>
 									<control type="textbox">
+										<top></top>
 										<bottom>2</bottom>
 										<left>15</left>
 										<width>305</width>
@@ -1797,8 +1814,8 @@
 					
 					<!-- buttons (hidden)
 					<control type="grouplist" id="5000">
-						<posx>60</posx>
-						<posy>140</posy>
+						<left>60</left>
+						<top>140</top>
 						<width>1090</width>
 						<height>400</height>
 						<onleft>9000</onleft>
@@ -1810,8 +1827,8 @@
 						<orientation>horizontal</orientation>
 						<scrolltime tween="quadratic">200</scrolltime>
 						<control type="group" id="20000">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<visible>false</visible>
 							<width>280</width>
 							<height>400</height>
@@ -1828,8 +1845,9 @@
 				</control>
          				<!--vertical Scollbar-->
 				<control type="scrollbar" id="999">
+					<left></left>
 					<right>5</right>
-					<posy>175</posy>
+					<top>175</top>
 					<height>770</height>
 					<onup condition="!Skin.HasSetting(EnableTouchSupport)">60</onup>
 					<ondown condition="!Skin.HasSetting(EnableTouchSupport)">60</ondown>
@@ -1840,8 +1858,8 @@
 				
 				<!--Movie info-->
                 <control type="group" id="33000">
-                    <posx>825</posx>
-                    <posy>22</posy>
+                    <left>825</left>
+                    <top>22</top>
                     <visible>false</visible>
                     <animation effect="fade" time="250">VisibleChange</animation>
                 </control>

@@ -11,7 +11,8 @@
 
 		<!-- weather provider logo -->
         <control type="image">
-            <posx>80</posx>
+            <left>80</left>
+			<top></top>
             <bottom>20</bottom>
             <width>480</width>
             <height>112</height>
@@ -23,15 +24,15 @@
         </control>
         <!--Weather-->
         <control type="group">
-            <posx>20</posx>
+            <left>20</left>
             <bottom>40</bottom>
             <height>800</height>
             <include>animation_window_open_close</include>
             <!--Panel-->
 
 			<control type="image">
-				<posx>830</posx>
-                <posy>130</posy>
+				<left>830</left>
+                <top>130</top>
                 <width>1030</width>
                 <height>310</height>
 				<texture border="15">diffuse/bgpanel.png</texture>
@@ -40,8 +41,8 @@
 			</control>
 			
 			<control type="image">
-				<posx>830</posx>
-                <posy>470</posy>
+				<left>830</left>
+                <top>470</top>
                 <width>1030</width>
                 <height>325</height>
 				<texture border="15">diffuse/bgpanel.png</texture>
@@ -50,8 +51,8 @@
 			</control>
             
             <control type="image">
-                <posx>830</posx>
-                <posy>400</posy>
+                <left>830</left>
+                <top>400</top>
                 <width>1030</width>
                 <height>60</height>
                 <texture border="1">dialogs/default/separator.png</texture>
@@ -62,8 +63,8 @@
                 <!--Icon-->
                 <imagepath>$INFO[Skin.String(WeatherIconPack.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$INFO[Skin.String(WeatherIconPack.ext)]</imagepath>
                 <visible>!String.IsEmpty(Window(Weather).Property(Current.FanartCode)) + Skin.String(WeatherIconPack.path)</visible>
-                <posx>890</posx>
-                <posy>110</posy>
+                <left>890</left>
+                <top>110</top>
                 <width>250</width>
                 <height>250</height>
             </control>
@@ -71,8 +72,8 @@
 			<!-- active weather alert icon overlay -->
             <control type="image">
                 <texture>special://skin/extras/media/weather-alert.png</texture>
-                <posx>890</posx>
-                <posy>110</posy>
+                <left>890</left>
+                <top>110</top>
                 <width>250</width>
                 <height>250</height>
 				<visible>!String.IsEmpty(Window(Weather).Property(Alerts)) + !String.IsEmpty(Window(Weather).Property(Alerts.IsFetched))</visible> -->
@@ -80,8 +81,8 @@
 
             <control type="label">
                 <!--Temp-->
-                <posx>870</posx>
-                <posy>365</posy>
+                <left>870</left>
+                <top>365</top>
                 <width>300</width>
                 <height>80</height>
                 <font>Bold38</font>
@@ -92,13 +93,13 @@
             </control>
             <control type="group">
                 <!--Info-->
-                <posx>1350</posx>
-                <posy>160</posy>
+                <left>1350</left>
+                <top>160</top>
                 <!-- Current Temperatur -->
                 <control type="label">
                     <label>$LOCALIZE[401]</label>
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>400</width>
                     <height>50</height>
                     <font>Light35</font>
@@ -107,8 +108,8 @@
                     <align>left</align>
                 </control>
                 <control type="label">
-                    <posx>200</posx>
-                    <posy>0</posy>
+                    <left>200</left>
+                    <top>0</top>
                     <width>400</width>
                     <height>50</height>
                     <font>Light35</font>
@@ -119,8 +120,8 @@
                 </control>
                 <control type="label">
                     <label>$LOCALIZE[402]:</label>
-                    <posx>0</posx>
-                    <posy>40</posy>
+                    <left>0</left>
+                    <top>40</top>
                     <!--60-->
                     <width>400</width>
                     <height>50</height>
@@ -131,8 +132,8 @@
                 </control>
                 <control type="label">
                     <label>$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
-                    <posx>200</posx>
-                    <posy>40</posy>
+                    <left>200</left>
+                    <top>40</top>
                     <!--60-->
                     <width>400</width>
                     <height>50</height>
@@ -143,8 +144,8 @@
                 <!-- Current Condition -->
                 <control type="label">
                     <label>$LOCALIZE[33020]</label>
-                    <posx>0</posx>
-                    <posy>90</posy>
+                    <left>0</left>
+                    <top>90</top>
                     <width>400</width>
                     <height>50</height>
                     <font>Light29</font>
@@ -153,8 +154,8 @@
                     <align>left</align>
                 </control>
                 <control type="label">
-                    <posx>200</posx>
-                    <posy>90</posy>
+                    <left>200</left>
+                    <top>90</top>
                     <width>400</width>
                     <height>50</height>
                     <font>Light29</font>
@@ -166,8 +167,8 @@
                 <!-- Humidity -->
                 <control type="label">
                     <label>$LOCALIZE[406]</label>
-                    <posx>0</posx>
-                    <posy>120</posy>
+                    <left>0</left>
+                    <top>120</top>
                     <width>400</width>
                     <height>50</height>
                     <font>Light29</font>
@@ -177,8 +178,8 @@
                 </control>
                 <control type="label">
                     <label>$INFO[Window.Property(Current.Humidity)]</label>
-                    <posx>200</posx>
-                    <posy>120</posy>
+                    <left>200</left>
+                    <top>120</top>
                     <width>400</width>
                     <height>50</height>
                     <font>Light29</font>
@@ -188,8 +189,8 @@
                 <!-- Uv Index -->
                 <control type="label">
                     <label>$LOCALIZE[403]</label>
-                    <posx>0</posx>
-                    <posy>150</posy>
+                    <left>0</left>
+                    <top>150</top>
                     <width>400</width>
                     <height>50</height>
                     <font>Light29</font>
@@ -199,8 +200,8 @@
                 </control>
                 <control type="label">
                     <label>$INFO[Window.Property(Current.UVIndex)]</label>
-                    <posx>200</posx>
-                    <posy>150</posy>
+                    <left>200</left>
+                    <top>150</top>
                     <width>400</width>
                     <height>50</height>
                     <font>Light29</font>
@@ -210,8 +211,8 @@
                 <!-- Dew Point -->
                 <control type="label">
                     <label>$LOCALIZE[405]</label>
-                    <posx>0</posx>
-                    <posy>180</posy>
+                    <left>0</left>
+                    <top>180</top>
                     <width>400</width>
                     <height>50</height>
                     <font>Light29</font>
@@ -221,8 +222,8 @@
                 </control>
                 <control type="label">
                     <label>$INFO[Window.Property(Current.DewPoint)]</label>
-                    <posx>200</posx>
-                    <posy>180</posy>
+                    <left>200</left>
+                    <top>180</top>
                     <width>400</width>
                     <height>50</height>
                     <font>Light29</font>
@@ -231,8 +232,8 @@
                 </control>
                 <control type="label">
                     <label>$LOCALIZE[383]:</label>
-                    <posx>0</posx>
-                    <posy>210</posy>
+                    <left>0</left>
+                    <top>210</top>
                     <width>400</width>
                     <height>50</height>
                     <font>Light29</font>
@@ -242,8 +243,8 @@
                 </control>
                 <control type="label">
                     <label>$INFO[Window.Property(Current.Wind)]</label>
-                    <posx>200</posx>
-                    <posy>210</posy>
+                    <left>200</left>
+                    <top>210</top>
                     <width>400</width>
                     <height>50</height>
                     <font>Light29</font>
@@ -255,15 +256,15 @@
             <control type="multiimage">
                 <!--Day 1 Icon -->
                 <imagepath>$INFO[Skin.String(WeatherIconPack.path)]$INFO[Window(Weather).Property(Day1.FanartCode)]$INFO[Skin.String(WeatherIconPack.ext)]</imagepath>
-                <posx>890</posx>
-                <posy>540</posy>
+                <left>890</left>
+                <top>540</top>
                 <width>120</width>
                 <height>120</height>
             </control>
             <control type="label">
                 <!--Day 1 Title-->
-                <posx>830</posx>
-                <posy>480</posy>
+                <left>830</left>
+                <top>480</top>
                 <width>250</width>
                 <height>50</height>
                 <font>Light40</font>
@@ -275,8 +276,8 @@
             </control>
             <control type="label">
                 <!--Day 1 Temp-High Low-->
-                <posx>830</posx>
-                <posy>660</posy>
+                <left>830</left>
+                <top>660</top>
                 <width>250</width>
                 <height>50</height>
                 <font>Light35</font>
@@ -287,8 +288,8 @@
             </control>
             <control type="label">
                 <!--Day 1 Outlook -->
-                <posx>830</posx>
-                <posy>735</posy>
+                <left>830</left>
+                <top>735</top>
                 <width>250</width>
                 <height>50</height>
                 <font>Light27</font>
@@ -300,15 +301,15 @@
             <control type="multiimage">
                 <!--Day 2 Icon -->
                 <imagepath>$INFO[Skin.String(WeatherIconPack.path)]$INFO[Window(Weather).Property(Day2.FanartCode)]$INFO[Skin.String(WeatherIconPack.ext)]</imagepath>
-                <posx>1150</posx>
-                <posy>540</posy>
+                <left>1150</left>
+                <top>540</top>
                 <width>120</width>
                 <height>120</height>
             </control>
             <control type="label">
                 <!--Day 2 Title-->
-                <posx>1090</posx>
-                <posy>480</posy>
+                <left>1090</left>
+                <top>480</top>
                 <width>250</width>
                 <height>50</height>
                 <font>Light40</font>
@@ -320,8 +321,8 @@
             </control>
             <control type="label">
                 <!--Day 2 Temp-High Low-->
-                <posx>1090</posx>
-                <posy>660</posy>
+                <left>1090</left>
+                <top>660</top>
                 <width>250</width>
                 <height>50</height>
                 <font>Light35</font>
@@ -332,8 +333,8 @@
             </control>
             <control type="label">
                 <!--Day 2 Outlook -->
-                <posx>1090</posx>
-                <posy>735</posy>
+                <left>1090</left>
+                <top>735</top>
                 <width>250</width>
                 <height>50</height>
                 <font>Light27</font>
@@ -345,15 +346,15 @@
             <control type="multiimage">
                 <!--Day 3 Icon -->
                 <imagepath>$INFO[Skin.String(WeatherIconPack.path)]$INFO[Window(Weather).Property(Day3.FanartCode)]$INFO[Skin.String(WeatherIconPack.ext)]</imagepath>
-                <posx>1410</posx>
-                <posy>540</posy>
+                <left>1410</left>
+                <top>540</top>
                 <width>120</width>
                 <height>120</height>
             </control>
             <control type="label">
                 <!--Day 3 Title-->
-                <posx>1345</posx>
-                <posy>480</posy>
+                <left>1345</left>
+                <top>480</top>
                 <width>250</width>
                 <height>50</height>
                 <font>Light40</font>
@@ -365,8 +366,8 @@
             </control>
             <control type="label">
                 <!--Day 3 Temp-High Low-->
-                <posx>1345</posx>
-                <posy>660</posy>
+                <left>1345</left>
+                <top>660</top>
                 <width>250</width>
                 <height>50</height>
                 <font>Light35</font>
@@ -377,8 +378,8 @@
             </control>
             <control type="label">
                 <!--Day 3 Outlook -->
-                <posx>1345</posx>
-                <posy>735</posy>
+                <left>1345</left>
+                <top>735</top>
                 <width>250</width>
                 <height>50</height>
                 <font>Light27</font>
@@ -390,15 +391,15 @@
             <control type="multiimage">
                 <!--Day 4 Icon -->
                 <imagepath>$INFO[Skin.String(WeatherIconPack.path)]$INFO[Window(Weather).Property(Day4.FanartCode)]$INFO[Skin.String(WeatherIconPack.ext)]</imagepath>
-                <posx>1670</posx>
-                <posy>540</posy>
+                <left>1670</left>
+                <top>540</top>
                 <width>120</width>
                 <height>120</height>
             </control>
             <control type="label">
                 <!--Day 4 Title-->
-                <posx>1615</posx>
-                <posy>480</posy>
+                <left>1615</left>
+                <top>480</top>
                 <width>250</width>
                 <height>50</height>
                 <font>Light40</font>
@@ -410,8 +411,8 @@
             </control>
             <control type="label">
                 <!--Day 4 Temp-High Low-->
-                <posx>1615</posx>
-                <posy>660</posy>
+                <left>1615</left>
+                <top>660</top>
                 <width>250</width>
                 <height>50</height>
                 <font>Light35</font>
@@ -422,8 +423,8 @@
             </control>
             <control type="label">
                 <!--Day 4 Outlook -->
-                <posx>1615</posx>
-                <posy>735</posy>
+                <left>1615</left>
+                <top>735</top>
                 <width>250</width>
                 <height>50</height>
                 <font>Light27</font>

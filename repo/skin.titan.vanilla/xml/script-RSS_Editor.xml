@@ -7,14 +7,14 @@
 
 		<control type="group">
 			<include>animation_window_open_close</include>
-			<posx>470</posx>
-            <posy>340</posy>
+			<left>470</left>
+            <top>340</top>
 			<width>1020</width>
             <height>440</height>
 			<control type="image">
                 <!--Panel-->
-                <posx>-40</posx>
-                <posy>-40</posy>
+                <left>-40</left>
+                <top>-40</top>
                 <width>1100</width>
                 <height>520</height>
                 <texture border="15">diffuse/bgpanel.png</texture>
@@ -22,8 +22,8 @@
             </control>
 			<control type="image">
                 <!--Panel-->
-                <posx>-40</posx>
-                <posy>-40</posy>
+                <left>-40</left>
+                <top>-40</top>
                 <width>1100</width>
                 <height>520</height>
 				<bordersize>10</bordersize>
@@ -33,23 +33,23 @@
 
 			<control type="label" id="2">
 				<description>Heading Label</description>
-				<posx>10</posx>
-				<posy>-2</posy>
+				<left>10</left>
+				<top>-2</top>
 				<width>500</width>
 				<align>left</align>
 				<include>DialogHeader</include>
 			</control>
 			<control type="label" id="4">
 				<description>List Label</description>
-				<posx>10</posx>
-				<posy>35</posy>
+				<left>10</left>
+				<top>35</top>
 				<width>500</width>
 				<align>left</align>
 				<include>DialogLabel</include>
 			</control>
 			<control type="list" id="10">
-				<posx>10</posx>
-				<posy>100</posy>
+				<left>10</left>
+				<top>100</top>
 				<width>600</width>
 				<height>260</height>
 				<onup>9002</onup>
@@ -64,8 +64,8 @@
 						<width>600</width>
 					</control>
 					<control type="label">
-						<posx>5</posx>
-						<posy>0</posy>
+						<left>5</left>
+						<top>0</top>
 						<width>600</width>
 						<height>60</height>
 						<aligny>center</aligny>
@@ -82,8 +82,8 @@
 						<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
 					</control>
 					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
+						<left>10</left>
+						<top>0</top>
 						<width>600</width>
 						<height>60</height>
 						<aligny>center</aligny>
@@ -98,8 +98,8 @@
 						<width>600</width>
 					</control>
 					<control type="label">
-						<posx>5</posx>
-						<posy>0</posy>
+						<left>5</left>
+						<top>0</top>
 						<width>600</width>
 						<height>60</height>
 						<aligny>center</aligny>
@@ -120,8 +120,8 @@
 				<label>[COLOR=$INFO[Skin.String(GeneralHighlightTextColor)]]$INFO[Container(10).NumItems][/COLOR] $LOCALIZE[91830] - [COLOR=$INFO[Skin.String(GeneralHighlightTextColor)]]$INFO[Container(10).CurrentPage]/$INFO[Container(10).NumPages][/COLOR]</label>
 			</control>
 			<control type="grouplist" id="9001">
-				<posx>700</posx>
-				<posy>95</posy>
+				<left>700</left>
+				<top>95</top>
 				<orientation>vertical</orientation>
 				<control type="button" id="11">
 					<description>Change Set Button</description>
@@ -154,8 +154,8 @@
 			<control type="group" id="9002">
 				<control type="button" id="18">
 					<description>Ok Button</description>
-					<posx>00</posx>
-					<posy>370</posy>
+					<left>00</left>
+					<top>370</top>
 					<width>312</width>
 					<include>DialogButtonOther</include>
 					<label>$LOCALIZE[186]</label>
@@ -166,8 +166,8 @@
 				</control>
 				<control type="button" id="19">
 					<description>Cancel Button</description>
-					<posx>310</posx>
-					<posy>370</posy>
+					<left>310</left>
+					<top>370</top>
 					<width>312</width>
 					<include>DialogButtonOther</include>
 					<label>$LOCALIZE[222]</label>

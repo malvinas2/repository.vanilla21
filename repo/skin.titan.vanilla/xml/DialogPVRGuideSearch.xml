@@ -11,8 +11,8 @@
             <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput)</visible>
 			<control type="image">
                 <!--Panel-->
-                <posx>319</posx>
-                <posy>90</posy>
+                <left>319</left>
+                <top>90</top>
                 <width>1282</width>
                 <height>900</height>
                 <texture border="15">diffuse/bgpanel.png</texture>
@@ -20,8 +20,8 @@
             </control>
 			<control type="image">
                 <!--Panel-->
-                <posx>319</posx>
-                <posy>90</posy>
+                <left>319</left>
+                <top>90</top>
                 <width>1282</width>
                 <height>900</height>
 				<bordersize>10</bordersize>
@@ -31,8 +31,8 @@
             <!--Header-->
             <control type="label">
                 <description>Heading</description>
-                <posx>353</posx>
-                <posy>110</posy>
+                <left>353</left>
+                <top>110</top>
                 <width>1214</width>
                 <label>$LOCALIZE[19142]</label>
                 <include>DialogHeader</include>
@@ -40,12 +40,12 @@
             </control>
             <!--Default Group-->
             <control type="group">
-                <posx>353</posx>
-                <posy>208</posy>
+                <left>353</left>
+                <top>208</top>
                 <control type="label">
                     <description>Search label</description>
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>1214</width>
                     <height>34</height>
                     <align>left</align>
@@ -54,16 +54,16 @@
                     <include>DialogLabel</include>
                 </control>
                 <control type="image">
-                    <posx>0</posx>
-                    <posy>40</posy>
+                    <left>0</left>
+                    <top>40</top>
                     <width>1214</width>
                     <height>61</height>
                     <texture border="5">dialogs/default/inner.png</texture>
                 </control>
                 <control type="edit" id="9">
                     <description>Search</description>
-                    <posx>0</posx>
-                    <posy>40</posy>
+                    <left>0</left>
+                    <top>40</top>
                     <width>1215</width>
                     <height>60</height>
                     <align>left</align>
@@ -76,16 +76,16 @@
                     <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(9)" reversible="false">Conditional</animation>
                 </control>
                 <control type="image">
-                    <posx>1140</posx>
-                    <posy>40</posy>
+                    <left>1140</left>
+                    <top>40</top>
                     <width>74</width>
                     <height>60</height>
                     <texture>dialogs/mediasource/keyboard-nf.png</texture>
                     <visible>!Control.HasFocus(9)</visible>
                 </control>
                 <control type="image">
-                    <posx>1140</posx>
-                    <posy>40</posy>
+                    <left>1140</left>
+                    <top>40</top>
                     <width>74</width>
                     <height>60</height>
                     <texture>dialogs/mediasource/keyboard-fo.png</texture>
@@ -93,8 +93,8 @@
                 </control>
                 <control type="textbox">
                     <description>Search help</description>
-                    <posx>20</posx>
-                    <posy>100</posy>
+                    <left>20</left>
+                    <top>100</top>
                     <width>1174</width>
                     <height>78</height>
                     <align>justify</align>
@@ -104,19 +104,19 @@
                 <control type="group" id="8001">
                     <control type="group">
                         <!--Left Group-->
-                        <posx>0</posx>
-                        <posy>189</posy>
+                        <left>0</left>
+                        <top>189</top>
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>0</posy>
+                            <left>0</left>
+                            <top>0</top>
                             <width>600</width>
                             <height>474</height>
                             <texture border="5">dialogs/default/inner.png</texture>
                         </control>
                         <control type="radiobutton" id="10">
                             <description>Include Description</description>
-                            <posx>0</posx>
-                            <posy>0</posy>
+                            <left>0</left>
+                            <top>0</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -134,8 +134,8 @@
                         </control>
                         <control type="radiobutton" id="11">
                             <description>Case Sensitive</description>
-                            <posx>0</posx>
-                            <posy>59</posy>
+                            <left>0</left>
+                            <top>59</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -153,8 +153,8 @@
                         </control>
                         <control type="edit" id="14">
                             <description>Start Date</description>
-                            <posx>0</posx>
-                            <posy>118</posy>
+                            <left>0</left>
+                            <top>118</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -169,8 +169,8 @@
                         </control>
                         <control type="edit" id="15">
                             <description>Stop Date</description>
-                            <posx>0</posx>
-                            <posy>177</posy>
+                            <left>0</left>
+                            <top>177</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -186,8 +186,8 @@
                         <control type="spincontrolex" id="18">
                             <!--Genre-->
                             <description>Genre</description>
-                            <posx>0</posx>
-                            <posy>236</posy>
+                            <left>0</left>
+                            <top>236</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -202,8 +202,8 @@
                         </control>
                         <control type="radiobutton" id="20">
                             <description>Include unknown Genres</description>
-                            <posx>0</posx>
-                            <posy>295</posy>
+                            <left>0</left>
+                            <top>295</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -219,8 +219,8 @@
                         </control>
                         <control type="radiobutton" id="22">
                             <description>FTA only</description>
-                            <posx>0</posx>
-                            <posy>354</posy>
+                            <left>0</left>
+                            <top>354</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -236,8 +236,8 @@
                         </control>
                         <control type="radiobutton" id="24">
                             <description>Ignore Timers</description>
-                            <posx>0</posx>
-                            <posy>413</posy>
+                            <left>0</left>
+                            <top>413</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -254,19 +254,19 @@
                     </control>
                     <control type="group">
                         <!--Right Group-->
-                        <posx>614</posx>
-                        <posy>189</posy>
+                        <left>614</left>
+                        <top>189</top>
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>0</posy>
+                            <left>0</left>
+                            <top>0</top>
                             <width>600</width>
                             <height>474</height>
                             <texture border="5">dialogs/default/inner.png</texture>
                         </control>
                         <control type="spincontrolex" id="12">
                             <description>Min Duration</description>
-                            <posx>0</posx>
-                            <posy>0</posy>
+                            <left>0</left>
+                            <top>0</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -281,8 +281,8 @@
                         </control>
                         <control type="spincontrolex" id="13">
                             <description>Max Duration</description>
-                            <posx>0</posx>
-                            <posy>59</posy>
+                            <left>0</left>
+                            <top>59</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -297,8 +297,8 @@
                         </control>
                         <control type="edit" id="16">
                             <description>Start time</description>
-                            <posx>0</posx>
-                            <posy>118</posy>
+                            <left>0</left>
+                            <top>118</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -313,8 +313,8 @@
                         </control>
                         <control type="edit" id="17">
                             <description>Stop time</description>
-                            <posx>0</posx>
-                            <posy>177</posy>
+                            <left>0</left>
+                            <top>177</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -329,8 +329,8 @@
                         </control>
                         <control type="radiobutton" id="19">
                             <description>avoid repeats</description>
-                            <posx>0</posx>
-                            <posy>236</posy>
+                            <left>0</left>
+                            <top>236</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -347,8 +347,8 @@
                         <control type="spincontrolex" id="21">
                             <!--Groups-->
                             <description>Groups</description>
-                            <posx>0</posx>
-                            <posy>295</posy>
+                            <left>0</left>
+                            <top>295</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -364,8 +364,8 @@
                         <control type="spincontrolex" id="23">
                             <!--Channels-->
                             <description>Channels</description>
-                            <posx>0</posx>
-                            <posy>354</posy>
+                            <left>0</left>
+                            <top>354</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -380,8 +380,8 @@
                         </control>
                         <control type="radiobutton" id="27">
                             <description>Ignore Recordings</description>
-                            <posx>0</posx>
-                            <posy>413</posy>
+                            <left>0</left>
+                            <top>413</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -400,8 +400,8 @@
             </control>
             <!--Button Group-->
             <control type="grouplist" id="8000">
-                <posx>340</posx>
-                <posy>890</posy>
+                <left>340</left>
+                <top>890</top>
 				<orientation>horizontal</orientation>
 				<itemgap>45</itemgap>
                 <control type="button" id="26">

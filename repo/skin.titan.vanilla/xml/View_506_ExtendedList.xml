@@ -7,7 +7,7 @@
 	
 		<control type="group">
 		
-			<posx>30</posx>
+			<left>30</left>
 			<bottom>110</bottom>
 			<height>840</height>
 			<defaultcontrol always="true">506</defaultcontrol>
@@ -18,8 +18,8 @@
 
 			<control type="panel" id="506">
 					
-				<posx>20</posx>
-				<posy>-30</posy>
+				<left>20</left>
+				<top>-30</top>
 				<width>1820</width>
 				<height>840</height>
 				<onup>9000</onup>
@@ -37,14 +37,14 @@
 				<itemlayout width="454" height="900">
 				
 					<control type="group">
-						<posx>0</posx>
-						<posy>40</posy>
+						<left>0</left>
+						<top>40</top>
 						<width>460</width>
 						<height>900</height>
 
 						<control type="image">
-							<posx>8</posx>
-							<posy>7</posy>
+							<left>8</left>
+							<top>7</top>
 							<width>443</width>
 							<height>765</height>
 							<texture border="15">diffuse/bgpanel.png</texture>
@@ -53,8 +53,8 @@
 						
 						<control type="image">
 							<!--Panel icon image-->
-							<posx>18</posx>
-							<posy>18</posy>
+							<left>18</left>
+							<top>18</top>
 							<width>423</width>
 							<height>250</height>
 							<texture background="true" diffuse="home/home_matte2.png" fallback="resource://resource.images.skinicons.wide/video.png">$VAR[LandscapeImage]</texture>
@@ -69,8 +69,8 @@
 						</control>
 						
 						<control type="label">
-							<posx>25</posx>
-							<posy>360</posy>
+							<left>25</left>
+							<top>360</top>
 							<width>400</width>
 							<height>80</height>
 							<label>$INFO[ListItem.Genre,,[CR]]$VAR[ListDetails]</label>
@@ -79,8 +79,8 @@
 						</control>
 						
 						<control type="textbox">
-							<posx>25</posx>
-							<posy>280</posy>
+							<left>25</left>
+							<top>280</top>
 							<width>400</width>
 							<height>80</height>
 							<label>$VAR[View_Item_Header]</label>
@@ -91,8 +91,8 @@
 						</control>
 						
 						<control type="textbox">
-							<posx>25</posx>
-							<posy>440</posy>
+							<left>25</left>
+							<top>440</top>
 							<width>410</width>
 							<height>305</height>
 							<label>$VAR[Plots]</label>
@@ -109,14 +109,14 @@
 				<focusedlayout width="454" height="900">
 				
 					<control type="group">
-						<posx>0</posx>
-						<posy>40</posy>
+						<left>0</left>
+						<top>40</top>
 						<width>460</width>
 						<height>900</height>
 						
 						<control type="image">
-							<posx>8</posx>
-							<posy>7</posy>
+							<left>8</left>
+							<top>7</top>
 							<width>443</width>
 							<height>765</height>
 							<texture border="15">diffuse/bgpanel.png</texture>
@@ -125,8 +125,8 @@
 						
 						<control type="image">
 							<!--Panel icon image-->
-							<posx>18</posx>
-							<posy>18</posy>
+							<left>18</left>
+							<top>18</top>
 							<width>423</width>
 							<height>250</height>
 							<texture background="true" diffuse="home/home_matte2.png" fallback="resource://resource.images.skinicons.wide/video.png">$VAR[LandscapeImage]</texture>
@@ -141,8 +141,8 @@
 						</control>
 					
 						<control type="textbox">
-							<posx>25</posx>
-							<posy>280</posy>
+							<left>25</left>
+							<top>280</top>
 							<width>400</width>
 							<height>80</height>
 							<label>$VAR[View_Item_Header]</label>
@@ -153,8 +153,8 @@
 						</control>
 						
 						<control type="label">
-							<posx>25</posx>
-							<posy>360</posy>
+							<left>25</left>
+							<top>360</top>
 							<width>400</width>
 							<height>80</height>
 							<label>[COLOR=$INFO[Skin.String(ViewDetailsHighlightTextColor)]]$INFO[ListItem.Genre,,[CR]][/COLOR]$VAR[ListDetails]</label>
@@ -163,8 +163,8 @@
 						</control>
 						
 						<control type="textbox">
-							<posx>25</posx>
-							<posy>440</posy>
+							<left>25</left>
+							<top>440</top>
 							<width>410</width>
 							<height>305</height>
 							<label>$VAR[Plots]</label>
@@ -186,7 +186,7 @@
 				<control type="scrollbar" id="60">
 					<visible>Control.IsVisible(506) + Integer.IsGreater(Container.NumItems,0)</visible>
 					<left>30</left>
-					<posy>795</posy>
+					<top>795</top>
 					<width>1800</width>
 					<height>15</height>
 					<onup>506</onup>

@@ -11,7 +11,7 @@
 			<height>222</height>
 			<control type="image">
                 <visible>!String.IsEmpty(ListItem.Label)</visible>
-                <posx>50</posx>
+                <left>50</left>
                 <width>1820</width>
                 <texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
@@ -22,8 +22,8 @@
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
                 <visible>Integer.IsGreater(Container.NumItems,0)</visible>
-				<posx>60</posx>
-				<posy>10</posy>
+				<left>60</left>
+				<top>10</top>
 				<control type="label">
 					<height>33</height>
 					<width>1100</width>
@@ -42,8 +42,8 @@
 				</control>
 			   
 				<control type="textbox">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>1270</width>
 					<height>130</height>
 					<label>$VAR[Plots]</label>
@@ -59,6 +59,8 @@
                 <width>520</width>
                 <height>520</height>
                 <bordersize>20</bordersize>
+				<left></left>
+				<top></top>
                 <bottom>95</bottom>
                 <right>45</right>
                 <texture background="true" diffuse="diffuse/cdmask_new.png" fallback="defaultcovers/cd_big.png">$VAR[DiscArtImage]</texture>
@@ -89,7 +91,7 @@
 				<visible>String.IsEqual(Window(Home).Property(SkinHelper.ForcedView),58) | String.IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
 				<itemlayout height="946" width="520">
 					<control type="group">
-						<posy>200</posy>
+						<top>200</top>
 						<control type="image">
 							<!--Poster-->
 							<width>520</width>
@@ -108,16 +110,16 @@
 							<include condition="Skin.HasSetting(CaseOverlays)">PosterCaseOverlay</include>
 					    </control>
 						<control type="group">
-						<right>20</right>
-						<top>19</top>
-						<include>WatchedIndicatorLarge</include>
-                        <visible>![ListItem.IsCollection + Skin.HasSetting(EmbyCovertArtEnabled)]</visible>
+							<right>20</right>
+							<top>19</top>
+							<include>WatchedIndicatorLarge</include>
+							<visible>![ListItem.IsCollection + Skin.HasSetting(EmbyCovertArtEnabled)]</visible>
 						</control>
 					</control>
 				</itemlayout>
 				<focusedlayout height="946" width="520">
 					<control type="group">
-						<posy>200</posy>
+						<top>200</top>
 						<control type="image">
 							<!--Poster-->
 							<width>520</width>
@@ -136,9 +138,9 @@
 							<include condition="Skin.HasSetting(CaseOverlays)">PosterCaseOverlay</include>
 					    </control>
 						<control type="group">
-						<right>20</right>
-						<top>19</top>
-						<include>WatchedIndicatorLarge</include>
+							<right>20</right>
+							<top>19</top>
+							<include>WatchedIndicatorLarge</include>
 						</control>
 					</control>
 					

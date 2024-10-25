@@ -17,7 +17,7 @@
 			<!--Showcase-->
             <control type="wraplist" id="524">
                 <!--Wraplist ID 500-->
-                <posx>-52</posx>
+                <left>-52</left>
                 <width>1960</width>
                 <height>800</height>
                 <onleft>524</onleft>
@@ -37,7 +37,7 @@
                 </focusedlayout>
             </control>
             <control type="group">
-                <posy>-40</posy>
+                <top>-40</top>
                 <animation type="Conditional" condition="String.IsEqual(Skin.AspectRatio,16:10)">
 					<effect type="slide" start="0,0" end="0,110" time="0" />
 				</animation>
@@ -49,6 +49,7 @@
 				<control type="scrollbar" id="60">
 					<visible>Control.IsVisible(524) + Integer.IsGreater(Container.NumItems,0)</visible>
 					<left>60</left>
+					<top></top>
                     <bottom>14%</bottom>
 					<width>1800</width>
 					<height>15</height>
@@ -65,8 +66,8 @@
 
 	<!-- Movie Showcase Variables: Main thumbs -->
     <include name="MovieShowcaseThumb">
-        <posx>54</posx>
-        <posy>-12</posy>
+        <left>54</left>
+        <top>-12</top>
         <width>300</width>
         <height>421</height>
         <align>center</align>
@@ -75,14 +76,14 @@
 		<bordersize>20</bordersize>
     </include>
     <include name="MovieShowcaseWatchedPos">
-        <posx>274</posx>
-        <posy>7</posy>
+        <left>274</left>
+        <top>7</top>
         <width>60</width>
         <height>60</height>
     </include>
     <include name="MovieShowcaseThumbMain">
-         <posx>54</posx>
-        <posy>-12</posy>
+         <left>54</left>
+        <top>-12</top>
         <width>300</width>
         <height>421</height>
         <align>center</align>
@@ -91,16 +92,16 @@
 		<bordersize>20</bordersize>
     </include>
     <include name="MovieShowcaseThumbReflectionMain">
-        <posx>74</posx>
-        <posy>393</posy>
+        <left>74</left>
+        <top>393</top>
         <width>260</width>
         <height>381</height>
         <colordiffuse>52FFFFFF</colordiffuse>
         <aspectratio scalediffuse="false">stretch</aspectratio>
     </include>
     <include name="MovieShowcaseThumbReflection">
-        <posx>74</posx>
-        <posy>393</posy>
+        <left>74</left>
+        <top>393</top>
         <width>260</width>
         <height>381</height>
         <colordiffuse>52FFFFFF</colordiffuse>
@@ -110,13 +111,13 @@
     <include name="ShowcaseMovies">
         <!-- On Next -->
         <control type="group" id="56001">
-            <posy>550</posy>
+            <top>550</top>
             <camera x="960" y="750" />
             <visible>Control.IsVisible(524) + Container.OnNext + !Skin.HasSetting(flattenshowcase)</visible>
             <animation effect="slide" end="-135,0" time="250" reversible="false">Hidden</animation>
             <control type="group">
                 <!-- -7 Fade Out-->
-                <posx>15</posx>
+                <left>15</left>
                 <visible>Container.OnNext</visible>
                 <animation effect="fade" start="100" end="0" time="250" tween="cubic" easing="out" reversible="false">Hidden</animation>
                 <animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
@@ -138,7 +139,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>150</posx>
+                <left>150</left>
                 <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -158,7 +159,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>285</posx>
+                <left>285</left>
                 <animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -178,7 +179,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>420</posx>
+                <left>420</left>
                 <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -198,7 +199,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>555</posx>
+                <left>555</left>
                 <animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -218,7 +219,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>690</posx>
+                <left>690</left>
                 <animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -237,7 +238,7 @@
             </control>
             <control type="group">
                 <!-- +6 Fade In-->
-                <posx>1635</posx>
+                <left>1635</left>
                 <visible>!Container.OnNext</visible>
                 <animation effect="fade" start="0" end="100" delay="0" time="250" tween="cubic" easing="in" reversible="false">Visible</animation>
                 <animation effect="rotatey" center="2205" start="55" end="55" time="0" condition="true">Conditional</animation>
@@ -257,7 +258,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>1500</posx>
+                <left>1500</left>
                 <animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -275,7 +276,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>1365</posx>
+                <left>1365</left>
                 <animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -293,7 +294,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>1230</posx>
+                <left>1230</left>
                 <animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -311,7 +312,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>1095</posx>
+                <left>1095</left>
                 <animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -329,7 +330,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>960</posx>
+                <left>960</left>
                 <animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -350,7 +351,7 @@
                 <visible>Container.OnNext</visible>
                 <animation effect="slide" end="75,0" time="250" reversible="false">Hidden</animation>
                 <control type="group">
-                    <posx>825</posx>
+                    <left>825</left>
                     <visible>Container.OnNext</visible>
                     <animation effect="rotatey" center="1395" start="0" end="-55" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
                     <animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
@@ -370,7 +371,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <posx>758</posx>
+                    <left>758</left>
                     <visible>Container.OnNext</visible>
                     <animation effect="rotatey" center="608" start="0" end="-55" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
                     <control type="group">
@@ -392,13 +393,13 @@
         </control>
         <!-- On Previous-->
         <control type="group" id="56002">
-            <posy>550</posy>
+            <top>550</top>
             <camera x="960" y="750" />
             <visible>Control.IsVisible(524) + Container.OnPrevious + !Skin.HasSetting(flattenshowcase)</visible>
             <animation effect="slide" end="135,0" time="250" reversible="false">Hidden</animation>
             <control type="group">
                 <!-- +7 Fade out-->
-                <posx>1500</posx>
+                <left>1500</left>
                 <visible>Container.OnPrevious</visible>
                 <animation effect="fade" start="100" end="0" time="250" tween="cubic" easing="out" reversible="false">Hidden</animation>
                 <animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
@@ -420,7 +421,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>1365</posx>
+                <left>1365</left>
                 <animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -438,7 +439,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>1230</posx>
+                <left>1230</left>
                 <animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -456,7 +457,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>1095</posx>
+                <left>1095</left>
                 <animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -474,7 +475,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>960</posx>
+                <left>960</left>
                 <animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -492,7 +493,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>825</posx>
+                <left>825</left>
                 <animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -511,7 +512,7 @@
             </control>
             <control type="group">
                 <!-- -6 Fade In-->
-                <posx>-120</posx>
+                <left>-120</left>
                 <visible>!Container.OnPrevious</visible>
                 <animation effect="fade" start="0" end="100" delay="0" time="250" tween="cubic" easing="in" reversible="false">Visible</animation>
                 <animation effect="rotatey" center="-270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
@@ -531,7 +532,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>15</posx>
+                <left>15</left>
                 <animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -549,7 +550,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>150</posx>
+                <left>150</left>
                 <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -567,7 +568,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>285</posx>
+                <left>285</left>
                 <animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -585,7 +586,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>420</posx>
+                <left>420</left>
                 <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -603,7 +604,7 @@
                 </control>
             </control>
             <control type="group">
-                <posx>555</posx>
+                <left>555</left>
                 <animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
                     <control type="image">
@@ -624,7 +625,7 @@
                 <visible>Container.OnPrevious</visible>
                 <animation effect="slide" end="-75,0" time="250" reversible="false">Hidden</animation>
                 <control type="group">
-                    <posx>690</posx>
+                    <left>690</left>
                     <visible>Container.OnPrevious</visible>
                     <animation effect="rotatey" center="540" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
                     <animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
@@ -644,7 +645,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <posx>758</posx>
+                    <left>758</left>
                     <visible>Container.OnPrevious</visible>
                     <animation effect="rotatey" center="1328" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
                     <control type="group">
@@ -666,7 +667,7 @@
         </control>
         <!-- No Move -->
         <control type="group" id="56000">
-            <posy>550</posy>
+            <top>550</top>
             <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)" reversible="false">
                 <effect type="fade" start="100" end="0" time="10" delay="800" tween="cubic" easing="inout" />
             </animation>
@@ -677,8 +678,8 @@
                 <!-- -7 Puffer -->
                 <control type="group">
                     <control type="image">
-                        <posx>-10</posx>
-                        <posy>-10</posy>
+                        <left>-10</left>
+                        <top>-10</top>
                         <width>1</width>
                         <height>1</height>
                         <texture background="true" diffuse="diffuse/poster.png" fallback="colors/color_keyboard.png">$VAR[ShowcaseItem-7Var]</texture>
@@ -689,8 +690,8 @@
                 <!-- +7 Puffer -->
                 <control type="group">
                     <control type="image">
-                        <posx>-10</posx>
-                        <posy>-10</posy>
+                        <left>-10</left>
+                        <top>-10</top>
                         <width>1</width>
                         <height>1</height>
                         <texture background="true" diffuse="diffuse/poster.png" fallback="colors/color_keyboard.png">$VAR[ShowcaseItem7Var]</texture>
@@ -699,7 +700,7 @@
             </control>
             <control type="group">
                 <!-- -6 -->
-                <posx>15</posx>
+                <left>15</left>
                 <animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
                     <effect type="rotatey" center="-135" start="0" end="55" time="250" tween="cubic" easing="inout" />
@@ -722,7 +723,7 @@
             </control>
             <control type="group">
                 <!-- -5 -->
-                <posx>150</posx>
+                <left>150</left>
                 <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
                     <effect type="rotatey" center="0" start="0" end="55" time="250" tween="cubic" easing="inout" />
@@ -745,7 +746,7 @@
             </control>
             <control type="group">
                 <!-- -4 -->
-                <posx>285</posx>
+                <left>285</left>
                 <animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
                     <effect type="rotatey" center="135" start="0" end="55" time="250" tween="cubic" easing="inout" />
@@ -768,7 +769,7 @@
             </control>
             <control type="group">
                 <!-- -3 -->
-                <posx>420</posx>
+                <left>420</left>
                 <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
                     <effect type="rotatey" center="270" start="0" end="55" time="250" tween="cubic" easing="inout" />
@@ -791,7 +792,7 @@
             </control>
             <control type="group">
                 <!-- -2 -->
-                <posx>555</posx>
+                <left>555</left>
                 <animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
                     <effect type="rotatey" center="405" start="0" end="55" time="250" tween="cubic" easing="inout" />
@@ -814,7 +815,7 @@
             </control>
             <control type="group">
                 <!-- -1 -->
-                <posx>691</posx>
+                <left>691</left>
                 <!-- add +1 -->
                 <animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
@@ -838,7 +839,7 @@
             </control>
             <control type="group">
                 <!-- +6 -->
-                <posx>1500</posx>
+                <left>1500</left>
                 <animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
                     <effect type="rotatey" center="2070" start="0" end="-55" time="250" tween="cubic" easing="inout" />
@@ -861,7 +862,7 @@
             </control>
             <control type="group">
                 <!-- +5 -->
-                <posx>1365</posx>
+                <left>1365</left>
                 <animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
                     <effect type="rotatey" center="1935" start="0" end="-55" time="250" tween="cubic" easing="inout" />
@@ -884,7 +885,7 @@
             </control>
             <control type="group">
                 <!-- +4 -->
-                <posx>1230</posx>
+                <left>1230</left>
                 <animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
                     <effect type="rotatey" center="1800" start="0" end="-55" time="250" tween="cubic" easing="inout" />
@@ -907,7 +908,7 @@
             </control>
             <control type="group">
                 <!-- +3 -->
-                <posx>1095</posx>
+                <left>1095</left>
                 <animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
                     <effect type="rotatey" center="1665" start="0" end="-55" time="250" tween="cubic" easing="inout" />
@@ -930,7 +931,7 @@
             </control>
             <control type="group">
                 <!-- +2 -->
-                <posx>960</posx>
+                <left>960</left>
                 <animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
                     <effect type="rotatey" center="1530" start="0" end="-55" time="250" tween="cubic" easing="inout" />
@@ -953,7 +954,7 @@
             </control>
             <control type="group">
                 <!-- +1 -->
-                <posx>821</posx>
+                <left>821</left>
                 <!-- add +1 -->
                 <animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
@@ -977,7 +978,7 @@
             </control>
             <control type="group">
                 <!-- 0 -->
-                <posx>758</posx>
+                <left>758</left>
                 <control type="group">
                     <!-- end of workaround -->
                     <control type="image">

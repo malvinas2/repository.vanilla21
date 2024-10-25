@@ -11,8 +11,9 @@
 			
 			<!-- Background Panel-->
 			<control type="image">
-				<posx>50</posx>
+				<left>50</left>
 				<width>1820</width>
+				<top></top>
                 <bottom>13%</bottom>
                 <height>736</height>
 				<texture border="15">diffuse/bgpanel.png</texture>
@@ -43,6 +44,7 @@
                     <control type="label">
                         <!--Label 1-->
                         <align>right</align>
+						<left></left>
                         <right>5</right>
                         <width>100%</width>
                         <font>Reg28</font>
@@ -51,8 +53,9 @@
                     </control>
                     <control type="image">
                         <!--Separator-->
-                        <right>0</right>
-                        <posy>56</posy>
+           				<left></left>
+						<right>0</right>
+                        <top>56</top>
                         <width>100%</width>
                         <height>20</height>
                         <fadetime>400</fadetime>
@@ -62,8 +65,9 @@
                 </itemlayout>
                 <focusedlayout width="800" height="90">
                     <control type="image">
+						<left></left>
 						<right>0</right>
-						<posy>0</posy>
+						<top>0</top>
 						<height>86</height>
 						<width>100%</width>
 						<texture border="5">diffuse/panel.png</texture>
@@ -72,6 +76,7 @@
                     <control type="label">
                         <!--Label 1-->
                         <align>right</align>
+						<left></left>
                         <right>5</right>
                         <width>100%</width>
                         <height>55</height>
@@ -83,9 +88,10 @@
                     <control type="label">
                         <!--Label 2-->
                         <align>right</align>
+						<left></left>
                         <right>5</right>
                         <width>100%</width>
-                        <posy>52</posy>
+                        <top>52</top>
                         <height>30</height>
                         <font>Light30</font>
 						<scroll>true</scroll>
@@ -95,8 +101,9 @@
                     </control>
                     <control type="image">
                         <!--Separator-->
+						<left></left>
                         <right>0</right>
-                        <posy>86</posy>
+                        <top>86</top>
                         <width>100%</width>
                         <height>20</height>
                         <fadetime>400</fadetime>
@@ -151,7 +158,7 @@
 				</control>
                 <control type="group">
                     <right>8</right>
-                    <posy>8</posy>
+                    <top>8</top>
                     <include>WatchedIndicatorLarge</include>
                     <visible>![ListItem.IsCollection + Skin.HasSetting(EmbyCovertArtEnabled)]</visible>
                 </control>
@@ -161,7 +168,9 @@
             <!--vertical Scollbar-->
             <control type="scrollbar" id="60">
                 <visible>Control.IsVisible(522) + Integer.IsGreater(Container.NumItems,0)</visible>
-                <right>15</right>
+                <left></left>
+				<top></top>
+				<right>15</right>
                 <bottom>13%</bottom>
                 <height>736</height>
                 <onup>60</onup>

@@ -94,7 +94,8 @@
         <control type="group">
             <include condition="!Window.IsActive(Home)">SquarePosterTagOverlayVisibility</include>
             <control type="image">
-                <bottom>0</bottom>
+				<top></top>
+				<bottom>0</bottom>
                 <height>74</height>
                 <bordersize>8</bordersize>
                 <texture>diffuse/poster_tag.png</texture>
@@ -103,6 +104,7 @@
             <control type="textbox">
                 <left>15</left>
                 <right>15</right>
+				<top></top>
                 <bottom>10</bottom>
                 <height>55</height>
                 <include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
@@ -117,6 +119,7 @@
             <control type="textbox">
                 <left>15</left>
                 <right>15</right>
+				<top></top>
                 <bottom>10</bottom>
                 <height>55</height>
                 <include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
@@ -143,6 +146,7 @@
             <control type="textbox">
                 <left>15</left>
                 <right>15</right>
+				<top></top>
                 <bottom>10</bottom>
                 <height>55</height>
                 <include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
@@ -157,6 +161,7 @@
             <control type="textbox">
                 <left>15</left>
                 <right>15</right>
+				<top></top>
                 <bottom>10</bottom>
                 <height>55</height>
                 <include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
@@ -180,7 +185,8 @@
         </control>
         <control type="group">
             <control type="image">
-                <bottom>0</bottom>
+				<top></top>
+				<bottom>0</bottom>
                 <height>74</height>
                 <bordersize>8</bordersize>
                 <texture>diffuse/poster_tag.png</texture>
@@ -189,6 +195,7 @@
             <control type="textbox">
                 <left>15</left>
                 <right>15</right>
+				<top></top>
                 <bottom>10</bottom>
                 <height>55</height>
                 <include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
@@ -203,6 +210,7 @@
             <control type="textbox">
                 <left>15</left>
                 <right>15</right>
+				<top></top>
                 <bottom>10</bottom>
                 <height>55</height>
                 <include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>

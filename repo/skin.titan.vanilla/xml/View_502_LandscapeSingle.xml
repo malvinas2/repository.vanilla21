@@ -19,8 +19,9 @@
             <control type="image">
                 <width>530</width>
                 <height>530</height>
+				<top></top>
                 <bottom>17%</bottom>
-                <posx>700</posx>
+                <left>700</left>
                 <texture background="true" diffuse="diffuse/halfcd.png" fallback="diffuse/halfcd.png">$VAR[DiscArtImage]</texture>
                 <aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
                 <animation effect="slide" start="0,230" end="0" tween="cubic" easing="inout" time="1200" delay="1200">Visible</animation>
@@ -31,7 +32,7 @@
 			
 			
 			<control type="fixedlist" id="502">
-				<posx>60</posx>
+				<left>60</left>
 				<width>1800</width>
 				<height>325</height>
 				<bottom>16%</bottom>
@@ -84,6 +85,7 @@
 				<control type="scrollbar" id="60">
 					<visible>Control.IsVisible(502) + Integer.IsGreater(Container.NumItems,0)</visible>
 					<left>60</left>
+					<top></top>
 					<bottom>14%</bottom>
 					<width>1800</width>
 					<height>15</height>

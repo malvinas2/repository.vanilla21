@@ -24,8 +24,8 @@
 
         <!--Header-->
         <control type="label" id="1">
-            <posx>61</posx>
-            <posy>60</posy>
+            <left>61</left>
+            <top>60</top>
             <width min="80" max="1400">auto</width>
             <height>100</height>
             <font>Bold45</font>
@@ -38,8 +38,9 @@
         <control type="button" id="3030">
             <width>600</width>
             <height>50</height>
+			<left></left>
             <right>61</right>
-            <posy>85</posy>
+            <top>85</top>
             <font>Reg32</font>
             <align>right</align>
             <ondown>3110</ondown>
@@ -51,8 +52,8 @@
         <!-- Color picker panel -->
 		<control type="panel" id="3110">
 			<viewtype label="31438">icons</viewtype>
-			<posx>60</posx>
-			<posy>165</posy>
+			<left>60</left>
+			<top>165</top>
 			<width>1798</width>
 			<height>765</height>
 			<orientation>vertical</orientation>
@@ -116,7 +117,8 @@
 		</control>
         <!--footer panel-->
         <control type="image">
-            <posx>0</posx>
+            <left>0</left>
+			<top></top>
             <bottom>0</bottom>
             <width>100%</width>
             <height>110</height>
@@ -197,6 +199,7 @@
 					<!-- opacity percentage -->
 					<width>80</width>
 					<height>60</height>
+					<left></left>
 					<right>0</right>
 					<align>right</align>
 					<onup>3110</onup>

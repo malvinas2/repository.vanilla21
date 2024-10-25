@@ -1404,6 +1404,12 @@
                 <onclick>Skin.ToggleSetting(ShowWeatherVideoInfoOSD)</onclick>
                 <selected>Skin.HasSetting(ShowWeatherVideoInfoOSD)</selected>
             </control>
+            <control type="radiobutton" id="13066">
+                <include>SkinSettings_Button</include>
+                <label>$LOCALIZE[70057]</label>
+                <onclick>Skin.ToggleSetting(UseIncreasedMaxtempo)</onclick>
+                <selected>Skin.HasSetting(UseIncreasedMaxtempo)</selected>
+            </control>			
             <control type="radiobutton" id="13067">
                 <include>SkinSettings_Button</include>
                 <label>$LOCALIZE[31807]</label>
@@ -1931,7 +1937,7 @@
                 <width>100%</width>
                 <height min="160">auto</height>
                 <font>Reg25</font>
-                <posy>60</posy>
+                <top>60</top>
                 <label>$LOCALIZE[31168]</label>
                 <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
                 <shadowcolor>black</shadowcolor>
@@ -1965,7 +1971,7 @@
                 <width>100%</width>
                 <height min="220">auto</height>
                 <font>Reg25</font>
-                <posy>60</posy>
+                <top>60</top>
                 <label>$LOCALIZE[31171]</label>
                 <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
                 <shadowcolor>black</shadowcolor>

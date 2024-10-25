@@ -9,16 +9,16 @@
             <visible>!Window.IsVisible(yesnodialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput)</visible>
      			<!-- background panel -->
 			<control type="image">
-				<posx>367</posx>
-				<posy>236</posy>
+				<left>367</left>
+				<top>236</top>
 				<width>1190</width>
 				<height>720</height>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
 			</control>
 			<control type="image">
-				<posx>367</posx>
-				<posy>236</posy>
+				<left>367</left>
+				<top>236</top>
 				<width>1190</width>
 				<height>720</height>
 				<texture border="15">diffuse/bgpanel.png</texture>
@@ -29,8 +29,8 @@
 			<!--Header-->
 			<control type="label" id="1">
 				<description>Heading</description>
-				<posx>415</posx>
-				<posy>225</posy>
+				<left>415</left>
+				<top>225</top>
 				<width>1100</width>
 				<height>100</height>
 				<label></label>
@@ -43,8 +43,8 @@
                 <!--Container 3 Small-->
                 <visible>Control.IsVisible(3)</visible>
                 <control type="image">
-                    <posx>415</posx>
-					<posy>315</posy>
+                    <left>415</left>
+					<top>315</top>
                     <width>1100</width>
                     <height>481</height>
                     <texture border="5">dialogs/default/inner.png</texture>
@@ -55,24 +55,24 @@
                 <visible>!Control.IsVisible(3)</visible>
                 <!-- background list left -->
 				<control type="image">
-                    <posx>421</posx>
-                    <posy>315</posy>
+                    <left>421</left>
+                    <top>315</top>
                     <width>610</width>
                     <height>481</height>
                     <texture border="5">dialogs/default/inner.png</texture>
                 </control>
 				<!-- background image right -->
                 <control type="image">
-                    <posx>1079</posx>
-                    <posy>315</posy>
+                    <left>1079</left>
+                    <top>315</top>
                     <width>420</width>
                     <height>481</height>
                     <texture border="5">dialogs/default/inner-dark.png</texture>
                 </control>
 				<!-- displayed image right -->
                 <control type="multiimage">
-                    <posx>1089</posx>
-                    <posy>325</posy>
+                    <left>1089</left>
+                    <top>325</top>
                     <width>400</width>
                     <height>300</height>
                     <aspectratio>keep</aspectratio>
@@ -82,8 +82,8 @@
                     <visible>String.Contains(Container(6).ListItem.FileNameAndPath,spinner)</visible>
                 </control>
                 <control type="multiimage">
-                    <posx>1089</posx>
-                    <posy>325</posy>
+                    <left>1089</left>
+                    <top>325</top>
                     <width>400</width>
                     <height>300</height>
                     <aspectratio>keep</aspectratio>
@@ -95,8 +95,8 @@
                 </control>
 				<!-- displayed title, below image right -->
 				<control type="textbox">
-					<posx>1089</posx>
-                    <posy>630</posy>
+					<left>1089</left>
+                    <top>630</top>
                     <width>400</width>
                     <height>140</height>
                     <font>Reg22</font>
@@ -108,8 +108,8 @@
                     <visible>!String.IsEmpty(Container(6).ListItem.label2)</visible>
 				</control>
                 <control type="textbox">
-					<posx>1089</posx>
-                    <posy>630</posy>
+					<left>1089</left>
+                    <top>630</top>
                     <width>400</width>
                     <height>140</height>
                     <font>Reg22</font>
@@ -124,8 +124,8 @@
             <!--List-->
             <control type="list" id="3">
                 <!--Container 3 Small-->
-                <posx>415</posx>
-				<posy>315</posy>
+                <left>415</left>
+				<top>315</top>
 				<width>1100</width>
                 <height>480</height>
                 <onright>60</onright>
@@ -136,15 +136,15 @@
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <itemlayout height="60" width="1100">
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>1</posy>
+                        <left>0</left>
+                        <top>1</top>
                         <width>1100</width>
                         <height>60</height>
                         <texture>dialogs/default/separator.png</texture>
                     </control>
                     <control type="label">
-                        <posx>20</posx>
-                        <posy>0</posy>
+                        <left>20</left>
+                        <top>0</top>
                         <width>1020</width>
                         <height>60</height>
                         <include condition="String.IsEqual(System.Language,Arabic) | String.IsEqual(System.Language,Hebrew)">align_right</include>
@@ -155,8 +155,9 @@
                         <scroll>false</scroll>
                     </control>
                     <control type="image">
-                        <right>5</right>
-                        <posy>10</posy>
+                        <left>1055</left>
+						<!-- <right>5</right> -->
+                        <top>10</top>
                         <width>40</width>
                         <height>40</height>
                         <texture>common/checkbox.png</texture>
@@ -174,8 +175,8 @@
                             <colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
                         </control>
                         <control type="label">
-                            <posx>20</posx>
-                            <posy>0</posy>
+                            <left>20</left>
+                            <top>0</top>
                             <width>1020</width>
                             <height>60</height>
                             <include condition="String.IsEqual(System.Language,Arabic) | String.IsEqual(System.Language,Hebrew)">align_right</include>
@@ -186,8 +187,9 @@
                             <include>DialogListFO</include>
                         </control>
                         <control type="image">
-                            <right>5</right>
-                            <posy>10</posy>
+                            <left>1055</left>
+							<!-- <right>5</right> -->
+                            <top>10</top>
                             <width>40</width>
                             <height>40</height>
                             <texture>common/checkbox.png</texture>
@@ -200,8 +202,8 @@
 			</control>
 			<control type="scrollbar" id="60">
 				<visible>Control.IsVisible(3)</visible>
-				<posx>1520</posx>
-				<posy>315</posy>
+				<left>1520</left>
+				<top>315</top>
 				<height>480</height>
 				<onup>60</onup>
 				<ondown>60</ondown>
@@ -212,8 +214,8 @@
 			
             <control type="list" id="6">
                 <!--Container 6 Big-->
-                <posx>421</posx>
-                <posy>315</posy>
+                <left>421</left>
+                <top>315</top>
                 <width>610</width>
                 <height>480</height>
                 <onleft>8000</onleft>
@@ -225,16 +227,16 @@
                 <itemlayout height="120" width="610">
 					<!-- Trennlinie zwischen Eintragen -->
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>1</posy>
+                        <left>0</left>
+                        <top>1</top>
                         <width>644</width>
                         <height>120</height>
                         <texture>dialogs/default/separator.png</texture>
                     </control>
 					<!-- Kleines Vorschaubild, links vor jedem Eintrag -->
                     <control type="image">
-                        <posx>10</posx>
-                        <posy>10</posy>
+                        <left>10</left>
+                        <top>10</top>
                         <width>100</width>
                         <height>100</height>
                         <aspectratio>scale</aspectratio>
@@ -242,8 +244,8 @@
                     </control>
 					<!-- Bezeichnung für jeden Eintrag -->
                     <control type="label">
-                        <posx>120</posx>
-                        <posy>0</posy>
+                        <left>120</left>
+                        <top>0</top>
                         <width>480</width>
                         <height>60</height>
                         <label>[B]$INFO[ListItem.Label][/B]</label>
@@ -254,8 +256,9 @@
                     </control>
 					<!-- 2. Bezeichnung für jeden Eintrag -->
                     <control type="label">
-                        <posx>120</posx>
-                        <bottom>10</bottom>
+                        <left>120</left>
+                        <top>60</top>
+						<!-- <bottom>10</bottom> -->
                         <width>480</width>
                         <height>50</height>
                         <label>$INFO[ListItem.Label2,, ]$INFO[ListItem.Property(Addon.Version),$LOCALIZE[24051] ]</label>
@@ -267,8 +270,9 @@
                         <visible>!String.IsEmpty(ListItem.Label2)</visible>
                     </control>
                     <control type="label">
-                        <posx>120</posx>
-                        <bottom>10</bottom>
+                        <left>120</left>
+						<top>60</top>
+                        <!-- <bottom>10</bottom> -->
                         <width>480</width>
                         <height>50</height>
                         <label>$INFO[ListItem.Property(Addon.Summary),, ]$INFO[ListItem.Property(Addon.Version),$LOCALIZE[24051] ]</label>
@@ -280,8 +284,9 @@
                         <visible>String.IsEmpty(ListItem.Label2)</visible>
                     </control>
                     <control type="image">
-                        <right>5</right>
-                        <posy>10</posy>
+                        <left>1055</left>
+						<!-- <right>5</right> -->
+                        <top>10</top>
                         <width>40</width>
                         <height>40</height>
                         <texture>common/checkbox.png</texture>
@@ -299,16 +304,16 @@
                             <colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
                         </control>
                             <control type="image">
-                            <posx>10</posx>
-                            <posy>10</posy>
+                            <left>10</left>
+                            <top>10</top>
                             <width>100</width>
                             <height>100</height>
                             <aspectratio>scale</aspectratio>
                             <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
                         </control>
                         <control type="label">
-                            <posx>120</posx>
-                            <posy>0</posy>
+                            <left>120</left>
+                            <top>0</top>
                             <width>480</width>
                             <height>60</height>
                             <label>[B]$INFO[ListItem.Label][/B]</label>
@@ -318,8 +323,9 @@
                             <scroll>true</scroll>
                         </control>
                         <control type="label">
-                            <posx>120</posx>
-                            <bottom>10</bottom>
+                            <left>120</left>
+                            <top>60</top>
+							<!-- <bottom>10</bottom> -->
                             <width>480</width>
                             <height>50</height>
                             <label>$INFO[ListItem.Label2,, ]$INFO[ListItem.Property(Addon.Version),$LOCALIZE[24051] ]</label>
@@ -331,7 +337,8 @@
                             <visible>!String.IsEmpty(ListItem.Label2)</visible>
                         </control>
                         <control type="label">
-                            <posx>120</posx>
+                            <left>120</left>
+							<top></top>
                             <bottom>10</bottom>
                             <width>480</width>
                             <height>50</height>
@@ -344,8 +351,9 @@
                             <visible>String.IsEmpty(ListItem.Label2)</visible>
                         </control>
                         <control type="image">
-                            <right>5</right>
-                            <posy>10</posy>
+                            <left>1055</left>
+							<!-- <right>5</right> -->
+                            <top>10</top>
                             <width>40</width>
                             <height>40</height>
                             <texture>common/checkbox.png</texture>
@@ -357,8 +365,8 @@
             </control>
 			<control type="scrollbar" id="1661">
 				<visible>Control.IsVisible(6)</visible>
-				<posx>1040</posx>
-				<posy>315</posy>
+				<left>1040</left>
+				<top>315</top>
 				<height>480</height>
 				<onleft>6</onleft>
                 <onup>661</onup>
@@ -369,8 +377,8 @@
             
             <!--description -->
 			<control type="label">
-                <posx>415</posx>
-				<posy>800</posy>
+                <left>415</left>
+				<top>800</top>
                 <width>1100</width>
                 <height>20</height>
                 <include condition="String.IsEqual(System.Language,Arabic) | String.IsEqual(System.Language,Hebrew)">align_right</include>
@@ -383,8 +391,8 @@
             
 			<!--Buttons-->
             <control type="grouplist" id="8000">
-				<posx>410</posx>
-				<posy>830</posy>
+				<left>410</left>
+				<top>830</top>
 				<width>820</width>
 				<height>690</height>
 				<orientation>horizontal</orientation>
@@ -405,7 +413,7 @@
                 </control>
                 <control type="button" id="7">
                     <!-- <visible>!Window.IsVisible(Custom_3004_MediaDialog.xml)</visible> -->
-                    <right>0</right>
+                    <left>0</left>
                     <description>Close</description>
                    <!-- <label>$LOCALIZE[222]</label>  -->
                     <width>260</width>
@@ -427,7 +435,8 @@
 			
 			<!-- Anzahl der Eintrage, rechts unten -->
 			<control type="label">
-				<right>400</right>
+				<left>1240</left>
+				<!-- <right>400</right> -->
 				<top>860</top>
 				<width>280</width>
 				<height>35</height>
@@ -437,7 +446,8 @@
 				<label>[COLOR=$INFO[Skin.String(GeneralHighlightTextColor)]]$INFO[Container(3).NumItems][/COLOR] $LOCALIZE[91830] - [COLOR=$INFO[Skin.String(GeneralHighlightTextColor)]]$INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages][/COLOR]</label>
 			</control>			
 			<control type="label">
-				<right>400</right>
+				<!-- <right>400</right> -->
+				<left>1240</left>
 				<top>860</top>
 				<width>280</width>
 				<height>35</height>
@@ -456,7 +466,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>100%</width>
-			<bottom>540</bottom>
+			<!-- <bottom>540</bottom> -->
 			<height>540</height>
 			<texturefocus />
 			<texturenofocus />
@@ -521,7 +531,6 @@
 						<right>18</right>
 						<top>5</top>
 						<control type="image">
-						<!-- malvians2: What's the purpose of this 'image'-entry ???? -->
 							<width>444</width>
 							<height>250</height>
 							<aspectratio>scale</aspectratio>
@@ -568,7 +577,8 @@
 			<control type="button" id="119">
 				<description>Close</description>
 				<width>330</width>
-				<bottom>30</bottom>
+				<top>430</top>
+				<!-- <bottom>30</bottom> -->
 				<left>30</left>
 				<onup>10811</onup>
 				<ondown>10811</ondown>
@@ -589,8 +599,8 @@
 			<left>0</left>
 			<top>0</top>
 			<width>100%</width>
-			<bottom>410</bottom>
-			<height>670</height>
+			<!-- <bottom>410</bottom> -->
+			<height>630</height>
 			<texturefocus />
 			<texturenofocus />
 			<onclick>Action(close)</onclick>
@@ -690,7 +700,8 @@
 			<control type="button" id="119">
 				<description>Close</description>
 				<width>330</width>
-				<bottom>15</bottom>
+				<top>355</top>
+				<!-- <bottom>15</bottom> -->
 				<left>30</left>
 				<onup>10811</onup>
 				<ondown>10811</ondown>
@@ -711,7 +722,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>100%</width>
-			<bottom>540</bottom>
+			<!-- <bottom>540</bottom> -->
 			<height>540</height>
 			<texturefocus />
 			<texturenofocus />
@@ -736,7 +747,8 @@
 				<itemlayout width="480" height="340">
 					<control type="group">
 						<left>18</left>
-						<right>18</right>
+						<width>462</width>
+						<!-- <right>18</right> -->
 						<top>5</top>
 						<control type="image">
 							<width>444</width>
@@ -773,6 +785,7 @@
 				<focusedlayout width="480" height="340">
 					<control type="group">
 						<left>18</left>
+						<width>462</width>
 						<right>18</right>
 						<top>5</top>
 						<control type="image">
@@ -817,9 +830,9 @@
 			</control>
 			<control type="textbox" id="10812">
 				<description>Description Area</description>
-				<top>390</top>
-				<left>100</left>
-				<right>100</right>
+				<top>370</top>
+				<left>50</left>
+				<width>1700</width>
 				<height>200</height>
 				<font>Light28</font>
 				<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
@@ -831,7 +844,8 @@
 			<control type="button" id="119">
 				<description>Close</description>
 				<width>330</width>
-				<bottom>30</bottom>
+				<top>430</top>
+				<!-- <bottom>30</bottom> -->
 				<left>30</left>
 				<onup>10811</onup>
 				<ondown>10811</ondown>
@@ -898,7 +912,7 @@
 						<control type="image">
 							<left>0</left>
 							<right>0</right>
-							<top>0</top>
+							<top>-5</top>
 							<bottom>-20</bottom>
 							<texture border="5">dialogs/default/inner.png</texture>
 						</control>
@@ -983,6 +997,7 @@
 						</control>
 						<control type="scrollbar" id="61">
 							<description>Scroll bar</description>
+							<left></left>
 							<right>-25</right>
 							<onleft>3</onleft>
 							<onright>9001</onright>
@@ -1036,7 +1051,7 @@
 								<right>-20</right>
 								<top>-20</top>
 								<bottom>-20</bottom>
-							<texture border="5">dialogs/default/inner-dark.png</texture>
+								<texture border="5">dialogs/default/inner-dark.png</texture>
 							</control>
 							<control type="label">
 								<description>Label for Saved with: text</description>
@@ -1059,7 +1074,8 @@
 								<description>Emulator icon</description>
 								<top>108</top>
 								<height>192</height>
-								<right>33</right>
+								<left>35</left>
+								<!-- <right>33</right> -->
 								<width>192</width>
 								<aspectratio>keep</aspectratio>
 							</control>
@@ -1072,6 +1088,7 @@
 						<top>820</top>
 						<control type="label" id="10822">
 							<description>Caption area</description>
+							<left></left>
 							<right>200</right>
 							<include>DialogLabel</include>
 							<align>left</align>
@@ -1079,7 +1096,8 @@
 						</control>
 						<control type="label">
 							<description>Item count</description>
-							<right>10</right>
+							<left>1280</left>
+							<!-- <right>10</right> -->
 							<width>300</width>
 							<include>DialogLabel</include>
 							<align>right</align>
@@ -1168,8 +1186,8 @@
 					<itemlayout height="125" width="880">
 						<!-- Trennlinie zwischen Eintragen -->
 						<control type="image">
-							<posx>0</posx>
-							<posy>1</posy>
+							<left>0</left>
+							<top>1</top>
 							<width>880</width>
 							<height>125</height>
 							<texture>dialogs/default/separator.png</texture>
@@ -1203,8 +1221,9 @@
 							<label>$VAR[MediaInfoListLabel2Var]</label>
 						</control>
 						<control type="image">
-							<right>5</right>
-							<posy>10</posy>
+							<left>835</left>
+							<!-- <right>5</right> -->
+							<top>10</top>
 							<width>40</width>
 							<height>40</height>
 							<texture>common/checkbox.png</texture>
@@ -1253,8 +1272,9 @@
 								<label>$VAR[MediaInfoListLabel2Var]</label>
 							</control>
 							<control type="image">
-								<right>5</right>
-								<posy>10</posy>
+								<left>835</left>
+								<!-- <right>5</right> -->
+								<top>10</top>
 								<width>40</width>
 								<height>40</height>
 								<texture>common/checkbox.png</texture>
@@ -1312,10 +1332,12 @@
 				</control>	
 
 				<control type="label">
+					<left>1115</left>
 					<right>40</right>
 					<!-- <bottom>10</bottom> -->
 					<width>275</width>
-					<bottom>30</bottom>
+					<top>785</top>
+					<!-- <bottom>30</bottom> -->
 					<height>35</height>
 					<align>right</align>
 					<include>DialogLabel</include>

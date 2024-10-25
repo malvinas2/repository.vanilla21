@@ -17,22 +17,22 @@
     <include name="HomeSimpleHorizontal">
 		<control type="group">
 			<control type="group">
-				<posy>90</posy>
+				<top>90</top>
 				<animation type="Conditional" condition="Control.IsVisible(77551)">
 					<effect type="slide" start="0,0" end="0,600" time="400" tween="cubic" easing="inout" delay="0"/>
 				</animation>
 				<control type="group">
 					<control type="image">
-						<posx>0</posx>
-						<posy>670</posy>
+						<left>0</left>
+						<top>670</top>
 						<width>100%</width>
 						<height>180</height>
 						<texture border="5">diffuse/panel.png</texture>
 						<colordiffuse>$INFO[Skin.String(MainMenuPanelColor)]</colordiffuse>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>710</posy>
+						<left>0</left>
+						<top>710</top>
 						<width>100%</width>
 						<height>100</height>
 						<texture border="5">diffuse/panel.png</texture>
@@ -49,9 +49,9 @@
 					<animation effect="fade" time="200" start="100" end="25" reversible="true" condition="!Control.HasFocus(4444)">Conditional</animation>
 					<animation effect="fade" time="200" start="100" end="0" reversible="true" condition="!Control.HasFocus(4444) + !Skin.HasSetting(AutoShowSubmenu)">Conditional</animation>
 					<visible>!Skin.HasSetting(DisableAllSubmenus)</visible>
-					<posx>0</posx>
+					<left>0</left>
 					<width>1920</width>
-					<posy>803</posy>
+					<top>803</top>
 					<height>50</height>
 					<onleft>4444</onleft>
 					<onright>4444</onright>
@@ -77,8 +77,8 @@
 					</animation>
 					<itemlayout width="384" height="50">
 						<control type="label">
-							<posx>3</posx>
-							<posy>0</posy>
+							<left>3</left>
+							<top>0</top>
 							<height>50</height>
 							<width>384</width>
 							<align>center</align>
@@ -92,8 +92,8 @@
 					<focusedlayout width="384" height="50">
 						<control type="label">
 							<visible>!Control.HasFocus(4444)</visible>
-							<posx>3</posx>
-							<posy>0</posy>
+							<left>3</left>
+							<top>0</top>
 							<height>50</height>
 							<width>384</width>
 							<align>center</align>
@@ -104,8 +104,8 @@
 						</control>
 						<control type="label">
 							<visible>Control.HasFocus(4444)</visible>
-							<posx>3</posx>
-							<posy>0</posy>
+							<left>3</left>
+							<top>0</top>
 							<height>50</height>
 							<width>384</width>
 							<align>center</align>
@@ -125,7 +125,7 @@
           
 			<!-- Power button -->
 			<control type="group">
-				<posx>930</posx>
+				<left>930</left>
 				<bottom>20</bottom>
 				<width>60</width>
 				<height>60</height>
@@ -139,7 +139,7 @@
     
 	<include name="HomeSimpleHorizontalNormal">
         <control type="panel" id="300">
-            <posx>0</posx>
+            <left>0</left>
             <width>1920</width>
             <include>HomeSimpleHorizontalLayout</include>
         </control>
@@ -150,7 +150,7 @@
             <animation effect="slide" time="200" start="0" end="-519" delay="0" condition="String.IsEmpty(Container(300).ListItemNoWrap(1).Label)">Conditional</animation>
             <animation effect="slide" time="200" start="0" end="519" delay="0" condition="String.IsEmpty(Container(300).ListItemNoWrap(-1).Label)">Conditional</animation>
             <focusposition>2</focusposition>
-            <posx>-338</posx>
+            <left>-338</left>
             <width>3069</width>
             <include>HomeSimpleHorizontalLayout</include>
         </control>
@@ -158,7 +158,7 @@
 	
     <include name="HomeSimpleHorizontalWrap">
         <control type="wraplist" id="300">
-            <posx>-338</posx>
+            <left>-338</left>
             <width>3069</width>
             <focusposition>2</focusposition>
             <include>HomeSimpleHorizontalLayout</include>
@@ -167,7 +167,7 @@
 	
     <include name="HomeSimpleHorizontalLayout">
         <animation effect="fade" time="200" start="100" end="25" reversible="true" condition="!Control.HasFocus(300)">Conditional</animation>
-        <posy>725</posy>
+        <top>725</top>
         <height>72</height>
         <onleft>300</onleft>
         <onright>300</onright>
@@ -180,8 +180,8 @@
         <animation effect="slide" time="0" start="0" end="0,-10" delay="0" condition="Skin.HasSetting(UseSingleShortcut)">Conditional</animation>
         <itemlayout height="70" width="519" condition="!Skin.HasSetting(UseSingleShortcut)">
             <control type="label">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>519</width>
 				<textcolor>$INFO[Skin.String(MainMenuTextColor)]</textcolor>
 				<height>70</height>
@@ -195,8 +195,8 @@
         </itemlayout>
         <focusedlayout height="70" width="519" condition="!Skin.HasSetting(UseSingleShortcut)">
             <control type="label">
-                <posx>0</posx>
-                <posy>0</posy>
+                <left>0</left>
+                <top>0</top>
                 <width>519</width>
                 <textcolor>$INFO[Skin.String(MainMenuFocusTextColor)]</textcolor>
                 <height>70</height>
@@ -211,8 +211,8 @@
           
         <itemlayout height="70" width="1920" condition="Skin.HasSetting(UseSingleShortcut)">
             <control type="label">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>100%</width>
 				<textcolor>$INFO[Skin.String(MainMenuTextColor)]</textcolor>
 				<height>70</height>
@@ -226,8 +226,8 @@
         </itemlayout>
         <focusedlayout height="70" width="1920" condition="Skin.HasSetting(UseSingleShortcut)">
             <control type="label">
-                <posx>0</posx>
-                <posy>0</posy>
+                <left>0</left>
+                <top>0</top>
                 <width>100%</width>
                 <textcolor>$INFO[Skin.String(MainMenuFocusTextColor)]</textcolor>
                 <height>70</height>
@@ -307,7 +307,7 @@
             <!-- rss feed -->
             <control type="rss">	
                 <description>RSS Feed without touch controls</description>
-                <posx>0</posx>
+                <left>0</left>
                 <bottom>20</bottom>
                 <width>100%</width>
                 <height>30</height>
@@ -325,7 +325,7 @@
             <!-- rss feed -->
             <control type="rss">	
                 <description>RSS Feed with touch controls</description>
-                <posx>400</posx>
+                <left>400</left>
                 <bottom>20</bottom>
                 <width>1120</width>
                 <height>30</height>
@@ -343,7 +343,8 @@
             <!--infoline-->
             <control type="label">	
                 <description>InfoLine</description>
-                <posx>0</posx>
+                <left>0</left>
+				<top></top>
                 <bottom>20</bottom>
                 <width>100%</width>
                 <height>30</height>

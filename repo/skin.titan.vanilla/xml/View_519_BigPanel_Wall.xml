@@ -10,7 +10,7 @@
       
 	  <control type="panel" id="519">
         <viewtype label="31666">icons</viewtype>
-        <posx>8</posx>
+        <left>8</left>
         <top>9</top>
         <height>1056</height>
         <width>1904</width>
@@ -43,6 +43,7 @@
 		<!--vertical Scollbar-->
 		<control type="scrollbar" id="60">
 			<visible>Control.IsVisible(519) + Integer.IsGreater(Container.NumItems,0)</visible>
+			<left></left>
 			<right>0</right>
 			<top>9</top>
             <height>1056</height>

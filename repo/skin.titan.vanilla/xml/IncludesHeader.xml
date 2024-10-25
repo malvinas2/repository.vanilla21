@@ -15,8 +15,8 @@
             
             <!-- header panel -->
             <control type="image">
-				<posx>0</posx>
-				<posy>-5</posy>
+				<left>0</left>
+				<top>-5</top>
 				<width>100%</width>
 				<height>145</height>
 				<texture border="5">diffuse/panel.png</texture>
@@ -101,8 +101,8 @@
             
             <!-- header panel -->
             <control type="image">
-				<posx>0</posx>
-				<posy>-5</posy>
+				<left>0</left>
+				<top>-5</top>
 				<width>100%</width>
 				<height>110</height>
 				<texture border="5">diffuse/panel.png</texture>
@@ -141,7 +141,7 @@
                 <include>animation_fade_visible</include>		
                 <orientation>horizontal</orientation>
                 <itemgap>25</itemgap>
-                <posx>50</posx>
+                <left>50</left>
                 <top>25</top>
                 <onright>890</onright>
                 <ondown>9000</ondown>
@@ -174,7 +174,8 @@
                 <!--infoline win10 home-->
                 <control type="label">	
                     <description>InfoLine</description>
-                    <posx>20%</posx>
+                    <left>20%</left>
+					<top></top>
                     <bottom>5</bottom>
                     <width>60%</width>
                     <height>60</height>
@@ -296,8 +297,8 @@
     <include name="HeaderTitle">
         <control type="group">
             <control type="label">
-                <posx>61</posx>
-                <posy>0</posy>
+                <left>61</left>
+                <top>0</top>
                 <width min="80" max="1400">auto</width>
                 <height>100</height>
                 <font>Bold45</font>
@@ -307,8 +308,8 @@
                 <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
             </control>
              <control type="label">
-                <posy>75</posy>
-                <posx>61</posx>
+                <top>75</top>
+                <left>61</left>
                 <width min="0" max="1400">auto</width>
                 <height>50</height>
                 <label>$VAR[value_subheader]</label>
@@ -322,6 +323,7 @@
 	<include name="ClearLogo">
 		<!--clearlogo top right-->
 		<control type="image" id="881">
+			<left></left>
 			<right>60</right>
 			<top>10</top>
 			<width>550</width>
@@ -367,6 +369,7 @@
 		<!--clearlogo footer (not touch mode or large icons-->
 		<control type="image" id="884">
 			<left>810</left>
+			<top></top>
 			<bottom>10</bottom>
 			<width>300</width>
 			<height>80</height>
@@ -380,6 +383,7 @@
         <!--clearlogo footer (with touch mode or large icons-->
         <control type="image" id="884">
 			<left>810</left>
+			<top></top>
 			<bottom>10</bottom>
 			<width>280</width>
 			<height>80</height>
@@ -402,8 +406,9 @@
         <control type="group">
             <!--Time-->
             <control type="label">
-                <right>60</right>
-                <posy>0</posy>
+                <left></left>
+				<right>60</right>
+                <top>0</top>
                 <width>600</width>
                 <height>100</height>
                 <align>right</align>
@@ -414,9 +419,10 @@
             </control>
             <!--Date-->
             <control type="label">
+				<left></left>
                 <right>60</right>
                 <align>right</align>
-                <posy>75</posy>
+                <top>75</top>
                 <width>800</width>
                 <height>50</height>
                 <info>System.Date()</info>
@@ -430,8 +436,9 @@
     <include name="SquareSubmenuHeader">
         <!--Time-->
         <control type="label" id="14446">
-            <right>60</right>
-            <posy>0</posy>
+			<left></left>
+			<right>60</right>
+            <top>0</top>
             <width>600</width>
             <height>100</height>
             <align>right</align>
@@ -446,8 +453,9 @@
     <include name="SquareSubmenuHeaderCompact">
         <!--Time-->
         <control type="label" id="14446">
-            <right>60</right>
-            <posy>0</posy>
+            <left></left>
+			<right>60</right>
+            <top>0</top>
             <width>600</width>
             <height>100</height>
             <align>right</align>
@@ -463,7 +471,8 @@
     <include name="TimeInfoCompact">
         <control type="group">
             <control type="label">
-                <right>50</right>
+                <left></left>
+				<right>50</right>
                 <top>10</top>
                 <align>right</align>
                 <width>300</width>
@@ -473,7 +482,8 @@
                 <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
             </control>
             <control type="label">
-                <right>50</right>
+				<left></left>
+				<right>50</right>
                 <top>40</top>
                 <align>right</align>
                 <width>500</width>
@@ -488,7 +498,7 @@
 	<include name="ProfileInfo">
 		<control type="group" id="891">
 			<defaultcontrol>890</defaultcontrol>
-			<posy>15</posy>
+			<top>15</top>
             <width>150</width>
             <height>110</height>
             <width>150</width>
@@ -542,7 +552,8 @@
     
     <include name="ProfileInfoCompact">
         <control type="radiobutton" id="890">
-            <right>30</right>
+			<left></left>
+			<right>30</right>
             <top>20</top>
             <ondown>9000</ondown>
             <onleft>5555</onleft>
@@ -571,8 +582,8 @@
 	<include name="WeatherInfoLeft">
         <!-- weather info -->
         <control type="group" id="667711">
-            <posx>30</posx>
-            <posy>10</posy>
+            <left>30</left>
+            <top>10</top>
             <width>350</width>
             <height>300</height>
             <visible>!String.IsEmpty(Window(Weather).Property(Current.FanartCode)) + Skin.String(WeatherIconPack.path)</visible>
@@ -597,8 +608,8 @@
                 <!--Temp-->
                 <width>160</width>
                 <height>40</height>
-                <posx>140</posx>
-                <posy>25</posy>
+                <left>140</left>
+                <top>25</top>
                 <font>Bold38</font>
                 <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
                 <align>left</align>
@@ -609,8 +620,8 @@
                 <!--Temp-->
                 <width>400</width>
                 <height>40</height>
-                <posx>140</posx>
-                <posy>70</posy>
+                <left>140</left>
+                <top>70</top>
                 <font>Reg28</font>
                 <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
 				<shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
@@ -624,7 +635,7 @@
         <!-- weather info -->
         <control type="group" id="667711">
             <right>30</right>
-            <posy>0</posy>
+            <top>0</top>
             <width>350</width>
             <height>300</height>
             <visible>!String.IsEmpty(Window(Weather).Property(Current.FanartCode)) + Skin.String(WeatherIconPack.path)</visible>
@@ -635,7 +646,7 @@
                 <width>125</width>
                 <height>125</height>
                 <right>0</right>
-                <posy>10</posy>
+                <top>10</top>
                 <aspectratio align="right" aligny="bottom">keep</aspectratio>
             </control>
 			<!-- active weather alert icon overlay -->
@@ -643,8 +654,9 @@
                 <texture>special://skin/extras/media/weather-alert.png</texture>
                 <width>125</width>
                 <height>125</height>
+				<left></left>
                 <right>0</right>
-                <posy>10</posy>
+                <top>10</top>
                 <aspectratio align="right" aligny="bottom">keep</aspectratio>
 				<visible>!String.IsEmpty(Window(Weather).Property(Alerts)) + !String.IsEmpty(Window(Weather).Property(Alerts.IsFetched)) + Skin.HasSetting(EnableWeatherAlertOverlay)</visible>
             </control>
@@ -652,8 +664,9 @@
                 <!--Temp-->
                 <width>160</width>
                 <height>40</height>
+				<left></left>
                 <right>140</right>
-                <posy>25</posy>
+                <top>25</top>
                 <font>Bold38</font>
                 <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
                 <align>right</align>
@@ -664,8 +677,9 @@
                 <!--Temp-->
                 <width>400</width>
                 <height>40</height>
+				<left></left>
                 <right>140</right>
-                <posy>70</posy>
+                <top>70</top>
                 <font>Reg28</font>
                 <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
 				<shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
@@ -690,6 +704,7 @@
 		<!-- active weather alert icon overlay -->
             <control type="image">
                 <texture>special://skin/extras/media/weather-alert.png</texture>
+				<left></left>
                 <right>20</right>
                 <top>5</top>
                 <width>100</width>
@@ -699,6 +714,7 @@
             </control>
             <!-- current temp -->
             <control type="label">
+				<left></left>
                 <right>130</right>
                 <top>10</top>
                 <align>right</align>
@@ -710,6 +726,7 @@
             </control>
             <!-- weather conditions -->
             <control type="label">
+				<left></left>
                 <right>130</right>
                 <top>40</top>
                 <align>right</align>
@@ -735,6 +752,7 @@
 		<!-- active weather alert icon overlay -->
             <control type="image">
                 <texture>special://skin/extras/media/weather-alert.png</texture>
+				<left></left>
                 <right>20</right>
                 <top>5</top>
                 <width>100</width>
@@ -744,6 +762,7 @@
             </control>
             <!-- time + date -->
             <control type="label">
+				<left></left>
                 <right>130</right>
                 <top>10</top>
                 <align>right</align>
@@ -755,6 +774,7 @@
             </control>
             <!-- weather conditions -->
             <control type="label">
+				<left></left>
                 <right>130</right>
                 <top>40</top>
                 <align>right</align>
@@ -772,7 +792,7 @@
             <control type="grouplist">
                 <!--Time Grouplist Line 1-->
                 <right>190</right>
-                <posy>0</posy>
+                <top>0</top>
                 <width>600</width>
                 <height>100</height>
                 <align>right</align>
@@ -811,8 +831,9 @@
             </control>
             <control type="label">
                 <!--weather info-->
+				<left></left>
                 <right>190</right>
-                <posy>75</posy>
+                <top>75</top>
                 <width>600</width>
                 <height>50</height>
                 <align>right</align>
@@ -829,7 +850,7 @@
             <width>125</width>
             <height>125</height>
             <right>40</right>
-            <posy>10</posy>
+            <top>10</top>
             <aspectratio align="right" aligny="bottom">keep</aspectratio>
             <visible>!String.IsEmpty(Window(Weather).Property(Current.FanartCode)) + Skin.String(WeatherIconPack.path)</visible>
         </control>
@@ -838,8 +859,9 @@
 			<texture>special://skin/extras/media/weather-alert.png</texture>
 			<width>125</width>
 			<height>125</height>
+			<left></left>
 			<right>40</right>
-			<posy>10</posy>
+			<top>10</top>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<visible>!String.IsEmpty(Window(Weather).Property(Alerts)) + !String.IsEmpty(Window(Weather).Property(Alerts.IsFetched)) + Skin.HasSetting(EnableWeatherAlertOverlay)</visible>
 		</control>    
@@ -848,8 +870,8 @@
     <include name="BackgroundLogo">
         <!-- background Logo image -->
         <control type="image" id="198754">
-            <posx>35</posx>
-            <posy>10</posy>
+            <left>35</left>
+            <top>10</top>
             <height>110</height>
             <width>375</width>
             <aspectratio align="left" aligny="center">keep</aspectratio>
@@ -860,8 +882,8 @@
     <include name="HeaderLogo">
         <!-- Kodi Logo image -->
         <control type="image">
-            <posx>35</posx>
-            <posy>10</posy>
+            <left>35</left>
+            <top>10</top>
             <height>110</height>
             <width>375</width>
             <aspectratio align="left">keep</aspectratio>
@@ -872,8 +894,8 @@
         </control>
         <!-- custom Logo image -->
         <control type="image">
-            <posx>35</posx>
-            <posy>10</posy>
+            <left>35</left>
+            <top>10</top>
             <height>110</height>
             <width>375</width>
             <aspectratio align="left">keep</aspectratio>
@@ -886,8 +908,9 @@
         
         <!-- logo for vertical home -->
         <control type="image">
+			<left></left>
             <right>1520</right>
-            <posy>10</posy>
+            <top>10</top>
             <height>120</height>
             <width>385</width>
             <include condition="Skin.String(CustomLogoImage) + Skin.String(LogoImageAlignment,center)">ImageAlignCenter</include>
@@ -902,8 +925,8 @@
     
     <include name="NowRecordingIcon">
         <control type="group">
-            <posx>890</posx>
-            <posy>0</posy>
+            <left>890</left>
+            <top>0</top>
             <width>140</width>
             <height>32</height>
             <visible>Pvr.IsRecording</visible>
@@ -911,7 +934,7 @@
                 <texture colordiffuse="$INFO[Skin.String(GeneralPanelsColor)]" border="15">diffuse/bgpanel_halftop.png</texture>
             </control>
             <control type="image">
-                <posx>45</posx>
+                <left>45</left>
                 <top>-9</top>
                 <width>50</width>
                 <height>50</height>

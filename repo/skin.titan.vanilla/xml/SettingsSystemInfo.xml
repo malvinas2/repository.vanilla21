@@ -17,14 +17,14 @@
 			
 			<!--Panel-->
 			<control type="image">
-				<posx>50</posx>
+				<left>50</left>
 				<width>1820</width>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
 			</control>
 			
 			<control type="image">
-				<posx>50</posx>
+				<left>50</left>
 				<width>520</width>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
@@ -32,8 +32,8 @@
 			
 			<!--Grouplist Buttons-->
 			<control type="grouplist" id="9000">
-				<posx>90</posx>
-				<posy>20</posy>
+				<left>90</left>
+				<top>20</top>
 				<width>450</width>
 				<height>96%</height>
 				<itemgap>3</itemgap>
@@ -94,8 +94,8 @@
 			</control>
 			<!--Grouplist Info-->
 			<control type="grouplist">
-				<posx>670</posx>
-				<posy>20</posy>
+				<left>670</left>
+				<top>20</top>
 				<width>1000</width>
 				<height>96%</height>
 				<itemgap>3</itemgap>
@@ -212,8 +212,8 @@
 			</control>
 			<control type="textbox" id="30">
 				<left>670</left>
-				<top>350</top>
-				<height>500</height>
+				<top>300</top>
+				<height>480</height>
 				<width>1100</width>
 				<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
 				<font>Reg30</font>
@@ -222,9 +222,9 @@
 			</control>
 			<control type="scrollbar" id="60">
 				<left>1800</left>
-				<top>340</top>
+				<top>290</top>
 				<width>20</width>
-				<height>520</height>
+				<height>470</height>
 				<onleft>9000</onleft>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(30)</visible>

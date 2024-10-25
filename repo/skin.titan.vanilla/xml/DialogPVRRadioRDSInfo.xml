@@ -31,7 +31,7 @@
                 <include>animation_fade_visible_hidden</include>
                 <right>50</right>
                 <width>50</width>
-                <posy>40</posy>
+                <top>40</top>
                 <include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
             </control>
 			<control type="image">

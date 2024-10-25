@@ -5,7 +5,8 @@
 	<include name="HomeMenuSubMenuHorizontal">
         <control type="image">
             <!--Panel Shadow-->
-            <posx>-120</posx>
+            <left>-120</left>
+			<top></top>
             <bottom>-120</bottom>
             <width>2130</width>
             <height>220</height>
@@ -18,7 +19,7 @@
         </control>
 		
 		<control type="list" id="4444">
-			<posx>48</posx>
+			<left>48</left>
 			<bottom>-190</bottom>
 			<width>1840</width>
 			<height>185</height>
@@ -42,7 +43,7 @@
             </visible>
 			<itemlayout width="368" height="185">
 				<control type="group">
-					<posy>120</posy>
+					<top>120</top>
 					<control type="button">
 						<label></label>
 						<width>358</width>
@@ -66,7 +67,7 @@
 			</itemlayout>
 			<focusedlayout width="368" height="185">
 				<control type="group">
-					<posy>120</posy>
+					<top>120</top>
 					<control type="button">
 						<label></label>
 						<width>358</width>
@@ -128,18 +129,18 @@
                 <effect type="slide" start="0,-0" end="0,800" time="400" tween="cubic" easing="inout" delay="0" />
             </animation>
 		
-			<posy>65</posy>
-			<posx>-4</posx>
+			<top>65</top>
+			<left>-4</left>
 		
 			<!--submenu right 1-row pos 0-->
 			<control type="group">
-				<posx>599</posx>
+				<left>599</left>
 				<bottom>110</bottom>
 				<height>325</height>
 				<visible>[Skin.String(HomeLayout,1) + String.Contains(Window(Home).Property(submenupos),0)]</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuRight</include>
 					<include>SubMenuLayoutVertical</include>
 				</control>
@@ -147,13 +148,13 @@
 			</control>
 			<!--submenu right 1 row pos 1-->
 			<control type="group">
-				<posx>1210</posx>
+				<left>1210</left>
 				<bottom>110</bottom>
 				<height>325</height>
 				<visible>[Skin.String(HomeLayout,1) + String.Contains(Window(Home).Property(submenupos),1)]</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuRight</include>
 					 <include>SubMenuLayoutVertical</include>
 				</control>
@@ -161,13 +162,13 @@
 			</control>
 			<!--submenu left 1-row pos 2-->
 			<control type="group">
-				<posx>625</posx>
+				<left>625</left>
 				<bottom>110</bottom>
 				<height>325</height>
 				<visible>[Skin.String(HomeLayout,1) + String.Contains(Window(Home).Property(submenupos),2)]</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuLeft</include>
 					<include>SubMenuLayoutVertical</include>
 				</control>
@@ -175,13 +176,13 @@
 			</control>
 			<!--submenu right 2-row pos 0-->
 			<control type="group">
-				<posx>599</posx>
+				<left>599</left>
 				<bottom>370</bottom>
 				<height>325</height>
 				<visible>Skin.String(HomeLayout,2) + String.Contains(Window(Home).Property(submenupos),0)</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuRight</include>
 					<include>SubMenuLayoutVertical</include>
 				</control>
@@ -189,13 +190,13 @@
 			</control>
 			<!--submenu right 3-row pos 3-->
 			<control type="group">
-				<posx>599</posx>
+				<left>599</left>
 				<bottom>345</bottom>
 				<height>325</height>
 				<visible>Skin.String(HomeLayout,3) + String.Contains(Window(Home).Property(submenupos),3)</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuRight</include>
 					<include>SubMenuLayoutVertical</include>
 				</control>
@@ -203,12 +204,12 @@
 			</control>
 			<!--submenu right 3-row pos 0-->
 			<control type="group">
-				<posx>599</posx>
-				<posy>55</posy>
+				<left>599</left>
+				<top>55</top>
 				<visible>[Skin.String(HomeLayout,3) + String.Contains(Window(Home).Property(submenupos),0)]</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuRight</include>
 					<include>SubMenuLayoutVertical</include>
 				</control>
@@ -216,13 +217,13 @@
 			</control>
 			<!--submenu right 2-row pos 1-->
 			<control type="group">
-				<posx>599</posx>
+				<left>599</left>
 				<bottom>80</bottom>
 				<height>325</height>
 				<visible>Skin.String(HomeLayout,2) + String.Contains(Window(Home).Property(submenupos),1)</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuRight</include>
 					 <include>SubMenuLayoutVertical</include>
 				</control>
@@ -230,13 +231,13 @@
 			</control>
 			<!--submenu right 3-row pos 6-->
 			<control type="group">
-				<posx>599</posx>
+				<left>599</left>
 				<bottom>55</bottom>
 				<height>325</height>
 				<visible>Skin.String(HomeLayout,3) + String.Contains(Window(Home).Property(submenupos),6)</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuRight</include>
 					 <include>SubMenuLayoutVertical</include>
 				</control>
@@ -245,13 +246,13 @@
 			
 			<!--submenu right 2-row pos 2-->
 			<control type="group">
-				<posx>1210</posx>
+				<left>1210</left>
 				<bottom>370</bottom>
 				<height>325</height>
 				<visible>Skin.String(HomeLayout,2) + String.Contains(Window(Home).Property(submenupos),2)</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuRight</include>
 					 <include>SubMenuLayoutVertical</include>
 				</control>
@@ -259,13 +260,13 @@
 			</control>
 			<!--submenu right 3-row pos 4-->
 			<control type="group">
-				<posx>1210</posx>
+				<left>1210</left>
 				<bottom>345</bottom>
 				<height>325</height>
 				<visible>Skin.String(HomeLayout,3) + String.Contains(Window(Home).Property(submenupos),4)</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuRight</include>
 					 <include>SubMenuLayoutVertical</include>
 				</control>
@@ -273,12 +274,12 @@
 			</control>
 			<!--submenu right 3-row pos 1-->
 			<control type="group">
-				<posx>1210</posx>
-				<posy>55</posy>
+				<left>1210</left>
+				<top>55</top>
 				<visible>[Skin.String(HomeLayout,3) + String.Contains(Window(Home).Property(submenupos),1)]</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuRight</include>
 					 <include>SubMenuLayoutVertical</include>
 				</control>
@@ -286,13 +287,13 @@
 			</control>
 			<!--submenu right 2-row pos 3-->
 			<control type="group">
-				<posx>1210</posx>
+				<left>1210</left>
 				<bottom>80</bottom>
 				<height>325</height>
 				<visible>Skin.String(HomeLayout,2) + String.Contains(Window(Home).Property(submenupos),3)</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuRight</include>
 					<include>SubMenuLayoutVertical</include>
 				</control>
@@ -300,13 +301,13 @@
 			</control>
 			<!--submenu right 3-row pos 7-->
 			<control type="group">
-				<posx>1210</posx>
+				<left>1210</left>
 				<bottom>55</bottom>
 				<height>325</height>
 				<visible>Skin.String(HomeLayout,3) + String.Contains(Window(Home).Property(submenupos),7)</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuRight</include>
 					<include>SubMenuLayoutVertical</include>
 				</control>
@@ -314,13 +315,13 @@
 			</control>
 			<!--submenu left 2 row pos 4-->
 			<control type="group">
-				<posx>625</posx>
+				<left>625</left>
 				<bottom>370</bottom>
 				<height>325</height>
 				<visible>Skin.String(HomeLayout,2) + String.Contains(Window(Home).Property(submenupos),4)</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuLeft</include>
 					 <include>SubMenuLayoutVertical</include>
 				</control>
@@ -328,13 +329,13 @@
 			</control>
 			<!--submenu left 3 row pos 5-->
 			<control type="group">
-				<posx>625</posx>
+				<left>625</left>
 				<bottom>345</bottom>
 				<height>325</height>
 				<visible>Skin.String(HomeLayout,3) + String.Contains(Window(Home).Property(submenupos),5)</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuLeft</include>
 					 <include>SubMenuLayoutVertical</include>
 				</control>
@@ -342,12 +343,12 @@
 			</control>
 			<!--submenu left 3 row pos 2-->
 			<control type="group">
-				<posx>625</posx>
-				<posy>55</posy>
+				<left>625</left>
+				<top>55</top>
 				<visible>[Skin.String(HomeLayout,3) + String.Contains(Window(Home).Property(submenupos),2)]</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuLeft</include>
 					 <include>SubMenuLayoutVertical</include>
 				</control>
@@ -355,13 +356,13 @@
 			</control>
 			<!--submenu left 2 row pos 5-->
 			<control type="group">
-				<posx>625</posx>
+				<left>625</left>
 				<bottom>80</bottom>
 				<height>325</height>
 				<visible>Skin.String(HomeLayout,2) + String.Contains(Window(Home).Property(submenupos),5)</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuLeft</include>
 					<include>SubMenuLayoutVertical</include>
 				</control>
@@ -369,13 +370,13 @@
 			</control>
 			<!--submenu left 3 row pos 8-->
 			<control type="group">
-				<posx>625</posx>
+				<left>625</left>
 				<bottom>55</bottom>
 				<height>325</height>
 				<visible>Skin.String(HomeLayout,3) + String.Contains(Window(Home).Property(submenupos),8)</visible>
 				<!-- movies submenu -->
 				<control type="group">
-					<posx>0</posx>
+					<left>0</left>
 					<include>HomeMenuSubMenuLeft</include>
 					<include>SubMenuLayoutVertical</include>
 				</control>
@@ -387,8 +388,8 @@
 	
 	<include name="HomeMenuSubMenuSmallTiles">
 		<control type="list" id="4444">
-			<posx>60</posx>
-			<posy>1090</posy>
+			<left>60</left>
+			<top>1090</top>
 			<width>1825</width>
 			<height>205</height>
 			<orientation>horizontal</orientation>
@@ -452,7 +453,7 @@
 
 	<include name="HomeMenuSubMenuPage">
 		<control type="group">
-			<posy>-1000</posy>
+			<top>-1000</top>
 			<animation type="Conditional" condition="[String.Contains(Window(Home).Property(submenu),show) | Control.HasFocus(4444)] + Skin.String(SubmenuLayout, subpage)">
 				<effect type="slide" start="0,0" end="0,1000" time="0" delay="0" />
 			</animation>
@@ -460,8 +461,8 @@
 			<!-- extra Header -->
 			<control type="group">
 				<control type="label">
-					<posx>65</posx>
-					<posy>200</posy>
+					<left>65</left>
+					<top>200</top>
 					<width min="80" max="1400">auto</width>
 					<height>100</height>
 					<font>Bold45</font>
@@ -475,8 +476,8 @@
 			<control type="panel" id="4444">
 				<orientation>vertical</orientation>
 				<height>615</height>
-				<posy>315</posy>
-				<posx>60</posx>
+				<top>315</top>
+				<left>60</left>
 				<width>1825</width>
 				<onback>SetFocus(300)</onback>
 				<onfocus>SetProperty(submenu,show,home)</onfocus>
@@ -521,8 +522,8 @@
 	
 	<include name="SubMenuLayoutVertical">
 		<control type="list" id="4444">
-			<posx>50</posx>
-			<posy>30</posy>
+			<left>50</left>
+			<top>30</top>
 			<width>560</width>
 			<height>215</height>
 			<onfocus>SetProperty(submenu,show,home)</onfocus>
@@ -547,7 +548,7 @@
 			<onback>300</onback>
 			<itemlayout height="40">
 				<control type="label">
-					<posx>50</posx>
+					<left>50</left>
 					<width>600</width>
 					<height>60</height>
 					<textcolor>black</textcolor>
@@ -559,7 +560,7 @@
 			</itemlayout>
 			<focusedlayout height="40">
 				<control type="label">
-					<posx>50</posx>
+					<left>50</left>
 					<width>600</width>
 					<height>60</height>
 					<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
@@ -582,8 +583,8 @@
 	
 	<include name="HomeMenuSubMenuRight">
         <control type="image">
-            <posx>-540</posx>
-            <posy>26</posy>
+            <left>-540</left>
+            <top>26</top>
             <width>1202</width>
             <height>240</height>
             <texture border="15">diffuse/bgpanel.png</texture>
@@ -594,8 +595,8 @@
 	
 	<include name="HomeMenuSubMenuLeft">
         <control type="image">
-            <posx>44</posx>
-            <posy>26</posy>
+            <left>44</left>
+            <top>26</top>
             <width>1206</width>
             <height>240</height>
             <texture border="15">diffuse/bgpanel.png</texture>
@@ -608,8 +609,8 @@
         <control type="group">
             <width>590</width>
             <height>240</height>
-            <posy>12</posy>
-            <posx>10</posx>
+            <top>12</top>
+            <left>10</left>
             <control type="image">
                 <!--Panel icon image-->
                 <bordersize>8</bordersize>
@@ -625,6 +626,7 @@
             </control>
             <control type="label">
                 <!--Label with title-->
+				<top></top>
                 <bottom>8</bottom>
                 <height>33%</height>
                 <left>3%</left>
@@ -642,16 +644,16 @@
 		
     <include name="HomeMenuFocusButtonLeft">
 		<control type="group">
-			<posy>13</posy>
-			<posx>-550</posx>
+			<top>13</top>
+			<left>-550</left>
 			<include>HomeMenuFocusButtonLayout</include>
 		</control>
     </include>
     
     <include name="HomeMenuFocusButtonRight">
         <control type="group">
-            <posy>13</posy>
-            <posx>650</posx>
+            <top>13</top>
+            <left>650</left>
             <include>HomeMenuFocusButtonLayout</include>
         </control>
     </include>

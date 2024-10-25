@@ -15,7 +15,8 @@
 			<!--Footer Background-->
 			<control type="group">						
 				<control type="image">
-					<posx>0</posx>
+					<top></top>
+					<left>0</left>
 					<bottom>0</bottom>
 					<width>100%</width>
 					<height>110</height>
@@ -40,7 +41,7 @@
             
             <!-- codec info normal-->
 			<control type="group">
-				<posx>60</posx>
+				<left>60</left>
 				<height>50</height>
 				<bottom>20</bottom>
 				<include condition="[Window.IsActive(Videos) | Window.IsActive(videoplaylist) | Window.IsActive(script-globalsearch.xml)]">mediaflags</include>
@@ -94,7 +95,7 @@
                 <aligny>center</aligny>
                 <font>flags</font>
                 <textcolor>$VAR[AdvancedRatings_TextColor]</textcolor>
-                <label>$INFO[Window(Home).Property(SkinHelper.ListItem.IMDB.Top250)]</label>
+                <label>$INFO[ListItem.Top250]</label>
             </control>
         </control>
     </include>
@@ -311,7 +312,7 @@
             <bottom>0</bottom>
             <right>0</right>
             <include>ImdbTop250</include>
-            <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.IMDB.Top250)) + Skin.HasSetting(IMDBRatingInFooter)</visible>
+            <visible>!String.IsEmpty(ListItem.Top250) + Skin.HasSetting(IMDBRatingInFooter)</visible>
             <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter)) + Skin.HasSetting(RTRatingInFooter)">Conditional</animation>
             <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter)) + Skin.HasSetting(RTRatingInFooter)">Conditional</animation>
             <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating)) + Skin.HasSetting(RTRatingInFooter)">Conditional</animation>
@@ -319,18 +320,20 @@
         
         <!--studio logo -->
         <control type="image">
+			<left></left>
+			<top></top>
             <right>0</right>
             <bottom>-10</bottom>
             <width>400</width>
             <height>90</height>
             <aspectratio aligny="center" align="right">keep</aspectratio>
             <fadetime>300</fadetime>
-            <include condition="!String.Contains(Skin.String(SkinHelper.StudioLogos.Path),colo)">footerColorDiffuse</include>
+            <include condition="!String.Contains(Skin.String(SkinHelper.StudioLogos.Path),color)">footerColorDiffuse</include>
             <bordersize>2</bordersize>
             <texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.StudioLogo)]</texture>
             <visible>Skin.HasSetting(StudioInFooter)</visible>
             <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Control.GetLabel(414783)) + Skin.HasSetting(IMDBRatingInFooter)">Conditional</animation>
-            <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.IMDB.Top250)) + Skin.HasSetting(IMDBRatingInFooter)">Conditional</animation>
+            <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(ListItem.Top250) + Skin.HasSetting(IMDBRatingInFooter)">Conditional</animation>
             <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter)) + Skin.HasSetting(RTRatingInFooter)">Conditional</animation>
             <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter)) + Skin.HasSetting(RTRatingInFooter)">Conditional</animation>
             <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating)) + Skin.HasSetting(RTRatingInFooter)">Conditional</animation>
@@ -343,7 +346,7 @@
             <width>85</width>
             <bottom>0</bottom>
             <right>0</right>
-            <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.IMDB.Top250)) + Skin.HasSetting(IMDBRatingInFooter)">Conditional</animation>
+            <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(ListItem.Top250) + Skin.HasSetting(IMDBRatingInFooter)">Conditional</animation>
             <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter)) + Skin.HasSetting(RTRatingInFooter)">Conditional</animation>
             <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter)) + Skin.HasSetting(RTRatingInFooter)">Conditional</animation>
             <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating)) + Skin.HasSetting(RTRatingInFooter)">Conditional</animation>
@@ -358,6 +361,7 @@
             </control>
             <control type="image">
                 <!--imdb logo-->
+				<left></left>
                 <right>0</right>
                 <top>0</top>
                 <width>84</width>
@@ -367,6 +371,8 @@
             </control>
             <control type="label" id="414783">
                 <!--Rating modern-->
+				<left></left>
+				<top></top>
                 <right>0</right>
                 <bottom>2</bottom>
                 <width>84</width>
@@ -389,8 +395,8 @@
             <height>65</height>
             <control type="label">
                 <!--Start-->
-                <posx>60</posx>
-                <posy>0</posy>
+                <left>60</left>
+                <top>0</top>
                 <width>400</width>
                 <font>flags</font>
                 <textcolor>$INFO[Skin.String(FooterTextColor)]</textcolor>
@@ -399,16 +405,16 @@
             </control>
             <control type="progress">
                 <!--Progress Bar-->
-                <posx>200</posx>
-                <posy>23</posy>
+                <left>200</left>
+                <top>23</top>
                 <width>150</width>
                 <height>20</height>
                 <info>ListItem.Progress</info>
             </control>
             <control type="label">
                 <!--End-->
-                <posx>375</posx>
-                <posy>0</posy>
+                <left>375</left>
+                <top>0</top>
                 <width>400</width>
                 <font>flags</font>
                 <textcolor>$INFO[Skin.String(FooterTextColor)]</textcolor>
@@ -423,8 +429,9 @@
             <control type="label">
                 <!--live tv channel-->
                 <visible>String.IsEmpty(Control.Getlabel(44123))</visible>
+				<left></left>
                 <right>60</right>
-                <posy>16</posy>
+                <top>16</top>
                 <width>500</width>
                 <align>right</align>
                 <font>Reg30</font>
@@ -434,8 +441,8 @@
             </control>
             <control type="label">
                 <!--live tv programname-->
-                <posx>610</posx>
-                <posy>16</posy>
+                <left>610</left>
+                <top>16</top>
                 <width>700</width>
                 <align>center</align>
                 <font>Bold30</font>
@@ -445,8 +452,9 @@
                 <visible>!Control.IsVisible(884)</visible>
             </control>
             <control type="image" id="44123">
+				<left></left>
                 <right>60</right>
-                <posy>0</posy>
+                <top>0</top>
                 <width>260</width>
                 <height>100</height>
                 <texture background="true">$VAR[channellogo]</texture>
@@ -456,7 +464,7 @@
                 <!--live tv diskspace-->
                 <visible>Window.IsActive(tvrecordings) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch)</visible>
                 <left>60</left>
-                <posy>16</posy>
+                <top>16</top>
                 <width>500</width>
                 <align>left</align>
                 <font>Reg30</font>
@@ -477,9 +485,9 @@
             <bottom>20</bottom>
             <control type="label">
                 <!--Label (classic only)-->
-                <posx>840</posx>
-				<!-- <posx>560</posx> -->
-                <posy>0</posy>
+                <left>840</left>
+				<!-- <left>560</left> -->
+                <top>0</top>
                 <width>800</width>
                 <align>left</align>
                 <font>Bold30</font>
@@ -497,7 +505,7 @@
                 <!--Album, Songs-->
                 <left>60</left>
                 <align>left</align>
-                <posy>0</posy>
+                <top>0</top>
                 <width>500</width>
                 <font>Reg30</font>
                 <textcolor>$INFO[Skin.String(FooterTextColor)]</textcolor>
@@ -507,8 +515,9 @@
             <control type="label">
                 <!--Artist-->
                 <visible>[Container.Content(albums) | Container.Content(songs)] + [String.IsEmpty(Container.ListItem.StarRating) + String.IsEmpty(Container.ListItem.UserRating) + String.IsEmpty(Container.ListItem.Rating)]</visible>
+				<left></left>
                 <right>60</right>
-                <posy>0</posy>
+                <top>0</top>
                 <width>500</width>
                 <align>right</align>
                 <font>Reg30</font>
@@ -519,8 +528,9 @@
             <control type="label">
                 <!--Playlist length-->
                 <visible>Window.IsActive(videoplaylist)</visible>
+				<left></left>
                 <right>60</right>
-                <posy>0</posy>
+                <top>0</top>
                 <width>500</width>
                 <align>right</align>
                 <font>Reg30</font>
@@ -530,9 +540,10 @@
             </control>
             <!-- repo last updated label -->
             <control type="label">
+				<left></left>
                 <right>60</right>
                 <align>right</align>
-                <posy>0</posy>
+                <top>0</top>
                 <width>550</width>
                 <font>Reg30</font>
                 <textcolor>$INFO[Skin.String(FooterTextColor)]</textcolor>
@@ -549,7 +560,7 @@
         <!-- RSS Feed -->
         <control type="rss">	
             <description>RSS Feed Normal - normal or touch with disabled battery</description>
-            <posx>0</posx>
+            <left>0</left>
             <bottom>20</bottom>
             <width>1920</width>
             <height>50</height>
@@ -567,7 +578,7 @@
         </control>
         <control type="rss">	
             <description>RSS Feed Normal or Classic - With touch buttons enabled</description>
-            <posx>400</posx>
+            <left>400</left>
             <bottom>20</bottom>
             <width>1300</width>
             <height>50</height>
@@ -586,7 +597,8 @@
         <!--infoline-->
         <control type="label">	
             <description>InfoLine</description>
-            <posx>20%</posx>
+            <left>20%</left>
+			<top></top>
             <bottom>28</bottom>
             <width>60%</width>
             <height>50</height>
@@ -643,6 +655,7 @@
             <height>55</height>
             <right>0</right>
             <control type="label">
+				<left></left>
                 <right>0</right>
                 <height>55</height>
                 <width>315</width>
@@ -653,6 +666,7 @@
                 <label>$VAR[rating_value_label]</label>
             </control>
             <control type="image">
+				<left></left>
                 <right>0</right>
                 <width>315</width>
                 <height>55</height>
@@ -695,8 +709,9 @@
             <right>60</right>
             <control type="image">
                 <!--Stars modern-->
+				<left></left>
                 <right>0</right>
-                <posy>20</posy>
+                <top>20</top>
                 <width>220</width>
                 <height>55</height>
                 <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>

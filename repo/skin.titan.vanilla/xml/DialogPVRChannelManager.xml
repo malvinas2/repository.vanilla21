@@ -13,8 +13,8 @@
             <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(filebrowser) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(progressdialog)</visible>
 			<control type="image">
                 <!--Panel-->
-                <posx>319</posx>
-                <posy>111</posy>
+                <left>319</left>
+                <top>111</top>
                 <width>1282</width>
                 <height>890</height>
                 <texture border="15">diffuse/bgpanel.png</texture>
@@ -22,8 +22,8 @@
             </control>
 			<control type="image">
                 <!--Panel-->
-                <posx>319</posx>
-                <posy>111</posy>
+                <left>319</left>
+                <top>111</top>
                 <width>1282</width>
                 <height>890</height>
 				<bordersize>10</bordersize>
@@ -33,8 +33,8 @@
             <!--Header-->
             <control type="label">
                 <description>Heading</description>
-                <posx>353</posx>
-                <posy>135</posy>
+                <left>353</left>
+                <top>135</top>
                 <width>1214</width>
                 <include>DialogHeader</include>
                 <label>$LOCALIZE[19199] • $LOCALIZE[19024]</label>
@@ -43,8 +43,8 @@
             </control>
             <control type="label">
                 <description>Heading</description>
-                <posx>353</posx>
-                <posy>135</posy>
+                <left>353</left>
+                <top>135</top>
                 <width>1214</width>
                 <include>DialogHeader</include>
                 <label>$LOCALIZE[19199] • $LOCALIZE[19023]</label>
@@ -53,20 +53,20 @@
             </control>
             <control type="group" id="8000">
                 <!--Default Group-->
-                <posx>353</posx>
-                <posy>205</posy>
+                <left>353</left>
+                <top>205</top>
                 <control type="group" id="8001">
                     <!--Group Left-->
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>40</posy>
+                        <left>0</left>
+                        <top>40</top>
                         <width>600</width>
                         <height>631</height>
                         <texture border="5">dialogs/default/inner.png</texture>
                     </control>
                     <control type="list" id="20">
-                        <posx>0</posx>
-                        <posy>40</posy>
+                        <left>0</left>
+                        <top>40</top>
                         <width>600</width>
                         <height>630</height>
                         <onup>20</onup>
@@ -78,8 +78,8 @@
                         <visible>!Window.IsActive(contextmenu)</visible>
                         <itemlayout height="60">
                             <control type="image">
-                                <posx>0</posx>
-                                <posy>1</posy>
+                                <left>0</left>
+                                <top>1</top>
                                 <width>600</width>
                                 <height>60</height>
                                 <texture>dialogs/default/separator.png</texture>
@@ -87,15 +87,15 @@
                             <control type="group">
                                 <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!ListItem.Property(ActiveChannel)">Conditional</animation>
                                 <control type="image">
-                                    <posx>20</posx>
-                                    <posy>10</posy>
+                                    <left>20</left>
+                                    <top>10</top>
                                     <width>40</width>
                                     <height>40</height>
                                     <texture background="true">$INFO[ListItem.Icon]</texture>
                                 </control>
                                 <control type="label">
-                                    <posx>70</posx>
-                                    <posy>0</posy>
+                                    <left>70</left>
+                                    <top>0</top>
                                     <width>510</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
@@ -104,8 +104,8 @@
                                     <visible>!ListItem.Property(Changed)</visible>
                                 </control>
                                 <control type="label">
-                                    <posx>70</posx>
-                                    <posy>0</posy>
+                                    <left>70</left>
+                                    <top>0</top>
                                     <width>460</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
@@ -115,8 +115,8 @@
                                 </control>
                             </control>
                             <control type="image">
-                                <posx>545</posx>
-                                <posy>10</posy>
+                                <left>545</left>
+                                <top>10</top>
                                 <width>40</width>
                                 <height>40</height>
                                 <texture>common/checkbox.png</texture>
@@ -128,8 +128,8 @@
                             <control type="group">
                                 <visible>!Control.HasFocus(20)</visible>
                                 <control type="image">
-                                    <posx>0</posx>
-                                    <posy>1</posy>
+                                    <left>0</left>
+                                    <top>1</top>
                                     <width>600</width>
                                     <height>90</height>
                                     <texture>dialogs/default/separator.png</texture>
@@ -139,8 +139,8 @@
                                     <control type="group">
                                         <visible>!ListItem.Property(Changed)</visible>
                                         <control type="label">
-                                            <posx>100</posx>
-                                            <posy>0</posy>
+                                            <left>100</left>
+                                            <top>0</top>
                                             <width>480</width>
                                             <height>56</height>
                                             <label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
@@ -148,8 +148,8 @@
                                             <scroll>false</scroll>
                                         </control>
                                         <control type="label">
-                                            <posx>100</posx>
-                                            <posy>35</posy>
+                                            <left>100</left>
+                                            <top>35</top>
                                             <width>480</width>
                                             <height>56</height>
                                             <label>$INFO[ListItem.Property(ClientName),$LOCALIZE[19210]: ,]</label>
@@ -160,8 +160,8 @@
                                     <control type="group">
                                         <visible>ListItem.Property(Changed)</visible>
                                         <control type="label">
-                                            <posx>100</posx>
-                                            <posy>0</posy>
+                                            <left>100</left>
+                                            <top>0</top>
                                             <width>430</width>
                                             <height>56</height>
                                             <label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
@@ -169,8 +169,8 @@
                                             <scroll>false</scroll>
                                         </control>
                                         <control type="label">
-                                            <posx>100</posx>
-                                            <posy>35</posy>
+                                            <left>100</left>
+                                            <top>35</top>
                                             <width>430</width>
                                             <height>56</height>
                                             <label>$INFO[ListItem.Property(ClientName),$LOCALIZE[19210]: ,]</label>
@@ -183,8 +183,8 @@
                             <control type="group">
                                 <visible>Control.HasFocus(20)</visible>
                                 <control type="image">
-                                    <posx>0</posx>
-                                    <posy>0</posy>
+                                    <left>0</left>
+                                    <top>0</top>
                                     <width>600</width>
                                     <height>90</height>
                                     <texture colordiffuse="$INFO[Skin.String(ButtonColor)]" border="5">diffuse/panel_trans.png</texture>
@@ -192,8 +192,8 @@
                                     <visible>ListItem.IsSelected</visible>
                                 </control>
                                 <control type="image">
-                                    <posx>0</posx>
-                                    <posy>0</posy>
+                                    <left>0</left>
+                                    <top>0</top>
                                     <width>600</width>
                                     <height>90</height>
                                     <texture border="5">diffuse/panel.png</texture>
@@ -205,8 +205,8 @@
                                     <control type="group">
                                         <visible>!ListItem.Property(Changed)</visible>
                                         <control type="label">
-                                            <posx>100</posx>
-                                            <posy>0</posy>
+                                            <left>100</left>
+                                            <top>0</top>
                                             <width>480</width>
                                             <height>56</height>
                                             <label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
@@ -214,8 +214,8 @@
                                             <scroll>false</scroll>
                                         </control>
                                         <control type="label">
-                                            <posx>100</posx>
-                                            <posy>35</posy>
+                                            <left>100</left>
+                                            <top>35</top>
                                             <width>480</width>
                                             <height>56</height>
                                             <label>$INFO[ListItem.Property(ClientName),$LOCALIZE[19210]: ,]</label>
@@ -226,8 +226,8 @@
                                     <control type="group">
                                         <visible>ListItem.Property(Changed)</visible>
                                         <control type="label">
-                                            <posx>100</posx>
-                                            <posy>0</posy>
+                                            <left>100</left>
+                                            <top>0</top>
                                             <width>430</width>
                                             <height>56</height>
                                             <label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
@@ -235,8 +235,8 @@
                                             <scroll>false</scroll>
                                         </control>
                                         <control type="label">
-                                            <posx>100</posx>
-                                            <posy>35</posy>
+                                            <left>100</left>
+                                            <top>35</top>
                                             <width>430</width>
                                             <height>56</height>
                                             <label>$INFO[ListItem.Property(ClientName),$LOCALIZE[19210]: ,]</label>
@@ -247,8 +247,8 @@
                                 </control>
                             </control>
                             <control type="image">
-                                <posx>545</posx>
-                                <posy>25</posy>
+                                <left>545</left>
+                                <top>25</top>
                                 <width>40</width>
                                 <height>40</height>
                                 <texture>common/checkbox.png</texture>
@@ -256,8 +256,8 @@
                                 <visible>ListItem.Property(Changed)</visible>
                             </control>
                             <control type="image">
-                                <posx>20</posx>
-                                <posy>10</posy>
+                                <left>20</left>
+                                <top>10</top>
                                 <width>70</width>
                                 <height>70</height>
                                 <texture background="true">$INFO[ListItem.Icon]</texture>
@@ -281,8 +281,8 @@
                 </control>
 
 				<control type="scrollbar" id="60"> 
-					<posx>595</posx>
-					<posy>45</posy>
+					<left>595</left>
+					<top>45</top>
 					<width>20</width>
 					<height>620</height>
 					<onleft>8001</onleft>
@@ -297,12 +297,12 @@
                 <control type="group" id="8002">
                     <!--Group Right-->
                     <control type="group" id="80021">
-                        <posx>614</posx>
-                        <posy>0</posy>
+                        <left>614</left>
+                        <top>0</top>
 						<control type="label">
                             <description>Misc Options Header</description>
-                            <posx>0</posx>
-                            <posy>30</posy>
+                            <left>0</left>
+                            <top>30</top>
                             <width>600</width>
                             <height>34</height>
                             <align>left</align>
@@ -311,16 +311,16 @@
                             <include>DialogButtonBig</include>
                         </control>
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>80</posy>
+                            <left>0</left>
+                            <top>80</top>
                             <width>600</width>
                             <height>356</height>
                             <texture border="5">dialogs/default/inner.png</texture>
                         </control>
                         <control type="radiobutton" id="7">
                             <description>Channel activated</description>
-                            <posx>0</posx>
-                            <posy>80</posy>
+                            <left>0</left>
+                            <top>80</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -340,8 +340,8 @@
                         </control>
                         <control type="edit" id="8">
                             <description>Channel name</description>
-                            <posx>0</posx>
-                            <posy>139</posy>
+                            <left>0</left>
+                            <top>139</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -357,8 +357,8 @@
                         </control>
                         <control type="button" id="9">
                             <description>Channel logo Button</description>
-                            <posx>0</posx>
-                            <posy>198</posy>
+                            <left>0</left>
+                            <top>198</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -374,8 +374,8 @@
                         </control>
                         <control type="image" id="108">
                             <description>Current Channel Icon</description>
-                            <posx>540</posx>
-                            <posy>208</posy>
+                            <left>540</left>
+                            <top>208</top>
                             <width>40</width>
                             <height>40</height>
                             <aspectratio>scale</aspectratio>
@@ -383,8 +383,8 @@
                         </control>
                         <control type="radiobutton" id="12">
                             <description>EPG activated</description>
-                            <posx>0</posx>
-                            <posy>257</posy>
+                            <left>0</left>
+                            <top>257</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -401,8 +401,8 @@
                         </control>
                         <control type="spincontrolex" id="13">
                             <description>EPG source</description>
-                            <posx>0</posx>
-                            <posy>316</posy>
+                            <left>0</left>
+                            <top>316</top>
                             <width>600</width>
                             <height>60</height>
                             <texturenofocus>dialogs/default/separator.png</texturenofocus>
@@ -418,8 +418,8 @@
                         </control>
                         <control type="radiobutton" id="14">
                             <description>Parental locked</description>
-                            <posx>0</posx>
-                            <posy>375</posy>
+                            <left>0</left>
+                            <top>375</top>
                             <width>600</width>
                             <height>60</height>
                             <align>left</align>
@@ -436,12 +436,12 @@
                         </control>
                     </control>
                     <control type="group" id="80022">
-                        <posx>614</posx>
-                        <posy>500</posy>
+                        <left>614</left>
+                        <top>500</top>
                         <control type="label">
                             <description>Misc Options Header</description>
-                            <posx>0</posx>
-                            <posy>0</posy>
+                            <left>0</left>
+                            <top>0</top>
                             <width>600</width>
                             <height>34</height>
                             <align>left</align>
@@ -450,29 +450,29 @@
                             <include>DialogButtonBig</include>
                         </control>
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>55</posy>
+                            <left>0</left>
+                            <top>55</top>
                             <width>293</width>
                             <height>51</height>
                             <texture border="5">dialogs/default/inner.png</texture>
                         </control>
                         <control type="image">
-                            <posx>307</posx>
-                            <posy>55</posy>
+                            <left>307</left>
+                            <top>55</top>
                             <width>293</width>
                             <height>51</height>
                             <texture border="5">dialogs/default/inner.png</texture>
                         </control>
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>119</posy>
+                            <left>0</left>
+                            <top>119</top>
                             <width>293</width>
                             <height>51</height>
                             <texture border="5">dialogs/default/inner.png</texture>
                         </control>
                         <control type="image">
-                            <posx>307</posx>
-                            <posy>119</posy>
+                            <left>307</left>
+                            <top>119</top>
                             <width>293</width>
                             <height>51</height>
                             <texture border="5">dialogs/default/inner.png</texture>
@@ -480,8 +480,8 @@
 						
                         <control type="button" id="30">
                             <description>Group Manager Button</description>
-                            <posx>307</posx>
-                            <posy>55</posy>
+                            <left>307</left>
+                            <top>55</top>
                             <width>293</width>
                             <height>50</height>
                             <align>left</align>
@@ -498,8 +498,8 @@
                         </control>
                         <control type="button" id="34">
                             <description>TV/Radio Button</description>
-                            <posx>0</posx>
-                            <posy>55</posy>
+                            <left>0</left>
+                            <top>55</top>
                             <width>293</width>
                             <height>50</height>
                             <align>left</align>
@@ -516,8 +516,8 @@
                         </control>
                         <control type="button" id="34">
                             <description>TV/Radio Button</description>
-                            <posx>0</posx>
-                            <posy>55</posy>
+                            <left>0</left>
+                            <top>55</top>
                             <width>293</width>
                             <height>50</height>
                             <align>left</align>
@@ -534,8 +534,8 @@
                         </control>
 						<control type="button" id="31">
                             <description>New channel Button</description>
-                            <posx>0</posx>
-                            <posy>119</posy>
+                            <left>0</left>
+                            <top>119</top>
                             <width>293</width>
                             <height>50</height>
                             <align>left</align>
@@ -553,8 +553,8 @@
                         </control>
 						<control type="button" id="35">
                             <description>Refresh channel logos Button</description>
-                            <posx>307</posx>
-                            <posy>119</posy>
+                            <left>307</left>
+                            <top>119</top>
                             <width>293</width>
                             <height>50</height>
                             <align>left</align>
@@ -575,8 +575,8 @@
                 </control>
             </control>
 			<control type="grouplist" id="8003">
-				<posx>350</posx>
-                <posy>900</posy>
+				<left>350</left>
+                <top>900</top>
 				<onup condition="!String.IsEmpty(Window.Property(Focus))">33</onup>
 				<onup condition="String.IsEmpty(Window.Property(Focus))">8000</onup>
 				<onup>ClearProperty(Focus)</onup>

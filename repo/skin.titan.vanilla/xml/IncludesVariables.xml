@@ -8,7 +8,6 @@
 		<value condition="Window.IsActive(pvrgroupmanager) + !String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19048] - $LOCALIZE[19174]</value>
 		<value condition="Window.IsActive(pvrgroupmanager) + String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19048] - $LOCALIZE[19173]</value>
         <value condition="[Window.IsActive(skinsettings) | Window.IsActive(3016)]">[UPPERCASE]$LOCALIZE[20077][/UPPERCASE]</value>
-		<value condition="Window.IsActive(favouritesbrowser)">$LOCALIZE[1036]</value>
 		<value condition="Window.IsActive(script-script.extendedinfo-DialogInfo.xml) + !String.IsEmpty(Window(Home).Property(actor.title))">$INFO[Window(Home).Property(actor.title)]</value>
 		<value condition="Window.IsActive(loginscreen)">$INFO[System.CurrentWindow]</value>
 		<value condition="Window.IsActive(DialogVideoInfo.xml) + !String.IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.TvShowTitle]</value>
@@ -61,6 +60,8 @@
 		<value condition="String.Contains(Container.FolderPath,movies)">[UPPERCASE]$LOCALIZE[342][/UPPERCASE] $INFO[Container.FolderName,• ,]</value>
 		<value condition="String.Contains(Container.FolderPath,tvshows)">[UPPERCASE]$LOCALIZE[20343][/UPPERCASE] $INFO[Container.FolderName,• ,]</value>
 		
+		<value condition="Window.IsActive(favouritesbrowser)">$LOCALIZE[1036]</value>
+		<value condition="Window.IsActive(games)">$LOCALIZE[10821]</value>
 		<value condition="Window.IsActive(Videos)">[UPPERCASE]$LOCALIZE[3][/UPPERCASE] $INFO[Container.FolderName,• ,]</value>
         <value condition="Window.IsActive(weather)">[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</value>
         <value condition="Window.IsActive(pictures )">[UPPERCASE]$LOCALIZE[1213][/UPPERCASE]</value>
@@ -1535,8 +1536,10 @@
 	
 	<variable name="VideoListThumbVar">
 		<value condition="!String.IsEmpty(Container(6).ListItem.Art(landscape))">$INFO[Container(6).ListItem.Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Container(6).ListItem.Art(poster))">$INFO[Container(6).ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(6).ListItem.Art(thumb))">$INFO[Container(6).ListItem.Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container(50).ListItem.Art(landscape))">$INFO[Container(50).ListItem.Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Container(50).ListItem.Art(poster))">$INFO[Container(50).ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(50).ListItem.Art(thumb))">$INFO[Container(50).ListItem.Art(thumb)]</value>
 		<value>$INFO[ListItem.Art(thumb)]</value>	
 	</variable>

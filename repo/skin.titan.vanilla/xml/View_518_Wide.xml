@@ -13,7 +13,7 @@
             <visible>Control.IsVisible(518)</visible>
             <control type="group">
                 <control type="fixedlist" id="518">
-                    <posx>60</posx>
+                    <left>60</left>
                     <bottom>13%</bottom>
                     <height>810</height>
                     <width>1800</width>
@@ -176,7 +176,9 @@
                 <!--vertical Scollbar-->
                 <control type="scrollbar" id="60">
                     <visible>Control.IsVisible(518) + Integer.IsGreater(Container.NumItems,0)</visible>
-                    <right>15</right>
+                    <left></left>
+					<top></top>
+					<right>15</right>
                     <bottom>13%</bottom>
                     <height>810</height>
                     <onup>60</onup>

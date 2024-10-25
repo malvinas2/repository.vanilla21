@@ -36,7 +36,7 @@
 				
 				<!-- Header-->
                 <control type="label" id="2">
-                    <posy>10</posy>
+                    <top>10</top>
                     <width>700</width>
                     <include>DialogHeader</include>
                     <label>$LOCALIZE[35221]</label>
@@ -61,6 +61,7 @@
 						</control>
 						<control type="textbox">
 							<description>Additional help text. This will be removed in future versions.</description>
+							<top></top>
 							<bottom>30</bottom>
 							<left>30</left>
 							<right>30</right>
@@ -90,8 +91,8 @@
 				</animation>
 				 <!--Panel-->
 				<control type="image">
-					<posx>630</posx>
-					<posy>0</posy>
+					<left>630</left>
+					<top>0</top>
 					<width>1340</width>
 					<height>100%</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
@@ -102,14 +103,14 @@
 					<include>animation_fade_visible_hidden</include>
 					<right>60</right>
 					<width>60</width>
-					<posy>40</posy>
+					<top>40</top>
 					<include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
 				</control>
 			    <!--Header-->
 				<control type="label">
 					<description>Heading</description>
-					<posx>700</posx>
-					<posy>10</posy>
+					<left>700</left>
+					<top>10</top>
 					<width>1200</width>
 					<font>Bold45</font>
 					<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
@@ -118,16 +119,16 @@
 					<label>$LOCALIZE[35221]</label>
 				</control>
 	            <control type="image">
-					<posx>680</posx>
-					<posy>220</posy>
+					<left>680</left>
+					<top>220</top>
 					<width>1200</width>
 					<height>670</height>
 					<texture border="5">dialogs/default/inner.png</texture>
 				</control>
 				<control type="group" id="11000">
 					<description>Control Area</description>
-					<posx>680</posx>
-					<posy>230</posy>
+					<left>680</left>
+					<top>230</top>
 					<width>1200</width>
 					<height>660</height>
 					<orientation>vertical</orientation>
@@ -166,6 +167,7 @@
 								<selectedcolor>$VAR[ViewDetailsFocusColor]</selectedcolor>
 							</control>
 							<control type="label">
+								<left></left>
 								<right>20</right>
 								<width>1200</width>
 								<height>64</height>
@@ -178,6 +180,7 @@
 							</control>
 							<control type="image">
 								<left>8</left>
+								<top></top>
 								<bottom>4</bottom>
 								<width>1200</width>
 								<texture>dialogs/default/separator.png</texture>
@@ -210,6 +213,7 @@
 								<textcolor>$INFO[Skin.String(ViewDetailsListItemTextFocusColor)]</textcolor>
 							</control>
 							<control type="label">
+								<left></left>
 								<right>20</right>
 								<width>1200</width>
 								<height>64</height>
@@ -221,6 +225,7 @@
 							</control>
 							<control type="image">
 								<left>8</left>
+								<top></top>
 								<bottom>4</bottom>
 								<width>1200</width>
 								<texture>dialogs/default/separator.png</texture>
@@ -285,8 +290,8 @@
 			
 				<!--Button Group-->
 				<control type="grouplist" id="8002">
-					<posx>680</posx>
-					<posy>940</posy>
+					<left>680</left>
+					<top>940</top>
 					<orientation>horizontal</orientation>
 					<itemgap>20</itemgap>
 					<onup>11000</onup>
@@ -301,14 +306,14 @@
 						<animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(28)">Conditional</animation>
 					</control>
 					<control type="button" id="29">
-						<posx>200</posx>
+						<left>200</left>
 						<description>Cancel</description>
 						<label>$LOCALIZE[222]</label>
 						<include>DialogButtonOther</include>
 						<animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(29)">Conditional</animation>
 					</control> -->
 					<control type="button" id="30">
-						<posx>740</posx>
+						<left>740</left>
 						<description>Clear</description>
 						<label>$LOCALIZE[31308]</label>
 						<include>DialogButtonOther</include>

@@ -8,16 +8,16 @@
 		<include>DialogOverlayExtra</include>
 			<control type="group">
                 <control type="image">
-                    <posx>367</posx>
-                    <posy>236</posy>
+                    <left>367</left>
+                    <top>236</top>
                     <width>1190</width>
                     <height>690</height>
                     <texture border="15">diffuse/bgpanel.png</texture>
 					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
                 </control>
 				<control type="image">
-                    <posx>367</posx>
-                    <posy>236</posy>
+                    <left>367</left>
+                    <top>236</top>
                     <width>1190</width>
                     <height>690</height>
                     <texture border="15">diffuse/bgpanel.png</texture>
@@ -25,22 +25,22 @@
 					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
                 </control>
                 <control type="image">
-                    <posx>421</posx>
-                    <posy>345</posy>
+                    <left>421</left>
+                    <top>345</top>
                     <width>605</width>
                     <height>555</height>
                     <texture border="5">dialogs/default/inner.png</texture>
                 </control>
                 <control type="image">
-                    <posx>1100</posx>
-                    <posy>345</posy>
+                    <left>1100</left>
+                    <top>345</top>
                     <width>420</width>
                     <height>555</height>
                     <texture border="5">dialogs/default/inner-dark.png</texture>
                 </control>
                 <control type="image">
-                    <posx>1110</posx>
-                    <posy>360</posy>
+                    <left>1110</left>
+                    <top>360</top>
                     <width>400</width>
                     <height>520</height>
                     <aspectratio aligny="center">keep</aspectratio>
@@ -50,8 +50,8 @@
 			 <!--Header-->
             <control type="label" id="20">
                 <description>Heading</description>
-                <posx>425</posx>
-                <posy>270</posy>
+                <left>425</left>
+                <top>270</top>
                 <width>800</width>
                 <label>$LOCALIZE[1036]</label>
                 <align>left</align>
@@ -61,13 +61,13 @@
             <control type="group">
                 <include>animation_fade_visible_hidden</include>
                 <left>1465</left>
-                <posy>270</posy>
+                <top>270</top>
                 <width>60</width>
                 <include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
             </control>
      		<control type="list" id="450">
-                <posx>421</posx>
-                <posy>350</posy>
+                <left>421</left>
+                <top>350</top>
                 <width>600</width>
                 <height>540</height>
                 <onright>60</onright>
@@ -77,23 +77,23 @@
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <itemlayout height="60">
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>1</posy>
+                        <left>0</left>
+                        <top>1</top>
                         <width>644</width>
                         <height>60</height>
                         <texture>dialogs/default/separator.png</texture>
                     </control>
                     <control type="image">
-                        <posx>10</posx>
-                        <posy>5</posy>
+                        <left>10</left>
+                        <top>5</top>
                         <width>50</width>
                         <height>50</height>
                         <aspectratio>keep</aspectratio>
                         <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
                     </control>
                     <control type="label">
-                        <posx>80</posx>
-                        <posy>0</posy>
+                        <left>80</left>
+                        <top>0</top>
                         <width>544</width>
                         <height>60</height>
                         <info>ListItem.Label</info>
@@ -103,8 +103,8 @@
                         <scroll>false</scroll>
                     </control>
                     <control type="label">
-                        <posx>624</posx>
-                        <posy>0</posy>
+                        <left>624</left>
+                        <top>0</top>
                         <width>544</width>
                         <height>60</height>
                         <info>ListItem.Label2</info>
@@ -120,15 +120,15 @@
                         <animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout" condition="![Container(450).Scrolling | Container(450).OnScrollNext | Container(450).OnScrollPrevious]">Visible</animation>
                         <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="![Container(450).Scrolling | Container(450).OnScrollNext | Container(450).OnScrollPrevious]">Hidden</animation>
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>1</posy>
+                            <left>0</left>
+                            <top>1</top>
                             <width>644</width>
                             <height>60</height>
                             <texture>dialogs/default/separator.png</texture>
                         </control>
                         <control type="label">
-                            <posx>80</posx>
-                            <posy>0</posy>
+                            <left>80</left>
+                            <top>0</top>
                             <width>544</width>
                             <height>60</height>
                             <info>ListItem.Label</info>
@@ -138,8 +138,8 @@
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
-                            <posx>624</posx>
-                            <posy>0</posy>
+                            <left>624</left>
+                            <top>0</top>
                             <width>544</width>
                             <height>60</height>
                             <info>ListItem.Label2</info>
@@ -159,8 +159,8 @@
                             <texture border="5">diffuse/panel.png</texture><colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
                         </control>
                         <control type="label">
-                            <posx>80</posx>
-                            <posy>0</posy>
+                            <left>80</left>
+                            <top>0</top>
                             <width>544</width>
                             <height>60</height>
                             <info>ListItem.Label</info>
@@ -169,8 +169,8 @@
                             <include>DialogListFO</include>
                         </control>
                         <control type="label">
-                            <posx>624</posx>
-                            <posy>0</posy>
+                            <left>624</left>
+                            <top>0</top>
                             <width>544</width>
                             <height>60</height>
                             <info>ListItem.Label2</info>
@@ -181,8 +181,8 @@
                         </control>
                     </control>
                     <control type="image">
-                        <posx>10</posx>
-                        <posy>5</posy>
+                        <left>10</left>
+                        <top>5</top>
                         <width>50</width>
                         <height>50</height>
                         <aspectratio>keep</aspectratio>

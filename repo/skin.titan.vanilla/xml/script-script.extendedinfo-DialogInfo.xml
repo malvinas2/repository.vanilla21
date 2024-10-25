@@ -11,8 +11,8 @@
 			<control type="label">
                 <!-- actor name -->
 				<include>animation_fade_visible_hidden</include>
-				<posx>61</posx>
-				<posy>10</posy>
+				<left>61</left>
+				<top>10</top>
 				<width min="80" max="1400">auto</width>
 				<height>100</height>
 				<font>Bold45</font>
@@ -24,8 +24,8 @@
 			 <control type="label">
                 <!-- actor name -->
 				<include>animation_fade_visible_hidden</include>
-				<posx>61</posx>
-				<posy>10</posy>
+				<left>61</left>
+				<top>10</top>
 				<width min="80" max="1400">auto</width>
 				<height>100</height>
 				<font>Bold45</font>
@@ -37,8 +37,8 @@
 			 </control>
 			 <control type="label">
                 <!-- also known as -->
-				<posy>85</posy>
-				<posx>61</posx>
+				<top>85</top>
+				<left>61</left>
 				<width min="0" max="1100">auto</width>
 				<height>50</height>
 				<label>$INFO[Window.Property(AlsoKnownAs)]</label>
@@ -50,8 +50,9 @@
             <control type="label">
                 <!-- additional info subtitle -->
 				<include>animation_fade_visible_hidden</include>
+				<left></left>
 				<right>61</right>
-				<posy>10</posy>
+				<top>10</top>
 				<width min="80" max="1400">auto</width>
 				<height>100</height>
 				<font>Bold45</font>
@@ -68,8 +69,8 @@
 				
 				<!-- Background Panel-->
 				<control type="image">
-					<posx>50</posx>
-					<posy>210</posy>
+					<left>50</left>
+					<top>210</top>
 					<width>1820</width>
 					<height>67%</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
@@ -80,7 +81,8 @@
 				<control type="group">
 					<!--Info Stuff-->
 					<control type="image">
-						<posx>0</posx>
+						<left>0</left>
+						<top></top>
 						<bottom>0</bottom>
 						<width>100%</width>
 						<height>110</height>
@@ -91,6 +93,7 @@
 					<control type="scrollbar" id="60">
 						<left>0</left>
 						<width>100%</width>
+						<top></top>
 						<bottom>0</bottom>
 						<height>80</height>
 						<onup>502</onup>
@@ -102,7 +105,8 @@
 
 					<!--Butons 9000-->			
 					<control type="grouplist" id="9000">
-						<posx>60</posx>
+						<left>60</left>
+						<top></top>
 						<bottom>15</bottom>
 						<width>1800</width>
 						<height>60</height>
@@ -255,8 +259,9 @@
 						<control type="image">
 							<animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
 							<left>1880</left>
+							<top></top>
 							<bottom>20</bottom>
-							<posy>50</posy>
+							<top>50</top>
 							<width>20</width>
 							<height>60</height>
 							<aspectratio>keep</aspectratio>
@@ -268,8 +273,9 @@
 						<control type="image">
 							<animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
 							<left>35</left>
+							<top></top>
 							<bottom>20</bottom>
-							<posy>50</posy>
+							<top>50</top>
 							<width>20</width>
 							<height>60</height>
 							<aspectratio>keep</aspectratio>
@@ -284,15 +290,15 @@
 
 						<!--Info-->
 						<control type="grouplist">
-							<posx>65</posx>
-							<posy>230</posy>
+							<left>65</left>
+							<top>230</top>
 							<width>1200</width>
 							<height>700</height>
 							<orientation>vertical</orientation>
 							<visible>String.IsEmpty(Window.Property(AdditionalInfo))</visible>
 							<control type="textbox">
-								<posx>0</posx>
-								<posy>0</posy>
+								<left>0</left>
+								<top>0</top>
 								<width>1200</width>
 								<height>500</height>
 								<label fallback="19055">$INFO[Window.Property(Biography)]</label>
@@ -304,13 +310,13 @@
 							<control type="image">
 								<width>1200</width>
 								<height>1</height>
-								<posy>10</posy>
+								<top>10</top>
 								<texture>colors/color_white.png</texture>
 							</control>
 							<control type="image">
 								<width>1150</width>
 								<height>10</height>
-								<posy>10</posy>
+								<top>10</top>
 								<texture>colors/color_transparent.png</texture>
 							</control>
 							<control type="group">
@@ -318,16 +324,16 @@
 								<width>950</width>
 								<height>40</height>
 								<control type="image">
-									<posx>0</posx>
-									<posy>3</posy>
+									<left>0</left>
+									<top>3</top>
 									<width>49</width>
 									<height>49</height>
                                     <colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
 									<texture>dialogs/videoinfo/premiered-icon.png</texture>
 								</control>
 								<control type="label">
-									<posx>60</posx>
-									<posy>0</posy>
+									<left>60</left>
+									<top>0</top>
 									<width>530</width>
 									<font>Reg26</font>
 									<align>left</align>
@@ -338,8 +344,8 @@
                                     <visible>String.IsEmpty(Window.Property(Deathday))</visible>
 								</control>
 								<control type="label">
-									<posx>60</posx>
-									<posy>0</posy>
+									<left>60</left>
+									<top>0</top>
 									<width>530</width>
 									<font>Reg26</font>
 									<align>left</align>
@@ -350,8 +356,8 @@
                                     <visible>!String.IsEmpty(Window.Property(Deathday))</visible>
 								</control>
 								<control type="image">
-									<posx>550</posx>
-									<posy>3</posy>
+									<left>550</left>
+									<top>3</top>
 									<width>49</width>
 									<height>49</height>
                                     <colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
@@ -359,8 +365,8 @@
                                     <bordersize>8</bordersize>
 								</control>
 								<control type="label">
-									<posx>610</posx>
-									<posy>0</posy>
+									<left>610</left>
+									<top>0</top>
 									<width>530</width>
 									<font>Reg26</font>
 									<align>left</align>
@@ -375,16 +381,16 @@
 								<width>530</width>
 								<height>40</height>
 								<control type="image">
-									<posx>0</posx>
-									<posy>5</posy>
+									<left>0</left>
+									<top>5</top>
 									<width>49</width>
 									<height>49</height>
                                     <colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
 									<texture>dialogs/videoinfo/tvstudio-icon.png</texture>
 								</control>
 								<control type="label">
-									<posx>60</posx>
-									<posy>0</posy>
+									<left>60</left>
+									<top>0</top>
 									<width>500</width>
 									<font>Reg26</font>
 									<align>left</align>
@@ -394,8 +400,8 @@
 									<scroll>false</scroll>
 								</control>
 								<control type="image">
-									<posx>550</posx>
-									<posy>2</posy>
+									<left>550</left>
+									<top>2</top>
 									<width>49</width>
 									<height>49</height>
                                     <colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
@@ -403,8 +409,8 @@
                                     <bordersize>8</bordersize>
 								</control>
 								<control type="label">
-									<posx>610</posx>
-									<posy>0</posy>
+									<left>610</left>
+									<top>0</top>
 									<width>530</width>
 									<font>Reg26</font>
 									<align>left</align>
@@ -419,7 +425,7 @@
                         <control type="image">
 							<!--poster-->
 							<right>50</right>
-							<posy>210</posy>
+							<top>210</top>
 							<width>530</width>
 							<height>67%</height>
 							<aspectratio align="right" aligny="top" scalediffuse="true">keep</aspectratio>
@@ -432,8 +438,8 @@
 						<include>animation_window_open_close</include>
                         <!-- local media -->
                         <control type="panel" id="140">
-                            <posx>63</posx>
-							<posy>220</posy>
+                            <left>63</left>
+							<top>220</top>
 							<width>1200</width>
 							<height>714</height>
 							<onup></onup>
@@ -464,8 +470,8 @@
                         </control>
                         <!-- actor movies -->
                         <control type="panel" id="150">
-                            <posx>63</posx>
-							<posy>220</posy>
+                            <left>63</left>
+							<top>220</top>
 							<width>1200</width>
 							<height>714</height>
 							<onup></onup>
@@ -495,8 +501,8 @@
                         </control>
                                          <!-- actor shows -->
                         <control type="panel" id="250">
-                            <posx>63</posx>
-							<posy>220</posy>
+                            <left>63</left>
+							<top>220</top>
 							<width>1200</width>
 							<height>714</height>
 							<onup></onup>
@@ -526,8 +532,8 @@
                         </control>
                                           <!-- actor movie crew -->
                         <control type="panel" id="550">
-                            <posx>63</posx>
-							<posy>220</posy>
+                            <left>63</left>
+							<top>220</top>
 							<width>1200</width>
 							<height>714</height>
 							<onup></onup>
@@ -557,8 +563,8 @@
                         </control>
                                           <!-- actor tv crew -->
                         <control type="panel" id="650">
-                            <posx>63</posx>
-							<posy>220</posy>
+                            <left>63</left>
+							<top>220</top>
 							<width>1200</width>
 							<height>714</height>
 							<onup></onup>
@@ -588,8 +594,8 @@
                         </control>
                                          <!-- youtube videos -->
                         <control type="panel" id="350">
-                            <posx>63</posx>
-							<posy>220</posy>
+                            <left>63</left>
+							<top>220</top>
 							<width>1200</width>
 							<height>714</height>
 							<onup></onup>
@@ -619,8 +625,8 @@
                         </control>
                                           <!-- fanart -->
                         <control type="panel" id="750">
-                            <posx>63</posx>
-							<posy>220</posy>
+                            <left>63</left>
+							<top>220</top>
 							<width>1200</width>
 							<height>714</height>
 							<onup></onup>
@@ -650,8 +656,8 @@
                         </control>
                                           <!-- posters -->
                         <control type="panel" id="450">
-                            <posx>63</posx>
-							<posy>220</posy>
+                            <left>63</left>
+							<top>220</top>
 							<width>1200</width>
 							<height>714</height>
 							<onup></onup>

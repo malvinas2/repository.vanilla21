@@ -20,8 +20,8 @@
 			</animation>
             <!--Panel-->
             <control type="image">
-                <posx>630</posx>
-                <posy>0</posy>
+                <left>630</left>
+                <top>0</top>
                 <width>1340</width>
                 <height>100%</height>
 				<texture border="15">diffuse/bgpanel.png</texture>
@@ -34,8 +34,9 @@
 				<include>animation_fade_visible_hidden</include>
 				<width>60</width>
 				<height>60</height>
+				<left></left>
 				<right>60</right>
-                <posy>40</posy>
+                <top>40</top>
 				<font></font>
 				<texturefocus colordiffuse="white">touchcontrols/icon_close.png</texturefocus>
 				<texturenofocus colordiffuse="bbwhite">touchcontrols/icon_close.png</texturenofocus>
@@ -47,8 +48,9 @@
                 <description>LOGO</description>
                 <width>600</width>
                 <height>160</height>
+				<left></left>
 				<right>-10</right>
-                <posy>10</posy>
+                <top>10</top>
                 <aspectratio align="right" aligny="top">keep</aspectratio>
                 <texture>special://skin/extras/openelec/openelec_logo.png</texture>
 				<visible>!Skin.HasSetting(EnableTouchSupport)</visible>
@@ -57,8 +59,8 @@
            <!--Header-->
             <control type="label">
                 <description>Heading</description>
-                <posx>700</posx>
-                <posy>10</posy>
+                <left>700</left>
+                <top>10</top>
                 <width>1200</width>
 				<font>Bold45</font>
 				<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
@@ -68,8 +70,8 @@
             </control>
 						
 			<control type="image">
-				<posx>680</posx>
-                <posy>165</posy>
+				<left>680</left>
+                <top>165</top>
 				<width>1200</width>
 				<height>820</height>
 				<texture border="5">dialogs/default/inner.png</texture>
@@ -77,8 +79,8 @@
 			
 			<control type="textbox" id="1400">
                 <description>Appearance Description</description>
-                <posx>700</posx>
-				<posy>90</posy>
+                <left>700</left>
+				<top>90</top>
 				<width>720</width>
 				<height>70</height>
                 <font>Reg20</font>
@@ -88,8 +90,8 @@
 		
             <!-- Other Content (right)-->
             <control type="group">
-                <posx>680</posx>
-                <posy>160</posy>
+                <left>680</left>
+                <top>160</top>
                 <width>1200</width>
                 <height>800</height>
 				<!-- about page -->
@@ -1307,8 +1309,8 @@
             </control>
      			<!-- save and edit buttons -->
 			 <control type="grouplist" id="1499">
-                <posx>680</posx>
-                <posy>880</posy>
+                <left>680</left>
+                <top>880</top>
 				<width>1200</width>
 				<ondown>1000</ondown>
 				<onup>1100</onup>
@@ -1356,8 +1358,8 @@
 			
 			<!-- Main Menu (left) -->
             <control type="list" id="1000">
-                <posx>680</posx>
-                <posy>990</posy>
+                <left>680</left>
+                <top>990</top>
 				<orientation>horizontal</orientation>
 				<itemgap>20</itemgap>
 				<width>1200</width>

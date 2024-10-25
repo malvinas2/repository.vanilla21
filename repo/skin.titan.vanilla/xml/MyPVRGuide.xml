@@ -49,8 +49,8 @@
  
         <control type="group" id="5000">
 			<include>animation_window_open_close</include>
-			<posx>10</posx>
-			<posy>-30</posy>
+			<left>10</left>
+			<top>-30</top>
 			<animation effect="slide" end="0,-80" time="0" condition="Skin.HasSetting(GuideShowInfo)">Conditional</animation>
             <control type="group">
                 <!--Panel-->
@@ -58,8 +58,8 @@
 
                 <!-- background panel EPG when no info -->
 				<control type="image">
-					<posy>260</posy>
-					<posx>40</posx>
+					<top>260</top>
+					<left>40</left>
 					<width>1820</width>
 					<height>730</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
@@ -70,8 +70,8 @@
 				</control>
                 <!-- background panel EPG when active as half guide on top of video -->
                 <control type="image">
-					<posy>770</posy>
-					<posx>-10</posx>
+					<top>770</top>
+					<left>-10</left>
 					<width>1920</width>
 					<height>500</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
@@ -82,8 +82,8 @@
 				
                 <!-- background panel EPG when info enabled -->
 				<control type="image">
-					<posy>270</posy>
-					<posx>40</posx>
+					<top>270</top>
+					<left>40</left>
 					<width>1820</width>
 					<height>1000</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
@@ -96,8 +96,8 @@
 				<!-- black box underlying the channel logos and channel names --> 
 				
 				<control type="image">
-					<posy>309</posy>
-					<posx>50</posx>
+					<top>309</top>
+					<left>50</left>
 					<width>500</width>
 					<height>631</height>
 					<texture border="0">pvr/guide_diffuse.png</texture>
@@ -106,8 +106,8 @@
 					<visible>!Skin.HasSetting(HideChannelNamesInGuide) + String.IsEmpty(Window(Home).Property(pvrGuideOnFullscreenVideo))</visible>
 				</control>
 				<control type="image">
-					<posy>309</posy>
-					<posx>50</posx>
+					<top>309</top>
+					<left>50</left>
 					<width>400</width>
 					<height>631</height>
 					<texture border="0">pvr/guide_diffuse.png</texture>
@@ -116,8 +116,8 @@
 					<visible>!Skin.HasSetting(HideChannelNamesInGuide) + String.IsEmpty(Window(Home).Property(pvrGuideOnFullscreenVideo))</visible>
 				</control>
                 <control type="image">
-					<posy>309</posy>
-					<posx>50</posx>
+					<top>309</top>
+					<left>50</left>
 					<width>250</width>
 					<height>631</height>
 					<texture border="0">pvr/guide_diffuse.png</texture>
@@ -126,8 +126,8 @@
 					<visible>Skin.HasSetting(HideChannelNamesInGuide) + String.IsEmpty(Window(Home).Property(pvrGuideOnFullscreenVideo))</visible>
 				</control>
 				<control type="image">
-					<posy>309</posy>
-					<posx>50</posx>
+					<top>309</top>
+					<left>50</left>
 					<width>200</width>
 					<height>631</height>
 					<texture border="0">pvr/guide_diffuse.png</texture>
@@ -137,8 +137,8 @@
 				</control>
 				
 				<control type="image">
-					<posy>270</posy>
-					<posx>50</posx>
+					<top>270</top>
+					<left>50</left>
 					<width>1800</width>
 					<height>72</height>
 					<texture border="0">pvr/guide_diffuse.png</texture>
@@ -149,8 +149,8 @@
 				
 				<control type="image"> 
 					<!--Seperator-->     
-					<posy>307</posy>
-					<posx>-68</posx>
+					<top>307</top>
+					<left>-68</left>
 					<width>2040</width>
 					<height>10</height>
 					<align>left</align>
@@ -159,8 +159,8 @@
 				</control>
 				<control type="image"> 
 					<!--Seperator-->     
-					<posy>340</posy>
-					<posx>-68</posx>
+					<top>340</top>
+					<left>-68</left>
 					<width>2040</width>
 					<height>10</height>
 					<align>left</align>
@@ -169,8 +169,8 @@
 				</control>
 				<control type="image">
 					<!--Seperator-->
-					<posy>940</posy>
-					<posx>-68</posx>
+					<top>940</top>
+					<left>-68</left>
 					<width>2040</width>
 					<height>10</height>
 					<align>left</align>
@@ -180,13 +180,14 @@
 				
 				<!-- info panel -->
 				<control type="group">
-					<posx>60</posx>
-					<posy>965</posy>
+					<left>60</left>
+					<top>965</top>
 					<visible>Skin.HasSetting(GuideShowInfo) + String.IsEmpty(Window(Home).Property(pvrGuideOnFullscreenVideo))</visible>
 					<control type="image">
 						<!--Icon-->
+						<left></left>
 						<right>60</right>
-						<posy>0</posy>
+						<top>0</top>
 						<width>300</width>
 						<height>210</height>
 						<texture fallback="DefaultAddonTvInfo.png" diffuse="home/home_matte2.png">$VAR[PVRThumb]</texture>
@@ -196,8 +197,9 @@
                     <!-- black background behind video -->
                     <control type="image">
                         <texture>colors/color_black.png</texture>
-                        <right>60</right>
-						<posy>0</posy>
+                        <left></left>
+						<right>60</right>
+						<top>0</top>
 						<width>300</width>
 						<height>210</height>
 						<visible>VideoPlayer.Content(livetv) + Skin.HasSetting(PVRShowPreview)</visible>
@@ -205,15 +207,15 @@
 					<!--Video Window -->
 					<control type="videowindow">
 						<right>60</right>
-						<posy>0</posy>
+						<top>0</top>
 						<width>300</width>
 						<height>210</height>
 						<visible>VideoPlayer.Content(livetv) + Skin.HasSetting(PVRShowPreview)</visible>
 					</control>
 					<control type="label">
 						<!--title-->
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>1460</width>
 						<height>20</height>
 						<font>Reg28</font>
@@ -224,8 +226,8 @@
 					</control>
 					<control type="label">
 						<!--time,duration,genre-->
-						<posx>0</posx>
-						<posy>45</posy>
+						<left>0</left>
+						<top>45</top>
 						<width>1460</width>
 						<height>80</height>
 						<font>Reg26</font>
@@ -235,8 +237,8 @@
 					</control>
 					<control type="textbox">
 						<!--Info Plot-->
-						<posx>0</posx>
-						<posy>85</posy>
+						<left>0</left>
+						<top>85</top>
 						<height>125</height>
 						<width>1460</width>
 						<font>Reg28</font>
@@ -296,7 +298,7 @@
                         <!--Date, Time Top Line-->
                         <control type="label" id="2">
                             <!--Date, Time-->
-                            <posx>0</posx>
+                            <left>0</left>
                             <width>60</width>
                             <height>30</height>
                             <align>left</align>
@@ -310,7 +312,7 @@
                         <!--Date, Time Top Line-->
                         <control type="label" id="2">
                             <!--Date, Time-->
-                            <posx>0</posx>
+                            <left>0</left>
                             <width>60</width>
                             <height>30</height>
                             <align>left</align>
@@ -324,7 +326,7 @@
                         <!-- Date, Time Top Line -->
                      <!--   <control type="label" id="2">    -->
                             <!--Date, Time -->
-							<!-- <posx>0</posx> -->
+							<!-- <left>0</left> -->
                            <!--  <width>150</width> -->
                            <!--  <height>30</height> -->
                            <!--  <align>left</align> -->
@@ -339,7 +341,7 @@
                         <!--Date, Time Top Line-->
 						<control type="label" id="2">
                             <!--Date, Time-->
-							<posx>0</posx>
+							<left>0</left>
                             <width>60</width>
                             <height>30</height>
                             <align>left</align>
@@ -353,7 +355,7 @@
                         <!--Date, Time Top Line-->
                         <control type="label" id="2">
                             <!--Date, Time-->
-                            <posx>0</posx>
+                            <left>0</left>
                             <width>150</width>
                             <height>30</height>
                             <align>left</align>
@@ -600,8 +602,8 @@
 				<!-- image which covers date info in the upper left field -->
 				
 				<control type="image">
-					<posy>276</posy>
-					<posx>51</posx>
+					<top>276</top>
+					<left>51</left>
 					<width>140</width>
 					<height>60</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
@@ -612,8 +614,8 @@
 				</control>
 				
 				<control type="image">
-					<posy>276</posy>
-					<posx>51</posx>
+					<top>276</top>
+					<left>51</left>
 					<width>140</width>
 					<height>60</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
@@ -624,8 +626,8 @@
 				</control>
 				
 				<control type="image">
-					<posy>276</posy>
-					<posx>51</posx>
+					<top>276</top>
+					<left>51</left>
 					<width>140</width>
 					<height>60</height>
 					<texture border="15">diffuse/bgpanel.png</texture>

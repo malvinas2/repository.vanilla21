@@ -10,8 +10,8 @@
 
 				<!-- Background Panel TOP-->
 				<control type="image">
-					<posx>50</posx>
-					<posy>170</posy>
+					<left>50</left>
+					<top>170</top>
 					<width>1820</width>
 					<height>240</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
@@ -20,8 +20,8 @@
 				</control>
 				<!-- Background Panel BOTTOM-->
 				<control type="image">
-					<posx>50</posx>
-					<posy>430</posy>
+					<left>50</left>
+					<top>430</top>
 					<width>1820</width>
 					<height>510</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
@@ -30,16 +30,16 @@
 				</control>
 				<!-- Background Panel TITLEBAR-->
 				<control type="image">
-					<posx>50</posx>
-					<posy>430</posy>
+					<left>50</left>
+					<top>430</top>
 					<width>1820</width>
 					<height>60</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
 					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
 				</control>
                 <control type="image">
-					<posx>50</posx>
-					<posy>430</posy>
+					<left>50</left>
+					<top>430</top>
 					<width>1820</width>
 					<height>60</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
@@ -49,12 +49,12 @@
             </control>
             <control type="group">
                 <visible>!String.IsEmpty(ListItem.Date)</visible>
-                <posx>80</posx>
-                <posy>190</posy>
+                <left>80</left>
+                <top>190</top>
                 <control type="image">
                     <!--Background-->
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>350</width>
                     <height>200</height>
                     <texture fallback="DefaultAddonTvInfo.png" diffuse="home/home_matte2.png">$VAR[PVRThumb]</texture>
@@ -64,16 +64,16 @@
             <!-- black background behind video -->
                 <control type="image">
                     <texture>colors/color_black.png</texture>
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>350</width>
                     <height>200</height>
                     <visible>VideoPlayer.Content(livetv) + Skin.HasSetting(PVRShowPreview)</visible>
                 </control>
 				<!--Video Window -->
                 <control type="videowindow">
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>350</width>
                     <height>200</height>
                     <visible>VideoPlayer.Content(livetv) + Skin.HasSetting(PVRShowPreview)</visible>
@@ -81,8 +81,8 @@
             </control>
             <control type="label">
                 <!--Title-->
-                <posx>450</posx>
-                <posy>190</posy>
+                <left>450</left>
+                <top>190</top>
                 <width>650</width>
                 <height>50</height>
                 <font>Bold38</font>
@@ -92,23 +92,23 @@
             </control>
             <control type="grouplist">
                 <!--Start, End, Duration-->
-                <posx>450</posx>
-                <posy>245</posy>
+                <left>450</left>
+                <top>245</top>
                 <control type="group">
                     <!-- Ground 1 -->
                     <height>40</height>
                     <visible>!String.IsEmpty(ListItem.Date)</visible>
                     <control type="label">
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <left>0</left>
+                        <top>0</top>
                         <width>180</width>
                         <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
 						<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
                         <label>$LOCALIZE[142]</label>
                     </control>
                     <control type="label">
-                        <posx>160</posx>
-                        <posy>0</posy>
+                        <left>160</left>
+                        <top>0</top>
                         <width>500</width>
                         <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
                         <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
@@ -121,16 +121,16 @@
                     <height>40</height>
                     <visible>!String.IsEmpty(ListItem.Duration) + String.IsEmpty(ListItem.Timertype)</visible>
                     <control type="label">
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <left>0</left>
+                        <top>0</top>
                         <width>180</width>
                         <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
                         <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
                         <label>$LOCALIZE[180]:</label>
                     </control>
                     <control type="label">
-                        <posx>160</posx>
-                        <posy>0</posy>
+                        <left>160</left>
+                        <top>0</top>
                         <width>300</width>
                         <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
                         <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
@@ -142,16 +142,16 @@
                     <height>40</height>
                     <visible>!String.IsEmpty(ListItem.ChannelName) | !String.IsEmpty(Window(Home).property(SkinHelper.ListItem.ChannelName))</visible>
                     <control type="label">
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <left>0</left>
+                        <top>0</top>
                         <width>180</width>
                         <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
                         <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
                         <label>$LOCALIZE[19148]:</label>
                     </control>
                     <control type="label">
-                        <posx>160</posx>
-                        <posy>0</posy>
+                        <left>160</left>
+                        <top>0</top>
                         <width>300</width>
                         <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
                         <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
@@ -163,16 +163,16 @@
                     <height>40</height>
                     <visible>!String.IsEmpty(ListItem.Timertype)</visible>
                     <control type="label">
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <left>0</left>
+                        <top>0</top>
                         <width>180</width>
                         <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
                         <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
                         <label>$LOCALIZE[467]:</label>
                     </control>
                     <control type="label">
-                        <posx>160</posx>
-                        <posy>0</posy>
+                        <left>160</left>
+                        <top>0</top>
                         <width>500</width>
                         <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
                         <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
@@ -182,8 +182,8 @@
             </control>
             <control type="textbox">
                 <!--Info Plot-->
-                <posx>1150</posx>
-                <posy>190</posy>
+                <left>1150</left>
+                <top>190</top>
                 <width>650</width>
                 <height>198</height>
                 <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
@@ -192,12 +192,12 @@
             </control>
             <control type="group">
                 <!--Top Bar-->
-                <posx>70</posx>
-                <posy>413</posy>
+                <left>70</left>
+                <top>413</top>
                 <control type="label">
                     <!--Channel Name-->
-                    <posx>155</posx>
-                    <posy>30</posy>
+                    <left>155</left>
+                    <top>30</top>
                     <width>300</width>
                     <height>30</height>
                     <font>Reg30</font>
@@ -207,8 +207,8 @@
                 </control>
                 <control type="label">
                     <!--Channle Title-->
-                    <posx>425</posx>
-                    <posy>30</posy>
+                    <left>425</left>
+                    <top>30</top>
                     <width>300</width>
                     <height>30</height>
                     <font>Reg30</font>
@@ -218,8 +218,8 @@
                 </control>
                 <control type="label">
                     <!--Time-->
-                    <posx>1200</posx>
-                    <posy>30</posy>
+                    <left>1200</left>
+                    <top>30</top>
                     <width>100</width>
                     <height>30</height>
                     <font>Reg30</font>
@@ -234,8 +234,8 @@
 				<viewtype label="31567">list</viewtype>
                 <visible>[Window.IsActive(tvchannels) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvrecordings)]</visible>
                 <visible>String.IsEqual(Window(Home).Property(SkinHelper.ForcedView),109) | String.IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
-                <posx>70</posx>
-                <posy>510</posy>
+                <left>70</left>
+                <top>510</top>
                 <width>1780</width>
                 <height>400</height>
                 <onup>109</onup>
@@ -248,8 +248,8 @@
                 <itemlayout height="80"  width="1780">
                      <control type="label">
                         <!--Channel Number-->
-                        <posx>20</posx>
-                        <posy>0</posy>
+                        <left>20</left>
+                        <top>0</top>
                         <width>120</width>
                         <height>80</height>
                         <font>Reg28</font>
@@ -257,8 +257,8 @@
                         <label>$INFO[ListItem.ChannelNumberLabel]</label>
                     </control>
                     <control type="image">
-                        <posx>155</posx>
-                        <posy>5</posy>
+                        <left>155</left>
+                        <top>5</top>
                         <width>60</width>
                         <height>60</height>
                         <texture>common/folder.png</texture>
@@ -268,8 +268,8 @@
                     <control type="label">
                         <!--Channel Name-->
                         <description>Channel Value</description>
-                        <posx>155</posx>
-                        <posy>0</posy>
+                        <left>155</left>
+                        <top>0</top>
                         <width>250</width>
                         <height>80</height>
                         <font>Reg28</font>
@@ -279,8 +279,8 @@
                     </control>
                     <control type="label">
                         <!--Channel Show-->
-                        <posx>425</posx>
-                        <posy>0</posy>
+                        <left>425</left>
+                        <top>0</top>
                         <width>755</width>
                         <height>80</height>
                         <font>Reg28</font>
@@ -289,8 +289,8 @@
                     </control>
                     <control type="label">
                         <!--Date-->
-                        <posx>1200</posx>
-                        <posy>0</posy>
+                        <left>1200</left>
+                        <top>0</top>
                         <width>500</width>
                         <height>80</height>
                         <font>Reg28</font>
@@ -299,8 +299,8 @@
                     </control>
                     <control type="image">
                         <!--Separator-->
-                        <posx>0</posx>
-                        <posy>80</posy>
+                        <left>0</left>
+                        <top>80</top>
                         <width>100%</width>
                         <height>20</height>
                         <fadetime>400</fadetime>
@@ -317,16 +317,16 @@
                 <focusedlayout height="80" width="1780">
                     <control type="image">
                         <!--Slide-->
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <left>0</left>
+                        <top>0</top>
                         <width>100%</width>
                         <height>80</height>
                         <texture diffuse="diffuse/panel.png" border="5" colordiffuse="$VAR[ViewDetailsFocusColor]">diffuse/panel.png</texture>
                     </control>
                     <control type="label">
                         <!--Channel Number-->
-                        <posx>20</posx>
-                        <posy>0</posy>
+                        <left>20</left>
+                        <top>0</top>
                         <width>120</width>
                         <height>80</height>
                         <font>Reg28</font>
@@ -334,8 +334,8 @@
                         <label>$INFO[ListItem.ChannelNumberLabel]</label>
                     </control>
                     <control type="image">
-                        <posx>155</posx>
-                        <posy>5</posy>
+                        <left>155</left>
+                        <top>5</top>
                         <width>60</width>
                         <height>60</height>
                         <texture>common/folder.png</texture>
@@ -345,8 +345,8 @@
 
                     <control type="label">
                         <!--Channel Name-->
-                        <posx>155</posx>
-                        <posy>0</posy>
+                        <left>155</left>
+                        <top>0</top>
                         <width>250</width>
                         <height>80</height>
                         <font>Reg28</font>
@@ -356,8 +356,8 @@
                     </control>
                     <control type="label">
                         <!--Channel Show-->
-                        <posx>425</posx>
-                        <posy>0</posy>
+                        <left>425</left>
+                        <top>0</top>
                         <width>755</width>
                         <height>80</height>
                         <font>Reg28</font>
@@ -366,8 +366,8 @@
                     </control>
                     <control type="label">
                         <!--Date-->
-                        <posx>1200</posx>
-                        <posy>0</posy>
+                        <left>1200</left>
+                        <top>0</top>
                         <width>500</width>
                         <height>80</height>
                         <font>Reg28</font>
@@ -376,8 +376,8 @@
                     </control>
                     <control type="image">
                         <!--Separator-->
-                        <posx>0</posx>
-                        <posy>80</posy>
+                        <left>0</left>
+                        <top>80</top>
                         <width>100%</width>
                         <height>20</height>
                         <fadetime>400</fadetime>
@@ -396,8 +396,9 @@
             <!--vertical Scollbar-->
             <control type="scrollbar" id="60">
                 <visible>Control.IsVisible(109) + Integer.IsGreater(Container.NumItems,0)</visible>
-                <right>15</right>
-                <posy>540</posy>
+  				<left></left>
+				<right>15</right>
+                <top>540</top>
                 <height>400</height>
                 <onup>60</onup>
                 <ondown>6000</ondown>

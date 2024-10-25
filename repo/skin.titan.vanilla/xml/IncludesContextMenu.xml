@@ -11,7 +11,7 @@
 				<effect type="slide" start="30" end="-600" time="250" tween="cubic" easing="inout" />
 			</animation>
 		
-            <!-- <posx>30</posx> -->
+            <!-- <left>30</left> -->
             <bottom>10%</bottom>
             <height>800</height>
             <!--Panel-->
@@ -25,8 +25,8 @@
             <!--Label Menu: -->
             <control type="label" id="200">
                 <!--Label Menu-->
-                <posx>21</posx>
-                <posy>60</posy>
+                <left>21</left>
+                <top>60</top>
                 <width>458</width>
                 <align>left</align>
                 <textoffsetx>50</textoffsetx>
@@ -36,8 +36,8 @@
             </control>
             <control type="image">
                 <!--Seperator-->
-                <posx>21</posx>
-                <posy>120</posy>
+                <left>21</left>
+                <top>120</top>
                 <width>458</width>
                 <height>20</height>
                 <align>left</align>
@@ -45,8 +45,8 @@
             </control>
             <control type="grouplist" id="996">
                 <width></width>
-                <posx>21</posx>
-                <posy>140</posy>
+                <left>21</left>
+                <top>140</top>
                 <height>630</height>
                 <itemgap>3</itemgap>
 				<onback>Dialog.Close(contextmenu)</onback>
@@ -72,8 +72,8 @@
 			</animation>
 		<!--Panel-->
 		<control type="image">
-			<posy>-250</posy>
-			<posx>-20</posx>
+			<top>-250</top>
+			<left>-20</left>
 			<width>520</width>
 			<height>1750</height>
 			<texture border="5">diffuse/panel.png</texture>
@@ -83,8 +83,8 @@
 
 		<!-- header -->
         <control type="label">
-            <posx>61</posx>
-            <posy>10</posy>
+            <left>61</left>
+            <top>10</top>
             <width min="80" max="1100">auto</width>
             <height>100</height>
             <font>Bold45</font>
@@ -96,8 +96,8 @@
             <!--Label Menu: -->
             <control type="image">
                 <!--Seperator-->
-                <posx>21</posx>
-                <posy>160</posy>
+                <left>21</left>
+                <top>160</top>
                 <width>458</width>
                 <height>20</height>
                 <align>left</align>
@@ -105,8 +105,8 @@
             </control>
 			<control type="image">
                 <!--Seperator-->
-                <posx>21</posx>
-                <posy>980</posy>
+                <left>21</left>
+                <top>980</top>
                 <width>458</width>
                 <height>20</height>
                 <align>left</align>
@@ -115,15 +115,15 @@
 			<!-- close dialog -->
 			<control type="group">
 				<include>animation_fade_visible_hidden</include>
-				<posx>60</posx>
-                <posy>1005</posy>
+				<left>60</left>
+                <top>1005</top>
 				<include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
 			</control>
 			
             <control type="grouplist" id="996">
                 <width>458</width>
-                <posx>21</posx>
-                <posy>180</posy>
+                <left>21</left>
+                <top>180</top>
 				<onback>Dialog.Close(contextmenu)</onback>
                 <height>850</height>
                 <itemgap>3</itemgap>
@@ -137,14 +137,14 @@
 	</include>	
 	
 	<include name="SideBladeModern">
-		<posx>-660</posx>
-		<posy>0</posy>
+		<left>-660</left>
+		<top>0</top>
 		<visible>!Window.IsActive(virtualkeyboard)</visible>
 		<include>animation_sub_menu</include>
           <!-- invisible button to close sideblade -->
         <control type="button">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>100%</width>
 			<height>100%</height>
 			<align>center</align>
@@ -162,8 +162,8 @@
 		</control>
  		<!--Panel-->
         <control type="image">
-			<posy>-250</posy>
-			<posx>-20</posx>
+			<top>-250</top>
+			<left>-20</left>
 			<width>520</width>
 			<height>1750</height>
 			<texture border="5">diffuse/panel.png</texture>
@@ -173,8 +173,8 @@
 
 		<!-- header -->
         <control type="label">
-            <posx>61</posx>
-            <posy>10</posy>
+            <left>61</left>
+            <top>10</top>
             <width min="80" max="1100">auto</width>
             <height>100</height>
             <font>Bold45</font>
@@ -185,8 +185,8 @@
         </control>
 		<control type="image">
 			<!--Seperator-->
-			<posx>21</posx>
-			<posy>160</posy>
+			<left>21</left>
+			<top>160</top>
 			<width>458</width>
 			<height>20</height>
 			<align>left</align>
@@ -194,8 +194,8 @@
 		</control>
 		<control type="image">
 			<!--Seperator-->
-			<posx>21</posx>
-			<posy>980</posy>
+			<left>21</left>
+			<top>980</top>
 			<width>458</width>
 			<height>20</height>
 			<align>left</align>
@@ -204,35 +204,35 @@
         <!-- close dialog -->
         <control type="group">
             <include>animation_fade_visible_hidden</include>
-            <posx>60</posx>
-			<posy>1005</posy>
+            <left>60</left>
+			<top>1005</top>
             <include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
         </control>
 		<!-- back -->
         <control type="group">
             <include>animation_fade_visible_hidden</include>
-            <posx>130</posx>
-			<posy>1005</posy>
+            <left>130</left>
+			<top>1005</top>
             <include condition="Skin.HasSetting(EnableTouchSupport)">back_button</include>
         </control>
 	</include>
 	
 	<include name="SideBladeClassic">
-		<posx>-635</posx>
-		<posy>-15</posy>
+		<left>-635</left>
+		<top>-15</top>
 		<visible>!Window.IsActive(virtualkeyboard)</visible>
 		<include>animation_sub_menu</include>
 		<!--Panel-->
 		<control type="image">
-			<posx>-19</posx>
-			<posy>525</posy>
+			<left>-19</left>
+			<top>525</top>
 			<width>80</width>
 			<height>60</height>
 			<texture>dialogs/default/arrow.png</texture>
             <colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
 		</control>
 		<control type="image">
-			<posy>150</posy>
+			<top>150</top>
 			<width>500</width>
 			<height>840</height>
             <bordersize>20</bordersize>
@@ -240,7 +240,7 @@
             <colordiffuse>$INFO[Skin.String(SideBladePanelColor)]</colordiffuse>
 		</control>
         <control type="button">
-			<posy>150</posy>
+			<top>150</top>
 			<width>500</width>
 			<height>840</height>
 			<description>Hidden button to prevent unwanted focus while hovering the menu</description>
@@ -873,8 +873,8 @@
 			</control>
 			<!--Grouplist 9000-->
             <control type="grouplist" id="9000">
-                <posx>21</posx>
-                <posy>185</posy>
+                <left>21</left>
+                <top>185</top>
                 <width>458</width>
                 <height>770</height>
                 <itemgap>3</itemgap>
@@ -1121,8 +1121,8 @@
             Window.IsActive(script-script.extendedinfo-VideoList.xml) | [Control.IsVisible(501) + !Skin.HasSetting(View_501_HorizontalNavigation)]
             </visible>
 			<control type="button" id="99001">
-				<posx>0</posx>
-				<posy>470</posy>
+				<left>0</left>
+				<top>470</top>
 				<width>32</width>
 				<height>140</height>
 				<align>center</align>
@@ -1156,8 +1156,8 @@
             Control.IsVisible(508) | Control.IsVisible(513) | Control.IsVisible(514) | Control.IsVisible(523)
             </visible>
 			<control type="button" id="99002">
-				<posx>890</posx>
-				<posy>0</posy>
+				<left>890</left>
+				<top>0</top>
 				<width>140</width>
 				<height>32</height>
 				<align>center</align>

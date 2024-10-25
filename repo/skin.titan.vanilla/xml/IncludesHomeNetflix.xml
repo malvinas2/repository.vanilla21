@@ -29,6 +29,7 @@
             
             <control type="scrollbar" id="317">
                 <include condition="Skin.HasSetting(NetflixHomeDisableFirstRow)">NetFlixHome_AltHeight_NoSpotLight</include>
+				<left></left>
                 <right>50</right>
                 <top>140</top>
                 <bottom>0</bottom>
@@ -51,8 +52,8 @@
 				<effect type="fade" start="0" end="100" time="400" delay="600" />
 			</animation>
 			<control type="button" id="99001">
-				<posx>0</posx>
-				<posy>470</posy>
+				<left>0</left>
+				<top>470</top>
 				<width>32</width>
 				<height>140</height>
 				<align>center</align>
@@ -139,6 +140,7 @@
                     <aspectratio>scale</aspectratio>
                     <fadetime>450</fadetime>
                     <width>1152</width>
+					<left></left>
                     <right>0</right>
                     <height>550</height>
                     <top>0</top>
@@ -185,8 +187,8 @@
                 <!-- spotlight details -->
                 <control type="grouplist">
                     <width>1500</width>
-                    <posx>55</posx>
-                    <posy>130</posy>
+                    <left>55</left>
+                    <top>130</top>
                     <height>400</height>
                     <orientation>vertical</orientation>
                     
@@ -236,7 +238,7 @@
                 
                 <!-- media flags -->
                 <control type="group">
-                    <posx>60</posx>
+                    <left>60</left>
                     <height>50</height>
                     <top>490</top>
                     <include>mediaflags</include>
@@ -257,6 +259,8 @@
             <control type="radiobutton" id="51">
                 <width>60</width>
                 <height>60</height>
+				<left></left>
+			    <top></top>
                 <right>20</right>
                 <top>20</top>
                 <font></font>
@@ -278,6 +282,7 @@
             <control type="radiobutton" id="52">
                 <width>60</width>
                 <height>60</height>
+				<left></left>
                 <right>20</right>
                 <top>20</top>
                 <font></font>
@@ -295,10 +300,10 @@
             
             <!-- all widgets -->
             <control type="grouplist" id="77777">
-                <posx>50</posx>
+                <left>50</left>
                 <include condition="Skin.HasSetting(NetflixHomeDisableFirstRow)">NetFlixHome_AltHeight_NoSpotLight</include>
-                <bottom>0</bottom>
-                <top>550</top>
+				<top>550</top>
+				<bottom>0</bottom>
                 <width>1870</width>
                 <ondown>77777</ondown>
                 <onleft condition="!Skin.HasSetting(EnhancedHome_Circular) | !Window.IsActive(Home)">300</onleft>
@@ -313,8 +318,8 @@
             <control type="scrollbar" id="317"> 
                 <include condition="Skin.HasSetting(NetflixHomeDisableFirstRow)">NetFlixHome_AltHeight_NoSpotLight</include>
                 <left>0</left>
+				<top>550</top>
                 <bottom>0</bottom>
-                <top>550</top>
                 <onleft>77777</onleft>
                 <onright>300</onright>
                 <showonepage>false</showonepage>
@@ -371,7 +376,7 @@
             <control type="grouplist">
                 <width>47%</width>
                 <left>10</left>
-                <posy>10</posy>
+                <top>10</top>
                 <bottom>10</bottom>
                 <orientation>vertical</orientation>
                 <control type="label">
@@ -523,6 +528,8 @@
                     <fadetime>350</fadetime>
                 </control>
                 <control type="image">
+					<left></left>
+					<top></top>
                     <bottom>8</bottom>
                     <right>8</right>
                     <width>50%</width>

@@ -12,12 +12,12 @@
 			<!--Dialog Overlay-->
 			<include>DialogOverlayExtra</include>
 			<control type="group">
-				<posx>400</posx>
-				<posy>410</posy>
+				<left>400</left>
+				<top>410</top>
 				<include>animation_window_open_close</include>
 				<control type="image">
-					<posx>-460</posx>
-					<posy>-40</posy>
+					<left>-460</left>
+					<top>-40</top>
 					<width>2000</width>
 					<height>410</height>
 					<texture border="5">diffuse/panel.png</texture>
@@ -25,8 +25,8 @@
 				</control>
 				<control type="multiimage">
 					<description>Busy animation</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>200</width>
 					<height>200</height>
 					<colordiffuse>$INFO[Skin.String(SpinnerTexture.Color)]</colordiffuse>
@@ -35,8 +35,8 @@
 					<timeperimage>250</timeperimage>
 				</control>
 				<control type="label">
-					<posx>-5</posx>
-					<posy>-10</posy>
+					<left>-5</left>
+					<top>-10</top>
 					<width>200</width>
 					<height>200</height>
 					<align>center</align>
@@ -46,10 +46,10 @@
 					<label>$INFO[System.Progressbar,,%]</label>
 				</control>
 				<control type="group">
-					<posx>250</posx>
+					<left>250</left>
 					<width>980</width>
 					<control type="label" id="1">
-						<posx>15</posx>
+						<left>15</left>
 						<description>Heading</description>
 						<label></label>
 						<width>1000</width>
@@ -57,16 +57,16 @@
 					</control>
 					<control type="textbox" id="9">
 						<description>Line 1</description>
-						<posx>15</posx>
-						<posy>80</posy>
+						<left>15</left>
+						<top>80</top>
 						<width>1000</width>
 						<height>120</height>
 						<label></label>
 						<font>Reg30</font>
 					</control>
 					<control type="grouplist">
-						<posx>15</posx>
-						<posy>220</posy>
+						<left>15</left>
+						<top>220</top>
 						<orientation>horizontal</orientation>
 						<itemgap>10</itemgap>
 						<control type="button" id="11">

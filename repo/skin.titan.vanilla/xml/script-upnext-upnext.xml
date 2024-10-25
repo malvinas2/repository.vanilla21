@@ -175,6 +175,7 @@
 						</control>
 					</control>
 					<control type="image">
+						<top></top>
 						<bottom>20</bottom>
 						<width>46</width>
 						<height>46</height>

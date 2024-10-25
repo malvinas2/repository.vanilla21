@@ -37,8 +37,8 @@
 			</control>
 			<!--Grouplist 9000-->
             <control type="grouplist" id="9000">
-                <posx>21</posx>
-                <posy>185</posy>
+                <left>21</left>
+                <top>185</top>
                 <width>458</width>
                 <height>770</height>
                 <itemgap>3</itemgap>
@@ -179,6 +179,7 @@
                 <label>$VAR[Details]</label>
             </control>
             <control type="textbox">
+				<top></top>
                 <bottom>4%</bottom>
                 <left>60</left>
                 <width>1800</width>

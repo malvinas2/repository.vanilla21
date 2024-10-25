@@ -16,8 +16,8 @@
             <visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(locksettings)</visible>
 			<control type="image">
                 <!--Panel-->
-                <posx>445</posx>
-                <posy>180</posy>
+                <left>445</left>
+                <top>180</top>
                 <width>1030</width>
                 <height>730</height>
                 <texture border="15">diffuse/bgpanel.png</texture>
@@ -25,8 +25,8 @@
             </control>
 			<control type="image">
                 <!--Panel-->
-                <posx>445</posx>
-                <posy>180</posy>
+                <left>445</left>
+                <top>180</top>
                 <width>1030</width>
                 <height>730</height>
 				<texture border="15">diffuse/bgpanel.png</texture>
@@ -34,15 +34,15 @@
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
             </control>
             <control type="image">
-                <posx>479</posx>
-                <posy>300</posy>
+                <left>479</left>
+                <top>300</top>
                 <width>590</width>
                 <height>481</height>
                 <texture border="5">dialogs/default/inner.png</texture>
             </control>
             <control type="image">
-                <posx>1122</posx>
-                <posy>300</posy>
+                <left>1122</left>
+                <top>300</top>
                 <width>319</width>
                 <height>481</height>
                 <texture border="5">dialogs/default/inner-dark.png</texture>
@@ -50,8 +50,8 @@
             <!--Header-->
             <control type="label" id="411">
                 <description>Heading</description>
-                <posx>473</posx>
-                <posy>200</posy>
+                <left>473</left>
+                <top>200</top>
                 <width>974</width>
                 <label></label>
                 <include>DialogHeader</include>
@@ -59,8 +59,8 @@
             </control>
             <!--Icons
             <control type="image">
-                <posx>1123</posx>
-                <posy>301</posy>
+                <left>1123</left>
+                <top>301</top>
                 <width>317</width>
                 <height>478</height>
                 <aspectratio>keep</aspectratio>
@@ -68,8 +68,8 @@
                 <visible>String.IsEmpty(Container(450).ListItem.Icon)</visible>
             </control>-->
             <control type="image">
-                <posx>1123</posx>
-                <posy>301</posy>
+                <left>1123</left>
+                <top>301</top>
                 <width>317</width>
                 <height>478</height>
                 <aspectratio>keep</aspectratio>
@@ -78,8 +78,8 @@
             <!--List-->
             <control type="list" id="450">
                 <!--Container 450-->
-                <posx>479</posx>
-                <posy>300</posy>
+                <left>479</left>
+                <top>300</top>
                 <width>580</width>
                 <height>480</height>
                 <onleft>8000</onleft>
@@ -90,15 +90,15 @@
                 <pagecontrol>60</pagecontrol>
                 <itemlayout height="60">
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>1</posy>
+                        <left>0</left>
+                        <top>1</top>
                         <width>644</width>
                         <height>60</height>
                         <texture>dialogs/default/separator.png</texture>
                     </control>
                     <control type="image">
-                        <posx>5</posx>
-                        <posy>0</posy>
+                        <left>5</left>
+                        <top>0</top>
                         <width>60</width>
                         <height>60</height>
                         <texture background="true">$INFO[ListItem.ActualIcon,dialogs/filebrowser/]</texture>
@@ -106,8 +106,8 @@
                         <visible>String.IsEmpty(ListItem.Art(thumb))</visible>
                     </control>
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>5</posy>
+                        <left>0</left>
+                        <top>5</top>
                         <width>60</width>
                         <height>50</height>
                         <texture background="true">$INFO[ListItem.Art(thumb)]</texture>
@@ -115,8 +115,8 @@
                         <visible>!String.IsEmpty(ListItem.Art(thumb))</visible>
                     </control>
                     <control type="label">
-                        <posx>70</posx>
-                        <posy>0</posy>
+                        <left>70</left>
+                        <top>0</top>
                         <width>574</width>
                         <height>60</height>
                         <info>ListItem.Label</info>
@@ -132,15 +132,15 @@
                         <animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout" condition="![Container(450).Scrolling | Container(450).OnScrollNext | Container(450).OnScrollPrevious]">Visible</animation>
                         <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="![Container(450).Scrolling | Container(450).OnScrollNext | Container(450).OnScrollPrevious]">Hidden</animation>
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>1</posy>
+                            <left>0</left>
+                            <top>1</top>
                             <width>644</width>
                             <height>60</height>
                             <texture>dialogs/default/separator.png</texture>
                         </control>
                         <control type="image">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>60</width>
                             <height>60</height>
                             <texture background="true">$INFO[ListItem.ActualIcon,dialogs/filebrowser/]</texture>
@@ -148,8 +148,8 @@
                             <visible>String.IsEmpty(ListItem.Art(thumb))</visible>
                         </control>
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>5</posy>
+                            <left>0</left>
+                            <top>5</top>
                             <width>60</width>
                             <height>50</height>
                             <texture background="true">$INFO[ListItem.Art(thumb)]</texture>
@@ -157,8 +157,8 @@
                             <visible>!String.IsEmpty(ListItem.Art(thumb))</visible>
                         </control>
                         <control type="label">
-                            <posx>70</posx>
-                            <posy>0</posy>
+                            <left>70</left>
+                            <top>0</top>
                             <width>574</width>
                             <height>60</height>
                             <info>ListItem.Label</info>
@@ -179,8 +179,8 @@
 							<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
                         </control>
                         <control type="image">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>60</width>
                             <height>60</height>
                             <texture background="true">$INFO[ListItem.ActualIcon,dialogs/filebrowser/]</texture>
@@ -188,8 +188,8 @@
                             <visible>String.IsEmpty(ListItem.Art(thumb))</visible>
                         </control>
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>5</posy>
+                            <left>0</left>
+                            <top>5</top>
                             <width>60</width>
                             <height>50</height>
                             <texture background="true">$INFO[ListItem.Art(thumb)]</texture>
@@ -197,8 +197,8 @@
                             <visible>!String.IsEmpty(ListItem.Art(thumb))</visible>
                         </control>
                         <control type="label">
-                            <posx>70</posx>
-                            <posy>0</posy>
+                            <left>70</left>
+                            <top>0</top>
                             <width>574</width>
                             <height>60</height>
                             <info>ListItem.Label</info>
@@ -212,8 +212,8 @@
             </control>
             <control type="list" id="451">
                 <!--Container 451-->
-                <posx>479</posx>
-                <posy>300</posy>
+                <left>479</left>
+                <top>300</top>
                 <width>580</width>
                 <height>480</height>
                 <onleft>8000</onleft>
@@ -224,15 +224,15 @@
                 <pagecontrol>60</pagecontrol>
                 <itemlayout height="60">
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>1</posy>
+                        <left>0</left>
+                        <top>1</top>
                         <width>644</width>
                         <height>60</height>
                         <texture>dialogs/default/separator.png</texture>
                     </control>
                     <control type="image">
-                        <posx>5</posx>
-                        <posy>0</posy>
+                        <left>5</left>
+                        <top>0</top>
                         <width>60</width>
                         <height>60</height>
                         <texture background="true">$INFO[ListItem.ActualIcon,dialogs/filebrowser/]</texture>
@@ -240,8 +240,8 @@
                         <visible>String.IsEmpty(ListItem.Art(thumb))</visible>
                     </control>
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>5</posy>
+                        <left>0</left>
+                        <top>5</top>
                         <width>60</width>
                         <height>50</height>
                         <texture background="true">$INFO[ListItem.Art(thumb)]</texture>
@@ -249,8 +249,8 @@
                         <visible>!String.IsEmpty(ListItem.Art(thumb))</visible>
                     </control>
                     <control type="label">
-                        <posx>70</posx>
-                        <posy>0</posy>
+                        <left>70</left>
+                        <top>0</top>
                         <width>574</width>
                         <height>60</height>
                         <info>ListItem.Label</info>
@@ -266,15 +266,15 @@
                         <animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout" condition="![Container(451).Scrolling | Container(451).OnScrollNext | Container(451).OnScrollPrevious]">Visible</animation>
                         <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="![Container(451).Scrolling | Container(451).OnScrollNext | Container(451).OnScrollPrevious]">Hidden</animation>
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>1</posy>
+                            <left>0</left>
+                            <top>1</top>
                             <width>644</width>
                             <height>60</height>
                             <texture>dialogs/default/separator.png</texture>
                         </control>
                         <control type="image">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>60</width>
                             <height>60</height>
                             <texture background="true">$INFO[ListItem.ActualIcon,dialogs/filebrowser/]</texture>
@@ -282,8 +282,8 @@
                             <visible>String.IsEmpty(ListItem.Art(thumb))</visible>
                         </control>
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>5</posy>
+                            <left>0</left>
+                            <top>5</top>
                             <width>60</width>
                             <height>50</height>
                             <texture background="true">$INFO[ListItem.Art(thumb)]</texture>
@@ -291,8 +291,8 @@
                             <visible>!String.IsEmpty(ListItem.Art(thumb))</visible>
                         </control>
                         <control type="label">
-                            <posx>70</posx>
-                            <posy>0</posy>
+                            <left>70</left>
+                            <top>0</top>
                             <width>574</width>
                             <height>60</height>
                             <info>ListItem.Label</info>
@@ -314,8 +314,8 @@
 							<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
                         </control>
                         <control type="image">
-                            <posx>5</posx>
-                            <posy>0</posy>
+                            <left>5</left>
+                            <top>0</top>
                             <width>60</width>
                             <height>60</height>
                             <texture background="true">$INFO[ListItem.ActualIcon,dialogs/filebrowser/]</texture>
@@ -323,8 +323,8 @@
                             <visible>String.IsEmpty(ListItem.Art(thumb))</visible>
                         </control>
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>5</posy>
+                            <left>0</left>
+                            <top>5</top>
                             <width>60</width>
                             <height>50</height>
                             <texture background="true">$INFO[ListItem.Art(thumb)]</texture>
@@ -332,8 +332,8 @@
                             <visible>!String.IsEmpty(ListItem.Art(thumb))</visible>
                         </control>
                         <control type="label">
-                            <posx>70</posx>
-                            <posy>0</posy>
+                            <left>70</left>
+                            <top>0</top>
                             <width>574</width>
                             <height>60</height>
                             <info>ListItem.Label</info>
@@ -348,8 +348,8 @@
             </control>
      			<!--scrollbar-->
 			<control type="scrollbar" id="60"> 
-				<posx>1065</posx>
-                <posy>300</posy>
+				<left>1065</left>
+                <top>300</top>
 				<height>480</height>
 				<onleft>450</onleft>
 				<onleft>451</onleft>
@@ -360,8 +360,8 @@
 			</control>	
 			<!--Buttons-->
             <control type="grouplist" id="8000">
-                <posx>472</posx>
-                <posy>810</posy>
+                <left>472</left>
+                <top>810</top>
 				<width>1200</width>
 				<orientation>horizontal</orientation>
 				<height>100</height>
@@ -376,7 +376,7 @@
                     <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(413)">Conditional</animation>
                 </control>
                 <control type="button" id="414">
-                    <posx>200</posx>
+                    <left>200</left>
                     <description>Cancel</description>
                     <label>$LOCALIZE[222]</label>
 					<width>316</width>
@@ -384,7 +384,7 @@
                     <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(414)">Conditional</animation>
                 </control>
                 <control type="button" id="415">
-                    <posx>650</posx>
+                    <left>650</left>
                     <description>Create Folder</description>
                     <label>$LOCALIZE[119]</label>
 					<width>316</width>

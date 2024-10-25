@@ -101,6 +101,7 @@
 			<animation delay="300" effect="fade" time="200">Visible</animation>
 			<animation effect="fade" delay="200" time="150">Hidden</animation>
 			<control type="image" id="22">
+				<left></left>
 				<right>50</right>
 				<top>710</top>
 				<width>150</width>
@@ -110,6 +111,7 @@
 				<texture>dialogs/buffer-progress/bottom-panel.png</texture>
 			</control>
 			<control type="image" id="23">
+				<left></left>
 				<right>50</right>
 				<top>710</top>
 				<width>150</width>
@@ -118,6 +120,7 @@
 				<texture>dialogs/buffer-progress/p100.png</texture>
 			</control>
  			<control type="image" id="24">
+				<left></left>
 				<right>50</right>
 				<top>710</top>
 				<width>150</width>
@@ -128,6 +131,7 @@
 			<control type="label" id="25">
 				<description>buffering value</description>
 				<label>$INFO[Player.CacheLevel]%</label>
+				<left></left>
 				<right>50</right>
 				<top>710</top>
 				<width>150</width>
@@ -141,6 +145,7 @@
 			<control type="label" id="26">
 				<description>buffering label</description>
 				<label>$LOCALIZE[15107]</label>
+				<left></left>
 				<right>48</right>
 				<top>875</top>
 				<width>150</width>

@@ -5,15 +5,15 @@
     <controls>
 		<include condition="Skin.HasSetting(SpinnerDimScreen)">DialogOverlayExtra</include>
         <control type="group">
-            <posx>960</posx>
+            <left>960</left>
             <!--Center-->
-            <posy>540</posy>
+            <top>540</top>
             <!--Center-->
             <control type="multiimage">
                 <animation effect="fade" start="0" end="100" time="0">WindowOpen</animation>
                 <animation effect="fade" start="100" end="0" time="500" delay="500">WindowClose</animation>
-                <posx>-75</posx>
-                <posy>-75</posy>
+                <left>-75</left>
+                <top>-75</top>
                 <width>150</width>
                 <height>150</height>
 				<aspectratio>keep</aspectratio>

@@ -16,16 +16,16 @@
                 </control>
                 <!-- background panel -->
                 <control type="image">
-                    <posx>367</posx>
-                    <posy>236</posy>
+                    <left>367</left>
+                    <top>236</top>
                     <width>1190</width>
                     <height>690</height>
                     <texture border="15">diffuse/bgpanel.png</texture>
                     <colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
                 </control>
                 <control type="image">
-                    <posx>367</posx>
-                    <posy>236</posy>
+                    <left>367</left>
+                    <top>236</top>
                     <width>1190</width>
                     <height>690</height>
                     <texture border="15">diffuse/bgpanel.png</texture>
@@ -35,8 +35,8 @@
                 <!--Header-->
                 <control type="label">
                     <description>Heading</description>
-                    <posx>415</posx>
-                    <posy>225</posy>
+                    <left>415</left>
+                    <top>225</top>
                     <width>1100</width>
                     <height>100</height>
                     <label>$LOCALIZE[13406]</label>
@@ -45,8 +45,8 @@
                     <wrapmultiline>true</wrapmultiline>
                 </control>
                 <control type="list" id="5">
-                    <posx>415</posx>
-                    <posy>315</posy>
+                    <left>415</left>
+                    <top>315</top>
                     <width>1100</width>
                     <height>480</height>
                     <onleft>8000</onleft>
@@ -57,15 +57,15 @@
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
                     <itemlayout height="60" width="1100">
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>1</posy>
+                            <left>0</left>
+                            <top>1</top>
                             <width>100%</width>
                             <height>60</height>
                             <texture>dialogs/default/separator.png</texture>
                         </control>
                         <control type="label">
-                            <posx>20</posx>
-                            <posy>0</posy>
+                            <left>20</left>
+                            <top>0</top>
                             <width>604</width>
                             <height>60</height>
                             <info>ListItem.Label</info>
@@ -75,8 +75,9 @@
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
+			                <left></left>
                             <right>20</right>
-                            <posy>0</posy>
+                            <top>0</top>
                             <width>604</width>
                             <height>60</height>
                             <info>ListItem.Label2</info>
@@ -92,15 +93,15 @@
                             <animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout" condition="![Container(5).Scrolling | Container(5).OnScrollNext | Container(5).OnScrollPrevious]">Visible</animation>
                             <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="![Container(5).Scrolling | Container(5).OnScrollNext | Container(5).OnScrollPrevious]">Hidden</animation>
                             <control type="image">
-                                <posx>0</posx>
-                                <posy>1</posy>
+                                <left>0</left>
+                                <top>1</top>
                                 <width>100%</width>
                                 <height>60</height>
                                 <texture>dialogs/default/separator.png</texture>
                             </control>
                             <control type="label">
-                                <posx>20</posx>
-                                <posy>0</posy>
+                                <left>20</left>
+                                <top>0</top>
                                 <width>604</width>
                                 <height>60</height>
                                 <info>ListItem.Label</info>
@@ -110,8 +111,9 @@
                                 <scroll>false</scroll>
                             </control>
                             <control type="label">
+				                <left></left>
                                 <right>20</right>
-                                <posy>0</posy>
+                                <top>0</top>
                                 <width>604</width>
                                 <height>60</height>
                                 <info>ListItem.Label2</info>
@@ -131,8 +133,8 @@
                                 <texture border="5">diffuse/panel.png</texture><colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
                             </control>
                             <control type="label">
-                                <posx>20</posx>
-                                <posy>0</posy>
+                                <left>20</left>
+                                <top>0</top>
                                 <width>604</width>
                                 <height>60</height>
                                 <info>ListItem.Label</info>
@@ -142,8 +144,9 @@
                                 <scroll>false</scroll>
                             </control>
                             <control type="label">
-                                <right>20</right>
-                                <posy>0</posy>
+                                <left></left>
+								<right>20</right>
+                                <top>0</top>
                                 <width>604</width>
                                 <height>60</height>
                                 <info>ListItem.Label2</info>
@@ -155,8 +158,8 @@
                     </focusedlayout>
                 </control>
                 <control type="scrollbar" id="60">
-                    <posx>1520</posx>
-                    <posy>315</posy>
+                    <left>1520</left>
+                    <top>315</top>
                     <height>480</height>
                     <onup>60</onup>
                     <ondown>60</ondown>
@@ -166,8 +169,8 @@
                 </control>
                 <!--Buttons-->
                 <control type="grouplist" id="8000">
-                    <posx>410</posx>
-                    <posy>820</posy>
+                    <left>410</left>
+                    <top>820</top>
                     <width>1050</width>
                     <height>690</height>
                     <orientation>horizontal</orientation>
@@ -176,7 +179,8 @@
                     <onup condition="!Control.IsVisible(6)">3</onup>
                     <ondown condition="!Control.IsVisible(6)">3</ondown>
                     <control type="button" id="7">
-                        <right>0</right>
+                        <left></left>
+						<right>0</right>
                         <description>Close</description>
                         <label>$LOCALIZE[222]</label>
                         <width>500</width>

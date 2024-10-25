@@ -13,8 +13,8 @@
 			</animation>
 			
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>100%</width>
 				<height>130</height>
 				<texture border="5">diffuse/panel.png</texture>
@@ -69,6 +69,7 @@
 			</control>
 			
 			<control type="textbox">
+                <left></left>
 				<right>290</right>
 				<top>35</top>
 				<align>right</align>
@@ -177,6 +178,7 @@
 
 			<control type="button" id="111">
 				<!--Close-->
+                <left></left>
 				<right>40</right>
 				<top>30</top>
 				<width>240</width>

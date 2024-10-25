@@ -15,7 +15,8 @@
 			<include>animation_window_open_close</include>
 			
             <control type="image">
-				<posx>82</posx>
+				<left>82</left>
+				<top></top>
 				<bottom>145</bottom>
 				<width>400</width>
 				<height>630</height>
@@ -26,7 +27,8 @@
 			
 			<!-- weekdays -->
 			<control type="list" id="5000">
-				<posx>82</posx>
+				<left>82</left>
+				<top></top>
 				<bottom>145</bottom>
 				<width>410</width>
 				<height>630</height>
@@ -131,12 +133,13 @@
 				</content>
 			</control>
 			<control type="group" id="9001">
+				<top></top>
 				<bottom>145</bottom>
-				<posx>535</posx>
+				<left>535</left>
                 <height>630</height>
 				<control type="scrollbar" id="60">
 					<left>0</left>
-					<posy>670</posy>
+					<top>670</top>
 					<width>1316</width>
 					<height>15</height>
 					<onup condition="Container(5000).HasFocus(1)">200</onup>
@@ -216,8 +219,8 @@
 			<include condition="!Skin.HasSetting(smallContextMenu)">SideBladeModern</include>
             <!--Grouplist 9000-->
             <control type="grouplist" id="9000">
-                <posx>21</posx>
-                <posy>190</posy>
+                <left>21</left>
+                <top>190</top>
                 <width>458</width>
                 <height>750</height>
                 <itemgap>3</itemgap>

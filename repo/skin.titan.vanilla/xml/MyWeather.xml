@@ -27,8 +27,8 @@
                 <!--Location Label UnFocus-->
                 <visible>!ControlGroup(9000).HasFocus(3)</visible>
                 <description>Location Label</description>
-                <posx>21</posx>
-                <posy>315</posy>
+                <left>21</left>
+                <top>315</top>
                 <width>400</width>
 				<include>SideBladeMenuButton</include>
                 <label>$INFO[Control.GetLabel(3)]</label>
@@ -38,8 +38,8 @@
 			<control type="image">
                 <visible>ControlGroup(9000).HasFocus(3)</visible>
                 <description>Location Label</description>
-                <posx>21</posx>
-                <posy>315</posy>
+                <left>21</left>
+                <top>315</top>
                 <width>458</width>
 			    <height>60</height>
 				<texture colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="5">diffuse/panel.png</texture>
@@ -49,8 +49,8 @@
                 <!--Location Label Focus-->
                 <visible>ControlGroup(9000).HasFocus(3)</visible>
                 <description>Location Label</description>
-                <posx>21</posx>
-                <posy>315</posy>
+                <left>21</left>
+                <top>315</top>
                 <width>400</width>
                 <textcolor>$INFO[Skin.String(ButtonFocusTextColor)]</textcolor>
 				<font>Reg26</font>
@@ -60,8 +60,8 @@
 			
             <!--Grouplist 9000-->
             <control type="grouplist" id="9000">
-                <posx>21</posx>
-                <posy>190</posy>
+                <left>21</left>
+                <top>190</top>
                 <width>458</width>
                 <height>750</height>
                 <itemgap>3</itemgap>

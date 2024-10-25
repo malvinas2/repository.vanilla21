@@ -22,8 +22,8 @@
 			</animation>
             <!--Panel-->
             <control type="image">
-                <posx>630</posx>
-                <posy>0</posy>
+                <left>630</left>
+                <top>0</top>
                 <width>1340</width>
                 <height>100%</height>
 				<texture border="15">diffuse/bgpanel.png</texture>
@@ -34,14 +34,14 @@
                 <include>animation_fade_visible_hidden</include>
                 <right>60</right>
                 <width>60</width>
-                <posy>40</posy>
+                <top>40</top>
                 <include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
             </control>
            <!--Header-->
             <control type="label">
                 <description>Heading</description>
-                <posx>700</posx>
-                <posy>10</posy>
+                <left>700</left>
+                <top>10</top>
                 <width>1200</width>
 				<font>Bold45</font>
                 <textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
@@ -52,8 +52,8 @@
             </control>
 			<!-- broken text -->
 			<control type="label">
-				<posx>700</posx>
-				<posy>95</posy>
+				<left>700</left>
+				<top>95</top>
 				<width>1200</width>
 				<font>Reg36</font>
 				<align>left</align>
@@ -62,24 +62,25 @@
             </control>			
 			<!-- title -->
 			<control type="label">
-				<posx>700</posx>
-				<posy>150</posy>
+				<left>700</left>
+				<top>150</top>
 				<width>1200</width>
 				<font>Reg36</font>
 				<align>left</align>
 				<label>$INFO[ListItem.AddonName] $INFO[ListItem.AddonVersion] $LOCALIZE[31830] $INFO[ListItem.AddonCreator]</label>
             </control>
 			<control type="image">
-				<posx>680</posx>
-                <posy>220</posy>
+				<left>680</left>
+                <top>220</top>
 				<width>1200</width>
 				<height>250</height>
 				<texture border="5">dialogs/default/inner.png</texture>
 			</control>
 			<!--Icon-->
             <control type="image">
+                <left></left>
                 <right>60</right>
-                <posy>235</posy>
+                <top>235</top>
                 <width>350</width>
                 <height>220</height>
                 <fadetime>800</fadetime>
@@ -87,8 +88,8 @@
 				<texture background="true" diffuse="diffuse/poster.png" fallback="DefaultVideo.png" border="5">$INFO[ListItem.Icon]</texture>
             </control>
             <control type="grouplist">
-                <posx>680</posx>
-                <posy>220</posy>
+                <left>680</left>
+                <top>220</top>
                 <control type="button">
                      <!--Addon Type-->
                     <width>800</width>
@@ -143,16 +144,16 @@
                 </control>
             </control>
             <control type="image">
-                <posx>680</posx>
-                <posy>586</posy>
+                <left>680</left>
+                <top>586</top>
                 <width>1200</width>
                 <height>370</height>
                 <texture border="5">dialogs/default/inner.png</texture>
             </control>
             <control type="textbox">
                 <description>Plot value</description>
-                <posx>700</posx>
-                <posy>606</posy>
+                <left>700</left>
+                <top>606</top>
                 <width>1160</width>
                 <height>340</height>
                 <align>justify</align>
@@ -162,8 +163,8 @@
             </control>
             <control type="textbox">
                 <description>News value</description>
-                <posx>700</posx>
-                <posy>606</posy>
+                <left>700</left>
+                <top>606</top>
                 <width>1160</width>
                 <height>340</height>
                 <align>justify</align>
@@ -173,8 +174,8 @@
             </control>
             <!-- screenshots -->
             <control type="panel" id="50">
-                <posx>680</posx>
-                <posy>620</posy>
+                <left>680</left>
+                <top>620</top>
                 <width>1200</width>
                 <height>340</height>
                 <orientation>horizontal</orientation>
@@ -202,8 +203,8 @@
             </control>
 			<!--Button Group-->
             <control type="grouplist" id="9000">
-                <posx>680</posx>
-                <posy>960</posy>
+                <left>680</left>
+                <top>960</top>
 				<orientation>horizontal</orientation>
 				<itemgap>5</itemgap>
 				<onup>50</onup>
@@ -324,9 +325,10 @@
             <!--Arrows-->
             <control type="image">
                 <animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
-                <right>10</right>
-                <bottom>52</bottom>
-                <posy>50</posy>
+                <left></left>
+				<right>10</right>
+                <!-- <bottom>52</bottom> -->
+                <top>970</top>
                 <width>20</width>
                 <height>60</height>
                 <aspectratio>keep</aspectratio>
@@ -337,9 +339,10 @@
             </control>
             <control type="image">
                 <animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
-                <right>1250</right>
-                <bottom>52</bottom>
-                <posy>50</posy>
+                <left></left>
+				<right>1250</right>
+                <!-- <bottom>52</bottom> -->
+                <top>970</top>
                 <width>20</width>
                 <height>60</height>
                 <aspectratio>keep</aspectratio>

@@ -153,7 +153,8 @@
             <include condition="!Window.IsActive(Home)">PosterTagOverlayVisibility</include>
             <!--Panel-->
             <control type="image">
-                <bottom>0</bottom>
+				<top></top>
+				<bottom>0</bottom>
                 <height>80</height>
                 <bordersize>8</bordersize>
                 <texture border="1">diffuse/poster_tag.png</texture>
@@ -162,6 +163,7 @@
             <control type="textbox">
                 <left>15</left>
                 <right>15</right>
+				<top></top>
                 <bottom>10</bottom>
                 <height>65</height>
                 <include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
@@ -176,6 +178,7 @@
             <control type="textbox">
                 <left>15</left>
                 <right>15</right>
+				<top></top>
                 <bottom>10</bottom>
                 <height>65</height>
                 <include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
@@ -195,6 +198,7 @@
             <include condition="!Window.IsActive(Home)">PosterTagOverlayVisibility</include>
                 <!--Panel-->
                 <control type="image">
+				<top></top>
                 <bottom>0</bottom>
                 <height>80</height>
                 <bordersize>8</bordersize>
@@ -204,6 +208,7 @@
             <control type="textbox">
                 <left>15</left>
                 <right>15</right>
+				<top></top>
                 <bottom>10</bottom>
                 <height>65</height>
                 <include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
@@ -218,6 +223,7 @@
             <control type="textbox">
                 <left>15</left>
                 <right>15</right>
+				<top></top>
                 <bottom>10</bottom>
                 <height>65</height>
                 <include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>

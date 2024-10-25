@@ -9,7 +9,7 @@
 			
             <!-- ID="52" -->
             <control type="panel" id="56">
-                <posx>65</posx>
+                <left>65</left>
                 <bottom>13%</bottom>
                 <width>1800</width>
                 <height>675</height>
@@ -17,7 +17,7 @@
                 <ondown>56</ondown>
                 <onleft>9000</onleft>
                 <onright condition="Skin.HasSetting(EnableQuickJump)">6000</onright>
-        <onright condition="!Skin.HasSetting(EnableQuickJump)">60</onright>
+                <onright condition="!Skin.HasSetting(EnableQuickJump)">60</onright>
                 <pagecontrol>60</pagecontrol>
                 <viewtype label="31425">bigwide</viewtype>
                 <scrolltime tween="Cubic" easing="inout">500</scrolltime>
@@ -104,6 +104,8 @@
  			<!--vertical Scollbar-->
 			<control type="scrollbar" id="60">
 				<visible>Control.IsVisible(56) + Integer.IsGreater(Container.NumItems,0)</visible>
+				<left></left>
+				<top></top>
 				<right>15</right>
 				<bottom>13%</bottom>
 				<height>675</height>

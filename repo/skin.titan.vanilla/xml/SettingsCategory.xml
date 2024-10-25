@@ -18,22 +18,22 @@
 			<height>75%</height>
 		   <!--Panel-->
 			<control type="image">
-				<posx>50</posx>
+				<left>50</left>
 				<width>1820</width>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
 			</control>
 			
 			<control type="image">
-				<posx>50</posx>
+				<left>50</left>
 				<width>520</width>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
 			</control>
 			
 			<control type="grouplist" id="3000">
-				<posx>90</posx>
-				<posy>20</posy>
+				<left>90</left>
+				<top>20</top>
 				<width>450</width>
 				<ondown>9000</ondown>
 				<!--default setting buttons-->
@@ -52,8 +52,8 @@
 			
 			<control type="grouplist" id="5">
 				<description>Control Area</description>
-				<posx>605</posx>
-				<posy>20</posy>
+				<left>605</left>
+				<top>20</top>
 				<width>1230</width>
 				<height>80%</height>
 				<itemgap>5</itemgap>
@@ -93,8 +93,8 @@
 			</control>
 			<control type="sliderex" id="13">
 				<description>Default Slider</description>
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<font>Reg28</font>
 				<height>47</height>
 				<!-- <include>DialogButton</include> -->
@@ -118,8 +118,8 @@
 				<width>450</width>
 			</control>
 			<control type="grouplist" id="9000">
-				<posx>90</posx>
-				<posy>610</posy>
+				<left>90</left>
+				<top>610</top>
 				<width>450</width>
 				<height>600</height>
 				<onleft>9000</onleft>
@@ -158,9 +158,10 @@
 			<control type="textbox" id="6">
 				<description>description area</description>
 				<left>600</left>
+				<top></top>
 				<bottom>15</bottom>
 				<scroll>true</scroll>
-				<height>135</height>
+				<height>125</height>
 				<width>1230</width>
 				<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
 				<font>Reg28</font>

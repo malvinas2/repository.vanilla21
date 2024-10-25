@@ -6,8 +6,8 @@
 
 		<!--Title-->
 		<control type="label">
-			<posx>10</posx>
-			<posy>10</posy>
+			<left>10</left>
+			<top>10</top>
 			<height>40</height>
 			<align>left</align>
 			<label>$INFO[ListItem.Label]</label>
@@ -17,8 +17,8 @@
 		</control>
 		<!--Details-->
 		<control type="label">
-			<posx>10</posx>
-			<posy>50</posy>
+			<left>10</left>
+			<top>50</top>
 			<height>60</height>
 			<align>left</align>
 			<label>$VAR[ListDetails]</label>
@@ -28,7 +28,7 @@
 		</control>
 		<control type="image">
 			<bottom>0</bottom>
-			<posy>0</posy>
+			<top>0</top>
 			<height>1</height>
 			<texture>diffuse/panel.png</texture>
 			<colordiffuse>grey</colordiffuse>
@@ -37,7 +37,7 @@
 		
 		<control type="image">
 			<!--icon-->
-			<posy>10</posy>
+			<top>10</top>
 			<left>0</left>
 			<width>90</width>
 			<height>95</height>
@@ -50,8 +50,8 @@
 
     <include name="LowListFocusLayout">
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<height>115</height>
 			<texture border="5">diffuse/panel.png</texture>
 			<colordiffuse>$VAR[ViewDetailsFocusColor]</colordiffuse>
@@ -59,8 +59,8 @@
 		</control>
 		<!--Title-->
 		<control type="label">
-			<posx>10</posx>
-			<posy>10</posy>
+			<left>10</left>
+			<top>10</top>
 			<height>40</height>
 			<align>left</align>
 			<label>$INFO[ListItem.Label]</label>
@@ -71,8 +71,8 @@
 		</control>
 		<!--Details-->
 		<control type="label">
-			<posx>10</posx>
-			<posy>50</posy>
+			<left>10</left>
+			<top>50</top>
 			<height>60</height>
 			<align>left</align>
 			<label>$VAR[ListDetails]</label>
@@ -83,7 +83,7 @@
 		</control>
 		<control type="image">
 			<bottom>0</bottom>
-			<posy>0</posy>
+			<top>0</top>
 			<height>1</height>
 			<texture>diffuse/panel.png</texture>
 			<colordiffuse>grey</colordiffuse>
@@ -92,7 +92,7 @@
 		
 		<control type="image">
 			<!--icon-->
-			<posy>10</posy>
+			<top>10</top>
 			<left>0</left>
 			<width>90</width>
 			<height>95</height>
@@ -108,7 +108,7 @@
 
 		<!--Title-->
 		<control type="label">
-			<posx>10</posx>
+			<left>10</left>
 			<align>left</align>
 			<width>90%</width>
 			<label>[B]$INFO[ListItem.Label][/B]</label>
@@ -118,6 +118,7 @@
 		
 		<!--duration-->
 		<control type="label">
+			<left></left>
 			<right>5</right>
 			<width>150</width>
 			<align>right</align>
@@ -131,7 +132,7 @@
 		
 		<control type="image">
 			<bottom>0</bottom>
-			<posy>0</posy>
+			<top>0</top>
 			<height>1</height>
 			<texture>diffuse/panel.png</texture>
 			<colordiffuse>grey</colordiffuse>
@@ -141,15 +142,15 @@
 
     <include name="LowListSlimLayoutFocus">
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<texture border="5">diffuse/panel.png</texture>
 			<colordiffuse>$VAR[ViewDetailsFocusColor]</colordiffuse>
 			
 		</control>
 		<!--Title-->
 		<control type="label">
-			<posx>10</posx>
+			<left>10</left>
 			<align>left</align>
 			<width>90%</width>
 			<label>[B]$INFO[ListItem.Label][/B]</label>
@@ -160,6 +161,7 @@
 		
 		<!--duration-->
 		<control type="label">
+			<left></left>
 			<right>5</right>
 			<width>150</width>
 			<align>right</align>
@@ -173,7 +175,7 @@
 		
 		<control type="image">
 			<bottom>0</bottom>
-			<posy>0</posy>
+			<top>0</top>
 			<height>1</height>
 			<texture>diffuse/panel.png</texture>
 			<colordiffuse>grey</colordiffuse>
@@ -193,7 +195,7 @@
 			
 			<!-- Background Panel-->
 			<control type="image">
-				<posx>50</posx>
+				<left>50</left>
 				<width>1820</width>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
@@ -201,7 +203,7 @@
                 <visible>Integer.IsGreater(Container.NumItems,0)</visible>
 			</control>
 			<control type="image">
-				<posx>1200</posx>
+				<left>1200</left>
 				<width>670</width>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
@@ -211,8 +213,8 @@
 		
 			<control type="panel" id="515">
 					
-				<posx>330</posx>
-				<posy>10</posy>
+				<left>330</left>
+				<top>10</top>
 				<width>1400</width>
 				<height>345</height>
 				<onup>515</onup>
@@ -280,8 +282,9 @@
 			<control type="group">
 				
 				<control type="textbox">
+					<left></left>
 					<right>80</right>
-					<posy>5</posy>
+					<top>5</top>
 					<width>625</width>
 					<height>335</height>
 					<label>$VAR[Plots]</label>
@@ -299,7 +302,7 @@
                 <visible>Integer.IsGreater(Container.NumItems,0)</visible>
 				<control type="image">
 					<left>65</left>
-					<posy>7</posy>
+					<top>7</top>
 					<width>255</width>
 					<height>350</height>
 					<aspectratio align="left" aligny="top" scalediffuse="true">keep</aspectratio>
@@ -309,8 +312,9 @@
 			 <!-- black background behind video -->
             <control type="image">
                 <texture>colors/color_black.png</texture>
-                <right>50</right>
-				<posy>10</posy>
+   				<left></left>
+				<right>50</right>
+				<top>10</top>
 				<width>670</width>
 				<height>350</height>
 				<visible>VideoPlayer.Content(livetv) + Skin.HasSetting(PVRShowPreview)</visible>
@@ -318,7 +322,7 @@
 			<!--Video Window -->
 			<control type="videowindow">
 				<right>50</right>
-				<posy>10</posy>
+				<top>10</top>
 				<width>670</width>
 				<height>350</height>
 				<visible>VideoPlayer.Content(livetv) + Skin.HasSetting(PVRShowPreview)</visible>
@@ -327,8 +331,9 @@
 			<!--vertical Scollbar-->
 			<control type="scrollbar" id="60">
 				<visible>Control.IsVisible(515) + Integer.IsGreater(Container.NumItems,0)</visible>
+				<left></left>
 				<right>15</right>
-				<posy>0</posy>
+				<top>0</top>
 				<height>365</height>
 				<onup>60</onup>
 				<ondown>6000</ondown>

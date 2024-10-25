@@ -7,7 +7,7 @@
 		<control type="group" id="9000">
             <!-- all widgets -->
             <control type="grouplist" id="77777">
-                <posx>30</posx>
+                <left>30</left>
                 <height>930</height>
                 <right>0</right>
                 <bottom>0</bottom>
@@ -51,6 +51,7 @@
             <control type="group">
                 <control type="scrollbar" id="317">
                     <left>40</left>
+					<top></top>
                     <bottom>0</bottom>
                     <width>1840</width>
                     <height>15</height>
@@ -129,16 +130,16 @@
     
     <include name="SideBladeMainMenu">
         <control type="group" id="9001">
-            <posx>-660</posx>
-			<posy>0</posy>
+            <left>-660</left>
+			<top>0</top>
 			<visible>!Window.IsActive(virtualkeyboard)</visible>
 			<animation type="Conditional" condition="[ControlGroup(9001).HasFocus() + Window.IsActive(home)] | ControlGroup(300).HasFocus() | String.IsEqual(Window(Home).Property(ShowViewSubMenu),show) | Control.HasFocus(300)">
                 <effect type="slide" start="0" end="660" time="300" delay="0" tween="cubic" easing="inout" />
             </animation>
 			<!--Panel-->
             <control type="image">
-                <posy>-5%</posy>
-                <posx>-20</posx>
+                <top>-5%</top>
+                <left>-20</left>
                 <width>425</width>
                 <height>110%</height>
                 <texture>colors/color_white.png</texture>
@@ -149,7 +150,7 @@
             <!-- menu button -->
             <control type="button" id="1">
                 <label></label>
-                <posx>40</posx>
+                <left>40</left>
                 <top>20</top>
                 <include>animation_fade_visible_hidden</include>
                 <width>60</width>
@@ -169,7 +170,7 @@
             
             <control type="button" id="2">
 				<description>powerbutton</description>
-				<posx>115</posx>
+				<left>115</left>
 				<top>25</top>
 				<width>50</width>
 				<height>50</height>
@@ -188,8 +189,8 @@
 
             <!--main menu 300-->
 			<control type="list" id="300">
-				<posx>15</posx>
-				<posy>15%</posy>
+				<left>15</left>
+				<top>15%</top>
 				<width>370</width>
 				<height>85%</height>
 				<itemgap>0</itemgap>
@@ -242,8 +243,8 @@
     <include name="SideBladeSubMenu">
 		<!-- submenu -->
 		<control type="group">
-			<posx>420</posx>
-			<posy>170</posy>
+			<left>420</left>
+			<top>170</top>
 			<animation type="Conditional" condition="Control.IsVisible(4444)">
 				<effect type="fade" start="0" end="100" time="250" delay="0" />
 			</animation>
@@ -274,8 +275,8 @@
 
 			<!--Panel-->
             <control type="image">
-				<posy>-10</posy>
-				<posx>-20</posx>
+				<top>-10</top>
+				<left>-20</left>
 				<width>360</width>
 				<height>400</height>
 				<texture border="5">diffuse/panel.png</texture>
@@ -302,7 +303,7 @@
 				<movement>3</movement>
 				<itemlayout width="320" height="65">
                     <control type="label">
-                        <posx>10</posx>
+                        <left>10</left>
                         <width>290</width>
                         <align>left</align>
                         <font>Reg26</font>
@@ -313,7 +314,7 @@
 				</itemlayout>
 				<focusedlayout width="320" height="65">
                     <control type="label">
-                        <posx>10</posx>
+                        <left>10</left>
                         <width>290</width>
                         <align>left</align>
                         <font>Reg28</font>
@@ -383,6 +384,7 @@
                     <visible>String.IsEmpty(Container($PARAM[widgetid]).ListItem.Property(fanart)) + String.IsEmpty(Container($PARAM[widgetid]).ListItem.Art(fanart))</visible>
                 </control>
                 <control type="image">
+					<top></top>
                     <bottom>0</bottom>
                     <height>185</height>
                     <bordersize>8</bordersize>
@@ -390,8 +392,9 @@
                     <texture border="5">colors/color_white.png</texture>
                 </control>
                 <control type="label">
+					<top></top>
                     <bottom>121</bottom>
-                    <posx>20</posx>
+                    <left>20</left>
                     <width>95%</width>
                     <height>45</height>
                     <align>left</align>
@@ -400,8 +403,9 @@
                     <font>Reg24</font>
                 </control>
                 <control type="textbox">
+					<top></top>
                     <bottom>12</bottom>
-                    <posx>20</posx>
+                    <left>20</left>
                     <width>95%</width>
                     <height>97</height>
                     <align>left</align>
@@ -412,8 +416,9 @@
                     <visible>!String.IsEmpty(Container($PARAM[widgetid]).ListItem.Plot)</visible>
                 </control>
                 <control type="textbox">
+					<top></top>
                     <bottom>12</bottom>
-                    <posx>20</posx>
+                    <left>20</left>
                     <width>95%</width>
                     <height>97</height>
                     <align>left</align>
@@ -485,8 +490,8 @@
                 <font>Reg26</font>
             </control>
             <control type="textbox">
-                <bottom>15</bottom>
                 <top>490</top>
+				<bottom>15</bottom>
                 <left>15</left>
                 <right>15</right>
                 <align>left</align>
@@ -497,8 +502,8 @@
                 <visible>!String.IsEmpty(Container($PARAM[widgetid]).ListItem.Plot)</visible>
             </control>
             <control type="textbox">
+				<top>490</top>
                 <bottom>15</bottom>
-                <top>490</top>
                 <left>15</left>
                 <right>15</right>
                 <align>left</align>

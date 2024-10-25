@@ -49,6 +49,8 @@
 		<!--vertical Scollbar-->
 		<control type="scrollbar" id="60">
 			<visible>Control.IsVisible(53) + Integer.IsGreater(Container.NumItems,0)</visible>
+			<left></left>
+			<top></top>
 			<right>15</right>
 			<bottom>140</bottom>
 			<height>770</height>

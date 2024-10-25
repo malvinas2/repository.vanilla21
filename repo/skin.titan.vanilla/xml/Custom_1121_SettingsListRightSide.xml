@@ -14,7 +14,7 @@
         <control type="group">
 			<animation effect="fade" end="0" time="0" reversible="false" condition="Window.IsVisible(yesnodialog) | Window.IsVisible(addonsettings)">Conditional</animation>
             <visible>!Window.IsActive(sliderdialog) + !Window.IsActive(subtitlesearch) + !Window.IsActive(script.pseudotv.TVOverlay.xml)</visible>
-			<visible>!Window.IsActive(DialogSettings.xml) + !Window.IsActive(DialogSlider.xml) + !Window.IsActive(PlayerProcessInfo) + !Window.IsActive(GameVideoFilter) + !Window.IsActive(GameStretchMode) + !Window.IsActive(GameControllers) + !Window.IsActive(GamePorts) + !Window.IsActive(GameVideoRotation) + !Window.IsActive(1110)</visible>
+			<visible>!Window.IsActive(DialogSettings.xml) + !Window.IsActive(DialogSlider.xml) + !Window.IsActive(PlayerProcessInfo) + !Window.IsActive(GameVideoFilter) + !Window.IsActive(GameStretchMode) + !Window.IsActive(GameControllers) + !Window.IsActive(GamePorts) + !Window.IsActive(GameVideoRotation) + !Window.IsActive(1109) + !Window.IsActive(1110)</visible>
 			<animation type="WindowOpen">
 				<effect type="slide" start="1200" end="0" time="250" tween="cubic" easing="inout" />
 			</animation>
@@ -23,8 +23,8 @@
 			</animation>
              <!--Panel-->
             <control type="image">
-                <posx>630</posx>
-                <posy>0</posy>
+                <left>630</left>
+                <top>0</top>
                 <width>1340</width>
                 <height>100%</height>
 				<texture border="15">diffuse/bgpanel.png</texture>
@@ -35,14 +35,14 @@
                 <include>animation_fade_visible_hidden</include>
                 <right>60</right>
                 <width>60</width>
-                <posy>40</posy>
+                <top>40</top>
                 <include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
             </control>
            <!--Header-->
             <control type="label">
                 <description>Heading</description>
-                <posx>700</posx>
-                <posy>10</posy>
+                <left>700</left>
+                <top>10</top>
                 <width>1200</width>
 				<font>Bold45</font>
 				<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
@@ -51,16 +51,16 @@
 				<label>$INFO[Window(home).Property(settingslist_Header)]</label>
             </control>
             <control type="image">
-                <posx>680</posx>
-                <posy>220</posy>
+                <left>680</left>
+                <top>220</top>
                 <width>1200</width>
                 <height>670</height>
                 <texture border="5">dialogs/default/inner.png</texture>
             </control>
 			<control type="group" id="11000">
                 <description>Control Area</description>
-                <posx>680</posx>
-                <posy>230</posy>
+                <left>680</left>
+                <top>230</top>
                 <width>1200</width>
                 <height>660</height>
                 <orientation>vertical</orientation>
@@ -196,7 +196,8 @@
 						<onright>8002</onright>
 						<label>$LOCALIZE[70053]</label>
 						<!-- <onclick>Dialog.Close(1121)</onclick> -->
-						<onclick>ActivateWindow(1110)</onclick>
+						<onclick condition="!Skin.HasSetting(UseIncreasedMaxtempo)">ActivateWindow(1110)</onclick>
+						<onclick condition="Skin.HasSetting(UseIncreasedMaxtempo)">ActivateWindow(1109)</onclick>
 						<visible>Player.TempoEnabled</visible>
 					</control>					
 					
@@ -359,8 +360,8 @@
 		    </control>	
             <!--Button Group-->
             <control type="grouplist" id="8002">
-                <posx>680</posx>
-                <posy>940</posy>
+                <left>680</left>
+                <top>940</top>
 				<orientation>horizontal</orientation>
 				<itemgap>20</itemgap>
 				<onup>11000</onup>
@@ -375,14 +376,14 @@
                     <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(28)">Conditional</animation>
                 </control>
                 <control type="button" id="29">
-                    <posx>200</posx>
+                    <left>200</left>
                     <description>Cancel</description>
                     <label>$LOCALIZE[222]</label>
 					<include>DialogButtonOther</include>
                     <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(29)">Conditional</animation>
                 </control> -->
 				<control type="button" id="30">
-                    <posx>740</posx>
+                    <left>740</left>
                     <description>Clear</description>
                     <label>$LOCALIZE[31308]</label>
 					<include>DialogButtonOther</include>

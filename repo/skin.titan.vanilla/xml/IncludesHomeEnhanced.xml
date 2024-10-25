@@ -8,7 +8,8 @@
 		
         <control type="image">
 			<!--Panel-->
-			<posx>50</posx>
+			<left>50</left>
+			<top></top>
 			<bottom>0</bottom>
 			<width>1820</width>
 			<height>930</height>
@@ -53,7 +54,7 @@
 			<!-- alt spotlight submenu+widget present-->
 			<control type="group">
                 <bottom>279</bottom>
-                <posx>427</posx>
+                <left>427</left>
                 <width>1060</width>
                 <height>605</height>
                 <visible>!String.IsEmpty(Container(300).listItem.property(widget)) + Integer.IsGreater(Container(4444).NumItems,0)</visible>
@@ -62,7 +63,7 @@
 
             <!-- busy image while widget loading -->
             <control type="multiimage">
-                <posy>490</posy>
+                <top>490</top>
                 <left>910</left>
                 <width>100</width>
                 <height>100</height>
@@ -78,7 +79,7 @@
             <!-- alt spotlight no submenu present-->
 			<control type="group">
                 <bottom>279</bottom>
-                <posx>70</posx>
+                <left>70</left>
                 <width>1415</width>
                 <height>605</height>
                 <visible>!String.IsEmpty(Container(300).listItem.Property(widget)) + !Integer.IsGreater(Container(4444).NumItems,0)</visible>
@@ -176,7 +177,7 @@
 		<!-- alternative lowlist sub menu -->
 		<control type="group">
 			<control type="list" id="4445">
-				<posx>70</posx>
+				<left>70</left>
 				<bottom>300</bottom>
 				<width>1800</width>
 				<height>60</height>
@@ -258,7 +259,7 @@
  		<!--RSS Text without touch-->			
 		<control type="rss">	
 			<description>RSS Feed</description>
-			<posx>80</posx>
+			<left>80</left>
 			<bottom>10</bottom>
 			<width>1760</width>
 			<height>50</height>
@@ -275,7 +276,7 @@
 		<!--RSS Text with touch-->			
 		<control type="rss">	
 			<description>RSS Feed</description>
-			<posx>315</posx>
+			<left>315</left>
 			<bottom>5</bottom>
 			<width>1390</width>
 			<height>50</height>
@@ -292,7 +293,8 @@
         <!--infoline-->
         <control type="label">	
             <description>InfoLine</description>
-            <posx>20%</posx>
+            <left>20%</left>
+			<top></top>
             <bottom>5</bottom>
             <width>60%</width>
             <height>60</height>
@@ -309,7 +311,8 @@
 		
         <!-- Power button -->
         <control type="group">
-            <posx>930</posx>
+            <left>930</left>
+			<top></top>
 			<bottom>5</bottom>
             <width>60</width>
             <height>60</height>
@@ -333,7 +336,7 @@
     </include>
     
     <include name="EnhancedHomeMainMenuLayout">
-        <posx>70</posx>
+        <left>70</left>
         <bottom>70</bottom>
         <width>1800</width>
         <height>195</height>
@@ -386,7 +389,7 @@
     
     <include name="EnhancedHomeSpotLightWidgetLayout">
 		<bottom>279</bottom>
-        <posx>427</posx>
+        <left>427</left>
         <width>1060</width>
         <height>605</height>
 		<onleft condition="Integer.IsGreater(Container(4444).NumItems,0)">4444</onleft>
@@ -416,8 +419,8 @@
 	<include name="EnhancedHomeSpotLightWidgetItemLayout">
         <control type="image">
             <!--Panel Normal-->
-            <posx>0</posx>
-            <posy>0</posy>
+            <left>0</left>
+            <top>0</top>
             <texture>diffuse/wide.png</texture>
             <colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
             <include condition="Skin.String(thumbsborder_unfocused, 0)">thumbborder_0</include>
@@ -461,6 +464,7 @@
 		<!--info Overlay-->
 		<control type="image">
             <!--Panel Ovelay-->
+			<top></top>
             <bottom>0</bottom>
             <height>185</height>
             <bordersize>8</bordersize>
@@ -469,8 +473,9 @@
         </control>
 		<!-- plot-->
 		<control type="textbox">
+			<top></top>
 			<bottom>15</bottom>
-			<posx>20</posx>
+			<left>20</left>
 			<width>70%</width>
 			<height>155</height>
 			<align>left</align>
@@ -481,6 +486,8 @@
 
 		<!-- clearlogo -->
 		<control type="image">
+			<left></left>
+			<top></top>
 			<right>20</right>
 			<bottom>15</bottom>
 			<width>25%</width>

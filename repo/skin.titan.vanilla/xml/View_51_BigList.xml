@@ -6,9 +6,9 @@
 
 		<!--Title-->
 		<control type="label">
-			<posx>100</posx>
+			<left>100</left>
             <width>80%</width>
-			<posy>10</posy>
+			<top>10</top>
 			<height>40</height>
 			<align>left</align>
 			<label>$INFO[ListItem.Label]</label>
@@ -17,9 +17,9 @@
 		</control>
 		<!--Details-->
 		<control type="label">
-			<posx>100</posx>
+			<left>100</left>
             <width>80%</width>
-			<posy>50</posy>
+			<top>50</top>
 			<height>60</height>
 			<align>left</align>
 			<label>$VAR[ListDetails]</label>
@@ -29,7 +29,7 @@
 		</control>
 		<control type="image">
 			<bottom>0</bottom>
-			<posy>0</posy>
+			<top>0</top>
 			<height>1</height>
 			<texture>diffuse/panel.png</texture>
 			<colordiffuse>grey</colordiffuse>
@@ -37,7 +37,7 @@
         <include>WatchedIndicatorNormal</include>
 		<control type="image">
 			<!--icon-->
-			<posy>5%</posy>
+			<top>5%</top>
 			<left>8</left>
 			<width>70</width>
 			<height>90%</height>
@@ -47,8 +47,9 @@
 		
 		<!--Rating-->
 		<control type="label">
+			<left></left>
 			<right>0</right>
-			<posy>10</posy>
+			<top>10</top>
 			<height>40</height>
 			<width>80</width>
 			<align>center</align>
@@ -60,8 +61,9 @@
 		</control>
 		<!--quality-->
 		<control type="label">
+			<left></left>
 			<right>0</right>
-			<posy>50</posy>
+			<top>50</top>
 			<height>60</height>
 			<width>80</width>
 			<align>center</align>
@@ -75,16 +77,16 @@
 
     <include name="BigListFocusLayout">
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<texture border="5">diffuse/panel.png</texture>
 			<colordiffuse>$VAR[ViewDetailsFocusColor]</colordiffuse>
 		</control>
 		<!--Title-->
 		<control type="label">
-			<posx>100</posx>
+			<left>100</left>
             <width>80%</width>
-			<posy>10</posy>
+			<top>10</top>
 			<height>40</height>
 			<align>left</align>
 			<label>$INFO[ListItem.Label]</label>
@@ -94,9 +96,9 @@
 		</control>
 		<!--Details-->
 		<control type="label">
-			<posx>100</posx>
+			<left>100</left>
             <width>80%</width>
-			<posy>50</posy>
+			<top>50</top>
 			<height>60</height>
 			<align>left</align>
 			<label>$VAR[ListDetails]</label>
@@ -106,7 +108,7 @@
 		</control>
 		<control type="image">
 			<bottom>0</bottom>
-			<posy>0</posy>
+			<top>0</top>
 			<height>1</height>
 			<texture>diffuse/panel.png</texture>
 			<colordiffuse>grey</colordiffuse>
@@ -114,7 +116,7 @@
         <include>WatchedIndicatorNormal</include>
 		<control type="image">
 			<!--icon-->
-			<posy>5%</posy>
+			<top>5%</top>
 			<left>8</left>
 			<width>70</width>
 			<height>90%</height>
@@ -124,8 +126,9 @@
 		
 		<!--Rating-->
 		<control type="label">
+			<left></left>
 			<right>0</right>
-			<posy>10</posy>
+			<top>10</top>
 			<height>40</height>
 			<width>80</width>
 			<align>center</align>
@@ -136,8 +139,9 @@
 		</control>
 		<!--quality-->
 		<control type="label">
+			<left></left>
 			<right>0</right>
-			<posy>50</posy>
+			<top>50</top>
 			<height>60</height>
 			<width>80</width>
 			<align>center</align>
@@ -153,7 +157,7 @@
 
 		<!--Title-->
 		<control type="label">
-			<posx>10</posx>
+			<left>10</left>
 			<align>left</align>
 			<width>80%</width>
 			<label>[B]$INFO[ListItem.Label][/B]</label>
@@ -163,6 +167,7 @@
 		
 		<!--runtime-->
 		<control type="label">
+			<left></left>
 			<right>0</right>
 			<width>140</width>
 			<align>right</align>
@@ -174,6 +179,7 @@
 		
 		<!--Year-->
 		<control type="label">
+			<left></left>
 			<right>160</right>
 			<width>110</width>
 			<align>center</align>
@@ -189,7 +195,7 @@
 		
 		<control type="image">
 			<bottom>0</bottom>
-			<posy>0</posy>
+			<top>0</top>
 			<height>1</height>
 			<texture>diffuse/panel.png</texture>
 			<colordiffuse>grey</colordiffuse>
@@ -199,15 +205,15 @@
 
     <include name="BigListSlimLayoutFocus">
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<texture border="5">diffuse/panel.png</texture>
 			<colordiffuse>$VAR[ViewDetailsFocusColor]</colordiffuse>
 			
 		</control>
 		<!--Title-->
 		<control type="label">
-			<posx>10</posx>
+			<left>10</left>
 			<align>left</align>
 			<width>65%</width>
 			<label>[B]$INFO[ListItem.Label][/B]</label>
@@ -217,6 +223,7 @@
 		</control>
          <!--runtime-->
 		<control type="label">
+			<left></left>
 			<right>0</right>
 			<width>140</width>
 			<align>right</align>
@@ -228,6 +235,7 @@
 		
 		<!--Year-->
 		<control type="label">
+			<left></left>
 			<right>160</right>
 			<width>110</width>
 			<align>center</align>
@@ -243,7 +251,7 @@
 		
 		<control type="image">
 			<bottom>0</bottom>
-			<posy>0</posy>
+			<top>0</top>
 			<height>1</height>
 			<texture>diffuse/panel.png</texture>
 			<colordiffuse>grey</colordiffuse>
@@ -260,6 +268,7 @@
             <!-- Background Panel-->
 			<control type="image">
 				<left>50</left>
+				<top></top>
                 <bottom>13%</bottom>
 				<width>1180</width>
                 <height>736</height>
@@ -271,6 +280,7 @@
 			</control>
             <control type="image">
 				<left>50</left>
+				<top></top>
                 <bottom>13%</bottom>
 				<width>1302</width>
                 <height>736</height>
@@ -283,6 +293,7 @@
 		
 			<control type="panel" id="51">
 				<animation effect="slide" end="635" time="0" condition="Skin.HasSetting(BigListViewShowInfo) + !Skin.HasSetting(View51_ShowInfoRight)">Conditional</animation>
+				<top></top>
 				<bottom>13%</bottom>
                 <height>724</height>	
 				<left>60</left>
@@ -380,7 +391,8 @@
 					<!--cdart image music-->
                     <width>500</width>
                     <height>500</height>
-                    <bottom>0</bottom>
+					<top></top>
+					<bottom>0</bottom>
 					<texture background="true" diffuse="diffuse/cdmask_new.png">$VAR[DiscArtImage]</texture>
 					<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
 					<animation effect="slide" start="0,0" end="0,-200" tween="cubic" easing="inout" time="1200" delay="600" condition="Skin.HasSetting(View51_ShowCDart)">Conditional</animation>
@@ -419,6 +431,8 @@
             <!--vertical Scollbar-->
 			<control type="scrollbar" id="60">
 				<visible>Control.IsVisible(51) + Integer.IsGreater(Container.NumItems,0)</visible>
+				<left></left>
+				<top></top>
 				<right>15</right>
 				<bottom>13%</bottom>
 				<height>726</height>

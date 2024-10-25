@@ -27,8 +27,8 @@
 	
 		<!-- hidden button to exit dialog in touchscreen mode -->
  		<!-- <control type="button"> -->
-			<!-- <posx>0</posx> -->
-			<!-- <posy>0</posky> -->
+			<!-- <left>0</left> -->
+			<!-- <top>0</top> -->
 			<!-- <width>100%</width> -->
 			<!-- <height>100%</height> -->
 			<!-- <align>center</align> -->

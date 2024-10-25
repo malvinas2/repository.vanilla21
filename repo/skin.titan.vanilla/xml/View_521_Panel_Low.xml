@@ -8,7 +8,7 @@
             <include>animation_view_change</include>
 			
 			<control type="panel" id="521">
-                <posx>40</posx>
+                <left>40</left>
                 <bottom>13%</bottom>
                 <height>496</height>
                 <width>1860</width>
@@ -51,6 +51,8 @@
 			<!--vertical Scollbar-->
 			<control type="scrollbar" id="60">
 				<visible>Control.IsVisible(521) + Integer.IsGreater(Container.NumItems,0)</visible>
+				<left></left>
+				<top></top>
 				<right>15</right>
 				<bottom>13%</bottom>
 				<height>496</height>

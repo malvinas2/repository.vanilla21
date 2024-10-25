@@ -12,7 +12,7 @@
         <!--autocompletion -->
         <control type="panel" id="8000">
 		<!-- <control type="panel" id="8000">  List oder Panel als Typ ? -->
-			<posx>60</posx>
+			<left>60</left>
 			<bottom>540</bottom>
 			<width>1790</width>
 			<height>60</height>
@@ -102,8 +102,8 @@
 			<animation effect="slide" start="0,0" end="0,800" tween="cubic" easing="out" delay="0" time="250" reversible="false">WindowClose</animation>
 			<animation effect="slide" end="0,-97" time="0" condition="Skin.HasSetting(EnableTouchSupport)">Conditional</animation>
             <control type="image">
-                <posx>0</posx>
-                <posy>0</posy>
+                <left>0</left>
+                <top>0</top>
                 <width>100%</width>
                 <height>100%</height>
                 <texture border="5">diffuse/panel.png</texture>
@@ -111,8 +111,8 @@
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
-                <posx>0</posx>
-                <posy>10</posy>
+                <left>0</left>
+                <top>10</top>
                 <width>100%</width>
                 <height>100%</height>
                 <texture border="5">diffuse/panel.png</texture>

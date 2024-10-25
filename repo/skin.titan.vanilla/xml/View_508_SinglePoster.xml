@@ -12,7 +12,7 @@
 			<bottom>13%</bottom>
 			<control type="image">
                 <visible>!String.IsEmpty(ListItem.Label)</visible>
-                <posx>50</posx>
+                <left>50</left>
                 <width>1820</width>
                 <texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
@@ -23,8 +23,8 @@
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
                 <visible>Integer.IsGreater(Container.NumItems,0)</visible>
-				<posx>60</posx>
-				<posy>10</posy>
+				<left>60</left>
+				<top>10</top>
 				<control type="label">
 					<height>33</height>
 					<width>1100</width>
@@ -42,8 +42,8 @@
 				</control>
 			   
 				<control type="textbox">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>1520</width>
 					<height>130</height>
 					<label>$VAR[Plots]</label>
@@ -54,8 +54,8 @@
 					<visible>!Skin.HasSetting(View508_ShowCDart)</visible>
 				</control>
 				<control type="textbox">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>1420</width>
 					<height>130</height>
 					<label>$VAR[Plots]</label>
@@ -69,7 +69,9 @@
             
             <!--cdart image-->
             <control type="image">
-                <right>60</right>
+                <left></left>
+				<top></top>
+				<right>60</right>
                 <bottom>65</bottom>
                 <width>250</width>
                 <height>250</height>

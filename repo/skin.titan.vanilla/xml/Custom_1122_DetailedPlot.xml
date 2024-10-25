@@ -46,8 +46,8 @@
 				 <control type="group">
 					 <!--logo-->
 					 <control type="image">
-						 <posx>1520</posx>
-						 <posy>20</posy>
+						 <left>1520</left>
+						 <top>20</top>
 						 <width>356</width>
 						 <height>200</height>
 						 <fadetime>200</fadetime>
@@ -58,8 +58,8 @@
 					 </control>
 					 <!-- plot when clearlogo visible -->
 					 <control type="textbox">
-						 <posx>38</posx>
-						 <posy>30</posy>
+						 <left>38</left>
+						 <top>30</top>
 						 <width>1450</width>
 						 <height>560</height>
 						 <visible>[!String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(clearart)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearart)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearArt)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearLogo)) | !String.IsEmpty(VideoPlayer.Cover) | !String.IsEmpty(Player.Art(thumb))]</visible>
@@ -71,8 +71,8 @@
 					 </control>
 					 <!-- plot when clearlogo NOT visible -->
 					 <control type="textbox">
-						 <posx>38</posx>
-						 <posy>30</posy>
+						 <left>38</left>
+						 <top>30</top>
 						 <width>1810</width>
 						 <height>560</height>
 						 <visible>![!String.IsEmpty(Player.Art(clearart)) | !String.IsEmpty(Player.Art(tvshow.clearart)) | !String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearArt)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearLogo)) | !String.IsEmpty(VideoPlayer.Cover) | !String.IsEmpty(Player.Art(thumb))]</visible>
@@ -84,8 +84,8 @@
 					 </control>
 					<!-- media flags -->
 					<control type="group">
-						 <posx>38</posx>
-						 <posy>600</posy>
+						 <left>38</left>
+						 <top>600</top>
 						<include>mediaflags_text</include>
 						<visible>Skin.HasSetting(EnableOSDInfoMediaFlags)</visible>
 					</control>

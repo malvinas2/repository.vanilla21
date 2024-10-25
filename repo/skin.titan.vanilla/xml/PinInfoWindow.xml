@@ -1,8 +1,8 @@
 <window>
 	<coordinates>
 		<system>1</system>
-        <posx>585</posx>
-        <posy>140</posy>
+        <left>585</left>
+        <top>140</top>
 	</coordinates>
 	<controls>
 	<include>animation_window_open_close</include>
@@ -29,8 +29,8 @@
 			<control type="group">
 				<control type="image" id="2">
 					<description>background image</description>
-					<posx>-20</posx>
-					<posy>-20</posy>
+					<left>-20</left>
+					<top>-20</top>
 					<width>790</width>
 					<height>780</height>
 					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
@@ -38,8 +38,8 @@
 				</control>
 				<control type="image">
 					<description>background image</description>
-					<posx>-10</posx>
-					<posy>-10</posy>
+					<left>-10</left>
+					<top>-10</top>
 					<width>770</width>
 					<height>760</height>
 					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
@@ -47,8 +47,8 @@
 				</control>
 				<control type="label">
 					<label>$ADDON[script.trakt 32148]</label>
-					<posx>10</posx>
-					<posy>20</posy>
+					<left>10</left>
+					<top>20</top>
 					<width>740</width>
 					<height>60</height>
 					<font>font13</font>
@@ -58,8 +58,8 @@
 					<wrapmultiline>true</wrapmultiline>
 				</control>
 				<control type="image">
-					<posx>20</posx>
-					<posy>100</posy>
+					<left>20</left>
+					<top>100</top>
 					<width>710</width>
 					<height>625</height>
 					<texture border="5">dialogs/trakt/qrcode.png</texture>
@@ -67,8 +67,8 @@
 				<control type="button">
 						<label></label>
 						<description>Close Window button</description>
-						<posx>664</posx>
-						<posy>-59</posy>
+						<left>664</left>
+						<top>-59</top>
 						<width>96</width>
 						<height>48</height>
 						<onclick>PreviousMenu</onclick>

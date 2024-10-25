@@ -11,8 +11,8 @@
             <include>animation_window_open_close</include>
 			<control type="image">
                 <!--Panel-->
-                <posx>445</posx>
-                <posy>150</posy>
+                <left>445</left>
+                <top>150</top>
                 <width>1030</width>
                 <height>771</height>
                 <texture border="15">diffuse/bgpanel.png</texture>
@@ -20,8 +20,8 @@
             </control>
 			<control type="image">
                 <!--Panel-->
-                <posx>445</posx>
-                <posy>150</posy>
+                <left>445</left>
+                <top>150</top>
                 <width>1030</width>
                 <height>771</height>
 				<texture border="15">diffuse/bgpanel.png</texture>
@@ -30,24 +30,24 @@
             </control>
 			<control type="label" id="1">
                 <description>Heading</description>
-                <posx>473</posx>
-                <posy>170</posy>
+                <left>473</left>
+                <top>170</top>
                 <width>974</width>
                 <label></label>
                 <include>DialogHeader</include>
                 <align>center</align>
             </control>
             <control type="image">
-                <posx>479</posx>
-                <posy>265</posy>
+                <left>479</left>
+                <top>265</top>
                 <width>962</width>
                 <height>548</height>
                 <texture border="5">dialogs/default/inner.png</texture>
             </control>
             <control type="textbox" id="5">
                 <description>textarea</description>
-                <posx>495</posx>
-                <posy>275</posy>
+                <left>495</left>
+                <top>275</top>
                 <width>930</width>
                 <height>530</height>
                 <label></label>
@@ -57,8 +57,8 @@
 				<monofont>Mono26</monofont>
             </control>
             <control type="scrollbar" id="61">
-                <posx>1426</posx>
-                <posy>268</posy>
+                <left>1426</left>
+                <top>268</top>
                 <height>541</height>
                 <onleft>8000</onleft>
                 <onright>8000</onright>
@@ -67,10 +67,10 @@
                 <animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(62)">Conditional</animation>
             </control>
             <control type="group" id="8000">
-                <posx>466</posx>
-                <posy>809</posy>
+                <left>466</left>
+                <top>809</top>
                 <control type="button" id="7">
-                    <posx>0</posx>
+                    <left>0</left>
                     <description>Close</description>
                     <label>$LOCALIZE[222]</label>
                     <include>DialogButtonOther</include>

@@ -12,8 +12,8 @@
             <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup)</visible>
 			<control type="image">
                 <!--Panel-->
-                 <posx>445</posx>
-                <posy>280</posy>
+                 <left>445</left>
+                <top>280</top>
                 <width>1030</width>
                 <height>531</height>
                 <texture border="15">diffuse/bgpanel.png</texture>
@@ -21,8 +21,8 @@
             </control>
 			<control type="image">
                 <!--Panel-->
-                <posx>445</posx>
-                <posy>280</posy>
+                <left>445</left>
+                <top>280</top>
                 <width>1030</width>
                 <height>531</height>
 				<texture border="15">diffuse/bgpanel.png</texture>
@@ -30,22 +30,22 @@
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
             </control>
             <control type="image">
-                <posx>479</posx>
-                <posy>413</posy>
+                <left>479</left>
+                <top>413</top>
                 <width>690</width>
                 <height>181</height>
                 <texture border="5">dialogs/default/inner.png</texture>
             </control>
             <control type="image">
-                <posx>1183</posx>
-                <posy>413</posy>
+                <left>1183</left>
+                <top>413</top>
                 <width>258</width>
                 <height>181</height>
                 <texture border="5">dialogs/default/inner.png</texture>
             </control>
             <control type="image">
-                <posx>479</posx>
-                <posy>647</posy>
+                <left>479</left>
+                <top>647</top>
                 <width>962</width>
                 <height>61</height>
                 <texture border="5">dialogs/default/inner.png</texture>
@@ -53,8 +53,8 @@
 			<!--Header-->
             <control type="label" id="2">
                 <description>Heading</description>
-                <posx>473</posx>
-                <posy>297</posy>
+                <left>473</left>
+                <top>297</top>
                 <width>974</width>
                 <label>$LOCALIZE[20333]</label>
                 <align>center</align>
@@ -64,8 +64,8 @@
             <control type="group" id="9002">
                 <control type="label">
                     <description>Path label</description>
-                    <posx>479</posx>
-                    <posy>375</posy>
+                    <left>479</left>
+                    <top>375</top>
                     <width>922</width>
                     <height>30</height>
                     <align>left</align>
@@ -74,8 +74,8 @@
                     <include>DialogLabel</include>
                 </control>
                 <control type="list" id="10">
-                    <posx>479</posx>
-                    <posy>413</posy>
+                    <left>479</left>
+                    <top>413</top>
                     <width>690</width>
                     <height>180</height>
                     <onup>9001</onup>
@@ -86,14 +86,14 @@
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
                     <itemlayout height="60">
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>1</posy>
+                            <left>0</left>
+                            <top>1</top>
                             <width>690</width>
                             <height>60</height>
                             <texture>dialogs/default/separator.png</texture>
                         </control>
                         <control type="label">
-                            <posx>20</posx>
+                            <left>20</left>
                             <width>596</width>
                             <height>60</height>
                             <info>ListItem.Label</info>
@@ -101,7 +101,7 @@
                             <scroll>false</scroll>
                         </control>
                         <control type="image">
-                            <posx>616</posx>
+                            <left>616</left>
                             <width>74</width>
                             <height>60</height>
                             <texture>dialogs/mediasource/rules-nf.png</texture>
@@ -112,14 +112,14 @@
                         <control type="group">
                             <visible>!Control.HasFocus(10)</visible>
                             <control type="image">
-                                <posx>0</posx>
-                                <posy>1</posy>
+                                <left>0</left>
+                                <top>1</top>
                                 <width>690</width>
                                 <height>60</height>
                                 <texture>dialogs/default/separator.png</texture>
                             </control>
                             <control type="label">
-                                <posx>20</posx>
+                                <left>20</left>
                                 <width>596</width>
                                 <height>60</height>
                                 <info>ListItem.Label</info>
@@ -127,7 +127,7 @@
                                 <scroll>false</scroll>
                             </control>
                             <control type="image">
-                                <posx>616</posx>
+                                <left>616</left>
                                 <width>74</width>
                                 <height>60</height>
                                 <texture>dialogs/mediasource/rules-nf.png</texture>
@@ -144,7 +144,7 @@
                                 <colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
                             </control>
                             <control type="label">
-                                <posx>20</posx>
+                                <left>20</left>
                                 <width>596</width>
                                 <height>60</height>
                                 <info>ListItem.Label</info>
@@ -152,7 +152,7 @@
                                 <scroll>false</scroll>
                             </control>
                             <control type="image">
-                                <posx>616</posx>
+                                <left>616</left>
                                 <width>74</width>
                                 <height>60</height>
                                 <texture>dialogs/mediasource/rules-nf.png</texture>
@@ -161,8 +161,8 @@
                             </control>
                         </control>
                         <control type="image">
-                            <posx>633</posx>
-							<posy>10</posy>
+                            <left>633</left>
+							<top>10</top>
                             <width>40</width>
                             <height>40</height>
                             <texture>common/checkbox.png</texture>
@@ -182,8 +182,8 @@
                     <visible>!Control.HasFocus(60) + [Container(10).Scrolling | Container(10).OnScrollNext | Container(10).OnScrollPrevious]</visible>
                 </control>
                 <control type="scrollbar" id="60">
-                    <posx>1155</posx>
-                    <posy>416</posy>
+                    <left>1155</left>
+                    <top>416</top>
                     <height>174</height>
                     <onleft>10</onleft>
                     <onright>9004</onright>
@@ -192,10 +192,10 @@
                     <animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(61)">Conditional</animation>
                 </control>
                 <control type="group" id="9004">
-                    <posx>1183</posx>
+                    <left>1183</left>
                     <control type="radiobutton" id="11">
                         <description>Browse</description>
-                        <posy>413</posy>
+                        <top>413</top>
                         <label>$LOCALIZE[1024]</label>
                         <include>DialogButtonBrowse</include>
                         <onup>18</onup>
@@ -207,7 +207,7 @@
                     </control>
                     <control type="radiobutton" id="13">
                         <description>Add</description>
-                        <posy>473</posy>
+                        <top>473</top>
                         <label>$LOCALIZE[15019]</label>
                         <include>DialogButtonBrowseAdd</include>
                         <onup>11</onup>
@@ -219,7 +219,7 @@
                     </control>
                     <control type="radiobutton" id="14">
                         <description>remove</description>
-                        <posy>533</posy>
+                        <top>533</top>
                         <label>$LOCALIZE[1210]</label>
                         <include>DialogButtonBrowseRemove</include>
                         <onup>13</onup>
@@ -234,8 +234,8 @@
             <control type="group" id="9003">
                 <control type="label">
                     <description>Name label</description>
-                    <posx>479</posx>
-                    <posy>609</posy>
+                    <left>479</left>
+                    <top>609</top>
                     <width>922</width>
                     <height>30</height>
                     <align>left</align>
@@ -244,8 +244,8 @@
                 </control>
 				<control type="edit" id="12">
                     <description>Name Button</description>
-                    <posx>479</posx>
-                    <posy>647</posy>
+                    <left>479</left>
+                    <top>647</top>
                     <width>960</width>
                     <height>60</height>
                     <align>left</align>
@@ -258,8 +258,8 @@
                     <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(12)" reversible="false">Conditional</animation>
                 </control>
                 <control type="image">
-                    <posx>1367</posx>
-                    <posy>647</posy>
+                    <left>1367</left>
+                    <top>647</top>
                     <width>74</width>
                     <height>60</height>
                     <texture>dialogs/mediasource/keyboard-nf.png</texture>
@@ -267,8 +267,8 @@
                     <visible>!Control.HasFocus(12)</visible>
                 </control>
                 <control type="image">
-                    <posx>1367</posx>
-                    <posy>647</posy>
+                    <left>1367</left>
+                    <top>647</top>
                     <width>74</width>
                     <height>60</height>
                     <texture>dialogs/mediasource/keyboard-nf.png</texture>
@@ -278,8 +278,8 @@
             </control>
             <!--Buttons-->
             <control type="group" id="9001">
-                <posx>470</posx>
-                <posy>720</posy>
+                <left>470</left>
+                <top>720</top>
 				<width>980</width>
                 <control type="button" id="18">
                     <description>OK</description>
@@ -292,6 +292,7 @@
                     <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(18)">Conditional</animation>
                 </control>
                 <control type="button" id="19">
+	                <left></left>
                     <right>0</right>
                     <description>Close</description>
                     <label>$LOCALIZE[222]</label>

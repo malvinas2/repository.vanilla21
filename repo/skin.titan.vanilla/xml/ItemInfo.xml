@@ -21,8 +21,8 @@
 
         <control type="label" id="3000">
             <include>animation_fade_visible_hidden</include>
-            <posx>61</posx>
-            <posy>10</posy>
+            <left>61</left>
+            <top>10</top>
             <width min="80" max="1400">auto</width>
             <height>100</height>
             <font>Bold45</font>
@@ -32,8 +32,8 @@
 			<shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
         </control>
 		 <control type="label" id="3003">
-			<posy>85</posy>
-			<posx>61</posx>
+			<top>85</top>
+			<left>61</left>
 			<label></label>
 			<width min="0" max="1100">auto</width>
 			<height>50</height>
@@ -49,6 +49,7 @@
 		</control>
 		<!-- clearart when no discart -->
 		<control type="image" id="3092">
+			<left></left>
 			<right>60</right>
 			<top>20</top>
 			<width>650</width>
@@ -62,8 +63,8 @@
 			
 			<!-- Background Panel-->
 			<control type="image">
-				<posx>0</posx>
-				<posy>210</posy>
+				<left>0</left>
+				<top>210</top>
 				<width>100%</width>
 				<height>680</height>
 				<texture border="5">diffuse/panel.png</texture>
@@ -73,8 +74,8 @@
 			<control type="group">
 				<!--Start Dialog-->
 				<control type="image">
-					<posx>0</posx>
-					<posy>982</posy>
+					<left>0</left>
+					<top>982</top>
 					<width>100%</width>
 					<height>110</height>
 					<texture border="5">diffuse/panel.png</texture>
@@ -91,8 +92,8 @@
 					</animation>
 					<!--Butons 9000-->			
 					<control type="grouplist" id="9000">
-						<posx>60</posx>
-						<posy>1005</posy>
+						<left>60</left>
+						<top>1005</top>
 						<width>1600</width>
 						<height>450</height>
 						<itemgap>20</itemgap>
@@ -182,8 +183,9 @@
 					
 					<control type="image" id="3091">
 						<!--cdart image-->
+						<left></left>
 						<right>60</right>
-						<posy>246</posy>
+						<top>246</top>
 						<width>500</width>
 						<height>620</height>
 						<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
@@ -194,30 +196,34 @@
 					</control>
 					<!-- episode image season poster -->
 					<control type="image" id="3009">
+						<left></left>
 						<right>60</right>
-						<posy>246</posy>
+						<top>246</top>
 						<width>500</width>
 						<height>620</height>
 						<aspectratio align="right" aligny="center">keep</aspectratio>
 					</control>
 					<control type="image" id="3010">
+						<left></left>
 						<right>60</right>
-						<posy>246</posy>
+						<top>246</top>
 						<width>500</width>
 						<height>620</height>
 						<aspectratio align="right" aligny="center">keep</aspectratio>
 					</control>
 					<control type="image" id="3011">
 						<!--poster-->
+						<left></left>
 						<right>60</right>
-						<posy>246</posy>
+						<top>246</top>
 						<width>500</width>
 						<height>620</height>
 						<aspectratio align="right" aligny="center">keep</aspectratio>
 					</control>
 					<control type="image" id="3012">
+						<left></left>
 						<right>60</right>
-						<posy>246</posy>
+						<top>246</top>
 						<width>500</width>
 						<height>620</height>
 						<aspectratio align="right" aligny="center">keep</aspectratio>
@@ -240,7 +246,7 @@
 						<!-- Cast Label -->
 						<control type="label">
 							<left>0</left>
-							<posy>1005</posy>
+							<top>1005</top>
 							<height>60</height>
 							<width>300</width>
 							<label>$LOCALIZE[206]</label>
@@ -253,7 +259,7 @@
 						<control type="image">
 							<animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
 							<left>320</left>
-							<posy>1005</posy>
+							<top>1005</top>
 							<width>20</width>
 							<height>60</height>
 							<aspectratio>keep</aspectratio>
@@ -265,8 +271,9 @@
 					
 					<!-- close dialog button -->
 					<control type="button">
+						 <left></left>
 						<right>60</right>
-						<posy>1015</posy>
+						<top>1015</top>
 						<width>50</width>
 						<height>50</height>
 						<texturefocus colordiffuse="white">touchcontrols/icon_close.png</texturefocus>
@@ -297,15 +304,15 @@
 						<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
 						<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
 						<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
-						<posx>60</posx>
-						<posy>240</posy>
+						<left>60</left>
+						<top>240</top>
 						<width>1200</width>
 						<height>720</height>
 						<orientation>vertical</orientation>
 						
 						<control type="textbox" id="3223">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>1150</width>
 							<height>235</height>
 							<label>$INFO[ListItem.Plot]</label>
@@ -317,13 +324,13 @@
 						<control type="image">
 							<width>1150</width>
 							<height>2</height>
-							<posy>10</posy>
+							<top>10</top>
 							<texture>colors/color_white.png</texture>
 						</control>
 						<control type="image">
 							<width>1150</width>
 							<height>15</height>
-							<posy>10</posy>
+							<top>10</top>
 							<texture>colors/color_transparent.png</texture>
 						</control>
 						<control type="group">
@@ -332,7 +339,7 @@
 							<height>40</height>
 							<visible>!String.IsEmpty(Container(3226).ListItem(0).Label)</visible>
 							<control type="label">
-								<posy>0</posy>
+								<top>0</top>
 								<width>1150</width>
 								<font>Reg28</font>
 								<align>left</align>
@@ -342,8 +349,8 @@
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
-								<posx>760</posx>
-								<posy>0</posy>
+								<left>760</left>
+								<top>0</top>
 								<width>400</width>
 								<font>Reg28</font>
 								<align>left</align>
@@ -359,7 +366,7 @@
 							<height>40</height>
 							<visible>!String.IsEmpty(Container(3226).ListItem(2).Label)</visible>
 							<control type="label">
-								<posy>0</posy>
+								<top>0</top>
 								<width>1150</width>
 								<font>Reg28</font>
 								<align>left</align>
@@ -369,8 +376,8 @@
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
-								<posx>760</posx>
-								<posy>0</posy>
+								<left>760</left>
+								<top>0</top>
 								<width>400</width>
 								<font>Reg28</font>
 								<align>left</align>
@@ -386,7 +393,7 @@
 							<height>40</height>
 							<visible>!String.IsEmpty(Container(3226).ListItem(4).Label)</visible>
 							<control type="label">
-								<posy>0</posy>
+								<top>0</top>
 								<width>1150</width>
 								<font>Reg28</font>
 								<align>left</align>
@@ -396,8 +403,8 @@
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
-								<posx>760</posx>
-								<posy>0</posy>
+								<left>760</left>
+								<top>0</top>
 								<width>400</width>
 								<font>Reg28</font>
 								<align>left</align>
@@ -413,7 +420,7 @@
 							<height>40</height>
 							<visible>!String.IsEmpty(Container(3226).ListItem(5).Label)</visible>
 							<control type="label">
-								<posy>0</posy>
+								<top>0</top>
 								<width>1150</width>
 								<font>Reg28</font>
 								<align>left</align>
@@ -428,7 +435,7 @@
 							<!--video details-->
 							<width>1150</width>
 							<height>45</height>
-							<posy>-5</posy>
+							<top>-5</top>
 							<orientation>horizontal</orientation>
 							<visible>String.Contains(Container(3220).ListItem(0).Label,video)</visible>
 							<control type="label">
@@ -455,7 +462,7 @@
 							<!--audio details-->
 							<width>1150</width>
 							<height>45</height>
-							<posy>-5</posy>
+							<top>-5</top>
 							<orientation>horizontal</orientation>
 							<visible>String.Contains(Container(3220).ListItem(1).Label,audio)</visible>
 							<control type="label">
@@ -527,7 +534,7 @@
 							<!--sub details-->
 							<width>1150</width>
 							<height>45</height>
-							<posy>-5</posy>
+							<top>-5</top>
 							<orientation>horizontal</orientation>
 							<visible>String.Contains(Container(3220).ListItem(2).Label,sub) | String.Contains(Container(3220).ListItem(3).Label,sub) | String.Contains(Container(3220).ListItem(4).Label,sub) | String.Contains(Container(3220).ListItem(5).Label,sub) | String.Contains(Container(3220).ListItem(6).Label,sub)</visible>
 							<control type="label">
@@ -614,8 +621,8 @@
 					</control>
 					<control type="list" id="3230">
 						<!--List 3230 Cast-->
-						<posx>63</posx>
-						<posy>220</posy>
+						<left>63</left>
+						<top>220</top>
 						<width>1684</width>
 						<height>660</height>
 						<onup></onup>
@@ -627,8 +634,8 @@
 						<viewtype label="actor list">list</viewtype>
 						<itemlayout height="60">
 							<control type="label">
-								<posx>0</posx>
-								<posy>0</posy>
+								<left>0</left>
+								<top>0</top>
 								<width>950</width>
 								<height>50</height>
 								<label>[B]$INFO[ListItem.label][/B] $INFO[ListItem.label2]</label>
@@ -642,8 +649,8 @@
 						</itemlayout>
 						<focusedlayout height="60">
 							<control type="label">
-								<posx>0</posx>
-								<posy>0</posy>
+								<left>0</left>
+								<top>0</top>
 								<width>950</width>
 								<height>50</height>
 								<label>[B]$INFO[ListItem.label][/B] $INFO[ListItem.label2]</label>
@@ -657,8 +664,9 @@
 					<control type="image">
 						<!--Actor Image-->
 						<description>Actor image</description>
+						<left></left>
 						<right>60</right>
-						<posy>210</posy>
+						<top>210</top>
 						<width>450</width>
 						<height>680</height>
 						<aspectratio align="right" aligny="center">keep</aspectratio>

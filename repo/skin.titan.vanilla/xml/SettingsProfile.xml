@@ -23,14 +23,14 @@
 			
 			<!--Panel-->
 			<control type="image">
-				<posx>50</posx>
+				<left>50</left>
 				<width>1820</width>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
 			</control>
 			
 			<control type="image">
-				<posx>50</posx>
+				<left>50</left>
 				<width>560</width>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
@@ -38,27 +38,29 @@
 
             <control type="image">
                 <description>List separator</description>
-                <posx>660</posx>
-                <posy>41</posy>
+                <left>660</left>
+                <top>41</top>
                 <width>1100</width>
                 <height>77</height>
                 <texture border="90,3,90,3">common/profil/separator.png</texture>
             </control>
 			
             <control type="radiobutton" id="4">
-                <posx>80</posx>
-                <posy>41</posy>
+                <left>80</left>
+                <top>41</top>
                 <width>520</width>
                 <label>$LOCALIZE[20096]</label>
-                <onup>2</onup>
+                <font>Reg28</font>
+				<onup>5</onup>
 				<onright>2</onright>
 				<align>left</align>
                 <ondown>444</ondown>
             </control>
 			<control type="radiobutton" id="444">
-                <posx>80</posx>
-                <posy>105</posy>
+                <left>80</left>
+                <top>105</top>
                 <width>520</width>
+				<font>Reg28</font>
                 <label>$LOCALIZE[31147]</label>
                 <onup>4</onup>
                 <ondown>31692</ondown>
@@ -70,9 +72,10 @@
 				<visible>System.HasLoginScreen </visible>
             </control>
             <control type="radiobutton" id="31692">
-                <posx>80</posx>
-                <posy>170</posy>
+                <left>80</left>
+                <top>170</top>
                 <width>520</width>
+				<font>Reg28</font>
                 <label>$LOCALIZE[31692]</label>
                 <onup>444</onup>
                 <ondown>31693</ondown>
@@ -83,22 +86,37 @@
 				<visible>System.HasLoginScreen </visible>
             </control>
             <control type="radiobutton" id="31693">
-                <posx>80</posx>
-                <posy>235</posy>
+                <left>80</left>
+                <top>235</top>
                 <width>520</width>
+				<font>Reg28</font>
                 <label>$LOCALIZE[31693]</label>
                 <onup>31692</onup>
-                <ondown>4</ondown>
+                <ondown>5</ondown>
 				<onright>2</onright>
 				<align>left</align>
 				<onclick>Skin.ToggleSetting(LoginScreen_DisableContextMenu)</onclick>
 				<selected>Skin.HasSetting(LoginScreen_DisableContextMenu)</selected>
 				<visible>System.HasLoginScreen </visible>
             </control>
+			<control type="button" id="5">
+			    <left>80</left>
+                <top>300</top>
+				<font>Reg28</font>
+                <width>520</width>
+				<label>$LOCALIZE[70058]</label>
+				<label2>[B]$INFO[System.ProfileAutoLogin][/B]</label2>
+				<enable>!Window.IsVisible(ProfileSettings) + !System.HasLoginScreen</enable>
+				<onup>31693</onup>
+				<onright>2</onright>
+				<align>left</align>
+                <ondown>4</ondown>
+			</control>
+			
             <control type="list" id="2">
                 <description>Control Area</description>
-                <posx>660</posx>
-                <posy>41</posy>
+                <left>660</left>
+                <top>41</top>
                 <width>1100</width>
                 <height>80%</height>
                 <onleft></onleft>
@@ -111,42 +129,46 @@
                 <itemlayout height="76">
                     <control type="image">
                         <description>List separator</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <left>0</left>
+                        <top>0</top>
                         <width>1210</width>
                         <height>77</height>
                         <texture border="90,3,90,3">common/profil/separator.png</texture>
                     </control>
                     <control type="image">
-                        <posx>35</posx>
-                        <posy>10</posy>
+                        <left>35</left>
+                        <top>10</top>
                         <width>56</width>
                         <height>56</height>
                         <texture background="true" fallback="common/profil/avatar.png">$INFO[ListItem.Icon]</texture>
                         <visible>!String.IsEmpty(ListItem.Icon)</visible>
                     </control>
                     <control type="label">
-                        <posx>35</posx>
-                        <posy>0</posy>
+                        <left>35</left>
+                        <top>0</top>
                         <width>700</width>
                         <height>74</height>
                         <align>left</align>
                         <aligny>center</aligny>
+						<font>Reg28</font>
+						<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
                         <info>ListItem.Label</info>
-                        <textcolor>96FFFFFF</textcolor>
-                        <font>Light28</font>
+                        <!-- <textcolor>96FFFFFF</textcolor> -->
+                        <!-- <font>Light28</font> -->
                         <animation effect="slide" start="0" end="80" time="0" condition="!String.IsEmpty(ListItem.Icon)">Conditional</animation>
                     </control>
                     <control type="label">
-                        <posx>1175</posx>
-                        <posy>0</posy>
+                        <left>1175</left>
+                        <top>0</top>
                         <width>300</width>
                         <height>74</height>
                         <align>right</align>
                         <aligny>center</aligny>
                         <info>ListItem.Label2</info>
-                        <textcolor>96FFFFFF</textcolor>
-                        <font>Light28</font>
+						<font>Reg28</font>
+						<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                        <!-- <textcolor>96FFFFFF</textcolor> -->
+                        <!-- <font>Light28</font> -->
                     </control>
                 </itemlayout>
                 <focusedlayout height="76">
@@ -158,77 +180,83 @@
                             <texture diffuse="diffuse/panel.png" border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">colors/color_white.png</texture>
                         </control>
                         <control type="image">
-                            <posx>35</posx>
-                            <posy>10</posy>
+                            <left>35</left>
+                            <top>10</top>
                             <width>56</width>
                             <height>56</height>
                             <texture background="true">$INFO[ListItem.Icon]</texture>
                             <visible>!String.IsEmpty(ListItem.Icon)</visible>
                         </control>
                         <control type="label">
-                            <posx>35</posx>
-                            <posy>0</posy>
+                            <left>35</left>
+                            <top>0</top>
                             <width>700</width>
                             <height>74</height>
                             <align>left</align>
                             <aligny>center</aligny>
                             <info>ListItem.Label</info>
-                            <textcolor>black</textcolor>
-                            <font>Light28</font>
+                            <font>Reg28</font>
+							<textcolor>$INFO[Skin.String(ButtonFocusTextColor)]</textcolor>
+							<!-- <textcolor>black</textcolor> -->
+                            <!-- <font>Light28</font> -->
                             <animation effect="slide" start="0" end="80" time="0" condition="!String.IsEmpty(ListItem.Icon)">Conditional</animation>
                         </control>
                         <control type="label">
-                            <posx>1175</posx>
-                            <posy>0</posy>
+                            <left>1175</left>
+                            <top>0</top>
                             <width>300</width>
                             <height>74</height>
                             <align>right</align>
                             <aligny>center</aligny>
                             <info>ListItem.Label2</info>
-                            <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-                            <font>Light28</font>
+							<font>Reg28</font>
+							<textcolor>$INFO[Skin.String(ButtonFocusTextColor)]</textcolor>
+                            <!-- <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor> -->
+                            <!-- <font>Light28</font> -->
                         </control>
                     </control>
                     <control type="group">
                         <visible>!Control.HasFocus(2)</visible>
                         <control type="image">
                             <description>List separator</description>
-                            <posx>0</posx>
-                            <posy>0</posy>
+                            <left>0</left>
+                            <top>0</top>
                             <width>1210</width>
                             <height>77</height>
                             <texture border="90,3,90,3">common/profil/separator.png</texture>
                         </control>
                         <control type="image">
-                            <posx>35</posx>
-                            <posy>10</posy>
+                            <left>35</left>
+                            <top>10</top>
                             <width>56</width>
                             <height>56</height>
                             <texture background="true" fallback="common/profil/avatar.png">$INFO[ListItem.Icon]</texture>
                             <visible>!String.IsEmpty(ListItem.Icon)</visible>
                         </control>
                         <control type="label">
-                            <posx>35</posx>
-                            <posy>0</posy>
+                            <left>35</left>
+                            <top>0</top>
                             <width>700</width>
                             <height>74</height>
                             <align>left</align>
                             <aligny>center</aligny>
                             <info>ListItem.Label</info>
                             <textcolor>96FFFFFF</textcolor>
-                            <font>Light28</font>
+							<font>Reg28</font>
+                            <!-- <font>Light28</font> -->
                             <animation effect="slide" start="0" end="80" time="0" condition="!String.IsEmpty(ListItem.Icon)">Conditional</animation>
                         </control>
                         <control type="label">
-                            <posx>1175</posx>
-                            <posy>0</posy>
+                            <left>1175</left>
+                            <top>0</top>
                             <width>300</width>
                             <height>74</height>
                             <align>right</align>
                             <aligny>center</aligny>
                             <info>ListItem.Label2</info>
                             <textcolor>96FFFFFF</textcolor>
-                            <font>Light28</font>
+							<font>Reg28</font>
+                            <!-- <font>Light28</font> -->
                         </control>
                     </control>
                 </focusedlayout>

@@ -11,8 +11,8 @@
 			<include>GlobalBackground</include>
 			
 			<control type="label">
-				<posx>61</posx>
-				<posy>10</posy>
+				<left>61</left>
+				<top>10</top>
 				<width min="80" max="1400">auto</width>
 				<height>100</height>
 				<font>Bold45</font>
@@ -23,8 +23,8 @@
 				<visible>!String.IsEmpty(Window.Property(Filter_Label))</visible>
 			</control>
 			<control type="label">
-				<posx>61</posx>
-				<posy>10</posy>
+				<left>61</left>
+				<top>10</top>
 				<width min="80" max="1400">auto</width>
 				<height>100</height>
 				<font>Bold45</font>
@@ -35,8 +35,8 @@
 				<visible>String.IsEmpty(Window.Property(Filter_Label))</visible>
 			</control>
 			 <control type="label">
-				<posy>85</posy>
-				<posx>61</posx>
+				<top>85</top>
+				<left>61</left>
 				<width min="0" max="1100">auto</width>
 				<height>50</height>
 				<label>$INFO[Window.Property(TotalItems),$ADDON[script.extendedinfo 32124]: ]$INFO[Window.Property(CurrentPage), - $ADDON[script.extendedinfo 32125]: ]$INFO[Window.Property(TotalPages), / ]</label>
@@ -51,8 +51,8 @@
 			
 			<!-- movie items -->
             <control type="panel" id="500">
-                <posx>60</posx>
-                <posy>160</posy>
+                <left>60</left>
+                <top>160</top>
                 <width>1820</width>
                 <height>850</height>
                 <viewtype label="31234">icon</viewtype>
@@ -84,13 +84,13 @@
                 <onfocus>SetFocus(500)</onfocus>
                 <width>1</width>
                 <height>1</height>
-                <posx>-1000</posx>
+                <left>-1000</left>
             </control>
             <control type="button" id="700">
                 <onfocus>SetFocus(500)</onfocus>
                 <width>1</width>
                 <height>1</height>
-                <posx>-1000</posx>
+                <left>-1000</left>
             </control>
         </control>
 
@@ -98,15 +98,15 @@
 			<!-- side menu -->
 			<include condition="!Skin.HasSetting(DisableSideBladeIndicator)">SideBladeMenuTabLeft</include>
 			<control type="group">
-				<posx>-660</posx>
-				<posy>0</posy>
+				<left>-660</left>
+				<top>0</top>
 				<visible>!Window.IsActive(virtualkeyboard)</visible>
 				<include condition="Skin.HasSetting(smallContextMenu)">SideBladeClassic</include>
 				<include condition="!Skin.HasSetting(smallContextMenu)">SideBladeModern</include>
 				<control type="image">
 					<!--Seperator-->
-					<posx>21</posx>
-					<posy>160</posy>
+					<left>21</left>
+					<top>160</top>
 					<width>458</width>
 					<height>20</height>
 					<align>left</align>
@@ -114,8 +114,8 @@
 				</control>
 				<control type="image">
 					<!--Seperator-->
-					<posx>21</posx>
-					<posy>980</posy>
+					<left>21</left>
+					<top>980</top>
 					<width>458</width>
 					<height>20</height>
 					<align>left</align>
@@ -124,14 +124,14 @@
 				<!-- close dialog -->
 				<control type="group">
 					<include>animation_fade_visible_hidden</include>
-					<posx>60</posx>
-					<posy>1005</posy>
+					<left>60</left>
+					<top>1005</top>
 					<include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
 				</control>
 				<!--Grouplist 9000-->
 				<control type="grouplist" id="9000">
-					<posx>21</posx>
-					<posy>190</posy>
+					<left>21</left>
+					<top>190</top>
 					<width>458</width>
 					<height>750</height>
 					<itemgap>3</itemgap>

@@ -20,8 +20,8 @@
                 <include>animation_window_open_close</include>
                 <!-- Background Panel-->
                 <control type="image">
-                    <posx>50</posx>
-                    <posy>210</posy>
+                    <left>50</left>
+                    <top>210</top>
                     <width>1820</width>
                     <height>67%</height>
                     <texture border="15">diffuse/bgpanel.png</texture>
@@ -43,8 +43,8 @@
                 <control type="group">
                     <visible>String.IsEmpty(Control.GetLabel(887766)) | !Container.Content(Artists)</visible>
                     <control type="label">
-                        <posx>80</posx>
-                        <posy>40</posy>
+                        <left>80</left>
+                        <top>40</top>
                         <width min="80" max="900">auto</width>
                         <height>100</height>
                         <font>Bold45</font>
@@ -63,7 +63,7 @@
                             <control type="image">
                                 <!--cdart image-->
                                 <left>1300</left>
-                                <posy>335</posy>
+                                <top>335</top>
                                 <width>480</width>
                                 <height>480</height>
                                 <texture background="true" diffuse="diffuse/cdmask_new.png" fallback="defaultcovers/cd_big.png">$VAR[DiscArtImage]</texture>
@@ -78,7 +78,7 @@
                             <control type="image">
                                 <!--poster-->
                                 <left>1275</left>
-                                <posy>335</posy>
+                                <top>335</top>
                                 <width>500</width>
                                 <height>500</height>
                                 <aspectratio align="right" aligny="top" scalediffuse="true">keep</aspectratio>
@@ -87,7 +87,7 @@
                             <control type="grouplist">
                                 <!-- Rating -->
                                 <left>1300</left>
-                                <posy>845</posy>
+                                <top>845</top>
                                 <width>500</width>
                                 <align>center</align>
                                 <orientation>horizontal</orientation>
@@ -115,8 +115,8 @@
                             </control>
                         </control>
                         <control type="grouplist">
-                            <posx>70</posx>
-                            <posy>235</posy>
+                            <left>70</left>
+                            <top>235</top>
                             <width>1800</width>
                             <height>820</height>
                             <onup>9000</onup>
@@ -245,8 +245,8 @@
 
                     <!-- Large InfoText -->
                     <control type="textbox" id="203040">
-                        <posx>65</posx>
-                        <posy>230</posy>
+                        <left>65</left>
+                        <top>230</top>
                         <width>1790</width>
                         <height>60%</height>
                         <label>$VAR[Plots]</label>
@@ -259,7 +259,8 @@
 
                     <!--Info Stuff-->
                     <control type="image">
-                        <posx>0</posx>
+                        <left>0</left>
+						<top></top>
                         <bottom>0</bottom>
                         <width>100%</width>
                         <height>110</height>
@@ -269,7 +270,7 @@
 
                     <!--Button 9000-->
                     <control type="grouplist" id="9000">
-                        <posx>60</posx>
+                        <left>60</left>
                         <bottom>15</bottom>
                         <width>1800</width>
                         <height>60</height>
@@ -421,8 +422,9 @@
                     <control type="image">
                         <animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
                         <left>1880</left>
-                        <bottom>20</bottom>
-                        <posy>50</posy>
+						<top></top>
+                        <bottom>15</bottom>
+                        <!-- <top>50</top> -->
                         <width>20</width>
                         <height>60</height>
                         <aspectratio>keep</aspectratio>
@@ -435,8 +437,9 @@
                     <control type="image">
                         <animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
                         <left>35</left>
-                        <bottom>20</bottom>
-                        <posy>50</posy>
+						<top></top>
+                        <bottom>15</bottom>
+                        <!-- <top>50</top> -->
                         <width>20</width>
                         <height>60</height>
                         <aspectratio>keep</aspectratio>

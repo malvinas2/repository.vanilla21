@@ -20,24 +20,24 @@
 			</animation>
             <!--Panel-->
             <control type="image">
-                <posx>640</posx>
-                <posy>0</posy>
+                <left>640</left>
+                <top>0</top>
                 <width>1345</width>
                 <height>100%</height>
                 <texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
             </control>
             <control type="image">
-                <posx>640</posx>
-                <posy>0</posy>
+                <left>640</left>
+                <top>0</top>
                 <width>1340</width>
                 <height>100%</height>
                 <texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
             </control>
             <control type="image">
-                <posx>640</posx>
-                <posy>0</posy>
+                <left>640</left>
+                <top>0</top>
                 <width>1340</width>
                 <height>100%</height>
                 <texture border="15">diffuse/bgpanel.png</texture>
@@ -48,8 +48,9 @@
 			<control type="image">
 				<width>300</width>
 				<height>180</height>
+                <left></left>
 				<right>60</right>
-                <posy>40</posy>
+                <top>40</top>
 				<font></font>
 				<texture background="true">$VAR[PVRInfoThumb]</texture>
                 <aspectratio align="right" aligny="top">keep</aspectratio>
@@ -60,14 +61,14 @@
                 <include>animation_fade_visible_hidden</include>
                 <right>60</right>
                 <width>60</width>
-                <posy>40</posy>
+                <top>40</top>
                 <include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
             </control>
             <!--Header-->
             <control type="label">
                 <description>Heading</description>
-                <posx>700</posx>
-                <posy>10</posy>
+                <left>700</left>
+                <top>10</top>
                 <width>1200</width>
 				<font>Bold45</font>
 				<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
@@ -77,8 +78,8 @@
             </control>
 			<!-- program title -->
 			<control type="label">
-				<posx>700</posx>
-				<posy>150</posy>
+				<left>700</left>
+				<top>150</top>
 				<width>800</width>
 				<font>Reg36</font>
 				<align>left</align>
@@ -87,19 +88,19 @@
 				<label>$INFO[ListItem.Title]</label>
 			</control>
             <control type="group">
-                <posx>680</posx>
-                <posy>220</posy>
+                <left>680</left>
+                <top>220</top>
                 <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>1200</width>
                     <height>300</height>
                     <texture border="5">dialogs/default/inner.png</texture>
                 </control>
                 <control type="button">
                     <description>Time</description>
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>1200</width>
                     <height>60</height>
                     <align>left</align>
@@ -114,8 +115,8 @@
                 </control>
                 <control type="button">
                     <description>Duration</description>
-                    <posx>0</posx>
-                    <posy>59</posy>
+                    <left>0</left>
+                    <top>59</top>
                     <width>1200</width>
                     <height>60</height>
                     <align>left</align>
@@ -130,8 +131,8 @@
                 </control>
                 <control type="button">
                     <description>Channel</description>
-                    <posx>0</posx>
-                    <posy>118</posy>
+                    <left>0</left>
+                    <top>118</top>
                     <width>1200</width>
                     <height>60</height>
                     <align>left</align>
@@ -146,8 +147,8 @@
                 </control>
                 <control type="button">
                     <description>Genre</description>
-                    <posx>0</posx>
-                    <posy>177</posy>
+                    <left>0</left>
+                    <top>177</top>
                     <width>1200</width>
                     <height>60</height>
                     <align>left</align>
@@ -162,8 +163,8 @@
                 </control>
                 <control type="button">
                     <description>Episode</description>
-                    <posx>0</posx>
-                    <posy>236</posy>
+                    <left>0</left>
+                    <top>236</top>
                     <width>1200</width>
                     <height>60</height>
                     <align>left</align>
@@ -178,16 +179,16 @@
                 </control>
             </control>
             <control type="image">
-                <posx>680</posx>
-                <posy>545</posy>
+                <left>680</left>
+                <top>545</top>
                 <width>1200</width>
                 <height>371</height>
                 <texture border="5">dialogs/default/inner.png</texture>
             </control>
             <control type="textbox" id="400">
                 <description>Plot value with no poster present</description>
-                <posx>700</posx>
-                <posy>565</posy>
+                <left>700</left>
+                <top>565</top>
                 <width>1160</width>
                 <height>321</height>
                 <align>justify</align>
@@ -199,8 +200,8 @@
             </control>
             <control type="textbox" id="400">
                 <description>Plot value with poster present</description>
-                <posx>700</posx>
-                <posy>565</posy>
+                <left>700</left>
+                <top>565</top>
                 <width>820</width>
                 <height>321</height>
                 <align>justify</align>
@@ -211,8 +212,9 @@
                 <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Poster))</visible>
             </control>
             <control type="image">
+                <left></left>
                 <right>50</right>
-                <posy>555</posy>
+                <top>555</top>
                 <width>300</width>
                 <height>351</height>
                 <texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Poster)]</texture>
@@ -220,8 +222,8 @@
             </control>
             <!--Button Group-->
             <control type="grouplist" id="9000">
-                <posx>675</posx>
-                <posy>940</posy>
+                <left>675</left>
+                <top>940</top>
 				<!-- <onleft>back</onleft> -->
 				<orientation>horizontal</orientation>
 				<itemgap>5</itemgap>
@@ -334,9 +336,10 @@
 			<!--Arrows-->
             <control type="image">
                 <animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
-                <right>10</right>
-                <bottom>72</bottom>
-                <posy>50</posy>
+                <left></left>
+				<right>10</right>
+                <!-- <bottom>72</bottom> -->
+                <top>950</top>
                 <width>20</width>
                 <height>60</height>
                 <aspectratio>keep</aspectratio>
@@ -347,9 +350,10 @@
             </control>
             <control type="image">
                 <animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
-                <right>1250</right>
-                <bottom>72</bottom>
-                <posy>50</posy>
+                <left></left>
+				<right>1250</right>
+                <!-- <bottom>72</bottom> -->
+                <top>950</top>
                 <width>20</width>
                 <height>60</height>
                 <aspectratio>keep</aspectratio>

@@ -21,8 +21,8 @@
 			<animation effect="slide" start="0,0" end="0,-400" tween="cubic" easing="out" delay="0" time="250" reversible="false">Hidden</animation>
 			
             <control type="image">
-				<posx>0</posx>
-				<posy>-5</posy>
+				<left>0</left>
+				<top>-5</top>
 				<width>100%</width>
 				<height>145</height>
 				<texture border="5">diffuse/panel.png</texture>
@@ -30,8 +30,8 @@
 			</control>
             <control type="label">
                 <!--Now Playing-->
-                <posx>310</posx>
-                <posy>15</posy>
+                <left>310</left>
+                <top>15</top>
                 <width>885</width>
                 <align>left</align>
                 <font>Reg28</font>
@@ -40,8 +40,8 @@
             </control>
             <control type="label">
                 <!--Title-->
-                <posx>310</posx>
-                <posy>70</posy>
+                <left>310</left>
+                <top>70</top>
                 <width>1150</width>
                 <align>left</align>
                 <font>Bold45</font>
@@ -55,8 +55,8 @@
                 <visible>Player.HasAudio</visible>
                 <!-- cd cover -->
                 <control type="image">
-                    <posx>110</posx>
-                    <posy>10</posy>
+                    <left>110</left>
+                    <top>10</top>
                     <width>123</width>
                     <height>123</height>
                     <aligny>center</aligny>
@@ -68,8 +68,8 @@
                 </control>
                 <control type="image">
                     <!--Music bg-->
-                    <posx>60</posx>
-                    <posy>10</posy>
+                    <left>60</left>
+                    <top>10</top>
                     <width>123</width>
                     <height>123</height>
                     <fadetime>200</fadetime>
@@ -79,8 +79,8 @@
                 </control>
                 <control type="image" id="13333">
                     <!--music cover-->
-                    <posx>60</posx>
-                    <posy>10</posy>
+                    <left>60</left>
+                    <top>10</top>
                     <width>123</width>
                     <height>123</height>
                     <fadetime>200</fadetime>
@@ -89,8 +89,8 @@
                 </control>
                 <control type="image">
                     <!--music cover-->
-                    <posx>60</posx>
-                    <posy>10</posy>
+                    <left>60</left>
+                    <top>10</top>
                     <width>123</width>
                     <height>123</height>
                     <fadetime>200</fadetime>
@@ -103,8 +103,8 @@
             <control type="group">
                 <visible>Player.HasVideo</visible>
                 <control type="image">
-                    <posx>85</posx>
-                    <posy>10</posy>
+                    <left>85</left>
+                    <top>10</top>
                     <width>123</width>
                     <height>123</height>
                     <aligny>center</aligny>
@@ -116,8 +116,8 @@
                 </control>
                 <control type="image">
                     <!--Cover image-->
-                    <posx>60</posx>
-                    <posy>5</posy>
+                    <left>60</left>
+                    <top>5</top>
                     <width>240</width>
                     <height>130</height>
                     <fadetime>200</fadetime>
@@ -128,8 +128,8 @@
             
 			<!-- hidden button to go fullscreen on click -->
 			<control type="button">
-				<posx>-60</posx>
-				<posy>-20</posy>
+				<left>-60</left>
+				<top>-20</top>
 				<width>2040</width>
 				<height>180</height>
 				<align>center</align>
@@ -146,8 +146,9 @@
 			</control>
             <!-- clearart -->
             <control type="image" id="884455">
+				<left></left>
 				<right>60</right>
-                <posy>5</posy>
+                <top>5</top>
 				<width>300</width>
 				<height>130</height>
 				<fadetime>200</fadetime>
@@ -165,8 +166,8 @@
                 <visible>!Skin.HasSetting(EnableTouchSupport) + !Control.IsVisible(884455) + !Skin.HasSetting(DisableNowPlayingClock)</visible>
                 <control type="grouplist">
                     <!--Time Grouplist Line 1-->
-                    <posx>1260</posx>
-                    <posy>10</posy>
+                    <left>1260</left>
+                    <top>10</top>
                     <width>600</width>
                     <height>100</height>
                     <align>right</align>
@@ -202,8 +203,8 @@
                 </control>
                 <control type="grouplist">
                     <!--Date Grouplist Line 2-->
-                    <posx>1260</posx>
-                    <posy>85</posy>
+                    <left>1260</left>
+                    <top>85</top>
                     <width>600</width>
                     <height>50</height>
                     <align>right</align>
@@ -263,7 +264,7 @@
 			<control type="grouplist">
                 <!--OSD-->
                 <right>60</right>
-                <posy>55</posy>
+                <top>55</top>
                 <width>280</width>
                 <height>130</height>
                 <itemgap>0</itemgap>

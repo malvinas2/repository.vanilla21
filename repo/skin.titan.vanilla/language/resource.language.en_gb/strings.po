@@ -3268,6 +3268,14 @@ msgctxt "#70056"
 msgid "Show detailed plot or extended information on OSD"
 msgstr ""
 
+msgctxt "#70057"
+msgid "Use increased maxtempo of 2.1 for playback speed [B](needs manual modification of advancedsettings.xml)[/B]"
+msgstr ""
+
+msgctxt "#70058"
+msgid "Automatic Login on startup"
+msgstr ""
+
 msgctxt "#91830"
 msgid "items"
 msgstr ""

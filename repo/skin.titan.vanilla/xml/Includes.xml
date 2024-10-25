@@ -77,6 +77,8 @@
 	<!--Titan Version-->
     <include name="TitanVersion">
         <control type="label">
+			<left></left>
+			<top></top>
             <right>60</right>
             <bottom>35</bottom>
             <width>1000</width>
@@ -89,8 +91,8 @@
 
     <!--Common-->
     <include name="HiddenButton">
-        <posx>-1000</posx>
-        <posy>-1000</posy>
+        <left>-1000</left>
+        <top>-1000</top>
         <width>1</width>
         <height>1</height>
         <label></label>
@@ -100,8 +102,8 @@
     </include>
 	
     <include name="DimensionsFullscreen">
-        <posx>0</posx>
-        <posy>0</posy>
+        <left>0</left>
+        <top>0</top>
         <width>100%</width>
         <height>100%</height>
     </include>
@@ -598,37 +600,37 @@
 	
 	<include name="height20_posy160">
 		<height>20</height>
-		<posy>160</posy>
+		<top>160</top>
 	</include>
 
 	<include name="height10_posy160">
 		<height>10</height>
-		<posy>160</posy>
+		<top>160</top>
 	</include>
 
 	<include name="height10_posy170">
 		<height>10</height>
-		<posy>170</posy>
+		<top>170</top>
 	</include>
 
 	<include name="height33_posy150">
 		<height>33</height>
-		<posy>150</posy>
+		<top>150</top>
 	</include>
 
 	<include name="height16_posy150">
 		<height>16</height>
-		<posy>150</posy>
+		<top>150</top>
 	</include>
 
 	<include name="height17_posy160">
 		<height>17</height>
-		<posy>160</posy>
+		<top>160</top>
 	</include>
 
 	<include name="height0_posy0">
 		<height>0</height>
-		<posy>0</posy>
+		<top>0</top>
 	</include>
 
 	<include name="music_info_label">

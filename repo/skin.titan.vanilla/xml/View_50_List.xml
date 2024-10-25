@@ -12,7 +12,7 @@
             <height>736</height>
 			<!-- Background Panel-->
 			<control type="image">
-				<posx>50</posx>
+				<left>50</left>
 				<width>1818</width>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
@@ -21,7 +21,7 @@
 			</control>
 			
 			<control type="image">
-				<posx>50</posx>
+				<left>50</left>
 				<width>505</width>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<visible>![Container.Content(MusicVideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | [Window.IsActive(tvchannels) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvrecordings)]] + Integer.IsGreater(Container(50).NumItems,0)</visible>
@@ -30,7 +30,7 @@
 			</control>
 			
 			<control type="image">
-				<posx>50</posx>
+				<left>50</left>
 				<width>1105</width>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<visible>[Container.Content(MusicVideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + Integer.IsGreater(Container(50).NumItems,0)</visible>
@@ -39,7 +39,7 @@
 			</control>
 			
 			<control type="image">
-				<posx>50</posx>
+				<left>50</left>
 				<width>920</width>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<visible>[Container.Content(episodes) | [Window.IsActive(tvchannels) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvrecordings)]] + Integer.IsGreater(Container(50).NumItems,0)</visible>
@@ -62,11 +62,11 @@
                 <onleft>100</onleft>
                 <onright></onright>
                 <orientation>vertical</orientation>
-                <posx>570</posx>
-                <posy>20</posy>
+                <left>570</left>
+                <top>20</top>
                 <control type="label">
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>550</width>
                     <height>40</height>
                     <font>Reg32</font>
@@ -75,8 +75,8 @@
                     <label>[B][UPPERCASE]$INFO[ListItem.Title][/UPPERCASE][/B]</label>
                 </control>
                 <control type="label">
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>550</width>
                     <height>40</height>
                     <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
@@ -85,8 +85,8 @@
                     <visible>!String.IsEmpty(Control.GetLabel(5301))</visible>
                 </control>
                 <control type="label">
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>550</width>
                     <height>40</height>
                     <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
@@ -95,8 +95,8 @@
                     <visible>!String.IsEmpty(Control.GetLabel(5302))</visible>
                 </control>
                 <control type="label">
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>550</width>
                     <height>40</height>
                     <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
@@ -105,8 +105,8 @@
                     <visible>!String.IsEmpty(Control.GetLabel(5303))</visible>
                 </control>
                 <control type="label">
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>550</width>
                     <height>40</height>
                     <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
@@ -118,8 +118,8 @@
             <control type="grouplist">
                 <!--Regie, Duration... Episodes-->
                 <visible>Container.content(episodes)</visible>
-                <posx>460</posx>
-                <posy>20</posy>
+                <left>460</left>
+                <top>20</top>
                 <itemgap>0</itemgap>
                 <onup>500</onup>
                 <ondown>500</ondown>
@@ -127,8 +127,8 @@
                 <onright></onright>
                 <orientation>vertical</orientation>
                 <control type="label">
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>500</width>
                     <height>40</height>
                     <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
@@ -137,8 +137,8 @@
                     <visible>!String.IsEmpty(Control.GetLabel(5301))</visible>
                 </control>
                 <control type="label">
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>500</width>
                     <height>40</height>
                     <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
@@ -147,8 +147,8 @@
                     <visible>!String.IsEmpty(Control.GetLabel(5302))</visible>
                 </control>
                 <control type="label">
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>500</width>
                     <height>40</height>
                     <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
@@ -157,8 +157,8 @@
                     <visible>!String.IsEmpty(Control.GetLabel(5303))</visible>
                 </control>
                 <control type="label">
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>500</width>
                     <height>40</height>
                     <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
@@ -170,8 +170,8 @@
             <control type="grouplist">
                 <!-- PVR details-->
                 <visible>[Window.IsActive(tvchannels) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvrecordings)]</visible>
-                <posx>80</posx>
-                <posy>20</posy>
+                <left>80</left>
+                <top>20</top>
                 <itemgap>0</itemgap>
                 <onup>500</onup>
                 <ondown>500</ondown>
@@ -231,15 +231,15 @@
                 </control>
             </control>
             <control type="group">
-                <posx>570</posx>
-                <posy>240</posy>
+                <left>570</left>
+                <top>240</top>
                 <width>550</width>
                 <height>485</height>
                 <!--Info Plot: Movies, TV-Shows, Music-Videos-->
                 <visible>Container.Content(MusicVideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
                 <control type="textbox">
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <label>$VAR[Plots]</label>
                     <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
                     <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
@@ -248,15 +248,15 @@
                 </control>
             </control>
             <control type="group">
-                <posx>70</posx>
-                <posy>250</posy>
+                <left>70</left>
+                <top>250</top>
                 <width>860</width>
                 <height>460</height>
                 <!--Info Plot: Movies, TV-Shows, Music-Videos-->
                 <visible>Container.Content(episodes)</visible>
                 <control type="textbox">
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <label>$VAR[Plots]</label>
                     <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
                     <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
@@ -266,8 +266,8 @@
             </control>
             <control type="textbox">
                 <!--PVR Plot-->
-                <posx>80</posx>
-                <posy>320</posy>
+                <left>80</left>
+                <top>320</top>
                 <visible>[Window.IsActive(tvchannels) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvrecordings)]</visible>
                 <width>560</width>
                 <height>400</height>
@@ -317,8 +317,8 @@
             </control>
             <!-- ID="50" -->
             <control type="list" id="50">
-                <posy>20</posy>
-                <posx>40</posx>
+                <top>20</top>
+                <left>40</left>
                 <width>1880</width>
                 <height>690</height>
                 <onleft>9000</onleft>
@@ -334,7 +334,7 @@
                 <itemlayout condition="![Container.content(MusicVideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | [Window.IsActive(tvchannels) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvrecordings)]]" width="1900" height="62">
                     <control type="label">
                         <!--Label 1-->
-                        <posx>630</posx>
+                        <left>630</left>
                         <width>1100</width>
                         <font>Reg28</font>
                         <textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
@@ -348,8 +348,8 @@
                     </control>
                     <control type="image">
                         <!--Separator-->
-                        <posx>615</posx>
-                        <posy>56</posy>
+                        <left>615</left>
+                        <top>56</top>
                         <width>1200</width>
                         <height>20</height>
                         <fadetime>400</fadetime>
@@ -359,8 +359,9 @@
                 </itemlayout>
                 <focusedlayout condition="![Container.content(MusicVideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | [Window.IsActive(tvchannels) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvrecordings)]]" width="1900" height="90">
                     <control type="image">
+						<left></left>
 						<right>80</right>
-						<posy>0</posy>
+						<top>0</top>
 						<height>86</height>
 						<width>1210</width>
 						<texture border="5">diffuse/panel.png</texture>
@@ -368,7 +369,7 @@
 					</control>
                     <control type="label">
                         <!--Label 1-->
-                        <posx>630</posx>
+                        <left>630</left>
                         <width>1100</width>
                         <height>55</height>
                         <font>Reg36</font>
@@ -383,8 +384,8 @@
                     </control>
                     <control type="label">
                         <!--Label 2-->
-                        <posx>630</posx>
-                        <posy>52</posy>
+                        <left>630</left>
+                        <top>52</top>
                         <width>1100</width>
                         <height>30</height>
                         <font>Light30</font>
@@ -395,8 +396,8 @@
                     </control>
                     <control type="image">
                         <!--Separator-->
-                        <posx>615</posx>
-                        <posy>86</posy>
+                        <left>615</left>
+                        <top>86</top>
                         <width>1200</width>
                         <height>20</height>
                         <fadetime>400</fadetime>
@@ -409,7 +410,7 @@
                 <itemlayout condition="[Container.content(MusicVideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + ![Skin.HasSetting(View50_ShowBanners) + Container.Content(tvshows)]" width="1800" height="60">
                     <control type="label">
                         <!--Label 1-->
-                        <posx>1150</posx>
+                        <left>1150</left>
                         <width>600</width>
                         <font>Reg28</font>
                         <textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
@@ -423,16 +424,16 @@
                     </control>
                     <control type="image">
                         <!--Separator-->
-                        <posx>1150</posx>
-                        <posy>56</posy>
+                        <left>1150</left>
+                        <top>56</top>
                         <height>20</height>
                         <fadetime>400</fadetime>
                         <colordiffuse>list_separator</colordiffuse>
                         <texture>common/separator.png</texture>
                     </control><control type="image">
                         <!--Separator-->
-                        <posx>1150</posx>
-                        <posy>56</posy>
+                        <left>1150</left>
+                        <top>56</top>
                         <height>20</height>
                         <fadetime>400</fadetime>
                         <colordiffuse>list_separator</colordiffuse>
@@ -441,8 +442,9 @@
                 </itemlayout>
                 <focusedlayout condition="[Container.content(MusicVideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + ![Skin.HasSetting(View50_ShowBanners) + Container.Content(tvshows)]" width="1800" height="90">
                     <control type="image">
+						<left></left>
 						<right>-5</right>
-						<posy>0</posy>
+						<top>0</top>
 						<height>86</height>
 						<width>665</width>
 						<texture border="5">diffuse/panel.png</texture>
@@ -456,7 +458,7 @@
                     </control>
                     <control type="label">
                         <!--Label 1-->
-                        <posx>1150</posx>
+                        <left>1150</left>
                         <width>600</width>
                         <height>55</height>
                         <font>Reg36</font>
@@ -466,8 +468,8 @@
                     </control>
                     <control type="label">
                         <!--Label 2-->
-                        <posx>1150</posx>
-                        <posy>52</posy>
+                        <left>1150</left>
+                        <top>52</top>
                         <width>600</width>
                         <height>30</height>
                         <font>Light28</font>
@@ -478,8 +480,8 @@
                     </control>
                     <control type="image">
                         <!--Separator-->
-                        <posx>1150</posx>
-                        <posy>86</posy>
+                        <left>1150</left>
+                        <top>86</top>
                         <height>20</height>
                         <fadetime>400</fadetime>
                         <colordiffuse>list_separator</colordiffuse>
@@ -526,21 +528,21 @@
                 <itemlayout condition="Container.Content(episodes) | Window.IsActive(tvtimers) | Window.IsActive(tvrecordings) | Window.IsActive(tvsearch)" width="1800" height="60">
                     <control type="label">
                         <!--Label 1-->
-                        <posx>990</posx>
+                        <left>990</left>
                         <width>650</width>
                         <font>Reg28</font>
                         <textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
                         <label>$VAR[ListTitle]</label>
                     </control>
-                                 <control type="group">
+                     <control type="group">
                         <!--Watched Overlay-->
 						<top>-3</top>
                         <include>WatchedIndicatorSmall</include>
                     </control>
                     <control type="image">
                         <!--Separator-->
-                        <posx>970</posx>
-                        <posy>56</posy>
+                        <left>970</left>
+                        <top>56</top>
                         <width>830</width>
                         <height>20</height>
                         <fadetime>400</fadetime>
@@ -550,8 +552,9 @@
                 </itemlayout>
                 <focusedlayout condition="Container.Content(episodes) | Window.IsActive(tvtimers) | Window.IsActive(tvrecordings) | Window.IsActive(tvsearch)" width="1800" height="90">
                     <control type="image">
+						<left></left>
 						<right>0</right>
-						<posy>0</posy>
+						<top>0</top>
 						<height>86</height>
 						<width>835</width>
 						<texture border="5">diffuse/panel.png</texture>
@@ -560,7 +563,7 @@
 					</control>
                     <control type="label">
                         <!--Label 1-->
-                        <posx>990</posx>
+                        <left>990</left>
                         <width>650</width>
                         <height>55</height>
                         <font>Reg36</font>
@@ -570,8 +573,8 @@
                     </control>
                     <control type="label">
                         <!--Label 2-->
-                        <posx>990</posx>
-                        <posy>52</posy>
+                        <left>990</left>
+                        <top>52</top>
                         <width>650</width>
                         <height>30</height>
                         <font>Light28</font>
@@ -586,8 +589,8 @@
                     </control>
                     <control type="image">
                         <!--Separator-->
-                        <posx>970</posx>
-                        <posy>86</posy>
+                        <left>970</left>
+                        <top>86</top>
                         <width>830</width>
                         <height>20</height>
                         <fadetime>400</fadetime>
@@ -600,8 +603,8 @@
                 <itemlayout condition="Window.IsActive(tvchannels)" height="60" width="1900">
                     <control type="label">
                         <!--Channel Number-->
-                        <posx>1030</posx>
-                        <posy>5</posy>
+                        <left>1030</left>
+                        <top>5</top>
                         <width>100</width>
                         <height>50</height>
                         <font>Reg29</font>
@@ -611,8 +614,8 @@
                     </control>
                     <control type="image">
                         <!--Rec-->
-                        <posx>1185</posx>
-                        <posy>0</posy>
+                        <left>1185</left>
+                        <top>0</top>
                         <width>55</width>
                         <height>55</height>
                         <texture>pvr/icons/pvr_record.png</texture>
@@ -621,8 +624,8 @@
                     </control>
                     <control type="image">
                         <!--Now Playing Icon-->
-                        <posx>1185</posx>
-                        <posy>0</posy>
+                        <left>1185</left>
+                        <top>0</top>
                         <width>55</width>
                         <height>55</height>
                         <fadetime>600</fadetime>
@@ -633,8 +636,8 @@
                     </control>
                     <control type="image">
                         <!--Chanel Icon-->
-                        <posx>1100</posx>
-                        <posy>5</posy>
+                        <left>1100</left>
+                        <top>5</top>
                         <width>48</width>
                         <height>48</height>
                         <texture background="true">$INFO[ListItem.Art(thumb)]</texture>
@@ -643,7 +646,7 @@
                     <control type="label">
                         <!--Channel Name-->
                         <animation effect="slide" start="0" end="50" time="0" reversible="false" condition="[ListItem.Isplaying | ListItem.IsRecording]">Conditional</animation>
-                        <posx>1200</posx>
+                        <left>1200</left>
                         <width>545</width>
                         <height>55</height>
                         <font>Reg29</font>
@@ -654,8 +657,8 @@
                     </control>
                     <control type="image">
                         <!--Separator-->
-                        <posx>1020</posx>
-                        <posy>56</posy>
+                        <left>1020</left>
+                        <top>56</top>
                         <width>785</width>
                         <height>20</height>
                         <fadetime>400</fadetime>
@@ -665,8 +668,9 @@
                 </itemlayout>
                 <focusedlayout condition="Window.IsActive(tvchannels)" height="90" width="1900">
                     <control type="image">
+						<left></left>
                         <right>80</right>
-                        <posy>0</posy>
+                        <top>0</top>
                         <height>86</height>
                         <width>810</width>
                         <texture border="5">diffuse/panel.png</texture>
@@ -674,8 +678,8 @@
                     </control>
                     <control type="label">
                         <!--Channel Number-->
-                        <posx>1030</posx>
-                        <posy>5</posy>
+                        <left>1030</left>
+                        <top>5</top>
                         <width>80</width>
                         <height>80</height>
                         <font>Reg29</font>
@@ -684,8 +688,8 @@
                     </control>
                     <control type="image">
                         <!--Rec-->
-                        <posx>1185</posx>
-                        <posy>0</posy>
+                        <left>1185</left>
+                        <top>0</top>
                         <width>55</width>
                         <height>55</height>
                         <texture>pvr/icons/pvr_record.png</texture>
@@ -694,8 +698,8 @@
                     </control>
                     <control type="image">
                         <!--Now Playing Icon-->
-                        <posx>1185</posx>
-                        <posy>0</posy>
+                        <left>1185</left>
+                        <top>0</top>
                         <width>55</width>
                         <height>55</height>
                         <fadetime>600</fadetime>
@@ -706,8 +710,8 @@
                     </control>
                     <control type="image">
                         <!--Chanel Icon-->
-                        <posx>1085</posx>
-                        <posy>5</posy>
+                        <left>1085</left>
+                        <top>5</top>
                         <width>78</width>
                         <height>78</height>
                         <texture background="true">$INFO[ListItem.Art(thumb)]</texture>
@@ -716,7 +720,7 @@
                     <control type="label">
                         <!--Channel Name-->
                         <animation effect="slide" start="0" end="50" time="0" reversible="false" condition="[ListItem.Isplaying | ListItem.IsRecording]">Conditional</animation>
-                        <posx>1200</posx>
+                        <left>1200</left>
                         <width>545</width>
                         <height>55</height>
                         <font>Reg29</font>
@@ -725,8 +729,8 @@
                     </control>
                     <control type="label">
                         <!--Channel Now Playing-->
-                        <posx>1200</posx>
-                        <posy>50</posy>
+                        <left>1200</left>
+                        <top>50</top>
                         <width>545</width>
                         <height>33</height>
                         <font>Light28</font>
@@ -735,8 +739,8 @@
                     </control>
                     <control type="image">
                         <!--Separator-->
-                        <posx>1020</posx>
-                        <posy>86</posy>
+                        <left>1020</left>
+                        <top>86</top>
                         <width>785</width>
                         <height>20</height>
                         <fadetime>400</fadetime>
@@ -753,7 +757,7 @@
                 <!--cdart image normal-->
                 <width>480</width>
                 <height>480</height>
-                <posx>65</posx>
+                <left>65</left>
                 <top>118</top>
                 <texture background="true" diffuse="diffuse/cdmask_new.png">$VAR[DiscArtImage]</texture>
                 <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
@@ -768,7 +772,7 @@
                 <!--Poster-->
                 <visible>!Container.Content(episodes)</visible>
                 <visible>![Window.IsActive(tvchannels) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvrecordings)]</visible>
-                <posx>45</posx>
+                <left>45</left>
 				<width>510</width>
                 <bordersize>8</bordersize>
 				<texture diffuse="diffuse/poster.png" border="5" fallback="DefaultVideo.png" background="true">$VAR[PosterThumb]</texture>
@@ -777,8 +781,8 @@
             <control type="image">
                 <!--Episodes Thumb-->
                 <visible>Container.Content(episodes)</visible>
-                <posx>70</posx>
-                <posy>20</posy>
+                <left>70</left>
+                <top>20</top>
                 <width>370</width>
                 <height>220</height>
                 <aspectratio align="left" aligny="top" scalediffuse="false">keep</aspectratio>
@@ -788,7 +792,8 @@
                 <!--PVR Thumb-->
                 <visible>[Window.IsActive(tvchannels) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvrecordings)]</visible>
                 <control type="image">
-                    <posy>320</posy>
+					<left></left>
+                    <top>320</top>
                     <right>960</right>
                     <width>300</width>
                     <height>420</height>
@@ -800,7 +805,8 @@
             <!-- black background behind video -->
                 <control type="image">
                     <texture>colors/color_black.png</texture>
-                    <posy>320</posy>
+                    <top>320</top>
+					<left></left>
                     <right>960</right>
                     <width>300</width>
                     <height>220</height>
@@ -808,7 +814,7 @@
                 </control>
                 <!--Video Window -->
                 <control type="videowindow">
-                    <posy>320</posy>
+                    <top>320</top>
                     <right>960</right>
                     <width>300</width>
                     <height>220</height>
@@ -820,8 +826,9 @@
 	   	<!--vertical Scollbar-->
 		<control type="scrollbar" id="60">
 			<visible>Control.IsVisible(50) + Integer.IsGreater(Container.NumItems,0)</visible>
+			<left></left>
 			<right>15</right>
-			<posy>20</posy>
+			<top>20</top>
 			<height>700</height>
 			<onup>60</onup>
 			<ondown>6000</ondown>

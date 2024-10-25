@@ -5,8 +5,8 @@
     <controls>
 	
 		<control type="group">
-			<posx>-660</posx>
-			<posy>0</posy>
+			<left>-660</left>
+			<top>0</top>
 			<animation type="WindowOpen">
 				<effect type="slide" start="0" end="660" time="250" tween="cubic" easing="inout" />
 			</animation>
@@ -15,8 +15,8 @@
 			</animation>
 			<!--Panel-->
 			<control type="image">
-				<posy>0</posy>
-				<posx>0</posx>
+				<top>0</top>
+				<left>0</left>
 				<width>590</width>
 				<height>100%</height>
 				<texture border="5">diffuse/panel.png</texture>
@@ -24,8 +24,8 @@
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
-				<posy>0</posy>
-				<posx>0</posx>
+				<top>0</top>
+				<left>0</left>
 				<width>585</width>
 				<height>100%</height>
 				<texture border="5">diffuse/panel.png</texture>
@@ -33,8 +33,8 @@
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
-				<posy>0</posy>
-				<posx>0</posx>
+				<top>0</top>
+				<left>0</left>
 				<width>585</width>
 				<height>100%</height>
 				<texture border="5">diffuse/panel.png</texture>
@@ -44,8 +44,8 @@
 			
 			<!-- header -->
 			<control type="label">
-				<posx>10</posx>
-				<posy>10</posy>
+				<left>10</left>
+				<top>10</top>
 				<width>565</width>
 				<height>100</height>
 				<font>Bold45</font>
@@ -57,8 +57,8 @@
 				<!--Label Menu: -->
 			<control type="image">
 				<width>545</width>
-                <posx>20</posx>
-				<posy>115</posy>
+                <left>20</left>
+				<top>115</top>
 				<height>210</height>
 				<texture background="true">$INFO[Container(11).ListItem.Icon]</texture>
 				<aspectratio>scale</aspectratio>
@@ -66,8 +66,8 @@
 			<control type="list" id="11">
                 <!--List ID=11-->
                 <width>545</width>
-                <posx>20</posx>
-                <posy>345</posy>
+                <left>20</left>
+                <top>345</top>
 				<onback>Dialog.Close(all,true)</onback>
 				<onright>1</onright>
 				<onleft>1</onleft>
@@ -142,8 +142,8 @@
 			
             <control type="grouplist" id="1">
                 <!--Buttons-->
-                <posx>20</posx>
-                <posy>820</posy>
+                <left>20</left>
+                <top>820</top>
                 <height>270</height>
                 <width>545</width>
                 <itemgap>5</itemgap>
@@ -173,7 +173,8 @@
 					<include>DialogButtonOther</include>
                     <height>60</height>
 					<label>$LOCALIZE[20406]</label>
-					<visible>videoplayer.content(episodes)</visible>
+					<!-- <visible>videoplayer.content(episodes)</visible> -->
+					<visible>Control.IsEnabled(4)</visible>
                 </control>
 				<control type="button" id="99">
                     <description>Close</description>

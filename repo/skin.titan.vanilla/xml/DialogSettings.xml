@@ -21,8 +21,8 @@
 			</animation>
             <!--Panel-->
             <control type="image">
-                <posx>630</posx>
-                <posy>0</posy>
+                <left>630</left>
+                <top>0</top>
                 <width>1340</width>
                 <height>100%</height>
 				<texture border="15">diffuse/bgpanel.png</texture>
@@ -33,14 +33,14 @@
                 <include>animation_fade_visible_hidden</include>
                 <right>60</right>
                 <width>60</width>
-                <posy>40</posy>
+                <top>40</top>
                 <include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
             </control>
            <!--Header-->
             <control type="label" id="2">
                 <description>Heading</description>
-                <posx>700</posx>
-                <posy>10</posy>
+                <left>700</left>
+                <top>10</top>
                 <width>1200</width>
 				<font>Bold45</font>
 				<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
@@ -50,8 +50,8 @@
             </control>
             
             <control type="image">
-                <posx>680</posx>
-                <posy>220</posy>
+                <left>680</left>
+                <top>220</top>
                 <width>1200</width>
                 <height>670</height>
                 <texture border="5">dialogs/default/inner.png</texture>
@@ -60,8 +60,8 @@
             <!-- templates -->
             <control type="grouplist" id="5">
                 <description>Control Area</description>
-                <posx>680</posx>
-                <posy>230</posy>
+                <left>680</left>
+                <top>230</top>
                 <width>1200</width>
                 <height>650</height>
                 <orientation>vertical</orientation>
@@ -131,8 +131,8 @@
 			
             <!--Button Group-->
             <control type="grouplist" id="8002">
-                <posx>680</posx>
-                <posy>940</posy>
+                <left>680</left>
+                <top>940</top>
 				<orientation>horizontal</orientation>
 				<itemgap>20</itemgap>
 				<onup>5</onup>
@@ -143,14 +143,14 @@
                     <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(28)">Conditional</animation>
                 </control>
                 <control type="button" id="29">
-                    <posx>200</posx>
+                    <left>200</left>
                     <description>Cancel</description>
                     <label>$LOCALIZE[222]</label>
 					<include>DialogButtonOther</include>
                     <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(29)">Conditional</animation>
                 </control>
 				<control type="button" id="30">
-                    <posx>740</posx>
+                    <left>740</left>
                     <description>Clear</description>
                     <label></label>
 					<include>DialogButtonOther</include>

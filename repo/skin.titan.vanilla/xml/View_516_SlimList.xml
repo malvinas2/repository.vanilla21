@@ -6,7 +6,7 @@
 
 		<!--Title-->
 		<control type="label">
-			<posx>10</posx>
+			<left>10</left>
 			<align>left</align>
 			<width>63%</width>
 			<label>[B]$INFO[ListItem.Label][/B]</label>
@@ -16,7 +16,7 @@
 		</control>
          <!--Details PVR or addons-->
 		<control type="label">
-			<posx>10</posx>
+			<left>10</left>
 			<align>left</align>
 			<width>90%</width>
 			<label>[B]$INFO[ListItem.Label][/B]$VAR[ListDetails, • ]</label>
@@ -27,6 +27,7 @@
 		
 		<!--quality-->
 		<control type="label">
+			<left></left>
 			<right>5</right>
 			<width>80</width>
 			<align>right</align>
@@ -39,6 +40,7 @@
 		
 		<!--Rating-->
 		<control type="label">
+			<left></left>
 			<right>80</right>
 			<width>80</width>
 			<align>center</align>
@@ -52,6 +54,7 @@
 		
 		<!--runtime-->
 		<control type="label">
+			<left></left>
 			<right>160</right>
 			<width>140</width>
 			<align>center</align>
@@ -64,6 +67,7 @@
 		
 		<!--Year-->
 		<control type="label">
+			<left></left>
 			<right>320</right>
 			<width>110</width>
 			<align>center</align>
@@ -78,7 +82,7 @@
 		
 		<control type="image">
 			<bottom>0</bottom>
-			<posy>0</posy>
+			<top>0</top>
 			<height>1</height>
 			<texture>diffuse/panel.png</texture>
 			<colordiffuse>grey</colordiffuse>
@@ -87,15 +91,15 @@
 
     <include name="SlimListLayoutFocus">
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<texture border="5">diffuse/panel.png</texture>
 			<colordiffuse>$VAR[ViewDetailsFocusColor]</colordiffuse>
 			
 		</control>
 		<!--Title-->
 		<control type="label">
-			<posx>10</posx>
+			<left>10</left>
 			<align>left</align>
 			<width>63%</width>
 			<label>[B]$INFO[ListItem.Label][/B]</label>
@@ -106,7 +110,7 @@
 		</control>
          <!--Details PVR or addons-->
 		<control type="label">
-			<posx>10</posx>
+			<left>10</left>
 			<align>left</align>
 			<width>90%</width>
 			<label>[B]$INFO[ListItem.Label][/B]$VAR[ListDetails, • ]</label>
@@ -117,6 +121,7 @@
 		
 		<!--quality-->
 		<control type="label">
+			<left></left>
 			<right>5</right>
 			<width>80</width>
 			<align>right</align>
@@ -129,6 +134,7 @@
 		
 		<!--Rating-->
 		<control type="label">
+			<left></left>
 			<right>80</right>
 			<width>80</width>
 			<align>center</align>
@@ -142,6 +148,7 @@
 		
 		<!--runtime-->
 		<control type="label">
+			<left></left>
 			<right>160</right>
 			<width>140</width>
 			<align>center</align>
@@ -154,6 +161,7 @@
 		
 		<!--Year-->
 		<control type="label">
+			<left></left>
 			<right>320</right>
 			<width>110</width>
 			<align>center</align>
@@ -168,7 +176,7 @@
 		
 		<control type="image">
 			<bottom>0</bottom>
-			<posy>0</posy>
+			<top>0</top>
 			<height>1</height>
 			<texture>diffuse/panel.png</texture>
 			<colordiffuse>grey</colordiffuse>
@@ -185,7 +193,9 @@
             <visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
 			<!-- Background Panel-->
 			<control type="image">
+				<left></left>
 				<right>52</right>
+				<top></top>
                 <bottom>13%</bottom>
 				<width>1180</width>
                 <height>736</height>
@@ -197,6 +207,7 @@
 			</control>
             <control type="image">
 				<left>560</left>
+				<top></top>
                 <bottom>13%</bottom>
 				<width>1302</width>
                 <height>736</height>
@@ -265,6 +276,7 @@
 					<!--cdart image music-->
                     <width>500</width>
                     <height>500</height>
+					<top></top>
                     <bottom>0</bottom>
                     <bordersize>8</bordersize>
 					<texture background="true" diffuse="diffuse/cdmask_new.png">$VAR[DiscArtImage]</texture>
@@ -292,6 +304,8 @@
 			<!--vertical Scollbar-->
 			<control type="scrollbar" id="60">
 				<visible>Control.IsVisible(516) + Integer.IsGreater(Container.NumItems,0)</visible>
+				<left></left>
+				<top></top>
 				<right>15</right>
 				<bottom>13%</bottom>
 				<height>736</height>

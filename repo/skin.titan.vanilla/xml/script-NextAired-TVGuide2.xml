@@ -16,7 +16,8 @@
 			<include>animation_window_open_close</include>
 			
             <control type="image">
-				<posx>82</posx>
+				<left>82</left>
+				<top></top>
 				<bottom>145</bottom>
 				<width>400</width>
 				<height>630</height>
@@ -27,7 +28,8 @@
 			
 			<!-- weekdays -->
 			<control type="list" id="5000">
-				<posx>82</posx>
+				<left>82</left>
+				<top></top>
 				<bottom>145</bottom>
 				<width>410</width>
 				<height>630</height>
@@ -64,6 +66,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
+          				<top></top>
 						<bottom>10</bottom>
 						<left>10</left>
 						<width>380</width>
@@ -75,6 +78,7 @@
 						<label>$INFO[ListItem.Property(count)]</label>
 					</control>
 					<control type="label">
+						<top></top>
 						<bottom>10</bottom>
 						<left>10</left>
 						<width>380</width>
@@ -88,6 +92,7 @@
 					<control type="image">
 						 <width>100%</width>
 						 <height>1</height>
+						 <top></top>
 						 <bottom>0</bottom>
 						 <texture colordiffuse="$INFO[Skin.String(ViewDetailsListItemTextColor)]">colors/color_white.png</texture>
 					</control>
@@ -109,6 +114,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
+						<top></top>
 						<bottom>10</bottom>
 						<left>10</left>
 						<width>380</width>
@@ -120,6 +126,7 @@
 						<label>$INFO[ListItem.Property(count)]</label>
 					</control>
 					<control type="label">
+						<top></top>
 						<bottom>10</bottom>
 						<left>10</left>
 						<width>380</width>
@@ -248,11 +255,11 @@
 			</control>
 			<control type="group" id="9001">
 				<bottom>145</bottom>
-				<posx>535</posx>
+				<left>535</left>
                 <height>630</height>
 				<control type="scrollbar" id="60">
 					<left>0</left>
-					<posy>670</posy>
+					<top>670</top>
 					<width>1316</width>
 					<height>15</height>
 					<onup>9001</onup>
@@ -395,8 +402,8 @@
 			<include condition="!Skin.HasSetting(smallContextMenu)">SideBladeModern</include>
             <!--Grouplist 9000-->
             <control type="grouplist" id="9000">
-                <posx>21</posx>
-                <posy>190</posy>
+                <left>21</left>
+                <top>190</top>
                 <width>458</width>
                 <height>750</height>
                 <itemgap>3</itemgap>

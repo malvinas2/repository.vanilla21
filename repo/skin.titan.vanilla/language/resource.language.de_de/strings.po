@@ -3242,6 +3242,14 @@ msgctxt "#70056"
 msgid "Show detailed plot or extended information on OSD"
 msgstr "Zeige ausführlichen Plot oder ausführliche Information im OSD"
 
+msgctxt "#70057"
+msgid "Use increased maxtempo of 2.1 for playback speed [B](needs manual modification of advancedsettings.xml)[/B]"
+msgstr "Erhöhte Maximalgeschwindigkeit bei Wiedergabe [B](benötigt manuelle Anpassung der Advancedsettings.xml)[/B]"
+
+msgctxt "#70058"
+msgid "Automatic Login on startup"
+msgstr "Automatische Anmeldung beim Programmstart"
+
 msgctxt "#71026"
 msgid "Timeshift"
 msgstr "Timeshift"

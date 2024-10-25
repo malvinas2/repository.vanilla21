@@ -9,23 +9,29 @@
 			<include>GlobalBackground</include>
             <visible>[!Control.IsVisible(3333) | String.IsEmpty(Control.GetLabel(3333))] + [!Control.IsVisible(3334) | String.IsEmpty(Control.GetLabel(3334))]</visible>
 		</control>
-         <include>NowPlayingBackground</include>
+
+        <include>NowPlayingBackground</include>
          
+
+		 <!-- <include>OSDInfoPanel</include>         -->
+		 <!-- hier fur Musikinfo weitermachen -->
+
+
          <!-- lyrics overlay -->
          <control type="group">
             <visible>!Skin.HasSetting(DisableLyricsOverlay) + Window.IsActive(script-cu-lrclyrics-main.xml)</visible>
 			<!-- <visible>!Skin.HasSetting(DisableLyricsOverlay) + Window.IsActive(script-cu-lrclyrics-main.xml) + !String.IsEmpty(Skin.String(LyricScript_Path))</visible> -->
             <control type="image">
-                <posx>0</posx>
-                <posy>0</posy>
+                <left>0</left>
+                <top>0</top>
                 <width>100%</width>
                 <height>100%</height>
                 <texture>special://home/addons/resource.images.backgroundoverlays.basic/resources/Surround.png</texture>
                 <colordiffuse>$INFO[Skin.String(LyricsOverlayColor)]</colordiffuse>
             </control>
             <control type="image">
-                <posx>0</posx>
-                <posy>0</posy>
+                <left>0</left>
+                <top>0</top>
                 <width>100%</width>
                 <height>100%</height>
                 <texture>special://home/addons/resource.images.backgroundoverlays.basic/resources/Spot.png</texture>
@@ -48,7 +54,8 @@
 			<!-- <zorder>0</zorder> -->
             <visible>Skin.HasSetting(enableArtistBio)</visible>
             <control type="image">
-                <bottom>-10</bottom>
+                <top></top>
+				<bottom>-10</bottom>
                 <width>100%</width>
                 <height>60</height>
                 <texture border="5" flipy="true">$VAR[osdpanelimage]</texture>
@@ -56,7 +63,8 @@
             </control>
             <control type="fadelabel">
 				<!-- <zorder>0</zorder> -->
-                <bottom>17</bottom>
+                <top></top>
+				<bottom>17</bottom>
                 <left>0</left>
                 <width>1920</width>
                 <height>20</height>
@@ -72,6 +80,7 @@
 		
 		<!--clearlogo top right-->
 		<control type="image">
+			<left></left>
 			<right>40</right>
 			<top>20</top>
 			<width>550</width>

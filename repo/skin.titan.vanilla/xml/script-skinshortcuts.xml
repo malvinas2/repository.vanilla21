@@ -37,8 +37,8 @@
 			
 			<!--background panel -->
 			<control type="image">
-				<posx>50</posx>
-				<posy>0</posy>
+				<left>50</left>
+				<top>0</top>
 				<width>1820</width>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
@@ -47,8 +47,8 @@
 			<!-- left panel -->
 			<control type="group" id="200">
 				<control type="image">
-					<posx>70</posx>
-					<posy>20</posy>
+					<left>70</left>
+					<top>20</top>
 					<width>620</width>
 					<height>770</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
@@ -100,8 +100,9 @@
 				
 				<!-- right panel -->
 				<control type="image">
+					<left></left>
 					<right>70</right>
-					<posy>20</posy>
+					<top>20</top>
 					<width>540</width>
 					<height>770</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
@@ -111,7 +112,7 @@
 				<control type="grouplist">
                     <right>100</right>
                     <width>500</width>
-                    <posy>20</posy>
+                    <top>20</top>
 					<!--icon label-->
 					<control type="label">
 						<label>[B]$LOCALIZE[21371]:[/B]</label>

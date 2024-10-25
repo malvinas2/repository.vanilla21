@@ -2,8 +2,8 @@
 <!--Titan-->
 <includes>
     <default type="label">
-        <posx>0</posx>
-        <posy>0</posy>
+        <left>0</left>
+		<top>0</top>
         <label></label>
         <height>60</height>
         <align>left</align>
@@ -17,8 +17,8 @@
         <scrollspeed>30</scrollspeed>
     </default>
     <default type="fadelabel">
-        <posx>0</posx>
-        <posy>0</posy>
+        <left>0</left>
+        <top>0</top>
         <label></label>
         <height>60</height>
         <align>left</align>
@@ -33,8 +33,8 @@
         <scrollout>false</scrollout>
     </default>
     <default type="image">
-        <posx>0</posx>
-        <posy>0</posy>
+        <left>0</left>
+        <top>0</top>
         <width></width>
         <height></height>
         <align>center</align>
@@ -43,8 +43,8 @@
         <aspectratio>stretch</aspectratio>
     </default>
     <default type="button">
-        <posx>0</posx>
-        <posy>0</posy>
+        <left>0</left>
+        <top>0</top>
         <width>600</width>
         <height>60</height>
         <align>center</align>
@@ -60,8 +60,8 @@
         <textoffsetx>50</textoffsetx>
     </default>
 	<default type="edit">
-        <posx>0</posx>
-        <posy>0</posy>
+        <left>0</left>
+        <top>0</top>
         <width>600</width>
         <height>60</height>
         <align>center</align>
@@ -78,8 +78,8 @@
 		<textoffsety>8</textoffsety>
     </default>
     <default type="togglebutton">
-        <posx>0</posx>
-        <posy>0</posy>
+        <left>0</left>
+        <top>0</top>
         <width>600</width>
         <height>60</height>
         <label></label>
@@ -97,8 +97,8 @@
         <textoffsetx>50</textoffsetx>
     </default>
     <default type="radiobutton">
-        <posx>0</posx>
-        <posy>0</posy>
+        <left>0</left>
+        <top>0</top>
         <width>600</width>
         <height>60</height>
         <radiowidth>120</radiowidth>
@@ -121,8 +121,8 @@
         <texturenofocus colordiffuse="$INFO[Skin.String(ButtonColor)]" border="5">diffuse/panel.png</texturenofocus>
     </default>
     <default type="spincontrolex">
-        <posx>0</posx>
-        <posy>0</posy>
+        <left>0</left>
+        <top>0</top>
         <width>600</width>
         <height>60</height>
         <label></label>
@@ -147,8 +147,8 @@
         <texturenofocus colordiffuse="$INFO[Skin.String(ButtonColor)]" border="5">diffuse/panel.png</texturenofocus>
     </default>
     <default type="spincontrol">
-        <posx>0</posx>
-        <posy>0</posy>
+        <left>0</left>
+        <top>0</top>
         <width>23</width>
         <height>23</height>
         <textureup colordiffuse="$INFO[Skin.String(ButtonTextColor)]">common/spinctrl/arrow-up-nf.png</textureup>
@@ -172,8 +172,8 @@
         <texturenofocus colordiffuse="$INFO[Skin.String(ButtonColor)]" border="5">diffuse/panel.png</texturenofocus>
     </default>
     <default type="sliderex">
-        <posx>0</posx>
-        <posy>0</posy>
+        <left>0</left>
+        <top>0</top>
         <height>60</height>
         <width>450</width>
         <sliderwidth>220</sliderwidth>
@@ -194,8 +194,8 @@
         <pulseonselect>false</pulseonselect>
     </default>
     <default type="progress">
-        <posx>0</posx>
-        <posy>0</posy>
+        <left>0</left>
+        <top>0</top>
         <width>280</width>
         <height>20</height>
         <info></info>
@@ -206,8 +206,8 @@
         <overlaytexture></overlaytexture>
     </default>
     <default type="slider">
-        <posx>0</posx>
-        <posy>0</posy>
+        <left>0</left>
+        <top>0</top>
         <width>300</width>
         <height>20</height>
         <orientation>horizontal</orientation>
@@ -238,8 +238,8 @@
         <autoscroll delay="8000" time="3000" repeat="10000">!Skin.HasSetting(DisablePlotAutoScroll)</autoscroll>
     </default>
 	<default type="colorbutton">
-	    <posx>0</posx>
-        <posy>0</posy>
+	    <left>0</left>
+        <top>0</top>
 		<width>600</width>
         <height>60</height>
 		<texturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="5">diffuse/panel.png</texturefocus>

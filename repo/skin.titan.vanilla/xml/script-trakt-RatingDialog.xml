@@ -5,8 +5,8 @@
 		<include>animation_window_open_close</include>
 		<include>DialogOverlayExtra</include>
         <control type="group">
-        <posx>510</posx>
-        <posy>352</posy>
+        <left>510</left>
+        <top>352</top>
             <animation type="WindowOpen" reversible="false">
                 <effect type="zoom" start="75" end="100" center="960,540" easing="out" tween="back" time="320" />
                 <effect type="fade" start="0" end="100" time="175" />
@@ -27,8 +27,8 @@
             <control type="group">
 			  <control type="image">
                     <description>Trakt Background</description>
-                    <posx>-20</posx>
-                    <posy>-20</posy>
+                    <left>-20</left>
+                    <top>-20</top>
                     <width>940</width>
                     <height>415</height>
                     <colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
@@ -37,8 +37,8 @@
                 </control>
 			    <control type="image">
                     <description>Trakt Background</description>
-                    <posx>-10</posx>
-                    <posy>-10</posy>
+                    <left>-10</left>
+                    <top>-10</top>
                     <width>920</width>
                     <height>395</height>
                     <colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
@@ -46,16 +46,16 @@
                 </control>
                 <control type="image">
                     <description>Trakt Background</description>
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>900</width>
                     <height>375</height>
                     <texture>dialogs/trakt/trakt-bg.png</texture>
                 </control>
                 <control type="label" id="10011">
                     <description>Trakt Question</description>
-                    <posx>870</posx>
-                    <posy>20</posy>
+                    <left>870</left>
+                    <top>20</top>
                     <width>870</width>
                     <height>38</height>
                     <label>$ADDON[script.trakt 32026]</label>
@@ -69,8 +69,8 @@
                 <control type="label" id="10012">
                     <label></label>
                     <description>Item to Rate Title</description>
-                    <posx>867</posx>
-                    <posy>114</posy>
+                    <left>867</left>
+                    <top>114</top>
                     <width>630</width>
                     <height>30</height>
                     <align>right</align>
@@ -83,8 +83,8 @@
                 <control type="label" id="10013">
                     <label></label>
                     <description>Bottom Ratings text</description>
-                    <posx>0</posx>
-                    <posy>300</posy>
+                    <left>0</left>
+                    <top>300</top>
                     <width>900</width>
                     <height>38</height>
                     <align>center</align>
@@ -96,8 +96,8 @@
                 <control type="button">
                     <label></label>
                     <description>Close Window button</description>
-                    <posx>0</posx>
-                    <posy>-48</posy>
+                    <left>0</left>
+                    <top>-48</top>
                     <width>96</width>
                     <height>48</height>
                     <onclick>PreviousMenu</onclick>
@@ -111,8 +111,8 @@
                 <control type="button" id="11030">
                     <label></label>
                     <description>1 Button</description>
-                    <posx>120</posx>
-                    <posy>195</posy>
+                    <left>120</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texturefocus>dialogs/trakt/1.png</texturefocus>
@@ -129,8 +129,8 @@
                 <control type="button" id="11031">
                     <label></label>
                     <description>2 Button</description>
-                    <posx>188</posx>
-                    <posy>195</posy>
+                    <left>188</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texturefocus>dialogs/trakt/2.png</texturefocus>
@@ -147,8 +147,8 @@
                 </control>
                 <control type="image">
                     <description>2 Button Placeholder</description>
-                    <posx>188</posx>
-                    <posy>195</posy>
+                    <left>188</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texture>dialogs/trakt/2_b.png</texture>
@@ -157,8 +157,8 @@
                 <control type="button" id="11032">
                     <label></label>
                     <description>3 Button</description>
-                    <posx>255</posx>
-                    <posy>195</posy>
+                    <left>255</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texturefocus>dialogs/trakt/3.png</texturefocus>
@@ -175,8 +175,8 @@
                 </control>
                 <control type="image">
                     <description>3 Button Placeholder</description>
-                    <posx>255</posx>
-                    <posy>195</posy>
+                    <left>255</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texture>dialogs/trakt/3_b.png</texture>
@@ -185,8 +185,8 @@
                 <control type="button" id="11033">
                     <label></label>
                     <description>4 Button</description>
-                    <posx>322</posx>
-                    <posy>195</posy>
+                    <left>322</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texturefocus>dialogs/trakt/4.png</texturefocus>
@@ -203,8 +203,8 @@
                 </control>
                 <control type="image">
                     <description>4 Button Placeholder</description>
-                    <posx>322</posx>
-                    <posy>195</posy>
+                    <left>322</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texture>dialogs/trakt/4_b.png</texture>
@@ -213,8 +213,8 @@
                 <control type="button" id="11034">
                     <label></label>
                     <description>5 Button</description>
-                    <posx>390</posx>
-                    <posy>195</posy>
+                    <left>390</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texturefocus>dialogs/trakt/5.png</texturefocus>
@@ -231,8 +231,8 @@
                 </control>
                 <control type="image">
                     <description>5 Button Placeholder</description>
-                    <posx>390</posx>
-                    <posy>195</posy>
+                    <left>390</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texture>dialogs/trakt/5_b.png</texture>
@@ -241,8 +241,8 @@
                 <control type="button" id="11035">
                     <label></label>
                     <description>6 Button</description>
-                    <posx>458</posx>
-                    <posy>195</posy>
+                    <left>458</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texturefocus>dialogs/trakt/6.png</texturefocus>
@@ -259,8 +259,8 @@
                 </control>
                 <control type="image">
                     <description>6 Button Placeholder</description>
-                    <posx>458</posx>
-                    <posy>195</posy>
+                    <left>458</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texture>dialogs/trakt/6_b.png</texture>
@@ -269,8 +269,8 @@
                 <control type="button" id="11036">
                     <label></label>
                     <description>7 Button</description>
-                    <posx>525</posx>
-                    <posy>195</posy>
+                    <left>525</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texturefocus>dialogs/trakt/7.png</texturefocus>
@@ -287,8 +287,8 @@
                 </control>
                 <control type="image">
                     <description>7 Button Placeholder</description>
-                    <posx>525</posx>
-                    <posy>195</posy>
+                    <left>525</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texture>dialogs/trakt/7_b.png</texture>
@@ -297,8 +297,8 @@
                 <control type="button" id="11037">
                     <label></label>
                     <description>8 Button</description>
-                    <posx>592</posx>
-                    <posy>195</posy>
+                    <left>592</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texturefocus>dialogs/trakt/8.png</texturefocus>
@@ -315,8 +315,8 @@
                 </control>
                 <control type="image">
                     <description>8 Button Placeholder</description>
-                    <posx>592</posx>
-                    <posy>195</posy>
+                    <left>592</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texture>dialogs/trakt/8_b.png</texture>
@@ -325,8 +325,8 @@
                 <control type="button" id="11038">
                     <label></label>
                     <description>9 Button</description>
-                    <posx>660</posx>
-                    <posy>195</posy>
+                    <left>660</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texturefocus>dialogs/trakt/9.png</texturefocus>
@@ -343,8 +343,8 @@
                 </control>
                 <control type="image">
                     <description>9 Button Placeholder</description>
-                    <posx>660</posx>
-                    <posy>195</posy>
+                    <left>660</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texture>dialogs/trakt/9_b.png</texture>
@@ -353,8 +353,8 @@
                 <control type="button" id="11039">
                     <label></label>
                     <description>10 Button</description>
-                    <posx>728</posx>
-                    <posy>195</posy>
+                    <left>728</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texturefocus>dialogs/trakt/10.png</texturefocus>
@@ -371,8 +371,8 @@
                 </control>
                 <control type="image">
                     <description>10 Button Placeholder</description>
-                    <posx>728</posx>
-                    <posy>195</posy>
+                    <left>728</left>
+                    <top>195</top>
                     <width>52</width>
                     <height>52</height>
                     <texture>dialogs/trakt/10_b.png</texture>

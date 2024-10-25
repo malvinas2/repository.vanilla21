@@ -138,8 +138,8 @@
         </control>
         <control type="image">
             <!--fallback logo image-->
-            <posx>0</posx>
-            <posy>0</posy>
+            <left>0</left>
+            <top>0</top>
             <bordersize>30</bordersize>
             <texture background="true">$VAR[ClearLogoFallback]</texture>
             <aspectratio scalediffuse="false" align="center" aligny="bottom">keep</aspectratio>
@@ -214,6 +214,7 @@
             <!--Label-->
             <left>16</left>
             <right>16</right>
+			<top></top>
             <bottom>10</bottom>
             <height>50</height>
             <include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
@@ -238,6 +239,7 @@
             <!--Label-->
             <left>12</left>
             <right>12</right>
+			<top></top>
             <bottom>8</bottom>
             <height>40</height>
             <include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
@@ -262,6 +264,7 @@
             <!--Label-->
             <left>8</left>
             <right>8</right>
+			<top></top>
             <bottom>8</bottom>
             <height>33%</height>
             <include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>

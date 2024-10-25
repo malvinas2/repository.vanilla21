@@ -23,8 +23,8 @@
             
              <!-- ID="52" -->
             <control type="panel" id="507">
-                <posx>0</posx>
-                <posy>40</posy>
+                <left>0</left>
+                <top>40</top>
                 <width>100%</width>
                 <height>800</height>
                 <onup>9000</onup>
@@ -55,7 +55,7 @@
 				<height>230</height>
 
 				<control type="image">
-					<posx>50</posx>
+					<left>50</left>
 					<width>1820</width>
 					<texture border="15">diffuse/bgpanel.png</texture>
 					<colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
@@ -69,8 +69,8 @@
 					<onleft>100</onleft>
 					<onright></onright>
 					<orientation>vertical</orientation>
-					<posx>80</posx>
-					<posy>10</posy>
+					<left>80</left>
+					<top>10</top>
 					<control type="label">
 						<height>33</height>
 						<width>1100</width>
@@ -88,8 +88,8 @@
 						  <label>$VAR[Details]</label>
 					</control>
 					<control type="textbox">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>1770</width>
 						<height>135</height>
 						<label>$VAR[Plots]</label>
@@ -99,8 +99,8 @@
 						<font>Light28</font>
 					</control>
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>1100</width>
 						<height>20</height>
 						<label></label>
@@ -126,6 +126,7 @@
 
 				<!-- page button right -->
 				<control type="button">
+					<left></left>
 					<right>0</right>
 					<top>-10</top>
 					<width>30</width>

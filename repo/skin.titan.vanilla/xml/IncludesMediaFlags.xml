@@ -35,8 +35,8 @@
     
     <include name="mediaflags_large_normal">
         <control type="grouplist">
-            <posy>-25</posy>
-            <posx>-25</posx>
+            <top>-25</top>
+            <left>-25</left>
 			<itemgap>-15</itemgap>
 			<orientation>horizontal</orientation>
 			<control type="image">
@@ -105,7 +105,7 @@
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
-						<posy>22</posy>
+						<top>22</top>
 						<colordiffuse>$VAR[mediaFlagsFontColor]</colordiffuse>
 						<texture>dialogs/videoinfo/time-icon.png</texture>
 					</control>
@@ -113,7 +113,7 @@
 				<control type="label" id="44227">
 					<font>flags</font>
 					<width>auto</width>
-					<posx>100</posx>
+					<left>100</left>
 					<height>80</height>
 					<aligny>center</aligny>
 					<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
@@ -124,7 +124,7 @@
 				<control type="label" id="44228">
 					<font>flags</font>
 					<width>auto</width>
-					<posx>100</posx>
+					<left>100</left>
 					<height>80</height>
 					<aligny>center</aligny>
 					<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
@@ -138,8 +138,8 @@
     
     <include name="mediaflags_large_widgets">
         <control type="grouplist">
-            <posy>-45</posy>
-            <posx>-25</posx>
+            <top>-45</top>
+            <left>-25</left>
             <itemgap>-10</itemgap>
 			<orientation>horizontal</orientation>
             <control type="image">
@@ -205,8 +205,8 @@
     
     <include name="mediaflags_large_osd">
         <control type="grouplist">
-            <posy>-25</posy>
-            <posx>-25</posx>
+            <top>-25</top>
+            <left>-25</left>
 			<itemgap>-15</itemgap>
 			<orientation>horizontal</orientation>
             <control type="image">
@@ -478,7 +478,7 @@
 				<!-- Aspect Ratio -->
 				<control type="image">
 					<colordiffuse>$VAR[mediaFlagsFontColor]</colordiffuse>
-					<texture fallback="flags/flags_classic/aspectration/default.png">$VAR[VideoAspectVar,flags/flags_classic/aspectration/,.png]</texture>
+					<texture fallback="flags/flags_classic/aspectration/default.png">$VAR[VideoAspectVar,flags/flags_classic/aspectratio/,.png]</texture>
 				</control>
 			</control>
 			<!-- Audio -->
@@ -524,6 +524,7 @@
 						<font>flags_classic</font>
 						<width>115</width>
 						<height>28</height>
+						<left></left>
 						<right>0</right>
 						<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
 						<label>$VAR[RatingFlagVar]</label>
@@ -547,6 +548,7 @@
 						<font>flags_classic</font>
 						<width>100</width>
 						<height>29</height>
+						<left></left>
 						<right>0</right>
 						<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
 						<label>Extras</label>
@@ -582,6 +584,7 @@
 						<font>flags_classic</font>
 						<width>135</width>
 						<height>30</height>
+						<left></left>
 						<right>-5</right>
 						<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
 						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.nextepisode.airdate)]</label>
@@ -597,8 +600,8 @@
     <include name="mediaflags_boxed">
 		<include>mediaflags_sets</include>
         <control type="grouplist">
-			<!-- <posx>-20</posx> -->
-			<!-- <posy>-30</posy> -->
+			<!-- <left>-20</left> -->
+			<!-- <top>-30</top> -->
 			<orientation>horizontal</orientation>
 			<!--Video Resolution-->
 			<control type="group">
@@ -636,14 +639,14 @@
 				<visible>!String.IsEmpty(Control.GetLabel(54224))</visible>
 				<control type="image">
 					<colordiffuse>$VAR[mediaFlagsFontColor]</colordiffuse>
-					<posx>-7</posx>
+					<left>-7</left>
 					<texture>flags/flag_box.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="label" id="54224">
 					<font>flags_small</font>
 					<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
-					<posx>-7</posx>
+					<left>-7</left>
 					<label>$VAR[VideoFileTypeVar]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -656,14 +659,14 @@
 				<height>36</height>
 				<visible>!String.IsEmpty(Control.GetLabel(54225))</visible>
 				<control type="image">
-				<posx>-7</posx>
+					<left>-7</left>
 					<colordiffuse>$VAR[mediaFlagsFontColor]</colordiffuse>
 					<texture>flags/flag_box.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="label" id="54225">
 					<font>flags_small</font>
-					<posx>-7</posx>
+					<left>-7</left>
 					<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
 					<label>$VAR[VideoCodecVar]</label>
 					<align>center</align>
@@ -677,14 +680,14 @@
 				<height>36</height>
 				<visible>!String.IsEmpty(Control.GetLabel(54226))</visible>
 				<control type="image">
-					<posx>-7</posx>
+					<left>-7</left>
 					<colordiffuse>$VAR[mediaFlagsFontColor]</colordiffuse>
 					<texture border="0,0,2,0">flags/flag_box.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="label" id="54226">
 					<font>flags_small</font>
-					<posx>-7</posx>
+					<left>-7</left>
 					<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
 					<label>$VAR[VideoAspectVar]</label>
 					<align>center</align>
@@ -710,6 +713,7 @@
 				</control>
 				<control type="label" id="54227">
 					<font>flags_small</font>
+					<left></left>
 					<right>0</right>
 					<width>95</width>
 					<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
@@ -725,14 +729,14 @@
 				<height>36</height>
 				<visible>!String.IsEmpty(Control.GetLabel(54228))</visible>
 				<control type="image">
-					<posx>-6</posx>
+					<left>-6</left>
 					<colordiffuse>$VAR[mediaFlagsFontColor]</colordiffuse>
 					<texture border="0,0,2,0">flags/flag_box.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="label" id="54228">
 					<font>flags_small</font>
-					<posx>-6</posx>
+					<left>-6</left>
 					<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
 					<label>$VAR[AudioChannelsVar]</label>
 					<align>center</align>
@@ -746,14 +750,14 @@
 				<height>36</height>
 				<visible>!String.IsEmpty(Control.GetLabel(55228))</visible>
 				<control type="image">
-					<posx>-6</posx>
+					<left>-6</left>
 					<colordiffuse>$VAR[mediaFlagsFontColor]</colordiffuse>
 					<texture border="0,0,2,0">flags/flag_box.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="label" id="55228">
 					<font>flags_small</font>
-					<posx>-6</posx>
+					<left>-6</left>
 					<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
 					<label>$VAR[AudioLanguageVar]</label>
 					<align>center</align>
@@ -779,6 +783,7 @@
 			</control>
 			<control type="label" id="55227">
 				<font>flags_small</font>
+				<left></left>
 				<right>5</right>
 				<width>50</width>
 				<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
@@ -797,19 +802,20 @@
 		</control>
 		<!-- mpaa rating -->
 		<control type="group">
-			<width>110</width>
+			<width>150</width>
 			<height>36</height>
 			<visible>!String.IsEmpty(Control.GetLabel(54229))</visible>
 			<control type="image">
-				<posx>-6</posx>
+				<left>-6</left>
 				<colordiffuse>$VAR[mediaFlagsFontColor]</colordiffuse>
 				<texture border="25,0,2,0">flags/flag_box_mpaa.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="label" id="54229">
 				<font>flags_small</font>
-				<posx>-6</posx>
-				<width>75</width>
+				<!-- <left>-6</left> -->
+				<left></left>
+				<width>105</width>
 				<right>5</right>
 				<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
 				<label>$VAR[RatingFlagVar]</label>
@@ -830,16 +836,16 @@
 			<height>36</height>
 			<visible>ListItem.HasVideoVersions | ListItem.HasVideoExtras | VideoPlayer.HasVideoVersions | String.Contains(Player.Folderpath, Extras) | String.Contains(Player.Folderpath, extras)</visible>
 			<control type="image">
-				<posx>-6</posx>
+				<left>-6</left>
 				<colordiffuse>$VAR[mediaFlagsFontColor]</colordiffuse>
 				<texture border="0,0,2,0">flags/flag_box.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="label" id="54329">
 				<font>flags_small</font>
-				<posx>-6</posx>
+				<left>-6</left>
 				<width>80</width>
-				<right>5</right>
+				<!-- <right>5</right> -->
 				<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
 				<label>Extras</label>
 				<align>center</align>
@@ -861,16 +867,17 @@
 			<visible>!String.IsEmpty(Control.GetLabel(54230))</visible>
 			<visible>!String.StartsWith(ListItem.Path,videodb://movies/sets/) + !String.StartsWith(Window.Property(xmlfile),My) + !String.Contains(Window(Home).Property(ListItem.Rating),songrating)</visible>
 			<control type="image">
-				<posx>-6</posx>
+				<left>-6</left>
 				<colordiffuse>$VAR[mediaFlagsFontColor]</colordiffuse>
 				<texture border="25,0,2,0">flags/flag_box_rating.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="label" id="54230">
 				<font>flags_small</font>
-				<posx>-6</posx>
+				<!-- <left>-6</left> -->
+				<left></left>
 				<width>80</width>
-				<right>0</right>
+				<right>5</right>
 				<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
 				<label>$VAR[rating_value_label]</label>
 				<align>center</align>
@@ -889,21 +896,21 @@
 		</control>
 		 <!-- nextaired info -->
 		<control type="group">
-			<width>400</width>
+			<width>200</width>
 			<height>36</height>
 			<visible>!String.IsEmpty(Control.GetLabel(54240))</visible>
 			<visible>Container.content(tvshows) | Container.content(seasons)</visible>
 			<control type="image">
-				<posx>-6</posx>
+				<left>-6</left>
 				<colordiffuse>$VAR[mediaFlagsFontColor]</colordiffuse>
 				<texture>flags/flag_box.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="label" id="54240">
 				<font>flags_small</font>
-				<posx>-6</posx>
-				<width>400</width>
-				<right>0</right>
+				<left>-6</left>
+				<width>200</width>
+				<!-- <right>0</right> -->
 				<textcolor>$VAR[mediaFlagsFontColor]</textcolor>
 				<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Status)]$INFO[Window(Home).Property(SkinHelper.ListItem.nextepisode.airdate), ]</label>
 				<align>center</align>
@@ -1074,7 +1081,7 @@
                 <control type="image">
                     <width>40</width>
                     <height>40</height>
-                    <posy>-5</posy>
+                    <top>-5</top>
                     <colordiffuse>$VAR[mediaFlagsFontColor]</colordiffuse>
                     <texture>dialogs/videoinfo/time-icon.png</texture>
                 </control>
@@ -1109,7 +1116,7 @@
             <visible>String.StartsWith(ListItem.Path,videodb://movies/sets/) + !String.IsEmpty(Window(Home).Property(ListItem.Count))</visible>
             <width>1000</width>
             <height>40</height>
-                <control type="label">
+            <control type="label">
                 <font>Reg30</font>
                 <width>auto</width>
                 <label>$INFO[Window(Home).Property(ListItem.UnwatchedCount)]/$INFO[Window(Home).Property(ListItem.Count)]  </label>
@@ -1142,7 +1149,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),1)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1150,7 +1157,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),1)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1163,7 +1170,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),2)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1171,7 +1178,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),2)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1184,7 +1191,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),3)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1192,7 +1199,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),3)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1205,7 +1212,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),4)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1213,7 +1220,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),4)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1226,7 +1233,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),5)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1234,7 +1241,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),5)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1247,7 +1254,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),6)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1255,7 +1262,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),6)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1268,7 +1275,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),7)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1276,7 +1283,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),7)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1289,7 +1296,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),8)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1297,7 +1304,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),8)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1310,7 +1317,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),9)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1318,7 +1325,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),9)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1331,7 +1338,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),10)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1339,7 +1346,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),10)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1352,7 +1359,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),11)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1360,7 +1367,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),11)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1373,7 +1380,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),12)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1381,7 +1388,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),12)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1394,7 +1401,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),13)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1402,7 +1409,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),13)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1415,7 +1422,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),14)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1423,7 +1430,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),14)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1436,7 +1443,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),15)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1444,7 +1451,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),15)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1457,7 +1464,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),16)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1465,7 +1472,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),16)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1478,7 +1485,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),17)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1486,7 +1493,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),17)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1499,7 +1506,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),18)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1507,7 +1514,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),18)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1520,7 +1527,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),19)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1528,7 +1535,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),19)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1541,7 +1548,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),20)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1549,7 +1556,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),20)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1562,7 +1569,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),21)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1570,7 +1577,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),21)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1583,7 +1590,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),22)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1591,7 +1598,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),22)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1604,7 +1611,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),23)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1612,7 +1619,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),23)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1625,7 +1632,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),24)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1633,7 +1640,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),24)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1646,7 +1653,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),25)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1654,7 +1661,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),25)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1667,7 +1674,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),26)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1675,7 +1682,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),26)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1688,7 +1695,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),27)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1696,7 +1703,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),27)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1709,7 +1716,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),28)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1717,7 +1724,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),28)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1730,7 +1737,7 @@
                 <height>40</height>
                 <visible>Integer.IsGreater(Window(Home).Property(ListItem.Count),29)</visible>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>
@@ -1738,7 +1745,7 @@
                     <visible>Integer.IsGreater(Window(Home).Property(ListItem.WatchedCount),29)</visible>
                 </control>
                 <control type="image">
-                    <posx>-45</posx>
+                    <left>-45</left>
                     <width>60</width>
                     <height>40</height>
                     <colordiffuse>$INFO[Skin.String(FooterTextColor)]</colordiffuse>

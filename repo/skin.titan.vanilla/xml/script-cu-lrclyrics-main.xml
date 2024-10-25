@@ -12,13 +12,13 @@
 		</control>
 
 		<control type="spincontrol" id="111">
-			<posx>-100</posx>
-			<posy>-100</posy>
+			<left>-100</left>
+			<top>-100</top>
 			<visible>false</visible>
 		</control>
 		<control type="spincontrol" id="121">
-			<posx>-100</posx>
-			<posy>-100</posy>
+			<left>-100</left>
+			<top>-100</top>
 			<visible>false</visible>
 		</control>
 			
@@ -30,8 +30,8 @@
 			<!-- touchscreen workaround -->
 			<!-- hidden button to exit dialog in touchscreen mode -->
 			<control type="button">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>100%</width>
 				<height>100%</height>
 				<align>center</align>
@@ -52,8 +52,8 @@
 <!-- <visible>!String.IsEmpty(Skin.String(LyricScript_Path))</visible> -->
 				<!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
                 <control type="list" id="110">
-					<posx>0</posx>
-					<posy>220</posy>
+					<left>0</left>
+					<top>220</top>
 					<width>1920</width>
 					<height>505</height>
 					<onleft>111</onleft>
@@ -64,8 +64,8 @@
 					<scrolltime>200</scrolltime>
 					<itemlayout width="1920" height="70">
 						<control type="label">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>1920</width>
 							<height>70</height>
 							<label fallback="•••">$INFO[ListItem.Label]</label>
@@ -77,8 +77,8 @@
 					</itemlayout>
 					<focusedlayout width="1920" height="85">
 						<control type="label">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>1920</width>
 							<height>85</height>
 							<label fallback="•••">$INFO[ListItem.Label,[B],[/B]]</label>
@@ -95,8 +95,8 @@
 		<!-- https://forum.kodi.tv/showthread.php?tid=343076&pid=2994313#pid2994313		-->
 				<!-- ** Required ** Do not change <id> or <type> (Song Chooser if it gets it wrong) -->
  <!--               <control type="list" id="120">
-					<posx>0</posx>
-					<posy>220</posy>
+					<left>0</left>
+					<top>220</top>
 					<width>1920</width>
 					<height>505</height>
 					<onleft>121</onleft>
@@ -107,8 +107,8 @@
                     <scrolltime>200</scrolltime>
 					<itemlayout width="1920" height="70">
 						<control type="label">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>1920</width>
 							<height>70</height>
 							<label fallback="•••">$INFO[ListItem.Label]</label>
@@ -120,8 +120,8 @@
 					</itemlayout>
 					<focusedlayout width="1920" height="85">
 						<control type="label">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>1920</width>
 							<height>85</height>
 							<label fallback="•••">$INFO[ListItem.Label,[B],[/B]]</label>

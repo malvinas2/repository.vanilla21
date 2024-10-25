@@ -18,14 +18,14 @@
             <height>75%</height>
             <!--Panel-->
             <control type="image">
-                <posx>50</posx>
+                <left>50</left>
                 <width>1820</width>
                 <texture border="15">diffuse/bgpanel.png</texture>
             <colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
             </control>
             
             <control type="image">
-                <posx>50</posx>
+                <left>50</left>
                 <width>560</width>
                 <texture border="15">diffuse/bgpanel.png</texture>
                 <colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
@@ -33,8 +33,8 @@
             
             <!--Picture	(Fanart)-->
             <control type="image">
-                <posx>80</posx>
-                <posy>30</posy>
+                <left>80</left>
+                <top>30</top>
                 <width>500</width>
                 <height>300</height>
                 <texture background="true">$INFO[Container(9000).ListItem.ActualIcon]</texture>
@@ -43,8 +43,8 @@
             
             <!--InfoText-->
             <control type="textbox">
-                <posx>80</posx>
-                <posy>360</posy>
+                <left>80</left>
+                <top>360</top>
                 <width>500</width>
                 <height>250</height>
                 <font>Light30</font>
@@ -55,7 +55,8 @@
             <!--List 9000-->
             <control type="panel" id="9000">
                 <viewtype label="31437">icons</viewtype>
-                <right>80</right>
+  				<left></left>
+				<right>80</right>
                 <top>20</top>
                 <height>780</height>
                 <width>1200</width>
@@ -202,7 +203,9 @@
 			<!--vertical Scollbar right-->
 			<control type="scrollbar" id="60">
 				<visible>Control.IsVisible(9000) + Integer.IsGreater(Container(9000).NumItems,0)</visible>
+				<left></left>
 				<right>15</right>
+				<top></top>
 				<bottom>3%</bottom>
 				<height>765</height>
 				<onup>60</onup>

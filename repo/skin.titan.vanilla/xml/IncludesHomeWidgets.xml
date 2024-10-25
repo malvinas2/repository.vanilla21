@@ -56,7 +56,7 @@
                 </animation>
             </control>
             <control type="label">
-                <posx>405</posx>
+                <left>405</left>
                 <top>25</top>
                 <width>1465</width>
                 <height>50</height>
@@ -69,7 +69,7 @@
             </control>
             <control type="textbox">
                 <width>1455</width>
-                <posx>405</posx>
+                <left>405</left>
                 <top>95</top>
                 <height>200</height>
                 <label>$VAR[HomeMenuWidgetInfoPlotAlt]</label>
@@ -90,7 +90,7 @@
             <!-- flags -->
             <control type="group">
                 <height>60</height>
-                <posx>405</posx>
+                <left>405</left>
                 <bottom>0</bottom>
                 <include>mediaflags</include>
             </control>
@@ -100,6 +100,7 @@
             <visible>!Skin.HasSetting(EnableTouchSupport)</visible>
             <control type="fadelabel">
                 <left></left>
+				<top></top>
                 <bottom>0</bottom>
                 <width>100%</width>
                 <height>100</height>
@@ -118,6 +119,7 @@
             </control>
             <control type="image" id="8821">
                 <width>100%</width>
+				<top></top>
                 <bottom>20</bottom>
                 <height>90</height>
                 <aspectratio align="center" aligny="bottom">keep</aspectratio>
@@ -1830,19 +1832,27 @@
     </include>
 	
     <include name="widget_base_content_submenu">
-        <content><include>skinshortcuts-group-$PARAM[submenuid]</include></content>
+        <content>
+			<include>skinshortcuts-group-$PARAM[submenuid]</include>
+		</content>
     </include>
 	
     <include name="widget_base_content_weather">
-        <content><include>StaticWidget_Weather</include></content>
+        <content>
+			<include>StaticWidget_Weather</include>
+		</content>
     </include>
 	
     <include name="widget_base_content_systeminfo">
-        <content><include>StaticWidget_SystemInfo</include></content>
+        <content>
+			<include>StaticWidget_SystemInfo</include>
+		</content>
     </include>
 	
     <include name="widget_base_content_rcb">
-        <content><include>StaticWidget_RCB</include></content>
+        <content>
+			<include>StaticWidget_RCB</include>
+		</content>
     </include>
     
     <variable name="focusWidget">

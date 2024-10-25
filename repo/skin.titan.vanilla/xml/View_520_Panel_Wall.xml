@@ -9,7 +9,7 @@
 			<include>GlobalBackground</include>
 			
             <control type="panel" id="520">
-                <posx>20</posx>
+                <left>20</left>
                 <top>20</top>
                 <height>1040</height>
                 <width>1881</width>
@@ -47,6 +47,7 @@
 			<!--vertical Scollbar-->
 			<control type="scrollbar" id="60">
 				<visible>Control.IsVisible(520) + Integer.IsGreater(Container.NumItems,0)</visible>
+				<left></left>
 				<right>0</right>
 				<top>20</top>
 				<height>1040</height>

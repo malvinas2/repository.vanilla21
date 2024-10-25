@@ -7,7 +7,7 @@
             <visible>Control.IsVisible(517)</visible>
             <control type="group">
                 <control type="panel" id="517">
-                    <posx>60</posx>
+                    <left>60</left>
                     <bottom>150</bottom>
                     <height>700</height>
                     <width>1820</width>
@@ -66,6 +66,8 @@
                             </control>
                             <control type="label">
                                 <width>420</width>
+								<left></left>
+								<top></top>
                                 <right>30</right>
                                 <bottom>20</bottom>
                                 <aligny>center</aligny>
@@ -128,6 +130,8 @@
                             </control>
                             <control type="label">
                                 <width>420</width>
+								<left></left>
+								<top></top>
                                 <right>30</right>
                                 <bottom>20</bottom>
                                 <aligny>center</aligny>
@@ -191,6 +195,8 @@
                             </control>
                             <control type="label">
                                 <width>600</width>
+								<left></left>
+								<top></top>
                                 <right>30</right>
                                 <bottom>20</bottom>
                                 <aligny>center</aligny>
@@ -253,6 +259,8 @@
                             </control>
                             <control type="label">
                                 <width>600</width>
+								<left></left>
+								<top></top>
                                 <right>30</right>
                                 <bottom>20</bottom>
                                 <aligny>center</aligny>
@@ -274,7 +282,9 @@
                 <!--vertical Scollbar-->
                 <control type="scrollbar" id="60">
                     <visible>Control.IsVisible(517) + Integer.IsGreater(Container.NumItems,0)</visible>
-                    <right>15</right>
+                    <left></left>
+					<top></top>
+					<right>15</right>
                     <bottom>150</bottom>
                     <height>730</height>
                     <onup>60</onup>
