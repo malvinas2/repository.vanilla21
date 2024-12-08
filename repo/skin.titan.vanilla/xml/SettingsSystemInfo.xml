@@ -36,7 +36,7 @@
 				<top>20</top>
 				<width>450</width>
 				<height>96%</height>
-				<itemgap>3</itemgap>
+				<itemgap>5</itemgap>
 				<onleft></onleft>
 				<onright>60</onright>
 				<onup>9000</onup>
@@ -48,6 +48,7 @@
 					<align>left</align>
 					<label>$LOCALIZE[20037]</label>
 					<font>Reg28</font>
+					<height>47</height>
 				</control>
 				<control type="button" id="94">
 					<description>Storage</description>
@@ -55,6 +56,7 @@
 					<align>left</align>
 					<label>$LOCALIZE[13277]</label>
 					<font>Reg28</font>
+					<height>47</height>
 				</control>
 				<control type="button" id="96">
 					<description>Network</description>
@@ -62,6 +64,7 @@
 					<align>left</align>
 					<label>$LOCALIZE[13279]</label>
 					<font>Reg28</font>
+					<height>47</height>
 				</control>
 				<control type="button" id="97">
 					<description>Video</description>
@@ -69,6 +72,7 @@
 					<align>left</align>
 					<label>$LOCALIZE[13280]</label>
 					<font>Reg28</font>
+					<height>47</height>
 				</control>
 				<control type="button" id="98">
 					<description>Hardware</description>
@@ -76,6 +80,7 @@
 					<align>left</align>
 					<label>$LOCALIZE[13281]</label>
 					<font>Reg28</font>
+					<height>47</height>
 				</control>
 				<control type="button" id="99">
 					<description>PVR</description>
@@ -83,6 +88,7 @@
 					<align>left</align>
 					<label>$LOCALIZE[19191]</label>
 					<font>Reg28</font>
+					<height>47</height>
 				</control>
 				<control type="button" id="100">
 					<description>Policy</description>
@@ -90,6 +96,7 @@
 					<align>left</align>
 					<label>$LOCALIZE[12389]</label>
 					<font>Reg28</font>
+					<height>47</height>
 				</control>
 			</control>
 			<!--Grouplist Info-->

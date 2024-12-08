@@ -1653,7 +1653,7 @@
                 <textureslidernib border="5" colordiffuse="$INFO[Skin.String(OSDProgressBarColor)]">diffuse/seekslider2.png</textureslidernib>
                 <textureslidernibfocus>colors/color_white.png</textureslidernibfocus>
 				<!-- <info>$VAR[seeksliderposition]</info> -->
-				<!-- <info>Player.Progress</info> -->
+				<info>Player.Progress</info>
 				<!-- <visible>Player.Seeking</visible> -->
 				<visible>Player.SeekEnabled</visible>
 			</control>

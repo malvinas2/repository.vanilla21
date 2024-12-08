@@ -3276,6 +3276,10 @@ msgctxt "#70058"
 msgid "Automatic Login on startup"
 msgstr ""
 
+msgctxt "#70059"
+msgid "Last logged in"
+msgstr ""
+
 msgctxt "#91830"
 msgid "items"
 msgstr ""

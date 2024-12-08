@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Titan-->
-<window type="dialog">
-    <defaultcontrol always="true">2</defaultcontrol>
+<!-- <window type="dialog"> -->
+<window>
+    <defaultcontrol always="true">9000</defaultcontrol>
 	
     <controls>
          <!--Global Background-->
@@ -11,10 +12,6 @@
 		
         <!--Header-->
         <include>Header</include>
-         <!--Footer-->
-        <include condition="!Skin.HasSetting(nofooterbar)">Footer</include>
-		<!--Titan Version-->
-        <include>TitanVersion</include>
 		
 		<control type="group">
 			<include>animation_window_open_close</include>
@@ -31,236 +28,286 @@
 			
 			<control type="image">
 				<left>50</left>
-				<width>560</width>
+				<width>520</width>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
 			</control>
 
-            <control type="image">
-                <description>List separator</description>
-                <left>660</left>
-                <top>41</top>
-                <width>1100</width>
-                <height>77</height>
-                <texture border="90,3,90,3">common/profil/separator.png</texture>
-            </control>
-			
-            <control type="radiobutton" id="4">
-                <left>80</left>
-                <top>41</top>
-                <width>520</width>
-                <label>$LOCALIZE[20096]</label>
-                <font>Reg28</font>
-				<onup>5</onup>
-				<onright>2</onright>
-				<align>left</align>
-                <ondown>444</ondown>
-            </control>
-			<control type="radiobutton" id="444">
-                <left>80</left>
-                <top>105</top>
-                <width>520</width>
-				<font>Reg28</font>
-                <label>$LOCALIZE[31147]</label>
-                <onup>4</onup>
-                <ondown>31692</ondown>
-				<onright>2</onright>
-				<align>left</align>
-				<onclick condition="!Skin.String(LoginBackground)">Skin.SetImage(LoginBackground)</onclick>
-				<onclick condition="Skin.String(LoginBackground)">Skin.Reset(LoginBackground)</onclick>
-				<selected>Skin.String(LoginBackground)</selected>
-				<visible>System.HasLoginScreen </visible>
-            </control>
-            <control type="radiobutton" id="31692">
-                <left>80</left>
-                <top>170</top>
-                <width>520</width>
-				<font>Reg28</font>
-                <label>$LOCALIZE[31692]</label>
-                <onup>444</onup>
-                <ondown>31693</ondown>
-				<onright>2</onright>
-				<align>left</align>
-				<onclick>Skin.ToggleSetting(LoginScreen_HideLoginInfo)</onclick>
-				<selected>Skin.HasSetting(LoginScreen_HideLoginInfo)</selected>
-				<visible>System.HasLoginScreen </visible>
-            </control>
-            <control type="radiobutton" id="31693">
-                <left>80</left>
-                <top>235</top>
-                <width>520</width>
-				<font>Reg28</font>
-                <label>$LOCALIZE[31693]</label>
-                <onup>31692</onup>
-                <ondown>5</ondown>
-				<onright>2</onright>
-				<align>left</align>
-				<onclick>Skin.ToggleSetting(LoginScreen_DisableContextMenu)</onclick>
-				<selected>Skin.HasSetting(LoginScreen_DisableContextMenu)</selected>
-				<visible>System.HasLoginScreen </visible>
-            </control>
-			<control type="button" id="5">
-			    <left>80</left>
-                <top>300</top>
-				<font>Reg28</font>
-                <width>520</width>
-				<label>$LOCALIZE[70058]</label>
-				<label2>[B]$INFO[System.ProfileAutoLogin][/B]</label2>
-				<enable>!Window.IsVisible(ProfileSettings) + !System.HasLoginScreen</enable>
-				<onup>31693</onup>
-				<onright>2</onright>
-				<align>left</align>
-                <ondown>4</ondown>
+			<!--Grouplist Buttons-->
+			<control type="grouplist" id="9000">
+				<left>90</left>
+				<top>20</top>
+				<width>450</width>
+				<height>96%</height>
+				<itemgap>5</itemgap>
+				<onleft></onleft>
+				<onright></onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<include>animation_window_open_close</include>
+				<control type="togglebutton" id="1">
+					<description>General</description>
+					<include>SkinSettings_MenuButtonLarge</include>
+					<width>450</width>
+					<onright>4</onright>
+					<onfocus>SetProperty(SettingsProfileSection,1,home)</onfocus>
+					<usealttexture>String.IsEqual(Window(Home).Property(SettingsProfileSection),1)</usealttexture>
+					<label>$LOCALIZE[128]</label>
+					<altlabel>$LOCALIZE[128]</altlabel>
+					<height>47</height>
+				</control>
+				<control type="togglebutton" id="223">
+					<description>Storage</description>
+					<include>SkinSettings_MenuButtonLarge</include>
+					<width>450</width>
+					<onright>2</onright>
+					<onfocus>SetProperty(SettingsProfileSection,223,home)</onfocus>
+					<usealttexture>String.IsEqual(Window(Home).Property(SettingsProfileSection),223)</usealttexture>
+					<altlabel>$LOCALIZE[13200]</altlabel>
+					<label>$LOCALIZE[13200]</label>
+					<height>47</height>
+				</control>
 			</control>
-			
-            <control type="list" id="2">
+
+			<control type="grouplist" id="9001">
+				<visible>String.IsEqual(Window(Home).Property(SettingsProfileSection),1)</visible>
+				<left>605</left>
+				<top>20</top>
+				<width>1230</width>
+				<height>80%</height>
+				<itemgap>5</itemgap>
+				<orientation>vertical</orientation>
+				<onleft>9000</onleft>
+				<onright></onright>
+				<onup>9001</onup>
+				<ondown>9001</ondown>
+				<!-- Header -->
+				<control type="label">
+					<include>SkinSettings_Header</include>
+					<label>$LOCALIZE[128]</label>
+					<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+				</control>
+				<control type="radiobutton" id="4">
+					<include>SkinSettings_Button</include>
+					<!-- <width>450</width> -->
+					<label>$LOCALIZE[20096]</label>
+					<!-- <font>Reg28</font> -->
+					<!-- <align>left</align> -->
+					<!-- <height>47</height> -->
+				</control>
+				<control type="radiobutton" id="444">
+					<include>SkinSettings_Button</include>
+					<label>$LOCALIZE[31147]</label>
+					<onclick condition="!Skin.String(LoginBackground)">Skin.SetImage(LoginBackground)</onclick>
+					<onclick condition="Skin.String(LoginBackground)">Skin.Reset(LoginBackground)</onclick>
+					<selected>Skin.String(LoginBackground)</selected>
+					<visible>System.HasLoginScreen</visible>
+				</control>
+				<control type="radiobutton" id="31692">
+					<include>SkinSettings_Button</include>
+					<label>$LOCALIZE[31692]</label>
+					<onclick>Skin.ToggleSetting(LoginScreen_HideLoginInfo)</onclick>
+					<selected>Skin.HasSetting(LoginScreen_HideLoginInfo)</selected>
+					<visible>System.HasLoginScreen</visible>
+				</control>
+				<control type="radiobutton" id="31693">
+					<include>SkinSettings_Button</include>
+					<label>$LOCALIZE[31693]</label>
+					<onclick>Skin.ToggleSetting(LoginScreen_DisableContextMenu)</onclick>
+					<selected>Skin.HasSetting(LoginScreen_DisableContextMenu)</selected>
+					<visible>System.HasLoginScreen</visible>
+				</control>
+				<control type="button" id="5">
+					<include>SkinSettings_Button</include>
+					<label>$LOCALIZE[70058]</label>
+					<label2>[B]$INFO[System.ProfileAutoLogin][/B]</label2>
+					<enable>!Window.IsVisible(ProfileSettings) + !System.HasLoginScreen</enable>
+				</control>
+			</control>
+
+
+			<control type="label">
+				<left>605</left>
+				<top>20</top>
+				<width>1100</width>
+				<visible>String.IsEqual(Window(Home).Property(SettingsProfileSection),223)</visible>
+				<include>SkinSettings_Header</include>
+				<label>$LOCALIZE[13200]</label>
+				<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+			</control>
+
+            <control type="panel" id="2">
                 <description>Control Area</description>
-                <left>660</left>
-                <top>41</top>
-                <width>1100</width>
+				<visible>String.IsEqual(Window(Home).Property(SettingsProfileSection),223)</visible>
+                <left>605</left>
+                <top>95</top>
+                <width>1230</width>
                 <height>80%</height>
-                <onleft></onleft>
-                <onright>40</onright>
-                <onup>4</onup>
-				<onleft>4</onleft>
-                <ondown>444</ondown>
-                <pagecontrol></pagecontrol>
-                <orientation>vertical</orientation>
-                <itemlayout height="76">
-                    <control type="image">
-                        <description>List separator</description>
-                        <left>0</left>
-                        <top>0</top>
-                        <width>1210</width>
-                        <height>77</height>
-                        <texture border="90,3,90,3">common/profil/separator.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>35</left>
-                        <top>10</top>
-                        <width>56</width>
-                        <height>56</height>
-                        <texture background="true" fallback="common/profil/avatar.png">$INFO[ListItem.Icon]</texture>
-                        <visible>!String.IsEmpty(ListItem.Icon)</visible>
-                    </control>
-                    <control type="label">
-                        <left>35</left>
-                        <top>0</top>
-                        <width>700</width>
-                        <height>74</height>
-                        <align>left</align>
-                        <aligny>center</aligny>
-						<font>Reg28</font>
-						<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-                        <info>ListItem.Label</info>
-                        <!-- <textcolor>96FFFFFF</textcolor> -->
-                        <!-- <font>Light28</font> -->
-                        <animation effect="slide" start="0" end="80" time="0" condition="!String.IsEmpty(ListItem.Icon)">Conditional</animation>
-                    </control>
-                    <control type="label">
-                        <left>1175</left>
-                        <top>0</top>
-                        <width>300</width>
-                        <height>74</height>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <info>ListItem.Label2</info>
-						<font>Reg28</font>
-						<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-                        <!-- <textcolor>96FFFFFF</textcolor> -->
-                        <!-- <font>Light28</font> -->
-                    </control>
-                </itemlayout>
-                <focusedlayout height="76">
-                    <control type="group">
-                        <visible>Control.HasFocus(2)</visible>
-                        <control type="image">
-                            <height>77</height>
-                            <width>1210</width>
-                            <texture diffuse="diffuse/panel.png" border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">colors/color_white.png</texture>
-                        </control>
-                        <control type="image">
-                            <left>35</left>
-                            <top>10</top>
-                            <width>56</width>
-                            <height>56</height>
-                            <texture background="true">$INFO[ListItem.Icon]</texture>
-                            <visible>!String.IsEmpty(ListItem.Icon)</visible>
-                        </control>
-                        <control type="label">
-                            <left>35</left>
-                            <top>0</top>
-                            <width>700</width>
-                            <height>74</height>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <info>ListItem.Label</info>
-                            <font>Reg28</font>
-							<textcolor>$INFO[Skin.String(ButtonFocusTextColor)]</textcolor>
-							<!-- <textcolor>black</textcolor> -->
-                            <!-- <font>Light28</font> -->
-                            <animation effect="slide" start="0" end="80" time="0" condition="!String.IsEmpty(ListItem.Icon)">Conditional</animation>
-                        </control>
-                        <control type="label">
-                            <left>1175</left>
-                            <top>0</top>
-                            <width>300</width>
-                            <height>74</height>
-                            <align>right</align>
-                            <aligny>center</aligny>
-                            <info>ListItem.Label2</info>
-							<font>Reg28</font>
-							<textcolor>$INFO[Skin.String(ButtonFocusTextColor)]</textcolor>
-                            <!-- <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor> -->
-                            <!-- <font>Light28</font> -->
-                        </control>
-                    </control>
-                    <control type="group">
-                        <visible>!Control.HasFocus(2)</visible>
-                        <control type="image">
-                            <description>List separator</description>
-                            <left>0</left>
-                            <top>0</top>
-                            <width>1210</width>
-                            <height>77</height>
-                            <texture border="90,3,90,3">common/profil/separator.png</texture>
-                        </control>
-                        <control type="image">
-                            <left>35</left>
-                            <top>10</top>
-                            <width>56</width>
-                            <height>56</height>
-                            <texture background="true" fallback="common/profil/avatar.png">$INFO[ListItem.Icon]</texture>
-                            <visible>!String.IsEmpty(ListItem.Icon)</visible>
-                        </control>
-                        <control type="label">
-                            <left>35</left>
-                            <top>0</top>
-                            <width>700</width>
-                            <height>74</height>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <info>ListItem.Label</info>
-                            <textcolor>96FFFFFF</textcolor>
-							<font>Reg28</font>
-                            <!-- <font>Light28</font> -->
-                            <animation effect="slide" start="0" end="80" time="0" condition="!String.IsEmpty(ListItem.Icon)">Conditional</animation>
-                        </control>
-                        <control type="label">
-                            <left>1175</left>
-                            <top>0</top>
-                            <width>300</width>
-                            <height>74</height>
-                            <align>right</align>
-                            <aligny>center</aligny>
-                            <info>ListItem.Label2</info>
-                            <textcolor>96FFFFFF</textcolor>
-							<font>Reg28</font>
-                            <!-- <font>Light28</font> -->
-                        </control>
-                    </control>
-                </focusedlayout>
-            </control>
+                <onright></onright>
+                <onup>2</onup>
+				<onleft>223</onleft>
+                <ondown>2</ondown>
+				<!-- Header -->
+				<control type="label">
+					<include>SkinSettings_Header</include>
+					<label>$LOCALIZE[13200]</label>
+					<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+				</control>
+
+				<itemlayout height="350" width="300">
+				    <control type="group">
+                        <width>280</width>
+                        <height>320</height>
+				
+						<control type="image">
+							<texture border="0">diffuse/poster.png</texture>
+							<colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
+							<include condition="Skin.String(thumbsborder_unfocused, 0)">thumbborder_0</include>
+							<include condition="Skin.String(thumbsborder_unfocused, 2)">thumbborder_2</include>
+							<include condition="Skin.String(thumbsborder_unfocused, 4)">thumbborder_4</include>
+							<include condition="Skin.String(thumbsborder_unfocused, 6)">thumbborder_6</include>
+						</control>
+				
+						<control type="image">
+							<texture border="1" background="true" diffuse="diffuse/poster.png" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
+							<aspectratio scalediffuse="false" aligny="top" align="center">stretch</aspectratio>
+							<bordersize>8</bordersize>
+						</control>
+						
+						<!--Panel-->
+						<control type="image">
+							<top></top>
+							<bottom>0</bottom>
+							<height>120</height>
+							<bordersize>8</bordersize>
+							<texture border="1">diffuse/poster_tag.png</texture>
+							<colordiffuse>$INFO[Skin.String(TagOverlaysPanelColor)]</colordiffuse>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<right>15</right>
+							<top></top>
+							<bottom>55</bottom>
+							<height>65</height>
+							<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Reg22</font>
+							<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+						</control>
+	
+						<control type="label">
+							<left>15</left>
+							<right>15</right>
+							<top></top>
+							<bottom>30</bottom>
+							<height>65</height>
+							<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[70059]:</label>
+							<font>Reg22</font>
+							<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+							<visible>!String.IsEqual(Listitem.Label,$LOCALIZE[20058])</visible>
+						</control>
+						
+						<control type="label">
+							<left>15</left>
+							<right>15</right>
+							<top></top>
+							<bottom>5</bottom>
+							<height>65</height>
+							<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label fallback="13170">$INFO[ListItem.Label2]</label>
+							<font>Reg22</font>
+							<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+							<visible>!String.IsEqual(Listitem.Label,$LOCALIZE[20058])</visible>
+						</control>
+					</control>
+				</itemlayout>				
+
+				<focusedlayout height="350" width="300">
+				    <control type="group">
+                        <width>280</width>
+                        <height>320</height>
+				
+						<control type="image">
+							<texture border="0">diffuse/poster.png</texture>
+							<colordiffuse>$VAR[ViewDetailsFocusColor]</colordiffuse>
+							<include condition="Skin.String(thumbsborder_focused, 2)">thumbborder_2</include>
+							<include condition="Skin.String(thumbsborder_focused, 4)">thumbborder_4</include>
+							<include condition="Skin.String(thumbsborder_focused, 6)">thumbborder_6</include>
+						</control>
+		
+						<control type="image">
+							<texture border="1" background="true" diffuse="diffuse/poster.png" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
+							<aspectratio scalediffuse="false" aligny="top" align="center">stretch</aspectratio>
+							<bordersize>8</bordersize>
+						</control>
+						
+			           <!--Panel-->
+						<control type="image">
+							<top></top>
+							<bottom>0</bottom>
+							<height>120</height>
+							<bordersize>8</bordersize>
+							<texture border="1">diffuse/poster_tag.png</texture>
+							<colordiffuse>$INFO[Skin.String(TagOverlaysPanelColor)]</colordiffuse>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<right>15</right>
+							<top></top>
+							<bottom>55</bottom>
+							<height>65</height>
+							<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Reg22</font>
+							<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+						</control>
+	
+						<control type="label">
+							<left>15</left>
+							<right>15</right>
+							<top></top>
+							<bottom>30</bottom>
+							<height>65</height>
+							<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[70059]:</label>
+							<font>Reg22</font>
+							<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+							<visible>!String.IsEqual(Listitem.Label,$LOCALIZE[20058])</visible>
+						</control>
+						
+						<control type="label">
+							<left>15</left>
+							<right>15</right>
+							<top></top>
+							<bottom>5</bottom>
+							<height>65</height>
+							<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label fallback="13170">$INFO[ListItem.Label2]</label>
+							<font>Reg22</font>
+							<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+							<visible>!String.IsEqual(Listitem.Label,$LOCALIZE[20058])</visible>
+						</control>
+					</control>
+				</focusedlayout>	
+			</control>
         </control>
+		
+		<!--Footer-->
+        <include condition="!Skin.HasSetting(nofooterbar)">Footer</include>
+		<!--Titan Version-->
+        <include>TitanVersion</include>
     </controls>
 </window>

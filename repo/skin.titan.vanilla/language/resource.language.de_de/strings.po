@@ -3250,6 +3250,10 @@ msgctxt "#70058"
 msgid "Automatic Login on startup"
 msgstr "Automatische Anmeldung beim Programmstart"
 
+msgctxt "#70059"
+msgid "Last logged in"
+msgstr "Zuletzt angemeldet"
+
 msgctxt "#71026"
 msgid "Timeshift"
 msgstr "Timeshift"

@@ -130,18 +130,18 @@
             ![Control.IsVisible(523) + Skin.String(View523.Tags,disable)]
         </visible>
         <visible>
-            [Control.IsVisible(52) + Skin.String(View52.Tags,enable)] | 
-            [Control.IsVisible(53) + Skin.String(View53.Tags,enable)] | 
-            [Control.IsVisible(54) + Skin.String(View54.Tags,enable)] | 
-            [Control.IsVisible(57) + Skin.String(View57.Tags,enable)] | 
-            [Control.IsVisible(58) + Skin.String(View58.Tags,enable)] | 
-            [Control.IsVisible(59) + Skin.String(View59.Tags,enable)] | 
-            [Control.IsVisible(508) + Skin.String(View508.Tags,enable)] | 
-            [Control.IsVisible(514) + Skin.String(View514.Tags,enable)] | 
-            [Control.IsVisible(519) + Skin.String(View519.Tags,enable)] | 
-            [Control.IsVisible(520) + Skin.String(View520.Tags,enable)] | 
-            [Control.IsVisible(521) + Skin.String(View521.Tags,enable)] | 
-            [Control.IsVisible(523) + Skin.String(View523.Tags,enable)] | 
+            [[Control.IsVisible(52) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View52.Tags,enable)] | 
+            [[Control.IsVisible(53) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View53.Tags,enable)] | 
+            [[Control.IsVisible(54) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View54.Tags,enable)] | 
+            [[Control.IsVisible(57) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View57.Tags,enable)] | 
+            [[Control.IsVisible(58) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View58.Tags,enable)] | 
+            [[Control.IsVisible(59) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View59.Tags,enable)] | 
+            [[Control.IsVisible(508) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View508.Tags,enable)] | 
+            [[Control.IsVisible(514) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View514.Tags,enable)] | 
+            [[Control.IsVisible(519) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View519.Tags,enable)] | 
+            [[Control.IsVisible(520) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View520.Tags,enable)] | 
+            [[Control.IsVisible(521) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View521.Tags,enable)] | 
+            [[Control.IsVisible(523) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View523.Tags,enable)] | 
             [[String.Contains(Window.Property(xmlfile),Nav) | Window.IsActive(Home)] + String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(tvshow.poster))] | 
             [Window.IsActive(script-script.extendedinfo-DialogVideoInfo.xml) + String.IsEmpty(ListItem.Art(fanart))] | 
             [!String.IsEmpty(ListItem.Episode) + !String.IsEmpty(ListItem.Season) + !Container.Content(seasons) + !String.IsEqual(ListItem.Label, ListItem.TvshowTitle) + Skin.HasSetting(ShowLabelsPosterEpisodes)]

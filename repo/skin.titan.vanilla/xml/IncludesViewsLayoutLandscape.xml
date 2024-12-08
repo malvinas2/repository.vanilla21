@@ -190,17 +190,18 @@
             !String.IsEqual(ListItem.Label,..)
         </visible>
         <visible>
-            [Control.IsVisible(501) + Skin.String(View501.Tags,enable)] | 
-            [Control.IsVisible(502) + Skin.String(View502.Tags,enable)] | 
-            [Control.IsVisible(505) + Skin.String(View505.Tags,enable)] | 
-            [[!Window.IsActive(Home) + Control.IsVisible(511)] + Skin.String(View511.Tags,enable)] | 
-            [Control.IsVisible(512) + Skin.String(View512.Tags,enable)] | 
-            [Control.IsVisible(523) + Skin.String(View523.Tags,enable)] | 
+            [[Control.IsVisible(501) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View501.Tags,enable)] | 
+            [[Control.IsVisible(502) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View502.Tags,enable)] | 
+            [[Control.IsVisible(505) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View505.Tags,enable)] | 
+            [[!Window.IsActive(Home) + [Control.IsVisible(511) | String.Contains(Window.Property(xmlfile),ContextMenu)]] + Skin.String(View511.Tags,enable)] | 
+            [[Control.IsVisible(512) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View512.Tags,enable)] | 
+            [[Control.IsVisible(523) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View523.Tags,enable)] | 
             [String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(clearlogo)) + !String.Contains(ListItem.Art(thumb),icon.png)] |
             [String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.Property(DBTYPE),episode)] |
             !String.IsEmpty(ListItem.Property(defaultID))
         </visible>
 	</include>
+
 	
 	<include name="ThumbsTagOverlay">
         <control type="image">

@@ -345,7 +345,8 @@
                     </control>
                     <control type="label">
                         <!--Time: Start, End (RIGHT)-->
-                        <right>5</right>
+                        <left></left>
+						<right>5</right>
                         <top>75</top>
                         <width>110</width>
                         <height>20</height>

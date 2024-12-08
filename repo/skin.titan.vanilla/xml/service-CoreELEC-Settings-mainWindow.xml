@@ -1,0 +1,1444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window id="5534">
+    <defaultcontrol always="true">1000</defaultcontrol>
+    <controls>
+         <!--Global Background-->
+        <include>GlobalBackground</include>
+ 		<!-- Now playing -->
+		<include>NowPlayingModern</include>
+		
+        <!--Header-->
+        <include>Header</include>
+		
+		<control type="group">
+			<include>animation_window_open_close</include>
+			<bottom>125</bottom>
+			<height>75%</height>
+			
+			<!--Panel-->
+			<control type="image">
+				<left>50</left>
+				<width>1820</width>
+				<texture border="15">diffuse/bgpanel.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+			</control>
+			
+			<control type="image">
+				<left>50</left>
+				<width>520</width>
+				<texture border="15">diffuse/bgpanel.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+			</control>
+
+			<!-- Main Menu (left) -->
+            <control type="list" id="1000">
+				<left>90</left>
+				<top>20</top>
+				<width>450</width>
+				<height>700</height>
+				<itemgap>5</itemgap>
+				<onleft>1500</onleft>
+				<onright condition="String.IsEqual(Container(1000).ListItem.Property(listTyp), 1100)">1100</onright>
+				<onright condition="String.IsEqual(Container(1000).ListItem.Property(listTyp), 1900)">1900</onright>
+				<onright condition="String.IsEqual(Container(1000).ListItem.Property(listTyp), 1200)">1200</onright>
+				<onright condition="String.IsEqual(Container(1000).ListItem.Property(listTyp), 1300)">1300</onright>
+				<itemlayout height="52" width="450">
+					<control type="togglebutton">
+						<width>450</width>
+						<height>47</height>
+						<include>SkinSettings_MenuButtonLarge</include>
+					</control>
+					<control type="label">
+						<font>Reg28</font>
+						<width>390</width>
+                        <textcolor>$INFO[Skin.String(ButtonTextColor)]</textcolor>
+                        <left>50</left>
+						<height>47</height>
+						<align>left</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="52" width="450">
+                    <control type="togglebutton">
+						<width>450</width>
+						<height>47</height>
+						<include>SkinSettings_MenuButtonLarge</include>
+						<usealttexture>Control.HasFocus(1100) | Control.HasFocus(1300) | Control.HasFocus(1900) | Control.HasFocus(1200)</usealttexture>
+					</control>
+					<control type="label">
+						<font>Reg28</font>
+						<width>390</width>
+                        <textcolor>$INFO[Skin.String(ButtonFocusTextColor)]</textcolor>
+						<left>50</left>
+						<height>47</height>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+            </control>
+
+            <control type="image">
+                <description>LOGO</description>
+                <left>90</left>
+                <top></top>
+				<bottom>20</bottom>
+                <width>450</width>
+                <height>250</height>
+                <aspectratio>keep</aspectratio>
+                <texture>special://skin/extras/openelec/coreelec_logo.png</texture>
+            </control>
+
+			
+            <!-- Other Content (right)-->
+            <control type="group" id="9000">
+                <left>605</left>
+                <top>20</top>
+                <width>1230</width>
+                <height>80%</height>
+				<!-- about page -->
+                <control type="group" id="1900">
+                    <left>0</left>
+					<width>100%</width>
+					<height>96%</height>
+					<itemgap>15</itemgap>
+					<orientation>vertical</orientation>
+                    <visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1900)</visible>  
+                    <control type="label">
+                        <left>20</left>
+                        <top>20</top>
+                        <width>300</width>
+                        <height>16</height>
+                        <font>Reg28</font>
+                        <textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$ADDON[service.coreelec.settings 606]</label>
+                    </control>	
+                    <control type="label">
+                        <left>310</left>
+                        <top>20</top>
+                        <width>600</width>
+                        <height>16</height>
+                        <font>Reg28</font>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(Distri)] ($INFO[Window.Property(build)])</label>
+                    </control>
+                    <control type="label">
+                        <left>20</left>
+                        <top>52</top>
+                        <width>300</width>
+                        <height>16</height>
+                        <font>Reg28</font>
+                        <textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$ADDON[service.coreelec.settings 607]</label>
+                    </control>	
+                    <control type="label">
+                        <left>310</left>
+                        <top>52</top>
+                        <width>600</width>
+                        <height>16</height>
+                        <font>Reg28</font>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(Version)]</label>
+                    </control>
+                    <control type="label">
+                        <left>20</left>
+                        <top>84</top>
+                        <width>300</width>
+                        <height>16</height>
+                        <font>Reg28</font>
+                        <textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$ADDON[service.coreelec.settings 608]</label>
+                    </control>
+                    <control type="label">
+                        <left>310</left>
+                        <top>84</top>
+                        <width>600</width>
+                        <height>16</height>
+                        <font>Reg28</font>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(Arch)]</label>
+                    </control>	
+                    <control type="textbox">
+                        <left>20</left>
+                        <top>130</top>
+                        <width>1200</width>
+                        <height>100</height>
+                        <font>Reg26</font>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                        <label>$ADDON[service.coreelec.settings 609]</label>
+                    </control>		
+                    <control type="textbox">
+                        <left>20</left>
+                        <top>250</top>
+                        <width>1200</width>
+                        <height>260</height>
+                        <font>Reg26</font>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                        <label>$ADDON[service.coreelec.settings 610]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>20</left>
+                        <top>550</top>
+                        <width>1200</width>
+                        <height>80</height>
+                        <font>Reg26</font>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                        <align>left</align>
+                        <label>$ADDON[service.coreelec.settings 611]</label>
+                    </control>
+                </control>       
+                <!-- simple list content -->
+				<control type="list" id="1100">
+                    <left>0</left>
+					<width>100%</width>
+					<height>96%</height>
+					<itemgap>20</itemgap>
+					<!-- <orientation>vertical</orientation> -->
+					
+					<!-- <left>605</left> -->
+                    <!-- <top>20</top> -->
+                    <!-- <width>1230</width> -->
+                    <!-- <height>80%</height> -->
+                    <onleft>1000</onleft>
+					<!-- <ondown condition="![Control.IsVisible(1504) | Control.IsVisible(1503) | Control.IsVisible(1502) | Control.IsVisible(1501) | Control.IsVisible(1500)]">1000</ondown> -->
+					<!-- <ondown condition="[Control.IsVisible(1504) | Control.IsVisible(1503) | Control.IsVisible(1502) | Control.IsVisible(1501) | Control.IsVisible(1500)]">1499</ondown> -->
+                    <pagecontrol>60</pagecontrol>
+					<onright>60</onright>
+                    <scrolltime>300</scrolltime>
+                    <visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1100)</visible>    
+                    <itemlayout height="50">
+                        <control type="group">
+                            <visible>!String.IsEqual(ListItem.Property(Typ), separator)</visible>
+								<control type="image">
+                                <left>0</left>
+                                <top>2</top>
+                                <width>1200</width>
+                                <height>45</height>
+								<texture border="5" colordiffuse="$INFO[Skin.String(ButtonColor)]">diffuse/panel.png</texture>
+                            </control>
+                            <control type="label">
+                                <left>40</left>
+                                <top>2</top>
+                                <width>500</width>
+                                <height>40</height>
+								<font>Reg26</font>
+                                <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                                <selectedcolor>white</selectedcolor>
+                                <info>ListItem.Label</info>
+                            </control>
+                            <control type="label">
+                                <align>right</align>
+                                <left>580</left>
+                                <top>2</top>
+                                <width>600</width>
+                                <height>40</height>	
+                                <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+								<font>Reg26</font>
+                                <selectedcolor>white</selectedcolor>
+                                <info>ListItem.Property(value)</info>
+                                <visible>!String.IsEqual(ListItem.Property(Typ), bool) + !String.IsEqual(ListItem.Property(Typ), button)</visible>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <visible>String.IsEqual(ListItem.Property(Typ), separator)</visible>
+                            <control type="image">
+                                <left>0</left>
+                                <top>36</top>
+                                <width>796</width>
+                                <height>3</height>
+                                <texture>dialogs/default/separator.png</texture>
+                                </control>
+                            <control type="label">
+                                <left>15</left>
+                                <top>5</top>
+                                <width>600</width>
+                                <height>45</height>
+                                <font>Reg26</font>
+                                <textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+                                <info>ListItem.Label</info>
+                                <visible>true</visible>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <visible>String.IsEqual(ListItem.Property(Typ), bool)</visible>
+                            <control type="image">
+                                <left>1090</left>
+                                <top>-12</top>
+                                <width>120</width>
+                                <height>70</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>common/radio/radio-button-nf.png</texture>
+                                <visible>String.IsEqual(ListItem.Property(value), 0) | String.IsEqual(ListItem.Property(value), false) | String.IsEmpty(ListItem.Property(value))</visible>
+                            </control>
+                            <control type="image">
+                                <left>1090</left>
+                                <top>-12</top>
+                                <width>120</width>
+                                <height>70</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" flipx="true">common/radio/radio-button-nf.png</texture>
+                                <visible>String.IsEqual(ListItem.Property(value), 1) | String.IsEqual(ListItem.Property(value), true)</visible>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <visible>String.IsEqual(ListItem.Property(Typ), button)</visible>
+                            <control type="image">
+                                <left>1140</left>
+                                <top>9</top>
+                                <width>30</width>
+                                <height>30</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>common/settings1.png</texture>
+                            </control>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="50">  
+                        <control type="group">
+                            <visible>!String.IsEqual(ListItem.Property(Typ), separator)</visible>
+                            <control type="image">
+                                <left>0</left>
+                                <top>2</top>
+                                <width>1200</width>
+                                <height>45</height>
+								<visible>Control.HasFocus(1100)</visible>
+                                <texture diffuse="diffuse/panel.png" border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">colors/color_white.png</texture>
+                            </control>
+							<control type="image">
+                                <left>0</left>
+                                <top>2</top>
+                                <width>1200</width>
+                                <height>45</height>
+								<visible>!Control.HasFocus(1100)</visible>
+								<texture border="5" colordiffuse="$INFO[Skin.String(ButtonColor)]">diffuse/panel.png</texture>
+                            </control>
+                            <control type="label">
+                                <left>40</left>
+                                <top>2</top>
+                                <width>500</width>
+                                <height>40</height>
+								<font>Reg26</font>
+                                <textcolor>black</textcolor>
+                                <info>ListItem.Label</info>
+                                <visible>Control.HasFocus(1100)</visible>
+                            </control>
+                            <control type="label">
+                                <align>right</align>
+                                <left>580</left>
+                                <top>2</top>
+                                <width>600</width>
+                                <height>40</height>
+								<font>Reg26</font>
+                                <textcolor>black</textcolor>
+                                <info>ListItem.Property(value)</info>
+                                <visible>!String.IsEqual(ListItem.Property(Typ), bool) + !String.IsEqual(ListItem.Property(Typ), button) + Control.HasFocus(1100)</visible>
+                            </control>
+                            <control type="label">
+                                <left>40</left>
+                                <top>2</top>
+                                <width>500</width>
+                                <height>40</height>
+                                <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                                <info>ListItem.Label</info>
+								<font>Reg26</font>
+                                <visible>!Control.HasFocus(1100)</visible>
+                            </control>
+                            <control type="label">
+                                <align>right</align>
+                                <left>580</left>
+                                <top>2</top>
+                                <width>600</width>
+                                <height>40</height>
+                                <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                                <info>ListItem.Property(value)</info>
+                                <visible>!String.IsEqual(ListItem.Property(Typ), bool) + !String.IsEqual(ListItem.Property(Typ), button) + !Control.HasFocus(1100)</visible>
+                            </control> 
+                        </control>
+                        <control type="group">
+                            <visible>String.IsEqual(ListItem.Property(Typ), separator)</visible>
+                            <control type="image">
+                                <left>0</left>
+                                <top>36</top>
+                                <width>796</width>
+                                <height>3</height>
+                                <texture>dialogs/default/separator.png</texture>
+                                </control>
+                            <control type="label">
+                                <left>15</left>
+                                <top>5</top>
+                                <width>600</width>
+                                <height>45</height>
+                                <font>Reg26</font>
+                                <textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+                                <info>ListItem.Label</info>
+                                <visible>true</visible>
+                            </control>
+                        </control>
+                        <control type="group">
+                           <visible>String.IsEqual(ListItem.Property(Typ), bool)</visible>
+                           <control type="image">
+                                <left>1090</left>
+                                <top>-12</top>
+                                <width>120</width>
+                                <height>70</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>common/radio/radio-button-nf.png</texture>
+                                <visible>String.IsEqual(ListItem.Property(value), 0) | String.IsEqual(ListItem.Property(value), false) | String.IsEmpty(ListItem.Property(value))</visible>
+                            </control>
+                            <control type="image">
+                                <left>1090</left>
+                                <top>-12</top>
+                                <width>120</width>
+                                <height>70</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" flipx="true">common/radio/radio-button-nf.png</texture>
+                                <visible>String.IsEqual(ListItem.Property(value), 1) | String.IsEqual(ListItem.Property(value), true)</visible>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <visible>String.IsEqual(ListItem.Property(Typ), button)</visible>
+                            <control type="image">
+                                <left>1140</left>
+                                <top>9</top>
+                                <width>30</width>
+                                <height>30</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>common/settings1.png</texture>
+                            </control>
+                        </control>						
+                    </focusedlayout> 
+				</control> 
+				<!-- Network Menu Content -->
+                <control type="list" id="1200">
+                    <left>0</left>
+					<width>100%</width>
+					<height>96%</height>
+					<itemgap>20</itemgap>
+					<orientation>vertical</orientation>
+					
+					<!-- <left>605</left> -->
+                    <!-- <top>20</top> -->
+                    <!-- <width>1230</width> -->
+                    <!-- <height>760</height> -->
+                    <onleft>1000</onleft>
+                    <onright>60</onright>
+					<pagecontrol>60</pagecontrol>
+                    <scrolltime>300</scrolltime>
+                    <visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1200)</visible>    
+                    <itemlayout height="100">
+                        <left>0</left>
+                        <top>2</top>
+                        <control type="image">
+                            <left>0</left>
+                            <top>2</top>
+                            <width>1200</width>
+                            <height>98</height>
+                            <texture border="5" colordiffuse="$INFO[Skin.String(ButtonColor)]">diffuse/panel.png</texture>
+                        </control>
+						<!-- Icon ethernet -->
+                        <control type="image">
+                            <left>10</left>
+                            <top>20</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(netType), ethernet)</visible> 
+                            <texture>special://skin/extras/openelec/eth.png</texture>
+                        </control>
+						<!-- Icon vpn -->
+                        <control type="image">
+                            <left>10</left>
+                            <top>20</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(netType), vpn)</visible>
+                            <texture>special://skin/extras/openelec/vpn.png</texture>
+                        </control>
+                        <!-- Icon wifi -->
+                        <control type="image">
+                            <left>10</left>
+                            <top>20</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(netType), wifi)</visible> 
+                            <texture>special://skin/extras/openelec/wlan.png</texture>
+                        </control>
+                        <!-- Connection Name -->
+                        <control type="label">
+                            <left>70</left>
+                            <top>10</top>
+                            <width>390</width>
+                            <height>40</height>							
+                            <font>Reg26</font>
+                            <textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+                            <info>ListItem.Label</info>
+                            <visible>true</visible>
+                        </control>
+                        <!-- Interface -->
+                        <control type="label">
+                            <left>70</left>
+                            <top>49</top>
+                            <width>200</width>
+                            <height>40</height>
+                            <font>Reg22</font>
+                            <textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+                            <label>$ADDON[service.coreelec.settings 601]: [COLOR=white]$INFO[ListItem.Property(Interface)][/COLOR]</label>
+                            <visible>!String.IsEmpty(ListItem.Property(Interface))</visible>
+                        </control>
+                        <!-- Connection Address -->
+                        <control type="label">
+                            <left>300</left>
+                            <top>49</top>
+                            <width>250</width>
+                            <height>40</height>
+                            <font>Reg22</font>
+                            <textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+                            <label>$ADDON[service.coreelec.settings 602]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+                            <visible>String.IsEqual(ListItem.Property(State), online) | String.IsEqual(ListItem.Property(State), ready)</visible>
+                        </control>
+                        <!-- Method -->
+                        <control type="label">
+                            <left>600</left>
+                            <top>49</top>
+                            <width>200</width>
+                            <height>40</height>
+                            <font>Reg22</font>
+                            <textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+                            <label>$ADDON[service.coreelec.settings 603]: [COLOR=white]$INFO[ListItem.Property(Method)][/COLOR]</label>
+                        </control>
+                        <!-- State -->
+                        <control type="label">
+                            <left>600</left>
+                            <top>10</top>
+                            <width>200</width>
+                            <height>40</height>
+                            <font>Reg22</font>
+                            <textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+                            <label>$ADDON[service.coreelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State)][/COLOR]</label>
+                        </control>
+                        <!-- Signal strength -->
+                        <control type="progress">
+                            <left>810</left>
+                            <top>60</top>
+                            <width>250</width>
+                            <height>25</height>
+                            <info>ListItem.Property(Strength)</info>
+                            <visible>String.IsEqual(ListItem.Property(netType), wifi)</visible>
+                        </control>
+                        <!-- Signal strength value -->
+                        <control type="label">
+                            <left>1060</left>
+                            <top>49</top>
+                            <width>100</width>
+                            <height>40</height>
+                            <font>Reg20</font>
+                            <align>right</align>
+                            <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                            <label>$INFO[ListItem.Property(Strength)] %</label>
+                            <visible>String.IsEqual(ListItem.Property(netType), wifi)</visible>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="100">
+                        <left>0</left>
+                        <top>2</top>
+						<control type="group">
+							<visible>Control.HasFocus(1200)</visible>
+							<control type="image">
+								<left>0</left>
+								<top>2</top>
+								<width>1200</width>
+								<height>98</height>
+								<texture diffuse="diffuse/panel.png" border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">colors/color_white.png</texture>
+							</control>
+							<!-- Icon ethernet -->
+							<control type="image">
+								<left>10</left>
+								<top>20</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<colordiffuse>black</colordiffuse>
+								<visible>String.IsEqual(ListItem.Property(netType), ethernet)</visible> 
+								<texture>special://skin/extras/openelec/eth.png</texture>
+							</control>
+							<!-- Icon vpn -->
+							<control type="image">
+								<left>10</left>
+								<top>20</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<colordiffuse>black</colordiffuse>
+								<visible>String.IsEqual(ListItem.Property(netType), vpn)</visible>
+								<texture>special://skin/extras/openelec/vpn.png</texture>
+							</control>
+							<!-- Icon wifi -->
+							<control type="image">
+								<left>10</left>
+								<top>20</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<colordiffuse>black</colordiffuse>
+								<visible>String.IsEqual(ListItem.Property(netType), wifi)</visible> 
+								<texture>special://skin/extras/openelec/wlan.png</texture>
+							</control>
+							<!-- Connection Name -->
+							<control type="label">
+								<left>70</left>
+								<top>10</top>
+								<width>390</width>
+								<height>40</height>							
+								<font>Reg26</font>
+								<textcolor>black</textcolor>
+								<info>ListItem.Label</info>
+								<visible>true</visible>
+							</control>
+							<!-- Interface -->
+							<control type="label">
+								<left>70</left>
+								<top>49</top>
+								<width>200</width>
+								<height>40</height>
+								<font>Reg22</font>
+								<textcolor>black</textcolor>
+								<label>$ADDON[service.coreelec.settings 601]: [COLOR=black]$INFO[ListItem.Property(Interface)][/COLOR]</label>
+								<visible>!String.IsEmpty(ListItem.Property(Interface))</visible>
+							</control>
+							<!-- Connection Address -->
+							<control type="label">
+								<left>300</left>
+								<top>49</top>
+								<width>250</width>
+								<height>40</height>
+								<font>Reg22</font>
+								<textcolor>black</textcolor>
+								<label>$ADDON[service.coreelec.settings 602]: [COLOR=black]$INFO[ListItem.Property(Address)][/COLOR]</label>
+								<visible>String.IsEqual(ListItem.Property(State), online) | String.IsEqual(ListItem.Property(State), ready)</visible>
+							</control>
+							<!-- Method -->
+							<control type="label">
+								<left>600</left>
+								<top>49</top>
+								<width>200</width>
+								<height>40</height>
+								<font>Reg22</font>
+								<textcolor>black</textcolor>
+								<label>$ADDON[service.coreelec.settings 603]: [COLOR=black]$INFO[ListItem.Property(Method)][/COLOR]</label>
+							</control>
+							<!-- State -->
+							<control type="label">
+								<left>600</left>
+								<top>10</top>
+								<width>200</width>
+								<height>40</height>
+								<font>Reg22</font>
+								<textcolor>black</textcolor>
+								<label>$ADDON[service.coreelec.settings 604]: [COLOR=black]$INFO[ListItem.Property(State)][/COLOR]</label>
+							</control>
+							<!-- Signal strength -->
+							<control type="progress">
+								<left>810</left>
+								<top>60</top>
+								<width>250</width>
+								<height>25</height>
+								<info>ListItem.Property(Strength)</info>
+								<visible>String.IsEqual(ListItem.Property(netType), wifi)</visible>
+							</control>
+							<!-- Signal strength value -->
+							<control type="label">
+								<left>1060</left>
+								<top>49</top>
+								<width>100</width>
+								<height>40</height>
+								<font>Reg20</font>
+								<align>right</align>
+								<textcolor>black</textcolor>
+								<label>$INFO[ListItem.Property(Strength)] %</label>
+								<visible>String.IsEqual(ListItem.Property(netType), wifi)</visible>
+							</control>
+						</control>
+                		<control type="group">
+							<visible>!Control.HasFocus(1200)</visible>
+							<control type="image">
+								<left>0</left>
+								<top>2</top>
+								<width>1200</width>
+								<height>98</height>
+								<texture border="5" colordiffuse="$INFO[Skin.String(ButtonColor)]">diffuse/panel.png</texture>
+							</control>
+							<!-- Icon ethernet -->
+							<control type="image">
+								<left>10</left>
+								<top>20</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(netType), ethernet)</visible> 
+								<texture>special://skin/extras/openelec/eth.png</texture>
+							</control>
+							<!-- Icon vpn -->
+							<control type="image">
+								<left>10</left>
+								<top>20</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(netType), vpn)</visible>
+								<texture>special://skin/extras/openelec/vpn.png</texture>
+							</control>
+							<!-- Icon wifi -->
+							<control type="image">
+								<left>10</left>
+								<top>20</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(netType), wifi)</visible> 
+								<texture>special://skin/extras/openelec/wlan.png</texture>
+							</control>
+							<!-- Connection Name -->
+							<control type="label">
+								<left>70</left>
+								<top>10</top>
+								<width>390</width>
+								<height>40</height>							
+								<font>Reg26</font>
+								<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+								<info>ListItem.Label</info>
+								<visible>true</visible>
+							</control>
+							<!-- Interface -->
+							<control type="label">
+								<left>70</left>
+								<top>49</top>
+								<width>200</width>
+								<height>40</height>
+								<font>Reg22</font>
+								<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+								<label>$ADDON[service.coreelec.settings 601]: [COLOR=white]$INFO[ListItem.Property(Interface)][/COLOR]</label>
+								<visible>!String.IsEmpty(ListItem.Property(Interface))</visible>
+							</control>
+							<!-- Connection Address -->
+							<control type="label">
+								<left>300</left>
+								<top>49</top>
+								<width>250</width>
+								<height>40</height>
+								<font>Reg22</font>
+								<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+								<label>$ADDON[service.coreelec.settings 602]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+								<visible>String.IsEqual(ListItem.Property(State), online) | String.IsEqual(ListItem.Property(State), ready)</visible>
+							</control>
+							<!-- Method -->
+							<control type="label">
+								<left>600</left>
+								<top>49</top>
+								<width>200</width>
+								<height>40</height>
+								<font>Reg22</font>
+								<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+								<label>$ADDON[service.coreelec.settings 603]: [COLOR=white]$INFO[ListItem.Property(Method)][/COLOR]</label>
+							</control>
+							<!-- State -->
+							<control type="label">
+								<left>600</left>
+								<top>10</top>
+								<width>200</width>
+								<height>40</height>
+								<font>Reg22</font>
+								<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+								<label>$ADDON[service.coreelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State)][/COLOR]</label>
+							</control>
+							<!-- Signal strength -->
+							<control type="progress">
+								<left>810</left>
+								<top>60</top>
+								<width>250</width>
+								<height>25</height>
+								<info>ListItem.Property(Strength)</info>
+								<visible>String.IsEqual(ListItem.Property(netType), wifi)</visible>
+							</control>
+							<!-- Signal strength value -->
+							<control type="label">
+								<left>1060</left>
+								<top>49</top>
+								<width>100</width>
+								<height>40</height>
+								<font>Reg20</font>
+								<align>right</align>
+								<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+								<label>$INFO[ListItem.Property(Strength)] %</label>
+								<visible>String.IsEqual(ListItem.Property(netType), wifi)</visible>
+							</control>
+						</control>
+                    </focusedlayout> 
+                </control>
+                <!-- Bluetooth Menu Content -->
+                <control type="label" id="1301">
+                    <left>20</left>
+                    <top>200</top>
+                    <width>1160</width>
+                    <height>220</height>
+                    <info>
+                    </info>
+                    <align>left</align>
+                    <visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1300) + String.IsEqual(Container(1300).NumItems, 0)</visible> 
+                </control>
+                <control type="list" id="1300">
+                    <left>0</left>
+                    <top>20</top>
+                    <width>1200</width>
+                    <height>760</height>
+                    <onleft>1000</onleft>
+                    <onright>60</onright>
+					<pagecontrol>60</pagecontrol>
+					<itemgap>20</itemgap>
+					<orientation>vertical</orientation>
+                    <scrolltime>300</scrolltime>
+                    <visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1300)</visible>    
+                    <itemlayout height="100">
+                        <left>0</left>
+                        <top>2</top>
+                        <control type="image">
+                            <left>0</left>
+                            <top>2</top>
+                            <width>1200</width>
+                            <height>98</height>
+							<texture border="5" colordiffuse="$INFO[Skin.String(ButtonColor)]">diffuse/panel.png</texture>
+                        </control>
+                        <!-- default -->
+                        <control type="image">
+                            <left>15</left>
+                            <top>12</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), default)</visible> 
+                            <texture>special://skin/extras/openelec/bt.png</texture>	
+                        </control>
+                        <!-- modem -->
+                        <control type="image">
+                            <left>15</left>
+                            <top>12</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), modem)</visible> 
+                            <texture>special://skin/extras/openelec/bt-modem.png</texture>
+                        </control>
+                        <!-- audio -->
+                        <control type="image">
+                            <left>15</left>
+                            <top>12</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), audio-card)</visible> 
+                            <texture>special://skin/extras/openelec/bt-audio-card.png</texture>
+                        </control>
+                        <!-- Camera Photo -->
+                        <control type="image">
+                            <left>15</left>
+                            <top>12</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), camera-photo)</visible> 
+                            <texture>special://skin/extras/openelec/bt-camera-photo.png</texture>
+                        </control>		
+                        <!-- Icon phone -->
+                        <control type="image">
+                            <left>15</left>
+                            <top>12</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), phone)</visible> 
+                            <texture>special://skin/extras/openelec/bt-phone.png</texture>
+                        </control>	
+                        <!-- camera-video -->
+                        <control type="image">
+                            <left>15</left>
+                            <top>12</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), camera-video)</visible> 
+                            <texture>special://skin/extras/openelec/bt-camera-video.png</texture>
+                        </control>
+                        <!-- input-mouse -->
+                        <control type="image">
+                            <left>15</left>
+                            <top>12</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), input-mouse)</visible> 
+                            <texture>special://skin/extras/openelec/bt-input-mouse.png</texture>
+                        </control>								
+                        <!-- input-gaming -->
+                        <control type="image">
+                            <left>15</left>
+                            <top>12</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), input-gaming)</visible> 
+                            <texture>special://skin/extras/openelec/bt-input-gaming.png</texture>
+                        </control>	
+                        <!-- input-keyboard -->
+                        <control type="image">
+                            <left>15</left>
+                            <top>12</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), input-keyboard)</visible> 
+                            <texture>special://skin/extras/openelec/bt-input-keyboard.png</texture>
+                        </control>	
+                        <!-- input-tablet -->
+                        <control type="image">
+                            <left>15</left>
+                            <top>12</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), input-tablet)</visible> 
+                            <texture>special://skin/extras/openelec/bt-input-tablet.png</texture>
+                        </control>	
+                        <!-- Printer -->
+                        <control type="image">
+                            <left>15</left>
+                            <top>12</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), printer)</visible> 
+                            <texture>special://skin/extras/openelec/bt-printer.png</texture>
+                        </control>
+                        <!-- Computer -->
+                        <control type="image">
+                            <left>15</left>
+                            <top>12</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), computer)</visible> 
+                            <texture>special://skin/extras/openelec/bt-computer.png</texture>
+                        </control> 
+						<!-- Connection Name -->
+                        <control type="label">
+                            <left>120</left>
+                            <top>10</top>
+                            <width>390</width>
+                            <height>40</height>
+                            <font>Reg26</font>
+                            <textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+                            <info>ListItem.Label</info>
+                            <visible>true</visible>
+                        </control>
+                        <!-- Connection Address -->
+                        <control type="label">
+                            <left>120</left>
+                            <top>42</top>
+                            <width>350</width>
+                            <height>40</height>
+                            <font>Reg22</font>
+                            <textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+                            <label>$ADDON[service.coreelec.settings 605]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+                        </control>
+                        <!-- Connected State -->
+                        <control type="label">
+                            <left>520</left>
+                            <top>42</top>
+                            <width>350</width>
+                            <height>40</height>
+                            <font>Reg22</font>
+                            <textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+							<label>$ADDON[service.coreelec.settings 32333]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+                        </control>
+                        <!-- Paired Symbol (bottom right) -->
+                        <control type="image">
+                            <left>720</left>
+                            <top>42</top>
+                            <width>20</width>
+                            <height>40</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Paired), 1)</visible> 
+                            <texture>special://skin/extras/openelec/Favorite.png</texture>
+                        </control>
+                        <!-- Trusted Symbol (bottom right) -->
+                        <control type="image">
+                            <left>750</left>
+                            <top>42</top>
+                            <width>20</width>
+                            <height>40</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>Integer.IsGreater(ListItem.Property(Trusted), 0)</visible> 
+                            <texture>special://skin/extras/openelec/Key.png</texture>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="100">
+                        <left>0</left>
+                        <top>2</top>
+                        <control type="group">
+							<visible>Control.HasFocus(1300)</visible>
+							<control type="image">
+								<left>0</left>
+								<top>2</top>
+								<width>1200</width>
+								<height>98</height>
+								<texture diffuse="diffuse/panel.png" border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">colors/color_white.png</texture>
+							</control>
+							 <!-- default -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), default)</visible> 
+								<texture>special://skin/extras/openelec/bt.png</texture>	
+							</control>
+							<!-- modem -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), modem)</visible> 
+								<texture>special://skin/extras/openelec/bt-modem.png</texture>
+							</control>
+							<!-- audio -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), audio-card)</visible> 
+								<texture>special://skin/extras/openelec/bt-audio-card.png</texture>
+							</control>
+							<!-- Camera Photo -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), camera-photo)</visible> 
+								<texture>special://skin/extras/openelec/bt-camera-photo.png</texture>
+							</control>		
+							<!-- Icon phone -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), phone)</visible> 
+								<texture>special://skin/extras/openelec/bt-phone.png</texture>
+							</control>	
+							<!-- camera-video -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), camera-video)</visible> 
+								<texture>special://skin/extras/openelec/bt-camera-video.png</texture>
+							</control>
+							<!-- input-mouse -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), input-mouse)</visible> 
+								<texture>special://skin/extras/openelec/bt-input-mouse.png</texture>
+							</control>								
+							<!-- input-gaming -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), input-gaming)</visible> 
+								<texture>special://skin/extras/openelec/bt-input-gaming.png</texture>
+							</control>	
+							<!-- input-keyboard -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), input-keyboard)</visible> 
+								<texture>special://skin/extras/openelec/bt-input-keyboard.png</texture>
+							</control>	
+							<!-- input-tablet -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), input-tablet)</visible> 
+								<texture>special://skin/extras/openelec/bt-input-tablet.png</texture>
+							</control>	
+							<!-- Printer -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), printer)</visible> 
+								<texture>special://skin/extras/openelec/bt-printer.png</texture>
+							</control>
+							<!-- Computer -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), computer)</visible> 
+								<texture>special://skin/extras/openelec/bt-computer.png</texture>
+							</control> 
+							<!-- Connection Name -->
+							<control type="label">
+								<left>120</left>
+								<top>10</top>
+								<width>390</width>
+								<height>40</height>
+								<font>Reg26</font>
+								<textcolor>black</textcolor>
+								<info>ListItem.Label</info>
+								<visible>true</visible>
+							</control>
+							<!-- Connection Address -->
+							<control type="label">
+								<left>120</left>
+								<top>42</top>
+								<width>350</width>
+								<height>40</height>
+								<font>Reg22</font>
+								<textcolor>black</textcolor>
+								<label>$ADDON[service.coreelec.settings 605]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+							</control>
+							<!-- Connected State -->
+							<control type="label">
+								<left>520</left>
+								<top>42</top>
+								<width>350</width>
+								<height>40</height>
+								<font>Reg22</font>
+								<textcolor>black</textcolor>
+								<label>$ADDON[service.coreelec.settings 32333]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+							</control>
+							<!-- Paired Symbol (bottom right) -->
+							<control type="image">
+								<left>720</left>
+								<top>42</top>
+								<width>20</width>
+								<height>40</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Paired), 1)</visible> 
+								<texture>special://skin/extras/openelec/Favorite.png</texture>
+							</control>
+							<!-- Trusted Symbol (bottom right) -->
+							<control type="image">
+								<left>750</left>
+								<top>42</top>
+								<width>20</width>
+								<height>40</height>
+								<aspectratio>keep</aspectratio>
+								<visible>Integer.IsGreater(ListItem.Property(Trusted), 0)</visible> 
+								<texture>special://skin/extras/openelec/Key.png</texture>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!Control.HasFocus(1300)</visible>
+								<control type="image">
+									<left>0</left>
+									<top>2</top>
+									<width>1200</width>
+									<height>98</height>
+									<texture border="5" colordiffuse="$INFO[Skin.String(ButtonColor)]">diffuse/panel.png</texture>
+								</control>
+							 <!-- default -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), default)</visible> 
+								<texture>special://skin/extras/openelec/bt.png</texture>	
+							</control>
+							<!-- modem -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), modem)</visible> 
+								<texture>special://skin/extras/openelec/bt-modem.png</texture>
+							</control>
+							<!-- audio -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), audio-card)</visible> 
+								<texture>special://skin/extras/openelec/bt-audio-card.png</texture>
+							</control>
+							<!-- Camera Photo -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), camera-photo)</visible> 
+								<texture>special://skin/extras/openelec/bt-camera-photo.png</texture>
+							</control>		
+							<!-- Icon phone -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), phone)</visible> 
+								<texture>special://skin/extras/openelec/bt-phone.png</texture>
+							</control>	
+							<!-- camera-video -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), camera-video)</visible> 
+								<texture>special://skin/extras/openelec/bt-camera-video.png</texture>
+							</control>
+							<!-- input-mouse -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), input-mouse)</visible> 
+								<texture>special://skin/extras/openelec/bt-input-mouse.png</texture>
+							</control>								
+							<!-- input-gaming -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), input-gaming)</visible> 
+								<texture>special://skin/extras/openelec/bt-input-gaming.png</texture>
+							</control>	
+							<!-- input-keyboard -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), input-keyboard)</visible> 
+								<texture>special://skin/extras/openelec/bt-input-keyboard.png</texture>
+							</control>	
+							<!-- input-tablet -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), input-tablet)</visible> 
+								<texture>special://skin/extras/openelec/bt-input-tablet.png</texture>
+							</control>	
+							<!-- Printer -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), printer)</visible> 
+								<texture>special://skin/extras/openelec/bt-printer.png</texture>
+							</control>
+							<!-- Computer -->
+							<control type="image">
+								<left>15</left>
+								<top>12</top>
+								<width>48</width>
+								<height>48</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Icon), computer)</visible> 
+								<texture>special://skin/extras/openelec/bt-computer.png</texture>
+							</control>                                                            
+							<control type="label">
+								<left>120</left>
+								<top>10</top>
+								<width>390</width>
+								<height>40</height>
+								<font>Reg26</font>
+								<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+								<info>ListItem.Label</info>
+								<visible>true</visible>
+							</control>
+							<!-- Connection Address -->
+							<control type="label">
+								<left>120</left>
+								<top>42</top>
+								<width>350</width>
+								<height>40</height>
+								<font>Reg22</font>
+								<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+								<label>$ADDON[service.coreelec.settings 605]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+							</control>
+							<!-- Connected State -->
+							<control type="label">
+								<left>520</left>
+								<top>42</top>
+								<width>350</width>
+								<height>40</height>
+								<font>Reg22</font>
+								<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+								<label>$ADDON[service.coreelec.settings 32333]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+							</control>
+							<!-- Paired Symbol (bottom right) -->
+							<control type="image">
+								<left>720</left>
+								<top>42</top>
+								<width>20</width>
+								<height>40</height>
+								<aspectratio>keep</aspectratio>
+								<visible>String.IsEqual(ListItem.Property(Paired), 1)</visible> 
+								<texture>special://skin/extras/openelec/Favorite.png</texture>
+							</control>
+							<!-- Trusted Symbol (bottom right) -->
+							<control type="image">
+								<left>750</left>
+								<top>42</top>
+								<width>20</width>
+								<height>40</height>
+								<aspectratio>keep</aspectratio>
+								<visible>Integer.IsGreater(ListItem.Property(Trusted), 0)</visible> 
+								<texture>special://skin/extras/openelec/Key.png</texture>
+							</control>
+						</control>
+                    </focusedlayout> 
+                </control>
+            </control>
+
+			
+			<control type="textbox" id="1400">
+				<description>description area</description>
+				<left>600</left>
+				<top></top>
+				<bottom>15</bottom>
+				<scroll>true</scroll>
+				<height>140</height>
+				<width>1200</width>
+				<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
+				<font>Reg28</font>
+				<align>justify</align>
+				<label>$INFO[Window.Property(InfoText)]</label>
+				<!-- <visible>ControlGroup(9000).HasFocus()</visible> -->
+			</control>
+
+     			<!-- save and edit buttons -->
+			 <control type="grouplist" id="1499">
+                <left>680</left>
+                <top>800</top>
+				<width>1200</width>
+				<!-- <ondown>1100</ondown> -->
+				<!-- <onup>1100</onup> -->
+				<ondown>9000</ondown>
+				<onup>9000</onup>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+
+				<control type="button" id="1501">
+				<!-- <control type="button"> -->
+					<width>300</width>
+					<height>80</height>
+					<align>center</align>
+					<include>DialogButtonOther</include>
+					<!-- <label>button1501</label> -->
+					<visible>String.IsEmpty(Control.GetLabel(1501))</visible>
+					<onleft>1500</onleft>
+					<!-- <onleft>1000</onleft> -->
+					<onright>1500</onright>
+				</control>
+				<control type="button" id="1500">
+				<!-- <control type="button"> -->
+					<width>300</width>
+					<height>80</height>
+					<align>center</align>
+					<include>DialogButtonOther</include>
+					<!-- <label>button1501</label> -->
+					<visible>String.IsEmpty(Control.GetLabel(1500))</visible>
+					<onleft>1501</onleft>
+					<onright>1501</onright>
+					<!-- <onright>1000</onright> -->
+				</control>
+			</control>
+
+			<!--vertical Scollbar right-->
+			<control type="scrollbar" id="60">
+				<visible>Control.IsVisible(1100) | Control.IsVisible(1200) | Control.IsVisible(1300)</visible>
+				<left></left>
+				<right>15</right>
+				<top></top>
+				<bottom>3%</bottom>
+				<height>765</height>
+				<!-- <onup>60</onup> -->
+				<!-- <ondown>6000</ondown> -->
+				<onleft>9000</onleft>
+				<onright>1500</onright>
+				<animation effect="fade" start="0" end="100" time="400" condition="[Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)] + !Control.IsVisible(6002)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)] | Control.IsVisible(6002)">Conditional</animation>
+			</control>
+
+
+        </control>
+		
+		<!--Footer-->
+        <include condition="!Skin.HasSetting(nofooterbar)">Footer</include>
+		<!--Titan Version-->
+        <include>TitanVersion</include>
+		
+    </controls>
+</window>

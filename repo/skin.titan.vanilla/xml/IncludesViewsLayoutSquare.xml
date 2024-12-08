@@ -81,14 +81,15 @@
             !String.IsEqual(ListItem.Property(disableLabel), disable)
         </visible>
         <visible>
-            [Control.IsVisible(509) + Skin.String(View509.Tags,enable)] | 
-            [Control.IsVisible(510) + Skin.String(View510.Tags,enable)] | 
+            [[Control.IsVisible(509) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View509.Tags,enable)] | 
+            [[Control.IsVisible(510) | String.Contains(Window.Property(xmlfile),ContextMenu)] + Skin.String(View510.Tags,enable)] | 
             !String.IsEmpty(ListItem.Property(defaultID)) | 
-            [Control.IsVisible(509) + !Skin.String(View509.Tags) + !String.Contains(ListItem.Art(thumb),icon.png)] | 
-            [Control.IsVisible(510) + !Skin.String(View510.Tags) + !String.Contains(ListItem.Art(thumb),icon.png)] |
+            [[Control.IsVisible(509) | String.Contains(Window.Property(xmlfile),ContextMenu)] + !Skin.String(View509.Tags) + !String.Contains(ListItem.Art(thumb),icon.png)] | 
+            [[Control.IsVisible(510) | String.Contains(Window.Property(xmlfile),ContextMenu)] + !Skin.String(View510.Tags) + !String.Contains(ListItem.Art(thumb),icon.png)] |
             Window.IsActive(settings) | Window.IsActive(musicinformation)
         </visible>
     </include>
+	
 	
     <include name="SquarePosterTagOverlay">
         <control type="group">

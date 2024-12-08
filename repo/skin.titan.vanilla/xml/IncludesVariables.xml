@@ -93,6 +93,8 @@
         
         <value condition="[Window.IsActive(skinsettings) | Window.IsActive(3016)]">$VAR[value_header_skinsettings]</value>
 		<value condition="Window.IsActive(script-script.extendedinfo-DialogInfo.xml)">[CR]</value>
+		<value condition="Window.IsActive(service-CoreELEC-Settings-mainWindow.xml)">$LOCALIZE[70009] - CoreELEC</value>		
+		<value condition="Window.IsActive(service-LibreELEC-Settings-mainWindow.xml)">$LOCALIZE[70009] - LibreELEC</value>
 		<value condition="Window.IsActive(weather)">$INFO[Control.GetLabel(3)]</value>
         <value condition="Window.IsActive(Home)">$INFO[Container(300).ListItem.Label]</value>
 		<value condition="[Window.IsActive(tvrecordings) | Window.IsActive(tvtimers) | Window.IsActive(tvchannels) | Window.IsActive(tvguide) | Window.IsActive(mypvr.xml)] + !String.IsEmpty(Pvr.NowRecordingTitle)">$INFO[Pvr.NowRecordingTitle,$LOCALIZE[19158]: ] ($INFO[Pvr.NowRecordingChannel])</value>
