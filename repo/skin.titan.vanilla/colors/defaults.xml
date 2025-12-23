@@ -2,24 +2,24 @@
 <colors>
 
 	<!-- All others -->
-	<color name="black">FF1b1b1b</color>	
+	<color name="black">FF1B1B1B</color>	
 	<color name="red">FFFF0000</color>
 	<color name="blue">FF0000FF</color>
-	<color name="darkblue">ff011222</color>
+	<color name="darkblue">FF011222</color>
 	<color name="green">FF00FF00</color>	
-	<color name="WidgetPosterDiffuse">aaFFFFFF</color>
+	<color name="WidgetPosterDiffuse">AAFFFFFF</color>
 	<color name="PrimaryM">FFFFFFFF</color>
     <color name="None">00FFFFFF</color>
 	
-	<color name="pink">ffffc0cb</color>
-	<color name="purple">ff3a0079</color>
-	<color name="lime">ff32cd32</color>
-	<color name="yellow">ffffff00</color>
-	<color name="cyan">ff00ffff</color>
-	<color name="magenta">ffff00ff</color>
+	<color name="pink">FFFFC0CB</color>
+	<color name="purple">FF3A0079</color>
+	<color name="lime">FF32CD32</color>
+	<color name="yellow">FFFFFF00</color>
+	<color name="cyan">FF00FFFF</color>
+	<color name="magenta">FFFF00FF</color>
 
 	<!--Confluence Compatibility-->
-	<color name="selected">ff6495ed </color>
+	<color name="selected">FF6495ED </color>
 	<color name="grey2">FF999999</color>
 	<color name="grey3">FF505050</color>
 	<color name="invalid">FFFF0000</color>
@@ -27,20 +27,20 @@
 	<!--Global-->
 	<!--Titan 00b8ff-->
 	<!--Avalon 6aa5cb-->
-	<color name="mainblue">FF00b8ff</color>			<!--Main Blue-->	
-	<color name="ccmainblue">cc00b8ff</color>		<!--Main Blue-->		
-	<color name="orange">FFff7800</color>			<!--Orange-->		
+	<color name="mainblue">FF00B8FF</color>			<!--Main Blue-->	
+	<color name="ccmainblue">CC00B8FF</color>		<!--Main Blue-->		
+	<color name="orange">FFFF7800</color>			<!--Orange-->		
 	
 	<!--List 50, and all other List Views-->
-	<color name="list_label_1_fo">cc00b8ff</color>		<!--CC Main Blue-->
+	<color name="list_label_1_fo">CC00B8FF</color>		<!--CC Main Blue-->
 	<color name="list_label_1_nf">$VAR[ThemeFontColorMidGrey]</color>		<!--Mid Grey-->
-	<color name="list_label_1_select">cc00b8ff</color>	<!--CC Main Blue-->
-	<color name="list_label_2_first">7700b8ff</color>	<!--77 Main Blue-->
+	<color name="list_label_1_select">CC00B8FF</color>	<!--CC Main Blue-->
+	<color name="list_label_2_first">7700B8FF</color>	<!--77 Main Blue-->
 	<color name="list_label_2_second">FF858585</color>	<!--Light Grey-->	
 	<color name="list_label_info">FF686868</color>		<!--Mid Grey-->		
 	<color name="list_separator">BBFFFFFF</color>		<!--Diffuse-->	
 	<color name="list_flag">77FFFFFF</color>			<!--Diffuse-->
-	<color name="panel_color">ff011222</color>
+	<color name="panel_color">FF011222</color>
 	<!--Video Info-->
 	<color name="video_info_flag">77FFFFFF</color>		<!--Diffuse-->
 	
@@ -48,12 +48,12 @@
 	<color name="grey">FFC0C2C2</color>
 	<color name="lightgrey">FF858585</color>      
 	<color name="midgrey">FF686868</color>      
-	<color name="bluegrey">ffC6C6C8</color>
-	<color name="darkgrey">FF3e3e3e</color>
+	<color name="bluegrey">FFC6C6C8</color>
+	<color name="darkgrey">FF3E3E3E</color>
 	<color name="darkgrey2">FF666769</color>		
 	
 	<!--White-->
-	<color name="white">FFfffeff</color>
+	<color name="white">FFFFFEFF</color>
 	<color name="77white">77FFFFFF</color>	
 	<color name="aawhite">AAFFFFFF</color>  
 	<color name="bbwhite">BBFFFFFF</color>  

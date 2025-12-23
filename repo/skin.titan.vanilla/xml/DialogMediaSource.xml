@@ -1,309 +1,309 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window>
-    <defaultcontrol always="true">9002</defaultcontrol>
-    <controls>
-        <!--Dialog Overlay-->
-        <include>DialogOverlayExtra</include>
+	<defaultcontrol always="true">9002</defaultcontrol>
+	<controls>
+		<!--Dialog Overlay-->
+		<include>DialogOverlayExtra</include>
 		<include condition="Skin.HasSetting(EnableTouchSupport)">Footer</include>
-        <!--Dialog Media Source-->
-        <control type="group">
-           <include>animation_window_open_close</include>
-            <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup)</visible>
+		<!--Dialog Media Source-->
+		<control type="group">
+		   <include>animation_window_open_close</include>
+			<visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup)</visible>
 			<control type="image">
-                <!--Panel-->
-                 <left>445</left>
-                <top>280</top>
-                <width>1030</width>
-                <height>531</height>
-                <texture border="15">diffuse/bgpanel.png</texture>
+				<!--Panel-->
+				 <left>445</left>
+				<top>280</top>
+				<width>1030</width>
+				<height>531</height>
+				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-            </control>
+			</control>
 			<control type="image">
-                <!--Panel-->
-                <left>445</left>
-                <top>280</top>
-                <width>1030</width>
-                <height>531</height>
+				<!--Panel-->
+				<left>445</left>
+				<top>280</top>
+				<width>1030</width>
+				<height>531</height>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<bordersize>10</bordersize>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-            </control>
-            <control type="image">
-                <left>479</left>
-                <top>413</top>
-                <width>690</width>
-                <height>181</height>
-                <texture border="5">dialogs/default/inner.png</texture>
-            </control>
-            <control type="image">
-                <left>1183</left>
-                <top>413</top>
-                <width>258</width>
-                <height>181</height>
-                <texture border="5">dialogs/default/inner.png</texture>
-            </control>
-            <control type="image">
-                <left>479</left>
-                <top>647</top>
-                <width>962</width>
-                <height>61</height>
-                <texture border="5">dialogs/default/inner.png</texture>
-            </control>
+			</control>
+			<control type="image">
+				<left>479</left>
+				<top>413</top>
+				<width>690</width>
+				<height>181</height>
+				<texture border="5">dialogs/default/inner.png</texture>
+			</control>
+			<control type="image">
+				<left>1183</left>
+				<top>413</top>
+				<width>258</width>
+				<height>181</height>
+				<texture border="5">dialogs/default/inner.png</texture>
+			</control>
+			<control type="image">
+				<left>479</left>
+				<top>647</top>
+				<width>962</width>
+				<height>61</height>
+				<texture border="5">dialogs/default/inner.png</texture>
+			</control>
 			<!--Header-->
-            <control type="label" id="2">
-                <description>Heading</description>
-                <left>473</left>
-                <top>297</top>
-                <width>974</width>
-                <label>$LOCALIZE[20333]</label>
-                <align>center</align>
-                <include>DialogHeader</include>
-            </control>
-            <!--Groups-->
-            <control type="group" id="9002">
-                <control type="label">
-                    <description>Path label</description>
-                    <left>479</left>
-                    <top>375</top>
-                    <width>922</width>
-                    <height>30</height>
-                    <align>left</align>
-                    <textoffsetx>20</textoffsetx>
-                    <label>$LOCALIZE[1021]</label>
-                    <include>DialogLabel</include>
-                </control>
-                <control type="list" id="10">
-                    <left>479</left>
-                    <top>413</top>
-                    <width>690</width>
-                    <height>180</height>
-                    <onup>9001</onup>
-                    <onleft>9004</onleft>
-                    <onright>60</onright>
-                    <ondown>9003</ondown>
-                    <pagecontrol>60</pagecontrol>
-                    <scrolltime tween="cubic" easing="out">500</scrolltime>
-                    <itemlayout height="60">
-                        <control type="image">
-                            <left>0</left>
-                            <top>1</top>
-                            <width>690</width>
-                            <height>60</height>
-                            <texture>dialogs/default/separator.png</texture>
-                        </control>
-                        <control type="label">
-                            <left>20</left>
-                            <width>596</width>
-                            <height>60</height>
-                            <info>ListItem.Label</info>
-                            <include>DialogListNF</include>
-                            <scroll>false</scroll>
-                        </control>
-                        <control type="image">
-                            <left>616</left>
-                            <width>74</width>
-                            <height>60</height>
-                            <texture>dialogs/mediasource/rules-nf.png</texture>
-                            <colordiffuse>$INFO[Skin.String(GeneralTextColor)]</colordiffuse>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout height="60">
-                        <control type="group">
-                            <visible>!Control.HasFocus(10)</visible>
-                            <control type="image">
-                                <left>0</left>
-                                <top>1</top>
-                                <width>690</width>
-                                <height>60</height>
-                                <texture>dialogs/default/separator.png</texture>
-                            </control>
-                            <control type="label">
-                                <left>20</left>
-                                <width>596</width>
-                                <height>60</height>
-                                <info>ListItem.Label</info>
-                                <include>DialogListNF</include>
-                                <scroll>false</scroll>
-                            </control>
-                            <control type="image">
-                                <left>616</left>
-                                <width>74</width>
-                                <height>60</height>
-                                <texture>dialogs/mediasource/rules-nf.png</texture>
-                                <colordiffuse>$INFO[Skin.String(GeneralTextColor)]</colordiffuse>
-                                <visible>!ListItem.IsSelected</visible>
-                            </control>
-                        </control>
-                        <control type="group">
-                            <visible>Control.HasFocus(10)</visible>
-                            <control type="image">
-                                <width>690</width>
-                                <height>60</height>
-                                <texture border="5">diffuse/panel.png</texture>
-                                <colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
-                            </control>
-                            <control type="label">
-                                <left>20</left>
-                                <width>596</width>
-                                <height>60</height>
-                                <info>ListItem.Label</info>
-                                <include>DialogListFO</include>
-                                <scroll>false</scroll>
-                            </control>
-                            <control type="image">
-                                <left>616</left>
-                                <width>74</width>
-                                <height>60</height>
-                                <texture>dialogs/mediasource/rules-nf.png</texture>
-                                <colordiffuse>$INFO[Skin.String(ButtonFocusTextColor)]</colordiffuse>
-                                <visible>!ListItem.IsSelected</visible>
-                            </control>
-                        </control>
-                        <control type="image">
-                            <left>633</left>
-							<top>10</top>
-                            <width>40</width>
-                            <height>40</height>
-                            <texture>common/checkbox.png</texture>
+			<control type="label" id="2">
+				<description>Heading</description>
+				<left>473</left>
+				<top>297</top>
+				<width>974</width>
+				<label>$LOCALIZE[20333]</label>
+				<align>center</align>
+				<include>DialogHeader</include>
+			</control>
+			<!--Groups-->
+			<control type="group" id="9002">
+				<control type="label">
+					<description>Path label</description>
+					<left>479</left>
+					<top>375</top>
+					<width>922</width>
+					<height>30</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<label>$LOCALIZE[1021]</label>
+					<include>DialogLabel</include>
+				</control>
+				<control type="list" id="10">
+					<left>479</left>
+					<top>413</top>
+					<width>690</width>
+					<height>180</height>
+					<onup>9001</onup>
+					<onleft>9004</onleft>
+					<onright>60</onright>
+					<ondown>9003</ondown>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<itemlayout height="60">
+						<control type="image">
+							<left>0</left>
+							<top>1</top>
+							<width>690</width>
+							<height>60</height>
+							<texture>dialogs/default/separator.png</texture>
+						</control>
+						<control type="label">
+							<left>20</left>
+							<width>596</width>
+							<height>60</height>
+							<info>ListItem.Label</info>
+							<include>DialogListNF</include>
+							<scroll>false</scroll>
+						</control>
+						<control type="image">
+							<left>616</left>
+							<width>74</width>
+							<height>60</height>
+							<texture>dialogs/mediasource/rules-nf.png</texture>
 							<colordiffuse>$INFO[Skin.String(GeneralTextColor)]</colordiffuse>
-                            <visible>ListItem.IsSelected</visible>
-                        </control>
-                    </focusedlayout>
-                </control>
-                <control type="image" id="61">
-                    <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-                    <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-                    <visible>Control.HasFocus(60)</visible>
-                </control>
-                <control type="image" id="61">
-                    <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-                    <animation effect="fade" start="100" end="0" time="0" delay="1000">Hidden</animation>
-                    <visible>!Control.HasFocus(60) + [Container(10).Scrolling | Container(10).OnScrollNext | Container(10).OnScrollPrevious]</visible>
-                </control>
-                <control type="scrollbar" id="60">
-                    <left>1155</left>
-                    <top>416</top>
-                    <height>174</height>
-                    <onleft>10</onleft>
-                    <onright>9004</onright>
-                    <showonepage>false</showonepage>
-                    <orientation>vertical</orientation>
-                    <animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(61)">Conditional</animation>
-                </control>
-                <control type="group" id="9004">
-                    <left>1183</left>
-                    <control type="radiobutton" id="11">
-                        <description>Browse</description>
-                        <top>413</top>
-                        <label>$LOCALIZE[1024]</label>
-                        <include>DialogButtonBrowse</include>
-                        <onup>18</onup>
-                        <onleft>10</onleft>
-                        <onright>10</onright>
-                        <ondown>13</ondown>
-                        <selected>Control.HasFocus(11)</selected>
-                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(11)" reversible="false">Conditional</animation>
-                    </control>
-                    <control type="radiobutton" id="13">
-                        <description>Add</description>
-                        <top>473</top>
-                        <label>$LOCALIZE[15019]</label>
-                        <include>DialogButtonBrowseAdd</include>
-                        <onup>11</onup>
-                        <onleft>10</onleft>
-                        <onright>10</onright>
-                        <ondown>14</ondown>
-                        <selected>Control.HasFocus(13)</selected>
-                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(13)" reversible="false">Conditional</animation>
-                    </control>
-                    <control type="radiobutton" id="14">
-                        <description>remove</description>
-                        <top>533</top>
-                        <label>$LOCALIZE[1210]</label>
-                        <include>DialogButtonBrowseRemove</include>
-                        <onup>13</onup>
-                        <onleft>10</onleft>
-                        <onright>10</onright>
-                        <ondown>9003</ondown>
-                        <selected>Control.HasFocus(14)</selected>
-                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(14)" reversible="false">Conditional</animation>
-                    </control>
-                </control>
-            </control>
-            <control type="group" id="9003">
-                <control type="label">
-                    <description>Name label</description>
-                    <left>479</left>
-                    <top>609</top>
-                    <width>922</width>
-                    <height>30</height>
-                    <align>left</align>
-                    <textoffsetx>20</textoffsetx>
-                    <label>$LOCALIZE[1022]</label>
-                </control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="60">
+						<control type="group">
+							<visible>!Control.HasFocus(10)</visible>
+							<control type="image">
+								<left>0</left>
+								<top>1</top>
+								<width>690</width>
+								<height>60</height>
+								<texture>dialogs/default/separator.png</texture>
+							</control>
+							<control type="label">
+								<left>20</left>
+								<width>596</width>
+								<height>60</height>
+								<info>ListItem.Label</info>
+								<include>DialogListNF</include>
+								<scroll>false</scroll>
+							</control>
+							<control type="image">
+								<left>616</left>
+								<width>74</width>
+								<height>60</height>
+								<texture>dialogs/mediasource/rules-nf.png</texture>
+								<colordiffuse>$INFO[Skin.String(GeneralTextColor)]</colordiffuse>
+								<visible>!ListItem.IsSelected</visible>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Control.HasFocus(10)</visible>
+							<control type="image">
+								<width>690</width>
+								<height>60</height>
+								<texture border="5">diffuse/panel.png</texture>
+								<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
+							</control>
+							<control type="label">
+								<left>20</left>
+								<width>596</width>
+								<height>60</height>
+								<info>ListItem.Label</info>
+								<include>DialogListFO</include>
+								<scroll>false</scroll>
+							</control>
+							<control type="image">
+								<left>616</left>
+								<width>74</width>
+								<height>60</height>
+								<texture>dialogs/mediasource/rules-nf.png</texture>
+								<colordiffuse>$INFO[Skin.String(ButtonFocusTextColor)]</colordiffuse>
+								<visible>!ListItem.IsSelected</visible>
+							</control>
+						</control>
+						<control type="image">
+							<left>633</left>
+							<top>10</top>
+							<width>40</width>
+							<height>40</height>
+							<texture>common/checkbox.png</texture>
+							<colordiffuse>$INFO[Skin.String(GeneralTextColor)]</colordiffuse>
+							<visible>ListItem.IsSelected</visible>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="image" id="61">
+					<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+					<visible>Control.HasFocus(60)</visible>
+				</control>
+				<control type="image" id="61">
+					<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="0" delay="1000">Hidden</animation>
+					<visible>!Control.HasFocus(60) + [Container(10).Scrolling | Container(10).OnScrollNext | Container(10).OnScrollPrevious]</visible>
+				</control>
+				<control type="scrollbar" id="60">
+					<left>1155</left>
+					<top>416</top>
+					<height>174</height>
+					<onleft>10</onleft>
+					<onright>9004</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(61)">Conditional</animation>
+				</control>
+				<control type="group" id="9004">
+					<left>1183</left>
+					<control type="radiobutton" id="11">
+						<description>Browse</description>
+						<top>413</top>
+						<label>$LOCALIZE[1024]</label>
+						<include>DialogButtonBrowse</include>
+						<onup>18</onup>
+						<onleft>10</onleft>
+						<onright>10</onright>
+						<ondown>13</ondown>
+						<selected>Control.HasFocus(11)</selected>
+						<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(11)" reversible="false">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="13">
+						<description>Add</description>
+						<top>473</top>
+						<label>$LOCALIZE[15019]</label>
+						<include>DialogButtonBrowseAdd</include>
+						<onup>11</onup>
+						<onleft>10</onleft>
+						<onright>10</onright>
+						<ondown>14</ondown>
+						<selected>Control.HasFocus(13)</selected>
+						<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(13)" reversible="false">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="14">
+						<description>remove</description>
+						<top>533</top>
+						<label>$LOCALIZE[1210]</label>
+						<include>DialogButtonBrowseRemove</include>
+						<onup>13</onup>
+						<onleft>10</onleft>
+						<onright>10</onright>
+						<ondown>9003</ondown>
+						<selected>Control.HasFocus(14)</selected>
+						<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(14)" reversible="false">Conditional</animation>
+					</control>
+				</control>
+			</control>
+			<control type="group" id="9003">
+				<control type="label">
+					<description>Name label</description>
+					<left>479</left>
+					<top>609</top>
+					<width>922</width>
+					<height>30</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<label>$LOCALIZE[1022]</label>
+				</control>
 				<control type="edit" id="12">
-                    <description>Name Button</description>
-                    <left>479</left>
-                    <top>647</top>
-                    <width>960</width>
-                    <height>60</height>
-                    <align>left</align>
-                    <textoffsetx>20</textoffsetx>
+					<description>Name Button</description>
+					<left>479</left>
+					<top>647</top>
+					<width>960</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
 					<textoffsety>8</textoffsety>
-                    <onup>9002</onup>
-                    <onleft></onleft>
-                    <onright></onright>
-                    <ondown>9001</ondown>
-                    <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(12)" reversible="false">Conditional</animation>
-                </control>
-                <control type="image">
-                    <left>1367</left>
-                    <top>647</top>
-                    <width>74</width>
-                    <height>60</height>
-                    <texture>dialogs/mediasource/keyboard-nf.png</texture>
-                    <colordiffuse>$INFO[Skin.String(GeneralTextColor)]</colordiffuse>
-                    <visible>!Control.HasFocus(12)</visible>
-                </control>
-                <control type="image">
-                    <left>1367</left>
-                    <top>647</top>
-                    <width>74</width>
-                    <height>60</height>
-                    <texture>dialogs/mediasource/keyboard-nf.png</texture>
-                    <colordiffuse>$INFO[Skin.String(ButtonFocusTextColor)]</colordiffuse>
-                    <visible>Control.HasFocus(12)</visible>
-                </control>
-            </control>
-            <!--Buttons-->
-            <control type="group" id="9001">
-                <left>470</left>
-                <top>720</top>
+					<onup>9002</onup>
+					<onleft></onleft>
+					<onright></onright>
+					<ondown>9001</ondown>
+					<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(12)" reversible="false">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>1367</left>
+					<top>647</top>
+					<width>74</width>
+					<height>60</height>
+					<texture>dialogs/mediasource/keyboard-nf.png</texture>
+					<colordiffuse>$INFO[Skin.String(GeneralTextColor)]</colordiffuse>
+					<visible>!Control.HasFocus(12)</visible>
+				</control>
+				<control type="image">
+					<left>1367</left>
+					<top>647</top>
+					<width>74</width>
+					<height>60</height>
+					<texture>dialogs/mediasource/keyboard-nf.png</texture>
+					<colordiffuse>$INFO[Skin.String(ButtonFocusTextColor)]</colordiffuse>
+					<visible>Control.HasFocus(12)</visible>
+				</control>
+			</control>
+			<!--Buttons-->
+			<control type="group" id="9001">
+				<left>470</left>
+				<top>720</top>
 				<width>980</width>
-                <control type="button" id="18">
-                    <description>OK</description>
-                    <label>$LOCALIZE[186]</label>
-                    <include>DialogButtonOther</include>
-                    <onleft>19</onleft>
-                    <onright>19</onright>
-                    <onup>9003</onup>
-                    <ondown>9002</ondown>
-                    <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(18)">Conditional</animation>
-                </control>
-                <control type="button" id="19">
+				<control type="button" id="18">
+					<description>OK</description>
+					<label>$LOCALIZE[186]</label>
+					<include>DialogButtonOther</include>
+					<onleft>19</onleft>
+					<onright>19</onright>
+					<onup>9003</onup>
+					<ondown>9002</ondown>
+					<animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(18)">Conditional</animation>
+				</control>
+				<control type="button" id="19">
 	                <left></left>
-                    <right>0</right>
-                    <description>Close</description>
-                    <label>$LOCALIZE[222]</label>
-                    <include>DialogButtonOther</include>
-                    <onleft>18</onleft>
-                    <onright>18</onright>
-                    <onup>9003</onup>
-                    <ondown>9002</ondown>
-                    <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(19)">Conditional</animation>
-                </control>
-            </control>
-        </control>
-    </controls>
+					<right>0</right>
+					<description>Close</description>
+					<label>$LOCALIZE[222]</label>
+					<include>DialogButtonOther</include>
+					<onleft>18</onleft>
+					<onright>18</onright>
+					<onup>9003</onup>
+					<ondown>9002</ondown>
+					<animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(19)">Conditional</animation>
+				</control>
+			</control>
+		</control>
+	</controls>
 </window>

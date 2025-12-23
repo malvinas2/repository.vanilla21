@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window>
-    <defaultcontrol always="true">602</defaultcontrol>
-    <controls>
-        <control type="group">
+	<defaultcontrol always="true">602</defaultcontrol>
+	<controls>
+		<control type="group">
 
-     		<animation type="WindowOpen" reversible="false">
+			<animation type="WindowOpen" reversible="false">
 				<effect type="slide" start="0,-400" end="0,0" tween="cubic" easing="out" time="500" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
@@ -69,7 +69,7 @@
 			</control>
 			
 			<control type="textbox">
-                <left></left>
+				<left></left>
 				<right>290</right>
 				<top>35</top>
 				<align>right</align>
@@ -178,7 +178,7 @@
 
 			<control type="button" id="111">
 				<!--Close-->
-                <left></left>
+				<left></left>
 				<right>40</right>
 				<top>30</top>
 				<width>240</width>
@@ -190,6 +190,6 @@
 				<include>DialogButtonOther</include>
 				<onclick>Close</onclick>
 			</control>
-        </control>
+		</control>
 	</controls>
 </window>

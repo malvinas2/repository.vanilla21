@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <includes>
 
 	<include name="HomeMenuSubMenuHorizontal">
-        <control type="image">
-            <!--Panel Shadow-->
-            <left>-120</left>
+		<control type="image">
+			<!--Panel Shadow-->
+			<left>-120</left>
 			<top></top>
-            <bottom>-120</bottom>
-            <width>2130</width>
-            <height>220</height>
-            <texture border="15">diffuse/bgpanel.png</texture>
-            <colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
-            <visible>Skin.HasSetting(NoFooterBarOnHome)</visible>
-            <animation effect="slide" start="0,200" end="0,0" time="250">Visible</animation>
-            <animation effect="slide" start="0,0" end="0,200" time="50">Hidden</animation>
-            <visible>Control.IsVisible(4444)</visible>
-        </control>
+			<bottom>-120</bottom>
+			<width>2130</width>
+			<height>220</height>
+			<texture border="15">diffuse/bgpanel.png</texture>
+			<colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
+			<visible>Skin.HasSetting(NoFooterBarOnHome)</visible>
+			<animation effect="slide" start="0,200" end="0,0" time="250">Visible</animation>
+			<animation effect="slide" start="0,0" end="0,200" time="50">Hidden</animation>
+			<visible>Control.IsVisible(4444)</visible>
+		</control>
 		
 		<control type="list" id="4444">
 			<left>48</left>
@@ -34,13 +34,13 @@
 			<onup condition="!Skin.HasSetting(AutoShowSubmenu)">ClearProperty(submenu,home)</onup>
 			<ondown condition="!Skin.HasSetting(DisablePowerMenu)">ActivateWindow(111)</ondown>   
 			<animation effect="slide" start="0,0" end="0,-205" time="125">Visible</animation>
-            <animation effect="slide" start="-205,0" end="0,0" time="125">Hidden</animation>
+			<animation effect="slide" start="-205,0" end="0,0" time="125">Hidden</animation>
 			<visible allowhiddenfocus="true">
-                [String.Contains(Window(Home).Property(submenu),show) | Control.HasFocus(4444)] 
-                + !String.IsEqual(Window(Home).Property(ShowWidget),show) 
-                + !Control.HasFocus(2) 
-                + Integer.IsGreater(Container(4445).NumItems,0)
-            </visible>
+				[String.Contains(Window(Home).Property(submenu),show) | Control.HasFocus(4444)] 
+				+ !String.IsEqual(Window(Home).Property(ShowWidget),show) 
+				+ !Control.HasFocus(2) 
+				+ Integer.IsGreater(Container(4445).NumItems,0)
+			</visible>
 			<itemlayout width="368" height="185">
 				<control type="group">
 					<top>120</top>
@@ -104,11 +104,11 @@
 						<selectedcolor>$INFO[Skin.String(ButtonTextColor)]</selectedcolor>
 						<visible>!Control.HasFocus(4444)</visible>
 					</control>
-                    <control type="button">
-                        <label></label>
-                        <visible>false</visible>
-                        <onfocus>SetProperty(submenu,show,home)</onfocus>
-                    </control>
+					<control type="button">
+						<label></label>
+						<visible>false</visible>
+						<onfocus>SetProperty(submenu,show,home)</onfocus>
+					</control>
 				</control>
 			</focusedlayout>
 			<content>
@@ -123,11 +123,11 @@
 			<defaultcontrol>4444</defaultcontrol>
 
 			<animation type="Conditional" condition="![String.Contains(Window(Home).Property(submenu),show) | Control.HasFocus(4444)]">
-                <effect type="fade" start="100" end="0" time="250" />
-            </animation>
+				<effect type="fade" start="100" end="0" time="250" />
+			</animation>
 			<animation type="Conditional" condition="[Control.IsVisible(77551) | String.IsEqual(Window(Home).Property(ShowWidget),show)]">
-                <effect type="slide" start="0,-0" end="0,800" time="400" tween="cubic" easing="inout" delay="0" />
-            </animation>
+				<effect type="slide" start="0,-0" end="0,800" time="400" tween="cubic" easing="inout" delay="0" />
+			</animation>
 		
 			<top>65</top>
 			<left>-4</left>
@@ -482,38 +482,38 @@
 				<onback>SetFocus(300)</onback>
 				<onfocus>SetProperty(submenu,show,home)</onfocus>
 				<onback>ClearProperty(submenu,home)</onback>
-                <ondown condition="!Skin.HasSetting(DisablePowerMenu)">ActivateWindow(111)</ondown>
+				<ondown condition="!Skin.HasSetting(DisablePowerMenu)">ActivateWindow(111)</ondown>
 				<visible allowhiddenfocus="true">String.Contains(Window(Home).Property(submenu),show) | Control.HasFocus(4444)</visible>
 				<itemlayout width="365" height="205">
 					<control type="group">
-                        <width>337</width>
-                        <height>175</height>
-                        <include>ThumbsViewLayout</include>
-                        <control type="group">
-                            <description>label overlay</description>
-                            <include>ThumbsTagOverlay</include>
-                            <include>LandscapeTagOverlayVisibility</include>
-                        </control>
-                    </control>
+						<width>337</width>
+						<height>175</height>
+						<include>ThumbsViewLayout</include>
+						<control type="group">
+							<description>label overlay</description>
+							<include>ThumbsTagOverlay</include>
+							<include>LandscapeTagOverlayVisibility</include>
+						</control>
+					</control>
 				</itemlayout>
 				<focusedlayout width="365" height="205">
 					<control type="group">
 						<control type="group">
-                            <width>337</width>
-                            <height>175</height>
-                            <include>ThumbsViewLayoutFocus</include>
-                            <control type="group">
-                                <description>label overlay</description>
-                                <include>ThumbsTagOverlay</include>
-                                <include>LandscapeTagOverlayVisibility</include>
-                            </control>
-                        </control>
+							<width>337</width>
+							<height>175</height>
+							<include>ThumbsViewLayoutFocus</include>
+							<control type="group">
+								<description>label overlay</description>
+								<include>ThumbsTagOverlay</include>
+								<include>LandscapeTagOverlayVisibility</include>
+							</control>
+						</control>
 					</control>
-                    <control type="button">
-                        <label></label>
-                        <visible>false</visible>
-                        <onfocus>SetProperty(submenu,show,home)</onfocus>
-                    </control>
+					<control type="button">
+						<label></label>
+						<visible>false</visible>
+						<onfocus>SetProperty(submenu,show,home)</onfocus>
+					</control>
 				</focusedlayout>		
 				<content><include>skinshortcuts-submenu</include></content>
 			</control>
@@ -582,96 +582,96 @@
 	</include>
 	
 	<include name="HomeMenuSubMenuRight">
-        <control type="image">
-            <left>-540</left>
-            <top>26</top>
-            <width>1202</width>
-            <height>240</height>
-            <texture border="15">diffuse/bgpanel.png</texture>
-            <aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
-            <colordiffuse>$VAR[ViewDetailsFocusColor]</colordiffuse>
-        </control>
+		<control type="image">
+			<left>-540</left>
+			<top>26</top>
+			<width>1202</width>
+			<height>240</height>
+			<texture border="15">diffuse/bgpanel.png</texture>
+			<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
+			<colordiffuse>$VAR[ViewDetailsFocusColor]</colordiffuse>
+		</control>
 	</include>
 	
 	<include name="HomeMenuSubMenuLeft">
-        <control type="image">
-            <left>44</left>
-            <top>26</top>
-            <width>1206</width>
-            <height>240</height>
-            <texture border="15">diffuse/bgpanel.png</texture>
-            <colordiffuse>$VAR[ViewDetailsFocusColor]</colordiffuse>
-            <aspectratio>stretch</aspectratio>
-        </control>
+		<control type="image">
+			<left>44</left>
+			<top>26</top>
+			<width>1206</width>
+			<height>240</height>
+			<texture border="15">diffuse/bgpanel.png</texture>
+			<colordiffuse>$VAR[ViewDetailsFocusColor]</colordiffuse>
+			<aspectratio>stretch</aspectratio>
+		</control>
 	</include>
 	
 	<include name="HomeMenuFocusButtonLayout">
-        <control type="group">
-            <width>590</width>
-            <height>240</height>
-            <top>12</top>
-            <left>10</left>
-            <control type="image">
-                <!--Panel icon image-->
-                <bordersize>8</bordersize>
-                <texture background="true" diffuse="home/home_matte2.png" fallback="resource://resource.images.skinicons.wide/video.png">$INFO[Container(300).ListItem.Icon]</texture>
-                <aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-            </control>
-            <control type="image">
-                <!--Panel Overlay-->
-                <bordersize>8</bordersize>
-                <texture diffuse="home/home_matte2.png">diffuse/home_overlay.png</texture>
-                <visible>!Skin.HasSetting(NoTitleOnHomeMenuTiles) + !String.IsEqual(Container(300).ListItem.Property(disableLabel), disable)</visible>
-                <colordiffuse>$INFO[Skin.String(TagOverlaysPanelColor)]</colordiffuse>
-            </control>
-            <control type="label">
-                <!--Label with title-->
+		<control type="group">
+			<width>590</width>
+			<height>240</height>
+			<top>12</top>
+			<left>10</left>
+			<control type="image">
+				<!--Panel icon image-->
+				<bordersize>8</bordersize>
+				<texture background="true" diffuse="home/home_matte2.png" fallback="resource://resource.images.skinicons.wide/video.png">$INFO[Container(300).ListItem.Icon]</texture>
+				<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+			</control>
+			<control type="image">
+				<!--Panel Overlay-->
+				<bordersize>8</bordersize>
+				<texture diffuse="home/home_matte2.png">diffuse/home_overlay.png</texture>
+				<visible>!Skin.HasSetting(NoTitleOnHomeMenuTiles) + !String.IsEqual(Container(300).ListItem.Property(disableLabel), disable)</visible>
+				<colordiffuse>$INFO[Skin.String(TagOverlaysPanelColor)]</colordiffuse>
+			</control>
+			<control type="label">
+				<!--Label with title-->
 				<top></top>
-                <bottom>8</bottom>
-                <height>33%</height>
-                <left>3%</left>
-                <width>94%</width>
-                <font>Reg38</font>
-                <include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
-                <align>left</align>
-                <aligny>center</aligny>
-                <label>$INFO[Container(300).ListItem.Label]</label>
-                <textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
-                <visible>!Skin.HasSetting(NoTitleOnHomeMenuTiles) + !String.IsEqual(Container(300).ListItem.Property(disableLabel), disable)</visible>
-            </control>
-        </control>
-    </include>
+				<bottom>8</bottom>
+				<height>33%</height>
+				<left>3%</left>
+				<width>94%</width>
+				<font>Reg38</font>
+				<include condition="Skin.HasSetting(ThumbsLabelAlignmentCenter)">aligncenter</include>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container(300).ListItem.Label]</label>
+				<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+				<visible>!Skin.HasSetting(NoTitleOnHomeMenuTiles) + !String.IsEqual(Container(300).ListItem.Property(disableLabel), disable)</visible>
+			</control>
+		</control>
+	</include>
 		
-    <include name="HomeMenuFocusButtonLeft">
+	<include name="HomeMenuFocusButtonLeft">
 		<control type="group">
 			<top>13</top>
 			<left>-550</left>
 			<include>HomeMenuFocusButtonLayout</include>
 		</control>
-    </include>
-    
-    <include name="HomeMenuFocusButtonRight">
-        <control type="group">
-            <top>13</top>
-            <left>650</left>
-            <include>HomeMenuFocusButtonLayout</include>
-        </control>
-    </include>
-    
+	</include>
+	
+	<include name="HomeMenuFocusButtonRight">
+		<control type="group">
+			<top>13</top>
+			<left>650</left>
+			<include>HomeMenuFocusButtonLayout</include>
+		</control>
+	</include>
+	
 
-    <include name="hiddenSubmenu">
-        <!-- hidden submenu to do count calculations -->
-        <control type="list" id="4445">
-            <width>1</width>
-            <height>1</height>
-            <pagecontrol></pagecontrol>
-            <orientation>vertical</orientation>
-            <itemlayout width="1" height="1">
-            </itemlayout>
-            <focusedlayout width="1" height="1">
-            </focusedlayout>
-            <content><include>skinshortcuts-submenu</include></content>
-        </control>
-    </include>
+	<include name="hiddenSubmenu">
+		<!-- hidden submenu to do count calculations -->
+		<control type="list" id="4445">
+			<width>1</width>
+			<height>1</height>
+			<pagecontrol></pagecontrol>
+			<orientation>vertical</orientation>
+			<itemlayout width="1" height="1">
+			</itemlayout>
+			<focusedlayout width="1" height="1">
+			</focusedlayout>
+			<content><include>skinshortcuts-submenu</include></content>
+		</control>
+	</include>
 		
 </includes>

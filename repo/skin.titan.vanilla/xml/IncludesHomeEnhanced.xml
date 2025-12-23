@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	 
-    <include name="EnhancedHome">
-        
-        <!-- Header -->
+	<include name="EnhancedHome">
+		
+		<!-- Header -->
 		<include>Header</include>
 		
-        <control type="image">
+		<control type="image">
 			<!--Panel-->
 			<left>50</left>
 			<top></top>
@@ -18,71 +18,71 @@
 			<aspectratio>stretch</aspectratio>
 			<visible>!Skin.HasSetting(HideWidgetPanelBackground)</visible>
 			<animation type="Conditional" condition="Control.IsVisible(4445) + Integer.IsGreater(Container(4445).NumItems,0)">
-                <effect type="slide" start="0,0" end="0,530" time="100" tween="cubic" easing="inout" delay="0" />
-            </animation>
-            <animation type="Conditional" condition="Control.IsVisible(4445) + !Integer.IsGreater(Container(4445).NumItems,0)">
-                <effect type="slide" start="0,0" end="0,620" time="100" tween="cubic" easing="inout" delay="0" />
-            </animation>
+				<effect type="slide" start="0,0" end="0,530" time="100" tween="cubic" easing="inout" delay="0" />
+			</animation>
+			<animation type="Conditional" condition="Control.IsVisible(4445) + !Integer.IsGreater(Container(4445).NumItems,0)">
+				<effect type="slide" start="0,0" end="0,620" time="100" tween="cubic" easing="inout" delay="0" />
+			</animation>
 		</control>
-        
+		
 				
 		<!-- touchscreen support -->
 		<include condition="Skin.HasSetting(EnableTouchSupport)">TouchControlsHome</include>
 		
-        <!-- main menu -->
-        <include condition="Skin.HasSetting(UseFixedHomeFocus)">EnhancedHomeMainMenuFixed</include>
-        <include condition="!Skin.HasSetting(UseFixedHomeFocus)">EnhancedHomeMainMenuNormal</include>
-        
+		<!-- main menu -->
+		<include condition="Skin.HasSetting(UseFixedHomeFocus)">EnhancedHomeMainMenuFixed</include>
+		<include condition="!Skin.HasSetting(UseFixedHomeFocus)">EnhancedHomeMainMenuNormal</include>
+		
 		<!-- widgets right -->
 		<control type="grouplist" id="77777">
-            <right>50</right>
+			<right>50</right>
 			<bottom>265</bottom>
 			<width>362</width>
 			<height>660</height>
-            <onleft>1508</onleft>
-            <onright condition="Skin.HasSetting(EnhancedHome_Circular)">4444</onright>
-            <onright condition="!Skin.HasSetting(EnhancedHome_Circular)">300</onright>
-            <onright>300</onright>
-            <ondown>300</ondown>
-            <onback>300</onback>
-            <itemgap>0</itemgap>
+			<onleft>1508</onleft>
+			<onright condition="Skin.HasSetting(EnhancedHome_Circular)">4444</onright>
+			<onright condition="!Skin.HasSetting(EnhancedHome_Circular)">300</onright>
+			<onright>300</onright>
+			<ondown>300</ondown>
+			<onback>300</onback>
+			<itemgap>0</itemgap>
 			<include>skinshortcuts-template-Widgets</include>
-        </control>
-        
-        <control type="group" id="77778">
+		</control>
+		
+		<control type="group" id="77778">
 			
 			<!-- alt spotlight submenu+widget present-->
 			<control type="group">
-                <bottom>279</bottom>
-                <left>427</left>
-                <width>1060</width>
-                <height>605</height>
-                <visible>!String.IsEmpty(Container(300).listItem.property(widget)) + Integer.IsGreater(Container(4444).NumItems,0)</visible>
+				<bottom>279</bottom>
+				<left>427</left>
+				<width>1060</width>
+				<height>605</height>
+				<visible>!String.IsEmpty(Container(300).listItem.property(widget)) + Integer.IsGreater(Container(4444).NumItems,0)</visible>
 				<include>EnhancedHomeSpotLightWidgetItemLayout</include>
 			</control>
 
-            <!-- busy image while widget loading -->
-            <control type="multiimage">
-                <top>490</top>
-                <left>910</left>
-                <width>100</width>
-                <height>100</height>
+			<!-- busy image while widget loading -->
+			<control type="multiimage">
+				<top>490</top>
+				<left>910</left>
+				<width>100</width>
+				<height>100</height>
 				<aspectratio>keep</aspectratio>
-                <imagepath>busy_spinner/</imagepath>
-                <timeperimage>100</timeperimage>
-                <colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
-                <fadetime>0</fadetime>
+				<imagepath>busy_spinner/</imagepath>
+				<timeperimage>100</timeperimage>
+				<colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
+				<fadetime>0</fadetime>
 				<visible>!Skin.String(SkinHelper.SpinnerTexture.Path,None)</visible>
-                <visible>Control.IsVisible(1508) + Container(1508).IsUpdating</visible>
-            </control>
-            
-            <!-- alt spotlight no submenu present-->
+				<visible>Control.IsVisible(1508) + Container(1508).IsUpdating</visible>
+			</control>
+			
+			<!-- alt spotlight no submenu present-->
 			<control type="group">
-                <bottom>279</bottom>
-                <left>70</left>
-                <width>1415</width>
-                <height>605</height>
-                <visible>!String.IsEmpty(Container(300).listItem.Property(widget)) + !Integer.IsGreater(Container(4444).NumItems,0)</visible>
+				<bottom>279</bottom>
+				<left>70</left>
+				<width>1415</width>
+				<height>605</height>
+				<visible>!String.IsEmpty(Container(300).listItem.Property(widget)) + !Integer.IsGreater(Container(4444).NumItems,0)</visible>
 				<include>EnhancedHomeSpotLightWidgetItemLayout</include>
 			</control>
 			
@@ -122,8 +122,8 @@
 				<width>362</width>
 				<orientation>vertical</orientation>
 				<onright>1508</onright>
-                <onleft condition="Skin.HasSetting(EnhancedHome_Circular)">77777</onleft>
-                <onleft condition="!Skin.HasSetting(EnhancedHome_Circular)">300</onleft>
+				<onleft condition="Skin.HasSetting(EnhancedHome_Circular)">77777</onleft>
+				<onleft condition="!Skin.HasSetting(EnhancedHome_Circular)">300</onleft>
 				<ondown>300</ondown>
 				<itemgap>0</itemgap>
 				<onback>300</onback>
@@ -132,40 +132,40 @@
 				<visible allowhiddenfocus="true">Integer.IsGreater(Container(4444).NumItems,0) + [!String.IsEmpty(Container(300).ListItem.Property(widget)) | !String.IsEmpty(Container(300).ListItem.Property(widget.1))]</visible>
 				<itemlayout width="362" height="205">
 					<control type="group">
-                        <width>337</width>
-                        <height>195</height>
-                        <include>ThumbsViewLayout</include>
-                        <control type="group">
-                            <description>label overlay</description>
-                            <include>ThumbsTagOverlay</include>
-                            <include>LandscapeTagOverlayVisibility</include>
-                        </control>
-                    </control>
+						<width>337</width>
+						<height>195</height>
+						<include>ThumbsViewLayout</include>
+						<control type="group">
+							<description>label overlay</description>
+							<include>ThumbsTagOverlay</include>
+							<include>LandscapeTagOverlayVisibility</include>
+						</control>
+					</control>
 				</itemlayout>
 				<focusedlayout width="362" height="205" condition="!Control.HasFocus(4444)">
 					<control type="group">
-                        <width>337</width>
-                        <height>195</height>
-                        <include>ThumbsViewLayout</include>
-                        <control type="group">
-                            <description>label overlay</description>
-                            <include>ThumbsTagOverlay</include>
-                            <include>LandscapeTagOverlayVisibility</include>
-                        </control>
-                    </control>
+						<width>337</width>
+						<height>195</height>
+						<include>ThumbsViewLayout</include>
+						<control type="group">
+							<description>label overlay</description>
+							<include>ThumbsTagOverlay</include>
+							<include>LandscapeTagOverlayVisibility</include>
+						</control>
+					</control>
 				</focusedlayout>
 				<focusedlayout width="362" height="205" condition="Control.HasFocus(4444)">
 					<control type="group">
 						<control type="group">
-                        <width>337</width>
-                        <height>195</height>
-                        <include>ThumbsViewLayoutFocus</include>
-                        <control type="group">
-                            <description>label overlay</description>
-                            <include>ThumbsTagOverlay</include>
-                            <include>LandscapeTagOverlayVisibility</include>
-                        </control>
-                    </control>
+						<width>337</width>
+						<height>195</height>
+						<include>ThumbsViewLayoutFocus</include>
+						<control type="group">
+							<description>label overlay</description>
+							<include>ThumbsTagOverlay</include>
+							<include>LandscapeTagOverlayVisibility</include>
+						</control>
+					</control>
 					</control>
 				</focusedlayout>
 				<content>
@@ -221,7 +221,7 @@
 						<aligny>center</aligny>
 						<visible>!Control.HasFocus(4445)</visible>
 					</control>
-                    <control type="label"> <!--label-->
+					<control type="label"> <!--label-->
 						<left>20</left>
 						<width>300</width>
 						<label>$INFO[ListItem.Label]</label>
@@ -256,7 +256,7 @@
 			</control>
 		</control>
 		
- 		<!--RSS Text without touch-->			
+		<!--RSS Text without touch-->			
 		<control type="rss">	
 			<description>RSS Feed</description>
 			<left>80</left>
@@ -270,8 +270,8 @@
 			<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
 			<scrollspeed>40</scrollspeed>
 			<visible>!Window.IsVisible(1107) + !Window.IsVisible(shutdownmenu) + !Skin.HasSetting(EnableTouchSupport)</visible>
-            <visible>[String.IsEmpty(Container(300).ListItem.Property(infoline)) | String.IsEqual(Container(300).ListItem.Property(infoline),none)]</visible>
-            <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			<visible>[String.IsEmpty(Container(300).ListItem.Property(infoline)) | String.IsEqual(Container(300).ListItem.Property(infoline),none)]</visible>
+			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
 		</control>
 		<!--RSS Text with touch-->			
 		<control type="rss">	
@@ -287,158 +287,158 @@
 			<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
 			<scrollspeed>40</scrollspeed>
 			<visible>!Window.IsVisible(1107) + !Window.IsVisible(shutdownmenu) + Skin.HasSetting(EnableTouchSupport)</visible>
-            <visible>[String.IsEmpty(Container(300).ListItem.Property(infoline)) | String.IsEqual(Container(300).ListItem.Property(infoline),none)]</visible>
-            <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			<visible>[String.IsEmpty(Container(300).ListItem.Property(infoline)) | String.IsEqual(Container(300).ListItem.Property(infoline),none)]</visible>
+			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
 		</control>
-        <!--infoline-->
-        <control type="label">	
-            <description>InfoLine</description>
-            <left>20%</left>
+		<!--infoline-->
+		<control type="label">	
+			<description>InfoLine</description>
+			<left>20%</left>
 			<top></top>
-            <bottom>5</bottom>
-            <width>60%</width>
-            <height>60</height>
-            <font>Light28</font>
-            <align>center</align>
-            <label>$VAR[infolinevar]</label>
-            <textcolor>$INFO[Skin.String(FooterTextColor)]</textcolor>
-            <shadowcolor>$INFO[Skin.String(FooterTextShadowColor)]</shadowcolor>
-            <visible>!Window.IsVisible(1107) + !Window.IsVisible(shutdownmenu)</visible>
-        </control>     
+			<bottom>5</bottom>
+			<width>60%</width>
+			<height>60</height>
+			<font>Light28</font>
+			<align>center</align>
+			<label>$VAR[infolinevar]</label>
+			<textcolor>$INFO[Skin.String(FooterTextColor)]</textcolor>
+			<shadowcolor>$INFO[Skin.String(FooterTextShadowColor)]</shadowcolor>
+			<visible>!Window.IsVisible(1107) + !Window.IsVisible(shutdownmenu)</visible>
+		</control>     
 		
 		<!-- touchscreen support -->
 		<include condition="Skin.HasSetting(EnableTouchSupport)">TouchControlsFooter</include>
 		
-        <!-- Power button -->
-        <control type="group">
-            <left>930</left>
+		<!-- Power button -->
+		<control type="group">
+			<left>930</left>
 			<top></top>
 			<bottom>5</bottom>
-            <width>60</width>
-            <height>60</height>
-            <include content="PowerButton" condition="!Skin.HasSetting(EnableTouchSupport) + !Skin.HasSetting(DisablePowerMenu)">
-                <param name="visibility" value="![!String.IsEmpty(Container(300).ListItem.Property(infoline)) + !String.IsEqual(Container(300).ListItem.Property(infoline),none)] + !system.getbool(lookandfeel.enablerssfeeds) + !Skin.HasSetting(HidePowerMenu)" />
-            </include>
-        </control>
+			<width>60</width>
+			<height>60</height>
+			<include content="PowerButton" condition="!Skin.HasSetting(EnableTouchSupport) + !Skin.HasSetting(DisablePowerMenu)">
+				<param name="visibility" value="![!String.IsEmpty(Container(300).ListItem.Property(infoline)) + !String.IsEqual(Container(300).ListItem.Property(infoline),none)] + !system.getbool(lookandfeel.enablerssfeeds) + !Skin.HasSetting(HidePowerMenu)" />
+			</include>
+		</control>
 	</include>
 	    
-    <include name="EnhancedHomeMainMenuNormal">
-        <control type="panel" id="300">
-            <include>EnhancedHomeMainMenuLayout</include>
-        </control>
-    </include>
-    
-    <include name="EnhancedHomeMainMenuFixed">
-        <control type="fixedlist" id="300">
-            <focusposition>2</focusposition>
-            <include>EnhancedHomeMainMenuLayout</include>
-        </control>
-    </include>
-    
-    <include name="EnhancedHomeMainMenuLayout">
-        <left>70</left>
-        <bottom>70</bottom>
-        <width>1800</width>
-        <height>195</height>
-        <orientation>horizontal</orientation>
-        <onleft>300</onleft>
-        <onright>300</onright>
-        <pagecontrol>60</pagecontrol>
-        <onup>$VAR[EnhancedHomeButtonUpAction]</onup>
-        <ondown condition="!Skin.HasSetting(DisablePowerMenu)">ActivateWindow(ShutdownMenu)</ondown>
-        <scrolltime tween="linear">300</scrolltime>
-        <itemlayout width="360" height="205">
-            <control type="group">
-                <width>337</width>
-                <height>195</height>
-                <include>ThumbsViewLayout</include>
-                <control type="group">
-                    <description>label overlay</description>
-                    <include>ThumbsTagOverlay</include>
-                    <include>LandscapeTagOverlayVisibility</include>
-                </control>
-            </control>
-        </itemlayout>
-        <focusedlayout width="360" height="205" condition="!Control.HasFocus(300)">
-            <control type="group">
-                <width>337</width>
-                <height>195</height>
-                <include>ThumbsViewLayout</include>
-                <control type="group">
-                    <description>label overlay</description>
-                    <include>ThumbsTagOverlay</include>
-                    <include>LandscapeTagOverlayVisibility</include>
-                </control>
-            </control>
-        </focusedlayout>
-        <focusedlayout width="360" height="205" condition="Control.HasFocus(300)">
-            <control type="group">
-                <width>337</width>
-                <height>195</height>
-                <include>ThumbsViewLayoutFocus</include>
-                <control type="group">
-                    <description>label overlay</description>
-                    <include>ThumbsTagOverlay</include>
-                    <include>LandscapeTagOverlayVisibility</include>
-                </control>
-                <include>HiddenHomeMenuButtonEnhancedHome</include>
-            </control>
-        </focusedlayout>
-        <content><include>skinshortcuts-mainmenu</include></content>
-    </include>
-    
-    <include name="EnhancedHomeSpotLightWidgetLayout">
+	<include name="EnhancedHomeMainMenuNormal">
+		<control type="panel" id="300">
+			<include>EnhancedHomeMainMenuLayout</include>
+		</control>
+	</include>
+	
+	<include name="EnhancedHomeMainMenuFixed">
+		<control type="fixedlist" id="300">
+			<focusposition>2</focusposition>
+			<include>EnhancedHomeMainMenuLayout</include>
+		</control>
+	</include>
+	
+	<include name="EnhancedHomeMainMenuLayout">
+		<left>70</left>
+		<bottom>70</bottom>
+		<width>1800</width>
+		<height>195</height>
+		<orientation>horizontal</orientation>
+		<onleft>300</onleft>
+		<onright>300</onright>
+		<pagecontrol>60</pagecontrol>
+		<onup>$VAR[EnhancedHomeButtonUpAction]</onup>
+		<ondown condition="!Skin.HasSetting(DisablePowerMenu)">ActivateWindow(ShutdownMenu)</ondown>
+		<scrolltime tween="linear">300</scrolltime>
+		<itemlayout width="360" height="205">
+			<control type="group">
+				<width>337</width>
+				<height>195</height>
+				<include>ThumbsViewLayout</include>
+				<control type="group">
+					<description>label overlay</description>
+					<include>ThumbsTagOverlay</include>
+					<include>LandscapeTagOverlayVisibility</include>
+				</control>
+			</control>
+		</itemlayout>
+		<focusedlayout width="360" height="205" condition="!Control.HasFocus(300)">
+			<control type="group">
+				<width>337</width>
+				<height>195</height>
+				<include>ThumbsViewLayout</include>
+				<control type="group">
+					<description>label overlay</description>
+					<include>ThumbsTagOverlay</include>
+					<include>LandscapeTagOverlayVisibility</include>
+				</control>
+			</control>
+		</focusedlayout>
+		<focusedlayout width="360" height="205" condition="Control.HasFocus(300)">
+			<control type="group">
+				<width>337</width>
+				<height>195</height>
+				<include>ThumbsViewLayoutFocus</include>
+				<control type="group">
+					<description>label overlay</description>
+					<include>ThumbsTagOverlay</include>
+					<include>LandscapeTagOverlayVisibility</include>
+				</control>
+				<include>HiddenHomeMenuButtonEnhancedHome</include>
+			</control>
+		</focusedlayout>
+		<content><include>skinshortcuts-mainmenu</include></content>
+	</include>
+	
+	<include name="EnhancedHomeSpotLightWidgetLayout">
 		<bottom>279</bottom>
-        <left>427</left>
-        <width>1060</width>
-        <height>605</height>
+		<left>427</left>
+		<width>1060</width>
+		<height>605</height>
 		<onleft condition="Integer.IsGreater(Container(4444).NumItems,0)">4444</onleft>
 		<onleft condition="!Integer.IsGreater(Container(4444).NumItems,0)">300</onleft>
 		<onright condition="!String.IsEmpty(Container(300).ListItem.Property(widgetPath))">$VAR[focusWidget]</onright>
 		<onright condition="String.IsEmpty(Container(300).ListItem.Property(widgetPath))">300</onright>
-        <oninfo>RunScript(script.skin.helper.service,action=showinfo)</oninfo>
+		<oninfo>RunScript(script.skin.helper.service,action=showinfo)</oninfo>
 		<ondown>1508</ondown>
 		<onback>300</onback>
 		<onup>1508</onup>
-        <orientation>vertical</orientation>
-        <visible>!String.IsEmpty(Container(300).ListItem.Property(widgetPath.99))</visible>
-        <itemlayout width="1060" height="605" />
-        <focusedlayout width="1060" height="605" >
-            <control type="button">
-                <visible>false</visible>
-                <onfocus>SetProperty(SkinHelper.WidgetContainer,1508)</onfocus>
-                <onfocus condition="Skin.HasSetting(SpotLightTrailers)">RunScript(script.skin.helper.service,ACTION=playtrailer,MODE=windowed,YOUTUBE=$INFO[Skin.String(AutoYoutubeTrailer)],WIDGETCONTAINER=1508)</onfocus>
-                <onunfocus condition="Skin.HasSetting(SpotLightTrailers) + !String.IsEmpty(Window(Home).Property(TrailerPlaying)) + !String.IsEqual(Window(Home).Property(TrailerPlaying),fullscreen)">PlayerControl(Stop)</onunfocus>
-                <onfocus condition="System.HasAlarm(WidgetRotate1508)">CancelAlarm(WidgetRotate1508,true)</onfocus>
-                <include content="WidgetProperties">
-                    <param name="widgetid" value="1508" />
-                </include>
-            </control>
-        </focusedlayout>
-    </include>
+		<orientation>vertical</orientation>
+		<visible>!String.IsEmpty(Container(300).ListItem.Property(widgetPath.99))</visible>
+		<itemlayout width="1060" height="605" />
+		<focusedlayout width="1060" height="605" >
+			<control type="button">
+				<visible>false</visible>
+				<onfocus>SetProperty(SkinHelper.WidgetContainer,1508)</onfocus>
+				<onfocus condition="Skin.HasSetting(SpotLightTrailers)">RunScript(script.skin.helper.service,ACTION=playtrailer,MODE=windowed,YOUTUBE=$INFO[Skin.String(AutoYoutubeTrailer)],WIDGETCONTAINER=1508)</onfocus>
+				<onunfocus condition="Skin.HasSetting(SpotLightTrailers) + !String.IsEmpty(Window(Home).Property(TrailerPlaying)) + !String.IsEqual(Window(Home).Property(TrailerPlaying),fullscreen)">PlayerControl(Stop)</onunfocus>
+				<onfocus condition="System.HasAlarm(WidgetRotate1508)">CancelAlarm(WidgetRotate1508,true)</onfocus>
+				<include content="WidgetProperties">
+					<param name="widgetid" value="1508" />
+				</include>
+			</control>
+		</focusedlayout>
+	</include>
 	<include name="EnhancedHomeSpotLightWidgetItemLayout">
-        <control type="image">
-            <!--Panel Normal-->
-            <left>0</left>
-            <top>0</top>
-            <texture>diffuse/wide.png</texture>
-            <colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
-            <include condition="Skin.String(thumbsborder_unfocused, 0)">thumbborder_0</include>
-            <include condition="Skin.String(thumbsborder_unfocused, 2)">thumbborder_2</include>
-            <include condition="Skin.String(thumbsborder_unfocused, 4)">thumbborder_4</include>
-            <include condition="Skin.String(thumbsborder_unfocused, 6)">thumbborder_6</include>
-            <visible>!Control.HasFocus(1508)</visible>
-        </control>
-        <control type="image">
+		<control type="image">
+			<!--Panel Normal-->
+			<left>0</left>
+			<top>0</top>
+			<texture>diffuse/wide.png</texture>
+			<colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
+			<include condition="Skin.String(thumbsborder_unfocused, 0)">thumbborder_0</include>
+			<include condition="Skin.String(thumbsborder_unfocused, 2)">thumbborder_2</include>
+			<include condition="Skin.String(thumbsborder_unfocused, 4)">thumbborder_4</include>
+			<include condition="Skin.String(thumbsborder_unfocused, 6)">thumbborder_6</include>
+			<visible>!Control.HasFocus(1508)</visible>
+		</control>
+		<control type="image">
 			<!--Panel Focus-->
 			<width>100%</width>
 			<height>100%</height>
 			<colordiffuse>$VAR[ViewDetailsFocusColor]</colordiffuse>
 			<texture>diffuse/wide.png</texture>
-            <include condition="Skin.String(thumbsborder_focused, 2)">thumbborder_2</include>
-            <include condition="Skin.String(thumbsborder_focused, 4)">thumbborder_4</include>
-            <include condition="Skin.String(thumbsborder_focused, 6)">thumbborder_6</include>
-            <visible>Control.HasFocus(1508)</visible>
+			<include condition="Skin.String(thumbsborder_focused, 2)">thumbborder_2</include>
+			<include condition="Skin.String(thumbsborder_focused, 4)">thumbborder_4</include>
+			<include condition="Skin.String(thumbsborder_focused, 6)">thumbborder_6</include>
+			<visible>Control.HasFocus(1508)</visible>
 		</control>
 		<!-- spotlight image -->
 		<control type="image">
@@ -447,30 +447,30 @@
 			<bordersize>8</bordersize>
 			<texture background="true" diffuse="diffuse/wide.png">$VAR[EnhancedHomeSpotLightWidgetImage]</texture>
 			<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-            <fadetime>300</fadetime>
+			<fadetime>300</fadetime>
 		</control>
-        
-        <!-- trailers video preview -->
-        <control type="group">
-            <visible>Skin.HasSetting(SpotLightTrailers) + String.IsEqual(Window(Home).Property(TrailerPlaying),windowed)</visible>
-            <control type="image">
-                <texture border="15">diffuse/bgpanel.png</texture>
-                <colordiffuse>black</colordiffuse>
-            </control>
-            <control type="videowindow">
-            </control>
-        </control>
-        
+		
+		<!-- trailers video preview -->
+		<control type="group">
+			<visible>Skin.HasSetting(SpotLightTrailers) + String.IsEqual(Window(Home).Property(TrailerPlaying),windowed)</visible>
+			<control type="image">
+				<texture border="15">diffuse/bgpanel.png</texture>
+				<colordiffuse>black</colordiffuse>
+			</control>
+			<control type="videowindow">
+			</control>
+		</control>
+		
 		<!--info Overlay-->
 		<control type="image">
-            <!--Panel Ovelay-->
+			<!--Panel Ovelay-->
 			<top></top>
-            <bottom>0</bottom>
-            <height>185</height>
-            <bordersize>8</bordersize>
-            <colordiffuse>$INFO[Skin.String(TagOverlaysPanelColor)]</colordiffuse>
-            <texture border="5">colors/color_white.png</texture>
-        </control>
+			<bottom>0</bottom>
+			<height>185</height>
+			<bordersize>8</bordersize>
+			<colordiffuse>$INFO[Skin.String(TagOverlaysPanelColor)]</colordiffuse>
+			<texture border="5">colors/color_white.png</texture>
+		</control>
 		<!-- plot-->
 		<control type="textbox">
 			<top></top>
@@ -480,7 +480,7 @@
 			<height>155</height>
 			<align>left</align>
 			<label>$VAR[HomeMenuWidgetInfoLabel][CR]$VAR[HomeMenuWidgetInfoPlotAlt]</label>
-            <textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
+			<textcolor>$INFO[Skin.String(TagOverlaysTextColor)]</textcolor>
 			<font>Light26</font>
 		</control>
 
@@ -497,48 +497,48 @@
 		</control>
 	</include>
 
-    <variable name="EnhancedHomeSpotLightWidgetButtonText">
+	<variable name="EnhancedHomeSpotLightWidgetButtonText">
 		<value condition="Integer.IsGreater(Window(Home).Property(ListItem.Episode),9) + Integer.IsGreater(Window(Home).Property(ListItem.Season),9)">$INFO[Window(Home).Property(ListItem.TvShowTitle)] $INFO[Window(Home).Property(ListItem.Season),S]$INFO[Window(Home).Property(ListItem.Episode),E]: $INFO[Window(Home).Property(ListItem.Title)]</value>
 		<value condition="!Integer.IsGreater(Window(Home).Property(SkinHelper..ListItem.Episode),9) + Integer.IsGreater(Window(Home).Property(ListItem.Season),9)">$INFO[Window(Home).Property(ListItem.TvShowTitle)] $INFO[Window(Home).Property(ListItem.Season),S]$INFO[Window(Home).Property(ListItem.Episode),E0]: $INFO[Window(Home).Property(ListItem.Title)]</value>
 		<value condition="Integer.IsGreater(Window(Home).Property(ListItem.Episode),9)">$INFO[Window(Home).Property(ListItem.TvShowTitle)] $INFO[Window(Home).Property(ListItem.Season),S0]$INFO[Window(Home).Property(ListItem.Episode),E]: $INFO[Window(Home).Property(ListItem.Title)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(ListItem.Season)) + !String.IsEmpty(Window(Home).Property(ListItem.Episode))">$INFO[Window(Home).Property(ListItem.TvShowTitle)] $INFO[Window(Home).Property(ListItem.Season),S0]$INFO[Window(Home).Property(ListItem.Episode),E0]: $INFO[Window(Home).Property(ListItem.Title)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(ListItem.Title))">$INFO[Window(Home).Property(ListItem.Title)]</value>
-        
-        <value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.Episode),9) + Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.Season),9)">$INFO[Window(Home).Property(SkinHelper.ListItem.TvShowTitle)] $INFO[Window(Home).Property(SkinHelper.ListItem.Season),S]$INFO[Window(Home).Property(SkinHelper.ListItem.Episode),E]: $INFO[Window(Home).Property(SkinHelper.ListItem.Title)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(ListItem.Title))">$INFO[Window(Home).Property(ListItem.Title)]</value>
+		
+		<value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.Episode),9) + Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.Season),9)">$INFO[Window(Home).Property(SkinHelper.ListItem.TvShowTitle)] $INFO[Window(Home).Property(SkinHelper.ListItem.Season),S]$INFO[Window(Home).Property(SkinHelper.ListItem.Episode),E]: $INFO[Window(Home).Property(SkinHelper.ListItem.Title)]</value>
 		<value condition="!Integer.IsGreater(Window(Home).Property(SkinHelper..ListItem.Episode),9) + Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.Season),9)">$INFO[Window(Home).Property(SkinHelper.ListItem.TvShowTitle)] $INFO[Window(Home).Property(SkinHelper.ListItem.Season),S]$INFO[Window(Home).Property(SkinHelper.ListItem.Episode),E0]: $INFO[Window(Home).Property(SkinHelper.ListItem.Title)]</value>
 		<value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.Episode),9)">$INFO[Window(Home).Property(SkinHelper.ListItem.TvShowTitle)] $INFO[Window(Home).Property(SkinHelper.ListItem.Season),S0]$INFO[Window(Home).Property(SkinHelper.ListItem.Episode),E]: $INFO[Window(Home).Property(SkinHelper.ListItem.Title)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Season)) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Episode))">$INFO[Window(Home).Property(SkinHelper.ListItem.TvShowTitle)] $INFO[Window(Home).Property(SkinHelper.ListItem.Season),S0]$INFO[Window(Home).Property(SkinHelper.ListItem.Episode),E0]: $INFO[Window(Home).Property(SkinHelper.ListItem.Title)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Title))">$INFO[Window(Home).Property(SkinHelper.ListItem.Title)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Title))">$INFO[Window(Home).Property(SkinHelper.ListItem.Title)]</value>
 		<value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetName.99))">$INFO[Container(300).ListItem.Property(widgetName.99)]</value>
-        <value>$LOCALIZE[31185]</value>
+		<value>$LOCALIZE[31185]</value>
 	</variable>
-    <variable name="EnhancedHomeSpotLightWidgetImage">
-        <value condition="!ControlGroup(77777).HasFocus + Control.IsVisible(1508) + !String.IsEmpty(Container(1508).ListItem.ChannelName)">resource://resource.images.skinbackgrounds.titanium/hover_my tv.jpg</value>
-        <value condition="!ControlGroup(77777).HasFocus + Control.IsVisible(1508) + !String.IsEmpty(Container(1508).ListItem.Art(fanart))">$INFO[Container(1508).ListItem.Art(fanart)]</value>
-        <value condition="!ControlGroup(77777).HasFocus + Control.IsVisible(1508) + !String.IsEmpty(Container(1508).ListItem.Art(tvshow.fanart))">$INFO[Container(1508).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!ControlGroup(77777).HasFocus + Control.IsVisible(1508) + !String.IsEmpty(Container(1508).ListItem.Property(fanart))">$INFO[Container(1508).ListItem.Property(fanart)]</value>
-        <value condition="!ControlGroup(77777).HasFocus + Control.IsVisible(1508) + !String.IsEmpty(Container(1508).ListItem.Art(thumb))">$INFO[Container(1508).ListItem.Art(thumb)]</value>
-        <value condition="!ControlGroup(77777).HasFocus + Control.IsVisible(1508)"></value>
-        
-        <value condition="!String.IsEmpty(Window(Home).Property(ListItem.ChannelName))">resource://resource.images.skinbackgrounds.titanium/hover_my tv.jpg</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(ListItem.Art.fanart))">$INFO[Window(Home).Property(ListItem.Art.fanart)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(ListItem.Art.tvshow.fanart))">$INFO[Window(Home).Property(ListItem.Art.tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(ListItem.Art.Thumb))">$INFO[Window(Home).Property(ListItem.Art.Thumb)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(ListItem.Icon))">$INFO[Window(Home).Property(ListItem.Icon)]</value>
-        
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.ChannelName))">resource://resource.images.skinbackgrounds.titanium/hover_my tv.jpg</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.tvshow.fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Icon))">$INFO[Window(Home).Property(SkinHelper.ListItem.Icon)]</value>
+	<variable name="EnhancedHomeSpotLightWidgetImage">
+		<value condition="!ControlGroup(77777).HasFocus + Control.IsVisible(1508) + !String.IsEmpty(Container(1508).ListItem.ChannelName)">resource://resource.images.skinbackgrounds.titanium/hover_my tv.jpg</value>
+		<value condition="!ControlGroup(77777).HasFocus + Control.IsVisible(1508) + !String.IsEmpty(Container(1508).ListItem.Art(fanart))">$INFO[Container(1508).ListItem.Art(fanart)]</value>
+		<value condition="!ControlGroup(77777).HasFocus + Control.IsVisible(1508) + !String.IsEmpty(Container(1508).ListItem.Art(tvshow.fanart))">$INFO[Container(1508).ListItem.Art(tvshow.fanart)]</value>
+		<value condition="!ControlGroup(77777).HasFocus + Control.IsVisible(1508) + !String.IsEmpty(Container(1508).ListItem.Property(fanart))">$INFO[Container(1508).ListItem.Property(fanart)]</value>
+		<value condition="!ControlGroup(77777).HasFocus + Control.IsVisible(1508) + !String.IsEmpty(Container(1508).ListItem.Art(thumb))">$INFO[Container(1508).ListItem.Art(thumb)]</value>
+		<value condition="!ControlGroup(77777).HasFocus + Control.IsVisible(1508)"></value>
+		
+		<value condition="!String.IsEmpty(Window(Home).Property(ListItem.ChannelName))">resource://resource.images.skinbackgrounds.titanium/hover_my tv.jpg</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(ListItem.Art.fanart))">$INFO[Window(Home).Property(ListItem.Art.fanart)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(ListItem.Art.tvshow.fanart))">$INFO[Window(Home).Property(ListItem.Art.tvshow.fanart)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(ListItem.Art.Thumb))">$INFO[Window(Home).Property(ListItem.Art.Thumb)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(ListItem.Icon))">$INFO[Window(Home).Property(ListItem.Icon)]</value>
+		
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.ChannelName))">resource://resource.images.skinbackgrounds.titanium/hover_my tv.jpg</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.tvshow.fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.tvshow.fanart)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Icon))">$INFO[Window(Home).Property(SkinHelper.ListItem.Icon)]</value>
 
-    </variable>
+	</variable>
 	
-    <variable name="EnhancedHomeButtonUpAction">
+	<variable name="EnhancedHomeButtonUpAction">
 		<value condition="Control.IsVisible(4445)">SetFocus(4445)</value>
-        <value condition="!Integer.IsGreater(Container(4444).NumItems,0) + !String.IsEmpty(Container(300).ListItem.Property(widget.99))">SetFocus(1508)</value>
+		<value condition="!Integer.IsGreater(Container(4444).NumItems,0) + !String.IsEmpty(Container(300).ListItem.Property(widget.99))">SetFocus(1508)</value>
 		<value condition="!Integer.IsGreater(Container(4444).NumItems,0) + !String.IsEmpty(Container(300).ListItem.Property(widget))">SetFocus(77777)</value>
 		<value>SetFocus(4444,0)</value>
    </variable>
-    
+	
 </includes>

@@ -25,3 +25,13 @@ msgstr ""
 msgctxt "#32000"
 msgid "Unable to parse information in this section"
 msgstr ""
+
+#: /resources/lib/api.py
+msgctxt "#32002"
+msgid "No results"
+msgstr ""
+
+#: /resources/lib/api.py
+msgctxt "#32003"
+msgid "No results found for {}"
+msgstr ""

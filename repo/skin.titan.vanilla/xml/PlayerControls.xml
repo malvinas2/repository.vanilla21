@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="400">
 
-    <defaultcontrol always="true">100</defaultcontrol>
+	<defaultcontrol always="true">100</defaultcontrol>
 	
 	<include>animation_window_open_close</include>
-           		
-    <visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(fullscreenvideo) + !Window.IsActive(Visualisation)</visible>
-    <coordinates>
-        <system>1</system>
-    </coordinates>
-    <controls>
+				
+	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(fullscreenvideo) + !Window.IsActive(Visualisation)</visible>
+	<coordinates>
+		<system>1</system>
+	</coordinates>
+	<controls>
 	
 	<include>DialogOverlayExtra</include>
 		
@@ -510,5 +510,5 @@
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 		</control>
-    </controls>
+	</controls>
 </window>

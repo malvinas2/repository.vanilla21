@@ -1,87 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window>
-    <defaultcontrol>7</defaultcontrol>
-    <controls>
-        <!--Dialog Overlay-->
-        <include>DialogOverlayExtra</include>
+	<defaultcontrol>7</defaultcontrol>
+	<controls>
+		<!--Dialog Overlay-->
+		<include>DialogOverlayExtra</include>
 		<include condition="Skin.HasSetting(EnableTouchSupport)">Footer</include>
-        <!--Dialog Tex Viewer-->
-        <control type="group">
-            <include>animation_window_open_close</include>
+		<!--Dialog Tex Viewer-->
+		<control type="group">
+			<include>animation_window_open_close</include>
 			<control type="image">
-                <!--Panel-->
-                <left>445</left>
-                <top>150</top>
-                <width>1030</width>
-                <height>771</height>
-                <texture border="15">diffuse/bgpanel.png</texture>
+				<!--Panel-->
+				<left>445</left>
+				<top>150</top>
+				<width>1030</width>
+				<height>771</height>
+				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-            </control>
+			</control>
 			<control type="image">
-                <!--Panel-->
-                <left>445</left>
-                <top>150</top>
-                <width>1030</width>
-                <height>771</height>
+				<!--Panel-->
+				<left>445</left>
+				<top>150</top>
+				<width>1030</width>
+				<height>771</height>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<bordersize>10</bordersize>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-            </control>
+			</control>
 			<control type="label" id="1">
-                <description>Heading</description>
-                <left>473</left>
-                <top>170</top>
-                <width>974</width>
-                <label></label>
-                <include>DialogHeader</include>
-                <align>center</align>
-            </control>
-            <control type="image">
-                <left>479</left>
-                <top>265</top>
-                <width>962</width>
-                <height>548</height>
-                <texture border="5">dialogs/default/inner.png</texture>
-            </control>
-            <control type="textbox" id="5">
-                <description>textarea</description>
-                <left>495</left>
-                <top>275</top>
-                <width>930</width>
-                <height>530</height>
-                <label></label>
-                <include>DialogLabel</include>
-                <align>left</align>
-                <pagecontrol>61</pagecontrol>
+				<description>Heading</description>
+				<left>473</left>
+				<top>170</top>
+				<width>974</width>
+				<label></label>
+				<include>DialogHeader</include>
+				<align>center</align>
+			</control>
+			<control type="image">
+				<left>479</left>
+				<top>265</top>
+				<width>962</width>
+				<height>548</height>
+				<texture border="5">dialogs/default/inner.png</texture>
+			</control>
+			<control type="textbox" id="5">
+				<description>textarea</description>
+				<left>495</left>
+				<top>275</top>
+				<width>930</width>
+				<height>530</height>
+				<label></label>
+				<include>DialogLabel</include>
+				<align>left</align>
+				<pagecontrol>61</pagecontrol>
 				<monofont>Mono26</monofont>
-            </control>
-            <control type="scrollbar" id="61">
-                <left>1426</left>
-                <top>268</top>
-                <height>541</height>
-                <onleft>8000</onleft>
-                <onright>8000</onright>
-                <showonepage>false</showonepage>
-                <orientation>vertical</orientation>
-                <animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(62)">Conditional</animation>
-            </control>
-            <control type="group" id="8000">
-                <left>466</left>
-                <top>809</top>
-                <control type="button" id="7">
-                    <left>0</left>
-                    <description>Close</description>
-                    <label>$LOCALIZE[222]</label>
-                    <include>DialogButtonOther</include>
-                    <onclick>PreviousMenu</onclick>
-                    <onleft>61</onleft>
-                    <onright>61</onright>
-                    <onup>61</onup>
-                    <ondown>61</ondown>
-                    <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(7)">Conditional</animation>
-                </control>
-            </control>
-        </control>
-    </controls>
+			</control>
+			<control type="scrollbar" id="61">
+				<left>1426</left>
+				<top>268</top>
+				<height>541</height>
+				<onleft>8000</onleft>
+				<onright>8000</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(62)">Conditional</animation>
+			</control>
+			<control type="group" id="8000">
+				<left>466</left>
+				<top>809</top>
+				<control type="button" id="7">
+					<left>0</left>
+					<description>Close</description>
+					<label>$LOCALIZE[222]</label>
+					<include>DialogButtonOther</include>
+					<onclick>PreviousMenu</onclick>
+					<onleft>61</onleft>
+					<onright>61</onright>
+					<onup>61</onup>
+					<ondown>61</ondown>
+					<animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(7)">Conditional</animation>
+				</control>
+			</control>
+		</control>
+	</controls>
 </window>

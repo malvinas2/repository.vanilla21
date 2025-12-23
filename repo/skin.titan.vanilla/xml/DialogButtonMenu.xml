@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window>
 <!-- <window type="buttonMenu"> deprecated? -->
-    <defaultcontrol always="true">9001</defaultcontrol>
+	<defaultcontrol always="true">9001</defaultcontrol>
 	<onload>SetProperty(shutdownmenuactive,true,home)</onload>
 	<onunload>ClearProperty(shutdownmenuactive,home)</onunload>
-    <onload>Dialog.Close(busydialognocancel)</onload>
-    <controls>
+	<onload>Dialog.Close(busydialognocancel)</onload>
+	<controls>
 		<include>DialogOverlayExtra</include>
 		<!-- hidden button to exit dialog in touchscreen mode -->
 		<control type="button">
@@ -60,7 +60,7 @@
 			</control>
 			<control type="image">
 				<left>0</left>
-                <top></top>
+				<top></top>
 				<bottom>0</bottom>
 				<width>100%</width>
 				<height>110</height>
@@ -140,5 +140,5 @@
 				</content>
 			</control>
 		</control>
-    </controls>
+	</controls>
 </window>

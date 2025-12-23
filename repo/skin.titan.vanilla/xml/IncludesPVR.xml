@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
 	<!-- KN SWITCHTIMER  -->
@@ -13,7 +14,7 @@
 		<value condition="!IsEmpty(Skin.String(t8:date))">$LOCALIZE[31113]</value>
 		<value condition="!IsEmpty(Skin.String(t9:date))">$LOCALIZE[31113]</value>
 		<value>$LOCALIZE[31114]</value>
-    </variable>
+	</variable>
 	
 	<include name="KNSwitcherContent">
 		<item>

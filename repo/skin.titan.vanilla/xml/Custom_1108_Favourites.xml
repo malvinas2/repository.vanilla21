@@ -6,10 +6,10 @@
 	<onunload>ClearProperty(ShowViewSubMenu,home)</onunload>
 	<include>animation_window_open_close</include>
 	<controls>
-        <include>GlobalBackground</include>
+		<include>GlobalBackground</include>
 		<!--Header-->
-        <include>Header</include>
- 		<!--NowPlaying-->
+		<include>Header</include>
+		<!--NowPlaying-->
 		<include>NowPlayingModern</include>
 		<control type="group">
 			<include>animation_view_change</include>
@@ -117,7 +117,7 @@
 			
 		</control>
 		
-        <include condition="Skin.HasSetting(DebugGrid) | Skin.HasSetting(DebugInfo)">DebugInfo</include>
+		<include condition="Skin.HasSetting(DebugGrid) | Skin.HasSetting(DebugInfo)">DebugInfo</include>
 	
 		<!-- <include>DialogOverlayExtra</include> -->
 

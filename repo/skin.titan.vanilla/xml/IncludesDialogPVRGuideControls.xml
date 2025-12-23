@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <includes>
-    <include name="PVRGuideControl_Channelgroup">
+	<include name="PVRGuideControl_Channelgroup">
 		<control type="grouplist" id="203">
 			<left>$PARAM[posleft]</left>
 			<top>$PARAM[postop]</top>
@@ -47,7 +47,7 @@
 	</include>
 	
 
-    <include name="PVRGuideControl_Channels">
+	<include name="PVRGuideControl_Channels">
 		<control type="grouplist" id="202">
 			<left>$PARAM[posleft]</left>
 			<top>$PARAM[postop]</top>
@@ -94,7 +94,7 @@
 	</include>
 	
 
-    <include name="PVRGuideControl_Program">
+	<include name="PVRGuideControl_Program">
 		<control type="grouplist" id="201">
 			<left>$PARAM[posleft]</left>
 			<top>$PARAM[postop]</top>

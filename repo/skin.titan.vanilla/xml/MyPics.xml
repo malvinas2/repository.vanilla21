@@ -1,30 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window>
-    <defaultcontrol always="true">5000</defaultcontrol>
+	<defaultcontrol always="true">5000</defaultcontrol>
 	
 	<onunload>ClearProperty(ShowViewSubMenu,home)</onunload>
-    <include>allViewIds</include>
+	<include>allViewIds</include>
 	
-    <controls>
-        <!--Global Background-->
-        <include>GlobalBackground</include>
+	<controls>
+		<!--Global Background-->
+		<include>GlobalBackground</include>
 		 <!--Header-->
-        <include>Header</include>
- 		<!--NowPlaying-->
+		<include>Header</include>
+		<!--NowPlaying-->
 		<include>NowPlayingModern</include>
 		
-         <!-- all Views -->
-        <include>allViews</include>
+		 <!-- all Views -->
+		<include>allViews</include>
 		
-        <!--Sub Menu Tab Left-->
-        <include condition="!Skin.HasSetting(DisableSideBladeIndicator)">SideBladeMenuTabLeft</include>
+		<!--Sub Menu Tab Left-->
+		<include condition="!Skin.HasSetting(DisableSideBladeIndicator)">SideBladeMenuTabLeft</include>
 		<include condition="!Skin.HasSetting(DisableSideBladeIndicator)">SideBladeMenuTabTop</include>
-        <!--Sub Menu-->
-        <control type="group">
-            <include condition="Skin.HasSetting(smallContextMenu)">SideBladeClassic</include>
+		<!--Sub Menu-->
+		<control type="group">
+			<include condition="Skin.HasSetting(smallContextMenu)">SideBladeClassic</include>
 			<include condition="![Skin.HasSetting(smallContextMenu)]">SideBladeModern</include>
-            <control type="button" id="3">
+			<control type="button" id="3">
 				<description>Viewtype Toggle</description>
 				<include>HiddenButton</include>
 			</control>
@@ -33,23 +33,23 @@
 				<include>HiddenButton</include>
 			</control>
 			<!--Grouplist 9000-->
-            <control type="grouplist" id="9000">
-                <left>21</left>
-                <top>185</top>
-                <width>458</width>
-                <height>770</height>
-                <itemgap>3</itemgap>
-                <!-- <onleft>5000</onleft> -->
-                <!-- <onright>5000</onright> -->
+			<control type="grouplist" id="9000">
+				<left>21</left>
+				<top>185</top>
+				<width>458</width>
+				<height>770</height>
+				<itemgap>3</itemgap>
+				<!-- <onleft>5000</onleft> -->
+				<!-- <onright>5000</onright> -->
 				<visible>!Skin.HasSetting(KioskMode.Enabled)</visible>
 				<!-- <onright>ClearProperty(ShowViewSubMenu,home)</onright> -->
 				<!-- <onleft>ClearProperty(ShowViewSubMenu,home)</onleft> -->
 				<onback>ClearProperty(ShowViewSubMenu,home)</onback>
 				<onback>5000</onback>
-                <onup>9000</onup>
-                <ondown>9000</ondown>
-                <orientation>vertical</orientation>
-                <!--Buttons-->
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<orientation>vertical</orientation>
+				<!--Buttons-->
 			    <control type="button" id="6053">
 					<description>Sort by button</description>
 					<include>SideBladeMenuButton</include>
@@ -89,33 +89,33 @@
 					<onclick>right</onclick>
 					<onclick>Filter</onclick>
 				</control>
-                <control type="button" id="6">
-                    <!--Slideshow-->
-                    <visible>!ListItem.IsFolder</visible>
-                    <include>SideBladeMenuButton</include>
-                    <label>$LOCALIZE[108]</label>
-                </control>
-                <control type="button" id="7">
-                    <!--Recursive Slideshow-->
-                    <visible>ListItem.IsFolder</visible>
-                    <include>SideBladeMenuButton</include>
-                    <label>$LOCALIZE[108]</label>
-                </control>
-                <control type="radiobutton" id="9">
-                    <!--Randomise-->
-                    <include>SideBladeMenuButton</include>
-                    <label>$LOCALIZE[13319]</label>
-                </control>
+				<control type="button" id="6">
+					<!--Slideshow-->
+					<visible>!ListItem.IsFolder</visible>
+					<include>SideBladeMenuButton</include>
+					<label>$LOCALIZE[108]</label>
+				</control>
+				<control type="button" id="7">
+					<!--Recursive Slideshow-->
+					<visible>ListItem.IsFolder</visible>
+					<include>SideBladeMenuButton</include>
+					<label>$LOCALIZE[108]</label>
+				</control>
+				<control type="radiobutton" id="9">
+					<!--Randomise-->
+					<include>SideBladeMenuButton</include>
+					<label>$LOCALIZE[13319]</label>
+				</control>
 				<include>SideBladeViewCommands</include>
-                <control type="radiobutton" id="31029">
-                    <!--Disable footer-->
-                    <include>SideBladeMenuButton</include>
-                    <label>$LOCALIZE[31029]</label>
-                    <onclick>Skin.ToggleSetting(MyPicsDisableFooter)</onclick>
-                    <selected>Skin.HasSetting(MyPicsDisableFooter)</selected>
-                </control>
-            </control>
-        </control>
-        <include condition="Skin.HasSetting(DebugGrid) | Skin.HasSetting(DebugInfo)">DebugInfo</include>
-    </controls>
+				<control type="radiobutton" id="31029">
+					<!--Disable footer-->
+					<include>SideBladeMenuButton</include>
+					<label>$LOCALIZE[31029]</label>
+					<onclick>Skin.ToggleSetting(MyPicsDisableFooter)</onclick>
+					<selected>Skin.HasSetting(MyPicsDisableFooter)</selected>
+				</control>
+			</control>
+		</control>
+		<include condition="Skin.HasSetting(DebugGrid) | Skin.HasSetting(DebugInfo)">DebugInfo</include>
+	</controls>
 </window>

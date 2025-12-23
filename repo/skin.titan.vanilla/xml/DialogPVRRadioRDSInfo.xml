@@ -16,24 +16,24 @@
 			<centerleft>50%</centerleft>
 			<width>1280</width>
 			<control type="group">
-                <control type="image">
-                    <texture border="15">diffuse/bgpanel.png</texture>
-					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-                </control>
 				<control type="image">
-                    <texture border="15">diffuse/bgpanel.png</texture>
+					<texture border="15">diffuse/bgpanel.png</texture>
+					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+				</control>
+				<control type="image">
+					<texture border="15">diffuse/bgpanel.png</texture>
 					<bordersize>10</bordersize>
 					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-                </control>
+				</control>
 			</control>
 			<!-- close dialog -->
-            <control type="group">
-                <include>animation_fade_visible_hidden</include>
-                <right>50</right>
-                <width>50</width>
-                <top>40</top>
-                <include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
-            </control>
+			<control type="group">
+				<include>animation_fade_visible_hidden</include>
+				<right>50</right>
+				<width>50</width>
+				<top>40</top>
+				<include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
+			</control>
 			<control type="image">
 				<left>30</left>
 				<top>120</top>

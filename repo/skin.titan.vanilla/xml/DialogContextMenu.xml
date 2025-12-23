@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window>
-    <defaultcontrol always="true">1000</defaultcontrol>
-    <onload condition="Window.IsActive(loginscreen) + Skin.HasSetting(LoginScreen_DisableContextMenu)">Close</onload>
-	<onload condition="Window.IsActive(tvguide) + String.IsEmpty(ListItem.Title)">SetFocus(1003)</onload>
-	<onload condition="Window.IsActive(tvguide) + !String.IsEmpty(ListItem.Title)">SetFocus(1006)</onload>
-    <controls>
+	<defaultcontrol always="true">1000</defaultcontrol>
+	<onload condition="Window.IsActive(loginscreen) + Skin.HasSetting(LoginScreen_DisableContextMenu)">Close</onload>
+	<onload condition="Window.IsActive(tvguide) + String.IsEmpty(ListItem.Title)">PageDown</onload>
+	<onload condition="Window.IsActive(tvguide) + !String.IsEmpty(ListItem.Title)">PageDown</onload>
+	<controls>
 		<!-- touchscreen support -->
 		<!-- hidden button to exit dialog in touchscreen mode -->
 		<control type="button">
@@ -26,6 +26,6 @@
 			<visible>Skin.HasSetting(EnableTouchSupport)</visible>
 		</control>
 		<include condition="Skin.HasSetting(smallContextMenu)">DialogContextMenuClassic</include>
-        <include condition="!Skin.HasSetting(smallContextMenu)">DialogContextMenuModern</include>
+		<include condition="!Skin.HasSetting(smallContextMenu)">DialogContextMenuModern</include>
 	</controls>
 </window>

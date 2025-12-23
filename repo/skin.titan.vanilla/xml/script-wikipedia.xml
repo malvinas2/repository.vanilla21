@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
-    <defaultcontrol always="true">9902</defaultcontrol>
-    
-	<controls>
-        <!--Dialog Overlay-->
-        <include>DialogOverlayExtra</include>
+	<defaultcontrol always="true">9902</defaultcontrol>
 	
-        <control type="group">
-            <centertop>50%</centertop>
-            <centerleft>50%</centerleft>
-            <height>1000</height>
-            <width>1840</width>
+	<controls>
+		<!--Dialog Overlay-->
+		<include>DialogOverlayExtra</include>
+	
+		<control type="group">
+			<centertop>50%</centertop>
+			<centerleft>50%</centerleft>
+			<height>1000</height>
+			<width>1840</width>
 			
 			<control type="image">
-                <!--Panel-->
+				<!--Panel-->
 				<left>0</left>
 				<top>0</top>
-                <width>1840</width>
-                <height>1000</height>
-                <texture border="15">diffuse/bgpanel.png</texture>
+				<width>1840</width>
+				<height>1000</height>
+				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-            </control>
+			</control>
 			<control type="image">
-                <!--Panel-->
+				<!--Panel-->
 				<left>0</left>
 				<top>0</top>
-                <width>1840</width>
-                <height>1000</height>
+				<width>1840</width>
+				<height>1000</height>
 				<bordersize>10</bordersize>
-                <texture border="15">diffuse/bgpanel.png</texture>
+				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-            </control>
+			</control>
 
-            <!--Header-->
-            <control type="label" id="9901">
-                <description>Heading</description>
+			<!--Header-->
+			<control type="label" id="9901">
+				<description>Heading</description>
 				<centerleft>50%</centerleft>
 				<top>20</top>
-                <width>1800</width>
-                <label></label>
-                <include>DialogHeader</include>
-                <align>center</align>
-            </control>
+				<width>1800</width>
+				<label></label>
+				<include>DialogHeader</include>
+				<align>center</align>
+			</control>
 
-            <control type="group">
-                <bottom>100</bottom>
+			<control type="group">
+				<bottom>100</bottom>
 
-                <!-- Table of Contents -->
-                <control type="image">
-                    <left>20</left>
-                    <top>80</top>
-                    <width>480</width>
-                    <bottom>2</bottom>
+				<!-- Table of Contents -->
+				<control type="image">
+					<left>20</left>
+					<top>80</top>
+					<width>480</width>
+					<bottom>2</bottom>
 					<texture border="5">dialogs/default/inner.png</texture>
-                </control>
-                <control type="list" id="9902">
-                    <left>20</left>
-                    <top>100</top>
-                    <width>480</width>
-                    <bottom>20</bottom>
-                    <onup>9902</onup>
-                    <ondown>9902</ondown>
-                    <onleft>9001</onleft>
-                    <onright>62</onright>
-                    <scrolltime>200</scrolltime>
+				</control>
+				<control type="list" id="9902">
+					<left>20</left>
+					<top>100</top>
+					<width>480</width>
+					<bottom>20</bottom>
+					<onup>9902</onup>
+					<ondown>9902</ondown>
+					<onleft>9001</onleft>
+					<onright>62</onright>
+					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>
 					<pagecontrol>62</pagecontrol>
 					<autoscroll>false</autoscroll>
@@ -109,69 +109,69 @@
 							</control>
 						</control>
 					</focusedlayout>
-                </control>
+				</control>
 
-                <control type="scrollbar" id="62">
-                    <left>520</left>
-                    <top>100</top>
-                    <width>20</width>
-                    <bottom>20</bottom>
-                    <onleft>9902</onleft>
-                    <onright>9903</onright>
+				<control type="scrollbar" id="62">
+					<left>520</left>
+					<top>100</top>
+					<width>20</width>
+					<bottom>20</bottom>
+					<onleft>9902</onleft>
+					<onright>9903</onright>
 					<onup>62</onup>
 					<ondown>62</ondown>
-                    <orientation>vertical</orientation>
+					<orientation>vertical</orientation>
 					<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(62) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
 					<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(62) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
-                </control>
+				</control>
 
-                <!-- Article Textbox and Scrollbar -->
-                <control type="image">
-                    <left>550</left>
-                    <top>80</top>
-                    <right>395</right>
-                    <bottom>2</bottom>
+				<!-- Article Textbox and Scrollbar -->
+				<control type="image">
+					<left>550</left>
+					<top>80</top>
+					<right>395</right>
+					<bottom>2</bottom>
 					<texture border="5">dialogs/default/inner.png</texture>
-                </control>
-                <control type="textbox" id="9903">
-                    <left>550</left>
-                    <top>110</top>
-                    <right>395</right>
-                    <bottom>32</bottom>
+				</control>
+				<control type="textbox" id="9903">
+					<left>550</left>
+					<top>110</top>
+					<right>395</right>
+					<bottom>32</bottom>
 					<onup>9903</onup>
 					<ondown>9903</ondown>
 					<onleft>62</onleft>
-                    <onright>63</onright>
-                    <include>DialogLabel</include>
+					<onright>63</onright>
+					<include>DialogLabel</include>
 					<!-- <shadowcolor>black</shadowcolor> -->
-                    <!-- <font>font14</font> -->
-                    <monofont>Mono26</monofont>
-                    <pagecontrol>63</pagecontrol>
+					<!-- <font>font14</font> -->
+					<monofont>Mono26</monofont>
+					<pagecontrol>63</pagecontrol>
 					<autoscroll>false</autoscroll>
-                </control>
-                <control type="scrollbar" id="63">
-       				<left></left>
+				</control>
+				<control type="scrollbar" id="63">
+					<left></left>
 					<right>340</right>
-                    <top>100</top>
-                    <width>20</width>
-                    <bottom>20</bottom>
-                    <onleft>9903</onleft>
-                    <onright>9001</onright>
+					<top>100</top>
+					<width>20</width>
+					<bottom>20</bottom>
+					<onleft>9903</onleft>
+					<onright>9001</onright>
 					<onup>63</onup>
 					<ondown>63</ondown>
-                    <orientation>vertical</orientation>
+					<orientation>vertical</orientation>
 					<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(63) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
 					<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(63) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
-                </control>
+				</control>
 
-                <!-- Close Button -->
-                <control type="grouplist" id="9000">
-                    <right>20</right>
-                    <top>80</top>
-                    <width>300</width>
-                    <onleft>63</onleft>
-                    <itemgap>15</itemgap>
-                    <onright>9902</onright>
+				<!-- Close Button -->
+				<control type="grouplist" id="9000">
+					<right>20</right>
+					<top>80</top>
+					<width>300</width>
+					<onleft>63</onleft>
+					<itemgap>15</itemgap>
+					<onright>9902</onright>
 					<control type="button" id="9001">
 						<!--Close-->
 						<width>270</width>
@@ -228,5 +228,5 @@
 				<textcolor>grey</textcolor>
 			</control>
 		</control>
-    </controls>
+	</controls>
 </window>

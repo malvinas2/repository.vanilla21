@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window>
-    <defaultcontrol></defaultcontrol>
+	<defaultcontrol></defaultcontrol>
 	
 		<!-- <onload>ClearProperty(pvrGuideOnFullscreenVideo,home)</onload> -->
 	
 	<onload condition="Skin.HasSetting(DisableSubtitles) + VideoPlayer.SubtitlesEnabled">ShowSubtitles</onload>
-    <onunload condition="![Player.HasVideo + VideoPlayer.Content(livetv)]">ClearProperty(pvrGuideOnFullscreenVideo,home)</onunload>
-    <controls>
+	<onunload condition="![Player.HasVideo + VideoPlayer.Content(livetv)]">ClearProperty(pvrGuideOnFullscreenVideo,home)</onunload>
+	<controls>
 		<control type="image">
 			<left>0</left>
 			<top>300</top>
@@ -74,7 +74,7 @@
 				<label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
 				<label2>$LOCALIZE[31806]</label2>
 				<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
-                <shadowcolor>black</shadowcolor>
+				<shadowcolor>black</shadowcolor>
 				<align>center</align>
 				<font>WeatherTemp</font>
 				<aligny>center</aligny>
@@ -89,7 +89,7 @@
 				<visible>!Window.IsVisible(numericinput) + !String.IsEmpty(Player.SeekNumeric)</visible>
 				<font>Reg48</font>
 				<textcolor>$INFO[Skin.String(OSDPrimaryTextColor)]</textcolor>
-                <shadowcolor>black</shadowcolor>
+				<shadowcolor>black</shadowcolor>
 				<align>center</align>
 			</control>
 		</control>					
@@ -119,7 +119,7 @@
 				<animation effect="fade" end="25" time="0" condition="true">Conditional</animation>
 				<texture>dialogs/buffer-progress/p100.png</texture>
 			</control>
- 			<control type="image" id="24">
+			<control type="image" id="24">
 				<left></left>
 				<right>50</right>
 				<top>710</top>
@@ -157,5 +157,5 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>
-    </controls>
+	</controls>
 </window>

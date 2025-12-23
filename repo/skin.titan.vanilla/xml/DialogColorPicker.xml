@@ -1,49 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window>
-    <defaultcontrol always="true">6</defaultcontrol>
-    <controls>
-        <!--Dialog Overlay-->
-        <include>DialogOverlayExtra</include>
-        <!--Dialog Main -->
-        <control type="group">
+	<defaultcontrol always="true">6</defaultcontrol>
+	<controls>
+		<!--Dialog Overlay-->
+		<include>DialogOverlayExtra</include>
+		<!--Dialog Main -->
+		<control type="group">
 			<include>animation_window_open_close</include>
 			<centertop>50%</centertop>
 			<centerleft>50%</centerleft>
-            <width>980</width>
-            <height>920</height>
-            <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput)</visible>
+			<width>980</width>
+			<height>920</height>
+			<visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput)</visible>
 			<control type="image">
-                <!--Panel-->
+				<!--Panel-->
 				<left>0</left>
 				<top>0</top>
-                <width>980</width>
-                <height>920</height>
-                <texture border="15">diffuse/bgpanel.png</texture>
+				<width>980</width>
+				<height>920</height>
+				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-            </control>
+			</control>
 			<control type="image">
-                <!--Panel-->
+				<!--Panel-->
 				<left>0</left>
 				<top>0</top>
-                <width>980</width>
-                <height>920</height>
+				<width>980</width>
+				<height>920</height>
 				<bordersize>10</bordersize>
-                <texture border="15">diffuse/bgpanel.png</texture>
+				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-            </control>
-            <!--Header-->
-            <control type="label" id="1">
-                <description>Heading</description>
-				<centerleft>50%</centerleft>
+			</control>
+			<!--Header-->
+			<control type="label" id="1">
+				<description>Heading</description>
+				<!-- <centerleft>50%</centerleft> -->
+				<left>40</left>
 				<top>20</top>
-                <width>1180</width>
-                <label></label>
-                <include>DialogHeader</include>
-                <align>center</align>
-            </control>
-            <!--Default Group-->
-            <control type="group">
+				<width>900</width>
+				<label></label>
+				<include>DialogHeader</include>
+				<align>center</align>
+			</control>
+			<!--Default Group-->
+			<control type="group">
 				<control type="image">
 					<left>30</left>
 					<top>135</top>
@@ -51,7 +52,7 @@
 					<bottom>120</bottom>
 					<texture border="5">dialogs/default/inner.png</texture>
 				</control>
-            </control>
+			</control>
 			<!-- Color picker panel -->
 			<control type="panel" id="6">
 				<left>40</left>
@@ -130,6 +131,7 @@
 			</control>
 			<!-- Anzahl der Eintrage, rechts unten -->
 			<control type="label">
+				<left></left>
 				<right>20</right>
 				<top>860</top>
 				<width>400</width>
@@ -143,15 +145,31 @@
 				<left>20</left>
 				<top>820</top> 
 				<onup>6</onup>
-				<itemgap>45</itemgap>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
 				<ondown>6</ondown>
 				<control type="button" id="7">
-                    <!--Close-->
+					<!--Close-->
 					<width>270</width>
-                    <include>DialogButtonOther</include>
-                    <label>$LOCALIZE[222]</label>
-                </control>
+					<include>DialogButtonOther</include>
+					<label>$LOCALIZE[222]</label>
+				</control>
+				<control type="button" id="99">
+				<!-- zurucksetzen button -->
+					<width>270</width>
+					<include>DialogButtonOther</include>
+					<label>$LOCALIZE[31152]</label>
+					<scroll>true</scroll>
+					<textwidth>240</textwidth>
+					<onclick>Skin.Reset($INFO[Window(10035).Property(Reset.Color)])</onclick>
+					<!-- <onclick>Skin.Reset(ButtonFocusColor)</onclick> -->
+					<!-- to get working default values colors have to be defined as variables, see e.g. Aeon Nox Silvo -->
+					<!-- <variable name="PanelHighlightColorVar"> in file Includes_Themes.xml -->
+					<onclick>SendClick(7)</onclick>
+					<!-- <visible>!String.IsEmpty(Window(10035).Property(Reset.Color))</visible> -->
+					<visible>false</visible>
+				</control>
 			</control>
-        </control>
-    </controls>
+		</control>
+	</controls>
 </window>

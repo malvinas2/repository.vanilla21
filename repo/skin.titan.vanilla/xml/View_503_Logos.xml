@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <includes>
-
 	<variable name="503_LogoImage">
 		<value condition="Skin.HasSetting(LogoViewPreferClearArt) + !String.IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
@@ -10,22 +9,18 @@
 		<value condition="String.IsEqual(ListItem.Label,..)">DefaultFolderBack.png</value>
 		<value>DefaultMovies.png</value>
 	</variable>
-
-    <include name="View_503_Logos">
-	
+	<include name="View_503_Logos">
 		<control type="group">
 			<include>animation_view_change</include>
 			<defaultcontrol always="true">503</defaultcontrol>
 			<visible>Control.IsVisible(503) + Integer.IsGreater(Container.NumItems,0)</visible>
-            <visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
+			<visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
 			<include>WatchedIndicatorLarge</include>
-
 				<!-- movie details -->
 				<control type="group">
 					<visible>Skin.HasSetting(LogoViewShowInfo)</visible>
 					<include>MovieDetailsTop</include>
 				</control>
-			
 				<control type="fixedlist" id="503">
 					<left>100</left>
 					<bottom>50</bottom>
@@ -35,7 +30,7 @@
 					<onright>503</onright>
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(EnableQuickJump)">7000</ondown>
-                <ondown condition="!Skin.HasSetting(EnableQuickJump)">60</ondown>
+				<ondown condition="!Skin.HasSetting(EnableQuickJump)">60</ondown>
 					<focusposition>1</focusposition>
 					<pagecontrol>60</pagecontrol>
 					<preloaditems>2</preloaditems>
@@ -79,24 +74,21 @@
 							</control>
 						</control>
 					</focusedlayout>
-
 			</control>
-		
-                <control type="scrollbar" id="60">
-					<visible>Control.IsVisible(503) + Integer.IsGreater(Container.NumItems,0)</visible>
-					<left>60</left>
-					<top></top>
-                    <bottom>14%</bottom>
-					<width>1800</width>
-					<height>15</height>
-					<onup>503</onup>
-					<onleft>60</onleft>
-					<onright>60</onright>
-					<orientation>horizontal</orientation>
-					<animation effect="fade" start="0" end="100" time="400" condition="[Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)] + !Control.IsVisible(6002)">Conditional</animation>
-					<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)] | Control.IsVisible(6002)">Conditional</animation>
-				</control>
-        </control>
+			<control type="scrollbar" id="60">
+				<visible>Control.IsVisible(503) + Integer.IsGreater(Container.NumItems,0)</visible>
+				<left>60</left>
+				<top></top>
+				<bottom>14%</bottom>
+				<width>1800</width>
+				<height>15</height>
+				<onup>503</onup>
+				<onleft>60</onleft>
+				<onright>60</onright>
+				<orientation>horizontal</orientation>
+				<animation effect="fade" start="0" end="100" time="400" condition="[Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)] + !Control.IsVisible(6002)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)] | Control.IsVisible(6002)">Conditional</animation>
+			</control>
+		</control>
 	</include>
-
 </includes>

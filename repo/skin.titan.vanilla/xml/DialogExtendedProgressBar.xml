@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window>
-    <defaultcontrol always="true">401</defaultcontrol>
-    <controls>
-        <control type="group" id="99999">
-            <animation type="WindowOpen" reversible="false">
+	<defaultcontrol always="true">401</defaultcontrol>
+	<controls>
+		<control type="group" id="99999">
+			<animation type="WindowOpen" reversible="false">
 				<effect type="slide" start="0,-400" end="0,0" tween="cubic" delay="500" easing="out" time="500" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
 				<effect type="slide" start="0,0" end="0,-400" tween="cubic" easing="out" time="500" />
 			</animation>
-            <visible>!Window.IsActive(notification) + !Window.IsActive(fullscreenvideo) + !Window.IsVisible(startup)</visible>
+			<visible>!Window.IsActive(notification) + !Window.IsActive(fullscreenvideo) + !Window.IsVisible(startup)</visible>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
@@ -19,7 +19,7 @@
 				<texture border="5">diffuse/panel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
 			</control>
-            <control type="group">
+			<control type="group">
 				<left>60</left>
 				<top>20</top>
 				<control type="label" id="1">
@@ -79,6 +79,6 @@
 					<scroll>false</scroll>
 				</control>
 			</control>
-        </control>
+		</control>
 	</controls>
 </window>

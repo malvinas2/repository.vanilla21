@@ -1,51 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <includes>
-
-    <include name="View_507_FanArt">
+	<include name="View_507_FanArt">
 	
 	 <!--View 507-->
-        <control type="group">
-            <visible>Control.IsVisible(507)</visible>
+		<control type="group">
+			<visible>Control.IsVisible(507)</visible>
 			<visible>Integer.IsGreater(Container(507).NumItems,0)</visible>
-            <include>animation_view_change</include>
-            <!-- fanart image -->
-            <control type="multiimage">
-                <include>DimensionsFullscreen</include>
-                <imagepath background="true">$VAR[backgroundVar]</imagepath>
-                <aspectratio>scale</aspectratio>
-                <fadetime>350</fadetime>
-                <include>fanartSpeed</include>
-                <randomize>true</randomize>
-                <loop>yes</loop>
-            </control>
+			<include>animation_view_change</include>
+			<!-- fanart image -->
+			<control type="multiimage">
+				<include>DimensionsFullscreen</include>
+				<imagepath background="true">$VAR[backgroundVar]</imagepath>
+				<aspectratio>scale</aspectratio>
+				<fadetime>350</fadetime>
+				<include>fanartSpeed</include>
+				<randomize>true</randomize>
+				<loop>yes</loop>
+			</control>
 			<include>WatchedIndicatorLarge</include>
-            
-             <!-- ID="52" -->
-            <control type="panel" id="507">
-                <left>0</left>
-                <top>40</top>
-                <width>100%</width>
-                <height>800</height>
-                <onup>9000</onup>
-                <ondown condition="Skin.HasSetting(EnableQuickJump)">7000</ondown>
-                <ondown condition="!Skin.HasSetting(EnableQuickJump)">60</ondown>
-                <onleft>507</onleft>
-                <onright>507</onright>
-                <viewtype label="31434">fanart</viewtype>
-                <scrolltime tween="Cubic" easing="inout">500</scrolltime>
-                <focusposition>0</focusposition>
-                <orientation>horizontal</orientation>
-                <preloaditems>2</preloaditems>
-				<visible>String.IsEqual(Window(Home).Property(SkinHelper.ForcedView),507) | String.IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
-                <itemlayout height="2500" width="1920">
-                </itemlayout>
-                <focusedlayout height="2500" width="1920">
-                </focusedlayout>
-            </control>
-
-
 			
+			 <!-- ID="52" -->
+			<control type="panel" id="507">
+				<left>0</left>
+				<top>40</top>
+				<width>100%</width>
+				<height>800</height>
+				<onup>9000</onup>
+				<ondown condition="Skin.HasSetting(EnableQuickJump)">7000</ondown>
+				<ondown condition="!Skin.HasSetting(EnableQuickJump)">60</ondown>
+				<onleft>507</onleft>
+				<onright>507</onright>
+				<viewtype label="31434">fanart</viewtype>
+				<scrolltime tween="Cubic" easing="inout">500</scrolltime>
+				<focusposition>0</focusposition>
+				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
+				<visible>String.IsEqual(Window(Home).Property(SkinHelper.ForcedView),507) | String.IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
+				<itemlayout height="2500" width="1920">
+				</itemlayout>
+				<focusedlayout height="2500" width="1920">
+				</focusedlayout>
+			</control>
+
 			<!--Info-->
 			<control type="group">
 				<visible>Control.IsVisible(507) + !String.IsEmpty(ListItem.Label)</visible>
@@ -76,16 +73,16 @@
 						<width>1100</width>
 						<font>Bold30</font>
 						<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                        <shadowcolor>$INFO[Skin.String(ViewDetailsHighlightTextShadowColor)]</shadowcolor>
+						<shadowcolor>$INFO[Skin.String(ViewDetailsHighlightTextShadowColor)]</shadowcolor>
 						<label>[UPPERCASE]$VAR[mediatitle][/UPPERCASE]</label>
 					</control>
-                    <control type="label">
-						  <height>40</height>
-						  <width>1100</width>
-						  <font>Reg31</font>
-						  <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
-						  <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-						  <label>$VAR[Details]</label>
+					<control type="label">
+						<height>40</height>
+						<width>1100</width>
+						<font>Reg31</font>
+						<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+						<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+						<label>$VAR[Details]</label>
 					</control>
 					<control type="textbox">
 						<left>0</left>
@@ -140,10 +137,7 @@
 					<onclick>Control.Move(507,1) </onclick>
 					<visible>Skin.HasSetting(EnableTouchSupport)</visible>
 				</control>
-			
 			</control>
-			
-		
 		</control>
-     </include>
+	</include>
 </includes>

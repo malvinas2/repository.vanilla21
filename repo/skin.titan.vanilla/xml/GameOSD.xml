@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">1103</defaultcontrol>
 	<!-- <include>DialogOverlayExtra</include> -->
@@ -17,16 +17,16 @@
 				<width>700</width>
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<control type="image">
-                    <width>700</width>
-                    <height>1040</height>
+					<width>700</width>
+					<height>1040</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
 					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
 <!-- 					<texture border="5">diffuse/panel.png</texture>
 					<colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse> -->
 				</control>
 				<control type="image">
-                    <width>700</width>
-                    <height>1040</height>
+					<width>700</width>
+					<height>1040</height>
 					<bordersize>10</bordersize>
 					<texture border="15">diffuse/bgpanel.png</texture>
 					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
@@ -35,13 +35,13 @@
 				</control>
 				
 				<!-- Header-->
-                <control type="label" id="2">
-                    <top>10</top>
-                    <width>700</width>
-                    <include>DialogHeader</include>
-                    <label>$LOCALIZE[35221]</label>
-                    <align>center</align>
-                </control>
+				<control type="label" id="2">
+					<top>10</top>
+					<width>700</width>
+					<include>DialogHeader</include>
+					<label>$LOCALIZE[35221]</label>
+					<align>center</align>
+				</control>
 				<control type="group" id="1000">
 					<top>80</top>
 					<control type="group" id="1100">
@@ -297,7 +297,7 @@
 					<onup>11000</onup>
 					<ondown>11000</ondown>
 					<onleft>11000</onleft>
-                <onright>11000</onright>
+				<onright>11000</onright>
 					<defaultcontrol always="true">30</defaultcontrol>
 				<!--	<control type="button" id="28">
 						<description>OK</description>

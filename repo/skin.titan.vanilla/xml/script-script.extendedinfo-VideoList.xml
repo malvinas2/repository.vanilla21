@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="true">500</defaultcontrol>
-    <views>500</views>
-    <controls>
+	<defaultcontrol always="true">500</defaultcontrol>
+	<views>500</views>
+	<controls>
 		
-        <control type="group">
-            <!-- default animation -->
+		<control type="group">
+			<!-- default animation -->
 			<include>animation_window_open_close</include>
-            <visible>!Player.HasVideo</visible>
+			<visible>!Player.HasVideo</visible>
 			<include>GlobalBackground</include>
 			
 			<control type="label">
@@ -47,54 +47,54 @@
 			</control>
 			
 			<include condition="!Skin.String(general_header,disable)">TimeInfo</include>
-     		<include condition="!Skin.HasSetting(nofooterbar)">Footer</include>
+			<include condition="!Skin.HasSetting(nofooterbar)">Footer</include>
 			
 			<!-- movie items -->
-            <control type="panel" id="500">
-                <left>60</left>
-                <top>160</top>
-                <width>1820</width>
-                <height>850</height>
-                <viewtype label="31234">icon</viewtype>
-                <pagecontrol>72</pagecontrol>
-                <preloaditems>2</preloaditems>
-                <scrolltime tween="quadratic">300</scrolltime>
-                <onleft>9000</onleft>
-                <onright>72</onright>
-                <onup>700</onup>
-                <ondown>600</ondown>
-                <orientation>vertical</orientation>
-                <itemlayout height="270" width="201">
+			<control type="panel" id="500">
+				<left>60</left>
+				<top>160</top>
+				<width>1820</width>
+				<height>850</height>
+				<viewtype label="31234">icon</viewtype>
+				<pagecontrol>72</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<scrolltime tween="quadratic">300</scrolltime>
+				<onleft>9000</onleft>
+				<onright>72</onright>
+				<onup>700</onup>
+				<ondown>600</ondown>
+				<orientation>vertical</orientation>
+				<itemlayout height="270" width="201">
 					<control type="group">
-                        <width>190</width>
-                        <height>260</height>
-                        <include>PosterPanelLayout</include>
-                    </control>
+						<width>190</width>
+						<height>260</height>
+						<include>PosterPanelLayout</include>
+					</control>
 				</itemlayout>
 				<focusedlayout height="260" width="201">
 				    <control type="group">
-                        <width>190</width>
-                        <height>260</height>
-                        <include>PosterPanelLayoutFocus</include>
-                    </control>
+						<width>190</width>
+						<height>260</height>
+						<include>PosterPanelLayoutFocus</include>
+					</control>
 				</focusedlayout>
 			</control>
-     			
+				
 			<control type="button" id="600">
-                <onfocus>SetFocus(500)</onfocus>
-                <width>1</width>
-                <height>1</height>
-                <left>-1000</left>
-            </control>
-            <control type="button" id="700">
-                <onfocus>SetFocus(500)</onfocus>
-                <width>1</width>
-                <height>1</height>
-                <left>-1000</left>
-            </control>
-        </control>
+				<onfocus>SetFocus(500)</onfocus>
+				<width>1</width>
+				<height>1</height>
+				<left>-1000</left>
+			</control>
+			<control type="button" id="700">
+				<onfocus>SetFocus(500)</onfocus>
+				<width>1</width>
+				<height>1</height>
+				<left>-1000</left>
+			</control>
+		</control>
 
-        <control type="group">
+		<control type="group">
 			<!-- side menu -->
 			<include condition="!Skin.HasSetting(DisableSideBladeIndicator)">SideBladeMenuTabLeft</include>
 			<control type="group">
@@ -204,5 +204,5 @@
 				</control>
 			</control>	
 		</control>
-    </controls>
+	</controls>
 </window>

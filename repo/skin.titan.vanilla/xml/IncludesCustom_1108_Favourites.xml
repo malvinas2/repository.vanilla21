@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!-- 419 -->
 
 <includes>
-    <include name="custom_content">
+	<include name="custom_content">
 		<item id="13">
 			<description>1. FC Kaiserslautern Mediathek</description>
 			<label>1. FC Kaiserslautern Mediathek</label>

@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <!-- <window type="dialog"> -->
 <window>
-    <defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol always="true">9000</defaultcontrol>
 	
-    <controls>
-         <!--Global Background-->
-        <include>GlobalBackground</include>
- 		<!-- Now playing -->
+	<controls>
+		 <!--Global Background-->
+		<include>GlobalBackground</include>
+		<!-- Now playing -->
 		<include>NowPlayingModern</include>
 		
-        <!--Header-->
-        <include>Header</include>
+		<!--Header-->
+		<include>Header</include>
 		
 		<control type="group">
 			<include>animation_window_open_close</include>
@@ -136,17 +136,17 @@
 				<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
 			</control>
 
-            <control type="panel" id="2">
-                <description>Control Area</description>
+			<control type="panel" id="2">
+				<description>Control Area</description>
 				<visible>String.IsEqual(Window(Home).Property(SettingsProfileSection),223)</visible>
-                <left>605</left>
-                <top>95</top>
-                <width>1230</width>
-                <height>80%</height>
-                <onright></onright>
-                <onup>2</onup>
+				<left>605</left>
+				<top>95</top>
+				<width>1230</width>
+				<height>80%</height>
+				<onright></onright>
+				<onup>2</onup>
 				<onleft>223</onleft>
-                <ondown>2</ondown>
+				<ondown>2</ondown>
 				<!-- Header -->
 				<control type="label">
 					<include>SkinSettings_Header</include>
@@ -156,8 +156,8 @@
 
 				<itemlayout height="350" width="300">
 				    <control type="group">
-                        <width>280</width>
-                        <height>320</height>
+						<width>280</width>
+						<height>320</height>
 				
 						<control type="image">
 							<texture border="0">diffuse/poster.png</texture>
@@ -231,8 +231,8 @@
 
 				<focusedlayout height="350" width="300">
 				    <control type="group">
-                        <width>280</width>
-                        <height>320</height>
+						<width>280</width>
+						<height>320</height>
 				
 						<control type="image">
 							<texture border="0">diffuse/poster.png</texture>
@@ -303,11 +303,11 @@
 					</control>
 				</focusedlayout>	
 			</control>
-        </control>
+		</control>
 		
 		<!--Footer-->
-        <include condition="!Skin.HasSetting(nofooterbar)">Footer</include>
+		<include condition="!Skin.HasSetting(nofooterbar)">Footer</include>
 		<!--Titan Version-->
-        <include>TitanVersion</include>
-    </controls>
+		<include>TitanVersion</include>
+	</controls>
 </window>

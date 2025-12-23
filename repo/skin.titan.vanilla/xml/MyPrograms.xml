@@ -1,49 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window>
-    <defaultcontrol always="true">5000</defaultcontrol>
+	<defaultcontrol always="true">5000</defaultcontrol>
 	
 	<onunload>ClearProperty(ShowViewSubMenu,home)</onunload>
-    <include>allViewIds</include>
-    <controls>
-        <!-- Video Background -->
-        <include>GlobalBackground</include>
+	<include>allViewIds</include>
+	<controls>
+		<!-- Video Background -->
+		<include>GlobalBackground</include>
 		<!--Header-->
-        <include>Header</include>
+		<include>Header</include>
  
 		<!--NowPlaying-->
 		<include>NowPlayingModern</include>
  
 		<!-- all Views -->
-        <include>allViews</include>
+		<include>allViews</include>
 		
-        <!--Sub Menu Tab Left-->
-        <include condition="!Skin.HasSetting(DisableSideBladeIndicator)">SideBladeMenuTabLeft</include>
+		<!--Sub Menu Tab Left-->
+		<include condition="!Skin.HasSetting(DisableSideBladeIndicator)">SideBladeMenuTabLeft</include>
 		<include condition="!Skin.HasSetting(DisableSideBladeIndicator)">SideBladeMenuTabTop</include>
-        <!--Sub Menu-->
-        <control type="group">
+		<!--Sub Menu-->
+		<control type="group">
 			<visible>Integer.IsGreater(Container.NumItems,0)</visible>
-            <include condition="Skin.HasSetting(smallContextMenu)">SideBladeClassic</include>
+			<include condition="Skin.HasSetting(smallContextMenu)">SideBladeClassic</include>
 			<include condition="!Skin.HasSetting(smallContextMenu)">SideBladeModern</include>
-            <!--Grouplist 9000-->
-            <control type="grouplist" id="9000">
-                <left>21</left>
-                <top>185</top>
-                <width>458</width>
-                <height>770</height>
-                <itemgap>3</itemgap>
-                <!-- <onleft>5000</onleft> -->
-                <!-- <onright>5000</onright> -->
+			<!--Grouplist 9000-->
+			<control type="grouplist" id="9000">
+				<left>21</left>
+				<top>185</top>
+				<width>458</width>
+				<height>770</height>
+				<itemgap>3</itemgap>
+				<!-- <onleft>5000</onleft> -->
+				<!-- <onright>5000</onright> -->
 				<visible>!Skin.HasSetting(KioskMode.Enabled)</visible>
 				<!-- <onright>ClearProperty(ShowViewSubMenu,home)</onright> -->
 				<!-- <onleft>ClearProperty(ShowViewSubMenu,home)</onleft> -->
 				<onback>ClearProperty(ShowViewSubMenu,home)</onback>
 				<onback>5000</onback>
-                <onup>9000</onup>
-                <ondown>9000</ondown>
-                <orientation>vertical</orientation>
-                <!--Buttons-->
-               <control type="button" id="3">
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<orientation>vertical</orientation>
+				<!--Buttons-->
+			   <control type="button" id="3">
 					<description>Sort by button</description>
 					<include>SideBladeMenuButton</include>
 					<label>$LOCALIZE[103]</label>
@@ -78,8 +78,8 @@
 				
 				<include>SideBladeViewCommands</include>
 
-            </control>
-        </control>
+			</control>
+		</control>
 		<include condition="Skin.HasSetting(DebugGrid) | Skin.HasSetting(DebugInfo)">DebugInfo</include>
-    </controls>
+	</controls>
 </window>

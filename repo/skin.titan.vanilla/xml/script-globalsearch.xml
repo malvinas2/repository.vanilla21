@@ -4,13 +4,13 @@
 	<animation effect="fade" time="200">WindowOpen</animation>
 	<animation effect="fade" time="200">WindowClose</animation>
 	<controls>
-        <!--Global Background-->
-        <include>GlobalBackground</include>
-         <!-- Now playing -->
+		<!--Global Background-->
+		<include>GlobalBackground</include>
+		 <!-- Now playing -->
 		<include>NowPlayingModern</include>
 				
-        <!--Header-->
-        <include>Header</include>
+		<!--Header-->
+		<include>Header</include>
 		
 		<include>animation_view_change</include>
 	<!-- <include>IncludesFooter</include> -->
@@ -36,7 +36,7 @@
 				<height>820</height>
 				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
-                <visible>Integer.IsGreater(Container.NumItems,0)</visible>
+				<visible>Integer.IsGreater(Container.NumItems,0)</visible>
 				<bordersize>15</bordersize>
 			</control>
 			
@@ -49,8 +49,8 @@
 					<width>180</width>
 					<height>40</height>
 					<font>Reg28</font>
-                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
-                    <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+					<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
 				</control>
 				<control type="label">
 					<top>40</top>
@@ -59,8 +59,8 @@
 					<width>225</width>
 					<height>40</height>
 					<font>Reg28</font>
-                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
-                    <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+					<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
 				</control>
 				<control type="image">
 					<left>333</left>
@@ -138,8 +138,8 @@
 					<radioposx>300</radioposx>
 					<font>font24_title</font>
 					<aligny>top</aligny>
-                    <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                    <shadowcolor>$INFO[Skin.String(ViewDetailsHighlightTextShadowColor)]</shadowcolor>
+					<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(ViewDetailsHighlightTextShadowColor)]</shadowcolor>
 					<label>$LOCALIZE[14018]</label>
 				</control>
 				<control type="button" id="2">
@@ -166,8 +166,8 @@
 					<radioposx>300</radioposx>
 					<font>font24_title</font>
 					<aligny>top</aligny>
-                    <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                    <shadowcolor>$INFO[Skin.String(ViewDetailsHighlightTextShadowColor)]</shadowcolor>
+					<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(ViewDetailsHighlightTextShadowColor)]</shadowcolor>
 					<label>$LOCALIZE[14211]</label>
 				</control>
 				<control type="fixedlist" id="9000">
@@ -975,8 +975,8 @@
 					<aligny>justify</aligny>
 					<!-- <font>font25_narrow</font> -->
 					<font>Reg26</font>
-                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
-                    <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+					<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
 					<label>$INFO[ListItem.Plot]</label>
 					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
 				</control>
@@ -988,8 +988,8 @@
 					<aligny>justify</aligny>
 					<!-- <font>font25_narrow</font> -->
 					<font>Reg26</font>
-                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
-                    <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+					<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
 					<label>$INFO[ListItem.Property(Plot)]</label>
 					<visible>Container.Content(livetv)</visible>
 				</control>
@@ -1001,8 +1001,8 @@
 					<aligny>justify</aligny>
 					<!-- <font>font25_narrow</font> -->
 					<font>Reg26</font>
-                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
-                    <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+					<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
 					<label>$INFO[ListItem.Property(Artist_Description)]</label>
 					<visible>Container.Content(artists)</visible>
 				</control>
@@ -1014,8 +1014,8 @@
 					<aligny>justify</aligny>
 					<!-- <font>font25_narrow</font> -->
 					<font>Reg26</font>
-                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
-                    <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+					<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
 					<label>$INFO[ListItem.Property(Album_Description)]</label>
 					<visible>Container.Content(albums)</visible>
 				</control>
@@ -1027,8 +1027,8 @@
 					<aligny>justify</aligny>
 					<!-- <font>font25_narrow</font> -->
 					<font>Reg26</font>
-                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
-                    <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+					<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
 					<label>$INFO[ListItem.Comment]</label>
 					<visible>Container.Content(songs)</visible>
 				</control>
@@ -1093,7 +1093,7 @@
 		</control>
 		
 		<!--NowPlaying-->
-        <include condition="Skin.HasSetting(DebugGrid) | Skin.HasSetting(DebugInfo)">DebugInfo</include>
+		<include condition="Skin.HasSetting(DebugGrid) | Skin.HasSetting(DebugInfo)">DebugInfo</include>
 	
 		<!-- <include>DialogOverlayExtra</include> -->
 	
@@ -1102,9 +1102,9 @@
 		
 		<!--Clearlogo-->
 		<control type="group">
-            <!-- <visible>![Control.IsVisible(519) | Control.IsVisible(520) | Control.IsVisible(523)]</visible> -->
-            <include condition="Skin.String(ClearLogoLocation) + ![Skin.HasSetting(nofooterbar) + Skin.String(ClearLogoLocation,footer)]">ClearLogo</include>
-        </control>
+			<!-- <visible>![Control.IsVisible(519) | Control.IsVisible(520) | Control.IsVisible(523)]</visible> -->
+			<include condition="Skin.String(ClearLogoLocation) + ![Skin.HasSetting(nofooterbar) + Skin.String(ClearLogoLocation,footer)]">ClearLogo</include>
+		</control>
 	
 	</controls>
 </window>

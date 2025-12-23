@@ -27,12 +27,12 @@
 				</control>
 				<control type="label">
 					<description>header label</description>
-					<left>1170</left>
+					<left>230</left>
 					<top>22</top>
-					<width>735</width>
+					<width>740</width>
 					<height>40</height>
 					<label>$ADDON[script.trakt 32153]</label>
-					<align>right</align>
+					<align>center</align>
 					<aligny>center</aligny>
 					<font>Bold38</font>
 					<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
@@ -73,7 +73,7 @@
 					<top>200</top>
 					<width>360</width>
 					<height>80</height>
-					<font>Bold34</font>
+					<font>Bold32</font>
 					<label></label><!-- this is set from the code -->
 					<textcolor>red</textcolor>
 					<shadowcolor>black</shadowcolor>
@@ -82,10 +82,10 @@
 				</control>
 				<control type="label" id="205">
 					<description>Warning Label</description>
-					<left>400</left>
-					<top>300</top>
-					<width>360</width>
-					<height>80</height>
+					<left>340</left>
+					<top>280</top>
+					<width>480</width>
+					<height>120</height>
 					<font>Reg30</font>
 					<wrapmultiline>true</wrapmultiline>
 					<label></label><!-- this is set from the code -->

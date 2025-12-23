@@ -1,170 +1,170 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window>
-    <defaultcontrol always="true">29</defaultcontrol>
-    <controls>
-       <!--Dialog Overlay-->
+	<defaultcontrol always="true">29</defaultcontrol>
+	<controls>
+	   <!--Dialog Overlay-->
 		<include>DialogOverlayExtra</include>
-        <!--Dialog PVR Group Manager-->
-        <control type="group">
-            <include>animation_window_open_close</include>
-            <control type="group">
-                <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(FileBrowser) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(okdialog)</visible>
+		<!--Dialog PVR Group Manager-->
+		<control type="group">
+			<include>animation_window_open_close</include>
+			<control type="group">
+				<visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(FileBrowser) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(okdialog)</visible>
 				<control type="image">
 					<!--Panel-->
 					<left>100</left>
-                    <top>100</top>
-                    <width>1720</width>
-                    <height>860</height>
+					<top>100</top>
+					<width>1720</width>
+					<height>860</height>
 					<texture border="15">diffuse/bgpanel.png</texture>
 					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
 				</control>
 				<control type="image">
 					<!--Panel-->
 					<left>100</left>
-                    <top>100</top>
-                    <width>1720</width>
-                    <height>860</height>
+					<top>100</top>
+					<width>1720</width>
+					<height>860</height>
 					<bordersize>10</bordersize>
 					<texture border="15">diffuse/bgpanel.png</texture>
 					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
 				</control>
-                <!-- Header-->
-                <control type="label">
-                    <left>473</left>
-                    <top>120</top>
-                    <width>974</width>
-                    <include>DialogHeader</include>
-                    <label>$VAR[value_header]$INFO[Container(13).NumItems, (,)]</label>
-                    <align>center</align>
-                </control>
+				<!-- Header-->
+				<control type="label">
+					<left>473</left>
+					<top>120</top>
+					<width>974</width>
+					<include>DialogHeader</include>
+					<label>$VAR[value_header]$INFO[Container(13).NumItems, (,)]</label>
+					<align>center</align>
+				</control>
 				<!-- SENDERGRUPPE id 13 -->
-                <control type="group">
-                    <!--LEFT: Group List -->
-                    <left>540</left>
-                    <top>220</top>
-                    <control type="label">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>400</width>
-                        <height>34</height>
-                        <align>left</align>
-                        <textoffsetx>20</textoffsetx>
-                        <label>$LOCALIZE[19141] ($INFO[Container(13).NumItems])</label>
-                        <include>DialogButton</include>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>40</top>
-                        <width>400</width>
-                        <height>601</height>
-                        <texture border="5">dialogs/default/inner.png</texture>
-                    </control>
-                    <control type="list" id="13">
-                        <left>0</left>
-                        <top>40</top>
-                        <width>400</width>
-                        <height>600</height>
-                        <onleft>29</onleft>
-                        <onright>60</onright>
-                        <onup>13</onup>
-                        <scrolltime tween="cubic" easing="out">500</scrolltime>
-                        <pagecontrol>60</pagecontrol>
-                        <itemlayout height="60">
-                            <control type="image">
-                                <left>0</left>
-                                <top>1</top>
-                                <width>400</width>
-                                <height>60</height>
-                                <texture>dialogs/default/separator.png</texture>
-                            </control>
-                            <control type="label">
-                                <left>20</left>
-                                <top>0</top>
-                                <width>360</width>
-                                <height>60</height>
-                                <info>ListItem.Label</info>
-                                <include>DialogListNF</include>
-                            </control>
-                        </itemlayout>
-                        <focusedlayout height="60">
-                            <control type="group">
-                                <visible>!Control.HasFocus(13)</visible>
-                                <control type="image">
-                                    <left>0</left>
-                                    <top>1</top>
-                                    <width>400</width>
-                                    <height>60</height>
-                                    <texture>dialogs/default/separator.png</texture>
-                                </control>
-                                <control type="label">
-                                    <left>20</left>
-                                    <top>0</top>
-                                    <width>310</width>
-                                    <height>60</height>
-                                    <info>ListItem.Label</info>
-                                    <include>DialogListNF</include>
-                                </control>
-                                <control type="image">
-                                    <left>345</left>
-                                    <top>10</top>
-                                    <width>40</width>
-                                    <height>40</height>
-                                    <texture>common/checkbox.png</texture>
+				<control type="group">
+					<!--LEFT: Group List -->
+					<left>540</left>
+					<top>220</top>
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>400</width>
+						<height>34</height>
+						<align>left</align>
+						<textoffsetx>20</textoffsetx>
+						<label>$LOCALIZE[19141] ($INFO[Container(13).NumItems])</label>
+						<include>DialogButton</include>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>40</top>
+						<width>400</width>
+						<height>601</height>
+						<texture border="5">dialogs/default/inner.png</texture>
+					</control>
+					<control type="list" id="13">
+						<left>0</left>
+						<top>40</top>
+						<width>400</width>
+						<height>600</height>
+						<onleft>29</onleft>
+						<onright>60</onright>
+						<onup>13</onup>
+						<scrolltime tween="cubic" easing="out">500</scrolltime>
+						<pagecontrol>60</pagecontrol>
+						<itemlayout height="60">
+							<control type="image">
+								<left>0</left>
+								<top>1</top>
+								<width>400</width>
+								<height>60</height>
+								<texture>dialogs/default/separator.png</texture>
+							</control>
+							<control type="label">
+								<left>20</left>
+								<top>0</top>
+								<width>360</width>
+								<height>60</height>
+								<info>ListItem.Label</info>
+								<include>DialogListNF</include>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60">
+							<control type="group">
+								<visible>!Control.HasFocus(13)</visible>
+								<control type="image">
+									<left>0</left>
+									<top>1</top>
+									<width>400</width>
+									<height>60</height>
+									<texture>dialogs/default/separator.png</texture>
+								</control>
+								<control type="label">
+									<left>20</left>
+									<top>0</top>
+									<width>310</width>
+									<height>60</height>
+									<info>ListItem.Label</info>
+									<include>DialogListNF</include>
+								</control>
+								<control type="image">
+									<left>345</left>
+									<top>10</top>
+									<width>40</width>
+									<height>40</height>
+									<texture>common/checkbox.png</texture>
 									<colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
-                                </control>
-                            </control>
-                            <control type="group">
-                                <visible>Control.HasFocus(13)</visible>
-                                <control type="image">
-                                    <left>0</left>
-                                    <top>0</top>
-                                    <width>400</width>
-                                    <height>60</height>
-                                    <texture border="5">diffuse/panel.png</texture><colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
-                                </control>
-                                <control type="label">
-                                    <left>20</left>
-                                    <top>0</top>
-                                    <width>360</width>
-                                    <height>60</height>
-                                    <info>ListItem.Label</info>
-                                    <include>DialogListFO</include>
-                                </control>
-                            </control>
-                        </focusedlayout>
-                    </control>
-                    <control type="image" id="62">
-                        <animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
-                    </control>
-                    <control type="image" id="61">
-                        <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-                        <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-                        <visible>Control.HasFocus(60) | !Control.IsVisible(62)</visible>
-                    </control>
-                    <control type="image" id="61">
-                        <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-                        <animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
-                        <visible>!Control.HasFocus(60) + [Container(13).Scrolling | Container(13).OnScrollNext | Container(13).OnScrollPrevious]</visible>
-                    </control>
-                    <control type="scrollbar" id="60">
-                        <left>386</left>
-                        <top>43</top>
-                        <height>594</height>
-                        <onleft>13</onleft>
-                        <onright>11</onright>
-                        <ondown>60</ondown>
-                        <onup>60</onup>
-                        <showonepage>false</showonepage>
-                        <orientation>vertical</orientation>
-                        <animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(61)">Conditional</animation>
-                    </control>
-                </control>
+								</control>
+							</control>
+							<control type="group">
+								<visible>Control.HasFocus(13)</visible>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>400</width>
+									<height>60</height>
+									<texture border="5">diffuse/panel.png</texture><colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
+								</control>
+								<control type="label">
+									<left>20</left>
+									<top>0</top>
+									<width>360</width>
+									<height>60</height>
+									<info>ListItem.Label</info>
+									<include>DialogListFO</include>
+								</control>
+							</control>
+						</focusedlayout>
+					</control>
+					<control type="image" id="62">
+						<animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
+					</control>
+					<control type="image" id="61">
+						<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+						<visible>Control.HasFocus(60) | !Control.IsVisible(62)</visible>
+					</control>
+					<control type="image" id="61">
+						<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
+						<visible>!Control.HasFocus(60) + [Container(13).Scrolling | Container(13).OnScrollNext | Container(13).OnScrollPrevious]</visible>
+					</control>
+					<control type="scrollbar" id="60">
+						<left>386</left>
+						<top>43</top>
+						<height>594</height>
+						<onleft>13</onleft>
+						<onright>11</onright>
+						<ondown>60</ondown>
+						<onup>60</onup>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+						<animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(61)">Conditional</animation>
+					</control>
+				</control>
 				<control type="group">
 				<!-- VERSTECKTE SENDER id 11 -->
-                    <!--MIDDLE: Channels List -->
-                    <left>955</left>
-                    <top>220</top>
+					<!--MIDDLE: Channels List -->
+					<left>955</left>
+					<top>220</top>
 					<control type="grouplist">
 						<orientation>horizontal</orientation>
 						<left>0</left>
@@ -187,138 +187,138 @@
 						<include>DialogButton</include>
 						</control>
 					</control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>40</top>
-                        <width>400</width>
-                        <height>601</height>
-                        <texture border="5">dialogs/default/inner.png</texture>
-                    </control>
-                    <control type="list" id="11">
-                        <left>0</left>
-                        <top>40</top>
-                        <width>400</width>
-                        <height>600</height>
-                        <onleft>60</onleft>
-                        <onright>70</onright>
-                        <scrolltime tween="cubic" easing="out">500</scrolltime>
-                        <pagecontrol>70</pagecontrol>
-                        <itemlayout height="60">
-                            <control type="image">
-                                <left>0</left>
-                                <top>1</top>
-                                <width>400</width>
-                                <height>60</height>
-                                <texture>dialogs/default/separator.png</texture>
-                            </control>
-                            <control type="label">
-                                <left>70</left>
-                                <top>0</top>
-                                <width>310</width>
-                                <height>60</height>
-                                <label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
-                                <include>DialogLabel</include>
-                            </control>
-                            <control type="image">
-                                <left>10</left>
-                                <top>10</top>
-                                <width>40</width>
-                                <height>40</height>
-                                <texture background="true">$INFO[ListItem.Icon]</texture>
-                            </control>
-                        </itemlayout>
-                        <focusedlayout height="60">
-                            <control type="group">
-                                <visible>!Control.HasFocus(11)</visible>
-                                <control type="image">
-                                    <left>0</left>
-                                    <top>1</top>
-                                    <width>400</width>
-                                    <height>60</height>
-                                    <texture>dialogs/default/separator.png</texture>
-                                </control>
-                                <control type="label">
-                                    <left>70</left>
-                                    <top>0</top>
-                                    <width>260</width>
-                                    <height>60</height>
-                                    <label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
-                                    <include>DialogListNF</include>
-                                </control>
-                                <control type="image">
-                                    <left>10</left>
-                                    <top>10</top>
-                                    <width>40</width>
-                                    <height>40</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                </control>
-                                <control type="image">
-                                    <left>345</left>
-                                    <top>10</top>
-                                    <width>40</width>
-                                    <height>40</height>
-                                    <texture>common/checkbox.png</texture>
+					<control type="image">
+						<left>0</left>
+						<top>40</top>
+						<width>400</width>
+						<height>601</height>
+						<texture border="5">dialogs/default/inner.png</texture>
+					</control>
+					<control type="list" id="11">
+						<left>0</left>
+						<top>40</top>
+						<width>400</width>
+						<height>600</height>
+						<onleft>60</onleft>
+						<onright>70</onright>
+						<scrolltime tween="cubic" easing="out">500</scrolltime>
+						<pagecontrol>70</pagecontrol>
+						<itemlayout height="60">
+							<control type="image">
+								<left>0</left>
+								<top>1</top>
+								<width>400</width>
+								<height>60</height>
+								<texture>dialogs/default/separator.png</texture>
+							</control>
+							<control type="label">
+								<left>70</left>
+								<top>0</top>
+								<width>310</width>
+								<height>60</height>
+								<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
+								<include>DialogLabel</include>
+							</control>
+							<control type="image">
+								<left>10</left>
+								<top>10</top>
+								<width>40</width>
+								<height>40</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60">
+							<control type="group">
+								<visible>!Control.HasFocus(11)</visible>
+								<control type="image">
+									<left>0</left>
+									<top>1</top>
+									<width>400</width>
+									<height>60</height>
+									<texture>dialogs/default/separator.png</texture>
+								</control>
+								<control type="label">
+									<left>70</left>
+									<top>0</top>
+									<width>260</width>
+									<height>60</height>
+									<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
+									<include>DialogListNF</include>
+								</control>
+								<control type="image">
+									<left>10</left>
+									<top>10</top>
+									<width>40</width>
+									<height>40</height>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+								</control>
+								<control type="image">
+									<left>345</left>
+									<top>10</top>
+									<width>40</width>
+									<height>40</height>
+									<texture>common/checkbox.png</texture>
 							<colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
-                                </control>
-                            </control>
-                            <control type="group">
-                                <visible>Control.HasFocus(11)</visible>
-                                <control type="image">
-                                    <left>0</left>
-                                    <top>0</top>
-                                    <width>400</width>
-                                    <height>60</height>
-                                    <texture border="5">diffuse/panel.png</texture><colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
-                                </control>
-                                <control type="label">
-                                    <left>70</left>
-                                    <top>0</top>
-                                    <width>310</width>
-                                    <height>60</height>
-                                    <label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
-                                    <include>DialogListFO</include>
-                                </control>
-                                <control type="image">
-                                    <left>10</left>
-                                    <top>10</top>
-                                    <width>40</width>
-                                    <height>40</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                </control>
-                            </control>
-                        </focusedlayout>
-                    </control>
-                    <control type="image" id="72">
-                        <animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
-                    </control>
-                    <control type="image" id="71">
-                        <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-                        <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-                        <visible>Control.HasFocus(70) | !Control.IsVisible(72)</visible>
-                    </control>
-                    <control type="image" id="71">
-                        <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-                        <animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
-                        <visible>!Control.HasFocus(70) + [Container(11).Scrolling | Container(11).OnScrollNext | Container(11).OnScrollPrevious]</visible>
-                    </control>
-                    <control type="scrollbar" id="70">
-                        <left>386</left>
-                        <top>43</top>
-                        <height>594</height>
-                        <onleft>11</onleft>
-                        <onright>12</onright>
-                        <ondown>70</ondown>
-                        <onup>70</onup>
-                        <showonepage>false</showonepage>
-                        <orientation>vertical</orientation>
-                        <animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(71)">Conditional</animation>
-                    </control>
-                </control>
-                <control type="group">
+								</control>
+							</control>
+							<control type="group">
+								<visible>Control.HasFocus(11)</visible>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>400</width>
+									<height>60</height>
+									<texture border="5">diffuse/panel.png</texture><colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
+								</control>
+								<control type="label">
+									<left>70</left>
+									<top>0</top>
+									<width>310</width>
+									<height>60</height>
+									<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
+									<include>DialogListFO</include>
+								</control>
+								<control type="image">
+									<left>10</left>
+									<top>10</top>
+									<width>40</width>
+									<height>40</height>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+								</control>
+							</control>
+						</focusedlayout>
+					</control>
+					<control type="image" id="72">
+						<animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
+					</control>
+					<control type="image" id="71">
+						<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+						<visible>Control.HasFocus(70) | !Control.IsVisible(72)</visible>
+					</control>
+					<control type="image" id="71">
+						<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
+						<visible>!Control.HasFocus(70) + [Container(11).Scrolling | Container(11).OnScrollNext | Container(11).OnScrollPrevious]</visible>
+					</control>
+					<control type="scrollbar" id="70">
+						<left>386</left>
+						<top>43</top>
+						<height>594</height>
+						<onleft>11</onleft>
+						<onright>12</onright>
+						<ondown>70</ondown>
+						<onup>70</onup>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+						<animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(71)">Conditional</animation>
+					</control>
+				</control>
+				<control type="group">
 				<!-- sichtbare Sender id 12 -->
-                    <!--RIGHT: Grouped Channels List -->
-                    <left>1370</left>
-                    <top>220</top>
+					<!--RIGHT: Grouped Channels List -->
+					<left>1370</left>
+					<top>220</top>
 					<control type="grouplist">
 						<orientation>horizontal</orientation>
 						<left>0</left>
@@ -342,146 +342,146 @@
 						<include>DialogButton</include>
 						</control>
 					</control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>40</top>
-                        <width>400</width>
-                        <height>601</height>
-                        <texture border="5">dialogs/default/inner.png</texture>
-                    </control>
-                    <control type="list" id="12">
-                        <left>0</left>
-                        <top>40</top>
-                        <width>400</width>
-                        <height>600</height>
-                        <onleft>70</onleft>
-                        <onright>80</onright>
-                        <scrolltime tween="cubic" easing="out">500</scrolltime>
-                        <pagecontrol>80</pagecontrol>
-                        <itemlayout height="60">
-                            <control type="image">
-                                <left>0</left>
-                                <top>1</top>
-                                <width>400</width>
-                                <height>60</height>
-                                <texture>dialogs/default/separator.png</texture>
-                            </control>
-                            <control type="label">
-                                <left>70</left>
-                                <top>0</top>
-                                <width>310</width>
-                                <height>60</height>
-                                <label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
-                                <include>DialogListNF</include>
-                            </control>
-                            <control type="image">
-                                <left>10</left>
-                                <top>10</top>
-                                <width>40</width>
-                                <height>40</height>
-                                <texture background="true">$INFO[ListItem.Icon]</texture>
-                            </control>
-                        </itemlayout>
-                        <focusedlayout height="60">
-                            <control type="group">
-                                <visible>!Control.HasFocus(12)</visible>
-                                <control type="image">
-                                    <left>0</left>
-                                    <top>1</top>
-                                    <width>400</width>
-                                    <height>60</height>
-                                    <texture>dialogs/default/separator.png</texture>
-                                </control>
-                                <control type="label">
-                                    <left>70</left>
-                                    <top>0</top>
-                                    <width>260</width>
-                                    <height>60</height>
-                                    <label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
-                                    <include>DialogListNF</include>
-                                </control>
-                                <control type="image">
-                                    <left>10</left>
-                                    <top>10</top>
-                                    <width>40</width>
-                                    <height>40</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                </control>
-                                <control type="image">
-                                    <left>345</left>
-                                    <top>10</top>
-                                    <width>40</width>
-                                    <height>40</height>
-                                    <texture>common/checkbox.png</texture>
+					<control type="image">
+						<left>0</left>
+						<top>40</top>
+						<width>400</width>
+						<height>601</height>
+						<texture border="5">dialogs/default/inner.png</texture>
+					</control>
+					<control type="list" id="12">
+						<left>0</left>
+						<top>40</top>
+						<width>400</width>
+						<height>600</height>
+						<onleft>70</onleft>
+						<onright>80</onright>
+						<scrolltime tween="cubic" easing="out">500</scrolltime>
+						<pagecontrol>80</pagecontrol>
+						<itemlayout height="60">
+							<control type="image">
+								<left>0</left>
+								<top>1</top>
+								<width>400</width>
+								<height>60</height>
+								<texture>dialogs/default/separator.png</texture>
+							</control>
+							<control type="label">
+								<left>70</left>
+								<top>0</top>
+								<width>310</width>
+								<height>60</height>
+								<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
+								<include>DialogListNF</include>
+							</control>
+							<control type="image">
+								<left>10</left>
+								<top>10</top>
+								<width>40</width>
+								<height>40</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60">
+							<control type="group">
+								<visible>!Control.HasFocus(12)</visible>
+								<control type="image">
+									<left>0</left>
+									<top>1</top>
+									<width>400</width>
+									<height>60</height>
+									<texture>dialogs/default/separator.png</texture>
+								</control>
+								<control type="label">
+									<left>70</left>
+									<top>0</top>
+									<width>260</width>
+									<height>60</height>
+									<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
+									<include>DialogListNF</include>
+								</control>
+								<control type="image">
+									<left>10</left>
+									<top>10</top>
+									<width>40</width>
+									<height>40</height>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+								</control>
+								<control type="image">
+									<left>345</left>
+									<top>10</top>
+									<width>40</width>
+									<height>40</height>
+									<texture>common/checkbox.png</texture>
 									<colordiffuse>$INFO[Skin.String(ViewDetailsTextColor)]</colordiffuse>
-                                </control>
-                            </control>
-                            <control type="group">
-                                <visible>Control.HasFocus(12)</visible>
-                                <control type="image">
-                                    <left>0</left>
-                                    <top>0</top>
-                                    <width>400</width>
-                                    <height>60</height>
-                                    <texture border="5">diffuse/panel.png</texture><colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
-                                </control>
-                                <control type="label">
-                                    <left>70</left>
-                                    <top>0</top>
-                                    <width>310</width>
-                                    <height>60</height>
-                                    <label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
-                                    <include>DialogListFO</include>
-                                </control>
-                                <control type="image">
-                                    <left>10</left>
-                                    <top>10</top>
-                                    <width>40</width>
-                                    <height>40</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                </control>
-                            </control>
-                        </focusedlayout>
-                    </control>
-                    <control type="image" id="82">
-                        <animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
-                    </control>
-                    <control type="image" id="81">
-                        <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-                        <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-                        <visible>Control.HasFocus(80) | !Control.IsVisible(82)</visible>
-                    </control>
-                    <control type="image" id="81">
-                        <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-                        <animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
-                        <visible>!Control.HasFocus(80) + [Container(12).Scrolling | Container(12).OnScrollNext | Container(12).OnScrollPrevious]</visible>
-                    </control>
-                    <control type="scrollbar" id="80">
-                        <left>386</left>
-                        <top>43</top>
-                        <height>594</height>
-                        <onleft>12</onleft>
-                        <onright>26</onright>
-                        <ondown>80</ondown>
-                        <onup>80</onup>
-                        <showonepage>false</showonepage>
-                        <orientation>vertical</orientation>
-                        <animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(81)">Conditional</animation>
-                    </control>
-                </control>
-                <control type="grouplist" id="9000">
-                    <!--Button Grouplist-->
-                    <left>150</left>
-                    <top>250</top>
-                    <width>350</width>
-                    <height>650</height>
-                    <itemgap>15</itemgap>
-                    <align>left</align>
-                    <orientation>vertical</orientation>
-                    <onleft>12</onleft>
-                    <onright>13</onright>
-                    <onup>29</onup>
-                    <ondown>26</ondown>
+								</control>
+							</control>
+							<control type="group">
+								<visible>Control.HasFocus(12)</visible>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>400</width>
+									<height>60</height>
+									<texture border="5">diffuse/panel.png</texture><colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
+								</control>
+								<control type="label">
+									<left>70</left>
+									<top>0</top>
+									<width>310</width>
+									<height>60</height>
+									<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
+									<include>DialogListFO</include>
+								</control>
+								<control type="image">
+									<left>10</left>
+									<top>10</top>
+									<width>40</width>
+									<height>40</height>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+								</control>
+							</control>
+						</focusedlayout>
+					</control>
+					<control type="image" id="82">
+						<animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
+					</control>
+					<control type="image" id="81">
+						<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+						<visible>Control.HasFocus(80) | !Control.IsVisible(82)</visible>
+					</control>
+					<control type="image" id="81">
+						<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
+						<visible>!Control.HasFocus(80) + [Container(12).Scrolling | Container(12).OnScrollNext | Container(12).OnScrollPrevious]</visible>
+					</control>
+					<control type="scrollbar" id="80">
+						<left>386</left>
+						<top>43</top>
+						<height>594</height>
+						<onleft>12</onleft>
+						<onright>26</onright>
+						<ondown>80</ondown>
+						<onup>80</onup>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+						<animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(81)">Conditional</animation>
+					</control>
+				</control>
+				<control type="grouplist" id="9000">
+					<!--Button Grouplist-->
+					<left>150</left>
+					<top>250</top>
+					<width>350</width>
+					<height>650</height>
+					<itemgap>15</itemgap>
+					<align>left</align>
+					<orientation>vertical</orientation>
+					<onleft>12</onleft>
+					<onright>13</onright>
+					<onup>29</onup>
+					<ondown>26</ondown>
 					<control type="button" id="26">
 						<description>Add Group</description>
 						<width>350</width>
@@ -530,12 +530,12 @@
 						<label>$LOCALIZE[186]</label>
 						<include>DialogButtonOther</include>
 					</control>
-                </control>
-                <control type="label" id="20">
-                    <!--Fake Label used to pass on name label-->
-                    <visible>false</visible>
-                </control>
-            </control>
-        </control>
-    </controls>
+				</control>
+				<control type="label" id="20">
+					<!--Fake Label used to pass on name label-->
+					<visible>false</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
 </window>

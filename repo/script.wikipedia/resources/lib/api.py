@@ -7,6 +7,7 @@ from jurialmunkey.dialog import BusyDialog
 from jurialmunkey.reqapi import RequestAPI
 from jurialmunkey.plugin import KodiPlugin
 
+USER_AGENT = xbmc.getUserAgent()
 
 KODIPLUGIN = KodiPlugin('script.wikipedia')
 get_localized = KODIPLUGIN.get_localized
@@ -60,6 +61,10 @@ class WikimediaAPI(RequestAPI):
             req_api_name='Wikimedia',
             req_api_url='https://commons.m.wikimedia.org/w/api.php')
 
+    def get_request_lc(self, *args, **kwargs):
+        kwargs['headers'] = {'User-Agent': USER_AGENT}
+        return super().get_request_lc(*args, **kwargs)
+
     def get_titles(self, query):
         params = {
             'action': 'query', 'list': 'search', 'format': 'json',
@@ -102,6 +107,10 @@ class WikipediaAPI(RequestAPI):
             req_api_name='Wikipedia' if lang == DEFAULT_WIKI_LANGUAGE else f'Wikipedia_{lang}',
             req_api_url=f'https://{lang}.wikipedia.org/w/api.php')
 
+    def get_request_lc(self, *args, **kwargs):
+        kwargs['headers'] = {'User-Agent': USER_AGENT}
+        return super().get_request_lc(*args, **kwargs)
+
     def get_search(self, query, affix=None):
         params = {
             'action': 'query', 'format': 'json', 'list': 'search', 'utf8': 1,
@@ -113,6 +122,9 @@ class WikipediaAPI(RequestAPI):
         affix = affixes.get('affix')
         _data = self.get_search(query, affix)
         items = [i['title'] for i in _data['query']['search']]
+        if not items:
+            xbmcgui.Dialog().ok(get_localized(32002), get_localized(32003).format(f'{query}'))
+            return
         x = xbmcgui.Dialog().select('Wikipedia', items)
         if x == -1:
             return

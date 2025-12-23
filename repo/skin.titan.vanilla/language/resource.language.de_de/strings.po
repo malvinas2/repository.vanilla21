@@ -610,7 +610,7 @@ msgstr "Hintergrund-Muster Farbe"
 
 msgctxt "#31152"
 msgid "Use default colors"
-msgstr "Standard"
+msgstr "Standardfarben benutzen"
 
 msgctxt "#31153"
 msgid "Use light colors"

@@ -2,9 +2,9 @@
 
 <window>
 	<onload condition="Skin.HasSetting(DialogYesNo_FocusNO) + !Control.IsVisible(12) + Control.IsVisible(10)">SetFocus(10)</onload>
-    <onload condition="!Skin.HasSetting(DialogYesNo_FocusNO) + !Control.IsVisible(12) + Control.IsVisible(11)">SetFocus(11)</onload>
+	<onload condition="!Skin.HasSetting(DialogYesNo_FocusNO) + !Control.IsVisible(12) + Control.IsVisible(11)">SetFocus(11)</onload>
 	<onload condition="Control.IsVisible(12)">SetFocus(12)</onload>
-    <controls>
+	<controls>
 		<control type="group">
 			<visible>!Window.IsActive(DialogButtonMenu.xml)</visible>
 			<visible>!Window.IsActive(DialogKeyboard.xml)</visible>
@@ -60,13 +60,13 @@
 						<left>15</left>
 						<top>80</top>
 						<width>1000</width>
-						<height>120</height>
+						<height>140</height>
 						<label></label>
 						<font>Reg30</font>
 					</control>
 					<control type="grouplist">
 						<left>15</left>
-						<top>220</top>
+						<top>240</top>
 						<orientation>horizontal</orientation>
 						<itemgap>10</itemgap>
 						<control type="button" id="11">

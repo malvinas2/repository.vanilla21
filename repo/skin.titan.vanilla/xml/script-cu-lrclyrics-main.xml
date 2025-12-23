@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <controls>
+	<controls>
 	
 		<control type="label" id="2">
 			<description>Pick label</description>
 			<visible>false</visible>
 		</control>
-        <control type="label" id="200">
+		<control type="label" id="200">
 			<description>Scraper label</description>
 			<visible>false</visible>
 		</control>
@@ -24,8 +24,8 @@
 			
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
-                <effect type="fade" start="0" end="100" time="150"/>
-            </animation>
+				<effect type="fade" start="0" end="100" time="150"/>
+			</animation>
 
 			<!-- touchscreen workaround -->
 			<!-- hidden button to exit dialog in touchscreen mode -->
@@ -51,7 +51,7 @@
 			<control type="group">
 <!-- <visible>!String.IsEmpty(Skin.String(LyricScript_Path))</visible> -->
 				<!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
-                <control type="list" id="110">
+				<control type="list" id="110">
 					<left>0</left>
 					<top>220</top>
 					<width>1920</width>
@@ -72,7 +72,7 @@
 							<font>Reg56</font>
 							<align>center</align>
 							<textcolor>$INFO[Skin.String(LyricsTextColor)]</textcolor>
-                            <shadowcolor>$INFO[Skin.String(LyricsTextShadowColor)]</shadowcolor>
+							<shadowcolor>$INFO[Skin.String(LyricsTextShadowColor)]</shadowcolor>
 						</control>
 					</itemlayout>
 					<focusedlayout width="1920" height="85">
@@ -85,8 +85,8 @@
 							<font>Reg62</font>
 							<align>center</align>
 							<textcolor>$INFO[Skin.String(LyricsFocusTextColor)]</textcolor>
-                            <shadowcolor>$INFO[Skin.String(LyricsFocusTextShadowColor)]</shadowcolor>
-                            <scroll>true</scroll>
+							<shadowcolor>$INFO[Skin.String(LyricsFocusTextShadowColor)]</shadowcolor>
+							<scroll>true</scroll>
 						</control>
 					</focusedlayout>
 				</control>
@@ -100,11 +100,11 @@
 					<width>1920</width>
 					<height>505</height>
 					<onleft>121</onleft>
-                    <onright>121</onright>
-                    <onup>120</onup>
-                    <ondown>120</ondown>
-                    <pagecontrol>121</pagecontrol>
-                    <scrolltime>200</scrolltime>
+					<onright>121</onright>
+					<onup>120</onup>
+					<ondown>120</ondown>
+					<pagecontrol>121</pagecontrol>
+					<scrolltime>200</scrolltime>
 					<itemlayout width="1920" height="70">
 						<control type="label">
 							<left>0</left>
@@ -115,7 +115,7 @@
 							<font>Reg56</font>
 							<align>center</align>
 							<textcolor>$INFO[Skin.String(LyricsTextColor)]</textcolor>
-                            <shadowcolor>$INFO[Skin.String(LyricsTextShadowColor)]</shadowcolor>
+							<shadowcolor>$INFO[Skin.String(LyricsTextShadowColor)]</shadowcolor>
 						</control>
 					</itemlayout>
 					<focusedlayout width="1920" height="85">
@@ -128,8 +128,8 @@
 							<font>Reg62</font>
 							<align>center</align>
 							<textcolor>$INFO[Skin.String(LyricsFocusTextColor)]</textcolor>
-                            <shadowcolor>$INFO[Skin.String(LyricsFocusTextShadowColor)]</shadowcolor>
-                            <scroll>true</scroll>
+							<shadowcolor>$INFO[Skin.String(LyricsFocusTextShadowColor)]</shadowcolor>
+							<scroll>true</scroll>
 						</control>
 					</focusedlayout>
 				</control>
@@ -138,5 +138,5 @@
 				
 			</control>
 		</control>
-    </controls>
+	</controls>
 </window>

@@ -9,17 +9,17 @@
 			<!-- movie details normal -->
 			<control type="group" id="88882">
 				<include>MovieDetailsTop</include>
-                <top>-140</top>
-                <visible>Control.IsVisible(513)</visible>
-                <visible>Skin.String(View513_DisplayInfo,normal) | [Skin.String(View513_DisplayInfo,normal_delayed) + System.IdleTime(3)]</visible>
+				<top>-140</top>
+				<visible>Control.IsVisible(513)</visible>
+				<visible>Skin.String(View513_DisplayInfo,normal) | [Skin.String(View513_DisplayInfo,normal_delayed) + System.IdleTime(3)]</visible>
 				<animation effect="slide" start="0,-1100" end="0" time="550" tween="cubic" easing="inout">Visible</animation>
 			</control>
-            
-            <!-- movie details small -->
+			
+			<!-- movie details small -->
 			<control type="group" id="88883">
 				<include>MovieDetailsTop2</include>
-                <visible>Control.IsVisible(513)</visible>
-                <visible>Skin.String(View513_DisplayInfo,small) | [Skin.String(View513_DisplayInfo,small_delayed) + System.IdleTime(3)]</visible>
+				<visible>Control.IsVisible(513)</visible>
+				<visible>Skin.String(View513_DisplayInfo,small) | [Skin.String(View513_DisplayInfo,small_delayed) + System.IdleTime(3)]</visible>
 				<animation effect="slide" start="0,-350" end="0" time="350" tween="cubic" easing="inout">Visible</animation>
 			</control>
 				
@@ -32,7 +32,7 @@
 				<control type="group">
 					<left>12</left>
 					<top>30</top>
-                    <visible>Integer.IsGreater(Container.NumItems,0)</visible>
+					<visible>Integer.IsGreater(Container.NumItems,0)</visible>
 					<control type="group" id="5801">
 						<visible>Container(513).OnPrevious</visible>
 						<animation effect="slide" end="0,0" time="200" reversible="false">Hidden</animation>
@@ -1337,7 +1337,6 @@
 							<height>1334</height>
 							<control type="group">
 								<visible>!String.IsEmpty(Container.ListItemNoWrap(0).FolderPath)</visible>
-								
 								<control type="image">
 									<!--cdart image-->
 									<width>420</width>
@@ -1345,13 +1344,12 @@
 									<left>80</left>
 									<top>-100</top>
 									<texture background="true" diffuse="diffuse/cdmask_new.png" fallback="defaultcovers/cd_big.png">$VAR[DiscArtImage]</texture>
-                                    <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
-                                    <animation effect="slide" start="0,200" end="0" tween="cubic" easing="inout" time="1200" delay="800">Visible</animation>
-                                    <animation effect="fade" start="0" end="100" delay="800" time="800" pulse="false">Visible</animation>
-                                    <animation effect="rotate" end="-360" center="auto" time="20000" loop="true" reversible="false" condition="Skin.HasSetting(AnimateDiscArt)">Conditional</animation>
+									<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+									<animation effect="slide" start="0,200" end="0" tween="cubic" easing="inout" time="1200" delay="800">Visible</animation>
+									<animation effect="fade" start="0" end="100" delay="800" time="800" pulse="false">Visible</animation>
+									<animation effect="rotate" end="-360" center="auto" time="20000" loop="true" reversible="false" condition="Skin.HasSetting(AnimateDiscArt)">Conditional</animation>
 									<visible>Skin.HasSetting(View513_ShowCDart) + !Control.IsVisible(88882) + !Control.IsVisible(88883) + ![String.StartsWith(ListItem.Art(thumb),Default) | String.IsEmpty(ListItem.Art(thumb))]  + !Container(513).IsScrolling + !Container(513).OnScrollNext + !Container(513).OnScrollPrevious</visible>
 								</control>
-								
 								<control type="image">
 									<left>54</left>
 									<top>42</top>
@@ -1397,7 +1395,7 @@
 					<height>560</height>
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(EnableQuickJump)">7000</ondown>
-                <ondown condition="!Skin.HasSetting(EnableQuickJump)">60</ondown>
+				<ondown condition="!Skin.HasSetting(EnableQuickJump)">60</ondown>
 					<orientation>horizontal</orientation>
 					<viewtype label="31440">bigwrap</viewtype>
 					<pagecontrol>60</pagecontrol>
@@ -1409,145 +1407,142 @@
 						
 					</focusedlayout>
 				</control>
+			</control>
 			
-            </control>
-			
-            <!--horizontal Scrollbar-->
+			<!--horizontal Scrollbar-->
 			<control type="scrollbar" id="60">
-                <visible>Control.IsVisible(513) + Integer.IsGreater(Container.NumItems,0)</visible>
+				<visible>Control.IsVisible(513) + Integer.IsGreater(Container.NumItems,0)</visible>
 				<top></top>
 				<left>60</left>
-                <bottom>11%</bottom>
-                <width>1800</width>
-                <height>15</height>
-                <onup>513</onup>
-                <onleft>60</onleft>
-                <onright>60</onright>
-                <orientation>horizontal</orientation>
-                <animation effect="fade" start="0" end="100" time="400" condition="[Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)] + !Control.IsVisible(6002)">Conditional</animation>
-                <animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)] | Control.IsVisible(6002)">Conditional</animation>
-            </control>
-            
+				<bottom>11%</bottom>
+				<width>1800</width>
+				<height>15</height>
+				<onup>513</onup>
+				<onleft>60</onleft>
+				<onright>60</onright>
+				<orientation>horizontal</orientation>
+				<animation effect="fade" start="0" end="100" time="400" condition="[Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)] + !Control.IsVisible(6002)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)] | Control.IsVisible(6002)">Conditional</animation>
+			</control>
 		</control>
 	</include>
-	
 
 	<variable name="ShowcaseItem-7Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(-7).Art(animatedposter))">$INFO[Container.ListItem(-7).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(-7).Art(animatedposter))">$INFO[Container.ListItem(-7).Art(animatedposter)]</value>
 		<value condition="ListItem(-7).IsCollection + String.Contains(ListItem(-7).Art(poster),emby)">$INFO[ListItem(-7).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(Container.ListItem(-7).Art(poster))">$INFO[Container.ListItem(-7).Art(poster)]</value>
+		<value condition="!String.IsEmpty(Container.ListItem(-7).Art(poster))">$INFO[Container.ListItem(-7).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[Container.ListItem(-7).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[Container.ListItem(-7).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem-6Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(-6).Art(animatedposter))">$INFO[Container.ListItem(-6).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(-6).Art(animatedposter))">$INFO[Container.ListItem(-6).Art(animatedposter)]</value>
 		<value condition="ListItem(-6).IsCollection + String.Contains(ListItem(-6).Art(poster),emby)">$INFO[ListItem(-6).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(Container.ListItem(-6).Art(poster))">$INFO[Container.ListItem(-6).Art(poster)]</value>
+		<value condition="!String.IsEmpty(Container.ListItem(-6).Art(poster))">$INFO[Container.ListItem(-6).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[Container.ListItem(-6).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[Container.ListItem(-6).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem-5Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(-5).Art(animatedposter))">$INFO[Container.ListItem(-5).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(-5).Art(animatedposter))">$INFO[Container.ListItem(-5).Art(animatedposter)]</value>
 		<value condition="ListItem(-5).IsCollection + String.Contains(ListItem(-5).Art(poster),emby)">$INFO[ListItem(-5).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(ListItem(-5).Art(poster))">$INFO[ListItem(-5).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(-5).Art(poster))">$INFO[ListItem(-5).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[ListItem(-5).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[ListItem(-5).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem-4Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(-4).Art(animatedposter))">$INFO[Container.ListItem(-4).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(-4).Art(animatedposter))">$INFO[Container.ListItem(-4).Art(animatedposter)]</value>
 		<value condition="ListItem(-4).IsCollection + String.Contains(ListItem(-4).Art(poster),emby)">$INFO[ListItem(-4).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(ListItem(-4).Art(poster))">$INFO[ListItem(-4).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(-4).Art(poster))">$INFO[ListItem(-4).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[ListItem(-4).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[ListItem(-4).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem-3Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(-3).Art(animatedposter))">$INFO[Container.ListItem(-3).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(-3).Art(animatedposter))">$INFO[Container.ListItem(-3).Art(animatedposter)]</value>
 		<value condition="ListItem(-3).IsCollection + String.Contains(ListItem(-3).Art(poster),emby)">$INFO[ListItem(-3).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(ListItem(-3).Art(poster))">$INFO[ListItem(-3).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(-3).Art(poster))">$INFO[ListItem(-3).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[ListItem(-3).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[ListItem(-3).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem-2Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(-2).Art(animatedposter))">$INFO[Container.ListItem(-2).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(-2).Art(animatedposter))">$INFO[Container.ListItem(-2).Art(animatedposter)]</value>
 		<value condition="ListItem(-2).IsCollection + String.Contains(ListItem(-2).Art(poster),emby)">$INFO[ListItem(-2).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(ListItem(-2).Art(poster))">$INFO[ListItem(-2).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(-2).Art(poster))">$INFO[ListItem(-2).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[ListItem(-2).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[ListItem(-2).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem-1Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(-1).Art(animatedposter))">$INFO[Container.ListItem(-1).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(-1).Art(animatedposter))">$INFO[Container.ListItem(-1).Art(animatedposter)]</value>
 		<value condition="ListItem(-1).IsCollection + String.Contains(ListItem(-1).Art(poster),emby)">$INFO[ListItem(-1).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(ListItem(-1).Art(poster))">$INFO[ListItem(-1).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(-1).Art(poster))">$INFO[ListItem(-1).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[ListItem(-1).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem0Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem.Art(animatedposter))">$INFO[Container.ListItem.Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem.Art(animatedposter))">$INFO[Container.ListItem.Art(animatedposter)]</value>
 		<value condition="ListItem.IsCollection + String.Contains(ListItem.Art(poster),emby)">$INFO[ListItem.Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(Container.ListItem.Art(poster))">$INFO[Container.ListItem.Art(poster)]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.Art(poster))">$INFO[Container.ListItem.Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[Container.ListItem.Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[Container.ListItem.Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem1Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(1).Art(animatedposter))">$INFO[Container.ListItem(1).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(1).Art(animatedposter))">$INFO[Container.ListItem(1).Art(animatedposter)]</value>
 		<value condition="ListItem(1).IsCollection + String.Contains(ListItem(1).Art(poster),emby)">$INFO[ListItem(1).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(ListItem(1).Art(poster))">$INFO[ListItem(1).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(1).Art(poster))">$INFO[ListItem(1).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[ListItem(1).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[ListItem(1).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem2Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(2).Art(animatedposter))">$INFO[Container.ListItem(2).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(2).Art(animatedposter))">$INFO[Container.ListItem(2).Art(animatedposter)]</value>
 		<value condition="ListItem(2).IsCollection + String.Contains(ListItem(2).Art(poster),emby)">$INFO[ListItem(2).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(ListItem(2).Art(poster))">$INFO[ListItem(2).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(2).Art(poster))">$INFO[ListItem(2).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[ListItem(2).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[ListItem(2).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem3Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(3).Art(animatedposter))">$INFO[Container.ListItem(3).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(3).Art(animatedposter))">$INFO[Container.ListItem(3).Art(animatedposter)]</value>
 		<value condition="ListItem(3).IsCollection + String.Contains(ListItem(3).Art(poster),emby)">$INFO[ListItem(3).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(ListItem(3).Art(poster))">$INFO[ListItem(3).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(3).Art(poster))">$INFO[ListItem(3).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[ListItem(3).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[ListItem(3).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem4Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(4).Art(animatedposter))">$INFO[Container.ListItem(4).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(4).Art(animatedposter))">$INFO[Container.ListItem(4).Art(animatedposter)]</value>
 		<value condition="ListItem(4).IsCollection + String.Contains(ListItem(4).Art(poster),emby)">$INFO[ListItem(4).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(ListItem(4).Art(poster))">$INFO[ListItem(4).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(4).Art(poster))">$INFO[ListItem(4).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[ListItem(4).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[ListItem(4).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem5Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(5).Art(animatedposter))">$INFO[Container.ListItem(5).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(5).Art(animatedposter))">$INFO[Container.ListItem(5).Art(animatedposter)]</value>
 		<value condition="ListItem(5).IsCollection + String.Contains(ListItem(5).Art(poster),emby)">$INFO[ListItem(5).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(ListItem(5).Art(poster))">$INFO[ListItem(5).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(5).Art(poster))">$INFO[ListItem(5).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[ListItem(5).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[ListItem(5).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem6Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(6).Art(animatedposter))">$INFO[Container.ListItem(6).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(6).Art(animatedposter))">$INFO[Container.ListItem(6).Art(animatedposter)]</value>
 		<value condition="ListItem(6).IsCollection + String.Contains(ListItem(6).Art(poster),emby)">$INFO[ListItem(6).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(ListItem(6).Art(poster))">$INFO[ListItem(6).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(6).Art(poster))">$INFO[ListItem(6).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[ListItem(6).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[ListItem(6).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem7Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(7).Art(animatedposter))">$INFO[Container.ListItem(7).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(7).Art(animatedposter))">$INFO[Container.ListItem(7).Art(animatedposter)]</value>
 		<value condition="ListItem(7).IsCollection + String.Contains(ListItem(7).Art(poster),emby)">$INFO[ListItem(7).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(ListItem(7).Art(poster))">$INFO[ListItem(7).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(7).Art(poster))">$INFO[ListItem(7).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[ListItem(7).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[ListItem(7).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem8Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(8).Art(animatedposter))">$INFO[Container.ListItem(8).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(8).Art(animatedposter))">$INFO[Container.ListItem(8).Art(animatedposter)]</value>
 		<value condition="ListItem(8).IsCollection + String.Contains(ListItem(8).Art(poster),emby)">$INFO[ListItem(8).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(ListItem(8).Art(poster))">$INFO[ListItem(8).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(8).Art(poster))">$INFO[ListItem(8).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[ListItem(8).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[ListItem(8).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem9Var">
-        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(9).Art(animatedposter))">$INFO[Container.ListItem(9).Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)  + !Skin.HasSetting(AnimatedPostersDisableList) + !String.IsEmpty(Container.ListItem(9).Art(animatedposter))">$INFO[Container.ListItem(9).Art(animatedposter)]</value>
 		<value condition="ListItem(9).IsCollection + String.Contains(ListItem(9).Art(poster),emby)">$INFO[ListItem(9).Art(poster)]&amp;EnableImageEnhancers=false</value>
-        <value condition="!String.IsEmpty(ListItem(9).Art(poster))">$INFO[ListItem(9).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(9).Art(poster))">$INFO[ListItem(9).Art(poster)]</value>
 		<value condition="[Container.Content(genres) | String.IsEqual(ListItem.DBTYPE,genre)]">$INFO[ListItem(9).Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[ListItem(9).Icon]</value>
 	</variable>
@@ -1556,13 +1551,13 @@
 		<control type="group">
 			<animation effect="zoom" end="95" time="0" center="70,0" condition="Control.IsVisible(513)">Conditional</animation>
 			<include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(1)" />
-            </include>
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(1)" />
+			</include>
 		</control>
 	</include>
 	
@@ -1570,13 +1565,13 @@
 		<control type="group">
 			<animation effect="zoom" end="90" time="0" center="65,0" condition="Control.IsVisible(513)">Conditional</animation>
 			<include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(2)" />
-            </include>
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(2)" />
+			</include>
 		</control>
 	</include>
 	
@@ -1584,13 +1579,13 @@
 		<control type="group">
 			<animation effect="zoom" end="85" time="0" center="60,0" condition="Control.IsVisible(513)">Conditional</animation>
 			<include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(3)" />
-            </include>
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(3)" />
+			</include>
 		</control>
 	</include>
 	
@@ -1598,13 +1593,13 @@
 		<control type="group">
 			<animation effect="zoom" end="80" time="0" center="55,0" condition="Control.IsVisible(513)">Conditional</animation>
 			<include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(4)" />
-            </include>
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(4)" />
+			</include>
 		</control>
 	</include>
 	
@@ -1612,13 +1607,13 @@
 		<control type="group">
 			<animation effect="zoom" end="75" time="0" center="55,0" condition="Control.IsVisible(513)">Conditional</animation>
 			<include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(5)" />
-            </include>
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(5)" />
+			</include>
 		</control>
 	</include>
 	
@@ -1626,13 +1621,13 @@
 		<control type="group">
 			<animation effect="zoom" end="70" time="0" center="40,0" condition="Control.IsVisible(513)">Conditional</animation>
 			<include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(6)" />
-            </include>
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(6)" />
+			</include>
 		</control>
 	</include>
 	
@@ -1640,13 +1635,13 @@
 		<control type="group">
 			<animation effect="zoom" end="60" time="0" center="35,0" condition="Control.IsVisible(513)">Conditional</animation>
 			<include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(7)" />
-            </include>
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(7)" />
+			</include>
 		</control>
 	</include>
 	
@@ -1654,122 +1649,119 @@
 		<control type="group">
 			<animation effect="zoom" end="50" time="0" center="30,0" condition="Control.IsVisible(513)">Conditional</animation>
 			<include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(8)" />
-            </include>
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(8)" />
+			</include>
 		</control>
 	</include>
 	
 	<include name="WatchedIndicatorNormal9">
 		<control type="group">
 			<animation effect="zoom" end="35" time="0" condition="Control.IsVisible(513)">Conditional</animation>
-            <include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(9)" />
-            </include>
+			<include content="WatchedIndicatorLayout">
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(9)" />
+			</include>
 		</control>
 	</include>
 
 	<include name="WatchedIndicatorNormal-1">
 		<control type="group">
 			<include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(-1)" />
-            </include>
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(-1)" />
+			</include>
 		</control>
 	</include>
 	
 	<include name="WatchedIndicatorNormal-2">
 		<control type="group">
 			<include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(-2)" />
-            </include>
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(-2)" />
+			</include>
 		</control>
 	</include>
 	
 	<include name="WatchedIndicatorNormal-3">
 		<control type="group">
 			<include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(-3)" />
-            </include>
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(-3)" />
+			</include>
 		</control>
 	</include>
 	
 	<include name="WatchedIndicatorNormal-4">
 		<control type="group">
 			<include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(-4)" />
-            </include>
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(-4)" />
+			</include>
 		</control>
 	</include>
 	
 	<include name="WatchedIndicatorNormal-5">
 		<control type="group">
 			<include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(-5)" />
-            </include>
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(-5)" />
+			</include>
 		</control>
 	</include>
 	
 	<include name="WatchedIndicatorNormal-6">
 		<control type="group">
 			<include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(-6)" />
-            </include>
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(-6)" />
+			</include>
 		</control>
 	</include>
 	
 	<include name="WatchedIndicatorNormal-7">
 		<control type="group">
 			<include content="WatchedIndicatorLayout">
-                <param name="width" value="80" />
-                <param name="height" value="80" />
-                <param name="font" value="indicator_normal" />
-                <param name="overlay" value="normal" />
-                <param name="overlay_texture" value="diffuse/icon_overlay.png" />
-                <param name="listitem" value="(-7)" />
-            </include>
+				<param name="width" value="80" />
+				<param name="height" value="80" />
+				<param name="font" value="indicator_normal" />
+				<param name="overlay" value="normal" />
+				<param name="overlay_texture" value="diffuse/icon_overlay.png" />
+				<param name="listitem" value="(-7)" />
+			</include>
 		</control>
 	</include>
-	
-	
-	
 	
 </includes>

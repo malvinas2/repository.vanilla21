@@ -1,54 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window>
-    <defaultcontrol always="true"></defaultcontrol>
-    <controls>
-        <control type="group">
-            <animation type="WindowOpen" condition="!Player.Muted">
-                <effect type="slide" start="200,0" end="0,0" time="400" tween="cubic" easing="inout" delay="0" />
-            </animation>
-            <animation type="WindowClose" condition="!Player.Muted">
-                <effect type="slide" start="0,0" end="200,0" time="400" tween="cubic" easing="inout" delay="0" />
-            </animation>
+	<defaultcontrol always="true"></defaultcontrol>
+	<controls>
+		<control type="group">
+			<animation type="WindowOpen" condition="!Player.Muted">
+				<effect type="slide" start="200,0" end="0,0" time="400" tween="cubic" easing="inout" delay="0" />
+			</animation>
+			<animation type="WindowClose" condition="!Player.Muted">
+				<effect type="slide" start="0,0" end="200,0" time="400" tween="cubic" easing="inout" delay="0" />
+			</animation>
 
 			<control type="image">
-                <visible>player.passthrough</visible>
-                <left></left>
+				<visible>player.passthrough</visible>
+				<left></left>
 				<right>20</right>
 				<top>-30</top>
 				<width>200</width>
 				<height>200</height>
-                <texture colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">dialogs/volume/passthrough.png</texture>
-            </control>
+				<texture colordiffuse="$INFO[Skin.String(OSDButtonsColor)]">dialogs/volume/passthrough.png</texture>
+			</control>
 			
 			<control type="image">
-                <visible>[String.Contains(Player.Volume,-60.0) | Player.Muted] + !player.passthrough + !Skin.String(volumestyle,modern) + !Skin.String(volumestyle,modern-alt)</visible>
-                <left></left>
+				<visible>[String.Contains(Player.Volume,-60.0) | Player.Muted] + !player.passthrough + !Skin.String(volumestyle,modern) + !Skin.String(volumestyle,modern-alt)</visible>
+				<left></left>
 				<right>20</right>
 				<top>-30</top>
 				<width>200</width>
 				<height>200</height>
-                <texture colordiffuse="EEFF0000">dialogs/volume/mute.png</texture>
-            </control>
+				<texture colordiffuse="EEFF0000">dialogs/volume/mute.png</texture>
+			</control>
 			
 			<control type="image">
-                <visible>[String.Contains(Player.Volume,-60.0) | Player.Muted] + !player.passthrough + [Skin.String(volumestyle,modern) | Skin.String(volumestyle,modern-alt)]</visible>
-                <left></left>                
+				<visible>[String.Contains(Player.Volume,-60.0) | Player.Muted] + !player.passthrough + [Skin.String(volumestyle,modern) | Skin.String(volumestyle,modern-alt)]</visible>
+				<left></left>                
 				<right>20</right>
 				<top>-30</top>
 				<width>200</width>
 				<height>200</height>
-                <texture colordiffuse="EEFF0000">dialogs/volume/modern/muted.png</texture>
-            </control>
+				<texture colordiffuse="EEFF0000">dialogs/volume/modern/muted.png</texture>
+			</control>
 			
-            <control type="group">
-                <visible>![String.Contains(Player.Volume,-60.0) | Player.Muted] + !player.passthrough</visible>
+			<control type="group">
+				<visible>![String.Contains(Player.Volume,-60.0) | Player.Muted] + !player.passthrough</visible>
 
 				<!-- Volume Indicator Basic -->
 				<control type="group">
 				<visible>Skin.String(volumestyle,basic) | !Skin.String(volumestyle)</visible>
 					<control type="image">
-                        <left></left>
+						<left></left>
 						<right>20</right>
 						<top>-20</top>
 						<width>200</width>
@@ -219,7 +219,7 @@
 					</control>
 					
 					<control type="image">
-                        <left></left>
+						<left></left>
 						<right>20</right>
 						<top>-30</top>
 						<width>200</width>
@@ -230,7 +230,7 @@
 					</control>
 					
 					<control type="image">
-                        <left></left>
+						<left></left>
 						<right>20</right>
 						<top>-30</top>
 						<width>200</width>
@@ -638,7 +638,7 @@
 					<animation effect="fade" end="0" condition="true">Conditional</animation>
 				</control>
 				
-            </control>
-        </control>
-    </controls>
+			</control>
+		</control>
+	</controls>
 </window>

@@ -1,384 +1,384 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 
-    <controls>
+	<controls>
 		<include>animation_window_open_close</include>
 		<include>DialogOverlayExtra</include>
-        <control type="group">
-        <left>510</left>
-        <top>352</top>
-            <animation type="WindowOpen" reversible="false">
-                <effect type="zoom" start="75" end="100" center="960,540" easing="out" tween="back" time="320" />
-                <effect type="fade" start="0" end="100" time="175" />
-            </animation>
-            <animation type="WindowClose" reversible="false">
-                <effect type="zoom" start="100" end="75" center="960,540" easing="in" tween="back" time="320" />
-                <effect type="fade" start="100" end="0" delay="200" time="100" />
-            </animation>
-            <animation type="Visible" reversible="false">
-                <effect type="zoom" start="75" end="100" center="960,540" easing="out" tween="back" time="320" />
-                <effect type="fade" start="0" end="100" time="175" />
-            </animation>
-            <animation type="Hidden" reversible="false">
-                <effect type="zoom" start="100" end="75" center="960,540" easing="in" tween="back" time="320" />
-                <effect type="fade" start="100" end="0" delay="200" time="100" />
-            </animation>
-            <!-- Dialogue content -->
-            <control type="group">
+		<control type="group">
+		<left>510</left>
+		<top>352</top>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="75" end="100" center="960,540" easing="out" tween="back" time="320" />
+				<effect type="fade" start="0" end="100" time="175" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="75" center="960,540" easing="in" tween="back" time="320" />
+				<effect type="fade" start="100" end="0" delay="200" time="100" />
+			</animation>
+			<animation type="Visible" reversible="false">
+				<effect type="zoom" start="75" end="100" center="960,540" easing="out" tween="back" time="320" />
+				<effect type="fade" start="0" end="100" time="175" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="zoom" start="100" end="75" center="960,540" easing="in" tween="back" time="320" />
+				<effect type="fade" start="100" end="0" delay="200" time="100" />
+			</animation>
+			<!-- Dialogue content -->
+			<control type="group">
 			  <control type="image">
-                    <description>Trakt Background</description>
-                    <left>-20</left>
-                    <top>-20</top>
-                    <width>940</width>
-                    <height>415</height>
-                    <colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+					<description>Trakt Background</description>
+					<left>-20</left>
+					<top>-20</top>
+					<width>940</width>
+					<height>415</height>
+					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
 					<texture border="5">diffuse/panel.png</texture>
 					
-                </control>
+				</control>
 			    <control type="image">
-                    <description>Trakt Background</description>
-                    <left>-10</left>
-                    <top>-10</top>
-                    <width>920</width>
-                    <height>395</height>
-                    <colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+					<description>Trakt Background</description>
+					<left>-10</left>
+					<top>-10</top>
+					<width>920</width>
+					<height>395</height>
+					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
 					<texture border="5">diffuse/panel.png</texture>
-                </control>
-                <control type="image">
-                    <description>Trakt Background</description>
-                    <left>0</left>
-                    <top>0</top>
-                    <width>900</width>
-                    <height>375</height>
-                    <texture>dialogs/trakt/trakt-bg.png</texture>
-                </control>
-                <control type="label" id="10011">
-                    <description>Trakt Question</description>
-                    <left>870</left>
-                    <top>20</top>
-                    <width>870</width>
-                    <height>38</height>
-                    <label>$ADDON[script.trakt 32026]</label>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>Bold38</font>
-                    <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+				</control>
+				<control type="image">
+					<description>Trakt Background</description>
+					<left>0</left>
+					<top>0</top>
+					<width>900</width>
+					<height>375</height>
+					<texture>dialogs/trakt/trakt-bg.png</texture>
+				</control>
+				<control type="label" id="10011">
+					<description>Trakt Question</description>
+					<left>870</left>
+					<top>20</top>
+					<width>870</width>
+					<height>38</height>
+					<label>$ADDON[script.trakt 32026]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Bold38</font>
+					<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
 					<shadowcolor>black</shadowcolor>
-                    <scroll>true</scroll>
-                </control>
-                <control type="label" id="10012">
-                    <label></label>
-                    <description>Item to Rate Title</description>
-                    <left>867</left>
-                    <top>114</top>
-                    <width>630</width>
-                    <height>30</height>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>Bold32</font>
-                    <textcolor>black</textcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="label" id="10012">
+					<label></label>
+					<description>Item to Rate Title</description>
+					<left>867</left>
+					<top>114</top>
+					<width>630</width>
+					<height>30</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Bold32</font>
+					<textcolor>black</textcolor>
 					<shadowcolor>grey</shadowcolor>
-                    <scroll>true</scroll>
-                </control>
-                <control type="label" id="10013">
-                    <label></label>
-                    <description>Bottom Ratings text</description>
-                    <left>0</left>
-                    <top>300</top>
-                    <width>900</width>
-                    <height>38</height>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <font>Bold34</font>
-                    <textcolor>black</textcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="label" id="10013">
+					<label></label>
+					<description>Bottom Ratings text</description>
+					<left>0</left>
+					<top>300</top>
+					<width>900</width>
+					<height>38</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Bold34</font>
+					<textcolor>black</textcolor>
 					<shadowcolor>grey</shadowcolor>
-                </control>
-                <control type="button">
-                    <label></label>
-                    <description>Close Window button</description>
-                    <left>0</left>
-                    <top>-48</top>
-                    <width>96</width>
-                    <height>48</height>
-                    <onclick>PreviousMenu</onclick>
-                    <texturefocus>dialogs/trakt/close-fo.png</texturefocus>
-                    <texturenofocus>dialogs/trakt/close-nofo.png</texturenofocus>
+				</control>
+				<control type="button">
+					<label></label>
+					<description>Close Window button</description>
+					<left>0</left>
+					<top>-48</top>
+					<width>96</width>
+					<height>48</height>
+					<onclick>PreviousMenu</onclick>
+					<texturefocus>dialogs/trakt/close-fo.png</texturefocus>
+					<texturenofocus>dialogs/trakt/close-nofo.png</texturenofocus>
 					<visible>Skin.HasSetting(EnableTouchSupport)</visible>
-                </control>
-            </control>
-            <!-- Dialogue Button content -->
-            <control type="group" id="10015">
-                <control type="button" id="11030">
-                    <label></label>
-                    <description>1 Button</description>
-                    <left>120</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texturefocus>dialogs/trakt/1.png</texturefocus>
-                    <texturenofocus>dialogs/trakt/1.png</texturenofocus>
+				</control>
+			</control>
+			<!-- Dialogue Button content -->
+			<control type="group" id="10015">
+				<control type="button" id="11030">
+					<label></label>
+					<description>1 Button</description>
+					<left>120</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texturefocus>dialogs/trakt/1.png</texturefocus>
+					<texturenofocus>dialogs/trakt/1.png</texturenofocus>
 					<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <ondown>11039</ondown>
-                    <onup>11031</onup>
-                    <onleft>11039</onleft>
-                    <onright>11031</onright>
-                    <animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
-                </control>
-                <control type="button" id="11031">
-                    <label></label>
-                    <description>2 Button</description>
-                    <left>188</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texturefocus>dialogs/trakt/2.png</texturefocus>
-                    <texturenofocus>dialogs/trakt/2.png</texturenofocus>
+					<align>center</align>
+					<aligny>center</aligny>
+					<ondown>11039</ondown>
+					<onup>11031</onup>
+					<onleft>11039</onleft>
+					<onright>11031</onright>
+					<animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
+				</control>
+				<control type="button" id="11031">
+					<label></label>
+					<description>2 Button</description>
+					<left>188</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texturefocus>dialogs/trakt/2.png</texturefocus>
+					<texturenofocus>dialogs/trakt/2.png</texturenofocus>
 					<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <ondown>11030</ondown>
-                    <onup>11032</onup>
-                    <onleft>11030</onleft>
-                    <onright>11032</onright>
-                    <visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11032)</visible>
-                    <animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
-                </control>
-                <control type="image">
-                    <description>2 Button Placeholder</description>
-                    <left>188</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texture>dialogs/trakt/2_b.png</texture>
-                    <visible>Control.HasFocus(11030)</visible>
-                </control>
-                <control type="button" id="11032">
-                    <label></label>
-                    <description>3 Button</description>
-                    <left>255</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texturefocus>dialogs/trakt/3.png</texturefocus>
-                    <texturenofocus>dialogs/trakt/3.png</texturenofocus>
+					<align>center</align>
+					<aligny>center</aligny>
+					<ondown>11030</ondown>
+					<onup>11032</onup>
+					<onleft>11030</onleft>
+					<onright>11032</onright>
+					<visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11032)</visible>
+					<animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
+				</control>
+				<control type="image">
+					<description>2 Button Placeholder</description>
+					<left>188</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>dialogs/trakt/2_b.png</texture>
+					<visible>Control.HasFocus(11030)</visible>
+				</control>
+				<control type="button" id="11032">
+					<label></label>
+					<description>3 Button</description>
+					<left>255</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texturefocus>dialogs/trakt/3.png</texturefocus>
+					<texturenofocus>dialogs/trakt/3.png</texturenofocus>
 					<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <ondown>11031</ondown>
-                    <onup>11033</onup>
-                    <onleft>11031</onleft>
-                    <onright>11033</onright>
-                    <visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)</visible>
-                    <animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
-                </control>
-                <control type="image">
-                    <description>3 Button Placeholder</description>
-                    <left>255</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texture>dialogs/trakt/3_b.png</texture>
-                    <visible>Control.HasFocus(11030)|Control.HasFocus(11031)</visible>
-                </control>
-                <control type="button" id="11033">
-                    <label></label>
-                    <description>4 Button</description>
-                    <left>322</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texturefocus>dialogs/trakt/4.png</texturefocus>
-                    <texturenofocus>dialogs/trakt/4.png</texturenofocus>
+					<align>center</align>
+					<aligny>center</aligny>
+					<ondown>11031</ondown>
+					<onup>11033</onup>
+					<onleft>11031</onleft>
+					<onright>11033</onright>
+					<visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)</visible>
+					<animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
+				</control>
+				<control type="image">
+					<description>3 Button Placeholder</description>
+					<left>255</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>dialogs/trakt/3_b.png</texture>
+					<visible>Control.HasFocus(11030)|Control.HasFocus(11031)</visible>
+				</control>
+				<control type="button" id="11033">
+					<label></label>
+					<description>4 Button</description>
+					<left>322</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texturefocus>dialogs/trakt/4.png</texturefocus>
+					<texturenofocus>dialogs/trakt/4.png</texturenofocus>
 					<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <ondown>11032</ondown>
-                    <onup>11034</onup>
-                    <onleft>11032</onleft>
-                    <onright>11034</onright>
-                    <visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)|!Control.HasFocus(11032)</visible>
-                    <animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
-                </control>
-                <control type="image">
-                    <description>4 Button Placeholder</description>
-                    <left>322</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texture>dialogs/trakt/4_b.png</texture>
-                    <visible>Control.HasFocus(11030)|Control.HasFocus(11031)|Control.HasFocus(11032)</visible>
-                </control>
-                <control type="button" id="11034">
-                    <label></label>
-                    <description>5 Button</description>
-                    <left>390</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texturefocus>dialogs/trakt/5.png</texturefocus>
-                    <texturenofocus>dialogs/trakt/5.png</texturenofocus>
+					<align>center</align>
+					<aligny>center</aligny>
+					<ondown>11032</ondown>
+					<onup>11034</onup>
+					<onleft>11032</onleft>
+					<onright>11034</onright>
+					<visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)|!Control.HasFocus(11032)</visible>
+					<animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
+				</control>
+				<control type="image">
+					<description>4 Button Placeholder</description>
+					<left>322</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>dialogs/trakt/4_b.png</texture>
+					<visible>Control.HasFocus(11030)|Control.HasFocus(11031)|Control.HasFocus(11032)</visible>
+				</control>
+				<control type="button" id="11034">
+					<label></label>
+					<description>5 Button</description>
+					<left>390</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texturefocus>dialogs/trakt/5.png</texturefocus>
+					<texturenofocus>dialogs/trakt/5.png</texturenofocus>
 					<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <ondown>11033</ondown>
-                    <onup>11035</onup>
-                    <onleft>11033</onleft>
-                    <onright>11035</onright>
-                    <visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)|!Control.HasFocus(11032)|!Control.HasFocus(11033)</visible>
-                    <animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
-                </control>
-                <control type="image">
-                    <description>5 Button Placeholder</description>
-                    <left>390</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texture>dialogs/trakt/5_b.png</texture>
-                    <visible>Control.HasFocus(11030)|Control.HasFocus(11031)|Control.HasFocus(11032)|Control.HasFocus(11033)</visible>
-                </control>
-                <control type="button" id="11035">
-                    <label></label>
-                    <description>6 Button</description>
-                    <left>458</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texturefocus>dialogs/trakt/6.png</texturefocus>
-                    <texturenofocus>dialogs/trakt/6.png</texturenofocus>
+					<align>center</align>
+					<aligny>center</aligny>
+					<ondown>11033</ondown>
+					<onup>11035</onup>
+					<onleft>11033</onleft>
+					<onright>11035</onright>
+					<visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)|!Control.HasFocus(11032)|!Control.HasFocus(11033)</visible>
+					<animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
+				</control>
+				<control type="image">
+					<description>5 Button Placeholder</description>
+					<left>390</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>dialogs/trakt/5_b.png</texture>
+					<visible>Control.HasFocus(11030)|Control.HasFocus(11031)|Control.HasFocus(11032)|Control.HasFocus(11033)</visible>
+				</control>
+				<control type="button" id="11035">
+					<label></label>
+					<description>6 Button</description>
+					<left>458</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texturefocus>dialogs/trakt/6.png</texturefocus>
+					<texturenofocus>dialogs/trakt/6.png</texturenofocus>
 					<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <ondown>11034</ondown>
-                    <onup>11036</onup>
-                    <onleft>11034</onleft>
-                    <onright>11036</onright>
-                    <visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)|!Control.HasFocus(11032)|!Control.HasFocus(11033)|!Control.HasFocus(11034)</visible>
-                    <animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
-                </control>
-                <control type="image">
-                    <description>6 Button Placeholder</description>
-                    <left>458</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texture>dialogs/trakt/6_b.png</texture>
-                    <visible>Control.HasFocus(11030)|Control.HasFocus(11031)|Control.HasFocus(11032)|Control.HasFocus(11033)|Control.HasFocus(11034)</visible>
-                </control>
-                <control type="button" id="11036">
-                    <label></label>
-                    <description>7 Button</description>
-                    <left>525</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texturefocus>dialogs/trakt/7.png</texturefocus>
-                    <texturenofocus>dialogs/trakt/7.png</texturenofocus>
+					<align>center</align>
+					<aligny>center</aligny>
+					<ondown>11034</ondown>
+					<onup>11036</onup>
+					<onleft>11034</onleft>
+					<onright>11036</onright>
+					<visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)|!Control.HasFocus(11032)|!Control.HasFocus(11033)|!Control.HasFocus(11034)</visible>
+					<animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
+				</control>
+				<control type="image">
+					<description>6 Button Placeholder</description>
+					<left>458</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>dialogs/trakt/6_b.png</texture>
+					<visible>Control.HasFocus(11030)|Control.HasFocus(11031)|Control.HasFocus(11032)|Control.HasFocus(11033)|Control.HasFocus(11034)</visible>
+				</control>
+				<control type="button" id="11036">
+					<label></label>
+					<description>7 Button</description>
+					<left>525</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texturefocus>dialogs/trakt/7.png</texturefocus>
+					<texturenofocus>dialogs/trakt/7.png</texturenofocus>
 					<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <ondown>11035</ondown>
-                    <onup>11037</onup>
-                    <onleft>11035</onleft>
-                    <onright>11037</onright>
-                    <visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)|!Control.HasFocus(11032)|!Control.HasFocus(11033)|!Control.HasFocus(11034)|!Control.HasFocus(11035)</visible>
-                    <animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
-                </control>
-                <control type="image">
-                    <description>7 Button Placeholder</description>
-                    <left>525</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texture>dialogs/trakt/7_b.png</texture>
-                    <visible>Control.HasFocus(11030)|Control.HasFocus(11031)|Control.HasFocus(11032)|Control.HasFocus(11033)|Control.HasFocus(11034)|Control.HasFocus(11035)</visible>
-                </control>
-                <control type="button" id="11037">
-                    <label></label>
-                    <description>8 Button</description>
-                    <left>592</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texturefocus>dialogs/trakt/8.png</texturefocus>
-                    <texturenofocus>dialogs/trakt/8.png</texturenofocus>
+					<align>center</align>
+					<aligny>center</aligny>
+					<ondown>11035</ondown>
+					<onup>11037</onup>
+					<onleft>11035</onleft>
+					<onright>11037</onright>
+					<visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)|!Control.HasFocus(11032)|!Control.HasFocus(11033)|!Control.HasFocus(11034)|!Control.HasFocus(11035)</visible>
+					<animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
+				</control>
+				<control type="image">
+					<description>7 Button Placeholder</description>
+					<left>525</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>dialogs/trakt/7_b.png</texture>
+					<visible>Control.HasFocus(11030)|Control.HasFocus(11031)|Control.HasFocus(11032)|Control.HasFocus(11033)|Control.HasFocus(11034)|Control.HasFocus(11035)</visible>
+				</control>
+				<control type="button" id="11037">
+					<label></label>
+					<description>8 Button</description>
+					<left>592</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texturefocus>dialogs/trakt/8.png</texturefocus>
+					<texturenofocus>dialogs/trakt/8.png</texturenofocus>
 					<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <ondown>11036</ondown>
-                    <onup>11038</onup>
-                    <onleft>11036</onleft>
-                    <onright>11038</onright>
-                    <visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)|!Control.HasFocus(11032)|!Control.HasFocus(11033)|!Control.HasFocus(11034)|!Control.HasFocus(11035)|!Control.HasFocus(11036)</visible>
-                    <animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
-                </control>
-                <control type="image">
-                    <description>8 Button Placeholder</description>
-                    <left>592</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texture>dialogs/trakt/8_b.png</texture>
-                    <visible>Control.HasFocus(11030)|Control.HasFocus(11031)|Control.HasFocus(11032)|Control.HasFocus(11033)|Control.HasFocus(11034)|Control.HasFocus(11035)|Control.HasFocus(11036)</visible>
-                </control>
-                <control type="button" id="11038">
-                    <label></label>
-                    <description>9 Button</description>
-                    <left>660</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texturefocus>dialogs/trakt/9.png</texturefocus>
-                    <texturenofocus>dialogs/trakt/9.png</texturenofocus>
+					<align>center</align>
+					<aligny>center</aligny>
+					<ondown>11036</ondown>
+					<onup>11038</onup>
+					<onleft>11036</onleft>
+					<onright>11038</onright>
+					<visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)|!Control.HasFocus(11032)|!Control.HasFocus(11033)|!Control.HasFocus(11034)|!Control.HasFocus(11035)|!Control.HasFocus(11036)</visible>
+					<animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
+				</control>
+				<control type="image">
+					<description>8 Button Placeholder</description>
+					<left>592</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>dialogs/trakt/8_b.png</texture>
+					<visible>Control.HasFocus(11030)|Control.HasFocus(11031)|Control.HasFocus(11032)|Control.HasFocus(11033)|Control.HasFocus(11034)|Control.HasFocus(11035)|Control.HasFocus(11036)</visible>
+				</control>
+				<control type="button" id="11038">
+					<label></label>
+					<description>9 Button</description>
+					<left>660</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texturefocus>dialogs/trakt/9.png</texturefocus>
+					<texturenofocus>dialogs/trakt/9.png</texturenofocus>
 					<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <ondown>11037</ondown>
-                    <onup>11039</onup>
-                    <onleft>11037</onleft>
-                    <onright>11039</onright>
-                    <visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)|!Control.HasFocus(11032)|!Control.HasFocus(11033)|!Control.HasFocus(11034)|!Control.HasFocus(11035)|!Control.HasFocus(11036)|!Control.HasFocus(11037)</visible>
-                    <animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
-                </control>
-                <control type="image">
-                    <description>9 Button Placeholder</description>
-                    <left>660</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texture>dialogs/trakt/9_b.png</texture>
-                    <visible>Control.HasFocus(11030)|Control.HasFocus(11031)|Control.HasFocus(11032)|Control.HasFocus(11033)|Control.HasFocus(11034)|Control.HasFocus(11035)|Control.HasFocus(11036)|Control.HasFocus(11037)</visible>
-                </control>
-                <control type="button" id="11039">
-                    <label></label>
-                    <description>10 Button</description>
-                    <left>728</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texturefocus>dialogs/trakt/10.png</texturefocus>
-                    <texturenofocus>dialogs/trakt/10.png</texturenofocus>
+					<align>center</align>
+					<aligny>center</aligny>
+					<ondown>11037</ondown>
+					<onup>11039</onup>
+					<onleft>11037</onleft>
+					<onright>11039</onright>
+					<visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)|!Control.HasFocus(11032)|!Control.HasFocus(11033)|!Control.HasFocus(11034)|!Control.HasFocus(11035)|!Control.HasFocus(11036)|!Control.HasFocus(11037)</visible>
+					<animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
+				</control>
+				<control type="image">
+					<description>9 Button Placeholder</description>
+					<left>660</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>dialogs/trakt/9_b.png</texture>
+					<visible>Control.HasFocus(11030)|Control.HasFocus(11031)|Control.HasFocus(11032)|Control.HasFocus(11033)|Control.HasFocus(11034)|Control.HasFocus(11035)|Control.HasFocus(11036)|Control.HasFocus(11037)</visible>
+				</control>
+				<control type="button" id="11039">
+					<label></label>
+					<description>10 Button</description>
+					<left>728</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texturefocus>dialogs/trakt/10.png</texturefocus>
+					<texturenofocus>dialogs/trakt/10.png</texturenofocus>
 					<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <ondown>11038</ondown>
-                    <onup>11030</onup>
-                    <onleft>11038</onleft>
-                    <onright>11030</onright>
-                    <visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)|!Control.HasFocus(11032)|!Control.HasFocus(11033)|!Control.HasFocus(11034)|!Control.HasFocus(11035)|!Control.HasFocus(11036)|!Control.HasFocus(11037)|!Control.HasFocus(11038)</visible>
-                    <animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
-                </control>
-                <control type="image">
-                    <description>10 Button Placeholder</description>
-                    <left>728</left>
-                    <top>195</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texture>dialogs/trakt/10_b.png</texture>
-                    <visible>Control.HasFocus(11030)|Control.HasFocus(11031)|Control.HasFocus(11032)|Control.HasFocus(11033)|Control.HasFocus(11034)|Control.HasFocus(11035)|Control.HasFocus(11036)|Control.HasFocus(11037)|Control.HasFocus(11038)</visible>
-                </control>
-            </control>
-        </control>
-    </controls>
+					<align>center</align>
+					<aligny>center</aligny>
+					<ondown>11038</ondown>
+					<onup>11030</onup>
+					<onleft>11038</onleft>
+					<onright>11030</onright>
+					<visible allowhiddenfocus="true">!Control.HasFocus(11030)|!Control.HasFocus(11031)|!Control.HasFocus(11032)|!Control.HasFocus(11033)|!Control.HasFocus(11034)|!Control.HasFocus(11035)|!Control.HasFocus(11036)|!Control.HasFocus(11037)|!Control.HasFocus(11038)</visible>
+					<animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
+				</control>
+				<control type="image">
+					<description>10 Button Placeholder</description>
+					<left>728</left>
+					<top>195</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>dialogs/trakt/10_b.png</texture>
+					<visible>Control.HasFocus(11030)|Control.HasFocus(11031)|Control.HasFocus(11032)|Control.HasFocus(11033)|Control.HasFocus(11034)|Control.HasFocus(11035)|Control.HasFocus(11036)|Control.HasFocus(11037)|Control.HasFocus(11038)</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
 </window>

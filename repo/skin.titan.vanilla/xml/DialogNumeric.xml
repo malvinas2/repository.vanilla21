@@ -1,47 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window>
-    <defaultcontrol always="true">21</defaultcontrol>
-    <controls>
-        <!--Dialog Overlay-->
-        <include>DialogOverlayExtra</include>
+	<defaultcontrol always="true">21</defaultcontrol>
+	<controls>
+		<!--Dialog Overlay-->
+		<include>DialogOverlayExtra</include>
 		<include condition="Skin.HasSetting(EnableTouchSupport)">Footer</include>
-        <!--Numeric-->
-        <control type="group">
-            <left>600</left>
-            <top>250</top>
+		<!--Numeric-->
+		<control type="group">
+			<left>600</left>
+			<top>250</top>
 			<width>720</width>
-            <height>640</height>
+			<height>640</height>
 			<include>animation_window_open_close</include>
 			<control type="image">
-                <!--Panel-->
-                <texture border="5">diffuse/panel.png</texture>
+				<!--Panel-->
+				<texture border="5">diffuse/panel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-            </control>
+			</control>
 			<control type="image">
-                <!--Panel-->
+				<!--Panel-->
 				<bordersize>5</bordersize>
-                <texture border="5">diffuse/panel.png</texture>
+				<texture border="5">diffuse/panel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-            </control>
-            <control type="label" id="1">
-                <left>0</left>
-                <top>60</top>
-                <width>720</width>
-                <height>22</height>
-                <align>center</align>
-                <include>DialogHeader</include>
-            </control>
-            <control type="label" id="4">
-                <left>0</left>
-                <top>100</top>
-                <width>720</width>
-                <align>center</align>
-                <include>DialogHeader</include>
-            </control>
+			</control>
+			<control type="label" id="1">
+				<left>0</left>
+				<top>60</top>
+				<width>720</width>
+				<height>22</height>
+				<align>center</align>
+				<include>DialogHeader</include>
+			</control>
+			<control type="label" id="4">
+				<left>0</left>
+				<top>100</top>
+				<width>720</width>
+				<align>center</align>
+				<include>DialogHeader</include>
+			</control>
 			<control type="group">
 				<left>140</left>
-                <top>130</top>
+				<top>130</top>
 				<!-- First Row -->
 				<control type="group">
 					<left>34</left>
@@ -158,7 +158,7 @@
 						<onup>11</onup>
 						<ondown>17</ondown>
 						<include>KeyBack</include>
-                        <selected>Control.HasFocus(23)</selected>
+						<selected>Control.HasFocus(23)</selected>
 					</control>
 					<control type="button" id="10">
 						<description>:0: button</description>
@@ -178,10 +178,10 @@
 						<onup>13</onup>
 						<ondown>19</ondown>
 						<include>KeyDone</include>
-                        <selected>Control.HasFocus(21)</selected>
+						<selected>Control.HasFocus(21)</selected>
 					</control>
 				</control>
 			</control>
 		</control>
-    </controls>
+	</controls>
 </window>

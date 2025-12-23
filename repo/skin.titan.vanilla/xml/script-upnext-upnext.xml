@@ -62,17 +62,17 @@
 						<visible>![String.IsEmpty(Window.Property(thumb)) + String.IsEmpty(Window.Property(landscape)) + String.IsEmpty(Window.Property(fanart)) + String.IsEmpty(Window.Property(clearlogo)) + String.IsEmpty(Window.Property(clearart))]</visible>
 						<!-- <visible>false</visible> -->
 					</control>
-                    <control type="progress" id="3014">
-                        <width>250</width>
-                        <top>136</top>
-                        <height>5</height>
-                        <reveal>true</reveal>
-                        <righttexture></righttexture>
-                        <overlaytexture></overlaytexture>
-                        <lefttexture></lefttexture>
-                        <texturebg colordiffuse="00ffffff">special://home/addons/service.upnext/resources/skins/default/media/white.jpg</texturebg>
-                        <midtexture colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">special://home/addons/service.upnext/resources/skins/default/media/white.jpg</midtexture>
-                    </control>
+					<control type="progress" id="3014">
+						<width>250</width>
+						<top>136</top>
+						<height>5</height>
+						<reveal>true</reveal>
+						<righttexture></righttexture>
+						<overlaytexture></overlaytexture>
+						<lefttexture></lefttexture>
+						<texturebg colordiffuse="00ffffff">special://home/addons/service.upnext/resources/skins/default/media/white.jpg</texturebg>
+						<midtexture colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">special://home/addons/service.upnext/resources/skins/default/media/white.jpg</midtexture>
+					</control>
 				</control>
 				<!-- Labels -->
 				<control type="group">

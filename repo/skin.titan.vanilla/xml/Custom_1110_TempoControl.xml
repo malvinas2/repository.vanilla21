@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window id="1110" type="dialog">
 	<onload condition="String.IsEqual(Player.PlaySpeed,0.80)">SetFocus(141)</onload>
@@ -12,70 +12,69 @@
 	<onload condition="String.IsEqual(Player.PlaySpeed,1.50)">SetFocus(148)</onload>
 	<onload condition="String.IsEmpty(Player.PlaySpeed)">SetFocus(143)</onload>
 	
-    <controls>
-        <control type="group">
-            <include>animation_window_open_close</include>
-            <control type="group">
-                <left>0</left>
-                <top>-70</top>
-
+	<controls>
+		<control type="group">
+			<include>animation_window_open_close</include>
+			<control type="group">
+				<left>0</left>
+				<top>-70</top>
 				<control type="image">
-                    <left>-100</left>
-                    <top>0</top>
-                    <width>2200</width>
-                    <height>148</height>
-                    <texture border="5">diffuse/panel.png</texture>
+					<left>-100</left>
+					<top>0</top>
+					<width>2200</width>
+					<height>148</height>
+					<texture border="5">diffuse/panel.png</texture>
 					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-                    <aspectratio>stretch</aspectratio>
-                </control>
-                 <!-- close dialog -->
-                <control type="group">
-                    <include>animation_fade_visible_hidden</include>
-                    <right>40</right>
-                    <width>60</width>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				 <!-- close dialog -->
+				<control type="group">
+					<include>animation_fade_visible_hidden</include>
+					<right>40</right>
+					<width>60</width>
 					<top>80</top>
-                    <include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
-                </control>
-                <control type="label">
-                    <description>Option Name</description>
-                    <left>100</left>
-                    <top>80</top>
-                    <width>380</width>
-                    <height>40</height>
-                    <label>$LOCALIZE[70053]</label>
-                    <align>left</align>
-                    <font>Reg30</font>
-                    <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-                    <scroll>false</scroll>
-                </control>
-                <control type="label">
-                    <description>Slider Value</description>
-                    <left>1520</left>
-                    <top>80</top>
-                    <label>$INFO[Player.PlaySpeed]</label>
-                    <width>330</width>
-                    <height>40</height>
-                    <align>left</align>
-                    <font>Reg30</font>
-                    <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-                    <scroll>false</scroll>
-                </control>
+					<include condition="Skin.HasSetting(EnableTouchSupport)">close_button</include>
+				</control>
+				<control type="label">
+					<description>Option Name</description>
+					<left>100</left>
+					<top>80</top>
+					<width>380</width>
+					<height>40</height>
+					<label>$LOCALIZE[70053]</label>
+					<align>left</align>
+					<font>Reg30</font>
+					<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label">
+					<description>Slider Value</description>
+					<left>1520</left>
+					<top>80</top>
+					<label>$INFO[Player.PlaySpeed]</label>
+					<width>330</width>
+					<height>40</height>
+					<align>left</align>
+					<font>Reg30</font>
+					<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+					<scroll>false</scroll>
+				</control>
 				<!-- pseudo slider, could be much better, see jurialmunkey https://forum.kodi.tv/showthread.php?tid=372010 -->
 				<control type="group" id="120">
-                    <left>500</left>
-                    <top>86</top>
-                    <width>1000</width>
-                    <height>35</height>
+					<left>500</left>
+					<top>86</top>
+					<width>1000</width>
+					<height>35</height>
 					<control type="image">
 						<texture border="5">common/modern/slider/slider.png</texture>
 						<colordiffuse>$INFO[Skin.String(ButtonColor)]</colordiffuse>
 					</control>
-                </control>
+				</control>
 
 				<control type="button" id="141">
-                    <left>500</left>
-                    <top>86</top>
-                    <height>35</height>
+					<left>500</left>
+					<top>86</top>
+					<height>35</height>
 					<width>35</width>
 					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
 					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
@@ -84,12 +83,12 @@
 					<onclick>Action(close)</onclick>
 					<onleft></onleft>
 					<onright>142</onright>
-                </control>
+				</control>
 				
 				<control type="button" id="142">
-                    <left>636</left>
-                    <top>86</top>
-                    <height>35</height>
+					<left>636</left>
+					<top>86</top>
+					<height>35</height>
 					<width>35</width>
 					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
 					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
@@ -98,12 +97,12 @@
 					<onclick>Action(close)</onclick>
 					<onleft>141</onleft>
 					<onright>143</onright>
-                </control>
+				</control>
 				
 				<control type="button" id="143">
-                    <left>771</left>
-                    <top>86</top>
-                    <height>35</height>
+					<left>771</left>
+					<top>86</top>
+					<height>35</height>
 					<width>35</width>
 					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
 					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
@@ -112,12 +111,12 @@
 					<onclick>Action(close)</onclick>
 					<onleft>142</onleft>
 					<onright>144</onright>
-                </control>
+				</control>
 				
 				<control type="button" id="144">
-                    <left>907</left>
-                    <top>86</top>
-                    <height>35</height>
+					<left>907</left>
+					<top>86</top>
+					<height>35</height>
 					<width>35</width>
 					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
 					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
@@ -126,12 +125,12 @@
 					<onclick>Action(close)</onclick>
 					<onleft>143</onleft>
 					<onright>145</onright>
-                </control>
+				</control>
 				
 				<control type="button" id="145">
-                    <left>1043</left>
-                    <top>86</top>
-                    <height>35</height>
+					<left>1043</left>
+					<top>86</top>
+					<height>35</height>
 					<width>35</width>
 					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
 					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
@@ -140,12 +139,12 @@
 					<onclick>Action(close)</onclick>
 					<onleft>144</onleft>
 					<onright>146</onright>
-                </control>
+				</control>
 				
 				<control type="button" id="146">
-                    <left>1179</left>
-                    <top>86</top>
-                    <height>35</height>
+					<left>1179</left>
+					<top>86</top>
+					<height>35</height>
 					<width>35</width>
 					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
 					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
@@ -154,12 +153,12 @@
 					<onclick>Action(close)</onclick>
 					<onleft>145</onleft>
 					<onright>147</onright>
-                </control>
+				</control>
 
 				<control type="button" id="147">
-                    <left>1314</left>
-                    <top>86</top>
-                    <height>35</height>
+					<left>1314</left>
+					<top>86</top>
+					<height>35</height>
 					<width>35</width>
 					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
 					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
@@ -168,12 +167,12 @@
 					<onclick>Action(close)</onclick>
 					<onleft>146</onleft>
 					<onright>148</onright>
-                </control>
+				</control>
 				
 				<control type="button" id="148">
-                    <left>1465</left>
-                    <top>86</top>
-                    <height>35</height>
+					<left>1465</left>
+					<top>86</top>
+					<height>35</height>
 					<width>35</width>
 					<texturefocus colordiffuse="$INFO[Skin.String(ActiveSpinControlColor)]" border="5">common/modern/slider/nib_focus.png</texturefocus>
 					<texturenofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]" border="5">common/modern/slider/nib.png</texturenofocus>
@@ -182,8 +181,8 @@
 					<onclick>Action(close)</onclick>
 					<onleft>147</onleft>
 					<onright></onright>
-                </control>				
-            </control>
-        </control>
-    </controls>
+				</control>				
+			</control>
+		</control>
+	</controls>
 </window>

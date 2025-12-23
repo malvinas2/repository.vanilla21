@@ -1,35 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="129">
-    <defaultcontrol always="true">10</defaultcontrol>
+	<defaultcontrol always="true">10</defaultcontrol>
 	
-    <controls>
+	<controls>
 		<!--Dialog Overlay-->
 		<include>DialogOverlayExtra</include>
 
 		<control type="group">
 			<include>animation_window_open_close</include>
 			<left>470</left>
-            <top>340</top>
+			<top>340</top>
 			<width>1020</width>
-            <height>440</height>
+			<height>440</height>
 			<control type="image">
-                <!--Panel-->
-                <left>-40</left>
-                <top>-40</top>
-                <width>1100</width>
-                <height>520</height>
-                <texture border="15">diffuse/bgpanel.png</texture>
+				<!--Panel-->
+				<left>-40</left>
+				<top>-40</top>
+				<width>1100</width>
+				<height>520</height>
+				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-            </control>
+			</control>
 			<control type="image">
-                <!--Panel-->
-                <left>-40</left>
-                <top>-40</top>
-                <width>1100</width>
-                <height>520</height>
+				<!--Panel-->
+				<left>-40</left>
+				<top>-40</top>
+				<width>1100</width>
+				<height>520</height>
 				<bordersize>10</bordersize>
-                <texture border="15">diffuse/bgpanel.png</texture>
+				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-            </control>
+			</control>
 
 			<control type="label" id="2">
 				<description>Heading Label</description>
@@ -178,5 +179,5 @@
 				</control>
 			</control>
 		</control>
-    </controls>
+	</controls>
 </window>

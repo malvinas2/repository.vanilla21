@@ -1,191 +1,190 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window type="dialog" id="3004">
-    <defaultcontrol always="true">2</defaultcontrol>
-    <controls>
-        <!--Dialog Overlay-->
+	<defaultcontrol always="true">2</defaultcontrol>
+	<controls>
+		<!--Dialog Overlay-->
 		<include>DialogOverlayExtra</include>
-        <!--Dialog Custom Media Dialog-->
-        <control type="group">
-            <include>animation_window_open_close</include>
-            <visible>!Window.IsVisible(filebrowser) + !Window.IsVisible(selectdialog) + !Window.IsVisible(selectdialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(addonsettings)</visible>
-            <!--Panel-->
-            <control type="image">
-                <!--Panel-->
-                <left>604</left>
-                <top>206</top>
-                <width>712</width>
-                <height>670</height>
-                <texture border="15">diffuse/bgpanel.png</texture>
-				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-            </control>
+		<!--Dialog Custom Media Dialog-->
+		<control type="group">
+			<include>animation_window_open_close</include>
+			<visible>!Window.IsVisible(filebrowser) + !Window.IsVisible(selectdialog) + !Window.IsVisible(selectdialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(addonsettings)</visible>
+			<!--Panel-->
 			<control type="image">
-                <!--Panel-->
-                <left>604</left>
-                <top>206</top>
-                <width>712</width>
-                <height>670</height>
-				<bordersize>5</bordersize>
-                <texture border="15">diffuse/bgpanel.png</texture>
+				<!--Panel-->
+				<left>604</left>
+				<top>206</top>
+				<width>712</width>
+				<height>670</height>
+				<texture border="15">diffuse/bgpanel.png</texture>
 				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
-            </control>
-            <control type="image">
-                <!--Inner-->
-                <left>638</left>
-                <top>300</top>
-                <width>644</width>
-                <height>481</height>
-                <texture border="5">dialogs/default/inner.png</texture>
-            </control>
+			</control>
+			<control type="image">
+				<!--Panel-->
+				<left>604</left>
+				<top>206</top>
+				<width>712</width>
+				<height>670</height>
+				<bordersize>5</bordersize>
+				<texture border="15">diffuse/bgpanel.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+			</control>
+			<control type="image">
+				<!--Inner-->
+				<left>638</left>
+				<top>300</top>
+				<width>644</width>
+				<height>481</height>
+				<texture border="5">dialogs/default/inner.png</texture>
+			</control>
 			<!--Header-->
-            <control type="label">
-                <description>Heading</description>
-                <left>473</left>
-                <top>230</top>
-                <width>974</width>
-                <label>$LOCALIZE[13511]</label>
-                <include>DialogHeader</include>
-                <align>center</align>
-            </control>
-            <!--Get Thumb-->
-            <control type="button" id="2">
-                <description>Get thumb</description>
-                <left>638</left>
-                <top>300</top>
-                <width>644</width>
-                <height>60</height>
-                <label>$LOCALIZE[31827]</label>
-                <align>left</align>
-                <textoffsetx>20</textoffsetx>
-                <include>DialogButton</include>
-                <texturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">colors/color_white.png</texturefocus>
-                <texturenofocus>dialogs/default/separator.png</texturenofocus>
-                <onclick condition="Window.IsActive(DialogVideoInfo.xml)">SendClick(12003,10)</onclick>
-                <onclick condition="Window.IsActive(DialogMusicInfo.xml)">SendClick(12001,10)</onclick>
-                <onup>3</onup>
-                <ondown>3</ondown>
-                <onleft>7</onleft>
-                <onright>7</onright>
-                <visible>Window.IsActive(DialogVideoInfo.xml | Window.IsActive(DialogMusicInfo.xml)</visible>
-            </control>
-            <!--Label External Artwork-->
-            <control type="button">
-                <left>638</left>
-                <top>368</top>
-                <width>644</width>
-                <height>53</height>
-                <label>[B]$LOCALIZE[31828][/B]</label>
-                <align>left</align>
-                <textoffsetx>20</textoffsetx>
-                <include>DialogButton</include>
-                <texturenofocus border="0,0,0,2">dialogs/default/separator.png</texturenofocus>
-            </control>
-            <!--List ID=3 Poster, Fanart, Clearart,..-->
-            <control type="list" id="3">
-                <left>638</left>
-                <top>420</top>
-                <width>644</width>
-                <height>360</height>
-                <onleft>7</onleft>
-                <onright>7</onright>
-                <onup>2</onup>
-                <ondown>8000</ondown>
-                <pagecontrol>61</pagecontrol>
-                <scrolltime tween="cubic" easing="out">500</scrolltime>
-                <itemlayout height="60">
-                    <control type="image">
-                        <left>0</left>
-                        <top>1</top>
-                        <width>644</width>
-                        <height>60</height>
-                        <texture>dialogs/default/separator.png</texture>
-                    </control>
-                    <control type="label">
-                        <left>20</left>
-                        <top>0</top>
-                        <width>604</width>
-                        <height>60</height>
-                        <info>ListItem.Label</info>
-                        <include>DialogListNF</include>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <scroll>false</scroll>
-                    </control>
-                </itemlayout>
-                <focusedlayout height="60">
-                    <control type="group">
-                        <visible>!Control.HasFocus(3)</visible>
-                        <control type="image">
-                            <left>0</left>
-                            <top>1</top>
-                            <width>644</width>
-                            <height>60</height>
-                            <texture>dialogs/default/separator.png</texture>
-                        </control>
-                        <control type="label">
-                            <left>20</left>
-                            <top>0</top>
-                            <width>604</width>
-                            <height>60</height>
-                            <info>ListItem.Label</info>
-                            <include>DialogListNF</include>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <scroll>false</scroll>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <visible>Control.HasFocus(3)</visible>
-                        <control type="image">
-                            <width>644</width>
-                            <height>60</height>
-                            <texture border="5">diffuse/panel.png</texture><colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
-                        </control>
-                        <control type="label">
-                            <left>20</left>
-                            <top>0</top>
-                            <width>604</width>
-                            <height>60</height>
-                            <info>ListItem.Label</info>
-                            <include>DialogListFO</include>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                        </control>
-                    </control>
-                </focusedlayout>
-                <content>
-                    <item id="1">
-                        <!--Get artwork-->
-                        <label>$LOCALIZE[31052]</label>
-                        <onclick condition="Container.Content(movies)">RunScript(script.artwork.beef,mode=gui,mediatype=movie,dbid=$INFO[ListItem.DBID])</onclick>
-                        <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.beef,mode=gui,mediatype=tvshow,dbid=$INFO[ListItem.DBID])</onclick>
-                        <onclick condition="Container.Content(episodes)">RunScript(script.artwork.beef,mode=gui,mediatype=episode,dbid=$INFO[ListItem.DBID])</onclick>
-                        <onclick condition="Container.Content(artists)">RunScript(script.artwork.beef,mode=gui,mediatype=artist,dbid=$INFO[ListItem.DBID])</onclick>
-                        <onclick condition="Container.Content(albums)">RunScript(script.artwork.beef,mode=gui,mediatype=album,dbid=$INFO[ListItem.DBID])</onclick>
-                        <onclick condition="Container.Content(songs)">RunScript(script.artwork.beef,mode=gui,mediatype=song,dbid=$INFO[ListItem.DBID])</onclick>
-                        <onclick condition="Container.Content(musicvideos)">RunScript(script.artwork.beef,mode=gui,mediatype=musicvideo,dbid=$INFO[ListItem.DBID])</onclick>
-                    </item>
-                </content>
-            </control>
-            <!--Buttons-->
-            <control type="group" id="8000">
-                <left>628</left>
-                <top>792</top>
-                <control type="button" id="7">
-                    <description>Close</description>
-                    <label>$LOCALIZE[222]</label>
-                    <include>DialogButtonOther</include>
+			<control type="label">
+				<description>Heading</description>
+				<left>473</left>
+				<top>230</top>
+				<width>974</width>
+				<label>$LOCALIZE[13511]</label>
+				<include>DialogHeader</include>
+				<align>center</align>
+			</control>
+			<!--Get Thumb-->
+			<control type="button" id="2">
+				<description>Get thumb</description>
+				<left>638</left>
+				<top>300</top>
+				<width>644</width>
+				<height>60</height>
+				<label>$LOCALIZE[31827]</label>
+				<align>left</align>
+				<textoffsetx>20</textoffsetx>
+				<include>DialogButton</include>
+				<texturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">colors/color_white.png</texturefocus>
+				<texturenofocus>dialogs/default/separator.png</texturenofocus>
+				<onclick condition="Window.IsActive(DialogVideoInfo.xml)">SendClick(12003,10)</onclick>
+				<onclick condition="Window.IsActive(DialogMusicInfo.xml)">SendClick(12001,10)</onclick>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<onleft>7</onleft>
+				<onright>7</onright>
+				<visible>Window.IsActive(DialogVideoInfo.xml | Window.IsActive(DialogMusicInfo.xml)</visible>
+			</control>
+			<!--Label External Artwork-->
+			<control type="button">
+				<left>638</left>
+				<top>368</top>
+				<width>644</width>
+				<height>53</height>
+				<label>[B]$LOCALIZE[31828][/B]</label>
+				<align>left</align>
+				<textoffsetx>20</textoffsetx>
+				<include>DialogButton</include>
+				<texturenofocus border="0,0,0,2">dialogs/default/separator.png</texturenofocus>
+			</control>
+			<!--List ID=3 Poster, Fanart, Clearart,..-->
+			<control type="list" id="3">
+				<left>638</left>
+				<top>420</top>
+				<width>644</width>
+				<height>360</height>
+				<onleft>7</onleft>
+				<onright>7</onright>
+				<onup>2</onup>
+				<ondown>8000</ondown>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<itemlayout height="60">
+					<control type="image">
+						<left>0</left>
+						<top>1</top>
+						<width>644</width>
+						<height>60</height>
+						<texture>dialogs/default/separator.png</texture>
+					</control>
+					<control type="label">
+						<left>20</left>
+						<top>0</top>
+						<width>604</width>
+						<height>60</height>
+						<info>ListItem.Label</info>
+						<include>DialogListNF</include>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scroll>false</scroll>
+					</control>
+				</itemlayout>
+				<focusedlayout height="60">
+					<control type="group">
+						<visible>!Control.HasFocus(3)</visible>
+						<control type="image">
+							<left>0</left>
+							<top>1</top>
+							<width>644</width>
+							<height>60</height>
+							<texture>dialogs/default/separator.png</texture>
+						</control>
+						<control type="label">
+							<left>20</left>
+							<top>0</top>
+							<width>604</width>
+							<height>60</height>
+							<info>ListItem.Label</info>
+							<include>DialogListNF</include>
+							<align>left</align>
+							<aligny>center</aligny>
+							<scroll>false</scroll>
+						</control>
+					</control>
+					<control type="group">
+						<visible>Control.HasFocus(3)</visible>
+						<control type="image">
+							<width>644</width>
+							<height>60</height>
+							<texture border="5">diffuse/panel.png</texture><colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
+						</control>
+						<control type="label">
+							<left>20</left>
+							<top>0</top>
+							<width>604</width>
+							<height>60</height>
+							<info>ListItem.Label</info>
+							<include>DialogListFO</include>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<!--Get artwork-->
+						<label>$LOCALIZE[31052]</label>
+						<onclick condition="Container.Content(movies)">RunScript(script.artwork.beef,mode=gui,mediatype=movie,dbid=$INFO[ListItem.DBID])</onclick>
+						<onclick condition="Container.Content(tvshows)">RunScript(script.artwork.beef,mode=gui,mediatype=tvshow,dbid=$INFO[ListItem.DBID])</onclick>
+						<onclick condition="Container.Content(episodes)">RunScript(script.artwork.beef,mode=gui,mediatype=episode,dbid=$INFO[ListItem.DBID])</onclick>
+						<onclick condition="Container.Content(artists)">RunScript(script.artwork.beef,mode=gui,mediatype=artist,dbid=$INFO[ListItem.DBID])</onclick>
+						<onclick condition="Container.Content(albums)">RunScript(script.artwork.beef,mode=gui,mediatype=album,dbid=$INFO[ListItem.DBID])</onclick>
+						<onclick condition="Container.Content(songs)">RunScript(script.artwork.beef,mode=gui,mediatype=song,dbid=$INFO[ListItem.DBID])</onclick>
+						<onclick condition="Container.Content(musicvideos)">RunScript(script.artwork.beef,mode=gui,mediatype=musicvideo,dbid=$INFO[ListItem.DBID])</onclick>
+					</item>
+				</content>
+			</control>
+			<!--Buttons-->
+			<control type="group" id="8000">
+				<left>628</left>
+				<top>792</top>
+				<control type="button" id="7">
+					<description>Close</description>
+					<label>$LOCALIZE[222]</label>
+					<include>DialogButtonOther</include>
 					<width>180</width>
-                    <onclick>Container.Refresh</onclick>
-                    <onclick>Action(close)</onclick>
-                    <onleft>7</onleft>
-                    <onright>7</onright>
-                    <onup>3</onup>
-                    <ondown>3</ondown>
-                    <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(7)">Conditional</animation>
-				
-                </control>
-            </control>
-        </control>
-    </controls>
+					<onclick>Container.Refresh</onclick>
+					<onclick>Action(close)</onclick>
+					<onleft>7</onleft>
+					<onright>7</onright>
+					<onup>3</onup>
+					<ondown>3</ondown>
+					<animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(7)">Conditional</animation>
+				</control>
+			</control>
+		</control>
+	</controls>
 </window>

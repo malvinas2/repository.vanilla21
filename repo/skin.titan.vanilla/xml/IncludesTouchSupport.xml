@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
 <include name="TouchControlsHome">
@@ -14,12 +14,12 @@
 		<label></label>
 		<pulseonselect>false</pulseonselect>
 		<textcolor fallback="white">$INFO[Skin.String(ButtonTextColor)]</textcolor>
-        <focusedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</focusedcolor>
-        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+		<focusedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</focusedcolor>
+		<disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
 		<font>Light36</font>
-        <texturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="5">diffuse/panel.png</texturefocus>
-        <texturenofocus colordiffuse="$INFO[Skin.String(GeneralPanelsColor)]" border="5">diffuse/panel.png</texturenofocus>
-        <textoffsetx>0</textoffsetx>
+		<texturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="5">diffuse/panel.png</texturefocus>
+		<texturenofocus colordiffuse="$INFO[Skin.String(GeneralPanelsColor)]" border="5">diffuse/panel.png</texturenofocus>
+		<textoffsetx>0</textoffsetx>
 		<onclick>PageUp(60)</onclick>
 		<animation effect="slide" start="0,0" end="0,85" time="0" condition="Skin.String(HomeLayout,enhanced)">Conditional</animation>
 		<visible>Control.IsVisible(300) + Container(300).HasPrevious + ![Control.IsVisible(77551) | String.IsEqual(Window(Home).Property(ShowWidget),show)]</visible>
@@ -47,12 +47,12 @@
 		<label></label>
 		<pulseonselect>false</pulseonselect>
 		<textcolor fallback="white">$INFO[Skin.String(ButtonTextColor)]</textcolor>
-        <focusedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</focusedcolor>
-        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+		<focusedcolor>$INFO[Skin.String(ButtonFocusTextColor)]</focusedcolor>
+		<disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
 		<font>Light36</font>
-        <texturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="5">diffuse/panel.png</texturefocus>
-        <texturenofocus colordiffuse="$INFO[Skin.String(GeneralPanelsColor)]" border="5">diffuse/panel.png</texturenofocus>
-        <textoffsetx>0</textoffsetx>
+		<texturefocus colordiffuse="$INFO[Skin.String(ButtonFocusColor)]" border="5">diffuse/panel.png</texturefocus>
+		<texturenofocus colordiffuse="$INFO[Skin.String(GeneralPanelsColor)]" border="5">diffuse/panel.png</texturenofocus>
+		<textoffsetx>0</textoffsetx>
 		<onclick>PageDown(60)</onclick>
 		<animation effect="slide" start="0,0" end="0,85" time="0" condition="Skin.String(HomeLayout,enhanced)">Conditional</animation>
 		<visible>Control.IsVisible(300) + Container(300).HasNext + ![Control.IsVisible(77551) | String.IsEqual(Window(Home).Property(ShowWidget),show)]</visible>
@@ -71,48 +71,48 @@
 </include>
 
 <include name="touchbutton_layout">
-    <label></label>
-    <include>animation_fade_visible_hidden</include>
-    <width>60</width>
-    <height>60</height>
-    <font></font>
-    <radiowidth>50</radiowidth>
-    <radioheight>50</radioheight>
-    <radioposx>5</radioposx>
+	<label></label>
+	<include>animation_fade_visible_hidden</include>
+	<width>60</width>
+	<height>60</height>
+	<font></font>
+	<radiowidth>50</radiowidth>
+	<radioheight>50</radioheight>
+	<radioposx>5</radioposx>
 </include>
 
 <include name="close_button">
-    <control type="radiobutton" id="199199">
-        <include>touchbutton_layout</include>
-        <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/close.png</textureradiofocus>
-        <textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/close.png</textureradionofocus>
-        <selected>Control.HasFocus(199199)</selected>
-        <onclick>ClearProperty(ShowViewSubMenu,home)</onclick>
-        <onclick condition="!String.IsEqual(Window(Home).Property(ShowViewSubMenu),show)">Back</onclick>
-    </control>
+	<control type="radiobutton" id="199199">
+		<include>touchbutton_layout</include>
+		<textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/close.png</textureradiofocus>
+		<textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/close.png</textureradionofocus>
+		<selected>Control.HasFocus(199199)</selected>
+		<onclick>ClearProperty(ShowViewSubMenu,home)</onclick>
+		<onclick condition="!String.IsEqual(Window(Home).Property(ShowViewSubMenu),show)">Back</onclick>
+	</control>
 </include>
 
 <include name="back_button">
-    <control type="radiobutton" id="199198">
-        <include>touchbutton_layout</include>
-        <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/back.png</textureradiofocus>
-        <textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/back.png</textureradionofocus>
-        <selected>Control.HasFocus(199198)</selected>
-        <onclick>ClearProperty(ShowViewSubMenu,home)</onclick>
-        <onclick>Back</onclick>
-    </control>
+	<control type="radiobutton" id="199198">
+		<include>touchbutton_layout</include>
+		<textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/back.png</textureradiofocus>
+		<textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/back.png</textureradionofocus>
+		<selected>Control.HasFocus(199198)</selected>
+		<onclick>ClearProperty(ShowViewSubMenu,home)</onclick>
+		<onclick>Back</onclick>
+	</control>
 </include>
 
 <include name="home_button">
-    <control type="radiobutton" id="199197">
-        <include>touchbutton_layout</include>
-        <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/home.png</textureradiofocus>
-        <textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/home.png</textureradionofocus>
-        <selected>Control.HasFocus(199102)</selected>
-        <onclick>Back</onclick>
-        <onclick>ActivateWindow(Home)</onclick>
-        <onclick>ClearProperty(ShowViewSubMenu,home)</onclick>
-    </control>
+	<control type="radiobutton" id="199197">
+		<include>touchbutton_layout</include>
+		<textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/home.png</textureradiofocus>
+		<textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/home.png</textureradionofocus>
+		<selected>Control.HasFocus(199102)</selected>
+		<onclick>Back</onclick>
+		<onclick>ActivateWindow(Home)</onclick>
+		<onclick>ClearProperty(ShowViewSubMenu,home)</onclick>
+	</control>
 </include>
 
 <include name="TouchControlsFooter">
@@ -133,9 +133,9 @@
 		
 		<control type="radiobutton" id="199101">
 			<include>touchbutton_layout</include>
-            <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/back.png</textureradiofocus>
-            <textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/back.png</textureradionofocus>
-            <selected>Control.HasFocus(199101)</selected>
+			<textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/back.png</textureradiofocus>
+			<textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/back.png</textureradionofocus>
+			<selected>Control.HasFocus(199101)</selected>
 			<onclick>Back</onclick>
 			<onclick>ClearProperty(ShowViewSubMenu,home)</onclick>
 			<onclick>ClearProperty(ShowWidget,home)</onclick>
@@ -143,19 +143,19 @@
 		</control>
 		<control type="radiobutton" id="199102">
 			<include>touchbutton_layout</include>
-            <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/home.png</textureradiofocus>
-            <textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/home.png</textureradionofocus>
-            <selected>Control.HasFocus(199102)</selected>
-            <onclick>Back</onclick>
+			<textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/home.png</textureradiofocus>
+			<textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/home.png</textureradionofocus>
+			<selected>Control.HasFocus(199102)</selected>
+			<onclick>Back</onclick>
 			<onclick>ActivateWindow(Home)</onclick>
 			<onclick>ClearProperty(ShowViewSubMenu,home)</onclick>
-            <visible>!Window.IsActive(Home)</visible>
+			<visible>!Window.IsActive(Home)</visible>
 		</control>
 		<control type="radiobutton" id="199103">
 			<include>touchbutton_layout</include>
-            <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/power.png</textureradiofocus>
-            <textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/power.png</textureradionofocus>
-            <selected>Control.HasFocus(199103)</selected>
+			<textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/power.png</textureradiofocus>
+			<textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/power.png</textureradionofocus>
+			<selected>Control.HasFocus(199103)</selected>
 			<onclick>ActivateWindow(111)</onclick>
 			<visible>!Skin.HasSetting(DisablePowerMenu)</visible>
 			<onclick>ClearProperty(ShowViewSubMenu,home)</onclick>
@@ -164,9 +164,9 @@
 		<!-- sideblade menu -->
 		<control type="radiobutton" id="199104">
 			<include>touchbutton_layout</include>
-            <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/menu.png</textureradiofocus>
-            <textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/menu.png</textureradionofocus>
-            <selected>Control.HasFocus(199104)</selected>
+			<textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/menu.png</textureradiofocus>
+			<textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/menu.png</textureradionofocus>
+			<selected>Control.HasFocus(199104)</selected>
 			<onclick condition="!String.IsEqual(Window(Home).Property(ShowViewSubMenu),show)">SetProperty(ShowViewSubMenu, show,home)</onclick>
 			<onclick condition="String.IsEqual(Window(Home).Property(ShowViewSubMenu),show)">ClearProperty(ShowViewSubMenu,home)</onclick>
 			<visible>Control.IsVisible(9000) + !Window.IsActive(settings) + !Window.IsActive(settingscategory.xml) + !Window.IsActive(contextmenu)</visible>
@@ -174,9 +174,9 @@
 		<!-- show widget -->
 		<control type="radiobutton" id="199105">
 			<include>touchbutton_layout</include>
-            <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/widget.png</textureradiofocus>
-            <textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/widget.png</textureradionofocus>
-            <selected>Control.HasFocus(199105)</selected>
+			<textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/widget.png</textureradiofocus>
+			<textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/widget.png</textureradionofocus>
+			<selected>Control.HasFocus(199105)</selected>
 			<onclick condition="String.IsEqual(Window(Home).Property(ShowWidget),show)">Control.SetFocus(300)</onclick>
 			<onclick condition="!String.IsEqual(Window(Home).Property(ShowWidget),show)">SetProperty(ShowWidget,show,home)</onclick>
 			<onclick condition="String.IsEqual(Window(Home).Property(ShowWidget),show)">ClearProperty(ShowWidget,home)</onclick>
@@ -186,9 +186,9 @@
 		<!-- show submenu -->
 		<control type="radiobutton" id="199106">
 			<include>touchbutton_layout</include>
-            <textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/menu.png</textureradiofocus>
-            <textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/menu.png</textureradionofocus>
-            <selected>Control.HasFocus(199106)</selected>
+			<textureradiofocus colordiffuse="$INFO[Skin.String(ButtonFocusTextColor)]">touchcontrols/menu.png</textureradiofocus>
+			<textureradionofocus colordiffuse="$INFO[Skin.String(ButtonTextColor)]">touchcontrols/menu.png</textureradionofocus>
+			<selected>Control.HasFocus(199106)</selected>
 			<onclick condition="String.Contains(Window(Home).Property(submenu),show)">SetProperty(submenu,hide,home)</onclick>
 			<onclick condition="!String.Contains(Window(Home).Property(submenu),show)">SetProperty(submenu,show,home)</onclick>
 			<visible>Window.IsActive(Home) + [Skin.String(HomeLayout,1) | Skin.String(HomeLayout,2) | Skin.String(HomeLayout,3) | Skin.String(HomeLayout,1small) | Skin.String(HomeLayout,2small) | Skin.String(HomeLayout,3small) | String.Contains(Skin.String(HomeLayout),hor)] </visible>
@@ -246,7 +246,7 @@
 			</control>
 	</control>
 </include>
-    
+	
 <variable name="BatteryColorDiffuse">
 	<value condition="Window.IsActive(Home) + Skin.String(HomeLayout,lowhorizontal)">$INFO[Skin.String(MainMenuTextColor)]</value>
 	<value>$INFO[Skin.String(FooterTextColor)]</value>

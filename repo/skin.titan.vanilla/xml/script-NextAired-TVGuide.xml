@@ -4,17 +4,17 @@
 	<onunload>ClearProperty(ShowViewSubMenu,home)</onunload>
 	
 	<defaultcontrol always="true">5000</defaultcontrol>
-    <controls>
+	<controls>
 		<!-- Video Background -->
-        <include>GlobalBackground</include>
+		<include>GlobalBackground</include>
 		<!--NowPlaying-->
 		<include>NowPlayingModern</include>
-         <!--Header-->
-        <include>Header</include>
+		 <!--Header-->
+		<include>Header</include>
 		<control type="group">
 			<include>animation_window_open_close</include>
 			
-            <control type="image">
+			<control type="image">
 				<left>82</left>
 				<top></top>
 				<bottom>145</bottom>
@@ -136,7 +136,7 @@
 				<top></top>
 				<bottom>145</bottom>
 				<left>535</left>
-                <height>630</height>
+				<height>630</height>
 				<control type="scrollbar" id="60">
 					<left>0</left>
 					<top>670</top>
@@ -208,45 +208,45 @@
 		</control>
 		
 		<!--Sub Menu Tab Left-->
-        <include condition="!Skin.HasSetting(DisableSideBladeIndicator)">SideBladeMenuTabLeft</include>
+		<include condition="!Skin.HasSetting(DisableSideBladeIndicator)">SideBladeMenuTabLeft</include>
 		
 		<!--clear logo -->
 		<include condition="Skin.String(ClearLogoLocation)">ClearLogo</include>
 		
 		<!--Sub Menu-->
-        <control type="group">
-            <include condition="Skin.HasSetting(smallContextMenu)">SideBladeClassic</include>
+		<control type="group">
+			<include condition="Skin.HasSetting(smallContextMenu)">SideBladeClassic</include>
 			<include condition="!Skin.HasSetting(smallContextMenu)">SideBladeModern</include>
-            <!--Grouplist 9000-->
-            <control type="grouplist" id="9000">
-                <left>21</left>
-                <top>190</top>
-                <width>458</width>
-                <height>750</height>
-                <itemgap>3</itemgap>
-                <onleft>5000</onleft>
-                <onright>5000</onright>
+			<!--Grouplist 9000-->
+			<control type="grouplist" id="9000">
+				<left>21</left>
+				<top>190</top>
+				<width>458</width>
+				<height>750</height>
+				<itemgap>3</itemgap>
+				<onleft>5000</onleft>
+				<onright>5000</onright>
 				<onright>ClearProperty(ShowViewSubMenu,home)</onright>
 				<onleft>ClearProperty(ShowViewSubMenu,home)</onleft>
 				<onback>ClearProperty(ShowViewSubMenu,home)</onback>
-                <onup>9000</onup>
-                <ondown>9000</ondown>
-                <orientation>vertical</orientation>
-                <!--Buttons-->
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<orientation>vertical</orientation>
+				<!--Buttons-->
 				<control type="button" id="8">
-                    <description>Settings</description>
+					<description>Settings</description>
 				    <include>SideBladeMenuButton</include>
-                    <label>$LOCALIZE[5]</label>
-                </control>
+					<label>$LOCALIZE[5]</label>
+				</control>
 				<control type="radiobutton" id="1004">
-                    <!--Show Fanart Background-->
-                    <include>SideBladeMenuButton</include>
-                    <label>$LOCALIZE[31141]</label>
-                    <onclick>Skin.ToggleSetting(ShowFanartBackground)</onclick>
-                    <selected>Skin.HasSetting(ShowFanartBackground)</selected>
+					<!--Show Fanart Background-->
+					<include>SideBladeMenuButton</include>
+					<label>$LOCALIZE[31141]</label>
+					<onclick>Skin.ToggleSetting(ShowFanartBackground)</onclick>
+					<selected>Skin.HasSetting(ShowFanartBackground)</selected>
 					<visible>!Control.IsVisible(507)</visible>
-                </control>
-            </control>
-        </control>
+				</control>
+			</control>
+		</control>
 	</controls>
 </window>

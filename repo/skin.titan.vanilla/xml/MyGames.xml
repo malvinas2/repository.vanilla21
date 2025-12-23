@@ -1,58 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window>
-    <defaultcontrol always="true">5000</defaultcontrol>
-    <include>allViewIds</include>
+	<defaultcontrol always="true">5000</defaultcontrol>
+	<include>allViewIds</include>
 	<onload>ClearProperty(ShowViewSubMenu,home)</onload>
 	<onunload>ClearProperty(ShowViewSubMenu,home)</onunload>
-    
-    <controls>
-        <!-- Background -->
-        <include>GlobalBackground</include>
+	
+	<controls>
+		<!-- Background -->
+		<include>GlobalBackground</include>
 		<!--Header-->
-        <include>Header</include>
+		<include>Header</include>
  
 		<!--NowPlaying-->
 		<include>NowPlayingModern</include>
 
 		<!-- all Views -->
-        <include>allViews</include>
+		<include>allViews</include>
 		
-        <!--Sub Menu Tab Left-->
-        <include condition="!Skin.HasSetting(DisableSideBladeIndicator)">SideBladeMenuTabLeft</include>
-        <!--Sub Menu Tab Top-->
-        <include condition="!Skin.HasSetting(DisableSideBladeIndicator)">SideBladeMenuTabTop</include>
-        <!--Sub Menu-->
-        <control type="group">
-            <include condition="Skin.HasSetting(smallContextMenu)">SideBladeClassic</include>
+		<!--Sub Menu Tab Left-->
+		<include condition="!Skin.HasSetting(DisableSideBladeIndicator)">SideBladeMenuTabLeft</include>
+		<!--Sub Menu Tab Top-->
+		<include condition="!Skin.HasSetting(DisableSideBladeIndicator)">SideBladeMenuTabTop</include>
+		<!--Sub Menu-->
+		<control type="group">
+			<include condition="Skin.HasSetting(smallContextMenu)">SideBladeClassic</include>
 			<include condition="!Skin.HasSetting(smallContextMenu)">SideBladeModern</include>
-            <!--Grouplist 9000-->
-            <control type="grouplist" id="9000">
-                <left>21</left>
-                <top>185</top>
-                <width>458</width>
-                <height>770</height>
-                <itemgap>3</itemgap>
-                <onleft>5000</onleft>
-                <onright>5000</onright>
+			<!--Grouplist 9000-->
+			<control type="grouplist" id="9000">
+				<left>21</left>
+				<top>185</top>
+				<width>458</width>
+				<height>770</height>
+				<itemgap>3</itemgap>
+				<onleft>5000</onleft>
+				<onright>5000</onright>
 				<visible>!Skin.HasSetting(KioskMode.Enabled)</visible>
 				<onright>ClearProperty(ShowViewSubMenu,home)</onright>
 				<onleft>ClearProperty(ShowViewSubMenu,home)</onleft>
 				<onback>ClearProperty(ShowViewSubMenu,home)</onback>
 				<onback>5000</onback>
-                <onup>9000</onup>
-                <ondown>9000</ondown>
-                <orientation>vertical</orientation>
-                <!--Buttons-->
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<orientation>vertical</orientation>
+				<!--Buttons-->
 
 				
 <!--                <control type="radiobutton" id="14">            -->
-                    <!--Button Watched Toggle-->                    
+					<!--Button Watched Toggle-->                    
 <!--                    <include>SideBladeMenuButton</include>
-                    <label>$LOCALIZE[20367]</label>
-                </control>
+					<label>$LOCALIZE[20367]</label>
+				</control>
 -->
-               <control type="button" id="3">
+			   <control type="button" id="3">
 					<description>Sort by button</description>
 					<include>SideBladeMenuButton</include>
 					<label>$LOCALIZE[103]</label>
@@ -96,19 +96,19 @@
 <!--				</control>
 -->				
 				<control type="button" id="624">
-                    <description></description>
-                    <include>SideBladeMenuButton</include>
-                    <label>$LOCALIZE[10140]</label>
+					<description></description>
+					<include>SideBladeMenuButton</include>
+					<label>$LOCALIZE[10140]</label>
 					<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
-                    <visible>!String.IsEmpty(Container.PluginName)</visible>
-                </control>
-                <control type="button" id="621">
-                    <description></description>
-                    <include>SideBladeMenuButton</include>
-                    <label>$LOCALIZE[21452]</label>
-                    <onclick>ActivateWindow(addonbrowser,addons://more/game/,return)</onclick>
-                    <visible>Container.Content(addons)</visible>
-                </control>
+					<visible>!String.IsEmpty(Container.PluginName)</visible>
+				</control>
+				<control type="button" id="621">
+					<description></description>
+					<include>SideBladeMenuButton</include>
+					<label>$LOCALIZE[21452]</label>
+					<onclick>ActivateWindow(addonbrowser,addons://more/game/,return)</onclick>
+					<visible>Container.Content(addons)</visible>
+				</control>
 				
 				<include>SideBladeViewCommands</include>
 				
@@ -120,10 +120,10 @@
 					<selected>system.ismaster</selected>
 					<visible>system.haslocks</visible>
 				</control>
-             </control>
-        </control>
+			 </control>
+		</control>
 		
-        <include condition="Skin.HasSetting(DebugGrid) | Skin.HasSetting(DebugInfo)">DebugInfo</include>
+		<include condition="Skin.HasSetting(DebugGrid) | Skin.HasSetting(DebugInfo)">DebugInfo</include>
 	
 	</controls>
 </window>

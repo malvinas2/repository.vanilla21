@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window>
-    <defaultcontrol always="true">20</defaultcontrol>
-    <controls>
-        <!--Globalbackground-->
-        <include>GlobalBackground</include>
+	<defaultcontrol always="true">20</defaultcontrol>
+	<controls>
+		<!--Globalbackground-->
+		<include>GlobalBackground</include>
 		<!--NowPlaying-->
 		<include>NowPlayingModern</include>
-        <!--Header-->
-        <include>Header</include>
-        <!-- footer bar -->
+		<!--Header-->
+		<include>Header</include>
+		<!-- footer bar -->
 		<control type="group">
 			<visible>!Control.IsVisible(514)</visible>
 			<include condition="!Skin.HasSetting(nofooterbar)">Footer</include>
@@ -49,19 +49,19 @@
 					<textcolor>$INFO[Skin.String(GeneralHighlightTextColor)]</textcolor>
 					<font>Bold38</font>
 				</control>
-                
-                <control type="scrollbar" id="60">
-                    <left>40</left>
+				
+				<control type="scrollbar" id="60">
+					<left>40</left>
 					<top>80</top>
-                    <height>520</height>
-                    <onup>60</onup>
-                    <ondown>60</ondown>
-                    <onleft>20</onleft>
-                    <onright>20</onright>
-                    <animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container(20).Scrolling | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
-                    <animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container(20).Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
-                </control>
-                
+					<height>520</height>
+					<onup>60</onup>
+					<ondown>60</ondown>
+					<onleft>20</onleft>
+					<onright>20</onright>
+					<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container(20).Scrolling | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container(20).Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+				</control>
+				
 				<control type="list" id="20">
 					<!--List 20-->
 					<description>Left File List</description>
@@ -73,7 +73,7 @@
 					<onright>21</onright>
 					<onup>20</onup>
 					<ondown>20</ondown>
-                    <pagecontrol>60</pagecontrol>
+					<pagecontrol>60</pagecontrol>
 					<itemlayout height="69" width="900">
 						<control type="image">
 							<left>140</left>
@@ -129,7 +129,7 @@
 							<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
 							<texture border="5">diffuse/panel.png</texture>
 						</control>
-                        <control type="image">
+						<control type="image">
 							<visible>!Control.HasFocus(20)</visible>
 							<left>100</left>
 							<top>7</top>
@@ -163,7 +163,7 @@
 							<height>40</height>
 							<texture>common/checkbox.png</texture>
 							<visible>ListItem.IsSelected</visible>
-                            <colordiffuse>$INFO[Skin.String(ButtonFocusTextColor)]</colordiffuse>
+							<colordiffuse>$INFO[Skin.String(ButtonFocusTextColor)]</colordiffuse>
 						</control>
 						<control type="label">
 							<left>210</left>
@@ -172,7 +172,7 @@
 							<font>Reg30</font>
 							<info>ListItem.Label</info>
 							<scrollspeed>30</scrollspeed>
-                            <scroll>true</scroll>
+							<scroll>true</scroll>
 							<textcolor>$INFO[Skin.String(ButtonFocusTextColor)]</textcolor>
 						</control>
 						<control type="label">
@@ -231,7 +231,7 @@
 					<onright>70</onright>
 					<onup>21</onup>
 					<ondown>21</ondown>
-                    <pagecontrol>70</pagecontrol>
+					<pagecontrol>70</pagecontrol>
 					<itemlayout height="69" width="900">
 						<control type="image">
 							<left>140</left>
@@ -256,7 +256,7 @@
 							<top>13</top>
 							<width>40</width>
 							<height>40</height>
-                            <colordiffuse>$INFO[Skin.String(GeneralTextColor)]</colordiffuse>
+							<colordiffuse>$INFO[Skin.String(GeneralTextColor)]</colordiffuse>
 							<texture>common/checkbox.png</texture>
 							<visible>ListItem.IsSelected</visible>
 						</control>
@@ -287,7 +287,7 @@
 							<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
 							<texture border="5">diffuse/panel.png</texture>
 						</control>
-                        <control type="image">
+						<control type="image">
 							<visible>!Control.HasFocus(21)</visible>
 							<left>100</left>
 							<top>7</top>
@@ -296,7 +296,7 @@
 							<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
 							<texture border="5">diffuse/panel_trans.png</texture>
 						</control>
-                        <control type="image">
+						<control type="image">
 							<left>140</left>
 							<top>13</top>
 							<width>40</width>
@@ -319,7 +319,7 @@
 							<top>13</top>
 							<width>40</width>
 							<height>40</height>
-                            <colordiffuse>$INFO[Skin.String(ButtonFocusTextColor)]</colordiffuse>
+							<colordiffuse>$INFO[Skin.String(ButtonFocusTextColor)]</colordiffuse>
 							<texture>common/checkbox.png</texture>
 							<visible>ListItem.IsSelected</visible>
 						</control>
@@ -330,7 +330,7 @@
 							<font>Reg30</font>
 							<info>ListItem.Label</info>
 							<scrollspeed>30</scrollspeed>
-                            <scroll>true</scroll>
+							<scroll>true</scroll>
 							<textcolor>$INFO[Skin.String(ButtonFocusTextColor)]</textcolor>
 						</control>
 						<control type="label">
@@ -343,19 +343,19 @@
 						</control>
 					</focusedlayout>
 				</control>
-                <control type="scrollbar" id="70">
-                    <left></left>
+				<control type="scrollbar" id="70">
+					<left></left>
 					<right>60</right>
 					<top>80</top>
-                    <height>520</height>
-                    <onup>70</onup>
-                    <ondown>70</ondown>
-                    <onleft>21</onleft>
-                    <onright>21</onright>
-                    <animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(70) | Skin.HasSetting(EnableTouchSupport) | Container(20).Scrolling | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
-                    <animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(70) | Skin.HasSetting(EnableTouchSupport) | Container(20).Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
-                </control>
-                <control type="label" id="13">
+					<height>520</height>
+					<onup>70</onup>
+					<ondown>70</ondown>
+					<onleft>21</onleft>
+					<onright>21</onright>
+					<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(70) | Skin.HasSetting(EnableTouchSupport) | Container(20).Scrolling | Skin.HasSetting(alwaysShowScrollbars)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(70) | Skin.HasSetting(EnableTouchSupport) | Container(20).Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+				</control>
+				<control type="label" id="13">
 					<!--Object Info RSS-->
 					<description>Header Label</description>
 					<left>140</left>

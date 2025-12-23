@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="true">9000</defaultcontrol>
-    <controls>
-        <control type="group">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+		<control type="group">
 			<!-- default animation -->
 			<include>animation_window_open_close</include>
-            <include>GlobalBackground</include>
-            <!--NowPlaying-->
-            <include>NowPlayingModern</include>
-     			<!-- touchscreen workaround for windows tablets -->
+			<include>GlobalBackground</include>
+			<!--NowPlaying-->
+			<include>NowPlayingModern</include>
+				<!-- touchscreen workaround for windows tablets -->
 			<include condition="Skin.HasSetting(EnableTouchSupport)">TouchScreenWorkaround</include>
 			
 			<control type="label">
@@ -47,7 +47,7 @@
 				<height>930</height>
 				<texture border="5">diffuse/panel.png</texture>
 				<colordiffuse>$VAR[ViewDetailsPanelColor]</colordiffuse>
-                <visible>!Skin.HasSetting(ExtendedInfoHidePanel)</visible>
+				<visible>!Skin.HasSetting(ExtendedInfoHidePanel)</visible>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			
@@ -78,7 +78,7 @@
 					<!-- touch controls -->
 					
 					<include condition="Skin.HasSetting(EnableTouchSupport)">back_button</include>
-                    <include condition="Skin.HasSetting(EnableTouchSupport)">home_button</include>
+					<include condition="Skin.HasSetting(EnableTouchSupport)">home_button</include>
 					
 					<control type="radiobutton" id="6001">
 						<visible>false</visible>
@@ -105,8 +105,8 @@
 						<textoffsetx>0</textoffsetx>
 						<visible>!String.IsEmpty(Window.Property(DBID)) + !String.IsEqual(Window.Property(Type),tvshow) + !Integer.IsGreater(Window.Property(PercentPlayed),0)</visible>
 					</control>
-                    
-                    <!-- resume button -->
+					
+					<!-- resume button -->
 					<control type="button" id="9">
 						<width>285</width>
 						<height>60</height>
@@ -114,7 +114,7 @@
 						<textoffsetx>0</textoffsetx>
 						<label>$LOCALIZE[13404] $INFO[Window.Property(PercentPlayed),(,%)]</label>
 						<visible>Integer.IsGreater(Window.Property(PercentPlayed),0)</visible>
-                        <onclick>Action(Close)</onclick>
+						<onclick>Action(Close)</onclick>
 					</control>
 					
 					<!-- play button tvshows -->
@@ -137,7 +137,7 @@
 						<onclick>RunPlugin(plugin://plugin.video.couchpotato_manager/movies/add?imdb_id=$INFO[Window.Property(imdb_id)])</onclick>
 						<visible>String.IsEmpty(Window.Property(DBID)) + System.HasAddon(plugin.video.couchpotato_manager)</visible>
 					</control>
-                    
+					
 					<!-- manage button -->
 					<control type="button" id="445">
 						<width>285</width>
@@ -149,17 +149,17 @@
 					</control>
 					
 					<control type="button" id="244">
-                        <!--Go Fullscreen-->
-                        <label>$LOCALIZE[244]</label>
-                        <width>285</width>
-                        <height>60</height>
-                        <align>center</align>
-                        <textoffsetx>0</textoffsetx>
-                        <visible>Player.HasVideo</visible>
-                        <onclick>Close</onclick>
-                        <onclick>ClearProperty(TrailerPlaying,home)</onclick>
-                        <onclick>FullScreen</onclick>
-                    </control>
+						<!--Go Fullscreen-->
+						<label>$LOCALIZE[244]</label>
+						<width>285</width>
+						<height>60</height>
+						<align>center</align>
+						<textoffsetx>0</textoffsetx>
+						<visible>Player.HasVideo</visible>
+						<onclick>Close</onclick>
+						<onclick>ClearProperty(TrailerPlaying,home)</onclick>
+						<onclick>FullScreen</onclick>
+					</control>
 					
 					<!-- Trailer on Youtube-->
 					<control type="button" id="2356">
@@ -168,8 +168,8 @@
 						<align>center</align>
 						<textoffsetx>0</textoffsetx>
 						<label>$LOCALIZE[20410]</label>
-                        <onclick>SetFocus(1150,0)</onclick>
-                        <onclick>SetProperty(TrailerPlaying,Playing,home)</onclick>
+						<onclick>SetFocus(1150,0)</onclick>
+						<onclick>SetProperty(TrailerPlaying,Playing,home)</onclick>
 						<visible>Integer.IsGreater(Container(1150).NumItems,0)</visible>
 					</control>
 					<control type="button" id="102">
@@ -194,43 +194,43 @@
 						<visible>String.IsEqual(ListItem.DBType,movie)</visible>
 						<onclick>ActivateWindow(managevideoextras)</onclick>
 					</control>
-                    <control type="button" id="101">
-                        <!--Get Thumb Artwork Beef -->
-                        <label>$LOCALIZE[13511]</label>
-                        <width>285</width>
-                        <height>60</height>
-                        <align>center</align>
-                        <textoffsetx>0</textoffsetx>
-                        <enable>!Skin.HasSetting(KioskMode.Enabled)</enable>
+					<control type="button" id="101">
+						<!--Get Thumb Artwork Beef -->
+						<label>$LOCALIZE[13511]</label>
+						<width>285</width>
+						<height>60</height>
+						<align>center</align>
+						<textoffsetx>0</textoffsetx>
+						<enable>!Skin.HasSetting(KioskMode.Enabled)</enable>
 						<onclick condition="System.HasAddon(script.artwork.beef)">ActivateWindow(3004)</onclick>
-                        <onclick condition="!System.HasAddon(script.artwork.beef)">RunPlugin(plugin://script.artwork.beef)</onclick>
-                    </control>
-                    
-                    <control type="radiobutton" id="3052">
-                        <!--Hide panel behind moviedetails-->
-                        <label>$LOCALIZE[31155]</label>
-                        <width>450</width>
-                        <textoffsetx>20</textoffsetx>
-                        <align>left</align>
-                        <onclick>Skin.ToggleSetting(ExtendedInfoHidePanel)</onclick>
-                        <selected>Skin.HasSetting(ExtendedInfoHidePanel)</selected>
-                    </control>
+						<onclick condition="!System.HasAddon(script.artwork.beef)">RunPlugin(plugin://script.artwork.beef)</onclick>
+					</control>
+					
+					<control type="radiobutton" id="3052">
+						<!--Hide panel behind moviedetails-->
+						<label>$LOCALIZE[31155]</label>
+						<width>450</width>
+						<textoffsetx>20</textoffsetx>
+						<align>left</align>
+						<onclick>Skin.ToggleSetting(ExtendedInfoHidePanel)</onclick>
+						<selected>Skin.HasSetting(ExtendedInfoHidePanel)</selected>
+					</control>
 				</control>
-     
+	 
 			<control type="group">
-                <control type="grouplist" id="4000">
-                    <orientation>vertical</orientation>
-                    <scrolltime tween="sine">400</scrolltime>
-                    <left>60</left>
-                    <top>180</top>
-                    <itemgap>0</itemgap>
-                    <ondown condition="!Skin.HasSetting(EnableTouchSupport)">9000</ondown>
-                    <onup condition="!Skin.HasSetting(EnableTouchSupport)">4000</onup>
+				<control type="grouplist" id="4000">
+					<orientation>vertical</orientation>
+					<scrolltime tween="sine">400</scrolltime>
+					<left>60</left>
+					<top>180</top>
+					<itemgap>0</itemgap>
+					<ondown condition="!Skin.HasSetting(EnableTouchSupport)">9000</ondown>
+					<onup condition="!Skin.HasSetting(EnableTouchSupport)">4000</onup>
 					<onleft>9000</onleft>
-                    <width>2100</width>
-                    <height>800</height>
+					<width>2100</width>
+					<height>800</height>
 					<pagecontrol>999</pagecontrol>
-                    <!-- rating stuff -->
+					<!-- rating stuff -->
 					<control type="group">
 						<height>130</height>
 						<animation effect="fade" time="250">VisibleChange</animation>
@@ -432,13 +432,13 @@
 					</control>
 				
 					<!-- normal info -->
-                    <control type="group" id="140">
+					<control type="group" id="140">
 						<visible>!String.IsEmpty(Window.Property(Plot))</visible>
 						<height>300</height>
 						<control type="radiobutton" id="132">
 						<visible>false</visible>
-                        </control>
-                        <control type="label">
+						</control>
+						<control type="label">
 							<left>0</left>
 							<top>-35</top>
 							<width>1370</width>
@@ -446,7 +446,7 @@
 							<label>$INFO[Window.Property(movie.File),[B]$LOCALIZE[21800]: [/B]]</label>
 							<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
 							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-                            <visible>!String.IsEmpty(Window.Property(movie.File)) + !Skin.HasSetting(DialogVideoInfo_HideFileName)</visible>
+							<visible>!String.IsEmpty(Window.Property(movie.File)) + !Skin.HasSetting(DialogVideoInfo_HideFileName)</visible>
 							<align>left</align>
 							<font>Reg20</font>
 						</control>
@@ -461,7 +461,7 @@
 							<align>justify</align>
 							<font>Reg26</font>
 						</control>
-                        <control type="image">
+						<control type="image">
 							<!--cdart image-->
 							<left></left>
 							<right>430</right>
@@ -484,61 +484,61 @@
 							<aspectratio align="right" aligny="top" scalediffuse="true">keep</aspectratio>
 							<texture background="true" diffuse="diffuse/poster.png" fallback="DefaultVideo.png" border="5">$INFO[Window.Property(Poster)]</texture>
 						</control>
-                    </control>
-                    				
+					</control>
+									
 					<!-- cast panel -->
-                    <control type="group" id="50111">
-                        <visible>Integer.IsGreater(Container(1000).NumItems,0)</visible>
-                        <height>350</height>
-                        <control type="label">
-                            <left>5</left>
-                            <top>0</top>
-                            <width>1540</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
-                            <font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+					<control type="group" id="50111">
+						<visible>Integer.IsGreater(Container(1000).NumItems,0)</visible>
+						<height>350</height>
+						<control type="label">
+							<left>5</left>
+							<top>0</top>
+							<width>1540</width>
+							<height>25</height>
+							<aligny>center</aligny>
+							<font>Bold32</font>
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
 							<shadowcolor>$INFO[Skin.String(ViewDetailsHighlightTextShadowColor)]</shadowcolor>
-                            <label>$LOCALIZE[206]$INFO[Container(1000).NumItems, (,)]</label>
-                        </control>
-						<control type="image">
-                            <left>1810</left>
-                            <top>95</top>
-                            <width>35</width>
-                            <height>150</height>
-                            <texture>info/arrowright.png</texture>
-                            <visible>Container(1000).HasNext</visible>
-                        </control>
-                        <control type="panel" id="1000">
-                            <left>0</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>280</height>
-                            <onleft>9000</onleft>
-                            <onright>1000</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">5000</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">750</ondown>
-                            <scrolltime>200</scrolltime>
-                            <orientation>horizontal</orientation>
-                            <itemlayout height="270" width="201">
-                                <control type="group">
-									<width>186</width>
-									<height>262</height>
-                                    <include>PosterPanelLayout</include>
-                                  </control>
-                            </itemlayout>
-                            <focusedlayout height="260" width="201">
-                               <control type="group">
-									<width>186</width>
-									<height>262</height>
-                                    <include>PosterPanelLayoutFocus</include>
-                                </control>
-                            </focusedlayout>
+							<label>$LOCALIZE[206]$INFO[Container(1000).NumItems, (,)]</label>
 						</control>
-                    </control>
-             					
+						<control type="image">
+							<left>1810</left>
+							<top>95</top>
+							<width>35</width>
+							<height>150</height>
+							<texture>info/arrowright.png</texture>
+							<visible>Container(1000).HasNext</visible>
+						</control>
+						<control type="panel" id="1000">
+							<left>0</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>280</height>
+							<onleft>9000</onleft>
+							<onright>1000</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">5000</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">750</ondown>
+							<scrolltime>200</scrolltime>
+							<orientation>horizontal</orientation>
+							<itemlayout height="270" width="201">
+								<control type="group">
+									<width>186</width>
+									<height>262</height>
+									<include>PosterPanelLayout</include>
+								  </control>
+							</itemlayout>
+							<focusedlayout height="260" width="201">
+							   <control type="group">
+									<width>186</width>
+									<height>262</height>
+									<include>PosterPanelLayoutFocus</include>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+								
 					<!-- arrow down -->
-                    <control type="group">
+					<control type="group">
 						<height>80</height>
 						<visible>[Control.HasFocus(1000) | !ControlGroup(4000).HasFocus]</visible>
 						<control type="image">
@@ -553,577 +553,577 @@
 					
 					<!-- crew panel -->
 					<control type="group" id="54111">
-                        <visible>Integer.IsGreater(Container(750).NumItems,0)</visible>
-                        <height>350</height>
-                        <control type="label">
-                            <left>5</left>
-                            <top>0</top>
-                            <width>1540</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
-                          <font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+						<visible>Integer.IsGreater(Container(750).NumItems,0)</visible>
+						<height>350</height>
+						<control type="label">
+							<left>5</left>
+							<top>0</top>
+							<width>1540</width>
+							<height>25</height>
+							<aligny>center</aligny>
+						  <font>Bold32</font>
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
 							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-                            <label>$ADDON[script.extendedinfo 32115]$INFO[Container(750).NumItems, (,)]</label>
-                        </control>
-						<control type="image">
-                            <left>1810</left>
-                            <top>95</top>
-                            <width>35</width>
-                            <height>150</height>
-                            <texture>info/arrowright.png</texture>
-                            <visible>Container(750).HasNext</visible>
-                        </control>
-                        <control type="panel" id="750">
-                            <left>0</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>280</height>
-                            <onleft>9000</onleft>
-                            <onright>750</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">1000</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">150</ondown>
-                            <scrolltime>200</scrolltime>
-                            <orientation>horizontal</orientation>
-                            <itemlayout height="270" width="201">
-                                <control type="group">
-									<width>186</width>
-									<height>262</height>
-                                    <include>PosterPanelLayout</include>
-                                  </control>
-                            </itemlayout>
-                            <focusedlayout height="260" width="201">
-                               <control type="group">
-									<width>186</width>
-									<height>262</height>
-                                    <include>PosterPanelLayoutFocus</include>
-                                </control>
-                            </focusedlayout>
+							<label>$ADDON[script.extendedinfo 32115]$INFO[Container(750).NumItems, (,)]</label>
 						</control>
-                    </control>
-                    				
+						<control type="image">
+							<left>1810</left>
+							<top>95</top>
+							<width>35</width>
+							<height>150</height>
+							<texture>info/arrowright.png</texture>
+							<visible>Container(750).HasNext</visible>
+						</control>
+						<control type="panel" id="750">
+							<left>0</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>280</height>
+							<onleft>9000</onleft>
+							<onright>750</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">1000</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">150</ondown>
+							<scrolltime>200</scrolltime>
+							<orientation>horizontal</orientation>
+							<itemlayout height="270" width="201">
+								<control type="group">
+									<width>186</width>
+									<height>262</height>
+									<include>PosterPanelLayout</include>
+								  </control>
+							</itemlayout>
+							<focusedlayout height="260" width="201">
+							   <control type="group">
+									<width>186</width>
+									<height>262</height>
+									<include>PosterPanelLayoutFocus</include>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+									
 					<!-- recommended by TMDB -->
 					<control type="group" id="50112">
-                        <visible>Integer.IsGreater(Container(150).NumItems,0)</visible>
-                        <height>350</height>
-                        <control type="label">
-                            <left>5</left>
-                            <top>0</top>
-                            <width>1540</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
-                          <font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                            <!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>     -->
+						<visible>Integer.IsGreater(Container(150).NumItems,0)</visible>
+						<height>350</height>
+						<control type="label">
+							<left>5</left>
+							<top>0</top>
+							<width>1540</width>
+							<height>25</height>
+							<aligny>center</aligny>
+						  <font>Bold32</font>
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+							<!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>     -->
 							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-                            <label>$ADDON[script.extendedinfo 32116]$INFO[Container(150).NumItems, (,)]</label>
-                        </control>
-                        <control type="image">
-                            <left>1810</left>
-                            <top>95</top>
-                            <width>35</width>
-                            <height>150</height>
-                            <texture>info/arrowright.png</texture>
-                            <visible>Container(150).HasNext</visible>
-                        </control>
-                        <control type="panel" id="150">
-                            <left>0</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>280</height>
-                            <onleft>9000</onleft>
-                            <onright>150</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">750</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">250</ondown>
-                            <scrolltime>200</scrolltime>
-                            <orientation>horizontal</orientation>
+							<label>$ADDON[script.extendedinfo 32116]$INFO[Container(150).NumItems, (,)]</label>
+						</control>
+						<control type="image">
+							<left>1810</left>
+							<top>95</top>
+							<width>35</width>
+							<height>150</height>
+							<texture>info/arrowright.png</texture>
+							<visible>Container(150).HasNext</visible>
+						</control>
+						<control type="panel" id="150">
+							<left>0</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>280</height>
+							<onleft>9000</onleft>
+							<onright>150</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">750</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">250</ondown>
+							<scrolltime>200</scrolltime>
+							<orientation>horizontal</orientation>
 							<itemlayout height="270" width="201">
-                                <control type="group">
+								<control type="group">
 									<width>186</width>
 									<height>262</height>
-                                    <include>PosterPanelLayout</include>
-                                  </control>
-                            </itemlayout>
-                            <focusedlayout height="260" width="201">
-                               <control type="group">
+									<include>PosterPanelLayout</include>
+								  </control>
+							</itemlayout>
+							<focusedlayout height="260" width="201">
+							   <control type="group">
 									<width>186</width>
 									<height>262</height>
-                                    <include>PosterPanelLayoutFocus</include>
-                                </control>
-                            </focusedlayout>
+									<include>PosterPanelLayoutFocus</include>
+								</control>
+							</focusedlayout>
 						
 						</control>
-                    </control>
-             					<!-- movie sets or seasons-->
+					</control>
+								<!-- movie sets or seasons-->
 					<control type="group" id="50113">
-                        <height>350</height>
-                        <visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
-                        <control type="label">
-                            <left>5</left>
-                            <top>0</top>
-                            <width>1540</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
-                          <font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                            <!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
+						<height>350</height>
+						<visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
+						<control type="label">
+							<left>5</left>
+							<top>0</top>
+							<width>1540</width>
+							<height>25</height>
+							<aligny>center</aligny>
+						  <font>Bold32</font>
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+							<!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
 							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-                            <label>$INFO[Window.Property(set.label)]$INFO[Container(250).NumItems, (,)]</label>
+							<label>$INFO[Window.Property(set.label)]$INFO[Container(250).NumItems, (,)]</label>
 							<visible>!Integer.IsGreater(Container(250).NumItems,0)</visible>
-                        </control>
-						 <control type="label">
-                            <left>5</left>
-                            <top>0</top>
-                            <width>1540</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
-                          <font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                           <!--  <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>   -->
-							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-                            <label>$LOCALIZE[33054] $INFO[Container(250).NumItems, (,)]</label>
-							<visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
-                        </control>
-                        <control type="image">
-                            <left>1810</left>
-                            <top>95</top>
-                            <width>35</width>
-                            <height>150</height>
-                            <texture>info/arrowright.png</texture>
-                            <visible>Container(250).HasNext</visible>
-                        </control>
-                        <control type="panel" id="250">
-                            <left>0</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>280</height>
-                            <onleft>9000</onleft>
-                            <onright>250</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">150</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">1150</ondown>
-                            <scrolltime>200</scrolltime>
-                            <orientation>horizontal</orientation>
-							<itemlayout height="270" width="201">
-                                <control type="group">
-									<width>186</width>
-									<height>262</height>
-                                    <include>PosterPanelLayout</include>
-                                  </control>
-                            </itemlayout>
-                            <focusedlayout height="260" width="201">
-                               <control type="group">
-									<width>186</width>
-									<height>262</height>
-                                    <include>PosterPanelLayoutFocus</include>
-                                </control>
-                            </focusedlayout>
 						</control>
-                    </control>
-             		<!-- official movies -->
-					<control type="group">
-                        <visible>Integer.IsGreater(Container(1150).NumItems,0)</visible>
-                        <height>270</height>
-                        <control type="label">
-                            <left>5</left>
-                            <top>0</top>
-                            <width>1540</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
-                          <font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                            <!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>   -->
+						 <control type="label">
+							<left>5</left>
+							<top>0</top>
+							<width>1540</width>
+							<height>25</height>
+							<aligny>center</aligny>
+						  <font>Bold32</font>
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+						   <!--  <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>   -->
 							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-                            <label>$ADDON[script.extendedinfo 32117]</label>
-                        </control>
-                         <control type="image">
-                            <left>1810</left>
-                            <top>60</top>
-                            <width>35</width>
-                            <height>150</height>
-                            <texture>info/arrowright.png</texture>
-                            <visible>Container(1150).HasNext</visible>
-                        </control>
-                        <control type="panel" id="1150">
-                            <left>0</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>210</height>
-                            <onleft>9000</onleft>
-                            <onright>1150</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">250</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">350</ondown>
-                            <pagecontrol>60</pagecontrol>
-                            <scrolltime>300</scrolltime>
-                            <focusposition>0</focusposition>
-                            <orientation>horizontal</orientation>
-                            <preloaditems>2</preloaditems>
+							<label>$LOCALIZE[33054] $INFO[Container(250).NumItems, (,)]</label>
+							<visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
+						</control>
+						<control type="image">
+							<left>1810</left>
+							<top>95</top>
+							<width>35</width>
+							<height>150</height>
+							<texture>info/arrowright.png</texture>
+							<visible>Container(250).HasNext</visible>
+						</control>
+						<control type="panel" id="250">
+							<left>0</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>280</height>
+							<onleft>9000</onleft>
+							<onright>250</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">150</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">1150</ondown>
+							<scrolltime>200</scrolltime>
+							<orientation>horizontal</orientation>
+							<itemlayout height="270" width="201">
+								<control type="group">
+									<width>186</width>
+									<height>262</height>
+									<include>PosterPanelLayout</include>
+								  </control>
+							</itemlayout>
+							<focusedlayout height="260" width="201">
+							   <control type="group">
+									<width>186</width>
+									<height>262</height>
+									<include>PosterPanelLayoutFocus</include>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+					<!-- official movies -->
+					<control type="group">
+						<visible>Integer.IsGreater(Container(1150).NumItems,0)</visible>
+						<height>270</height>
+						<control type="label">
+							<left>5</left>
+							<top>0</top>
+							<width>1540</width>
+							<height>25</height>
+							<aligny>center</aligny>
+						  <font>Bold32</font>
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+							<!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>   -->
+							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+							<label>$ADDON[script.extendedinfo 32117]</label>
+						</control>
+						 <control type="image">
+							<left>1810</left>
+							<top>60</top>
+							<width>35</width>
+							<height>150</height>
+							<texture>info/arrowright.png</texture>
+							<visible>Container(1150).HasNext</visible>
+						</control>
+						<control type="panel" id="1150">
+							<left>0</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>210</height>
+							<onleft>9000</onleft>
+							<onright>1150</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">250</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">350</ondown>
+							<pagecontrol>60</pagecontrol>
+							<scrolltime>300</scrolltime>
+							<focusposition>0</focusposition>
+							<orientation>horizontal</orientation>
+							<preloaditems>2</preloaditems>
 							<itemlayout width="360" height="200">
 								<control type="group">
-                                    <width>345</width>
-                                    <height>200</height>
-                                    <include>ThumbsViewLayout</include>
-                                </control>
+									<width>345</width>
+									<height>200</height>
+									<include>ThumbsViewLayout</include>
+								</control>
 							</itemlayout>
 							<focusedlayout width="360" height="200">
 								<control type="group">
-                                    <width>345</width>
-                                    <height>200</height>
-                                    <include>ThumbsViewLayoutFocus</include>
-                                </control>
+									<width>345</width>
+									<height>200</height>
+									<include>ThumbsViewLayoutFocus</include>
+								</control>
 							</focusedlayout>
 						</control>
-                    </control>
-             		<!-- youtube movies -->
+					</control>
+					<!-- youtube movies -->
 					<control type="group">
-                        <visible>Integer.IsGreater(Container(350).NumItems,0)</visible>
-                        <height>270</height>
-                        <control type="label">
-                            <left>5</left>
-                            <top>0</top>
-                            <width>1540</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
-                          <font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                           <!--  <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>   -->
+						<visible>Integer.IsGreater(Container(350).NumItems,0)</visible>
+						<height>270</height>
+						<control type="label">
+							<left>5</left>
+							<top>0</top>
+							<width>1540</width>
+							<height>25</height>
+							<aligny>center</aligny>
+						  <font>Bold32</font>
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+						   <!--  <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>   -->
 
 							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-                            <label>$ADDON[script.extendedinfo 32118]</label>
-                        </control>
-                        <control type="image">
-                            <left>1810</left>
-                            <top>60</top>
-                            <width>35</width>
-                            <height>150</height>
-                            <texture>info/arrowright.png</texture>
-                            <visible>Container(350).HasNext</visible>
-                        </control>
-                        <control type="panel" id="350">
-                            <left>0</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>210</height>
+							<label>$ADDON[script.extendedinfo 32118]</label>
+						</control>
+						<control type="image">
+							<left>1810</left>
+							<top>60</top>
+							<width>35</width>
+							<height>150</height>
+							<texture>info/arrowright.png</texture>
+							<visible>Container(350).HasNext</visible>
+						</control>
+						<control type="panel" id="350">
+							<left>0</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>210</height>
 							<onleft>9000</onleft>
-                            <onright>350</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">1150</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">550</ondown>
-                            <pagecontrol>60</pagecontrol>
-                            <scrolltime>300</scrolltime>
-                            <focusposition>0</focusposition>
-                            <orientation>horizontal</orientation>
-                            <preloaditems>2</preloaditems>
-                            <itemlayout width="360" height="200">
+							<onright>350</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">1150</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">550</ondown>
+							<pagecontrol>60</pagecontrol>
+							<scrolltime>300</scrolltime>
+							<focusposition>0</focusposition>
+							<orientation>horizontal</orientation>
+							<preloaditems>2</preloaditems>
+							<itemlayout width="360" height="200">
 								<control type="group">
-                                    <width>345</width>
-                                    <height>200</height>
-                                    <include>ThumbsViewLayout</include>
-                                </control>
+									<width>345</width>
+									<height>200</height>
+									<include>ThumbsViewLayout</include>
+								</control>
 							</itemlayout>
 							<focusedlayout width="360" height="200">
 								<control type="group">
-                                    <width>345</width>
-                                    <height>200</height>
-                                    <include>ThumbsViewLayoutFocus</include>
-                                </control>
+									<width>345</width>
+									<height>200</height>
+									<include>ThumbsViewLayoutFocus</include>
+								</control>
 							</focusedlayout>
 						</control>
-                    </control>
-             					<!-- studios -->
+					</control>
+								<!-- studios -->
 					<control type="group">
-                        <visible>Integer.IsGreater(Container(550).NumItems,0)</visible>
-                        <height>290</height>
-                        <control type="label">
-                            <left>5</left>
-                            <top>0</top>
-                            <width>1540</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
-                          <font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                            <!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
-							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-                            <label>$LOCALIZE[20388]</label>
-                        </control>
-                       <control type="image">
-                            <left>1810</left>
-                            <top>60</top>
-                            <width>35</width>
-                            <height>150</height>
-                            <texture>info/arrowright.png</texture>
-                            <visible>Container(550).HasNext</visible>
-                        </control>
-                        <control type="panel" id="550">
-                            <left>0</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>210</height>
-                            <onleft>9000</onleft>
-                            <onright>550</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">350</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">1450</ondown>
-                            <pagecontrol>60</pagecontrol>
-                            <scrolltime>300</scrolltime>
-                            <focusposition>0</focusposition>
-                            <orientation>horizontal</orientation>
-                            <preloaditems>2</preloaditems>
-                            <itemlayout height="200" width="360">
-                                <control type="group">
-                                    <left>5</left>
-                                    <control type="image">
-                                        <top>0</top>
-                                        <width>340</width>
-                                        <height>200</height>
-                                        <texture border="5" colordiffuse="black">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>5</top>
-										<left>5</left>
-                                        <width>330</width>
-                                        <height>190</height>
-                                        <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>28</top>
-                                        <left>0</left>
-                                        <width>352</width>
-                                        <height>100</height>
-                                        <texture fallback="special://skin/extras/flags/studios/default-studio.png">$INFO[ListItem.Label,special://skin/extras/flags/studios/,.png]</texture>
-                                        <aspectratio aligny="center" align="center">keep</aspectratio>
-                                    </control>
-                                   <control type="textbox">
-										<top></top>
-										<bottom>2</bottom>
-										<left>10</left>
-										<width>322</width>
-										<height>60</height>
-										<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
-										<font>Reg20</font>
-										<label>$INFO[ListItem.Label]</label>
-									</control>
-                                </control>
-                            </itemlayout>
-                            <focusedlayout height="200" width="360">
-                                <control type="group">
-                                    <left>5</left>
-                                    <control type="image">
-                                        <top>0</top>
-                                        <width>340</width>
-                                        <height>200</height>
-                                        <texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>5</top>
-										<left>5</left>
-                                        <width>330</width>
-                                        <height>190</height>
-                                        <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>28</top>
-                                        <left>0</left>
-                                        <width>352</width>
-                                        <height>100</height>
-                                        <texture fallback="special://skin/extras/flags/studios/default-studio.png">$INFO[ListItem.Label,special://skin/extras/flags/studios/,.png]</texture>
-                                        <aspectratio aligny="center" align="center">keep</aspectratio>
-                                    </control>
-                                   <control type="textbox">
-										<top></top>
-										<bottom>2</bottom>
-										<left>10</left>
-										<width>322</width>
-										<height>60</height>
-										<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
-										<font>Reg20</font>
-										<label>$INFO[ListItem.Label]</label>
-									</control>
-                                </control>
-                            </focusedlayout>
-                 		</control>
-                    </control>
-             		<!-- networks -->
-					<control type="group">
-                        <visible>Integer.IsGreater(Container(1450).NumItems,0)</visible>
-                        <height>290</height>
-                        <control type="label">
-                            <left>5</left>
-                            <top>0</top>
-                            <width>1540</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
-                          <font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                            <!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
-							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-                            <label>$ADDON[script.extendedinfo 32152]</label>
-                        </control>
-                        <control type="image">
-                            <left>1810</left>
-                            <top>60</top>
-                            <width>35</width>
-                            <height>150</height>
-                            <texture>info/arrowright.png</texture>
-                            <visible>Container(1450).HasNext</visible>
-                        </control>
-                        <control type="panel" id="1450">
-                            <left>0</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>210</height>
-                            <onleft>9000</onleft>
-                            <onright>1450</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">550</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">650</ondown>
-                            <pagecontrol>60</pagecontrol>
-                            <scrolltime>300</scrolltime>
-                            <focusposition>0</focusposition>
-                            <orientation>horizontal</orientation>
-                            <preloaditems>2</preloaditems>
-                             <itemlayout height="200" width="360">
-                                <control type="group">
-                                    <left>5</left>
-                                    <control type="image">
-                                        <top>0</top>
-                                        <width>340</width>
-                                        <height>200</height>
-                                        <texture border="5" colordiffuse="black">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>5</top>
-										<left>5</left>
-                                        <width>330</width>
-                                        <height>190</height>
-                                        <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>28</top>
-                                        <left>0</left>
-                                        <width>352</width>
-                                        <height>100</height>
-                                        <texture fallback="special://skin/extras/flags/studios/default-studio.png">$INFO[ListItem.Label,special://skin/extras/flags/studios/,.png]</texture>
-                                        <aspectratio aligny="center" align="center">keep</aspectratio>
-                                    </control>
-                                   <control type="textbox">
-										<top></top>
-										<bottom>2</bottom>
-										<left>10</left>
-										<width>322</width>
-										<height>60</height>
-										<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
-										<font>Reg20</font>
-										<label>$INFO[ListItem.Label]</label>
-									</control>
-                                </control>
-                            </itemlayout>
-                            <focusedlayout height="200" width="360">
-                                <control type="group">
-                                    <left>5</left>
-                                    <control type="image">
-                                        <top>0</top>
-                                        <width>340</width>
-                                        <height>200</height>
-                                        <texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>5</top>
-										<left>5</left>
-                                        <width>330</width>
-                                        <height>190</height>
-                                        <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>28</top>
-                                        <left>0</left>
-                                        <width>352</width>
-                                        <height>100</height>
-                                        <texture fallback="special://skin/extras/flags/studios/default-studio.png">$INFO[ListItem.Label,special://skin/extras/flags/studios/,.png]</texture>
-                                        <aspectratio aligny="center" align="center">keep</aspectratio>
-                                    </control>
-                                   <control type="textbox">
-										<top></top>
-										<bottom>2</bottom>
-										<left>10</left>
-										<width>322</width>
-										<height>60</height>
-										<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
-										<font>Reg20</font>
-										<label>$INFO[ListItem.Label]</label>
-									</control>
-                                </control>
-                            </focusedlayout>
-                        </control>
-                    </control>
-             		<!-- releases -->
-					<control type="group">
-                        <visible>Integer.IsGreater(Container(650).NumItems,0)</visible>
-                        <height>400</height>
+						<visible>Integer.IsGreater(Container(550).NumItems,0)</visible>
+						<height>290</height>
 						<control type="label">
-                            <left>5</left>
-                            <top>0</top>
-                            <width>1540</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
-                          <font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                            <!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
+							<left>5</left>
+							<top>0</top>
+							<width>1540</width>
+							<height>25</height>
+							<aligny>center</aligny>
+						  <font>Bold32</font>
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+							<!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
 							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-                            <label>$ADDON[script.extendedinfo 32168]</label>
-                        </control>
-                        <control type="image">
-                            <left>1810</left>
-                            <top>60</top>
-                            <width>35</width>
-                            <height>150</height>
-                            <texture>info/arrowright.png</texture>
-                            <visible>Container(650).HasNext</visible>
-                        </control>
-                        <control type="textbox">
-                            <left>5</left>
-                            <top>250</top>
-                            <width>1795</width>
-                            <height>120</height>
-                            <font>Reg20</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
-                            <label>$INFO[Container(650).ListItem.Property(meaning)]</label>
-                        </control>
-                        <control type="panel" id="650">
-                            <left>0</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>210</height>
-                            <onleft>9000</onleft>
-                            <onright>650</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">1450</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">850</ondown>
-                            <pagecontrol>60</pagecontrol>
-                            <scrolltime>300</scrolltime>
-                            <focusposition>0</focusposition>
-                            <orientation>horizontal</orientation>
-                            <preloaditems>2</preloaditems>
+							<label>$LOCALIZE[20388]</label>
+						</control>
+					   <control type="image">
+							<left>1810</left>
+							<top>60</top>
+							<width>35</width>
+							<height>150</height>
+							<texture>info/arrowright.png</texture>
+							<visible>Container(550).HasNext</visible>
+						</control>
+						<control type="panel" id="550">
+							<left>0</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>210</height>
+							<onleft>9000</onleft>
+							<onright>550</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">350</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">1450</ondown>
+							<pagecontrol>60</pagecontrol>
+							<scrolltime>300</scrolltime>
+							<focusposition>0</focusposition>
+							<orientation>horizontal</orientation>
+							<preloaditems>2</preloaditems>
 							<itemlayout height="200" width="360">
-                                <control type="group">
-                                    <left>5</left>
-                                    <control type="image">
-                                        <top>0</top>
-                                        <width>340</width>
-                                        <height>200</height>
-                                        <texture border="5" colordiffuse="black">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>5</top>
+								<control type="group">
+									<left>5</left>
+									<control type="image">
+										<top>0</top>
+										<width>340</width>
+										<height>200</height>
+										<texture border="5" colordiffuse="black">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>5</top>
 										<left>5</left>
-                                        <width>330</width>
-                                        <height>190</height>
-                                        <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>28</top>
-                                        <left>0</left>
-                                        <width>352</width>
-                                        <height>100</height>
-                                        <texture background="true">$INFO[ListItem.Property(iso_3166_1),$VAR[LanguageFlagIconPath],.png]</texture>
-                                        <aspectratio aligny="center" align="center">keep</aspectratio>
-                                    </control>
-                                   <control type="textbox">
+										<width>330</width>
+										<height>190</height>
+										<texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>28</top>
+										<left>0</left>
+										<width>352</width>
+										<height>100</height>
+										<texture fallback="special://skin/extras/flags/studios/default-studio.png">$INFO[ListItem.Label,special://skin/extras/flags/studios/,.png]</texture>
+										<aspectratio aligny="center" align="center">keep</aspectratio>
+									</control>
+								   <control type="textbox">
+										<top></top>
+										<bottom>2</bottom>
+										<left>10</left>
+										<width>322</width>
+										<height>60</height>
+										<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+										<font>Reg20</font>
+										<label>$INFO[ListItem.Label]</label>
+									</control>
+								</control>
+							</itemlayout>
+							<focusedlayout height="200" width="360">
+								<control type="group">
+									<left>5</left>
+									<control type="image">
+										<top>0</top>
+										<width>340</width>
+										<height>200</height>
+										<texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>5</top>
+										<left>5</left>
+										<width>330</width>
+										<height>190</height>
+										<texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>28</top>
+										<left>0</left>
+										<width>352</width>
+										<height>100</height>
+										<texture fallback="special://skin/extras/flags/studios/default-studio.png">$INFO[ListItem.Label,special://skin/extras/flags/studios/,.png]</texture>
+										<aspectratio aligny="center" align="center">keep</aspectratio>
+									</control>
+								   <control type="textbox">
+										<top></top>
+										<bottom>2</bottom>
+										<left>10</left>
+										<width>322</width>
+										<height>60</height>
+										<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+										<font>Reg20</font>
+										<label>$INFO[ListItem.Label]</label>
+									</control>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+					<!-- networks -->
+					<control type="group">
+						<visible>Integer.IsGreater(Container(1450).NumItems,0)</visible>
+						<height>290</height>
+						<control type="label">
+							<left>5</left>
+							<top>0</top>
+							<width>1540</width>
+							<height>25</height>
+							<aligny>center</aligny>
+						  <font>Bold32</font>
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+							<!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
+							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+							<label>$ADDON[script.extendedinfo 32152]</label>
+						</control>
+						<control type="image">
+							<left>1810</left>
+							<top>60</top>
+							<width>35</width>
+							<height>150</height>
+							<texture>info/arrowright.png</texture>
+							<visible>Container(1450).HasNext</visible>
+						</control>
+						<control type="panel" id="1450">
+							<left>0</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>210</height>
+							<onleft>9000</onleft>
+							<onright>1450</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">550</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">650</ondown>
+							<pagecontrol>60</pagecontrol>
+							<scrolltime>300</scrolltime>
+							<focusposition>0</focusposition>
+							<orientation>horizontal</orientation>
+							<preloaditems>2</preloaditems>
+							 <itemlayout height="200" width="360">
+								<control type="group">
+									<left>5</left>
+									<control type="image">
+										<top>0</top>
+										<width>340</width>
+										<height>200</height>
+										<texture border="5" colordiffuse="black">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>5</top>
+										<left>5</left>
+										<width>330</width>
+										<height>190</height>
+										<texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>28</top>
+										<left>0</left>
+										<width>352</width>
+										<height>100</height>
+										<texture fallback="special://skin/extras/flags/studios/default-studio.png">$INFO[ListItem.Label,special://skin/extras/flags/studios/,.png]</texture>
+										<aspectratio aligny="center" align="center">keep</aspectratio>
+									</control>
+								   <control type="textbox">
+										<top></top>
+										<bottom>2</bottom>
+										<left>10</left>
+										<width>322</width>
+										<height>60</height>
+										<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+										<font>Reg20</font>
+										<label>$INFO[ListItem.Label]</label>
+									</control>
+								</control>
+							</itemlayout>
+							<focusedlayout height="200" width="360">
+								<control type="group">
+									<left>5</left>
+									<control type="image">
+										<top>0</top>
+										<width>340</width>
+										<height>200</height>
+										<texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>5</top>
+										<left>5</left>
+										<width>330</width>
+										<height>190</height>
+										<texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>28</top>
+										<left>0</left>
+										<width>352</width>
+										<height>100</height>
+										<texture fallback="special://skin/extras/flags/studios/default-studio.png">$INFO[ListItem.Label,special://skin/extras/flags/studios/,.png]</texture>
+										<aspectratio aligny="center" align="center">keep</aspectratio>
+									</control>
+								   <control type="textbox">
+										<top></top>
+										<bottom>2</bottom>
+										<left>10</left>
+										<width>322</width>
+										<height>60</height>
+										<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+										<font>Reg20</font>
+										<label>$INFO[ListItem.Label]</label>
+									</control>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+					<!-- releases -->
+					<control type="group">
+						<visible>Integer.IsGreater(Container(650).NumItems,0)</visible>
+						<height>400</height>
+						<control type="label">
+							<left>5</left>
+							<top>0</top>
+							<width>1540</width>
+							<height>25</height>
+							<aligny>center</aligny>
+						  <font>Bold32</font>
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+							<!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
+							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+							<label>$ADDON[script.extendedinfo 32168]</label>
+						</control>
+						<control type="image">
+							<left>1810</left>
+							<top>60</top>
+							<width>35</width>
+							<height>150</height>
+							<texture>info/arrowright.png</texture>
+							<visible>Container(650).HasNext</visible>
+						</control>
+						<control type="textbox">
+							<left>5</left>
+							<top>250</top>
+							<width>1795</width>
+							<height>120</height>
+							<font>Reg20</font>
+							<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+							<label>$INFO[Container(650).ListItem.Property(meaning)]</label>
+						</control>
+						<control type="panel" id="650">
+							<left>0</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>210</height>
+							<onleft>9000</onleft>
+							<onright>650</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">1450</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">850</ondown>
+							<pagecontrol>60</pagecontrol>
+							<scrolltime>300</scrolltime>
+							<focusposition>0</focusposition>
+							<orientation>horizontal</orientation>
+							<preloaditems>2</preloaditems>
+							<itemlayout height="200" width="360">
+								<control type="group">
+									<left>5</left>
+									<control type="image">
+										<top>0</top>
+										<width>340</width>
+										<height>200</height>
+										<texture border="5" colordiffuse="black">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>5</top>
+										<left>5</left>
+										<width>330</width>
+										<height>190</height>
+										<texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>28</top>
+										<left>0</left>
+										<width>352</width>
+										<height>100</height>
+										<texture background="true">$INFO[ListItem.Property(iso_3166_1),$VAR[LanguageFlagIconPath],.png]</texture>
+										<aspectratio aligny="center" align="center">keep</aspectratio>
+									</control>
+								   <control type="textbox">
 										<top></top>
 										<bottom>2</bottom>
 										<left>10</left>
@@ -1133,33 +1133,33 @@
 										<font>Reg20</font>
 										<label>$INFO[ListItem.Property(release_date)][CR]$INFO[ListItem.Property(certification)]</label>
 									</control>
-                                </control>
-                            </itemlayout>
-                            <focusedlayout height="200" width="360">
-                                <control type="group">
-                                    <left>5</left>
-                                    <control type="image">
-                                        <top>0</top>
-                                        <width>340</width>
-                                        <height>200</height>
-                                        <texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>5</top>
+								</control>
+							</itemlayout>
+							<focusedlayout height="200" width="360">
+								<control type="group">
+									<left>5</left>
+									<control type="image">
+										<top>0</top>
+										<width>340</width>
+										<height>200</height>
+										<texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>5</top>
 										<left>5</left>
-                                        <width>330</width>
-                                        <height>190</height>
-                                        <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>28</top>
-                                        <left>0</left>
-                                        <width>352</width>
-                                        <height>100</height>
-                                        <texture background="true">$INFO[ListItem.Property(iso_3166_1),$VAR[LanguageFlagIconPath],.png]</texture>
-                                        <aspectratio aligny="center" align="center">keep</aspectratio>
-                                    </control>
-                                   <control type="textbox">
+										<width>330</width>
+										<height>190</height>
+										<texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>28</top>
+										<left>0</left>
+										<width>352</width>
+										<height>100</height>
+										<texture background="true">$INFO[ListItem.Property(iso_3166_1),$VAR[LanguageFlagIconPath],.png]</texture>
+										<aspectratio aligny="center" align="center">keep</aspectratio>
+									</control>
+								   <control type="textbox">
 										<top></top>
 										<bottom>2</bottom>
 										<left>10</left>
@@ -1169,148 +1169,148 @@
 										<font>Reg20</font>
 										<label>$INFO[ListItem.Property(release_date)][CR]$INFO[ListItem.Property(certification)]</label>
 									</control>
-                                </control>
-                            </focusedlayout>
-                        </control>
-                    </control>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
 					
 					<!-- Genres -->
-                    <control type="group">
-                        <visible>Integer.IsGreater(Container(850).NumItems,0)</visible>
-                        <height>180</height>
-                        <control type="label">
-                           <left>5</left>
-                            <top>0</top>
-                            <width>1540</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
-                          <font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                           <!--  <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
-							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-                            <label>Genres</label>
-                        </control>
-                        <control type="panel" id="850">
-                            <left>0</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>100</height>
-                            <onleft>9000</onleft>
-                            <onright>850</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">650</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">1050</ondown>
-                            <pagecontrol>60</pagecontrol>
-                            <scrolltime>300</scrolltime>
-                            <focusposition>0</focusposition>
-                            <orientation>horizontal</orientation>
-                            <itemlayout height="100" width="360">
-                                <control type="group">
-                                    <left>5</left>
-                                    <control type="image">
-                                        <top>0</top>
-                                        <width>340</width>
-                                        <height>100</height>
-                                        <texture border="5" colordiffuse="black">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>5</top>
-										<left>5</left>
-                                        <width>330</width>
-                                        <height>90</height>
-                                        <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
-                                    </control>
-                                   <control type="label">
-										<left>10</left>
-										<width>322</width>
-										<height>90</height>
-										<align>center</align>
-										<aligny>center</aligny>
-										<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
-										<font>Reg28</font>
-										<label>$INFO[ListItem.Label]</label>
-									</control>
-                                </control>
-                            </itemlayout>
-                            <focusedlayout height="100" width="360">
-                                <control type="group">
-                                    <left>5</left>
-                                    <control type="image">
-                                        <top>0</top>
-                                        <width>340</width>
-                                        <height>100</height>
-                                        <texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>5</top>
-										<left>5</left>
-                                        <width>330</width>
-                                        <height>90</height>
-                                        <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
-                                    </control>
-                                   <control type="label">
-										<left>10</left>
-										<width>322</width>
-										<height>90</height>
-										<align>center</align>
-										<aligny>center</aligny>
-										<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
-										<font>Reg28</font>
-										<label>$INFO[ListItem.Label]</label>
-									</control>
-                                </control>
-                            </focusedlayout>
-                        </control>
-                    </control>
-             		<!-- reviews -->
 					<control type="group">
-                        <visible>Integer.IsGreater(Container(1050).NumItems,0)</visible>
-                        <height>365</height>
-                        <control type="label">
-                            <left>5</left>
-                            <top>130</top>
-                            <width>500</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
-                            <font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                            <label>$ADDON[script.extendedinfo 32167]</label>
-                        </control>
+						<visible>Integer.IsGreater(Container(850).NumItems,0)</visible>
+						<height>180</height>
+						<control type="label">
+						   <left>5</left>
+							<top>0</top>
+							<width>1540</width>
+							<height>25</height>
+							<aligny>center</aligny>
+						  <font>Bold32</font>
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+						   <!--  <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
+							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+							<label>Genres</label>
+						</control>
+						<control type="panel" id="850">
+							<left>0</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>100</height>
+							<onleft>9000</onleft>
+							<onright>850</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">650</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">1050</ondown>
+							<pagecontrol>60</pagecontrol>
+							<scrolltime>300</scrolltime>
+							<focusposition>0</focusposition>
+							<orientation>horizontal</orientation>
+							<itemlayout height="100" width="360">
+								<control type="group">
+									<left>5</left>
+									<control type="image">
+										<top>0</top>
+										<width>340</width>
+										<height>100</height>
+										<texture border="5" colordiffuse="black">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>5</top>
+										<left>5</left>
+										<width>330</width>
+										<height>90</height>
+										<texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
+									</control>
+								   <control type="label">
+										<left>10</left>
+										<width>322</width>
+										<height>90</height>
+										<align>center</align>
+										<aligny>center</aligny>
+										<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+										<font>Reg28</font>
+										<label>$INFO[ListItem.Label]</label>
+									</control>
+								</control>
+							</itemlayout>
+							<focusedlayout height="100" width="360">
+								<control type="group">
+									<left>5</left>
+									<control type="image">
+										<top>0</top>
+										<width>340</width>
+										<height>100</height>
+										<texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>5</top>
+										<left>5</left>
+										<width>330</width>
+										<height>90</height>
+										<texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
+									</control>
+								   <control type="label">
+										<left>10</left>
+										<width>322</width>
+										<height>90</height>
+										<align>center</align>
+										<aligny>center</aligny>
+										<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+										<font>Reg28</font>
+										<label>$INFO[ListItem.Label]</label>
+									</control>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+					<!-- reviews -->
+					<control type="group">
+						<visible>Integer.IsGreater(Container(1050).NumItems,0)</visible>
+						<height>365</height>
+						<control type="label">
+							<left>5</left>
+							<top>130</top>
+							<width>500</width>
+							<height>25</height>
+							<aligny>center</aligny>
+							<font>Bold32</font>
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+							<label>$ADDON[script.extendedinfo 32167]</label>
+						</control>
 						<control type="image">
-                            <left>1810</left>
-                            <top>130</top>
-                            <width>35</width>
-                            <height>100</height>
-                            <texture>info/arrowright.png</texture>
-                            <visible>Container(1050).HasNext</visible>
-                        </control>
-                        <control type="panel" id="1050">
-                            <left>5</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>300</height>
-                            <onleft>9000</onleft>
-                            <onright>1050</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">850</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">950</ondown>
-                            <pagecontrol>60</pagecontrol>
-                            <scrolltime>300</scrolltime>
-                            <focusposition>0</focusposition>
-                            <orientation>horizontal</orientation>
-                            <preloaditems>2</preloaditems>
+							<left>1810</left>
+							<top>130</top>
+							<width>35</width>
+							<height>100</height>
+							<texture>info/arrowright.png</texture>
+							<visible>Container(1050).HasNext</visible>
+						</control>
+						<control type="panel" id="1050">
+							<left>5</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>300</height>
+							<onleft>9000</onleft>
+							<onright>1050</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">850</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">950</ondown>
+							<pagecontrol>60</pagecontrol>
+							<scrolltime>300</scrolltime>
+							<focusposition>0</focusposition>
+							<orientation>horizontal</orientation>
+							<preloaditems>2</preloaditems>
 							<itemgap>50</itemgap>
 							
 							<itemlayout height="300" width="900">
-                                <control type="group">
-                                    <control type="image">
+								<control type="group">
+									<control type="image">
 										<width>880</width>
-                                        <texture border="5" colordiffuse="black">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
+										<texture border="5" colordiffuse="black">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
 										<width>880</width>
 										<bordersize>5</bordersize>
-                                        <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
-                                    </control>
-                                   <control type="textbox">
+										<texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
+									</control>
+								   <control type="textbox">
 										<top>20</top>
 										<left>20</left>
 										<width>820</width>
@@ -1320,20 +1320,20 @@
 										<font>Reg26</font>
 										<label>$INFO[ListItem.Property(Author),[B],[/B][CR]]$INFO[ListItem.Property(Content)]</label>
 									</control>
-                                </control>
-                            </itemlayout>
-                            <focusedlayout height="300" width="900">
-                                <control type="group">
-                                    <control type="image">
+								</control>
+							</itemlayout>
+							<focusedlayout height="300" width="900">
+								<control type="group">
+									<control type="image">
 										<width>880</width>
-                                        <texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
+										<texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
 										<width>880</width>
 										<bordersize>5</bordersize>
-                                        <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
-                                    </control>
-                                   <control type="textbox">
+										<texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
+									</control>
+								   <control type="textbox">
 										<top>20</top>
 										<left>20</left>
 										<width>820</width>
@@ -1343,63 +1343,63 @@
 										<font>Reg26</font>
 										<label>$INFO[ListItem.Property(Author),[B],[/B][CR]]$INFO[ListItem.Property(Content)]</label>
 									</control>
-                                </control>
-                            </focusedlayout>
+								</control>
+							</focusedlayout>
 						</control>
-                    </control>
-             		<!-- keywords -->
+					</control>
+					<!-- keywords -->
 					<control type="group">
-                        <visible>Integer.IsGreater(Container(950).NumItems,0)</visible>
-                        <height>310</height>
-                        <control type="label">
-                            <left>5</left>
-                            <top>0</top>
-                            <width>1540</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
-                          <font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                            <label>Keywords</label>
-                        </control>
+						<visible>Integer.IsGreater(Container(950).NumItems,0)</visible>
+						<height>310</height>
+						<control type="label">
+							<left>5</left>
+							<top>0</top>
+							<width>1540</width>
+							<height>25</height>
+							<aligny>center</aligny>
+						  <font>Bold32</font>
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+							<label>Keywords</label>
+						</control>
 						<control type="image">
-                            <left>1810</left>
-                            <top>60</top>
-                            <width>35</width>
-                            <height>150</height>
-                            <texture>info/arrowright.png</texture>
-                            <visible>Container(950).HasNext</visible>
-                        </control>
-                        <control type="panel" id="950">
-                            <left>0</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>220</height>
-                            <onleft>9000</onleft>
-                            <onright>950</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">1050</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">1250</ondown>
-                            <pagecontrol>60</pagecontrol>
-                            <scrolltime>300</scrolltime>
-                            <focusposition>0</focusposition>
-                            <orientation>horizontal</orientation>
-                            <preloaditems>2</preloaditems>
-                            <itemlayout height="110" width="360">
-                                <control type="group">
-                                    <left>5</left>
-                                    <control type="image">
-                                        <top>0</top>
-                                        <width>340</width>
-                                        <height>100</height>
-                                        <texture border="5" colordiffuse="black">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>5</top>
+							<left>1810</left>
+							<top>60</top>
+							<width>35</width>
+							<height>150</height>
+							<texture>info/arrowright.png</texture>
+							<visible>Container(950).HasNext</visible>
+						</control>
+						<control type="panel" id="950">
+							<left>0</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>220</height>
+							<onleft>9000</onleft>
+							<onright>950</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">1050</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">1250</ondown>
+							<pagecontrol>60</pagecontrol>
+							<scrolltime>300</scrolltime>
+							<focusposition>0</focusposition>
+							<orientation>horizontal</orientation>
+							<preloaditems>2</preloaditems>
+							<itemlayout height="110" width="360">
+								<control type="group">
+									<left>5</left>
+									<control type="image">
+										<top>0</top>
+										<width>340</width>
+										<height>100</height>
+										<texture border="5" colordiffuse="black">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>5</top>
 										<left>5</left>
-                                        <width>330</width>
-                                        <height>90</height>
-                                        <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
-                                    </control>
-                                   <control type="label">
+										<width>330</width>
+										<height>90</height>
+										<texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
+									</control>
+								   <control type="label">
 										<left>10</left>
 										<width>322</width>
 										<height>90</height>
@@ -1409,25 +1409,25 @@
 										<font>Reg28</font>
 										<label>$INFO[ListItem.Label]</label>
 									</control>
-                                </control>
-                            </itemlayout>
-                            <focusedlayout height="110" width="360">
-                                <control type="group">
-                                    <left>5</left>
-                                    <control type="image">
-                                        <top>0</top>
-                                        <width>340</width>
-                                        <height>100</height>
-                                        <texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <top>5</top>
+								</control>
+							</itemlayout>
+							<focusedlayout height="110" width="360">
+								<control type="group">
+									<left>5</left>
+									<control type="image">
+										<top>0</top>
+										<width>340</width>
+										<height>100</height>
+										<texture border="5" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
+									</control>
+									<control type="image">
+										<top>5</top>
 										<left>5</left>
-                                        <width>330</width>
-                                        <height>90</height>
-                                        <texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
-                                    </control>
-                                   <control type="label">
+										<width>330</width>
+										<height>90</height>
+										<texture border="5" colordiffuse="$VAR[ViewDetailsPanelColor]">diffuse/panel.png</texture>
+									</control>
+								   <control type="label">
 										<left>10</left>
 										<width>322</width>
 										<height>90</height>
@@ -1437,51 +1437,51 @@
 										<font>Reg28</font>
 										<label>$INFO[ListItem.Label]</label>
 									</control>
-                                </control>
-                            </focusedlayout>
-                        </control>
-                    </control>
-             		<!-- artwork (posters) -->
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+					<!-- artwork (posters) -->
 					<control type="group">
-                        <height>350</height>
-                        <visible>Integer.IsGreater(Container(1250).NumItems,0)</visible>
-                        <control type="label">
-                            <left>5</left>
-                            <width>500</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
-                          <font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                            <!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
+						<height>350</height>
+						<visible>Integer.IsGreater(Container(1250).NumItems,0)</visible>
+						<control type="label">
+							<left>5</left>
+							<width>500</width>
+							<height>25</height>
+							<aligny>center</aligny>
+						  <font>Bold32</font>
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+							<!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
 							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-                            <label>$ADDON[script.extendedinfo 32119]</label>
-                        </control>
+							<label>$ADDON[script.extendedinfo 32119]</label>
+						</control>
 						<control type="image">
-                            <left>1810</left>
-                            <top>95</top>
-                            <width>35</width>
-                            <height>150</height>
-                            <texture>info/arrowright.png</texture>
-                            <visible>Container(1250).HasNext</visible>
-                        </control>
-                        <control type="panel" id="1250">
-                            <left>0</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>280</height>
-                            <onleft>9000</onleft>
-                            <onright>1250</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">950</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">1350</ondown>
-                            <scrolltime>200</scrolltime>
-                            <orientation>horizontal</orientation>
-                            <itemlayout height="270" width="201">
-                                <control type="group">
+							<left>1810</left>
+							<top>95</top>
+							<width>35</width>
+							<height>150</height>
+							<texture>info/arrowright.png</texture>
+							<visible>Container(1250).HasNext</visible>
+						</control>
+						<control type="panel" id="1250">
+							<left>0</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>280</height>
+							<onleft>9000</onleft>
+							<onright>1250</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">950</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">1350</ondown>
+							<scrolltime>200</scrolltime>
+							<orientation>horizontal</orientation>
+							<itemlayout height="270" width="201">
+								<control type="group">
 									<width>176</width>
 									<height>252</height>
 									<top>10</top>
 									<left>10</left>
-                                    <control type="image">
+									<control type="image">
 										<width>176</width>
 										<height>252</height>
 										<include>PosterThumbBG</include>
@@ -1492,15 +1492,15 @@
 										<texture border="0" background="true" diffuse="diffuse/poster.png" fallback="defaultactorposter.png">$INFO[ListItem.Art(thumb)]</texture>
 										<aspectratio scalediffuse="false" aligny="center" align="center">stretch</aspectratio><bordersize>8</bordersize>
 									</control>
-                                </control>
-                            </itemlayout>
-                            <focusedlayout height="260" width="201">
-                               <control type="group">
+								</control>
+							</itemlayout>
+							<focusedlayout height="260" width="201">
+							   <control type="group">
 									<width>176</width>
 									<height>252</height>
 									<top>10</top>
 									<left>10</left>
-                                    <control type="image">
+									<control type="image">
 										<width>176</width>
 										<height>252</height>
 										<include>PosterThumbFO</include>
@@ -1511,45 +1511,45 @@
 										<texture border="0" background="true" diffuse="diffuse/poster.png" fallback="defaultactorposter.png">$INFO[ListItem.Art(thumb)]</texture>
 										<aspectratio scalediffuse="false" aligny="center" align="center">stretch</aspectratio><bordersize>8</bordersize>
 									</control>
-                                </control>
-                            </focusedlayout>
+								</control>
+							</focusedlayout>
 						</control>
-                    </control>
-             					<!-- fanart -->
+					</control>
+								<!-- fanart -->
 					<control type="group">
-                        <height>270</height>
-                        <visible>Integer.IsGreater(Container(1350).NumItems,0)</visible>
-                        <control type="label">
-                            <left>5</left>
-                            <width>500</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
+						<height>270</height>
+						<visible>Integer.IsGreater(Container(1350).NumItems,0)</visible>
+						<control type="label">
+							<left>5</left>
+							<width>500</width>
+							<height>25</height>
+							<aligny>center</aligny>
 							<font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>    
-                            <!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>   -->
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>    
+							<!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>   -->
 							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-                            <label>$LOCALIZE[20445]</label>
-                        </control>
+							<label>$LOCALIZE[20445]</label>
+						</control>
 						<control type="image">
-                            <left>1810</left>
-                            <top>60</top>
-                            <width>35</width>
-                            <height>150</height>
-                            <texture>info/arrowright.png</texture>
-                            <visible>Container(1350).HasNext</visible>
-                        </control>
-                        <control type="panel" id="1350">
-                            <left>0</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>280</height>
-                            <onleft>9000</onleft>
-                            <onright>1350</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">1250</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">450</ondown>
-                            <scrolltime>200</scrolltime>
-                            <orientation>horizontal</orientation>
-                            <itemlayout width="362" height="200">
+							<left>1810</left>
+							<top>60</top>
+							<width>35</width>
+							<height>150</height>
+							<texture>info/arrowright.png</texture>
+							<visible>Container(1350).HasNext</visible>
+						</control>
+						<control type="panel" id="1350">
+							<left>0</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>280</height>
+							<onleft>9000</onleft>
+							<onright>1350</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">1250</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">450</ondown>
+							<scrolltime>200</scrolltime>
+							<orientation>horizontal</orientation>
+							<itemlayout width="362" height="200">
 								<control type="group">
 									<width>340</width>
 									<height>200</height>
@@ -1582,51 +1582,51 @@
 								</control>
 							</focusedlayout>
 						</control>
-                    </control>
-             		<!-- related tmdb lists -->
+					</control>
+					<!-- related tmdb lists -->
 					<control type="group" id="50215">
-                        <height>350</height>
-                        <visible>Integer.IsGreater(Container(450).NumItems,0)</visible>
-                        <control type="label">
-                            <left>5</left>
-                            <top>0</top>
-                            <width>500</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
+						<height>350</height>
+						<visible>Integer.IsGreater(Container(450).NumItems,0)</visible>
+						<control type="label">
+							<left>5</left>
+							<top>0</top>
+							<width>500</width>
+							<height>25</height>
+							<aligny>center</aligny>
 							<font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                            <!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+							<!-- <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
 							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-                            <label>Related TMDB Lists$INFO[Container(450).NumItems, (,)]</label>
-                        </control>
-                        <control type="image">
-                            <left>1810</left>
-                            <top>95</top>
-                            <width>35</width>
-                            <height>150</height>
-                            <texture>info/arrowright.png</texture>
-                            <visible>Container(450).HasNext</visible>
-                        </control>
-                        <control type="panel" id="450">
-                            <left>0</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>280</height>
-                            <onleft>9000</onleft>
-                            <onright>450</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">1350</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">2000</ondown>
-                            <scrolltime>200</scrolltime>
-                            <orientation>horizontal</orientation>
+							<label>Related TMDB Lists$INFO[Container(450).NumItems, (,)]</label>
+						</control>
+						<control type="image">
+							<left>1810</left>
+							<top>95</top>
+							<width>35</width>
+							<height>150</height>
+							<texture>info/arrowright.png</texture>
+							<visible>Container(450).HasNext</visible>
+						</control>
+						<control type="panel" id="450">
+							<left>0</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>280</height>
+							<onleft>9000</onleft>
+							<onright>450</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">1350</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">2000</ondown>
+							<scrolltime>200</scrolltime>
+							<orientation>horizontal</orientation>
 							
 							<itemlayout height="270" width="201">
-                                <control type="group">
+								<control type="group">
 									<width>176</width>
 									<height>252</height>
 									
 									<top>10</top>
 									<left>10</left>
-                                    <control type="image">
+									<control type="image">
 										<width>176</width>
 										<height>252</height>
 										<include>PosterThumbBG</include>
@@ -1655,15 +1655,15 @@
 										<font>Reg20</font>
 										<label>$INFO[ListItem.Label]$INFO[ListItem.Property(Description),[CR] ]</label>
 									</control>
-                                </control>
-                            </itemlayout>
-                            <focusedlayout height="260" width="201">
-                               <control type="group">
+								</control>
+							</itemlayout>
+							<focusedlayout height="260" width="201">
+							   <control type="group">
 									<width>176</width>
 									<height>252</height>
 									<top>10</top>
 									<left>10</left>
-                                    <control type="image">
+									<control type="image">
 										<width>176</width>
 										<height>252</height>
 										<include>PosterThumbFO</include>
@@ -1692,49 +1692,49 @@
 										<font>Reg20</font>
 										<label>$INFO[ListItem.Label]$INFO[ListItem.Property(Description),[CR] ]</label>
 									</control>
-                                </control>
-                            </focusedlayout>
+								</control>
+							</focusedlayout>
 						</control>
-                    </control>
-             		<!-- episode index -->
+					</control>
+					<!-- episode index -->
 					<control type="group">
-                        <visible>Integer.IsGreater(Container(2000).NumItems,0)</visible>
-                        <height>270</height>
-                        <control type="label">
-                            <left>5</left>
-                            <top>0</top>
-                            <width>500</width>
-                            <height>25</height>
-                            <aligny>center</aligny>
+						<visible>Integer.IsGreater(Container(2000).NumItems,0)</visible>
+						<height>270</height>
+						<control type="label">
+							<left>5</left>
+							<top>0</top>
+							<width>500</width>
+							<height>25</height>
+							<aligny>center</aligny>
 							<font>Bold32</font>
-                            <textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
-                           <!--  <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
+							<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+						   <!--  <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>    -->
 
 							<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
-                            <label>Episode Index</label>
-                        </control>
+							<label>Episode Index</label>
+						</control>
 						<control type="image">
-                            <left>1810</left>
-                            <top>60</top>
-                            <width>35</width>
-                            <height>150</height>
-                            <texture>info/arrowright.png</texture>
-                            <visible>Container(2000).HasNext</visible>
-                        </control>
-                        <control type="panel" id="2000">
-                            <left>0</left>
-                            <top>40</top>
-                            <width>1800</width>
-                            <height>210</height>
-                            <onleft>9000</onleft>
-                            <onright>2000</onright>
-                            <onup condition="!Skin.HasSetting(EnableTouchSupport)">450</onup>
-                            <ondown condition="!Skin.HasSetting(EnableTouchSupport)">9000</ondown>
-                            <pagecontrol>60</pagecontrol>
-                            <scrolltime>300</scrolltime>
-                            <focusposition>0</focusposition>
-                            <orientation>horizontal</orientation>
-                            <preloaditems>2</preloaditems>
+							<left>1810</left>
+							<top>60</top>
+							<width>35</width>
+							<height>150</height>
+							<texture>info/arrowright.png</texture>
+							<visible>Container(2000).HasNext</visible>
+						</control>
+						<control type="panel" id="2000">
+							<left>0</left>
+							<top>40</top>
+							<width>1800</width>
+							<height>210</height>
+							<onleft>9000</onleft>
+							<onright>2000</onright>
+							<onup condition="!Skin.HasSetting(EnableTouchSupport)">450</onup>
+							<ondown condition="!Skin.HasSetting(EnableTouchSupport)">9000</ondown>
+							<pagecontrol>60</pagecontrol>
+							<scrolltime>300</scrolltime>
+							<focusposition>0</focusposition>
+							<orientation>horizontal</orientation>
+							<preloaditems>2</preloaditems>
 							<itemlayout width="362" height="200">
 								<control type="group">
 									<left>5</left>
@@ -1810,7 +1810,7 @@
 								</control>
 							</focusedlayout>
 						</control>
-                    </control>
+					</control>
 					
 					<!-- buttons (hidden)
 					<control type="grouplist" id="5000">
@@ -1841,9 +1841,9 @@
 						</control>
 						
 					</control> -->
-         				
+						
 				</control>
-         				<!--vertical Scollbar-->
+						<!--vertical Scollbar-->
 				<control type="scrollbar" id="999">
 					<left></left>
 					<right>5</right>
@@ -1857,14 +1857,14 @@
 				</control>
 				
 				<!--Movie info-->
-                <control type="group" id="33000">
-                    <left>825</left>
-                    <top>22</top>
-                    <visible>false</visible>
-                    <animation effect="fade" time="250">VisibleChange</animation>
-                </control>
+				<control type="group" id="33000">
+					<left>825</left>
+					<top>22</top>
+					<visible>false</visible>
+					<animation effect="fade" time="250">VisibleChange</animation>
+				</control>
 				
 			</control>
-        </control>
-    </controls>
+		</control>
+	</controls>
 </window>

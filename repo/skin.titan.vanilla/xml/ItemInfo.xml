@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--Titan-->
 <window id="3300" type="dialog">
-    <defaultcontrol always="true">3002</defaultcontrol>
-    <controls>
+	<defaultcontrol always="true">3002</defaultcontrol>
+	<controls>
 		
 		<!--Dialog Overlay-->
 		<include>GlobalBackground</include>
@@ -19,18 +19,18 @@
 		
 		<!-- Header -->
 
-        <control type="label" id="3000">
-            <include>animation_fade_visible_hidden</include>
-            <left>61</left>
-            <top>10</top>
-            <width min="80" max="1400">auto</width>
-            <height>100</height>
-            <font>Bold45</font>
+		<control type="label" id="3000">
+			<include>animation_fade_visible_hidden</include>
+			<left>61</left>
+			<top>10</top>
+			<width min="80" max="1400">auto</width>
+			<height>100</height>
+			<font>Bold45</font>
 			<label></label>
-            <align>left</align>
-            <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+			<align>left</align>
+			<textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
 			<shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
-        </control>
+		</control>
 		 <control type="label" id="3003">
 			<top>85</top>
 			<left>61</left>
@@ -45,7 +45,7 @@
 		<!--Time & Weather-->
 		<control type="group">
 		<visible>!Control.IsVisible(3092)</visible>
-        <include condition="!Skin.String(general_header,disable)">TimeInfo</include>
+		<include condition="!Skin.String(general_header,disable)">TimeInfo</include>
 		</control>
 		<!-- clearart when no discart -->
 		<control type="image" id="3092">

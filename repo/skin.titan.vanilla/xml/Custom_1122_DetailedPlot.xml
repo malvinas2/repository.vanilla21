@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1122">
 <!--Titan-->
 	
     <defaultcontrol always="true">109</defaultcontrol>
     <controls>
         <!--Dialog Overlay-->
-
 		<control type="button" id="109">
 			<description>background close area</description>
 			<!-- <bottom>300</bottom> -->
@@ -30,8 +29,6 @@
 			<animation type="WindowClose">
 				<effect type="slide" start="0,0" end="0,-1000" time="600" tween="cubic" easing="inout" />
 			</animation>
-             
-			 
 			<!--OSD Info Panel-->
 			<!--Info Stuff-->
 			<control type="group">
@@ -91,12 +88,6 @@
 					</control>
 				 </control>
 			 </control>			 
-			 
-
-			
-			
-			
-			
 		</control>
     </controls>
 </window>
