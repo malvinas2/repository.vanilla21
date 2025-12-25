@@ -116,7 +116,7 @@
 		<defaultID>netflix</defaultID>
 		<label>Netflix</label>
 		<label2></label2>
-		<icon>special://home/addons/skin.titan.vanilla/media/images/netflix_thumb.jpg</icon>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/netflix_thumb.jpg</icon>
 		<thumb></thumb>
 		<action>RunAddon(plugin.video.netflix)</action>
 		<visible>System.hasAddon(plugin.video.netflix)</visible>
@@ -125,7 +125,7 @@
 		<defaultID>youtube</defaultID>
 		<label>YouTube</label>
 		<label2></label2>
-		<icon>special://home/addons/skin.titan.vanilla/media/images/youtube_thumb.jpg</icon>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/youtube_thumb.jpg</icon>
 		<thumb></thumb>
 		<action>RunAddon(plugin.video.youtube)</action>
 		<visible>System.hasAddon(plugin.video.youtube)</visible>
@@ -134,7 +134,7 @@
 		<defaultID>spotify</defaultID>
 		<label>Spotify</label>
 		<label2></label2>
-		<icon>special://home/addons/skin.titan.vanilla/media/images/spotify_thumb.jpg</icon>
+		<icon>special://home/addons/resource.images.skinicons.wide/resources/spotify_thumb.jpg</icon>
 		<thumb></thumb>
 		<action>RunAddon(plugin.audio.spotify)</action>
 		<visible>System.hasAddon(plugin.audio.spotify)</visible>

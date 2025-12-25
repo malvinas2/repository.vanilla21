@@ -332,7 +332,7 @@
 			<property name="id">$NUMBER[15]</property>
 			<label>Netflix</label>
 			<label2 />
-			<icon>special://home/addons/skin.titan.vanilla/media/images/netflix_thumb.jpg</icon>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/netflix_thumb.jpg</icon>
 			<thumb />
 			<property name="labelID">netflix</property>
 			<property name="defaultID">netflix</property>
@@ -350,7 +350,7 @@
 			<property name="id">$NUMBER[16]</property>
 			<label>YouTube</label>
 			<label2 />
-			<icon>special://home/addons/skin.titan.vanilla/media/images/youtube_thumb.jpg</icon>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/youtube_thumb.jpg</icon>
 			<thumb />
 			<property name="labelID">youtube</property>
 			<property name="defaultID">youtube</property>
@@ -368,7 +368,7 @@
 			<property name="id">$NUMBER[17]</property>
 			<label>Spotify</label>
 			<label2 />
-			<icon>special://home/addons/skin.titan.vanilla/media/images/spotify_thumb.jpg</icon>
+			<icon>special://home/addons/resource.images.skinicons.wide/resources/spotify_thumb.jpg</icon>
 			<thumb />
 			<property name="labelID">spotify</property>
 			<property name="defaultID">spotify</property>
