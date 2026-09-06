@@ -2116,6 +2116,29 @@
 				<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">RunPlugin(plugin://script.skin.helper.skinbackup)</onclick>
 				<visible>Skin.HasSetting(SkinHelper.EnableDayNightThemes)</visible>
 			</control>
+            <!-- Default palette for Color Picker -->
+            <control type="label" id="15005">
+                <height>40</height>
+            </control>
+            <control type="label" id="15006">
+                <include>SkinSettings_Header</include>
+                <label>$LOCALIZE[31768]</label>
+                <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+            </control>
+            <control type="textbox" id="15007">
+                <description></description>
+                <width>1200</width>
+                <align>justify</align>
+                <label>$LOCALIZE[31769]</label>
+                <height>auto</height>
+                <font>Reg26</font>
+            </control>
+            <control type="button" id="15008">
+                <include>SkinSettings_Button</include>
+                <label>$LOCALIZE[31767]</label>
+                <label2>$INFO[skin.string(defaultcolorpalette)]</label2>
+                <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=defaultcolorpalette,header=$LOCALIZE[31767])</onclick>
+            </control>	
 		</control>
 	</include>
 	
@@ -3144,13 +3167,17 @@
 		<control type="button" id="$PARAM[id]">
 			<include>SkinSettings_Button</include>
 			<label>$PARAM[labelprefix]$PARAM[label]</label>
-			<label2>#$INFO[Skin.String($PARAM[skinsetting])]   [COLOR=$INFO[Skin.String($PARAM[skinsetting])]]███[/COLOR]</label2>
-			<!-- <label2>#$INFO[Skin.String($PARAM[skinsetting].name)]   [COLOR=$INFO[Skin.String($PARAM[skinsetting])]]███[/COLOR]</label2> -->
+			<label2>#$INFO[Skin.String($PARAM[skinsetting].name)]   [COLOR=$INFO[Skin.String($PARAM[skinsetting])]]███[/COLOR]</label2>
+			<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,action=COLORPICKER,skinstring=$PARAM[skinsetting],header=$PARAM[label],palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
+			<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">RunPlugin(plugin://script.skin.helper.colorpicker)</onclick>			
+			
+			<!-- <label2>#$INFO[Skin.String($PARAM[skinsetting])]   [COLOR=$INFO[Skin.String($PARAM[skinsetting])]]███[/COLOR]</label2>			 -->
 			<!-- .name not working here, was just filled by colorpicker -->
-			<onclick>SetProperty(Reset.Color,$PARAM[skinsetting],10035)</onclick>
+			<!-- <onclick>SetProperty(Reset.Color,$PARAM[skinsetting],10035)</onclick> -->
 			<!-- verified, it results in e.g. $INFO[Window(10035).Property(Reset.Color)] = ButtonFocusColor -->
-			<onclick>Skin.SetColor($PARAM[skinsetting],$PARAM[label_raw],,special://skin/extras/colors.xml)</onclick>
+			<!-- <onclick>Skin.SetColor($PARAM[skinsetting],$PARAM[label_raw],,special://skin/extras/colors.xml)</onclick> -->
 			<!-- <onclick>Skin.SetColor($PARAM[skinsetting],$PARAM[label_raw])</onclick> -->
+			
 			<visible>$PARAM[visible]</visible>
 		</control>
 	</include>
